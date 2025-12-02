@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Seguridad de la Información">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/Logo_Prodismo.ico">
+    <title>Prodismo SRL - Índice de Documentación</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../dist/output.css" rel="stylesheet">
+</head>
+
+<body class="font-sans bg-gray-50 overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center space-x-3">
+                    <a href="../../index.html" class="p-1 m-1">
+                        <img src="../../images/ProdismoFirma.png" alt="Logo Prodismo" width="200px" height="40px">
+                    </a>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">Prodismo SRL</h1>
+                        <p class="text-sm text-gray-600">Sistema Integrado de Gestión de Calidad</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="../../index.html" class="text-gray-600 hover:text-blue-600 font-medium">Inicio</a>
+                    <a href="../../views/documentacion/indice-general.html"
+                        class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Índice</a>
+
+                    <!-- Menú desplegable Documentación -->
+                    <div class="relative group">
+                        <button
+                            class="text-gray-600 hover:text-blue-600 font-medium flex items-center focus:outline-none">
+                            Documentación
+                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-gray-200 max-h-96 overflow-y-auto">
+                            <!-- Contenido del menú desplegable Documentación -->
+                            <!-- Sección 1 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    1 - Políticas y Organización de SI
+                                </div>
+                                <a href="../documentacion/politicas-seguridad/politica-seguridad.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.1 - Seguridad de la Información
+                                </a>
+                                <a href="../documentacion/organizacion-seguridad/organizacion-seguridad.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.2 - Organización de la Seguridad de la Información
+                                </a>
+                                <a href="../documentacion/gestion-activos/gestion-activos.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.3 - Gestión de Activos
+                                </a>
+                                <a href="../documentacion/gestion-riesgos/gestion-riesgos.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.4 - Gestión de Riesgos
+                                </a>
+                                <a href="../documentacion/evaluaciones/auditorias-internas.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.5 - Evaluaciones
+                                </a>
+                                <a href="../documentacion/gestion-incidentes/gestion-incidentes.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    1.6 - Gestión de Incidentes
+                                </a>
+                            </div>
+                            <!-- Sección 2 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    2 - Recursos Humanos
+                                </div>
+                                <a href="../documentacion/puestos-clave/puestos-clave.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    2.1.1.1 - Requisitos Específicos para Puestos Claves
+                                </a>
+                                <a href="../documentacion/uso-aceptable/uso-aceptable.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    2.1.1.2 - Uso Aceptable de Recursos de IT
+                                </a>
+                                <a href="../documentacion/obligacion-contractual/obligacion-contractual.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    2.1.2 - Obligación Contractual de Cumplimiento
+                                </a>
+                                <a href="../documentacion/concientizacion-capacitacion/concientizacion-capacitacion.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    2.1.3 - Concientización y Capacitación en SI
+                                </a>
+                                <a href="../documentacion/gestion-segura-teletrabajo/gestion-segura-teletrabajo.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    2.1.4 - Gestión Segura de Teletrabajo
+                                </a>
+                            </div>
+                            <!-- Sección 3 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    3 - Seguridad Física y Continuidad del Negocio
+                                </div>
+                                <a href="../documentacion/acceso-visitantes/accesos-visitantes.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    3.1.1 - Acceso para Visitantes
+                                </a>
+                                <div
+                                    class="block px-6 py-2 text-sm text-gray-400 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    3.1.2 - Seguridad en Situaciones Excepcionales <span
+                                        class="bg-red-100 text-red-800 text-[10px] font-medium px-3 py-1 rounded-full"><i
+                                            class="fas fa-recycle"></i> Reemplazada</span>
+                                </div>
+                                <a href="../documentacion/gestion-activos-apoyo/gestion-activos-apoyo.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    3.1.3 - Gestión de Activos de Apoyo
+                                </a>
+                                <a href="../documentacion/dispositivos-moviles/dispositivos-moviles.html"
+                                    class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                    3.1.4 - Seguridad para Dispositivos Móviles y Medios de Almacenamiento
+                                </a>
+                            </div>
+                            <!-- Sección 4 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    4- Gestión de Identidad y Acceso
+                                </div>
+                                <div class="py-2">
+                                    <div class="px-6 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        4.1 - Gestión de Identidad
+                                    </div>
+                                    <a href="../documentacion/gestion-medios-identificacion/gestion-medios-identificacion.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.1 - Gestión de Medios de Identificación
+                                    </a>
+                                    <a href="../documentacion/autenticacion-accesos/autenticacion-accesos.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.2 - Autenticación y Control de Accesos
+                                    </a>
+                                    <a href="../documentacion/cuestas-usuarios/cuentas-usuarios.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.3.1 - Cuentas de Usuario
+                                    </a>
+                                    <a href="../documentacion/gestion-contrasenas/gestion-contrasenas.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.1.3.2 - Contraseñas Seguras
+                                    </a>
+                                    <div class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        4.2 - Gestión de Acceso
+                                    </div>
+                                    <a href="../documentacion/minimos-privilegios/minimos-privilegios.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        4.2.1 - Mínimos Privilegios
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Sección 5 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    5- Seguridad Informática - Ciberseguridad
+                                </div>
+                                <div class="py-2">
+                                    <div class="px-6 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                        5.1 - Criptografía
+                                    </div>
+                                    <div class="py-2">
+                                        <div
+                                            class="px-8 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                            5.1.1 - Procedimiento Criptográficos
+                                        </div>
+                                        <a href="../documentacion/clasificacion-datos/clasificacion-datos.html"
+                                            class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.1.1 - Clasificación de Datos
+                                        </a>
+                                        <a href="../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
+                                            class="block px-12 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.1.2 - Protocolos Criptográficos Seguros
+                                        </a>
+                                        <a href="../documentacion/transferencia-segura/transferencia-segura.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.1.2 - Transferencia Segura de Información
+                                        </a>
+
+                                        <div
+                                            class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                            5.2 - Seguridad de Operaciones
+                                        </div>
+                                        <a href="../documentacion/gestion-cambios/gestion-cambios.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.1 - Gestión de Cambios
+                                        </a>
+                                        <a href="../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.2 - Gestión de Entornos de Desarrollo
+                                        </a>
+                                        <a href="../documentacion/configuracion-segura/configuracion-segura.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.3 - Gestión de Sistemas IT contra Malware
+                                        </a>
+                                        <a href="../documentacion/gestion-logs/gestion-logs.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.4 - Gestión y Análisis de Registros de Eventos
+                                        </a>
+                                        <a href="../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.5 - Gestión de Monitorización de Vulnerabilidades
+                                        </a>
+                                        <a href="../documentacion/gestion-auditorias/gestion-auditorias.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.6 - Gestión de Auditoría de Sistemas
+                                        </a>
+                                        <a href="../documentacion/gestion-red/gestion-red.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.7 - Gestión de Red de la Organización
+                                        </a>
+                                        <a href="../documentacion/#"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.8 - Preparación de las <strong>TIC</strong> para la continuidad del
+                                            negocio <span
+                                                class="bg-green-100 text-green-800 text-[9px] font-medium px-3 py-1 rounded-full"><i
+                                                    class="fas fa-check me-1"></i>NUEVA</span>
+                                        </a>
+                                        <a href="../documentacion/#"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.2.9 - Copia de Seguridad de la Información <span
+                                                class="bg-green-100 text-green-800 text-[9px] font-medium px-3 py-1 rounded-full"><i
+                                                    class="fas fa-check me-1"></i>NUEVA</span>
+                                        </a>
+
+                                        <div
+                                            class="px-6 py-2 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                            5.3 - Adquisición de Sistemas, Gestión de Requisitos y Desarrollo
+                                        </div>
+                                        <a href="../documentacion/requisitos-seguridad/requisitos-seguridad.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.1 - Gestión de Sistemas IT Nuevos o en Desarrollo
+                                        </a>
+                                        <a href="../documentacion/requisitos-red/requisitos-red.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.2. - Requisitos de Servicios de Red
+                                        </a>
+                                        <a href="../documentacion/retirada-activos-externos/retirada-activos-externos.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.3 - Retirada Segura de Activos Externos
+                                        </a>
+                                        <a href="../documentacion/servicios-externos-compartidos/servicios-externos-compartidos.html"
+                                            class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                            5.3.4 - Servicios de IT Externos Compartidos
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sección 6 -->
+                            <div class="py-2">
+                                <div class="px-4 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    6- Relaciones con los proveedores
+                                </div>
+                                <div class="py-2">
+                                    <a href="../documentacion/gestion-contratistas-socios/gestion-contratistas-socios.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        6.1.1 - Seguridad de la Información entre Contratistas y Socios
+                                    </a>
+                                    <a href="../documentacion/confidencialidad-terceros/confidencialidad-terceros.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        6.1.2 - Confidencialidad de la Información Intercambiada con Terceros
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Sección 7 -->
+                            <div class="py-2">
+                                <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
+                                    7- Cumplimiento
+                                </div>
+                                <div class="py-2">
+                                    <a href="../documentacion/cumplimiento-legal-contractual/cumplimiento-legal-contractual.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        7.1.1 - Cumplimiento Disposiciones Reglamentarias
+                                    </a>
+                                    <a href="../documentacion/proteccion-datos-personales/proteccion-datos-personales.html"
+                                        class="block px-8 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                                        7.1.2 - Protección de Datos Personales
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+            
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../index.html" class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../iso_sig/iso_sig.html" class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+            
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../iso9001/iso9001.html" class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i class="fas fa-award mr-2 ms-1"></i>ISO 9001:2015</a>
+                <a href="../iso14001/iso14001.html" class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../iso27001/iso27001.html" class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../iso45001/iso45001.html" class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../politica-privacidad/politica-privacidad.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../terminos-usos/terminos-usos.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../configuracion-cookies/cookies.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../mapa-sitio/mapa-sitio.html" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn" class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2"><i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto</div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient-sig text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-6">Índice de Documentación</h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                    Acceso centralizado a toda la documentación del Sistema Integrado de Gestión de Calidad de
+                    <strong>Prodismo SRL</strong>.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button id="search-btn"
+                        class="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-sky-100 transition-colors">
+                        <i class="fas fa-search mr-2"></i>Buscar Documento
+                    </button>
+                    <button id="print-btn"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-colors">
+                        <i class="fas fa-print mr-2"></i>Descargar Índice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Search Bar -->
+            <div class="mb-12">
+                <div class="relative max-w-2xl mx-auto">
+                    <input type="text" id="search-input"
+                        placeholder="Buscar documento por nombre, código o descripción..."
+                        class="w-full px-4 py-3 pl-12 pr-10 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <button id="clear-search"
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Documentación Section -->
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Documentación</h2>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                        <span id="doc-count">42</span> documentos
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <!-- Sección 1 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">1 - Políticas y Organización del Sistema
+                                    de Información (SI)</h3>
+                                <p class="text-gray-600 mt-1">Políticas, organización, gestión de activos, riesgos,
+                                    evaluaciones e incidentes</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/politicas-seguridad/politica-seguridad.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-file-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.1 - Seguridad
+                                            de la Información</h4>
+                                        <p class="text-sm text-gray-600">Política general de seguridad de la información
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.1</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/organizacion-seguridad/organizacion-seguridad.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-sitemap text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.2 -
+                                            Organización de la Seguridad de la Información</h4>
+                                        <p class="text-sm text-gray-600">Estructura organizativa de la seguridad</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: 4,
+                                            A.5.2, A.5.3 A.5.8, A.8.9</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-activos/gestion-activos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-boxes text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3 - Gestión de
+                                            Activos</h4>
+                                        <p class="text-sm text-gray-600">Gestión y clasificación de activos de
+                                            información</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.9,
+                                            A.5.10, A.5.12, A.5.13, A.5.19, A.8.1, A.8.10</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-riesgos/gestion-riesgos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-chart-line text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.4 - Gestión de
+                                            Riesgos</h4>
+                                        <p class="text-sm text-gray-600">Identificación, análisis y tratamiento de
+                                            riesgos</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.3,
+                                            A.5.5, A.5.7</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/evaluaciones/auditorias-internas.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-clipboard-check text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.5 -
+                                            Evaluaciones</h4>
+                                        <p class="text-sm text-gray-600">Auditorías internas y evaluaciones del SGSI</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.35,
+                                            A.5.36, A.8.8</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-incidentes/gestion-incidentes.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-exclamation-triangle text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.6 - Gestión de
+                                            Incidentes</h4>
+                                        <p class="text-sm text-gray-600">Procedimientos para manejo de incidentes de
+                                            seguridad</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.24,
+                                            A.5.25, A.5.26, A.5.27, A.5.29, A.6.8</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 2 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">2 - Recursos Humanos</h3>
+                                <p class="text-gray-600 mt-1">Políticas de personal, contratación, capacitación y
+                                    teletrabajo</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/puestos-clave/puestos-clave.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-user-tie text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1.1 -
+                                            Requisitos Específicos para Puestos Claves</h4>
+                                        <p class="text-sm text-gray-600">Requisitos para puestos de alta responsabilidad
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.6.1 </p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/uso-aceptable/uso-aceptable.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-laptop text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1.2 - Uso
+                                            Aceptable de Recursos de IT</h4>
+                                        <p class="text-sm text-gray-600">Normas para el uso adecuado de recursos
+                                            tecnológicos</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.10
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/obligacion-contractual/obligacion-contractual.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-file-contract text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.2 -
+                                            Obligación Contractual de Cumplimiento</h4>
+                                        <p class="text-sm text-gray-600">Compromisos contractuales de seguridad</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.6.2,
+                                            A.6.5 </p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/concientizacion-capacitacion/concientizacion-capacitacion.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-graduation-cap text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.3 -
+                                            Concientización y Capacitación en SI</h4>
+                                        <p class="text-sm text-gray-600">Programas de formación en seguridad</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.6.3</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-segura-teletrabajo/gestion-segura-teletrabajo.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-home text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.4 - Gestión
+                                            Segura de Teletrabajo</h4>
+                                        <p class="text-sm text-gray-600">Seguridad en entornos de trabajo remoto</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.6.7,
+                                            A.8.1 </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 3 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física y Continuidad del
+                                    Negocio</h3>
+                                <p class="text-gray-600 mt-1">Acceso físico, situaciones excepcionales, activos de apoyo
+                                    y dispositivos móviles</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/acceso-visitantes/accesos-visitantes.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-door-open text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1 - Acceso
+                                            para Visitantes</h4>
+                                        <p class="text-sm text-gray-600">Control de acceso de personas externas</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.7.1,
+                                            A.7.2, A.7.3, A.7.4, A.7.5, A.7.6</p>
+                                    </div>
+                                </a>
+                                <a
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group disabled">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-exclamation text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-300 group-hover:text-gray-400">3.1.2 -
+                                            Seguridad en Situaciones Excepcionales <span
+                                                class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full"><i
+                                                    class="fas fa-recycle"></i> Reemplazada</span></h4>
+                                        <p class="text-sm text-gray-300">Protocolos para emergencias y situaciones
+                                            críticas</p>
+                                        <p class="text-sm text-gray-600">Reemplazada por 1.6.3, 5.2.8 y 5.2.9</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-activos-apoyo/gestion-activos-apoyo.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tools text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.3 - Gestión
+                                            de Activos de Apoyo</h4>
+                                        <p class="text-sm text-gray-600">Gestión de infraestructura y equipos de apoyo
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.10,
+                                            A.5.11, A.7.10, A.7.12</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/dispositivos-moviles/dispositivos-moviles.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-mobile-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.4 -
+                                            Seguridad para Dispositivos Móviles y Medios de Almacenamiento</h4>
+                                        <p class="text-sm text-gray-600">Seguridad en dispositivos portátiles y medios
+                                            de almacenamiento</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.6.7,
+                                            A.7.10, A.8.1</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 4 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">4 - Gestión de Identidad y Acceso</h3>
+                                <p class="text-gray-600 mt-1">Identidad, autenticación, cuentas de usuario, contraseñas
+                                    y privilegios</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/gestion-medios-identificacion/gestion-medios-identificacion.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-id-card text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.1 - Gestión
+                                            de Medios de Identificación</h4>
+                                        <p class="text-sm text-gray-600">Gestión de credenciales y medios de
+                                            identificación</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.18</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/autenticacion-accesos/autenticacion-accesos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-fingerprint text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.2 -
+                                            Autenticación y Control de Accesos</h4>
+                                        <p class="text-sm text-gray-600">Mecanismos de autenticación y control de acceso
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.15,
+                                            A.8.5</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/cuestas-usuarios/cuentas-usuarios.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-user text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.1 -
+                                            Cuentas de Usuario</h4>
+                                        <p class="text-sm text-gray-600">Ciclo de vida de cuentas de usuario</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.16,
+                                            A.5.17, A.5.18, A.8.9</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-contrasenas/gestion-contrasenas.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-key text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.2 -
+                                            Contraseñas Seguras</h4>
+                                        <p class="text-sm text-gray-600">Requisitos y gestión de contraseñas</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.16,
+                                            A.5.17, A.5.18, A.8.9</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/minimos-privilegios/minimos-privilegios.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-user-shield text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1 - Mínimos
+                                            Privilegios</h4>
+                                        <p class="text-sm text-gray-600">Principio de mínimo privilegio en accesos</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.2,
+                                            A.8.3</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 5 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">5 - Seguridad Informática -
+                                    Ciberseguridad</h3>
+                                <p class="text-gray-600 mt-1">Criptografía, operaciones, desarrollo y gestión de
+                                    sistemas</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/clasificacion-datos/clasificacion-datos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-database text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.1.1 -
+                                            Clasificación de Datos</h4>
+                                        <p class="text-sm text-gray-600">Clasificación y protección de datos según
+                                            criticidad</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.12,
+                                            A.5.13</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-lock text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.1.2 -
+                                            Protocolos Criptográficos Seguros</h4>
+                                        <p class="text-sm text-gray-600">Uso de protocolos criptográficos</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.8.24</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/transferencia-segura/transferencia-segura.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-exchange-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.2 -
+                                            Transferencia Segura de Información</h4>
+                                        <p class="text-sm text-gray-600">Protección de información en tránsito</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.14</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-cambios/gestion-cambios.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-sync-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.1 - Gestión
+                                            de Cambios</h4>
+                                        <p class="text-sm text-gray-600">Control de cambios en sistemas y
+                                            configuraciones</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.8.32</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-code text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.2 - Gestión
+                                            de Entornos de Desarrollo</h4>
+                                        <p class="text-sm text-gray-600">Seguridad en entornos de desarrollo y pruebas
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.25,
+                                            A.8.28, A.8.29, A.8.30, A.8.31</p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/configuracion-segura/configuracion-segura.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-virus text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3 - Gestión
+                                            de Sistemas IT contra Malware</h4>
+                                        <p class="text-sm text-gray-600">Configuración Segura - Protección contra
+                                            malware</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.1,
+                                            A.8.7</p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-logs/gestion-logs.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-tasks text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4 - Gestión
+                                            y Análisis de Registros de Eventos (Logs)</h4>
+                                        <p class="text-sm text-gray-600">Gestión, Retención y Eliminación de logs</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.17,
+                                            A.8.1, A.8.15, 3.1.10 </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-lock-open text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5 - Gestión
+                                            de Monitorización de Vulnerabilidades</h4>
+                                        <p class="text-sm text-gray-600">Gestión de vulnerabilidades técnicas</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.8,
+                                            A.8.19 </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-auditorias/gestion-auditorias.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-vial text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6 - Gestión
+                                            de Auditoría de Sistemas IT</h4>
+                                        <p class="text-sm text-gray-600">Protección de los sistemas de información
+                                            durante pruebas de auditoría.</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.36,
+                                            A.8.8, A.8.34 </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-red/gestion-red.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-network-wired text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7 - Gestión
+                                            de Red de la Organización </h4>
+                                        <p class="text-sm text-gray-600">Seguridad de redes. Segregación de redes</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.20,
+                                            A.8.22 </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-red/gestion-red.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-satellite-dish text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.8 -
+                                            Preparación de las <strong>TIC</strong> para la continuidad del negocio
+                                            <span
+                                                class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
+                                                    class="fas fa-check"></i> NUEVA</span>
+                                        </h4>
+                                        <p class="text-sm text-gray-600">Gestión de la seguridad de la información en la
+                                            cadena de suministro de <b>T</b>ecnologías de la <b>I</b>nformación y la
+                                            <b>C</b>omunicación (TIC) para la continuidad del negocio.
+                                        </p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.21,
+                                            A.5.30 </p>
+
+                                    </div>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-copy text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.9 - Copia de
+                                            seguridad de la información <span
+                                                class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
+                                                    class="fas fa-check"></i> NUEVA</span></h4>
+                                        <p class="text-sm text-gray-600">Gestión de copias de seguridad.</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.13
+                                        </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-laptop-code text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1 - Gestión
+                                            de Sistemas IT Nuevos o en Desarrollo</h4>
+                                        <p class="text-sm text-gray-600">Seguridad de la información en el proyecto.
+                                            Ciclo de vida de desarrollo seguro.</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.8,
+                                            A.8.25 </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/requisitos-red/requisitos-red.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-project-diagram text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.2 -
+                                            Requisitos de Servicios de Red</h4>
+                                        <p class="text-sm text-gray-600">Seguridad de los servicios de red.</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.8.21
+                                        </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/retirada-activos-externos/retirada-activos-externos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-cloud-download-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.3 - Retirada
+                                            Segura de Activos Externos</h4>
+                                        <p class="text-sm text-gray-600">Gestión de controles para la retirada segura de
+                                            activos externos.</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.23
+                                        </p>
+
+                                    </div>
+                                </a>
+                                <a href="../documentacion/servicios-externos-compartidos/servicios-externos-compartidos.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-cloud text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.4 -
+                                            Servicios IT Externos Compartidos</h4>
+                                        <p class="text-sm text-gray-600">Seguridad de la información para el uso de
+                                            servicios en la nube.</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.23
+                                        </p>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 6 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">6 - Relaciones con los proveedores</h3>
+                                <p class="text-gray-600 mt-1">Gestión de seguridad con contratistas, socios y terceros
+                                </p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/gestion-contratistas-socios/gestion-contratistas-socios.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-handshake text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.1 -
+                                            Seguridad de la Información entre Contratistas y Socios</h4>
+                                        <p class="text-sm text-gray-600">Gestión de seguridad con socios comerciales</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.19 -
+                                            A.5.22</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/confidencialidad-terceros/confidencialidad-terceros.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-user-secret text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.2 -
+                                            Confidencialidad de la Información Intercambiada con Terceros</h4>
+                                        <p class="text-sm text-gray-600">Protección de información compartida con
+                                            terceros</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.14,
+                                            A.6.6</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección 7 -->
+                    <div class="border-b border-gray-200">
+                        <button
+                            class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900">7 - Cumplimiento</h3>
+                                <p class="text-gray-600 mt-1">Cumplimiento legal, contractual y protección de datos
+                                    personales</p>
+                            </div>
+                            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div class="px-6 pb-4 hidden">
+                            <div class="grid gap-2">
+                                <a href="../documentacion/cumplimiento-legal-contractual/cumplimiento-legal-contractual.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-balance-scale text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.1 -
+                                            Cumplimiento de Disposiciones Reglamentarias</h4>
+                                        <p class="text-sm text-gray-600">Cumplimiento de normativas legales y
+                                            regulatorias</p>
+                                        <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.31,
+                                            A.5.32, A.5.33</p>
+                                    </div>
+                                </a>
+                                <a href="../documentacion/proteccion-datos-personales/proteccion-datos-personales.html"
+                                    class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-shield-alt text-blue-600 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.2 -
+                                            Protección de Datos Personales</h4>
+                                        <p class="text-sm text-gray-600">Protección de datos personales y privacidad</p>
+                                        <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.34</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Procedimientos Section -->
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Procedimientos</h2>
+                    <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">
+                        18 procedimientos
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Los procedimientos detallados para la implementación de las
+                            políticas de seguridad están en desarrollo.</p>
+                        <button class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            <i class="fas fa-plus-circle mr-2"></i>
+                            Agregar nuevo procedimiento
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formularios Section -->
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Formularios</h2>
+                    <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
+                        24 formularios
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Los formularios para registro, evaluación y seguimiento están en
+                            desarrollo.</p>
+                        <button class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            <i class="fas fa-plus-circle mr-2"></i>
+                            Agregar nuevo formulario
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matrices de Riesgos Section -->
+            <div class="mb-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Matrices de Riesgos</h2>
+                    <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                        6 matrices
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Las matrices de evaluación y tratamiento de riesgos están en
+                            desarrollo.</p>
+                        <button class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                            <i class="fas fa-plus-circle mr-2"></i>
+                            Agregar nueva matriz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <img src='../../images/logo01-bco.png' title="Logo Prodismo" class="h-8 sm:h-10 w-auto"
+                        alt="Prodismo">
+                    <div>
+                        <p class="font-semibold">Prodismo SRL</p>
+                        <p class="text-sm text-gray-300">Equipo Gestión Calidad Integrada</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="ftext-center sm:text-right space-y-2">
+
+
+                    <div class="flex items-center justify-self-end space-x-2 text-sm text-gray-300 dark:text-gray-800">
+                        <a href="../politica-privacidad/politica-privacidad.html"
+                            class="text-sm text-gray-300 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors mr-2">Política de Privacidad</a>
+                        | <a href="../terminos-usos/terminos-usos.html"
+                            class="text-sm text-gray-300 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos de Uso</a>
+                    </div>
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ISO 9001:2015 | 14001:2015 | 27001:2022 | 45001:2018</span>
+                    <p class="text-gray-200 text-sm">
+                        Sistema Integrado de Gestión de Calidad &copy; 2025
+                    </p>
+                    <p class="text-gray-300 text-sm">
+                        Developed by Germán C. Montalbetti
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="text/javascript" src="../../js/documentacion/scripts-general_two.js"></script>
+    <script type="text/javascript" src="../../js/config.generated.js"></script>
+    <script type="text/javascript" src="../../js/auth-system.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle para expandir/contraer secciones
+        document.querySelectorAll('.border-b button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+
+        // Función de búsqueda
+        document.getElementById('search-input').addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase();
+            const items = document.querySelectorAll('.grid a');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Actualizar contador
+            document.getElementById('doc-count').textContent = visibleCount;
+        });
+
+        // Limpiar búsqueda
+        document.getElementById('clear-search').addEventListener('click', function () {
+            document.getElementById('search-input').value = '';
+            document.getElementById('search-input').dispatchEvent(new Event('input'));
+        });
+
+        // Botón de búsqueda
+        document.getElementById('search-btn').addEventListener('click', function () {
+            document.getElementById('search-input').focus();
+        });
+
+        // Botón de impresión
+        document.getElementById('print-btn').addEventListener('click', function () {
+            window.print();
+        });
+
+        // Contacto con SweetAlert2
+        document.getElementById('contacto-btn').addEventListener('click', function () {
+            Swal.fire({
+                title: 'Contacto',
+                html: `
+                    <div class="text-left">
+                        <p class="mb-4"><strong>Prodismo SRL</strong></p>
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Av. Japón 2230, Córdoba, Argentina</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 351 1234-5678</p>
+                        <p class="mb-4"><i class="fas fa-envelope mr-2"></i> prodismo@prodismo.com</p>
+                        <p class="text-sm text-gray-600">Estaremos encantados de atenderle.</p>
+                    </div>
+                `,
+                icon: 'info',
+                confirmButtonText: 'Cerrar',
+                confirmButtonColor: '#3b82f6'
+            });
+        });
+
+    </script>
+</body>
+
+</html>

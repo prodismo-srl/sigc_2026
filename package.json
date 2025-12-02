@@ -1,0 +1,34 @@
+{
+  "name": "sigc2026",
+  "version": "1.0.0",
+  "description": "Sistema Integrado de Gestión de la Calidad (SIGC) Normas ISO9001 ISO14001 ISO27001 ISO45001",
+  "keywords": [],
+  "homepage": "https://github.com/germanClaudio/sigc_2026#readme",
+  "bugs": {
+    "url": "https://github.com/germanClaudio/sigc_2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germanClaudio/sigc_2026.git"
+  },
+  "license": "ISC",
+  "author": "German Montalbetti",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node scripts/generate-config.js && tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --minify && node scripts/generate-config.js",
+    "build:prod": "node scripts/generate-config.js --production",
+    "tailwind:install": "npm install -D tailwindcss@latest postcss@latest autoprefixer@latest"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
