@@ -23,12 +23,13 @@
     "tailwind:install": "npm install -D tailwindcss@latest postcss@latest autoprefixer@latest"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
     "@tailwindcss/postcss": "^4.1.17"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "autoprefixer": "^10.4.22",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^3.4.18"
   }
 }

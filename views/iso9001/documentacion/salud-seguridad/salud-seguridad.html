@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Manual de Calidad - Sistema de Gestión de Salud y Seguridad">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>Sistema de Gestión de Salud y Seguridad - <strong>PRODISMO SRL</strong>
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Sistema de Gestión
+                                de Salud y Seguridad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../marco-normativo/marco-normativo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Marco Normativo</span>
+                    </a>
+                    <a href="../codigo-etica/codigo-etica.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Codigo de Ética</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">MC-11 Sistema de Gestión de
+                            Salud y Seguridad</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC-11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 27/05/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="estructura-organizacion-gestion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.1</span>
+                            ESTRUCTURA DE ORGANIZACIÓN Y GESTIÓN SYSO<br>PLAN DE GESTIÓN HIGIENE Y SEGURIDAD
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                                OBJETIVOS GENERALES
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Proponer métodos e instrumentos para abordar un Plan General de Higiene, Seguridad y
+                                Salud Laboral, que integre los antecedentes de gestión con las necesidades que surgen de
+                                los últimos relevamientos y desvíos reportados. Todo en el marco de lo dispuesto en las
+                                leyes 19.587/72 de Higiene y Seguridad en el Trabajo (B.O. 28/04/1972), Decreto
+                                Reglamentario 351/79, Ley 24.557 de Riesgos del Trabajo. (B.O. 13/09/1995), y Resolución
+                                295/03, entre otras.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                                OBJETIVOS ESPECIFICOS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                El Plan estará enfocado fundamentalmente a la identificación de riesgos, la formulación
+                                de medidas preventivas, y al refuerzo de las acciones de control, y capacitación con el
+                                fin de evitar desvíos, y accidentes o enfermedades producto de conductas y condiciones
+                                inadecuadas. A la vez se propondrán pautas para afianzar la participación de los
+                                Supervisores en el control y la divulgación de las mejores prácticas de seguridad.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                                FUNDAMENTO
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                La Empresa debe adherir a todas las normas y reglamentaciones vigentes relacionadas con
+                                la Seguridad e Higiene en el Trabajo, como así también cumplir con los requisitos que le
+                                impongan sus Clientes sobre cualquier tarea que nos involucre en los ámbitos de
+                                producción, puesta a punto, mantenimiento o servicios. Dicha política establecerá los
+                                estándares para proporcionar un ambiente de trabajo seguro y garantizará la utilización
+                                de procesos que protejan a las personas y los activos.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="aspectos-fundamentales-politica" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.2</span>
+                            ASPECTOS FUNDAMENTALES DE NUESTRA POLÍTICA
+                        </h2>
+
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Instaurar la Prevención en el desarrollo de todas nuestras tareas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Implementar programas efectivos para identificar y disminuir los riesgos para las
+                                    personas. Cumplir con los requisitos legales vigentes, y con los estándares que
+                                    regulan las prácticas, programas y sistemas de Seguridad que nuestros Clientes
+                                    suscriban.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Capacitar a los trabajadores para que desarrollen sus tareas con el mínimo riesgo.
+                                    Poner a disposición los medios y recursos, humanos y técnicos, para cumplir con
+                                    política Incentivar la participación en las prácticas de seguridad e salud.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsables-administracion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.3</span>
+                            RESPONSABLES DE LA ADMINISTRACIÓN DE LA POLÍTICA
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            La aplicación de la Política, tiene como base las siguientes premisas:
+                        </p>
+
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Todo el personal es responsable de la Prevención de Accidentes y Enfermedades
+                                    profesionales según su jerarquía. Los mandos medios tienen la responsabilidad que
+                                    deviene de sus atribuciones de conducción. Esta implica una acción permanente de
+                                    capacitación y control de su personal, como así también de mejora de su sector.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Los trabajadores son responsables por el cumplimiento de las normas de Seguridad
+                                    fijadas, el uso de los elementos de protección, la comunicación de los riesgos que
+                                    adviertan y la participación en actividades de capacitación que se programen.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    El servicio de higiene y seguridad, bajo la estructura organizativa de recursos
+                                    humanos, asumirá la representación técnica y velará por el cumplimiento de las leyes
+                                    vigentes.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="procedimientos-registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.4</span>
+                            PROCEDIMIENTOS, REGISTROS Y DOCUMENTACIÓN DE APOYO
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">LEGAJO TÉCNICO</h4>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Se mantiene actualizado un Legajo Técnico que sirve como guía y consulta de los
+                                    distintos mapas de riesgo, las normas vigentes de higiene y seguridad, el estado de
+                                    instalaciones y equipos, y las mejoras implementadas en los edificios y métodos de
+                                    trabajo. Se busca con ello que cada acción, intervención, notificación, relevamiento
+                                    o sugerencia quede debidamente documentada. Se confeccionan además procedimientos e
+                                    instructivos de cumplimiento interno.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">PLANILLAS</h4>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Todos los procedimientos y acciones de control quedan documentados en planillas que
+                                    responden a los objetivos generales de la Política.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">EVALUACIÓN DE
+                                    RIESGOS</h4>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Se llevan a cabo evaluaciones de riesgo para asegurar que los programas de Seguridad
+                                    enfoquen prácticamente las prioridades de las instalaciones, incluyendo a los nuevos
+                                    proyectos, o cuando existen cambios en los requerimientos regulatorios.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="acciones-correctivas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.5</span>
+                            ACCIONES CORRECTIVAS
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Regularmente el Servicio de Higiene y Seguridad, elabora un plan de trabajo, basado en el
+                            relevamiento particular de las condiciones de riesgo. En el mismo se asignan
+                            responsabilidades para su ejecución y control, y se fijarán fechas ciertas de inicio y
+                            finalización de las tareas. Se priorizan las acciones en función de una ponderación objetiva
+                            de la gravedad del riesgo, su afectación y probabilidad de ocurrencia.
+                        </p>
+                    </section>
+
+                    <section id="planes-emergencia" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.6</span>
+                            PLANES DE EMERGENCIA Y MITIGACIÓN
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se revisan los planes formulados, y sus alcances. Se actualizan y redefinen los roles
+                            internos. Se desarrollan planes básicos de respuesta y remediación para siniestros
+                            específicos vinculados a las prácticas de producción, y otras contingencias que puedan
+                            ocurrir. Además, se capacita a una Brigada Interna de prevención y lucha contra el fuego,
+                            compuestas por personal voluntario.
+                        </p>
+                    </section>
+
+                    <section id="reporte-estadisticas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.7</span>
+                            REPORTE Y ESTADÍSTICA DE INCIDENTES Y ACCIDENTES
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            El Servicio de Higiene y Seguridad conjuntamente con el Área de RRHH, mantienen registros
+                            actualizados de investigación de accidentes y de estadísticas de siniestralidad.
+                        </p>
+                    </section>
+
+                    <section id="planes-trabajo-control" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.8</span>
+                            PLANES DE TRABAJO Y CONTROL
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Las áreas de ingeniería y recursos humanos e higiene y seguridad, son los encargados de
+                            llevar adelante planes anuales de higiene y seguridad. Dichos planes contemplan
+                            principalmente: Capacitación de los distintos sectores involucrados, Control y Evaluación de
+                            Riesgos, Plan de Emergencias y/o sus actualizaciones, Elaboración de Normas y
+                            Procedimientos, Medición de Contaminantes físicos y químicos.
+                        </p>
+                    </section>
+
+                    <section id="acciones-medicas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.9</span>
+                            ACCIONES MÉDICAS Y PROGRAMA DE SALUD OCUPACIONAL
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se revisa el cumplimiento normativo y la declaración de agentes de riesgo y se recomiendan
+                            las acciones médicas preventivas orientadas a la mitigación de enfermedades potenciales de
+                            origen laboral. El Plan de seguimiento de las condiciones de Salud del personal se formula
+                            en función a los síntomas, antecedentes y patologías vinculadas a la tarea.
+                        </p>
+                    </section>
+
+                    <section id="acuerdos-gestion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.10</span>
+                            ACUERDOS DE GESTIÓN
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se proponen reuniones entre los distintos gestores internos, con el fin de revisar metas,
+                            objetivos, y opciones de mejora, además de discutir metodologías e instrumentos de reportes
+                            de resultados, definir indicadores y mecanismos de control y auditoria, y establecer
+                            necesidades específicas de capacitación, entre otros.
+                        </p>
+                    </section>
+
+                    <section id="formacion-informacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.11</span>
+                            FORMACIÓN E INFORMACIÓN
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se cuenta con un Plan de Capacitación en función de nuevos intereses, y requisitos de
+                            Clientes enfocado especialmente a la divulgación de medidas preventivas, las prácticas de
+                            trabajo seguro relacionadas con los riesgos y conductas identificadas, y a la difusión de
+                            causales de accidentes.
+                        </p>
+                    </section>
+
+                    <section id="seguimiento-mejora" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.12</span>
+                            SEGUIMIENTO Y MEJORA CONTINUA
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se desarrollará la estructura de un programa de control y auditorías con el fin de mantener
+                            el seguimiento de los planes Internos y objetivos alcanzados, considerando la participación
+                            de las partes interesadas y la satisfacción por los resultados.
+                        </p>
+                    </section>
+
+                    <section id="analisis-puestos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.13</span>
+                            ANÁLISIS DE PUESTOS DE TRABAJO
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Consiste en relevamientos de los distintos sectores, y tareas de planta, ponderando en forma
+                            primaria los riesgos involucrados.
+                        </p>
+                    </section>
+
+                    <section id="normas-higiene-seguridad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.14</span>
+                            NORMAS DE HIGIENE Y SEGURIDAD
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se elaboran normas escritas específicas, por sectores, puestos de trabajo e instalaciones,
+                            que indiquen la forma segura de trabajar y de operar equipo.
+                        </p>
+                    </section>
+
+                    <section id="accidentes-incidentes" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.15</span>
+                            ACCIDENTES E INCIDENTES
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se identifican las principales causas de los accidentes de planta, determinadas por actos o
+                            condiciones inseguras.
+                        </p>
+                    </section>
+
+                    <section id="proteccion-medio-ambiente" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.16</span>
+                            PROTECCIÓN DEL MEDIO AMBIENTE
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se dimensionan los riesgos y su impacto, relacionados con el proceso productivo, las
+                            materias primas y los insumos involucrados en él.
+                        </p>
+                    </section>
+
+                    <section id="bloqueo-senalizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.17</span>
+                            BLOQUEO Y SEÑALIZACIÓN EN OPERACIONES DE MANTENIMIENTO
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se proporciona un método que los proteja de la liberación inesperada de energía, o la puesta
+                            en marcha intempestiva de máquinas o equipos, mientras realicen operaciones mantenimiento,
+                            reparación o limpieza.
+                        </p>
+                    </section>
+
+                    <section id="elementos-proteccion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.18</span>
+                            ELEMENTOS DE PROTECCIÓN PERSONAL
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se especifican los requerimientos de las distintas actividades y riesgos particulares
+                            enfocados al uso de Elementos de protección personal, su uso y cuidado.
+                        </p>
+                    </section>
+
+                    <section id="requisitos-legales" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.19</span>
+                            REQUISITOS FORMALES Y LEGALES
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            La Empresa lleva y administra un programa adecuado para cumplimentar con los requerimientos
+                            de la Aseguradora de Riesgos del Trabajo, la División C. Y M. A. T., dependiente de la
+                            Secretaría de Trabajo de la Provincia de Córdoba, y otros organismos responsables de la
+                            fiscalización y el control de las condiciones de Trabajo.
+                        </p>
+                    </section>
+
+                    <section id="auditorias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.20</span>
+                            AUDITORIAS
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Las Áreas de Calidad e Higiene y Seguridad, a través de sus responsables, conducen las
+                            auditorias de control, con el fin de monitorear la efectividad y aplicación de las acciones
+                            correctivas que se programen.
+                        </p>
+                    </section>
+
+                    <section id="planes-accion-especificos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.21</span>
+                            PLANES DE ACCIÓN ESPECÍFICOS
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Higiene y Seguridad, define programas de trabajo específicos cuando existen riesgos
+                            determinantes de condiciones peligrosas o de efectos adversos sobre la salud del personal.
+                        </p>
+                    </section>
+
+                    <section id="estructura-funciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.22</span>
+                            ESTRUCTURA Y FUNCIONES IMPLEMENTADAS PARA<br>EL CUMPLIMIENTO DE LA POLÍTICA<br>SERVICIO DE
+                            HIGIENE Y SEGURIDAD EN EL TRABAJO
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Está cubierto por el Ing. Alejandro Herrero, alcanzando a todas las prestaciones necesarias
+                            para dar cumplimiento a la normativa vigente en la materia de Higiene y Seguridad en el
+                            Trabajo. Dicho Servicio es cubierto con carácter externo, conforme al acuerdo vigente, y a
+                            lo dispuesto en el artículo 35 del Decreto 351/79, según la caracterización que establece el
+                            Dto. 1338/96 para actividades de Riesgo "C".
+                        </p>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                                SÍNTESIS CURRICULAR
+                            </h4>
+                            <div class="space-y-2">
+                                <p class="text-gray-700 dark:text-gray-300">Ing. Electricista Electrónico / Ing. Laboral
+                                    / Magister en Protección Ambiental / Management UCC Hotelería, Recreación, Turismo y
+                                    Deporte / Diplomado en PNL</p>
+                                <p class="text-gray-700 dark:text-gray-300">DIRECTOR: Grupo Herrero. Consultora de
+                                    Servicios de Seguridad, Salud, Medio Ambiente y protección contra incendios</p>
+                                <p class="text-gray-700 dark:text-gray-300">ASESOR de Empresas a nivel local y regional
+                                    (Córdoba, CABA, Mendoza, La Rioja, San Luis)</p>
+                                <p class="text-gray-700 dark:text-gray-300">DOCENTE POSTGRADO – Esp. Higiene y Seguridad
+                                    – UTN (Córdoba, La Rioja, Jujuy)</p>
+                                <p class="text-gray-700 dark:text-gray-300">EX INTEGRANTE mesa de evaluación y tutorías
+                                    docentes TFI Esp. Higiene y Seguridad</p>
+                                <p class="text-gray-700 dark:text-gray-300">DOCENTE: Licenciatura de Higiene y Seguridad
+                                    en el Trabajo – UTN – INST. CERVANTES</p>
+                                <p class="text-gray-700 dark:text-gray-300">DISERTANTE en distintos programas y
+                                    seminarios de formación profesional a nivel nacional</p>
+                                <p class="text-gray-700 dark:text-gray-300">INTEGRANTE de la Comisión de Protección
+                                    Contra Incendios del Colegio de Ingenieros Especialistas de Córdoba. Enlace entre
+                                    profesionales y Bomberos de la Provincia</p>
+                                <p class="text-gray-700 dark:text-gray-300">RESPONSABLE de más de 1000 proyectos para
+                                    Habilitación de Negocios e Industrias</p>
+                                <p class="text-gray-700 dark:text-gray-300">EX CONSULTOR de la Dirección de
+                                    Infraestructura de la Provincia de Córdoba, del Departamento Nacional de Salud y
+                                    Seguridad en el Trabajo de UOMRA, de la FUSAT, de la UCOPRO, Unidad de Coordinación
+                                    de Proyecto, del programa BID – FOMIN – Formación para delegados sindicales</p>
+                                <p class="text-gray-700 dark:text-gray-300">INTEGRANTE de la Comisión Provincial que
+                                    trató el proyecto de habilitación de negocios de ventanilla única (ADEC,
+                                    Municipalidad, Cámaras empresarias y Concejales Provinciales)</p>
+                                <p class="text-gray-700 dark:text-gray-300">EX ASESOR de la UNC, Sub Secretaria de
+                                    Planeamiento Físico, e integrante del Consejo para la Prevención de la Seguridad de
+                                    la Universidad Nacional de Córdoba, del CONICET, y de varias Cámaras Empresarias y
+                                    Entidades Sindicales a nivel provincial</p>
+                                <p class="text-gray-700 dark:text-gray-300">EX FUNCIONARIO de la secretaria de Trabajo
+                                    de la Provincia. C y MAT. Autor y coautor de libros, manuales, guías, lineamientos,
+                                    e instrumentos para aplicación en la función pública</p>
+                                <p class="text-gray-700 dark:text-gray-300">EX AUDITOR externo de ARTs</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                                EQUIPO DE TRABAJO
+                            </h4>
+                            <div class="space-y-2">
+                                <p class="text-gray-700 dark:text-gray-300">ALEJANDRO HERRERO - RESPONSABLE Y
+                                    COORDINADOR GENERAL DEL SERVICIO</p>
+                                <p class="text-gray-700 dark:text-gray-300">PERSONAS VINCULADAS AL EJERCICIO PROFESIONAL
+                                    DEL TITULAR</p>
+                                <p class="text-gray-700 dark:text-gray-300">NICOLAS ACOSTA. Licenciado en Higiene y
+                                    Seguridad</p>
+                                <p class="text-gray-700 dark:text-gray-300">FEDERICO HERRERO. Ingeniero Industrial.
+                                    Estudiante avanzado Especialización H y S</p>
+                                <p class="text-gray-700 dark:text-gray-300">PAOLA BAZZANO Ing. Químico - Ingeniera
+                                    Laboral - Mat. 24992936/5595</p>
+                            </div>
+                        </div>
+
+                        <!-- Tabla de Objetivos de Gestión Interna -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+                                OBJETIVOS DE GESTIÓN INTERNA 2021
+                            </h4>
+                            <div class="overflow-x-auto">
+                                <table
+                                    class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th colspan="7"
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Frecuencia control: Mensual<br>
+                                                Dirección / Dependencia: Planta Córdoba<br>
+                                                Emite: Ing. Alejandro Herrero<br>
+                                                REF. Quien: HyS = Seguridad E = Empresa A = Auxiliar HyS H = A Herrero
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                ACTIVIDAD</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                REFERENCIAS</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                C = CUMPLIDO</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                NC = NO CUMPLIDO</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                P = EN PROCESO</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400 border-r">
+                                                Aspectos legales y documentales</th>
+                                            <th
+                                                class="px-4 py-2 text-left text-xs font-medium text-gray-500 dark:text-gray-400">
+                                                Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <!-- Ejemplo de filas de la tabla -->
+                                        <tr>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">
+                                                Análisis ponderado de riesgo</td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">
+                                            </td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">C
+                                            </td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">
+                                            </td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">
+                                            </td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-r">
+                                                Relevamiento general por sector / área principal</td>
+                                            <td class="px-4 py-2 text-sm text-gray-700 dark:text-gray-300">C</td>
+                                        </tr>
+                                        <!-- Más filas según el contenido original -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-capitulo" class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11.23</span>
+                            REVISIONES DEL CAPÍTULO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            19/06/03</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            29/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/02/13</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            8/09/15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/19</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            9</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            10</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            27/05/25</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin cambio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../marco-normativo/marco-normativo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Marco Normativo</span>
+                    </a>
+                    <a href="../codigo-etica/codigo-etica.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Codigo de Ética</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#estructura-organizacion-gestion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.1.
+                                ESTRUCTURA DE ORGANIZACIÓN Y GESTIÓN SYSO</a>
+                            <a href="#aspectos-fundamentales-politica"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.2.
+                                ASPECTOS FUNDAMENTALES DE NUESTRA POLÍTICA</a>
+                            <a href="#responsables-administracion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.3.
+                                RESPONSABLES DE LA ADMINISTRACIÓN</a>
+                            <a href="#procedimientos-registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.4.
+                                PROCEDIMIENTOS, REGISTROS Y DOCUMENTACIÓN</a>
+                            <a href="#acciones-correctivas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.5.
+                                ACCIONES CORRECTIVAS</a>
+                            <a href="#planes-emergencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.6.
+                                PLANES DE EMERGENCIA Y MITIGACIÓN</a>
+                            <a href="#reporte-estadisticas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.7.
+                                REPORTE Y ESTADÍSTICA</a>
+                            <a href="#planes-trabajo-control"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.8.
+                                PLANES DE TRABAJO Y CONTROL</a>
+                            <a href="#acciones-medicas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.9.
+                                ACCIONES MÉDICAS Y SALUD OCUPACIONAL</a>
+                            <a href="#acuerdos-gestion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.10.
+                                ACUERDOS DE GESTIÓN</a>
+                            <a href="#formacion-informacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.11.
+                                FORMACIÓN E INFORMACIÓN</a>
+                            <a href="#seguimiento-mejora"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.12.
+                                SEGUIMIENTO Y MEJORA CONTINUA</a>
+                            <a href="#analisis-puestos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.13.
+                                ANÁLISIS DE PUESTOS DE TRABAJO</a>
+                            <a href="#normas-higiene-seguridad"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.14.
+                                NORMAS DE HIGIENE Y SEGURIDAD</a>
+                            <a href="#accidentes-incidentes"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.15.
+                                ACCIDENTES E INCIDENTES</a>
+                            <a href="#proteccion-medio-ambiente"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.16.
+                                PROTECCIÓN DEL MEDIO AMBIENTE</a>
+                            <a href="#bloqueo-senalizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.17.
+                                BLOQUEO Y SEÑALIZACIÓN</a>
+                            <a href="#elementos-proteccion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.18.
+                                ELEMENTOS DE PROTECCIÓN PERSONAL</a>
+                            <a href="#requisitos-legales"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.19.
+                                REQUISITOS FORMALES Y LEGALES</a>
+                            <a href="#auditorias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.20.
+                                AUDITORIAS</a>
+                            <a href="#planes-accion-especificos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.21.
+                                PLANES DE ACCIÓN ESPECÍFICOS</a>
+                            <a href="#estructura-funciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.22.
+                                ESTRUCTURA Y FUNCIONES</a>
+                            <a href="#revisiones-capitulo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.23.
+                                REVISIONES DEL CAPÍTULO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC-11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Sistema de Gestión de Salud y
+                                    Seguridad</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Ing. Alejandro Herrero</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Dirección de <strong>PRODISMO
+                                        SRL</strong></span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Manual de Calidad - Objeto y Campo de Aplicación">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <title>Objeto y Campo de Aplicación - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Google Maps API -->
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyBmPmoAMz5mYGjn25q2YefayaFZKnTGR9c",
+            v: "beta",
+            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+        });
+    </script>
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../index.html">
+                            <img src="../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Objeto y Campo de
+                                Aplicación</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Índice ISO 9001</span>
+                    </a>
+                    <a href="../referencias-normativas/referencias-normativas.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Referencias normativas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">MC-1 Objeto y Campo de
+                            Aplicación</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 21/05/2024</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 6</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objeto-campo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">0</span>
+                            OBJETO Y CAMPO DE APLICACIÓN
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            En el presente Manual de la Calidad se definen los lineamientos generales del Sistema de
+                            Gestión de la Calidad con el cual activa y tiene bajo control las diversas fases de la
+                            elaboración de los productos y servicios provistos por las Unidades Productivas de
+                            <strong>PRODISMO S.R.L.</strong> (en lo sucesivo solo <strong>PRODISMO S.R.L.</strong>).
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            Se establecen los fundamentos básicos, responsabilidades, políticas y relación entre
+                            distintas áreas de la empresa, en todas aquellas actividades que intervengan en la calidad
+                            de sus productos y servicios, internos y externos. Además se establece el compromiso de toda
+                            la Organización en el logro de los objetivos: desde la identificación de las necesidades y
+                            expectativas del mercado y de los clientes hasta la plena satisfacción de las mismas;
+                            promoviendo una buena relación y armonía entre los distintos ámbitos de la empresa
+                            incluyendo sus clientes y proveedores.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            El alcance específico de este Sistema de Gestión de la Calidad, cubre las actividades de
+                            ingeniería, fabricación y puesta a en funcionamiento de matrices, moldes, herramentales para
+                            fundición, dispositivos de control, equipos especiales, dispositivos para soldadura y líneas
+                            de soldadura de carrocerías en blanco, realizados en <strong>PRODISMO S.R.L.</strong>.
+                        </p>
+                    </section>
+
+                    <section id="empresa" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            LA EMPRESA
+                        </h2>
+
+                        <div id="presentacion" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center text-ms mr-3 dark:bg-blue-900 dark:text-blue-200">1.1</span>
+                                PRESENTACIÓN
+                            </h3>
+                            <div class="space-y-4 text-gray-700 dark:text-gray-300">
+                                <p><strong>PRODISMO S.R.L.</strong> es una Empresa dedicada a la Ingeniería, Diseño,
+                                    Construcción y Puesta en funcionamiento de Medios Productivos.</p>
+                                <p>La Empresa nace en octubre de 1971 y, como la mayoría de emprendimientos de ese
+                                    período, se constituyó como una sociedad con escaso capital.</p>
+                                <p>En un comienzo la conformaron 6 socios y su principal capital fue la capacidad de
+                                    trabajo. Los dueños se dedicaban parcialmente a la actividad de la Empresa, ya que
+                                    todos estaban trabajando en compañías más grandes, a las cuales <strong>PRODISMO
+                                        S.R.L.</strong> tenía como clientes.</p>
+                                <p>A partir de 1973, comienza la dedicación full time de los socios a la empresa y en
+                                    1979 se produce la separación de los mismos, quedando Alejandro Pedrosa como
+                                    responsable mayoritario, el 50% del personal, el nombre y trayectoria de la empresa.
+                                </p>
+                                <p>El impulso en los desarrollos locales representó el marco propicio para el
+                                    crecimiento de la industria de herramentales, debido a los grandes proyectos y
+                                    desarrollos tecnológicos que se embarcaron.</p>
+                                <p>En 1983, con el advenimiento del gobierno democrático, comienza la apertura económica
+                                    argentina. La primera exportación se efectivizó en 1984 con destino a Venezuela.
+                                    A partir de 1985 comenzó a desarrollar el mercado de Brasil y en 1987 amplio su
+                                    mercado logrando su primera exportación a México.</p>
+                                <p><strong>PRODISMO - Planta Sur</strong> nace con la necesidad de reemplazar a un
+                                    proveedor que cesó su funcionamiento (GMD - MATERFER) en la actividad de grandes
+                                    maquinados básicos para matrices.
+                                    Sobre esta base y como resultado posterior a una alianza estratégica en 1997 entre
+                                    <strong>PRODISMO S.R.L.</strong> y PICO (Progressive Tool & Industries Co.)
+                                    proveniente de los Estados Unidos (Detroit) y especialista en líneas de montaje y
+                                    soldadura, la Planta Sur expande su actividad en ese rubro, con una dedicación
+                                    actual del 70% y un 30% de su actividad en que fue fundada.
+                                </p>
+                                <p>La Empresa ha logrado un crecimiento sostenido, posibilitado por una trayectoria
+                                    prestigiosa de cumplimiento y compromiso con los clientes. Si tenemos en cuenta que
+                                    al invertir en el tipo de producto que <strong>PRODISMO S.R.L.</strong> provee, lo
+                                    que se esta comprando es una promesa de entrega, una expectativa de calidad y
+                                    durabilidad, la imagen y confiabilidad de la empresa son factores determinantes a la
+                                    hora de cerrar un contrato.</p>
+                                <p>El potencial del mercado mexicano hizo que ya en 1994 se pensara en la radicación en
+                                    éste país que estaba sintiéndose como nuestro principal cliente. La aparición del
+                                    "efecto tequila" hizo postergar las decisiones.</p>
+                                <p>Contratos en crecimiento con México a partir de 1997, la constante presión de
+                                    nuestros clientes y la firmeza del crecimiento del mercado mexicano, hicieron que el
+                                    10 de octubre de 1999 se tomara la decisión de la radicación de una Unidad
+                                    Productiva en ese país, nuestra Planta Industrial TRHEMSA S.A. de C.V., iniciando
+                                    formalmente sus actividades industriales productivas el 03/01/01.</p>
+                                <p>A fines del 2004 se iniciaron las obras de ampliación de la nave de mecanizado de
+                                    Prodismo Norte y construcción de la nueva nave para la fabricación de dispositivos.
+                                    A principios del 2005 se trasladaron las instalaciones de Prodismo Sur a su actual
+                                    emplazamiento dentro del predio de Prodismo de avenida Japón. En marzo del 2005 se
+                                    produjo el inicio formal de las actividades de Prodismo unificado.</p>
+                                <p>Actualmente y durante los últimos cinco años se ha mantenido la relación de 50 % de
+                                    la producción destinada al mercado local y 50 % exportación, siendo los principales
+                                    países destinatarios México y Brasil.</p>
+                                <p>Un objetivo comercial de <strong>PRODISMO S.R.L.</strong> es lograr una distribución
+                                    de la capacidad productiva en 1/3 en Argentina, 1/3 en Brasil y 1/3 en México en
+                                    promedios trianuales.</p>
+                                <p>La corriente de exportación mantenida y en crecimiento durante los últimos quince
+                                    años consolida la presencia de la empresa en el ámbito de Latinoamérica y fortalece
+                                    la presencia local debido al prestigio que genera para una empresa lograr
+                                    continuidad en este tipo de exportaciones.</p>
+                                <p>Otro factor importante que ha fortalecido el crecimiento de la empresa es el voto de
+                                    confianza otorgado por algunos clientes para la participación en desarrollos
+                                    tecnológicos importantes, en donde <strong>PRODISMO S.R.L.</strong> no contaba con
+                                    toda la experiencia de otras empresas del mundo pero si con una capacidad de trabajo
+                                    conjunto y apoyo al cliente que fueron decisivos a la hora de lograr los contratos.
+                                </p>
+                                <p>Las tendencias mundiales indican que las futuras negociaciones se basarán en
+                                    contratos de desarrollo. Esto significa que las matricerias deben intervenir en el
+                                    diseño del producto del cliente y servir como medio para la fabricación de dichos
+                                    productos y todos sus componentes.</p>
+                                <p>Para la fabricación de un determinado producto pueden requerirse simultáneamente
+                                    matrices para inyección de aluminio, estampado de chapa, inyección de plástico y / o
+                                    dispositivos de ensamble.</p>
+                                <p>El objetivo de la empresa es integrarse con los clientes y abastecerlos de todos los
+                                    desarrollos necesarios, apoyados en:</p>
+                                <div class="pl-6 space-y-2">
+                                    <p><strong>A)</strong> Trabajar comprometidamente para desarrollar, implementar y
+                                        mantener el Sistema de Gestión de la Calidad como base para la mejora continua y
+                                        optimización de todas sus actividades.</p>
+                                    <p><strong>B)</strong> La inversión en mejoramiento y aporte de tecnología.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="vision-mision" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center text-ms mr-3 dark:bg-blue-900 dark:text-blue-200">1.2</span>
+                                VISIÓN Y MISIÓN DE LA EMPRESA
+                            </h3>
+
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold text-gray-700 dark:text-gray-200 mb-2">La Visión</h4>
+                                <div
+                                    class="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300 italic">Ser la mejor empresa familiar
+                                        latinoamericana proveedora de medios de producción, basada en el conocimiento
+                                        del negocio, de las tecnologías y el compromiso con el cuidado del medio
+                                        ambiente.</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold text-gray-700 dark:text-gray-200 mb-2">La Misión</h4>
+                                <div
+                                    class="p-4 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border-l-4 border-green-500">
+                                    <p class="text-gray-700 dark:text-gray-300">Alcanzar el nivel de conocimiento y
+                                        tecnología que nos permita un crecimiento sostenido y ambientalmente
+                                        responsable.
+                                        Contar con un equipo de trabajo motivado e identificado con los objetivos de la
+                                        empresa.
+                                        Asegurar que lo que produzcamos tenga el componente tecnológico, la calidad y el
+                                        respeto ambiental que permita que nuestros clientes sean competitivos.
+                                        Promover la formación y el desarrollo de nuestra gente y nuestros proveedores,
+                                        fomentando una cultura de sostenibilidad.</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold text-gray-700 dark:text-gray-200 mb-4">A través de los
+                                    Valores:</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-lightbulb text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">CONOCIMIENTO</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Saber hacer</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-handshake text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">
+                                                COMPROMISO/RESPONSABILIDAD</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Involucrarse con
+                                                los objetivos de manera responsable</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-people-carry-box text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">RESPETO</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Consideración y
+                                                valoración por las personas y su trabajo</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-users text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">CONFIANZA ENTRE
+                                                NOSOTROS</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Creer en el trabajo
+                                                del otro</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-person-digging text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">AUDACIA</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Enfrentar retos y
+                                                desafíos</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-user-tie text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">PROFESIONALISMO</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Desempeñarse de
+                                                manera competente dando lo mejor de cada uno, buscando la superación
+                                                constante</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-people-group text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">TRABAJO EN
+                                                EQUIPO/COLABORACIÓN</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Complementarse por
+                                                un objetivo común con empatía</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-people-pulling text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">INICIATIVA</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Anticiparse
+                                                agregando valor más allá de lo esperado</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-hands-holding-circle text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">PERTENENCIA Y
+                                                BIENESTAR</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">un ambiente
+                                                amigable y alegre donde nos guste trabajar</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 flex items-start">
+                                        <div class="flex items-center justify-center h-full mr-3 px-3">
+                                            <i class="fas fa-arrows-spin text-blue-500 text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium text-gray-700 dark:text-gray-200">CONSTANCIA</p>
+                                            <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Garantizar
+                                                continuidad de nuestra forma de trabajo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold text-gray-700 dark:text-gray-200 mb-2">Área de Actividad
+                                </h4>
+                                <div class="p-4 bg-blue-50 rounded-lg dark:bg-gray-800">
+                                    <p class="text-gray-700 dark:text-gray-300">Ingeniería; fabricación y puesta en
+                                        funcionamiento de matrices; moldes; herramentales para fundición; dispositivos
+                                        de control; equipos especiales; dispositivos para soldadura y líneas de ensamble
+                                        y soldadura de carrocerías en blanco.</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-lg font-bold text-gray-700 dark:text-gray-200 mb-2">Partes Interesadas
+                                </h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-user-tie text-blue-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Empleados y familiares</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-users text-green-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Clientes</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-truck-loading text-yellow-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Proveedores / Contratistas</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-hard-hat text-orange-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Subcontratados</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-chess-knight text-red-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Competencia</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-handshake text-purple-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Sindicatos</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-certificate text-indigo-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Ente de Certificación</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-home text-pink-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Vecinos</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-door-open text-teal-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Visitantes a la
+                                            Organización</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-globe-americas text-cyan-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Sociedad, comuna</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-landmark text-gray-500 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Entes públicos</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-university text-gray-700 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Organismos estatales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="distribucion-geografica" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center text-ms mr-3 dark:bg-blue-900 dark:text-blue-200">1.3</span>
+                                DISTRIBUCIÓN GEOGRÁFICA DE PRODISMO S.R.L.
+                            </h3>
+
+                            <div class="mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Haga clic en cualquiera de las ubicaciones para verla en el mapa interactivo:
+                                </p>
+                            </div>
+
+                            <div
+                                class="p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                                    <!-- Argentina Card -->
+                                    <div class="location-card text-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-2 border-transparent transition-all duration-300 w-full md:w-1/3"
+                                        data-location="argentina" data-lat="-34.6037" data-lng="-58.3816"
+                                        data-title="Prodismo Argentina"
+                                        data-address="Av. Japón 2600, Córdoba, Argentina" data-type="Sede Central"
+                                        data-color="blue">
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i
+                                                class="fas fa-map-marker-alt text-blue-600 dark:text-blue-300 text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">Argentina</h4>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Prodismo Argentina</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Sede Central</p>
+                                        <div class="mt-2">
+                                            <span
+                                                class="inline-block px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full dark:bg-blue-900 dark:text-blue-200">
+                                                <i class="fas fa-mouse-pointer mr-1"></i> Click para ver mapa
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Brasil Card -->
+                                    <div class="location-card text-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-2 border-transparent transition-all duration-300 w-full md:w-1/3"
+                                        data-location="brasil" data-lat="-23.5505" data-lng="-46.6333"
+                                        data-title="Prodismo do Brasil" data-address="São Paulo, Brasil"
+                                        data-type="Mercado y Operaciones" data-color="green">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i
+                                                class="fas fa-map-marker-alt text-green-600 dark:text-green-300 text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">Brasil</h4>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Prodismo do Brasil</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Mercado y Operac.</p>
+                                        <div class="mt-2">
+                                            <span
+                                                class="inline-block px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full dark:bg-green-900 dark:text-green-200">
+                                                <i class="fas fa-mouse-pointer mr-1"></i> Click para ver mapa
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- México Card -->
+                                    <div class="location-card text-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-2 border-transparent transition-all duration-300 w-full md:w-1/3"
+                                        data-location="mexico" data-lat="19.1278" data-lng="-98.2776"
+                                        data-title="INGEMECANICA 2010"
+                                        data-address="Ctada. Constitución 11 B, 72680 San Francisco Ocotlán, Puebla, México"
+                                        data-type="Planta Industrial" data-color="red">
+                                        <div
+                                            class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i
+                                                class="fas fa-map-marker-alt text-red-600 dark:text-red-300 text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">México</h4>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">INGEMECANICA 2010</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Planta Industrial</p>
+                                        <div class="mt-2">
+                                            <span
+                                                class="inline-block px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full dark:bg-red-900 dark:text-red-200">
+                                                <i class="fas fa-mouse-pointer mr-1"></i> Click para ver mapa
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- USA Card -->
+                                    <div class="location-card text-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-2 border-transparent transition-all duration-300 w-full md:w-1/3"
+                                        data-location="usa" data-lat="32.9639" data-lng="-80.1078"
+                                        data-title="PRODISMO USA"
+                                        data-address="8501 Palmetto Commerce Pkwy,Ladson, SC 29456, Charleston, SC, USA"
+                                        data-type="Oficina Comercial" data-color="purple">
+                                        <div
+                                            class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
+                                            <i
+                                                class="fas fa-map-marker-alt text-purple-600 dark:text-purple-300 text-2xl"></i>
+                                        </div>
+                                        <h4 class="font-bold text-gray-800 dark:text-white">USA</h4>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Prodismo USA</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Oficina Comercial</p>
+                                        <div class="mt-2">
+                                            <span
+                                                class="inline-block px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full dark:bg-purple-900 dark:text-purple-200">
+                                                <i class="fas fa-mouse-pointer mr-1"></i> Click para ver mapa
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mapa Container -->
+                                <div id="map-container" class="map-container">
+                                    <!-- El mapa se cargará aquí -->
+                                </div>
+
+                                <div class="mt-6 text-center">
+                                    <p class="text-gray-700 dark:text-gray-300"><strong>Objetivo comercial:</strong>
+                                        Distribución de capacidad productiva en 1/3 Argentina, 1/3 Brasil, 1/3 México
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="productos" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center text-ms mr-3 dark:bg-blue-900 dark:text-blue-200">1.4</span>
+                                DETALLE DE LOS PRINCIPALES PRODUCTOS:
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Matrices para Estampado de Chapa</p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Moldes de Inyección de Aluminio</p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Modelos para Fundición de Hierro</p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Moldes para Inyección de Plástico</p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Líneas de Montaje y Soldadura de
+                                        Carrocerías</p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Dispositivos de Montaje y Soldadura
+                                    </p>
+                                </div>
+                                <div
+                                    class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm border-l-4 border-blue-500">
+                                    <p class="text-gray-700 dark:text-gray-300">• Máquinas y equipos especiales</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="clientes" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center text-ms mr-3 dark:bg-blue-900 dark:text-blue-200">1.5</span>
+                                PRINCIPALES CLIENTES
+                            </h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Cliente</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                País/Región</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                METALSA</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                FIAT</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                INTERNATIONAL</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                MAXION</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Brasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                EMBRAER</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Brasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                AUTOTEK</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                México</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                NISSAN</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                México</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                RENAULT</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina y Brasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                PSA</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina y Brasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                GRUPO MAGNETTO</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina y Brasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                VOLKSWAGEN</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina, Brasil y México</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                BENTELER</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina y México</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                FORD</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina, México y Estados Unidos</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                MAGNA</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                México, Estados Unidos y Alemania</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                MERCEDES BENZ</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina, México y Estados Unidos</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                GESTAMP</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Argentina, México y Estados Unidos</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="mt-4 text-gray-700 dark:text-gray-300">
+                                Y todas las empresas que requieran nuestros herramentales para el lanzamiento de nuevos
+                                productos, modificación de productos existentes, innovación o incorporación de
+                                tecnología.
+                            </p>
+                        </div>
+
+                        <div id="revisiones-capitulo" class="mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-blue-900 dark:text-blue-200">1.6</span>
+                                REVISIONES DEL CAPÍTULO
+                            </h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rev. Nº</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Fecha</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                0</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                28/03/02</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Emisión del
+                                                documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                1</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                29/08/05</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Modificación
+                                                de los puntos "0" y "1.3"</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                10/12/08</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Modificación
+                                                de Visión y Misión de la Empresa</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                3</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                10/10/17</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión
+                                                completa del documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                4</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                29/09/20</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Modificación
+                                                de los Valores de la Empresa (1.2)</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                5</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                18/04/22</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión
+                                                completa del documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                5</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                10/05/23</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión
+                                                completa del documento sin cambio</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                5</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                13/05/24</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión
+                                                completa del documento sin cambio</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                6</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                21/05/24</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Modificación
+                                                de los puntos "1.2"</td>
+                                        </tr>
+                                        <tr class="bg-gray-50 dark:bg-gray-800">
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                6</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                21/05/24</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión
+                                                completa del documento sin cambio</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Índice ISO 9001</span>
+                    </a>
+                    <a href="../referencias-normativas/referencias-normativas.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Referencias normativas</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objeto-campo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">0.
+                                OBJETO Y CAMPO DE APLICACIÓN</a>
+                            <a href="#empresa"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                LA EMPRESA</a>
+                            <a href="#presentacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.1.
+                                PRESENTACIÓN</a>
+                            <a href="#vision-mision"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.2.
+                                VISIÓN Y MISIÓN</a>
+                            <a href="#distribucion-geografica"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.3.
+                                DISTRIBUCIÓN GEOGRÁFICA</a>
+                            <a href="#productos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.4.
+                                PRINCIPALES PRODUCTOS</a>
+                            <a href="#clientes"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.5.
+                                PRINCIPALES CLIENTES</a>
+                            <a href="#revisiones-capitulo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link ml-4">1.6.
+                                REVISIONES DEL CAPÍTULO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Objeto y Campo de
+                                    Aplicación</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">6</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Joel Campos</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Jessica Villarreal</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">21/05/2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">21/05/2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../images/logo01-bco.png"
+                            data-light-src="../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+
+    <!-- Script para Google Maps con AdvancedMarkerElement -->
+    <script>
+        // Variables globales para el mapa
+        let map;
+        let markers = [];
+        let infoWindows = [];
+        let currentActiveLocation = null;
+        let isMapInitialized = false;
+
+        // Clave de API - REEMPLAZAR CON TU CLAVE REAL
+        const GOOGLE_MAPS_API_KEY = 'AIzaSyBmPmoAMz5mYGjn25q2YefayaFZKnTGR9c'; // <-- REEMPLAZA ESTO
+
+        // Función para verificar si la API key está configurada
+        function isApiKeyConfigured() {
+            return GOOGLE_MAPS_API_KEY && GOOGLE_MAPS_API_KEY !== 'TU_CLAVE_DE_API_AQUI';
+        }
+
+        // Función para inicializar el mapa (ahora se llama manualmente)
+        async function initializeMap() {
+            if (isMapInitialized) return;
+
+            try {
+                // Verificar si la API key está configurada
+                if (!isApiKeyConfigured()) {
+                    showApiKeyWarning();
+                    return;
+                }
+
+                // Ocultar advertencia si está visible
+                const warningElement = document.getElementById('api-key-warning');
+                if (warningElement) {
+                    warningElement.style.display = 'none';
+                }
+
+                // Mostrar estado de carga
+                setMapLoading(true);
+
+                // Verificar si Google Maps está cargado
+                if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+                    // Cargar la API dinámicamente
+                    await loadGoogleMapsAPI();
+                }
+
+                // Verificar nuevamente después de cargar
+                if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+                    throw new Error('Google Maps API no se pudo cargar');
+                }
+
+                // Importar la biblioteca de marcadores
+                const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+                const { Map } = await google.maps.importLibrary("maps");
+
+                // Coordenadas iniciales (centro de América Latina)
+                const initialLocation = { lat: -31.33455326105546, lng: -64.19971170304436 };
+
+                // Crear el mapa
+                map = new Map(document.getElementById('map-container'), {
+                    zoom: 4,
+                    center: initialLocation,
+                    mapTypeControl: true,
+                    streetViewControl: true,
+                    fullscreenControl: true,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                        position: google.maps.ControlPosition.TOP_RIGHT
+                    },
+                    zoomControlOptions: {
+                        position: google.maps.ControlPosition.RIGHT_BOTTOM
+                    },
+                    styles: getMapStyles(),
+                    mapId: "DEMO_MAP_ID"
+                });
+
+                // Limpiar el loading indicator
+                setMapLoading(false);
+
+                // Agregar marcadores para cada ubicación
+                await createAdvancedMarkers(AdvancedMarkerElement);
+
+                // Seleccionar Argentina por defecto
+                selectLocation('argentina');
+
+                // Marcar como inicializado
+                isMapInitialized = true;
+
+                // Escuchar cambios en el tamaño de la ventana
+                window.addEventListener('resize', () => {
+                    if (map) {
+                        setTimeout(() => {
+                            google.maps.event.trigger(map, 'resize');
+                        }, 300);
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error al inicializar el mapa:', error);
+                setMapLoading(false);
+                showMapError('Error al inicializar el mapa: ' + error.message);
+            }
+        }
+
+        // Función para cargar la API de Google Maps dinámicamente
+        function loadGoogleMapsAPI() {
+            return new Promise((resolve, reject) => {
+                // Verificar si ya está cargada
+                if (window.google && window.google.maps) {
+                    resolve();
+                    return;
+                }
+
+                // Crear script para cargar la API
+                const script = document.createElement('script');
+                script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&v=beta&libraries=marker`;
+                script.async = true;
+                script.defer = true;
+
+                script.onload = () => {
+                    // Esperar a que Google Maps esté completamente disponible
+                    const checkInterval = setInterval(() => {
+                        if (window.google && window.google.maps) {
+                            clearInterval(checkInterval);
+                            resolve();
+                        }
+                    }, 100);
+
+                    // Timeout después de 10 segundos
+                    setTimeout(() => {
+                        clearInterval(checkInterval);
+                        reject(new Error('Timeout al cargar Google Maps API'));
+                    }, 10000);
+                };
+
+                script.onerror = () => {
+                    reject(new Error('Error al cargar Google Maps API'));
+                };
+
+                document.head.appendChild(script);
+            });
+        }
+
+        // Función para crear marcadores avanzados
+        async function createAdvancedMarkers(AdvancedMarkerElement) {
+            // Limpiar marcadores anteriores
+            markers.forEach(marker => {
+                if (marker.marker) {
+                    marker.marker.map = null;
+                }
+            });
+            markers = [];
+            infoWindows = [];
+
+            // Crear marcadores para cada ubicación
+            const locations = [
+                { id: 'argentina', lat: -31.3345, lng: -64.1997, title: 'Prodismo Argentina', type: 'Sede Central', color: 'blue', icon: 'fas fa-flag' },
+                { id: 'brasil', lat: -23.5505, lng: -46.6333, title: 'Prodismo do Brasil', type: 'Mercado y Operaciones', color: 'green', icon: 'fas fa-globe-americas' },
+                { id: 'mexico', lat: 19.127958, lng: -98.277658, title: 'Ingemecanica 2010', type: 'Planta Industrial', color: 'red', icon: 'fas fa-building' },
+                { id: 'usa', lat: 32.9639, lng: -80.1078, title: 'Prodismo USA', type: 'Oficina Comercial', color: 'purple', icon: 'fas fa-globe-americas' },
+            ];
+
+            for (const loc of locations) {
+                try {
+                    // Crear contenido HTML personalizado para el marcador
+                    const markerContent = document.createElement('div');
+                    markerContent.className = 'marker-content';
+                    markerContent.style.backgroundColor = getColorHex(loc.color);
+                    markerContent.style.borderColor = getColorHex(loc.color);
+
+                    // Crear ícono dentro del marcador
+                    const icon = document.createElement('i');
+                    icon.className = loc.icon;
+                    markerContent.appendChild(icon);
+
+                    // Crear el marcador avanzado
+                    const marker = new AdvancedMarkerElement({
+                        map,
+                        position: { lat: loc.lat, lng: loc.lng },
+                        title: loc.title,
+                        content: markerContent
+                    });
+
+                    // Crear InfoWindow
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: createInfoWindowContent(loc),
+                        ariaLabel: loc.title
+                    });
+
+                    // Evento para abrir InfoWindow al hacer clic
+                    marker.addListener('click', () => {
+                        infoWindows.forEach(iw => iw.close());
+                        infoWindow.open({
+                            anchor: marker,
+                            map,
+                            shouldFocus: false
+                        });
+                        selectLocation(loc.id);
+                    });
+
+                    // Guardar referencia
+                    markers.push({
+                        id: loc.id,
+                        marker,
+                        infoWindow,
+                        color: loc.color,
+                        position: { lat: loc.lat, lng: loc.lng }
+                    });
+                    infoWindows.push(infoWindow);
+
+                } catch (error) {
+                    console.error(`Error al crear marcador para ${loc.id}:`, error);
+                }
+            }
+        }
+
+        // Función para crear contenido de InfoWindow
+        function createInfoWindowContent(location) {
+            return `
+                <div class="map-info-window">
+                    <h3 style="color: ${getColorHex(location.color)};">
+                        <i class="${location.icon} mr-2"></i>${location.title}
+                    </h3>
+                    <p><strong>País:</strong> ${getCountryName(location.id)}</p>
+                    <p><strong>Tipo:</strong> ${location.type}</p>
+                    <p><strong>Dirección:</strong> ${getAddress(location.id)}</p>
+                    <p><strong>Coordenadas:</strong> ${location.lat.toFixed(4)}, ${location.lng.toFixed(4)}</p>
+                    <div class="mt-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}" 
+                            target="_blank" 
+                            style="color: ${getColorHex(location.color)}; text-decoration: none; font-weight: 500;">
+                            <i class="fas fa-external-link-alt mr-1"></i>Abrir en Google Maps
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Función para seleccionar una ubicación
+        function selectLocation(locationId) {
+            // Si el mapa no está inicializado, inicializarlo primero
+            if (!isMapInitialized) {
+                initializeMap().then(() => {
+                    // Después de inicializar, seleccionar la ubicación
+                    setTimeout(() => selectLocation(locationId), 500);
+                });
+                return;
+            }
+
+            // Remover clase active de todas las tarjetas
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.classList.remove('active');
+                card.style.borderColor = 'transparent';
+            });
+
+            // Agregar clase active a la tarjeta seleccionada
+            const selectedCard = document.querySelector(`.location-card[data-location="${locationId}"]`);
+            if (selectedCard) {
+                selectedCard.classList.add('active');
+                const color = selectedCard.getAttribute('data-color');
+                selectedCard.style.borderColor = getColorHex(color);
+
+                // Mostrar el mapa si está oculto
+                const mapContainer = document.getElementById('map-container');
+                mapContainer.classList.add('active');
+
+                // Scroll suave para que el mapa sea visible
+                setTimeout(() => {
+                    mapContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+
+            // Centrar el mapa en la ubicación seleccionada
+            const selectedMarker = markers.find(m => m.id === locationId);
+            if (selectedMarker && map) {
+                map.setCenter(selectedMarker.position);
+                map.setZoom(12);
+
+                // Cerrar todas las infoWindows y abrir la seleccionada
+                infoWindows.forEach(iw => iw.close());
+                selectedMarker.infoWindow.open({
+                    anchor: selectedMarker.marker,
+                    map,
+                    shouldFocus: false
+                });
+
+                // Animar el marcador
+                animateMarker(selectedMarker.marker);
+            }
+
+            currentActiveLocation = locationId;
+        }
+
+        // Función para animar un marcador
+        function animateMarker(marker) {
+            const content = marker.content;
+            if (content && content.classList) {
+                content.classList.add('marker-pulse');
+                setTimeout(() => {
+                    content.classList.remove('marker-pulse');
+                }, 2000);
+            }
+        }
+
+        // Funciones auxiliares
+        function getCountryName(locationId) {
+            const names = {
+                argentina: 'Argentina',
+                brasil: 'Brasil',
+                mexico: 'México',
+                usa: 'Estados Unidos'
+            };
+            return names[locationId] || locationId;
+        }
+
+        function getAddress(locationId) {
+            const addresses = {
+                argentina: 'Av. Japón 2600, Córdoba, Argentina',
+                brasil: 'São Paulo, Brasil',
+                mexico: 'Ctada. Constitución 11 B, 72680 San Francisco Ocotlán, Puebla, México',
+                usa: '8501 Palmetto Commerce Pkwy,Ladson, SC 29456, Charleston, SC, USA'
+            };
+            return addresses[locationId] || '';
+        }
+
+        function getColorHex(colorName) {
+            const colors = {
+                blue: '#3b82f6',
+                green: '#10b981',
+                red: '#ef4444',
+                purple: '#b53bf6'
+            };
+            return colors[colorName] || '#3b82f6';
+        }
+
+        function getMapStyles() {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            if (isDark) {
+                return [
+                    { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+                    { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+                    { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] }
+                ];
+            } else {
+                return [
+                    {
+                        featureType: "administrative",
+                        elementType: "labels.text.fill",
+                        stylers: [{ color: "#444444" }]
+                    },
+                    {
+                        featureType: "landscape",
+                        elementType: "all",
+                        stylers: [{ color: "#f2f2f2" }]
+                    }
+                ];
+            }
+        }
+
+        // Función para mostrar/ocultar estado de carga
+        function setMapLoading(isLoading) {
+            const mapContainer = document.getElementById('map-container');
+            if (isLoading) {
+                mapContainer.innerHTML = `
+                    <div class="loading-map">
+                        <div class="loading-spinner"></div>
+                        <p>Cargando mapa interactivo...</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Función para mostrar error en el mapa
+        function showMapError(message) {
+            const mapContainer = document.getElementById('map-container');
+            mapContainer.innerHTML = `
+                <div class="h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 p-4 text-center">
+                    <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Error en el Mapa</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">${message}</p>
+                    <button onclick="initializeMap()" 
+                            class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fas fa-redo mr-2"></i>
+                        Reintentar
+                    </button>
+                </div>
+            `;
+            mapContainer.classList.add('active');
+        }
+
+        // Función para mostrar advertencia de API key
+        function showApiKeyWarning() {
+            const warningElement = document.getElementById('api-key-warning');
+            if (warningElement) {
+                warningElement.style.display = 'block';
+            }
+
+            const mapContainer = document.getElementById('map-container');
+            mapContainer.innerHTML = `
+                <div class="h-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-800 p-4 text-center">
+                    <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-4"></i>
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Mapa Interactivo</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        Haz clic en una ubicación para activar el mapa. Se requiere una clave de API de Google Maps.
+                    </p>
+                </div>
+            `;
+            mapContainer.classList.add('active');
+        }
+
+        // Inicializar cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function () {
+            // Configurar evento click para cada tarjeta de ubicación
+            document.querySelectorAll('.location-card').forEach(card => {
+                card.addEventListener('click', function () {
+                    const locationId = this.getAttribute('data-location');
+                    selectLocation(locationId);
+                });
+
+                // Soporte para teclado
+                card.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const locationId = this.getAttribute('data-location');
+                        selectLocation(locationId);
+                    }
+                });
+
+                // Mejorar accesibilidad
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('role', 'button');
+                card.setAttribute('aria-label', `Ver ubicación de ${card.querySelector('h4').textContent}`);
+            });
+
+            // Botón para ocultar advertencia de API key
+            const hideWarningBtn = document.getElementById('hide-api-warning');
+            if (hideWarningBtn) {
+                hideWarningBtn.addEventListener('click', function () {
+                    const warningElement = document.getElementById('api-key-warning');
+                    if (warningElement) {
+                        warningElement.style.display = 'none';
+                    }
+                });
+            }
+
+            // Inicializar el mapa automáticamente si hay una API key configurada
+            if (isApiKeyConfigured()) {
+                // Inicializar después de un pequeño retraso para asegurar que el DOM esté listo
+                setTimeout(() => {
+                    initializeMap().catch(error => {
+                        console.error('Error al inicializar el mapa:', error);
+                    });
+                }, 1000);
+            } else {
+                // Mostrar advertencia si no hay API key
+                showApiKeyWarning();
+            }
+
+            // Integrar con el sistema de tema existente
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (map) {
+                            map.setOptions({ styles: getMapStyles() });
+                        }
+                    }, 300);
+                });
+            }
+        });
+
+        // Manejar errores de autenticación globalmente
+        window.gm_authFailure = function () {
+            showMapError('Error de autenticación con Google Maps API. Verifica tu clave de API.');
+        };
+    </script>
+
+
+</body>
+
+</html>

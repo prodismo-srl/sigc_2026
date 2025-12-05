@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Salud y Seguridad - Código de Ética">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>Código de Ética - <strong>PRODISMO SRL</strong>
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Código de Ética</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../medicion-analisis-mejora/medicion-analisis-mejora.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Medición, Análisis y Mejora</span>
+                    </a>
+                    <a href="../marco-normativo/marco-normativo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Marco Normativo</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">MC-11 Sistema de Gestión de
+                            Salud y Seguridad - Código de Ética</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC-11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 27/05/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="introduccion-codigo-etica" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            INTRODUCCIÓN AL CÓDIGO DE ÉTICA
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-eye mr-2 text-primary-600"></i>
+                                VISIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Ser la mejor empresa familiar latinoamericana proveedora de medios de producción. Basada
+                                en el conocimiento del negocio y de las tecnologías.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-bullseye mr-2 text-primary-600"></i>
+                                MISIÓN
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Alcanzar el nivel de conocimiento y tecnología que nos permita un crecimiento
+                                        sostenido.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Contar con un Equipo de Trabajo motivado e Identificado con los objetivos de la
+                                        empresa.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Que lo que produzcamos tenga el componente tecnológico y la calidad que permita
+                                        que nuestros clientes sean competitivos.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Formación y Desarrollo de nuestra Gente y nuestros Proveedores.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-heart mr-2 text-primary-600"></i>
+                                VALORES
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-center bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Conocimiento</span>
+                                </div>
+                                <div class="flex items-center bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-handshake text-green-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Compromiso/Responsabilidad</span>
+                                </div>
+                                <div class="flex items-center bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-users text-yellow-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Respeto</span>
+                                </div>
+                                <div class="flex items-center bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-shield-alt text-purple-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Confianza entre nosotros</span>
+                                </div>
+                                <div class="flex items-center bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-bolt text-red-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Audacia</span>
+                                </div>
+                                <div class="flex items-center bg-indigo-50 dark:bg-indigo-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-user-tie text-indigo-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Profesionalismo</span>
+                                </div>
+                                <div class="flex items-center bg-pink-50 dark:bg-pink-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-people-group text-pink-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Trabajo en Equipo/Colaboración</span>
+                                </div>
+                                <div class="flex items-center bg-teal-50 dark:bg-teal-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-lightbulb text-teal-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Iniciativa</span>
+                                </div>
+                                <div class="flex items-center bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-chart-line text-orange-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Constancia</span>
+                                </div>
+                                <div class="flex items-center bg-cyan-50 dark:bg-cyan-900/20 p-3 rounded-lg">
+                                    <i class="fas fa-home text-cyan-600 mr-3"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Pertenencia y Bienestar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-flag mr-2 text-primary-600"></i>
+                                PROPÓSITO
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Evolucionar, innovar y participar en la industria global disfrutando lo que hacemos.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-user-friends mr-2 text-primary-600"></i>
+                                DESTINATARIOS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                El presente Código de Ética compete ser implementado por todo colaborador tanto interno
+                                como externo, proveedores, clientes y terceros que mantengan vínculos con
+                                <strong>PRODISMO SRL</strong>.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="cumplimiento-normativo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            CUMPLIMIENTO NORMATIVO, PRINCIPIOS Y PROPÓSITOS QUE ORIENTAN NUESTRAS ACCIONES
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            En <strong>PRODISMO SRL</strong> elegimos la transparencia y honestidad como prioridad en
+                            nuestras relaciones con nuestros clientes, proveedores y público en general.
+                        </p>
+
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Nuestra actividad la desarrollamos con bases en la legislación vigente y adoptando
+                                    el espíritu y finalidad de las normas, involucrando a cada colaborador en el
+                                    compromiso de respetarlas íntegramente.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Será deber de cada integrante de <strong>PRODISMO SRL</strong>, observar y cumplir
+                                    las normas y leyes aplicables al desempeño de sus funciones, así como también
+                                    adoptar las medidas pertinentes en caso de ser testigo de irregularidades
+                                    practicadas por terceros. La conducta, la presencia y el trabajo de cada uno de los
+                                    colaboradores, refleja y marca la reputación y prestigio de nuestra organización.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Como empresa nos comprometemos a analizar e investigar cualquier conducta
+                                    denunciada, contraria al Código de Ética. Además de brindar adecuada capacitación
+                                    sobre el mismo.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    La integridad y el cumplimiento de las normas son responsabilidad de todos los que
+                                    formamos parte de <strong>PRODISMO SRL</strong>.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    La Dirección y Gerencia de RRHH son los encargados de garantizar la aplicación y
+                                    ejecución de los principios reconocidos en el presente Código de Ética.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="comportamiento-etico" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            COMPORTAMIENTO ÉTICO Y DERECHOS HUMANOS
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-users mr-2 text-primary-600"></i>
+                                DERECHOS HUMANOS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Estamos comprometidos a siempre respetar, proteger y promover los Derechos Humanos. La
+                                dignidad de las personas, el respeto mutuo y los principios de confianza son las bases
+                                de la gestión de los recursos humanos y las relaciones en <strong>PRODISMO SRL</strong>,
+                                promoviendo un ambiente favorable, un trabajo seguro, productivo y de calidad.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-globe-americas mr-2 text-primary-600"></i>
+                                DIVERSIDAD, INCLUSIÓN Y NO DISCRIMINACIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                En <strong>PRODISMO SRL</strong> la diversidad y la inclusión son también valores
+                                fundamentales. Contamos con un ambiente de trabajo inclusivo, que valora la singularidad
+                                de personas y variedad de talentos, experiencias e ideas individuales. Estamos
+                                comprometidos a que nadie sea discriminado respecto a aspectos raciales, religiosos,
+                                afiliación sindical, sexo, género, edad, idioma, nacionalidad, condición social,
+                                orientación sexual, ascendencia, discapacidad, ni ningún otro motivo.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-balance-scale mr-2 text-primary-600"></i>
+                                IGUALDAD DE OPORTUNIDADES
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Basamos las relaciones de empleo en la igualdad de oportunidades y trato justo. Tenemos
+                                "Tolerancia cero" a la discriminación por razones de género, religión, pertenencia
+                                étnica, orientación sexual o política, edad, color de piel, nacionalidad, o cualquier
+                                otro aspecto. La selección, la contratación y trato de nuestros colaboradores dependen
+                                únicamente de sus competencias y aptitudes.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-graduation-cap mr-2 text-primary-600"></i>
+                                FOMENTO A LA PROFESIONALIZACIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                La formación, calidad y eficacia de los colaboradores de la empresa son un principio
+                                indispensable para <strong>PRODISMO SRL</strong>. Es por esto que nos ocupamos de
+                                brindar constantes oportunidades de desarrollo y aprendizaje a nuestros colaboradores
+                                con el objetivo de dotarlos de los conocimientos y competencias necesarias para su
+                                realización profesional.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="seguridad-salud-ocupacional" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            SEGURIDAD Y SALUD OCUPACIONAL
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-hard-hat mr-2 text-primary-600"></i>
+                                SEGURIDAD LABORAL
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Promovemos la práctica responsable de las tareas llevadas a cabo dentro de la
+                                        empresa, basándonos en una Política de Seguridad, como medio para proteger la
+                                        salud de las personas y mantener espacios de trabajo seguros y saludables.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Fomentamos el compromiso, participación y responsabilidad de cada uno de los
+                                        colaboradores para adoptar prácticas seguras y medidas preventivas ligadas a las
+                                        normativas, indispensables para la protección de sí mismo y de sus compañeros.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Promovemos un lugar de trabajo libre de todo tipo de acoso y maltrato.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-leaf mr-2 text-primary-600"></i>
+                                MEDIO AMBIENTE
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Asumimos el compromiso de ser conscientes y evaluar permanentemente cómo impacta
+                                        nuestra actividad en el medio ambiente y qué acciones podemos llevar a cabo para
+                                        minimizar dicho impacto y colaborar con la prevención y protección
+                                        medioambiental, cumpliendo para ello todas las leyes y normativas industriales
+                                        aplicables.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        También entendemos la responsabilidad que tenemos como parte de la sociedad de
+                                        inculcar prácticas responsables a nuestros colaboradores para producir un efecto
+                                        multiplicador que contribuya a la concientización.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="relaciones-terceros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RELACIONES CON TERCEROS
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-truck mr-2 text-primary-600"></i>
+                                RELACIÓN CON PROVEEDORES Y CONTRATISTAS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Es nuestro deber mantener la objetividad y transparencia al momento de seleccionar
+                                proveedores y contratistas, basándonos siempre en criterios técnicos y profesionales, y
+                                en las necesidades de la empresa para asegurar un proceso justo de selección, sin
+                                favoritismos ni subjetividades.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-user-tie mr-2 text-primary-600"></i>
+                                RELACIÓN CON CLIENTES
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                En <strong>PRODISMO SRL</strong> apuntamos a relaciones comerciales duraderas y de
+                                excelencia, caracterizadas por una actitud de permanente servicio, con trato cordial y
+                                eficiente, brindando información transparente y precisa, satisfaciendo las expectativas
+                                y manteniendo altos niveles de calidad. Los Colaboradores Internos respetarán la
+                                confidencialidad de la información suministrada por los clientes y la información de
+                                carácter privada a la que puedan tener acceso en el desempeño de su actividad
+                                profesional.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-handshake mr-2 text-primary-600"></i>
+                                RELACIÓN CON LOS SINDICATOS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                <strong>PRODISMO SRL</strong> busca mantener con las entidades sindicales una relación
+                                permanente de respeto y armonía, y no practicar ningún tipo de discriminación con los
+                                colaboradores sindicalizados. Reconocemos el derecho básico de todos los empleados a
+                                constituir sindicatos y a elegir a los representantes de los trabajadores en los
+                                términos contemplados en la normativa vigente.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2 text-primary-600"></i>
+                                CONFLICTO DE INTERESES
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        La selección, incorporación e integración de colaboradores en <strong>PRODISMO
+                                            SRL</strong> debe ser fundada en la objetividad y la idoneidad del
+                                        candidato.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Así como también los miembros de la empresa se deben comprometer a desempeñar
+                                        sus funciones siempre con buena fe e integridad, no permitiendo que interfieran
+                                        intereses ajenos a la organización.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Se reconocen y se respetan los derechos de los Colaboradores de socializar
+                                        libremente con otras personas en su lugar de trabajo, también se debe procurar
+                                        que esas relaciones no afecten negativamente al desempeño laboral, la capacidad
+                                        de supervisar a otras personas o el ambiente laboral.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-gavel mr-2 text-primary-600"></i>
+                                SOBORNO Y ANTICORRUPCIÓN
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        La acción de dar u ofrecer dinero, obsequios o cualquier objeto de valor no son
+                                        aceptables con el fin de obtener una ventaja comercial o influir o gratificar al
+                                        receptor para que el mismo accione de forma ilegítima.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Por ejemplo, aceptar objetos lujosos; pagos en efectivo; uso de servicios;
+                                        instalaciones o bienes de la compañía o un tercero sin contraprestación alguna;
+                                        favorecer para influir sobre un resultado comercial, directa o indirectamente,
+                                        en el ambiente público o en el privado; emplear o contratar una persona para que
+                                        ella o un tercero actúen a nuestro favor.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Adherimos a la prohibición de la corrupción y tenemos tolerancia cero a la
+                                        misma. La toma de decisiones no podrá verse afectada nunca por motivos
+                                        incorrectos.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Entendiendo a la corrupción como la acción y efecto de corromper, es decir, dar
+                                        dinero o dádivas a una persona para conseguir un trato favorable o beneficioso,
+                                        en particular, cuando dicho trato resulta injusto o ilegal.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Nuestros colaboradores no ofrecerán ni concederán ventajas personales
+                                        injustificadas a proveedores o colaboradores externos. Sólo se admitirán regalos
+                                        comúnmente aceptados o invitaciones de poco valor.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="control-integridad-financiera" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            CONTROL E INTEGRIDAD FINANCIERA
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-money-bill-wave mr-2 text-primary-600"></i>
+                                PREVENCIÓN DE LAVADO DE DINERO
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                <strong>PRODISMO SRL</strong> no realiza, permite ni fomenta ninguna actividad ilícita
+                                vinculada con sus operaciones. Actuamos de manera transparente y clara en nuestras
+                                finanzas y contabilidad, del mismo modo que chequeamos que nuestros clientes y
+                                proveedores compartan los mismos principios. Realizamos responsablemente la traza del
+                                dinero que manejamos, su registro y seguimiento sin excepción alguna.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-calculator mr-2 text-primary-600"></i>
+                                CONTABILIDAD E INFORMACIÓN FINANCIERA
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Cumplimos con las disposiciones legales y garantizamos que la contabilidad e información
+                                financiera se caracterice por la exactitud, transparencia y claridad (estado contable
+                                anual).
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-file-invoice-dollar mr-2 text-primary-600"></i>
+                                IMPUESTOS, ARANCELES Y CONTROL DE EXPORTACIONES
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Nuestra participación en proyectos internacionales se lleva a cabo acorde a las
+                                normativas y leyes de comercio exterior, tributario y aduanero. Aseguramos la
+                                regularidad y cumplimiento de nuestras obligaciones, actuando bajo las normas de
+                                exportación, sujetos al marco de control, sus limitaciones, requisitos y prohibiciones.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="proteccion-activos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            PROTECCIÓN DE ACTIVOS, INFORMACIÓN E INTELECTUAL
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-lock mr-2 text-primary-600"></i>
+                                CONFIDENCIALIDAD DE LA INFORMACIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Los colaboradores de <strong>PRODISMO SRL</strong> no deben utilizar información interna
+                                confidencial en beneficio propio o de terceros. Toda información que no es ni se ha
+                                hecho pública es considerada confidencial. Su divulgación podría ser de utilidad u
+                                ocasionar un perjuicio. Somos conscientes del valor que tiene el conocimiento propio de
+                                la compañía y lo protegemos con el máximo cuidado, donde cada colaborador es responsable
+                                de la información que maneja en el ejercicio de su función, y se compromete a cuidar de
+                                ella.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-database mr-2 text-primary-600"></i>
+                                PROTECCIÓN DE DATOS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Garantizamos proteger los datos personales de empleados, clientes proveedores y terceros
+                                afectados y limitar su uso exclusivamente bajo lo establecido legalmente. El
+                                procesamiento de información, su recopilación y almacenamiento serán efectuados siempre
+                                con responsabilidad, seguridad y confidencialidad.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-copyright mr-2 text-primary-600"></i>
+                                DERECHO DE PROPIEDAD INTELECTUAL
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Los desarrollos o innovaciones generadas en el ámbito de la actividad laboral de
+                                <strong>PRODISMO SRL</strong>, son parte de los activos de la empresa y permanecerán
+                                como tal aún después de que finalice la relación laboral del colaborador.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-building mr-2 text-primary-600"></i>
+                                USO CORRECTO DE BIENES DE LA EMPRESA
+                            </h3>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Los recursos que la empresa pone a disposición de sus colaboradores con el fin
+                                        de garantizar y/o facilitar el desempeño de sus tareas y funciones laborales,
+                                        deberán ser utilizados con responsabilidad, procurando preservarlos en perfecto
+                                        estado.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Cada colaborador es responsable de hacer un buen uso y cuidar las propiedades y
+                                        recursos de la empresa, asumiendo el compromiso que esto requiere.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Deberá ser denunciado el uso no autorizado, el daño o la pérdida por negligencia
+                                        o por intención delictiva.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Los recursos materiales, equipos, maquinaria, herramientas, vehículos, recursos
+                                        financieros o informáticos, información confidencial como también diseños,
+                                        estrategias de negocio, etc., deben ser utilizados única y exclusivamente para
+                                        el desempeño de sus funciones laborales, nunca en beneficio propio o de
+                                        terceros.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidad-social" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            RESPONSABILIDAD SOCIAL EMPRESARIAL
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-hands-helping mr-2 text-primary-600"></i>
+                                RSE
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Tenemos la convicción de que como empresa cumplimos un rol fundamental en la sociedad,
+                                es por esta razón que fomentamos el desarrollo de nuestra comunidad, promoviendo la
+                                formación y el aprendizaje. A su vez con este mismo objetivo es que impulsamos la
+                                innovación y tecnología de diferentes industrias. Estamos comprometidos a compartir y
+                                contagiar este espíritu emprendedor a favor del desarrollo, el progreso y crecimiento
+                                constante y creamos las oportunidades para hacerlo.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="atribucion-cumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            ATRIBUCIÓN, CUMPLIMIENTO Y APROBACIÓN DEL CÓDIGO DE ÉTICA
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-play-circle mr-2 text-primary-600"></i>
+                                IMPLEMENTACIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Ponemos en conocimiento de los colaboradores el presente código a través de la etapa de
+                                inducción del nuevo personal y en difusiones masivas, al momento en que se realizan
+                                actualizaciones del mismo.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-chalkboard-teacher mr-2 text-primary-600"></i>
+                                CAPACITACIÓN
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Asumimos la responsabilidad de brindar capacitaciones y difusión de los principios y
+                                valores contenidos en este Código de Ética, para que cada integrante de la empresa tenga
+                                conocimiento del mismo y su alcance.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-bullhorn mr-2 text-primary-600"></i>
+                                SISTEMA DE DENUNCIAS
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                En <strong>PRODISMO SRL</strong> nos comprometemos a no dar lugar a prácticas ilegales y
+                                conductas inapropiadas, por eso promovemos y facilitamos la detección de las mismas
+                                garantizando una comunicación abierta y canales formales destinados a tal fin. Es por
+                                esto que ponemos a disposición un sistema interno y confidencial de notificación de
+                                denuncias, a través de un correo electrónico, a donde se podrá dirigir denuncias sobre
+                                el incumplimiento de los aspectos contemplados en el presente Código de Ética.
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-file-signature mr-2 text-primary-600"></i>
+                                ACUSE DE RECIBO Y ENTENDIMIENTO
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                                Declaro que he recibido y leído el Código de ética de <strong>PRODISMO SRL</strong>, y
+                                que comprendo mis obligaciones con respecto el cumplimiento de los principios y
+                                políticas enumeradas en el código.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            REVISIONES
+                        </h2>
+
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            19/06/03</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            29/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/02/13</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            8/09/15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/19</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            9</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            10</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            27/05/25</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin cambio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../medicion-analisis-mejora/medicion-analisis-mejora.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Medición, Análisis y Mejora</span>
+                    </a>
+                    <a href="../marco-normativo/marco-normativo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Marco Normativo</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#introduccion-codigo-etica"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                INTRODUCCIÓN AL CÓDIGO DE ÉTICA</a>
+                            <a href="#cumplimiento-normativo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                CUMPLIMIENTO NORMATIVO, PRINCIPIOS Y PROPÓSITOS</a>
+                            <a href="#comportamiento-etico"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                COMPORTAMIENTO ÉTICO Y DERECHOS HUMANOS</a>
+                            <a href="#seguridad-salud-ocupacional"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                SEGURIDAD Y SALUD OCUPACIONAL</a>
+                            <a href="#relaciones-terceros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RELACIONES CON TERCEROS</a>
+                            <a href="#control-integridad-financiera"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                CONTROL E INTEGRIDAD FINANCIERA</a>
+                            <a href="#proteccion-activos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                PROTECCIÓN DE ACTIVOS, INFORMACIÓN E INTELECTUAL</a>
+                            <a href="#responsabilidad-social"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                RESPONSABILIDAD SOCIAL EMPRESARIAL</a>
+                            <a href="#atribucion-cumplimiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                ATRIBUCIÓN, CUMPLIMIENTO Y APROBACIÓN</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC-11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Sistema de Gestión de Salud y
+                                    Seguridad - Código de Ética</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

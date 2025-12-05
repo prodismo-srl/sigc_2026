@@ -1,5 +1,5 @@
 // Función para inicializar todos los componentes
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeTheme();
     initializeSearch();
     initializeTableOfContents();
@@ -16,14 +16,14 @@ function initializeTheme() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const savedTheme = localStorage.getItem('theme') || 'light';
-    
-    console.log('themeToggle', themeToggle);
-    console.log('themeIcon', themeIcon);
-    console.log('savedTheme', savedTheme);
+
+    // console.log('themeToggle', themeToggle);
+    // console.log('themeIcon', themeIcon);
+    // console.log('savedTheme', savedTheme);
     // Función para cambiar imágenes
     function updateImages(isDark) {
         const logoImages = document.querySelectorAll('[data-theme-logo]');
-        
+
         logoImages.forEach(img => {
             if (isDark) {
                 img.src = img.getAttribute('data-dark-src');
@@ -32,32 +32,32 @@ function initializeTheme() {
             }
         });
     }
-    
+
     // Apply saved theme on initial load
     if (savedTheme === 'dark') {
         document.documentElement.classList.add('dark');
-        if(themeIcon) {
+        if (themeIcon) {
             themeIcon.classList.add('fa-sun');
             themeIcon.classList.remove('fa-moon');
         }
         updateImages(true);
     } else {
         document.documentElement.classList.remove('dark');
-        if(themeIcon) {
+        if (themeIcon) {
             themeIcon.classList.add('fa-moon');
             themeIcon.classList.remove('fa-sun');
         }
         updateImages(false);
     }
-    
+
     // Toggle theme on button click
-    if(themeToggle) {
+    if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const isDark = document.documentElement.classList.toggle('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            
-            if(themeIcon) {
-                if(isDark) {
+
+            if (themeIcon) {
+                if (isDark) {
                     themeIcon.classList.add('fa-sun');
                     themeIcon.classList.remove('fa-moon');
                 } else {
@@ -65,7 +65,7 @@ function initializeTheme() {
                     themeIcon.classList.remove('fa-sun');
                 }
             }
-            
+
             // Actualizar imágenes cuando se cambie el tema
             updateImages(isDark);
         });
@@ -76,19 +76,19 @@ function initializeTheme() {
 function initializeSearch() {
     const searchInput = document.getElementById('search-input');
     const mobileSearchInput = document.getElementById('mobile-search-input');
-    
+
     function performSearch(query) {
         if (!query.trim()) return;
-        
+
         // Buscar en todo el contenido
         const content = document.querySelector('main').textContent;
         const regex = new RegExp(query, 'gi');
         const matches = content.match(regex);
-        
+
         if (matches) {
             // Resaltar resultados (implementación básica)
             highlightSearchResults(query);
-            
+
             // Mostrar número de resultados
             Swal.fire({
                 title: 'Resultados de búsqueda',
@@ -105,7 +105,7 @@ function initializeSearch() {
             });
         }
     }
-    
+
     function highlightSearchResults(query) {
         // Remover resaltados anteriores
         const existingHighlights = document.querySelectorAll('.search-highlight');
@@ -114,7 +114,7 @@ function initializeSearch() {
             parent.replaceChild(document.createTextNode(el.textContent), el);
             parent.normalize();
         });
-        
+
         // Resaltar nuevas coincidencias
         const walker = document.createTreeWalker(
             document.querySelector('main'),
@@ -122,7 +122,7 @@ function initializeSearch() {
             null,
             false
         );
-        
+
         let node;
         while (node = walker.nextNode()) {
             if (node.textContent.toLowerCase().includes(query.toLowerCase())) {
@@ -133,11 +133,11 @@ function initializeSearch() {
             }
         }
     }
-    
+
     // Event listeners para búsqueda
     [searchInput, mobileSearchInput].forEach(input => {
         if (input) {
-            input.addEventListener('keypress', function(e) {
+            input.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     performSearch(this.value);
                 }
@@ -153,23 +153,23 @@ function initializeTableOfContents() {
         const href = link.getAttribute('href');
         return document.querySelector(href);
     });
-    
+
     function updateActiveTocLink() {
         const scrollPosition = window.scrollY + 100;
-        
+
         let activeIndex = 0;
         sections.forEach((section, index) => {
             if (section && scrollPosition >= section.offsetTop) {
                 activeIndex = index;
             }
         });
-        
+
         tocLinks.forEach(link => link.classList.remove('active'));
         if (tocLinks[activeIndex]) {
             tocLinks[activeIndex].classList.add('active');
         }
     }
-    
+
     window.addEventListener('scroll', updateActiveTocLink);
     updateActiveTocLink();
 }
@@ -177,17 +177,17 @@ function initializeTableOfContents() {
 // Función para scroll suave en los enlaces del índice
 function initializeSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
-    
+
     links.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const offsetTop = targetElement.offsetTop - 100;
-                
+
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -200,9 +200,9 @@ function initializeSmoothScroll() {
 // Función para el botón "Volver arriba"
 function initializeBackToTop() {
     const backToTopButton = document.getElementById('back-to-top');
-    
+
     if (backToTopButton) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('opacity-0', 'invisible');
                 backToTopButton.classList.add('opacity-100', 'visible');
@@ -211,8 +211,8 @@ function initializeBackToTop() {
                 backToTopButton.classList.add('opacity-0', 'invisible');
             }
         });
-        
-        backToTopButton.addEventListener('click', function() {
+
+        backToTopButton.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -230,18 +230,18 @@ function initializeQuickActions() {
     const requestRenewBtn = document.getElementById('solicitar-renovacion');
     const checkListBtn = document.getElementById('consultar-inventario');
     const cvss_calculator = document.getElementById('cvss-calculator');
-    
+
     if (reportIncidentBtn) {
-        reportIncidentBtn.addEventListener('click', function() {
+        reportIncidentBtn.addEventListener('click', function () {
             // Abrir cliente de correo para reportar incidente
             const subject = 'Reporte de Incidente de Seguridad';
             const body = `Hola equipo de seguridad,\n\nMe pongo en contacto para reportar el siguiente incidente relacionado con activos:\n\n- Tipo de incidente:\n- Activo(s) afectado(s):\n- Fecha y hora:\n- Descripción:\n- Impacto estimado:\n\nSaludos cordiales.`;
             window.location.href = `mailto:itprodismo@prodismo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         });
     }
-    
+
     if (contactSupportBtn) {
-        contactSupportBtn.addEventListener('click', function() {
+        contactSupportBtn.addEventListener('click', function () {
             // Mostrar opciones de contacto
             Swal.fire({
                 title: 'Contactar Soporte',
@@ -283,14 +283,14 @@ function initializeQuickActions() {
     }
 
     if (inventaryResume) {
-        inventaryResume.addEventListener('click', function() {
+        inventaryResume.addEventListener('click', function () {
             // Abrir App inventario en nueva pestaña sin opciones específicas
             window.open('https://prodismo.snipe-it.io/', '_blank', 'noopener,noreferrer');
         });
     }
 
     if (reportStolenBtn) {
-        reportStolenBtn.addEventListener('click', function() {
+        reportStolenBtn.addEventListener('click', function () {
             // Abrir cliente de correo para reportar incidente
             const subject = 'Reporte de Incidente de Seguridad - Gestión de Riesgos';
             const body = `Hola equipo de seguridad,\n\nMe pongo en contacto para reportar el siguiente incidente relacionado con riesgos de seguridad:\n\n- Tipo de incidente:\n- Riesgo(s) identificado(s):\n- Fecha y hora:\n- Descripción:\n- Impacto estimado:\n\nSaludos cordiales.`;
@@ -299,7 +299,7 @@ function initializeQuickActions() {
     }
 
     if (requestRenewBtn) {
-        requestRenewBtn.addEventListener('click', function() {
+        requestRenewBtn.addEventListener('click', function () {
             // Abrir cliente de correo para reportar incidente
             const subject = 'Solicitar Renovación - Gestión de Medios Identificación';
             const body = `Hola equipo de seguridad,\n\nMe pongo en contacto para solicitar la renovación de identificación:\n\n- Equipo Id#:\n-Descripción:\n - Fecha y hora:\n\nSaludos cordiales.`;
@@ -308,7 +308,7 @@ function initializeQuickActions() {
     }
 
     if (checkListBtn) {
-        checkListBtn.addEventListener('click', function() {
+        checkListBtn.addEventListener('click', function () {
             // Mostrar opciones de contacto
             Swal.fire({
                 title: 'Contactar Soporte',
@@ -350,7 +350,7 @@ function initializeQuickActions() {
     }
 
     if (cvss_calculator) {
-        cvss_calculator.addEventListener('click', function() {
+        cvss_calculator.addEventListener('click', function () {
             // Mostrar opciones de contacto
             Swal.fire({
                 title: 'Sistema Común de Puntuación de Vulnerabilidades (SIG)',
@@ -395,9 +395,9 @@ function initializeQuickActions() {
 // Función para la descarga de PDF (simulada)
 function initializePDFDownload() {
     const pdfDownloadBtn = document.getElementById('pdf-download');
-    
+
     if (pdfDownloadBtn) {
-        pdfDownloadBtn.addEventListener('click', function() {
+        pdfDownloadBtn.addEventListener('click', function () {
             Swal.fire({
                 title: 'Descargar PDF',
                 text: 'La descarga del documento en formato PDF comenzará en breve.',
@@ -423,20 +423,20 @@ function initializePDFDownload() {
 // Función para inicializar enlaces de contacto (email y WhatsApp)
 function initializeContactLinks() {
     // Los enlaces ya están en el HTML, esta función podría usarse para agregar funcionalidad adicional
-        
+
     // Podemos agregar tracking de clics aquí si es necesario
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
-    
+
     emailLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             // Tracking de analytics para clics en email
             console.log('Email clickeado:', this.href);
         });
     });
-    
+
     whatsappLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             // Tracking de analytics para clics en WhatsApp
             console.log('WhatsApp clickeado:', this.href);
         });
@@ -446,10 +446,10 @@ function initializeContactLinks() {
 // Función para calcular nivel de riesgo
 function initializeRiskCalculator() {
     // Ejemplo de función para calcular nivel de riesgo basado en probabilidad e impacto
-    window.calculateRiskLevel = function(probability, impact) {
+    window.calculateRiskLevel = function (probability, impact) {
         const riskScore = probability * impact;
         let riskLevel, riskColor;
-        
+
         if (riskScore <= 6) {
             riskLevel = 'Bajo';
             riskColor = 'green';
@@ -463,7 +463,7 @@ function initializeRiskCalculator() {
             riskLevel = 'Crítico';
             riskColor = 'red';
         }
-        
+
         return {
             score: riskScore,
             level: riskLevel,
@@ -482,7 +482,7 @@ function generateRiskReport(risks) {
         criticos: risks.filter(r => r.nivel === 'Crítico').length,
         altos: risks.filter(r => r.nivel === 'Alto').length
     };
-    
+
     return report;
 }
 
@@ -490,31 +490,31 @@ function safeLinkNavigation(url, timeout = 5000) {
     return new Promise((resolve) => {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeout);
-        
-        fetch(url, { 
+
+        fetch(url, {
             method: 'HEAD',
-            signal: controller.signal 
+            signal: controller.signal
         })
-        .then(response => {
-            clearTimeout(timeoutId);
-            resolve(response.ok);
-        })
-        .catch(() => {
-            clearTimeout(timeoutId);
-            resolve(false);
-        });
+            .then(response => {
+                clearTimeout(timeoutId);
+                resolve(response.ok);
+            })
+            .catch(() => {
+                clearTimeout(timeoutId);
+                resolve(false);
+            });
     });
 }
 
 // Uso:
-document.addEventListener('click', async function(event) {
+document.addEventListener('click', async function (event) {
     const link = event.target.closest('a');
-    
+
     if (link && link.hostname === window.location.hostname) {
         event.preventDefault();
-        
+
         const isAvailable = await safeLinkNavigation(link.href);
-        
+
         if (isAvailable) {
             window.location.href = link.href;
         } else {
@@ -523,27 +523,27 @@ document.addEventListener('click', async function(event) {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const botonCopiar = document.getElementById('copiar-urls-btn');
     const mensajeCopiado = document.getElementById('mensaje-copiado');
-    
+
     if (botonCopiar && mensajeCopiado) {
-        botonCopiar.addEventListener('click', function() {
+        botonCopiar.addEventListener('click', function () {
             // Definir las URLs que quieres copiar
             const urls = [
                 'https://forms.office.com/r/RR3wYqHg8v',
-                'https://forms.office.com/r/Rd0zz2RpvN' 
+                'https://forms.office.com/r/Rd0zz2RpvN'
             ];
-            
+
             // Formatear las URLs para copiar
             const textoParaCopiar = urls.join('\n');
-            
+
             // Usar la API del portapapeles
             navigator.clipboard.writeText(textoParaCopiar)
                 .then(() => {
                     // Mostrar mensaje de éxito
                     mensajeCopiado.classList.remove('hidden');
-                    
+
                     // Ocultar mensaje después de 3 segundos
                     setTimeout(() => {
                         mensajeCopiado.classList.add('hidden');
@@ -558,36 +558,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Mobile sidebar functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const closeSidebar = document.getElementById('close-sidebar');
     const mobileSidebar = document.getElementById('mobile-sidebar');
-    
+
     // Función para abrir el sidebar
     mobileMenuButton.addEventListener('click', () => {
         mobileSidebar.classList.remove('sidebar-hidden');
     });
-    
+
     // Función para cerrar el sidebar
     const closeSidebarFunction = () => {
         mobileSidebar.classList.add('sidebar-hidden');
     };
-    
+
     // Cerrar con el botón
     closeSidebar.addEventListener('click', closeSidebarFunction);
-    
+
     // Cerrar al hacer clic fuera del sidebar
     document.addEventListener('click', (event) => {
         const isClickInsideSidebar = mobileSidebar.contains(event.target);
         const isClickOnMenuButton = mobileMenuButton.contains(event.target);
         const isSidebarVisible = !mobileSidebar.classList.contains('sidebar-hidden');
-        
+
         // Si el clic fue fuera del sidebar, no en el botón del menú y el sidebar está visible
         if (!isClickInsideSidebar && !isClickOnMenuButton && isSidebarVisible) {
             closeSidebarFunction();
         }
     });
-    
+
     // Opcional: Cerrar con la tecla Escape
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && !mobileSidebar.classList.contains('sidebar-hidden')) {

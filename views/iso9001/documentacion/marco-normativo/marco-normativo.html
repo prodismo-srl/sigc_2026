@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Manual de Calidad - Marco Normativo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>Manual de Calidad - Marco Normativo - <strong>PRODISMO SRL</strong></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Marco Normativo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../ddhh-condiciones-trabajo/ddhh-condiciones-trabajo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de DDHH y Condiciones de Trabajo</span>
+                    </a>
+                    <a href="../salud-seguridad/salud-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Salud y Seguridad</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">MC-10 Marco Normativo</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC-10</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 27/05/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="marco-normativo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-primary-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">10.1</span>
+                            MARCO NORMATIVO
+                        </h2>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Dentro de toda organización existen normas dictadas por la propia empresa sobre el
+                            comportamiento, que sirven como guía para que las personas que trabajan en ella se
+                            desarrollen en un marco de organización que permita y favorezca la convivencia. A
+                            continuación, se describen las principales normas:
+                        </p>
+                    </section>
+
+                    <section id="trabajo" class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                            1. RELACIONADAS CON EL TRABAJO
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Cada persona debe asumir con <strong>RESPONSABILIDAD</strong> las funciones y tareas que
+                            se le asignan, respondiendo a su supervisor y/o gerente por los resultados obtenidos en
+                            las mismas. Como faltas relacionadas al trabajo se consideran:
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Retraso en la presentación en su puesto de trabajo.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En relación al cambio de turno, el personal podrá ingresar a su puesto de
+                                    trabajo, únicamente en el horario de ingreso correspondiente al turno. Si se
+                                    llega antes, se deberá aguardar en los lugares designados a tal fin (Área de
+                                    Descanso), sin contactar al personal que se encuentra trabajando.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Errores o descuidos en el trabajo o en la información que suministren, por falta
+                                    de atención.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Abandono del puesto de trabajo.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Interrupción del trabajo o preparativos para abandonarlo, durante (antes/después
+                                    almuerzo/refrigerio) y/o antes de la finalización del turno.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Restricción injustificada del rendimiento en calidad o cantidad.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No cumplir con las indicaciones u ordenes impartidas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Leer revistas, diarios o libros durante el desarrollo de las tareas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No está permitido escuchar radio, hablar por celular, comer y/o tomar infusión
+                                    alguna (Mate, café, etc.) fuera del lugar y horario destinado a tal efecto, a
+                                    menos que se realice en forma moderada e individual, no alterando el normal
+                                    desarrollo de sus tareas asignadas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Se considerará <strong>FALTA GRAVE</strong>, al personal que marque ingreso, sin
+                                    la vestimenta de trabajo y elementos de seguridad correspondiente.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="uso-instalaciones" class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                            2. RELACIONADAS CON EL USO DE INSTALACIONES, EQUIPOS Y HERRAMIENTAS
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Cada persona es responsable de cuidar el orden y limpieza de su sector de trabajo y de
+                            los lugares comunes de la empresa. El cuidado y buen funcionamiento de las instalaciones
+                            es responsabilidad de las personas que las utilizan y operan. Ya sea de modo transitorio
+                            y/o permanente, cada persona es responsable de las herramientas y/o instrumentos de
+                            trabajo asignados. Son consideradas faltas, dentro de este marco normativo:
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Hacer uso sin autorización de herramientas, maquinas o equipos de la empresa.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Descuidar el estado de dicho equipamiento.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Perdida injustificada de herramientas, equipos e instrumentos.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Desaprovechar materia prima o cualquier otro material.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Apropiarse de materiales de desecho sin autorización.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Utilización de cofre personal para guardar elementos que no fueran de uso
+                                    personal (Herramientas-Instrum. de medición, etc.)
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Utilizar Internet para uso particular, no relacionado a las tareas laborales.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="asistencia" class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                            3. NORMAS SOBRE LA ASISTENCIA
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Cada persona es responsable de concurrir a su puesto de trabajo dentro los días y
+                            horarios preestablecidos. Se consideran faltas relacionadas con la asistencia al
+                            trabajo:
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Llegadas tarde reiteradas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Ausencia con causa no justificada, con o sin aviso.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Dar parte de ausencia por enfermedad y no encontrarse en el lugar o domicilio
+                                    indicado cuando concurriere el medico inspector.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Falsificar documentos o registros a fin de crear falsas asistencia propia o de
+                                    tercero.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            La Empresa otorga a los operarios en concepto de <strong>PREMIO POR PUNTUALIDAD</strong>
+                            (extra convenio) 6 horas normales por semana.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Dicho premio será computado en forma semanal y liquidado en forma quincenal y/o mensual,
+                            según corresponda el caso, siendo abonado conjuntamente con el pago de los haberes de la
+                            1ra. o 2da. Quincena correspondiente y en todo de acuerdo a las pautas que a
+                            continuación se detallan:
+                        </p>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                                PIERDE EL PREMIO POR PUNTUALIDAD:
+                            </h4>
+                            <div class="space-y-2 ml-4">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">a)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si llega tarde más de 15' en un día o 2 dos veces por semana
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">b)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se ausenta por enfermedad inculpable
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">c)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se ausenta por Accidentes de Trabajo
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">d)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se ausenta por Razones Particulares
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">e)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si solicita Pase de Salida no compensando las horas normales el mismo día.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">f)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se ausenta por Licencias de estudios, Fallecimiento de Parientes no
+                                        directos, etc.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">g)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si no completa el turno de trabajo
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">h)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se adhiere a una medida de fuerza.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">i)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Si se ausenta sin aviso (justificado o injustificado).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                                CASOS DE EXCEPCIONES NO COMPLETA TURNO NORMAL DE TRABAJO (COMPENSACIONES CON PERDIDA
+                                DE PREMIO POR PUNTUALIDAD)
+                            </h4>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                                Cuando por motivos particulares, el empleado/operario no pudiera completar el turno
+                                normal de trabajo diario, podrá <strong>COMPENSAR</strong> las horas no trabajadas,
+                                según las siguientes pautas:
+                            </p>
+                            <div class="space-y-2 ml-4">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>FERIADOS</strong> y <strong>DIAS NO LABORABLES</strong> (TRABAJADOS)
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>HORAS TRABAJADAS QUE EXCEDAN LA JORNADA NORMAL DE TRABAJO</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                                La compensación deberá efectuarse dentro de la semana, a los efectos de completar la
+                                cantidad de horas normales semanales (Operarios 44 hs. – Empleados 45hs.).
+                            </p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">
+                                <strong>CUALQUIER TIPO DE COMPENSACIÓN DEBERA SER PREVIAMENTE AUTORIZADA POR EL
+                                    GERENTE DEL AREA E INFORMADA A RRHH.</strong>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="evaluacion-tecnica-institucional" class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                            4. EVALUACIÓN TÉCNICA E INSTITUCIONAL
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Se desarrolla anualmente un proceso de evaluación (Técnico e Institucional), a los
+                            efectos de poder medir el rendimiento global de cada integrante de la organización
+                            (Operario - Empleados - Supervisores - Gerentes), buscando mejorar la comunicación con
+                            cada uno de los colaboradores y principalmente alinearnos hacia un mismo objetivo.
+                        </p>
+                    </section>
+
+                    <section id="servicio-higiene-seguridad" class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+                            5. SERVICIO DE HIGIENE Y SEGURIDAD EN EL TRABAJO
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                            Cada persona es responsable del cumplimiento de las normas de seguridad e higiene de la
+                            empresa. Estas ayudan a entender y observar las medidas preventivas, para evitar
+                            accidentes y enfermedades profesionales. Tiene un carácter de guía obligatoria que
+                            ayudaran al empleado a formar su conciencia de seguridad, y la manera de realizar su
+                            trabajo sin riesgo para su integridad física, la de sus compañeros y los bienes de la
+                            empresa. A continuación, se describen ciertas normas que no incluyen todos los aspectos
+                            particulares que puedan presentarse pero que son un lineamiento general de la seguridad
+                            e higiene que la empresa desea observar.
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    La ropa de trabajo provista es de uso obligatorio, no permitirá estar con el
+                                    torso desnudo o en short. No está permitido usar ropa suelta, especialmente
+                                    cerca de las maquinas en movimiento.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Para los trabajadores del área fabricación, Pcp, Project Manager, metrología,
+                                    cad cam y abastecimiento, es obligatorio el uso de calzado de seguridad.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No se debe utilizar corbatas, anillos, pulseras o colgantes cuando se trabaje
+                                    cerca de maquinarias en funcionamiento, como así también las personas que usan
+                                    cabellos largos deberá cortárselo o utilizarlo recogido.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Cuando se transite dentro del establecimiento deben utilizarse los pasillos,
+                                    escaleras y puertas de acceso habituales, demarcadas y autorizadas, haciéndolo a
+                                    paso normal. En situaciones de emergencia, se deberá mantener la calma, buscando
+                                    la salida más próxima.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No se trabajará en estado de ebriedad o bajo la acción de alguna droga
+                                    intoxicante.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Los avisos, carteles, letreros distribuidos en planta son normas de seguridad
+                                    por lo tanto deben ser cumplimentadas.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No se obstaculizará con elementos de trabajo, materiales u otros elementos,
+                                    zonas de tránsito, acceso a equipos contra incendio, alarmas, tableros
+                                    eléctricos, puertas de acceso y/o salida de emergencia.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Todo trabajador deberá mantener el orden y la limpieza en su área de trabajo.
+                                    Deberá tirar los desperdicios en los recipientes destinados a tal efecto.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Es obligatorio el uso de anteojos o protectores faciales en maquinas
+                                    herramientas, como así también cuando se proceda a picar, soldar, rellenar,
+                                    amolar, cortar y en general cuando haya riesgo de proyecciones a la vista o el
+                                    rostro.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Donde se indique es obligatorio el uso de la protección auditiva.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No debe repararse, limpiarse o engrasarse ninguna máquina que este movimiento.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Todo trabajador está obligado a denunciar el accidente de trabajo,
+                                    confeccionando junto al supervisor el parte de accidente de trabajo.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Está prohibido anular dispositivos de seguridad de máquinas y equipos.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Si utiliza transporte propio, mantenga frenos, luces y dirección en buenas
+                                    condiciones. Maneje con prudencia. Utilice cinturón de seguridad. Para el
+                                    personal que utiliza vehículo ciclomotor es obligatorio además el uso del casco
+                                    de seguridad.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">
+                                Si se presenta la necesidad imperiosa de socorrer a un accidentado es necesario:
+                            </h4>
+                            <div class="space-y-2 ml-4">
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">1)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Evitar completamente los movimientos violentos.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">2)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Eliminar la acción del agente que ocasionó el accidente (corriente
+                                        eléctrica, gas tóxico, etc.)
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">3)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Aflojar la ropa que dificulta la respiración.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">4)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Requerir la urgente presencia del Servicio de Emergencia.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">5)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Dar aviso al superior inmediato.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">6)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Mientras se espera al médico no exponer al accidentado a movimientos
+                                        inútiles.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">7)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Mantenerlo completamente inmóvil; si se presume fractura o golpe grave en la
+                                        columna.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">8)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        No dar de beber al accidentado si no está completamente seguro que está en
+                                        pleno conocimiento, pues puede ahogarse.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-gray-700 dark:text-gray-300 mr-2">9)</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        En caso de accidente eléctrico y si la víctima no respira es indispensable y
+                                        urgente practicarle respiración artificial.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En los lugares donde existe peligro de incendios: <strong>NO FUME, NO USE
+                                        APARATOS DE LLAMA LIBRE, NO MANEJE MATERIALES INCANDESCENTES.</strong>
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    <strong>NO INTENTE APAGAR CON AGUA:</strong> conductores eléctricos, máquinas o
+                                    instalaciones eléctricas con tensión, <strong>PUEDE ELECTROCUTARSE.</strong>
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Cuando fume pise la colilla de su cigarrillo.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    No dificulte el trabajo de las personas que están abocadas a la extensión.
+                                </p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En caso de incendio haga avisar inmediatamente al cuerpo de bomberos de fábrica.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-capitulo" class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-primary-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">10.2</span>
+                            REVISIONES DEL CAPÍTULO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            19/06/03</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            29/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/02/13</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            8/09/15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/19</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            9</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            10</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            27/05/25</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin cambios</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../ddhh-condiciones-trabajo/ddhh-condiciones-trabajo.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de DDHH y Condiciones de Trabajo</span>
+                    </a>
+                    <a href="../salud-seguridad/salud-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Salud y Seguridad</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#marco-normativo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.
+                                MARCO NORMATIVO</a>
+                            <a href="#trabajo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.1.
+                                RELACIONADAS CON EL TRABAJO</a>
+                            <a href="#uso-instalaciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.2.
+                                RELACIONADAS CON EL USO DE INSTALACIONES, EQUIPOS Y HERRAMIENTAS</a>
+                            <a href="#normas-asistencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.3.
+                                NORMAS SOBRE LA ASISTENCIA</a>
+                            <a href="#evaluacion-tecnica-institucional"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.4.
+                                EVALUACIÓN TÉCNICA E INSTITUCIONAL</a>
+                            <a href="#servicio-higiene-seguridad"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.1.5.
+                                SERVICIO DE HIGIENE Y SEGURIDAD EN EL TRABAJO</a>
+                            <a href="#revisiones-capitulo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.2.
+                                REVISIONES DEL CAPÍTULO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC-10</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Marco Normativo</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>
