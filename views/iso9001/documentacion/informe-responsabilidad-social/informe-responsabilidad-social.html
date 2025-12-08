@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Salud y Seguridad - Informe de Responsabilidad Social Corporativa 2024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>Informe de Responsabilidad Social Corporativa 2024 - <strong>PRODISMO SRL</strong>
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Informe de Responsabilidad Social
+                                Corporativa 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../codigo-etica/codigo-etica.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Código de Ética</span>
+                    </a>
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Indice ISO9001</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">MC-13 Informe de
+                            Responsabilidad Social Corporativa 2024</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC-13</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 27/05/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Info -->
+                    <section id="informacion-empresa" class="mb-12 scroll-mt-20">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-building mr-2 text-blue-600"></i>
+                                    Información de la Empresa
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Año:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">2024</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Empresa:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white"><strong>PRODISMO
+                                                SRL</strong></span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Sector:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">Metalúrgico</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Ubicación:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">Córdoba,
+                                            Argentina</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-calendar-check mr-2 text-green-600"></i>
+                                    Período del Informe
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Año de Reporte:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">2024</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Incluye datos desde:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">2004 - 2024</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                        <span class="font-medium text-green-600 dark:text-green-400">Completado</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600 dark:text-gray-400">Siguiente informe:</span>
+                                        <span class="font-medium text-gray-900 dark:text-white">Diciembre 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Content Sections -->
+                    <section id="introduccion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            INTRODUCCIÓN
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    En <strong>PRODISMO SRL</strong>, estamos comprometidos con el desarrollo sostenible
+                                    y la creación de valor compartido para nuestros empleados, clientes, proveedores, y
+                                    la comunidad en general. Este informe de Responsabilidad Social Corporativa (RSC)
+                                    resume nuestras acciones, iniciativas y logros durante el año 2024 como así también
+                                    años anteriores, alineadas con nuestro objetivo de ser una empresa que no sólo busca
+                                    ser un lugar donde de gusto trabajar, sino también el compromiso con el bienestar
+                                    social y ambiental.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="compromiso-medio-ambiente" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            COMPROMISO CON EL MEDIO AMBIENTE
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                    <i class="fas fa-sun text-yellow-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">Instalación de
+                                            luminaria solar y LED</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Implementación de sistemas
+                                            de iluminación eficientes y sustentables en todas nuestras instalaciones.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                    <i class="fas fa-recycle text-green-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">Gestión integral de
+                                            residuos</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Correcta separación de
+                                            residuos a través de un sistema de recolección selectiva. Contamos con una
+                                            isla ecológica en el predio de la empresa que facilita la separación para su
+                                            correcta disposición final.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                    <i class="fas fa-tint text-blue-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">Eficiencia en
+                                            recursos</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Implementamos políticas para
+                                            el uso eficiente del agua y optimización del consumo de energía en todas
+                                            nuestras operaciones.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                    <i class="fas fa-award text-amber-500 mt-1 mr-3"></i>
+                                    <div>
+                                        <p class="text-gray-700 dark:text-gray-300 font-medium mb-1">Certificación
+                                            ambiental</p>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">En Julio 2024, obtuvimos la
+                                            certificación en <strong>ISO 14001:2015</strong>, demostrando nuestro
+                                            compromiso con la gestión ambiental sistemática.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="compromiso-social" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            COMPROMISO SOCIAL
+                        </h2>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-hands-helping mr-2 text-primary-600"></i>
+                                APOYO A LA COMUNIDAD
+                            </h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-primary-600 font-bold mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Donación de papelería a Hospital de niños de la Ciudad de Córdoba.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-primary-600 font-bold mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Campañas solidarias de tapitas plásticas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-graduation-cap mr-2 text-primary-600"></i>
+                                APORTES A LA EDUCACIÓN
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Educación Media Técnica
+                                    </h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>PRODISMO SRL</strong> participó en la creación de un Instituto Técnico
+                                        Industrial (ITI), junto con el Foro Productivo de Zona Norte en el año 2004,
+                                        escuela secundaria técnica privada y gratuita.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Prácticas Profesionales
+                                    </h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Desde el año 2022 hasta la actualidad, <strong>PRODISMO SRL</strong> recibió 102
+                                        estudiantes de colegios secundarios, con orientaciones técnicas, humanidades y
+                                        económicas, brindándoles un espacio de prácticas profesionales y procesos de
+                                        orientación vocacional/profesional.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Educación Superior
+                                        Universitaria</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        En materia de formación, la iniciativa más importante de la empresa fue la
+                                        creación en el año 2008 de la Tecnicatura Superior en matrices, moldes y
+                                        dispositivos de la Facultad Regional Córdoba de la Universidad Tecnológica
+                                        Nacional (UTN). <strong>PRODISMO SRL</strong> colaboró en el diseño de la
+                                        currícula, aportando profesores, experiencia y alumnos; becando a aquellos
+                                        trabajadores que quisieran estudiar dicha carrera y ofreciendo a jóvenes, que,
+                                        sin integrar su dotación, estuvieran interesados en la misma.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Becas Actuales</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Actualmente se beca en su totalidad los costos de la carrera de Licenciatura en
+                                        Automatismo (Universidad Tecnológica de Córdoba) y diplomatura en ergonomía
+                                        (Universidad de Rosario) a 4 trabajadores de la empresa.
+                                    </p>
+                                </div>
+
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Nuevos Programas de
+                                        Formación</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Junto con la Universidad Provincial de Córdoba y centro tecnológico Arteaga, se
+                                        participó en la creación de una certificación en robótica industrial con
+                                        orientación en celdas automatizadas, colaborando en la creación de la currícula
+                                        y ofreciendo docentes que acompañaran dicha formación. La misma tendrá una
+                                        duración de 120hs. Fecha de comienzo octubre 2024.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+                                <i class="fas fa-industry mr-2 text-primary-600"></i>
+                                CAPACITACIÓN PARA LA INDUSTRIA
+                            </h3>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start">
+                                    <span class="text-primary-600 font-bold mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Participación en mayo de 2023, en un Programa de inserción laboral en procesos y
+                                        gemelos digitales para la industria 4.0 con un total de 250 horas de formación.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-primary-600 font-bold mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Organización de un taller de capacitación de 80 horas, de formación en
+                                        habilidades técnicas necesarias para desarrollarse como proyectista mecánico.
+                                        Destinado a jóvenes desempleados que estén estudiando alguna carrera
+                                        universitaria técnica, facilitando su inserción en el mundo laboral.
+                                    </p>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="text-primary-600 font-bold mr-2">•</span>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Organización de un taller de capacitación en febrero de 2024 robótica industrial
+                                        para empresas clientes junto con el clúster automotriz.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="compromiso-proveedores" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            COMPROMISO CON PROVEEDORES
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-tools mr-2 text-purple-600"></i>
+                                    Apoyo Tecnológico y Equipamiento
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En el caso de comprar maquinaria nueva, la compañía cedió a algunos de sus
+                                    proveedores el equipamiento reemplazado a fin de colaborar con ellos en la
+                                    ampliación de su capacidad productiva.
+                                </p>
+                            </div>
+
+                            <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-hand-holding-usd mr-2 text-purple-600"></i>
+                                    Apoyo Financiero
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En algunas oportunidades, <strong>PRODISMO SRL</strong> ha colaborado con el acceso
+                                    al crédito de sus proveedores ofreciéndose como garante ante las entidades
+                                    financieras.
+                                </p>
+                            </div>
+
+                            <div class="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-lightbulb mr-2 text-purple-600"></i>
+                                    Desarrollo de Productos
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    En una oportunidad, <strong>PRODISMO SRL</strong> le brindó una idea de producto a
+                                    un proveedor, le adelantó el capital para que pudiera desarrollarla, le compró la
+                                    primera producción y le abrió el mercado. Actualmente, ese producto se vende a todas
+                                    las matricerías de Argentina.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="salud-bienestar" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            SALUD Y BIENESTAR
+                        </h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-heartbeat mr-2 text-red-600"></i>
+                                    Salud Preventiva
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Anualmente, realizamos controles periódicos de salud para nuestros empleados,
+                                    incluyendo chequeos médicos completos.
+                                </p>
+                            </div>
+
+                            <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-utensils mr-2 text-orange-600"></i>
+                                    Alimentación Saludable
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Implementamos un programa de alimentación saludable en nuestras instalaciones,
+                                    mejorando la calidad del servicio de comedor en planta que actualmente tenemos.
+                                </p>
+                            </div>
+
+                            <div class="bg-teal-50 dark:bg-teal-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-dumbbell mr-2 text-teal-600"></i>
+                                    Bienestar Físico
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Contamos con un personal trainer en la empresa, que ofrece un servicio gratuito para
+                                    los empleados.
+                                </p>
+                            </div>
+
+                            <div class="bg-indigo-50 dark:bg-indigo-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-users mr-2 text-indigo-600"></i>
+                                    Espacios de Bienestar
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Promovemos un ambiente laboral saludable con espacios de descanso y recreación
+                                    adecuados.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="formacion-desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            COMPROMISO CON NUESTROS EMPLEADOS EN FORMACIÓN Y DESARROLLO
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                        <i class="fas fa-chart-line mr-2 text-cyan-600"></i>
+                                        Capacitación 2023
+                                    </h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600 dark:text-gray-400">Horas totales:</span>
+                                            <span class="font-bold text-cyan-700 dark:text-cyan-400">3,900</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="text-gray-600 dark:text-gray-400">Promedio por persona:</span>
+                                            <span class="font-bold text-cyan-700 dark:text-cyan-400">16.9 horas</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300 mt-2">
+                                        Incluyendo cursos de desarrollo profesional y capacitación técnica específica.
+                                    </p>
+                                </div>
+
+                                <div class="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                        <i class="fas fa-user-graduate mr-2 text-pink-600"></i>
+                                        Programa de Mentoría
+                                    </h4>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Introdujimos un programa de mentoría interna que ha emparejado a empleados
+                                        junior (aprendices) con líderes experimentados, fomentando el desarrollo
+                                        profesional y la transferencia de conocimiento.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="participacion-institucional" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            PARTICIPACIÓN EN INSTANCIAS INSTITUCIONALES
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-landmark mr-2 text-gray-600"></i>
+                                    Representación Diplomática
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Consulado de México en Córdoba: Hoy el presidente de <strong>PRODISMO SRL</strong>,
+                                    Alejandro Pedrosa, es el Cónsul Honorario de México en Córdoba. Su hija, Belén
+                                    Pedrosa, es actualmente vicecónsul.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-globe-americas mr-2 text-gray-600"></i>
+                                    Comercio Exterior
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Cámara de Comercio Exterior de Córdoba: Damián Pedrosa, director general de
+                                    <strong>PRODISMO SRL</strong>, integra el comité ejecutivo de dicha cámara.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-plane mr-2 text-gray-600"></i>
+                                    Sector Aeronáutico y Espacial
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Cámara Argentina Aeronáutica y Espacial (CArAE): <strong>PRODISMO SRL</strong> fue
+                                    fundadora de dicha cámara en el año 2014, en la que actualmente Maria Pedrosa es
+                                    prosecretaria. Dicha cámara brinda apoyo a las empresas del sector, las representa
+                                    ante las autoridades y potencia la salida al comercio internacional mediante la
+                                    participación en las ferias más importantes del sector.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="conclusion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            CONCLUSIÓN
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                                    En <strong>PRODISMO SRL</strong>, creemos que la Responsabilidad Social Corporativa
+                                    es esencial para nuestro éxito a largo plazo. Enfocamos nuestro compromiso en la
+                                    sostenibilidad en el acceso de una educación de calidad para todas las personas,
+                                    lineamiento que no solo se difunde internamente sino también en todos los espacios
+                                    de interacción empresarial con el fin de contagiar e inspirar a otros a asumir el
+                                    desafío y compromiso de realizar un aporte a la creación de valor social y
+                                    ambiental.
+                                </p>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Estamos orgullosos de los logros alcanzados durante estos años y continuaremos
+                                    esforzándonos por mejorar nuestras prácticas y contribuir positivamente al bienestar
+                                    de la sociedad y el medio ambiente.
+                                </p>
+                            </div>
+
+                            <div
+                                class="mt-8 p-6 bg-white dark:bg-gray-800/50 rounded-lg border border-primary-200 dark:border-primary-800">
+                                <div class="text-center">
+                                    <img src="../../../../images/imagenes-rrhh/FirmaDamian.png" alt="PRODISMO SRL"
+                                        class="mx-auto" width="220" height="120">
+                                    <p class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Damián Pedrosa
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-400">Director General</p>
+                                    <p class="text-gray-700 dark:text-gray-400"><strong>PRODISMO SRL</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES
+                        </h2>
+
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            19/06/03</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            29/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/02/13</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            8/09/15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/19</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            9</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            10</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            27/05/25</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin cambio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../codigo-etica/codigo-etica.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Código de Ética</span>
+                    </a>
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Indice ISO9001</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#informacion-empresa"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">
+                                Información de la Empresa</a>
+                            <a href="#introduccion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                INTRODUCCIÓN</a>
+                            <a href="#compromiso-medio-ambiente"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                COMPROMISO CON EL MEDIO AMBIENTE</a>
+                            <a href="#compromiso-social"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                COMPROMISO SOCIAL</a>
+                            <a href="#compromiso-proveedores"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                COMPROMISO CON PROVEEDORES</a>
+                            <a href="#salud-bienestar"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                SALUD Y BIENESTAR</a>
+                            <a href="#formacion-desarrollo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                FORMACIÓN Y DESARROLLO</a>
+                            <a href="#participacion-institucional"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                PARTICIPACIÓN INSTITUCIONAL</a>
+                            <a href="#conclusion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                CONCLUSIÓN</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC-13</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Informe RSC 2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Año de Reporte:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">27/05/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RSC Highlights -->
+                    <div
+                        class="mt-6 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg shadow-sm border border-green-200 dark:border-green-800 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-leaf mr-2 text-green-600"></i>
+                            Logros RSC 2024
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Certificación <strong>ISO
+                                        14001:2015</strong> obtenida</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">3,900 horas de capacitación</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">102 estudiantes en prácticas</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">4 empleados con becas completas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

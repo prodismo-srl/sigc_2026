@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Calidad - Control de Documentos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>P-4-01 Control de Documentos del Sistema de Gestión de la Calidad - <strong>PRODISMO SRL</strong></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Control de Documentos del SGC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Indice ISO 9001</span>
+                    </a>
+                    <a href="../control-documentos-tecnicos-cliente/control-documentos-tecnicos-cliente.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Control de Documentos Técnicos Internos y del Cliente</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">P-4-01 Control de Documentos
+                            del Sistema de Gestión de la Calidad</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P-4-01</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 13/05/2024</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 7</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objeto" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETO
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Este procedimiento establece el método utilizado, para la elaboración, verificación,
+                                    aprobación, distribución, revisión y archivo de toda la documentación y datos para
+                                    el Sistema de Gestión de la Calidad, y otros documentos de apoyo al mismo.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                                    Este procedimiento se aplica a todas las áreas responsables de utilizar la
+                                    documentación existente, correspondiente al Sistema de Gestión de la Calidad ó de
+                                    apoyo al mismo.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            RESPONSABILIDADES
+                        </h2>
+
+                        <div class="space-y-6">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg">
+                                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
+                                    <i class="fas fa-users mr-2 text-green-600"></i>
+                                    3.1 DE TODOS LOS INTEGRANTES
+                                </h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Utilizar este procedimiento para la elaboración ó revisión de cualquier
+                                            documento y / o datos de la empresa.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Realizar las actividades internas y externas siguiendo lo establecido en la
+                                            documentación correspondiente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
+                                    <i class="fas fa-tasks mr-2 text-yellow-600"></i>
+                                    3.2 GESTIÓN DE CALIDAD (GC)
+                                </h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Analizar, emitir, distribuir y mantener el archivo de los originales de los
+                                            documentos y / o datos del Sistema de Gestión de la Calidad.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Retirar los documentos obsoletos de los puntos de utilización cuando estos
+                                            sean anulados.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Realizar las copias de los documentos y formularios.
+                                        </p>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Controlar la utilización por parte de las demás áreas de la empresa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-purple-50 dark:bg-purple-900/20 p-5 rounded-lg">
+                                <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 flex items-center">
+                                    <i class="fas fa-user-tie mr-2 text-purple-600"></i>
+                                    3.3 DIRECCIÓN
+                                </h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Analizar y aprobar la documentación generada.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="definiciones-abreviaturas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES Y ABREVIATURAS
+                        </h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-file-alt mr-2 text-gray-600"></i>
+                                    4.1 Documento
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Se mantiene estructura de la versión 2008 y equivale a lo que la nueva <strong>ISO
+                                        9001:2015</strong> dice como información documentada. Escrito que permite
+                                    comprobar ó definir algo referente al Sistema de Gestión de la Calidad. Entiéndase
+                                    por documentación al Manual de la Calidad, Manual de Procedimientos, Manual de
+                                    Instrucciones de Trabajo, Especificaciones de Producto y Registros.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-ban mr-2 text-gray-600"></i>
+                                    4.2 Documento Anulado
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Documento que ya no tiene validez por haber sido sustituido por otro ó fue revisado.
+                                    Un documento anulado es considerado obsoleto.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-book mr-2 text-gray-600"></i>
+                                    4.3 Manual de la Calidad
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Documento que enuncia la Política de la Calidad y describe el Sistema de Gestión de
+                                    la Calidad de un organismo.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-list-ol mr-2 text-gray-600"></i>
+                                    4.4 Manual de Procedimientos
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Conjunto de documentos que describen los pasos necesarios para realizar alguna
+                                    actividad.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-clipboard-list mr-2 text-gray-600"></i>
+                                    4.5 Manual de Instrucciones de Trabajo
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Conjunto de documentos que describen la manera operacional de realizar un trabajo
+                                    específico.
+                                </p>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-archive mr-2 text-gray-600"></i>
+                                    4.6 Registros
+                                </h3>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Documento que provee evidencia objetiva a través de los datos que en el contiene de
+                                    las actividades efectuadas, evento ocurrido o resultados obtenidos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tabla de abreviaturas -->
+                        <div class="overflow-x-auto mb-8">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Abreviatura</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            GC</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión de la
+                                            Calidad</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            MC</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Manual de la
+                                            Calidad</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            P.</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Procedimiento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            I.</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Instrucción de
+                                            Trabajo</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            F.</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Formulario</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            R.</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Registro</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESARROLLO
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                                    Se utilizan 4 niveles de documentos para el Sistema de Gestión de la Calidad, que
+                                    son:
+                                </p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                            <span
+                                                class="bg-blue-100 text-blue-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">I</span>
+                                            Nivel I: Manual de la Calidad
+                                        </h4>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                            <span
+                                                class="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">II</span>
+                                            Nivel II: Manual de Procedimientos
+                                        </h4>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                            <span
+                                                class="bg-yellow-100 text-yellow-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">III</span>
+                                            Nivel III: Manual de Instrucciones de Trabajo
+                                        </h4>
+                                    </div>
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                            <span
+                                                class="bg-red-100 text-red-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2">IV</span>
+                                            Nivel IV: Registros
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white dark:bg-gray-800 p-4 rounded-lg mb-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        La metodología de gestión adoptada para el Manual de la Calidad (Nivel I) se
+                                        encuentra descripta en el MC-4 del mismo.
+                                    </p>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.1
+                                            Contenido de los Documentos y los Datos (Aplicable a los Niveles II, III)
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 mb-3">
+                                            Detalle de las partes que componen los diferentes tipos de documentos:
+                                        </p>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.1 Objeto:
+                                                </h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se describe de forma
+                                                    reducida el/los propósito/s que debe/n ser alcanzado/s, con la
+                                                    utilización de dicho documento.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.2
+                                                    Alcance:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">En este sub ítem se menciona
+                                                    en que situación se aplica el documento.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.3
+                                                    Responsabilidades:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Es una breve descripción de
+                                                    las principales actividades mencionadas en el documento y sus
+                                                    responsables directos e indirectos.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.4
+                                                    Definiciones y Abreviaturas:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se aclaran aquellos términos
+                                                    que son utilizados en el contenido del documento, y puedan no ser
+                                                    entendidos fácilmente por los lectores.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.5
+                                                    Desarrollo:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se desarrollan paso por
+                                                    paso, en forma escrita, todas las actividades en el orden que son
+                                                    ejecutadas.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.6
+                                                    Registros:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se mencionan el código,
+                                                    nombre y abreviatura de los formularios y registros que son
+                                                    identificados en el documento.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.7
+                                                    Documentos de Referencia:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se detallan otros documentos
+                                                    involucrados, que intervienen indirectamente y las normas utilizadas
+                                                    como referencia para la elaboración del documento.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.8
+                                                    Revisión:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se detalla número y fecha de
+                                                    las revisiones del documento y texto modificado.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.1.9
+                                                    Diagrama de Flujo:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Como complemento, siempre
+                                                    que sea posible y conveniente, se registran, paso por paso, todas
+                                                    las actividades en el orden que son ejecutadas, utilizando símbolos.
+                                                    Estos sirven para una rápida lectura del documento.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.2
+                                            Elaboración de los Documentos (Aplicable a los Niveles II, III)</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.1</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Todos los documentos y datos
+                                                    generados ó modificaciones en cualquier área y que correspondan al
+                                                    Sistema de Gestión de la Calidad, ó sean de apoyo al mismo, deben
+                                                    seguir lo descrito en el punto 5.1 de este procedimiento en cuanto a
+                                                    su contenido, claramente escritos, con un lenguaje simple conocido
+                                                    por todos sus usuarios, teniendo en cuenta el tipo de documento que
+                                                    se trate.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.2</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Todos los documentos y datos
+                                                    son elaborados por cualquier integrante de la Empresa que vaya a
+                                                    utilizarlo, con la participación directa del resto de las personas
+                                                    que son responsables en la actividad. Para su elaboración estas
+                                                    personas, realizan la investigación del aspecto a desarrollar,
+                                                    utilizando los antecedentes existentes del tema.</p>
+                                                <p class="text-gray-700 dark:text-gray-300 mt-2">Los datos que constan
+                                                    en esos documentos deben ser:</p>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2 ml-4">
+                                                    <div class="flex items-center">
+                                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                                        <span class="text-gray-700 dark:text-gray-300">Legibles
+                                                            (realizados con letra clara, preferentemente en
+                                                            imprenta)</span>
+                                                    </div>
+                                                    <div class="flex items-center">
+                                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                                        <span class="text-gray-700 dark:text-gray-300">Precisos (ya que
+                                                            se han investigado las fuentes)</span>
+                                                    </div>
+                                                    <div class="flex items-center">
+                                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                                        <span class="text-gray-700 dark:text-gray-300">Completos (se
+                                                            verifican que se hayan analizado en su totalidad)</span>
+                                                    </div>
+                                                    <div class="flex items-center">
+                                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                                        <span class="text-gray-700 dark:text-gray-300">Correctos (se
+                                                            verifica que el contenido sea adecuado)</span>
+                                                    </div>
+                                                    <div class="flex items-center">
+                                                        <span class="text-gray-700 dark:text-gray-300 mr-2">•</span>
+                                                        <span class="text-gray-700 dark:text-gray-300">Relevantes ó
+                                                            importantes (se descarta la información
+                                                            intranscendente)</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.3</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Dicho integrante redacta un
+                                                    primer borrador. Se entregan copias de éste a cada uno de los
+                                                    responsables de las áreas involucradas, quienes deben leer, analizar
+                                                    e indicar las correcciones a realizar y/o observaciones al respecto
+                                                    (en caso de que las haya).</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.4</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Una vez verificado el
+                                                    borrador por todos los involucrados contemplados en la Matriz de
+                                                    Responsabilidades, las copias son entregadas a GC, quien verifica si
+                                                    existen incompatibilidades con algún requisito de la Norma de
+                                                    Referencia, tanto en el borrador ó en la propuesta de
+                                                    modificaciones, si esto ocurre debe realizarse una reunión para
+                                                    discutir dichos puntos. De no existir diferencias se prosigue con el
+                                                    paso 5.2.5.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.5</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Con el documento borrador
+                                                    revisado, GC realiza la emisión definitiva del documento, utilizando
+                                                    el Formulario Base (F00) y lo entrega para la aprobación por la
+                                                    Dirección.</p>
+                                                <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded mt-2">
+                                                    <p class="text-gray-800 dark:text-gray-300 font-medium">
+                                                        Nota: Para el caso de las Instrucciones de Trabajo (Nivel III),
+                                                        siendo estas en algunos casos particulares para cada Unidad
+                                                        Productiva, podrán ser aprobadas por el Gerente Operativo de la
+                                                        misma.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.2.6</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Los originales de los
+                                                    documentos y datos del Sistema de Gestión de la Calidad, luego de
+                                                    aprobados son archivados en GC por el tiempo que estén vigentes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.3
+                                            Redacción de los Documentos (Aplicable a los Niveles II, III)</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.3.1
+                                                    Redacción Estilo y Tiempo Verbal:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Los documentos son
+                                                    redactados para que sean entendidos por los usuarios, evitando el
+                                                    exceso de detalles y los términos técnicos, con frases cortas y
+                                                    claridad de expresión. Los tiempos verbales utilizados son siempre
+                                                    en infinitivo, tales como: realizar, garantizar, etc.; ó también en
+                                                    presente, por ejemplo: elabora, redacta, etc.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.3.2
+                                                    Abreviaturas:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Las palabras abreviadas son
+                                                    permitidas siempre y cuando en el ítem 4 (Definiciones y
+                                                    Abreviaturas), en el ítem 6 (Registros) ó en cualquier otra parte
+                                                    del documento, se mencione el significado del término.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.4
+                                            Codificaciones de los Documentos (Aplicable a los Niveles I, II, III)</h4>
+                                        <p class="text-gray-700 dark:text-gray-300 mb-3">Los documentos son codificados
+                                            según el siguiente esquema:</p>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.4.1 Manual
+                                                    de la Calidad:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Está dividido en capítulos
+                                                    identificados con la sigla MC seguido de la referencia al aspecto
+                                                    tratado.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.4.2
+                                                    Procedimientos:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Inicia con la letra "P"
+                                                    seguida de la referencia al aspecto tratado en el Manual de la
+                                                    Calidad y agregando luego una numeración secuencial a partir del 01.
+                                                    Por ejemplo: P-6-01</p>
+                                                <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded mt-2">
+                                                    <p class="text-gray-800 dark:text-gray-300 font-medium">
+                                                        Nota: Esto posibilita la generación de 99 procedimientos
+                                                        referidos al mismo aspecto del Manual. A su vez cada
+                                                        procedimiento esta relacionado con un único capítulo del Manual
+                                                        de la Calidad.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.4.3
+                                                    Instrucciones de Trabajo:</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Inicia con la letra "I"
+                                                    seguida del código del procedimiento que le dio origen, el que hace
+                                                    referencia al aspecto tratado en el Manual de la Calidad,
+                                                    enumerándose de forma secuencial las instrucciones generadas de ese
+                                                    procedimiento a partir del 01. Por ejemplo: I-6-01-01</p>
+                                                <div class="bg-gray-100 dark:bg-gray-700 p-3 rounded mt-2">
+                                                    <p class="text-gray-800 dark:text-gray-300 font-medium">
+                                                        Nota: Esta numeración posibilita la generación de 99
+                                                        instrucciones referidas al mismo procedimiento.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.5 Copias
+                                            y Distribución de los Documentos (Aplicable a los Niveles II, III)</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.1</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Una vez aprobado el
+                                                    documento por la Dirección; GC actualiza en el sistema en red según
+                                                    la ruta de acceso: Red en Prodismoserver (F:)/User/Manual de
+                                                    Calidad/S.G.C. y define la cantidad de copias que deben realizarse y
+                                                    realiza la correspondiente distribución.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.2</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Si la copia se entrega a
+                                                    entes externos se consideran no incluidas en el Sistema de
+                                                    Distribución de Copias, por lo tanto no necesitan ser actualizadas.
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.3</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">GC mantiene controlada la
+                                                    Distribución y Estado de los Documentos entregados a través del F58
+                                                    "Control de los Documentos del Sistema de Gestión de la Calidad" que
+                                                    lo mantiene actualizado siempre que algún documento sea emitido o
+                                                    modificado (variando su Nº de Revisión).</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.4</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Cuando el documento
+                                                    entregado sea una revisión de uno ya existente, GC debe retirar
+                                                    todas las copias obsoletas para asegurarse que estos no sean
+                                                    utilizados.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.5</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Se establece que la fecha
+                                                    oficial de inicio de implementación de un documento es pasados 15
+                                                    días de la fecha de aprobación ó la fecha de última revisión
+                                                    realizada al documento caso la hubiera.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.5.6</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Si algún documento utilizado
+                                                    internamente no tiene el sello correspondiente en color verde, este
+                                                    no tiene validez.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.6
+                                            Revisión de los Documentos (Aplicables a los Niveles I, II, III)</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.6.1</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Los documentos y / o datos
+                                                    del Sistema de Gestión de la Calidad pueden ser revisados por
+                                                    cualquier integrante de la empresa, siguiendo lo descrito en el
+                                                    punto 5.2.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.6.2</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Ante necesidades de
+                                                    modificaciones en los documentos del Sistema de Gestión de la
+                                                    Calidad, debido a cambios considerables ya sea en la Organización,
+                                                    en la Norma de referencia u otros motivos de magnitud tal que
+                                                    implique la revisión y cambios en gran parte de los mismos, podrá
+                                                    ser realizado una nueva emisión de la totalidad de los Documentos.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.7
+                                            Formularios Utilizados (Aplicable al Nivel IV)</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.7.1</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Los documentos (Nivel I, II,
+                                                    III) son desarrollados utilizando el "Formulario Base" (F00).</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.7.2</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Todos los formularios y
+                                                    registros generados según las necesidades de cada documento, son
+                                                    aprobados para su utilización por GC quien lleva el control del
+                                                    Estado y Distribución de los mismos a través del F58 "Control de los
+                                                    Documentos del Sistema de Gestión de la Calidad".</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.7.3</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Los formularios poseen
+                                                    codificación propia, según se detalla a continuación:</p>
+                                                <!-- Espacio para imagen -->
+                                                <div
+                                                    class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg text-center mt-2">
+                                                    <img src="../../../../images/iso9001/codificacion-formularios.png"
+                                                        alt="Codificación de formularios" class="mx-auto">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.7.4</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Cuando por algún motivo sea
+                                                    necesaria la revisión de un formulario, en el código del mismo debe
+                                                    figurar el Nº de revisión, quedando automáticamente anulada la
+                                                    versión anterior para su uso.</p>
+                                            </div>
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.7.5</h5>
+                                                <p class="text-gray-700 dark:text-gray-300">Cuando por algún motivo en
+                                                    un documento sea necesario mencionar algún formulario, se coloca el
+                                                    título del formulario seguido del código sin el número de revisión.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-gray-900 dark:text-white mb-2 text-lg">5.8
+                                            Enmiendas de documentos y / o datos</h4>
+
+                                        <div class="space-y-4 ml-4">
+                                            <div>
+                                                <h5 class="font-semibold text-gray-800 dark:text-gray-200">5.8.1 Niveles
+                                                    I, II, III y IV</h5>
+
+                                                <div class="space-y-3 ml-4">
+                                                    <div>
+                                                        <h6 class="font-medium text-gray-800 dark:text-gray-200">5.8.1.1
+                                                        </h6>
+                                                        <p class="text-gray-700 dark:text-gray-300">En caso de
+                                                            considerarlo necesario (razones de tiempo, costo, etc.) el
+                                                            responsable de Gestión de la Calidad puede autorizar
+                                                            enmiendas a los documentos que modifiquen los datos de los
+                                                            mismos mediante firma adjunta a la modificación (toda
+                                                            enmienda no autorizada no tiene ninguna validez).</p>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="font-medium text-gray-800 dark:text-gray-200">5.8.1.2
+                                                        </h6>
+                                                        <p class="text-gray-700 dark:text-gray-300">En el menor plazo
+                                                            posible Gestión de la Calidad revisa el documento
+                                                            incorporando la enmienda.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REGISTROS
+                        </h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-file-alt mr-2 text-green-600"></i>
+                                    Formatos
+                                </h4>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <span
+                                            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs font-bold px-2 py-1 rounded mr-2">F00</span>
+                                        <span class="text-gray-700 dark:text-gray-300">Formulario Base</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span
+                                            class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs font-bold px-2 py-1 rounded mr-2">F58</span>
+                                        <span class="text-gray-700 dark:text-gray-300">Control de los Documentos del
+                                            Sistema de Gestión de la Calidad</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                                    <i class="fas fa-info-circle mr-2 text-blue-600"></i>
+                                    6.1 Control de los Registros
+                                </h4>
+                                <p class="text-gray-700 dark:text-gray-300">
+                                    Para el tratamiento de los registros mencionados en este documento, proceder según
+                                    lo descrito en el Procedimiento (P-4-04) "Registros de la Calidad".
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="documentos-referencia" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            DOCUMENTOS DE REFERENCIA
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-3">
+                                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <strong>Norma ISO 9001-2015</strong>
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <strong>Manual de la Calidad</strong>
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <strong>P-4-04 Registros de la Calidad</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="diagrama-flujo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            DIAGRAMA DE FLUJO
+                        </h2>
+
+                        <div class="mb-8">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <img src="../../../../images/flow-diagrams/iso/P-4-01_Flow-chart.png"
+                                    alt="Diagrama de Flujo - Control de Documentos"
+                                    class="mx-auto h-80 w-full object-cover md:h-full md:w-80 cursor-pointer"
+                                    id="control-documentos-flowchart-image">
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 text-center mt-2">
+                                Diagrama de flujo del Procedimiento de Control de Documentos
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES
+                        </h2>
+
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">a) Renumeración
+                                            debido a la adaptación a la <strong>ISO 9001:2000</strong> - Era
+                                            P-05-01.<br>b) Incorporación del F58 en 5.5.5, 5.7.2 y 6.</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/12/04</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del punto 5.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            versión 2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/19</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin Cambio</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento sin Cambio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../../indice-iso9001.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Indice ISO 9001</span>
+                    </a>
+                    <a href="../control-documentos-tecnicos-cliente/control-documentos-tecnicos-cliente.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Control de Documentos Técnicos Internos y del Cliente</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objeto"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#responsabilidades"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                RESPONSABILIDADES</a>
+                            <a href="#definiciones-abreviaturas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES Y ABREVIATURAS</a>
+                            <a href="#desarrollo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                DESARROLLO</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REGISTROS</a>
+                            <a href="#documentos-referencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DOCUMENTOS DE REFERENCIA</a>
+                            <a href="#diagrama-flujo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DIAGRAMA DE FLUJO</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P-4-01</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Control de Documentos del
+                                    SGC</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Área:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Gestión de Calidad</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Jessica Villarreal</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Emanuel Ingerl</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/05/2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/05/2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Proceso -->
+                    <div
+                        class="mt-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-lg shadow-sm border border-purple-200 dark:border-purple-800 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-file-contract mr-2 text-purple-600"></i>
+                            Resumen del Procedimiento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">4 niveles de documentación del SGC</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Elaboración, verificación y aprobación
+                                    estandarizada</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Control de distribución y
+                                    actualización</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Retiro de documentos obsoletos</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Sistema de codificación uniforme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+    <script type="text/javascript"
+        src="../../../../js/procedimientos/flowChart/openFlowChart-control-documentos.js"></script>
+</body>
+
+</html>

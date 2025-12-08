@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Calidad - Mantenimiento de Equipos de Producción">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>P-6-01 Mantenimiento de los Equipos de Producción - <strong>PRODISMO SRL</strong></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Mantenimiento de Equipos de Producción
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../planificacion-calidad/planificacion-calidad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Planificación de Calidad</span>
+                    </a>
+                    <a href="../seguridad-orden-limpieza/seguridad-orden-limpieza.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Seguridad Orden y Limpieza</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">P-6-01 Mantenimiento de los
+                            Equipos de Producción</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P-6-01</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 12/05/2023</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 8</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objeto" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Definir el método utilizado y las responsabilidades para la verificación periódica y
+                                    mantenimiento de máquinas y equipos afectados a la producción.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Este procedimiento se aplica a todas las máquinas ó equipos que afecten directamente
+                                    la calidad del producto. Las mismas están mencionadas en el formulario “Plan Anual
+                                    de Mantenimiento de Máquinas de Producción” (F17).
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            RESPONSABILIDADES
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.1 Responsable de
+                                            Mantenimiento y Supervisores:</h4>
+                                        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                            <li>Confeccionar y mantener actualizado la “Plan Anual de Mantenimiento de
+                                                Máquinas de Producción” (F17).</li>
+                                            <li>Confeccionar y mantener actualizado “Mantenimiento de Máquinas” (F18) y
+                                                “Mantenimiento de Herramientas Neumáticas” (F19).</li>
+                                            <li>Realizar el control y seguimiento geométrico de las máquinas según
+                                                (F17).</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.2 Actividades de
+                                            mantenimiento:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Las actividades de mantenimiento deben ser realizadas por personal
+                                            preparado, en caso que no sean disponibles, se contratará proveedores
+                                            externos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="definiciones-abreviaturas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES Y ABREVIATURAS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-lg mb-6">
+                                <div class="space-y-3">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>Capacidad:</strong> aptitud de una máquina para producir dentro de las
+                                        tolerancias.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>Capacidad de reglaje:</strong> facultad de una máquina para ser puesta a
+                                        punto.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>R.M.:</strong> Responsable de Mantenimiento
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESARROLLO
+                        </h2>
+                        <div class="space-y-8">
+                            <!-- 5.1 Mantenimiento Preventivo o Rutinario -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.1 MANTENIMIENTO
+                                    PREVENTIVO O RUTINARIO</h3>
+                                <div class="space-y-6 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.1
+                                            Verificación permanente:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Durante la realización de actividades de <strong>PRODISMO SRL</strong>, todo
+                                            integrante de la misma que tenga acceso a la utilización de equipos ó
+                                            instalaciones, tiene la responsabilidad de verificar permanentemente el
+                                            correcto funcionamiento de los mismos, en lo referente a sus características
+                                            mecánicas, eléctricas, electrónicas, etc. En caso de detectar alguna
+                                            anomalía dará aviso a su supervisor, y éste último dará aviso al R.M..
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.2 Plan
+                                            Anual de Mantenimiento:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            R.M., junto con el Supervisor de Área que posee Equipos / Máquinas de
+                                            Producción confeccionarán y mantendrán actualizada un “Plan Anual de
+                                            Mantenimiento de Máquinas de Producción” (F17) pudiendo agregar o quitar
+                                            máquinas según las necesidades de fabricación.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.3
+                                            Formularios de mantenimiento:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            R.M. junto al supervisor de área confeccionarán el formulario “Mantenimiento
+                                            de Máquinas” (F18) ó “Mantenimiento de Herramientas Neumáticas” (F19) por
+                                            cada máquina de su sector, donde se especifican las tareas de mantenimiento
+                                            de rutina y mantenimiento periódico.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.4
+                                            Verificación de adquisición:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Toda Máquina o Equipo de producción deberá ser verificado en el momento de
+                                            su adquisición. La periodicidad de las verificaciones se establecen según
+                                            las recomendaciones del proveedor y / o la experiencia del usuario /
+                                            supervisor.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.5
+                                            Ejecución de mantenimiento:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Los operarios de cada máquina son los responsables de ejecutar las tareas de
+                                            mantenimiento de rutina según la lista de “Mantenimiento de Máquinas” (F18)
+                                            que se encuentra en \\DPSERVER\ingenieria\mantenimiento\generales. El
+                                            mantenimiento periódico ó anual según correspondiere, es realizado por
+                                            proveedores externos, completando el (F20). El responsable de la
+                                            actualización y archivo de este registro es el R.M.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.6
+                                            Detección de desperfectos:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            En el caso que se detecte algún desperfecto o posibilidad de desperfecto en
+                                            el funcionamiento de una máquina, R.M. confecciona la primera parte de la
+                                            “Solicitud de Mantenimiento” (F20) por triplicado con la siguiente
+                                            información:
+                                        </p>
+                                        <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                            <li>Solicitante, Fecha, Tipo de Mantenimiento, Sección</li>
+                                            <li>Problema</li>
+                                            <li>Posible causa</li>
+                                            <li>Datos del posible Proveedor del Servicio de Reparación.</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.7
+                                            Autorización y aviso a proveedor:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            R.M. hace autorizar la solicitud por Gerencia de Operaciones. Una vez
+                                            autorizada la Solicitud de Mantenimiento, R.M. avisa al proveedor el día y
+                                            hora para realizar el mantenimiento. (Registrado en F20).
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.8
+                                            Registro de mantenimiento:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Una vez finalizado el mantenimiento, R.M. registra en la Solicitud de
+                                            Mantenimiento (F20) todo lo realizado y aprueba ó no, detallado horas y
+                                            precio acordado.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.9
+                                            Distribución de copias:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            El original de (F20) se entrega al proveedor, el duplicado es remitido a
+                                            Administración y el triplicado se archiva en la carpeta de cada máquina
+                                            creada a tal fin.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.10
+                                            Utilización de datos:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Los datos recopilados en cada carpeta, de las Solicitudes de Mantenimiento
+                                            (F20) son utilizados para establecer el mantenimiento Periódico (F18).
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.1.11
+                                            Mantenimiento tercerizado:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            El Mantenimiento de los equipos de Computación, tanto como las Herramientas
+                                            Neumáticas está tercerizado en forma permanente.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.2 Control Geométrico -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.2 CONTROL
+                                    GEOMÉTRICO</h3>
+                                <div class="space-y-6 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 text-lg">5.2.1 Control
+                                            de la Exactitud y Repetibilidad Geométrica de las máquinas</h4>
+                                        <div class="space-y-4">
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • R.M. y el Supervisor del Área son los responsables de solicitar a
+                                                Metrología o Abastecimiento, el servicio de Control Geométrico para las
+                                                Máquinas seleccionadas en (F17). Los registros quedan archivados en el
+                                                área de Metrología.
+                                            </p>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • El Proveedor deberá justificar plenamente la cadena de patronizado de
+                                                sus instrumentos de medición.
+                                            </p>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • El Control se realizará según lo estipulado en el (F17) o cuando
+                                                alguna de las situaciones siguientes se presente:
+                                            </p>
+                                            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                                <li>Mantenimiento que represente riesgo de estabilidad geométrica.</li>
+                                                <li>Golpes que representen riesgos de estabilidad geométrica.</li>
+                                                <li>Detección de errores geométricos por cualquier tipo de medición que
+                                                    genere duda sobre la conformidad de la máquina.</li>
+                                            </ul>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • Las características y los límites de aceptación de estos controles son
+                                                descriptos en el (F17), y estarán basados ó derivados de los
+                                                garantizados por el fabricante en condiciones óptimas de utilización.
+                                            </p>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • Para reparaciones que requieran aceptación dimensional del trabajo, se
+                                                aplicará el control a través del mecanizado de la esfera, con las
+                                                tolerancias de aceptabilidad indicadas según la máquina a la cual se le
+                                                realizó el control. El informe de Metrología dictaminará la
+                                                aceptabilidad o no de la reparación.
+                                            </p>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                • Si los Informes de Control de las máquinas (F75) “Control Geométrico
+                                                de las Máquinas” y (F18) “Mantenimiento de Máquinas”, no certifican la
+                                                conformidad con los límites de aceptación, R.M. debe actuar según 5.1.6.
+                                                El cálculo de control geométrico se realiza según el método definido en
+                                                F75 “Control de Aptitud de Máquina” y es donde se asientan los valores
+                                                de control.
+                                            </p>
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                La Gerencia de Fabricación es responsable de la realización de estas
+                                                mediciones, siendo Metrología y Gestión Calidad los encargados
+                                                operacionales del seguimiento y la medición.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REGISTROS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-2">
+                                    <p class="text-gray-700 dark:text-gray-300">F17: Plan Anual de Mantenimiento de
+                                        Maquinas de Produccion.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F18a: Mantenimiento de Máquinas.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F18c: Mantenimiento de Compresores</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F18p: Mantenimiento de Prensas</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F19: Salidas de herramientas</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F20: Solicitud de Mantenimiento</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F75: Control de Aptitud de Máquina</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F169: Repuestos Críticos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="documentos-referencia" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            DOCUMENTOS DE REFERENCIA
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-3">
+                                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <strong>Manual de Gestión de la Calidad</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="diagrama-flujo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            DIAGRAMA DE FLUJO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <div class="flex flex-col items-center justify-center h-24">
+                                    <i class="fas fa-ban text-4xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-700 dark:text-gray-300 text-lg">No Posee Diagrama de Flujo</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 text-center mt-2">
+                                Este procedimiento no posee diagrama de flujo asociado
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            A) Renumeración debido a la adaptación a la <strong>ISO 9001-2000</strong>
+                                            -Era P-09-02.<br>
+                                            B) Desglose del punto 5 en 5.1 (existente) y 5.2 (ver revisión C).<br>
+                                            C) Incorporación completa del punto 5.2.<br>
+                                            D) Incorporación en el Punto 3.1 del Párrafo: “Realizar el control y
+                                            seguimiento geométrico de las máquinas según (F17)”.<br>
+                                            E) Incorporación del F75 : Control de Aptitud de Máquina.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            27/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Modificación del
+                                            Punto 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            05/03/07</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión de los
+                                            puntos 3, 4 y 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión del
+                                            punto 5.1 y 5.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/04/2010</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión del
+                                            punto 5.1.5.</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            versión 2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/08/20</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión Completa
+                                            del Documento</td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión Completa
+                                            del Documento sin Cambio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../planificacion-calidad/planificacion-calidad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Planificación de Calidad</span>
+                    </a>
+                    <a href="../seguridad-orden-limpieza/seguridad-orden-limpieza.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Seguridad Orden y Limpieza</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objeto"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#responsabilidades"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                RESPONSABILIDADES</a>
+                            <a href="#definiciones-abreviaturas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES Y ABREVIATURAS</a>
+                            <a href="#desarrollo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                DESARROLLO</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REGISTROS</a>
+                            <a href="#documentos-referencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DOCUMENTOS DE REFERENCIA</a>
+                            <a href="#diagrama-flujo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DIAGRAMA DE FLUJO</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P-6-01</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mantenimiento de los Equipos de
+                                    Producción</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">8</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Área:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mantenimiento /
+                                    Producción</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Jessica Villareal</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Alejandro Fantoni</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/05/2023</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/05/2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Proceso -->
+                    <div
+                        class="mt-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-lg shadow-sm border border-purple-200 dark:border-purple-800 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-file-contract mr-2 text-purple-600"></i>
+                            Resumen del Procedimiento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Define métodos y responsabilidades para
+                                    mantenimiento de equipos productivos</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Incluye mantenimiento preventivo,
+                                    rutinario y control geométrico</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Establece plan anual de mantenimiento y
+                                    formularios específicos</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Define procedimientos para detección y
+                                    corrección de desperfectos</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Especifica controles geométricos para
+                                    garantizar precisión de máquinas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

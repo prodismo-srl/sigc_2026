@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Calidad - Control del Proyecto y Diseño">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>P-7-02 Control del Proyecto y Diseño - <strong>PRODISMO SRL</strong></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Control del Proyecto y Diseño</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../revision-contrato/revision-contrato.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Revisión del Contrato</span>
+                    </a>
+                    <a href="../flujo-ingenieria-proyecto-dispositivos/flujo-ingenieria-proyecto-dispositivos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Flujo de Ingeniería Proyectos Dispositivos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">P-7-02 Control del Proyecto y
+                            Diseño</h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P-7-02</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 09/05/2023</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 11</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objeto" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Definir el método a emplear para la generación, revisión, verificación y validación
+                                    de las actividades de Planificación y Diseño del Proyecto asegurando el cumplimiento
+                                    de los requerimientos del cliente, la funcionalidad, desempeño y economía de
+                                    fabricación.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Todos los productos que derivan y se obtienen a partir de los requerimientos
+                                    contractuales del cliente.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            RESPONSABILIDADES
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                                <div class="space-y-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.1 Gerencia General:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Proveer y poner a disposición todos los medios y recursos necesarios para el
+                                            correcto desarrollo y ejecución de las actividades previstas.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.2 Gerente de
+                                            Proyectos:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Identificar y designar al Responsable del Proyecto (PM) calificado para el
+                                            desarrollo del mismo. Participa en el Lanzamiento y desarrollo.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.3 PM:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Representante de Gerencia de Proyectos, es el responsable de la gestión y
+                                            control de las actividades en todas las etapas del Proyecto respecto del
+                                            presupuesto y de los requerimientos específicos del Cliente, Calidad y
+                                            tiempos. Es también la Interfase de la Organización en los aspectos técnicos
+                                            ya sea internamente, para con las Áreas involucradas o externamente para con
+                                            el Cliente y Proveedores.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">3.4 Departamento de
+                                            Ingeniería:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Es responsable de la revisión del despiece y del Diseño en general. Realiza
+                                            el diseño de herramentales cuando su capacidad operativa lo permita.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="definiciones-abreviaturas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES Y ABREVIATURAS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-lg mb-6">
+                                <div class="space-y-3">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">4.1 Revisión de
+                                            Diseño:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Examen de un diseño, obtenido en forma completa y sistemática, y consignado
+                                            en documentos, con el objeto de evaluar su capacidad para satisfacer los
+                                            requisitos para la calidad, identificar eventuales problemas y proponer
+                                            soluciones.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">4.2 Verificación:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Confirmación por examen y aporte de evidencias objetivas que los requisitos
+                                            especificados han sido satisfechos.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200">4.3 Validación:</h4>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            Confirmación por examen y aporte de evidencias objetivas de que los
+                                            requisitos particulares para un uso específico previsto han sido
+                                            satisfechos con acuerdo explicito o formal del cliente. Si aplica.
+                                        </p>
+                                    </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>DC:</strong> Dirección
+                                            Comercial</p>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>DA:</strong> Dpto.
+                                            Abastecimiento</p>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>DI:</strong> Dirección
+                                            Industrial</p>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>PM:</strong> Project Manager
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300"><strong>GP:</strong> Gerencia de
+                                            Proyecto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESARROLLO
+                        </h2>
+                        <div class="space-y-8">
+                            <!-- 5.1 Datos de Partida -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.1 Datos de
+                                    Partida</h3>
+                                <div class="space-y-4 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.1.1 Clasificación de Herramentales:</strong> Se dividen en cuatro
+                                        grupos:
+                                    </p>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-4">
+                                        <div class="flex items-start">
+                                            <span
+                                                class="bg-primary-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">a</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Herramentales para
+                                                fundición.</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span
+                                                class="bg-primary-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">b</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Herramentales para conformado
+                                                en frío de chapa.</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span
+                                                class="bg-primary-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">c</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Dispositivos para líneas de
+                                                soldadura.</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span
+                                                class="bg-primary-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs mr-2 mt-0.5">d</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Máquinas y dispositivos
+                                                especiales.</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.1.2</strong> El PM designado recibe la documentación técnica del
+                                        cliente según P-4-02 "Control de los Documentos Técnicos Internos y del
+                                        Cliente", la cual verifica y registra conforme al procedimiento.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.1.3</strong> La identificación, análisis y documentación de los datos
+                                        y requisitos sobre los cuales basar el Proyecto del producto, incluidos los
+                                        requisitos legales y reglamentarios vigentes, es realizado por el PM a cargo,
+                                        considerando los siguientes aspectos:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                                        <li>Análisis de la solicitud de cotización del Cliente y de las normas técnicas
+                                            anexas a la misma.</li>
+                                        <li>Contactos con el Cliente para recoger información relativa a la utilización
+                                            de los componentes / productos.</li>
+                                        <li>Análisis de la experiencia (know how) de la Organización.</li>
+                                        <li>Exigencias particulares del Cliente, o la eventual evolución tecnológica del
+                                            producto.</li>
+                                        <li>Leyes, reglamentaciones y normativas vigentes.</li>
+                                    </ul>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.1.4</strong> El PM es responsable de verificar la necesidad y
+                                        solicitar y / o reunir todos los datos requeridos para realizar el diseño. Los
+                                        requisitos incompletos, ambiguos o incongruentes son aclarados y resueltos (ver
+                                        P-7-01 "Revisión del Contrato") con la colaboración eventual de DC / GP
+                                        involucrado.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.2 Planificación del Diseño y del Proyecto -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.2 Planificación
+                                    del Diseño y del Proyecto</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.2.1</strong> Se determinan los tiempos y secuencias requeridos para
+                                        el desarrollo de todas las actividades del Proyecto que se realizan para obtener
+                                        el producto de acuerdo a los requerimientos del cliente. Se generan los
+                                        programas correspondientes según los requisitos establecidos por el Cliente
+                                        (formato Cliente) ó en su defecto se utiliza uno propio adecuado al proyecto en
+                                        particular - (F90) "Presupuesto Previo".
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.2.2</strong> Los Gerentes y Supervisores de las Áreas involucradas son
+                                        los responsables para todas las actividades del Proyecto. Cuando la ejecución de
+                                        las actividades sea subcontratada, serán realizadas por proveedores
+                                        seleccionados.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.2.3</strong> El PM entrega copia de la Planificación al GP y al
+                                        Cliente, actualizándola con la frecuencia convenida en la Revisión de Contrato ó
+                                        mensualmente si no se especifica.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.3 Realización del Diseño -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.3 Realización del
+                                    Diseño</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.1</strong> En caso que la ejecución de los dibujos de planos es
+                                        subcontratada, Ingeniería seleccionará el proyectista según el listado de
+                                        proveedores calificados.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.2</strong> Con la información reunida previamente, Ingeniería y el
+                                        Proyectista seleccionado realizan una reunión, donde se analizarán las pautas de
+                                        diseño previamente definidas "Estilo de Matriz" (R14).
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.3</strong> A continuación se proveerá al Proyectista de:
+                                    </p>
+                                    <div class="ml-6 space-y-2">
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>a)</strong> Requisitos y normas del Cliente.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>b)</strong> Requisitos, normas, criterios para adoptar tolerancias
+                                            e instructivos específicos de <strong>PRODISMO SRL</strong> (ver 7.
+                                            Documentos de referencia)
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>c)</strong> Copias de planos y/o DFN del producto en desarrollo
+                                            entregadas por el Cliente.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>d)</strong> Planos de referencias de herramentales, si existen.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>e)</strong> Cronograma con plazos de entrega de los dibujos,
+                                            frecuencia de seguimiento y fechas estimadas para el control de los diseños
+                                            por parte de Ingeniería de acuerdo a "Estado de Diseño" (F21), ó Diagrama de
+                                            Gantt para cada proyecto.
+                                        </p>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        En "Acta de Reunión" (F01) / mail se deja constancia de toda la Documentación
+                                        entregada.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.4</strong> En caso de requerirse, se analiza con el cliente dicho
+                                        documento.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.5</strong> Si está especificado en la revisión del contrato, el
+                                        cliente aprueba el Proceso.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.3.6</strong> Para apoyar y / o verificar el cumplimiento de los
+                                        requisitos se pueden realizan cálculos auxiliares y / o simulaciones, a saber:
+                                    </p>
+                                    <ul class="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
+                                        <li>Determinación de embuticiones en chapa mediante cálculo por elementos
+                                            finitos.</li>
+                                        <li>Estudios de calefacción y atemperado de moldes, flujo de material, etc.
+                                        </li>
+                                        <li>Estudios de factibilidad y trayectorias de soldadura, etc.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 5.4 Revisión del Diseño -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.4 Revisión del
+                                    Diseño</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.4.1</strong> La revisión del diseño es realizada por Ingeniería de
+                                        acuerdo a lo planificado en su etapa inicial (5.2.1) y con el seguimiento
+                                        establecido en "Estado de Diseños" (F21) ó diagrama de Gantt, donde se verifica:
+                                    </p>
+                                    <div class="ml-6 space-y-2">
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>a-</strong> Que los avances en los diseños estén acordes a lo
+                                            establecido y planificado.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>b-</strong> Que los dibujos sean de calidad.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>c-</strong> La eficacia funcional del diseño.
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>d-</strong> La economía de producción / factibilidad de fabricación
+                                            en función de los recursos disponibles.
+                                        </p>
+                                    </div>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.4.2</strong> Todas las sugerencias y/o cambios en lo programado ó
+                                        establecido es registrado en el mismo formulario ó alternativamente en "Acta de
+                                        Reunión" (F01) como así también las desviaciones observadas y las acciones que
+                                        derivan su corrección.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.5 Verificación del Diseño -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.5 Verificación
+                                    del Diseño</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.5.1</strong> Una vez realizadas las verificaciones en el diseño
+                                        necesarias para garantizar lo definido en el punto 5.4, el diseño es aprobado
+                                        por Ingeniería mediante la firma del remito correspondiente emitido por el
+                                        proveedor (Proyectista).
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.5.2</strong> En caso que se verifiquen deficiencias,
+                                        incompatibilidades
+                                        ó modificaciones en los datos de entrada, Ingeniería es el responsable de hacer
+                                        las correcciones necesarias y el PM no autoriza la distribución de la
+                                        información
+                                        hasta tanto se corrija este defecto y vuelva a ser sometido a la etapa de
+                                        verificación, revisión y validación como así también de eliminar toda
+                                        información
+                                        obsoleta, como se especifica en el "Control de Documentos Técnicos Internos y
+                                        del
+                                        Cliente" (P-4-02), siempre dentro de los plazos programados.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.6 Lanzamiento -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.6 Lanzamiento
+                                </h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.6.1</strong> En esta etapa el PM genera una reunión con los
+                                        responsables involucrado de DI, DA y GP donde se analizan los aspectos críticos
+                                        finales del diseño y pautas del proyecto, se establecen recursos y métodos de
+                                        control y se definen tiempos, plazos, áreas involucradas y responsabilidades
+                                        quedando esta actividad registrada en la "Lista de Materiales" (formato html) y
+                                        "Estrategia de Mecanizado" (F100), archivada por PCP.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.7 Validación -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.7 Validación</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.7.1</strong> El cliente cuando así lo especifica en la revisión del
+                                        contrato (P07-01) es invitado a validar el diseño en cualquiera de las etapas
+                                        del mismo dejando constancia en el "Acta de Reunión" (F01).
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.7.2 Validación Interna – Try Out Interno:</strong> En función de los
+                                        recursos disponibles y exigencias del Cliente se realiza la Validación del
+                                        Producto / Diseño para verificar que el producto obtenido satisface los
+                                        requisitos establecidos y en las condiciones de operación definidas por el
+                                        Usuario / Cliente.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.7.3 Validación Externa – Try Out en el Cliente:</strong> Son las
+                                        operaciones de validación del Diseño / Producto de acuerdo a los requisitos
+                                        establecidos por el Cliente en su planta.
+                                    </p>
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.7.4</strong> Finalizada la etapa de Validación se elabora, con el
+                                        Cliente, una "Acta de Aprobación" (F61) registrando la actividad realizada,
+                                        resultados obtenidos y la conformidad del producto obtenido por ambas partes.
+                                        La firma del Acta de Aprobación significa el cierre de la Orden de Trabajo y el
+                                        cumplimiento de la Orden de Compra.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 5.8 Control de los Cambios del diseño y desarrollo -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.8 Control de los
+                                    Cambios del diseño y desarrollo</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        Pueden generarse por:
+                                    </p>
+                                    <div class="ml-6 space-y-2">
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>• Cambios del Cliente:</strong> se procede de acuerdo a "Revisión
+                                            del Contrato" (P-7-01) y "Control de los Documentos Técnicos Internos y del
+                                            Cliente" (P-4-02).
+                                        </p>
+                                        <p class="text-gray-700 dark:text-gray-300">
+                                            <strong>• Cambios Internos:</strong> se procede de acuerdo a "Control de
+                                            los Documentos Técnicos Internos y del Cliente" (P-4-02).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.9 Archivos de datos durante las etapas del diseño -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">5.9 Archivos de
+                                    datos durante las etapas del diseño</h3>
+                                <div class="space-y-3 ml-4">
+                                    <p class="text-gray-700 dark:text-gray-300">
+                                        <strong>5.9.1</strong> Los documentos generados durante las etapas del diseño
+                                        son archivados en Ingeniería (Planos y trazados originales, notas aclaratorias,
+                                        etc.) excepto la documentación cuyos archivos se indican en "Registros de la
+                                        Calidad" (P-5-04).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REGISTROS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-2">
+                                    <p class="text-gray-700 dark:text-gray-300">F01: Acta de Reunión</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F21: Estado de Diseños</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F61: Acta de Aprobación</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F90: Presupuesto Previo</p>
+                                    <p class="text-gray-700 dark:text-gray-300">F100: Estrategia de Mecanizado</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Lista de Materiales por Sistema</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="documentos-referencia" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            DOCUMENTOS DE REFERENCIA
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-2">
+                                    <p class="text-gray-700 dark:text-gray-300">MC: Manual de la Calidad</p>
+                                    <p class="text-gray-700 dark:text-gray-300">P-7-01: Revisión del Contrato</p>
+                                    <p class="text-gray-700 dark:text-gray-300">P-4-02: Control de Documentos Técnicos
+                                        Internos y del Cliente</p>
+                                    <p class="text-gray-700 dark:text-gray-300">P-5-04: Registros de la Calidad</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Especificaciones de Diseño Prodismo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="diagrama-flujo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            DIAGRAMA DE FLUJO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <div class="flex flex-col items-center justify-center h-24">
+                                    <i class="fas fa-ban text-4xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-700 dark:text-gray-300 text-lg">No Posee Diagrama de Flujo</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 text-center mt-2">
+                                Este procedimiento no posee diagrama de flujo asociado
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            26/02/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Incorporación de (§ 5.4) Revisión del Diseño y Reg. F21: Estado de Diseños.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/11/01</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            A)Reordenamiento completo del Procedimiento<br>
+                                            B) Cambio del Nº de Procedimiento: era P-04-01 (<strong>ISO 9001 :
+                                                1994</strong>)<br>
+                                            C) Actualización de todos los Nº de Documentos de Referencia, Punto 7.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            23/09/05</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Incorporación de registros F81, F82 y F90.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            17/12/08</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Corrección del punto 5, por modificación de responsabilidades en áreas GP y
+                                            DI.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            08/02/10</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Modificación del punto .4 y 5.5 por adecuación a proyecto AMB 2010
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/04/12</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Actualización del punto 5.4
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            25/02/13</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Modificación punto 5.5
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            8</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            9</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            8/09/15</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            10</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Actualización versión 2015
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            12/08/20</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión Completa del Documento
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            11</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            09/05/23</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión Completa del Documento sin Cambio
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../revision-contrato/revision-contrato.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Revisión del Contrato</span>
+                    </a>
+                    <a href="../flujo-ingenieria-proyecto-dispositivos/flujo-ingenieria-proyecto-dispositivos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Flujo de Ingeniería Proyectos Dispositivos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objeto"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#responsabilidades"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                RESPONSABILIDADES</a>
+                            <a href="#definiciones-abreviaturas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES Y ABREVIATURAS</a>
+                            <a href="#desarrollo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                DESARROLLO</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REGISTROS</a>
+                            <a href="#documentos-referencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DOCUMENTOS DE REFERENCIA</a>
+                            <a href="#diagrama-flujo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DIAGRAMA DE FLUJO</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P-7-02</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Control del Proyecto y
+                                    Diseño</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">11</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Área:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Ingeniería y Proyectos</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Jessica Villarreal</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Emanuel Ingerl</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">09/05/2023</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">09/05/2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Proceso -->
+                    <div
+                        class="mt-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-lg shadow-sm border border-purple-200 dark:border-purple-800 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-file-contract mr-2 text-purple-600"></i>
+                            Resumen del Procedimiento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Método para generación, revisión,
+                                    verificación y validación de actividades de planificación y diseño</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Garantiza cumplimiento de requisitos del
+                                    cliente, funcionalidad y economía de fabricación</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Planificación detallada con tiempos y
+                                    secuencias definidas</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Revisión, verificación y validación en
+                                    todas las etapas del diseño</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Control de cambios y archivo de
+                                    documentación técnica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>
