@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Manual de Calidad - Sistema de Gestión de Calidad - Procedimiento Auditorías Internas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>P-8-05 - Auditorías Internas - <strong>PRODISMO SRL</strong></title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <a href="../../../../../index.html">
+                            <img src="../../../../../images/prodimo_9001_logo.png"
+                                data-light-src="../../../../../images/prodimo_9001_logo.png"
+                                data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="200"
+                                height="40" data-theme-logo>
+                        </a>
+
+                        <div class="pl-6">
+                            <h1 class="text-xl font-bold text-gray-900 dark:text-white"><strong>PRODISMO SRL</strong>
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Auditorías Internas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Search Bar -->
+                    <div class="relative hidden md:block">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input type="text" id="search-input"
+                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                            placeholder="Buscar en el contenido...">
+                    </div>
+
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Search -->
+            <div class="md:hidden pb-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="mobile-search-input"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
+            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="px-4 py-2 space-y-4">
+            <div class="pt-1">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
+                <a href="../../../../index.html"
+                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
+                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
+                <a href="../../../iso_sig/iso_sig.html"
+                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
+                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
+                <a href="../../../iso9001/iso9001.html"
+                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
+                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
+                <a href="../../../iso14001/iso14001.html"
+                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
+                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
+                <a href="../../../iso27001/iso27001.html"
+                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
+                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
+                <a href="../../../iso45001/iso45001.html"
+                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
+                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
+            </div>
+
+            <div class="pt-4 border-t">
+                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
+                <a href="../../../politica-privacidad/politica-privacidad.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
+                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
+                <a href="../../../terminos-usos/terminos-usos.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
+                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
+                <a href="../../../configuracion-cookies/cookies.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
+                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
+                <a href="../../../mapa-sitio/mapa-sitio.html"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
+                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
+                <div id="mobile-contacto-btn"
+                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
+                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
+                </div>
+            </div>
+
+            <div class="pt-4 border-t">
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../acciones-correctivas-preventivas/acciones-correctivas-preventivas.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Acciones Correctivas y Preventivas</span>
+                    </a>
+                    <a href="../evaluacion-riesgos-oportunidades/evaluacion-riesgos-oportunidades.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Evaluación de Riesgos y Oportunidades</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">P-8-05 - Auditorías Internas
+                        </h1>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P-8-05</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 21/05/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 7</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-award"></i>
+                                <span>Cumple: <strong>ISO/IEC 9001:2015</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objeto" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-primary-50 dark:bg-primary-900/10 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Establecer el método a ser utilizado para realizar las Auditorías Internas al
+                                    Sistema de Gestión de la Calidad.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg mb-6">
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    Se aplica en todos las Áreas, Departamentos o Gestión de la Empresa y sus Unidades
+                                    Productivas en todos sus turnos, que realizan alguna actividad relacionada con el
+                                    Sistema de Gestión de la Calidad.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            RESPONSABILIDADES
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg mb-6">
+                                <div class="space-y-6">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-green-900 dark:text-green-200">3.1</span>
+                                            Gerencia General:
+                                        </h4>
+                                        <div class="ml-8 mt-1 space-y-2">
+                                            <div class="flex items-start">
+                                                <span class="text-primary-600 font-bold mr-2">-</span>
+                                                <span class="text-gray-700 dark:text-gray-300">Participar en la
+                                                    programación de las Auditorías Internas y realizar el análisis
+                                                    crítico del Sistema de Gestión de la Calidad basado en los Informes
+                                                    de Auditoría.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-green-900 dark:text-green-200">3.2</span>
+                                            Gestión Calidad:
+                                        </h4>
+                                        <div class="ml-8 mt-1 space-y-2">
+                                            <div class="flex items-start">
+                                                <span class="text-primary-600 font-bold mr-2">-</span>
+                                                <span class="text-gray-700 dark:text-gray-300">Planificar, junto a la
+                                                    Gerencia General, las Auditorías Internas; designa los auditores del
+                                                    Grupo de Auditoría; Lidera el Grupo Auditor o nombra un Auditor
+                                                    líder; comunicar a los entes que intervienen la realización de las
+                                                    mismas; administrar el archivo de la documentación generada en las
+                                                    auditorías internas y la disponibilidad de los recursos para su
+                                                    realización.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-green-900 dark:text-green-200">3.3</span>
+                                            Auditor Designado:
+                                        </h4>
+                                        <div class="ml-8 mt-1 space-y-2">
+                                            <div class="flex items-start">
+                                                <span class="text-primary-600 font-bold mr-2">-</span>
+                                                <span class="text-gray-700 dark:text-gray-300">Realizar las auditorías
+                                                    siguiendo lo establecido en el presente Procedimiento, generando los
+                                                    informes correspondientes, informar al responsable del área y a
+                                                    Gestión Calidad los resultados obtenidos en la auditoría.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="definiciones-abreviaturas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES Y ABREVIATURAS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-50 dark:bg-gray-800/50 p-6 rounded-lg mb-6">
+                                <div class="space-y-4">
+                                    <div>
+                                        <h5 class="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                                            Auditoría de la Calidad:
+                                        </h5>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4">
+                                            es un examen sistemático de las actividades del Sistema de Gestión de la
+                                            Calidad y para verificar si sus resultados están en conformidad con lo
+                                            establecido en la norma y estas son implementadas y eficaces.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">AC</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Acciones Correctivas</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">NC</span>
+                                            <span class="text-gray-700 dark:text-gray-300">No Conformidades</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">AI</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Auditoría Interna del Sistema
+                                                de Gestión de la Calidad</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">GC</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Gestión de Calidad</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">GA</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Grupo Auditor</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">S.G.C.</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Sistema de Gestión de la
+                                                Calidad</span>
+                                        </div>
+                                        <div class="flex items-start">
+                                            <span class="font-bold text-gray-800 dark:text-gray-200 mr-2">G.G</span>
+                                            <span class="text-gray-700 dark:text-gray-300">Gerencia General</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESARROLLO
+                        </h2>
+                        <div class="space-y-8">
+                            <!-- 5.1 Programación de las Auditorías -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">5.1</span>
+                                    PROGRAMACIÓN DE LAS AUDITORÍAS
+                                </h3>
+                                <div class="space-y-4 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.1.1</span>
+                                            Planificación anual:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            G.G. y G.C. establecen el cronograma anual de A.I. al S.G.C. al comienzo de
+                                            cada año; indicando las Unidades Productivas afectadas, según F33a y F33b.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.1.2</span>
+                                            Factores de programación:
+                                        </h4>
+                                        <div class="ml-4 mt-1 space-y-2">
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                Para definir la programación de AI se tienen en consideración los
+                                                siguientes factores:
+                                            </p>
+                                            <div class="space-y-1 ml-4 mt-2">
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Resultados del año
+                                                        precedente</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Implementación de
+                                                        nuevos Procedimientos o modificaciones</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">NC relevadas, sus
+                                                        causas y gravedad</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Criticidad de las
+                                                        Áreas o funciones con la calidad del producto y/o S.G.C.</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Frecuencia definida
+                                                        como preferencia: c/ 6 meses – Máximo 1 año.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.1.3</span>
+                                            Auditorías no programadas:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Las AI podrán ser reprogramadas o realizar auditorías no programadas en
+                                            virtud de acontecimientos extraordinarios que determine la Dirección (NC
+                                            graves de producto o Sistema, pedidos de Clientes, resultados de revisión
+                                            por la Dirección, etc.).
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.1.4</span>
+                                            Comunicación:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            En la Programación de AI se definen las Áreas y Gestiones involucradas,
+                                            fechas y secuencia de la realización de las mismas, y auditores designados
+                                            que deberán ser independientes al área auditada. Posterior a la aprobación
+                                            por parte de la Dirección, se comunica la Planificación de AI a los
+                                            involucrados.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.2 Selección de los Auditores -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">5.2</span>
+                                    SELECCIÓN DE LOS AUDITORES
+                                </h3>
+                                <div class="space-y-4 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.2.1</span>
+                                            Criterios de selección:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Los Auditores Internos de S.G.C son seleccionados por GC según sus
+                                            capacidades personales (objetividad, experiencia, conocimientos,
+                                            comportamiento en relaciones interpersonales, etc), la formación recibida y
+                                            su independencia de las Áreas a auditar.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.2.3</span>
+                                            Capacitación e idoneidad:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            La capacitación de los mismos puede ser interna ó externa, de acuerdo a
+                                            lineamientos de la Norma de referencia del S.G.C. y de Auditorías Internas.
+                                            La idoneidad de/los auditor/es se mantiene a través de la participación a
+                                            cursos, conferencias, y la ejecución de auditorías.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.2.4</span>
+                                            Consultores externos:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Se consideran válidas las A.I. realizadas por consultores externos, siempre
+                                            que cumplan con lo requerido en 5.2.1.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.3 Preparación de las Auditorías Internas -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">5.3</span>
+                                    PREPARACIÓN DE LAS AUDITORÍAS INTERNAS
+                                </h3>
+                                <div class="space-y-4 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.3.1</span>
+                                            Preparación por GA y GC:
+                                        </h4>
+                                        <div class="ml-4 mt-1 space-y-2">
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                La AI es preparada por personal del GA y GC, examinando:
+                                            </p>
+                                            <div class="space-y-1 ml-4 mt-2">
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">La documentación
+                                                        aplicable (Manual de Gestión de la Calidad, procedimientos e
+                                                        instrucciones de Aseguramiento de Calidad etc.).</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Resultados de
+                                                        auditorías pasadas.</span>
+                                                </div>
+                                                <div class="flex items-start">
+                                                    <span class="text-primary-600 font-bold mr-2">-</span>
+                                                    <span class="text-gray-700 dark:text-gray-300">Se establece los
+                                                        objetivos y extensión de la AI.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.3.2</span>
+                                            Comunicación previa:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Posteriormente GC informa, con una (1) semana (como mínimo) antes, la
+                                            realización de la AI y envía a los Responsable de Área / Función / Gestión a
+                                            evaluar, las listas de verificación establecidas, los cuales puede contactar
+                                            GC para eventuales aclaraciones u objeciones.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.4 Realización de las Auditorías Internas -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">5.4</span>
+                                    REALIZACIÓN DE LAS AUDITORÍAS INTERNAS
+                                </h3>
+                                <div class="space-y-4 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.4.1</span>
+                                            Ejecución:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Las AI es realizada por el GA liderado por GC (GC podrá delegar las
+                                            actividades nombrando un Auditor Líder del GA con reconocida experiencia y
+                                            conocimiento del Sistema de Calidad y de las actividades relativas al área a
+                                            verificar) según el Programa de Auditorías Internas.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.4.2</span>
+                                            Reunión de apertura:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            A la reunión de apertura de la AI participan los miembros del GA y el
+                                            Responsable del área a evaluar con el objetivo de:
+                                        </p>
+                                        <div class="space-y-1 ml-8 mt-2">
+                                            <div class="flex items-start">
+                                                <span class="text-primary-600 font-bold mr-2">-</span>
+                                                <span class="text-gray-700 dark:text-gray-300">Examinar la extensión y
+                                                    los objetivos de la AI.</span>
+                                            </div>
+                                            <div class="flex items-start">
+                                                <span class="text-primary-600 font-bold mr-2">-</span>
+                                                <span class="text-gray-700 dark:text-gray-300">Confirmar que los
+                                                    recursos y los medios necesarios estén disponibles para el
+                                                    G.A.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.4.3</span>
+                                            Recopilación de información y evaluación:
+                                        </h4>
+                                        <div class="ml-4 mt-1 space-y-2">
+                                            <p class="text-gray-700 dark:text-gray-300">
+                                                Durante la AI las informaciones se recogen a través de entrevistas,
+                                                examen de documentos, observaciones de la actividad y de las condiciones
+                                                en las cuales estas se desarrollan. En caso de ser necesario considerar
+                                                como guía el “Check List Auditorías Internas” (R16). Cada una de ella es
+                                                evaluada de la siguiente manera:
+                                            </p>
+                                            <div class="space-y-2 ml-4 mt-2">
+                                                <div>
+                                                    <p class="text-gray-700 dark:text-gray-300 font-semibold">a-
+                                                        Conforme:</p>
+                                                    <p class="text-gray-700 dark:text-gray-300 ml-4">Cuando es
+                                                        demostrado con evidencias objetivas el cumplimiento total del
+                                                        aspecto evaluado.</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text-gray-700 dark:text-gray-300 font-semibold">b- No
+                                                        Conforme:</p>
+                                                    <p class="text-gray-700 dark:text-gray-300 ml-4">Cuando no se cumple
+                                                        lo anterior, estas NC pueden ser:</p>
+                                                    <div class="space-y-1 ml-8 mt-1">
+                                                        <div class="flex items-start">
+                                                            <span class="text-primary-600 font-bold mr-2">•</span>
+                                                            <span
+                                                                class="text-gray-700 dark:text-gray-300"><strong>Mayores:</strong>
+                                                                Cuando se comprueban irregularidades en la
+                                                                implementación o mantenimiento de un requisito del
+                                                                Sistema de Gestión de la Calidad.</span>
+                                                        </div>
+                                                        <div class="flex items-start">
+                                                            <span class="text-primary-600 font-bold mr-2">•</span>
+                                                            <span
+                                                                class="text-gray-700 dark:text-gray-300"><strong>Menores:</strong>
+                                                                Cuando el no cumplimiento no compromete la calidad de
+                                                                una actividad.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.4.4</span>
+                                            No aplicable:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Cuando durante la auditoría, el auditor detecte que alguna pregunta no es
+                                            aplicable, y el responsable lo demuestra con evidencias lógicas, esta es
+                                            considerada No Aplicable.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.4.5</span>
+                                            Reunión de cierre:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Finalizada la auditoría, el GA y el Responsable del área evaluada realizan
+                                            una reunión, en la cual se presentan los resultados obtenidos, las
+                                            observaciones y eventuales NC detectadas de modo de garantizar que estos
+                                            resultados sean claramente entendidos. El responsable de Área podrá proponer
+                                            acciones correctivas y fijar las fechas de aplicación o solicitar tiempo
+                                            para examinar los hechos en detalle.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5.5 Informe de Auditoría Interna -->
+                            <div
+                                class="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                    <span
+                                        class="bg-primary-100 text-primary-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-primary-200">5.5</span>
+                                    INFORME DE AUDITORÍA INTERNA
+                                </h3>
+                                <div class="space-y-4 ml-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.5.1</span>
+                                            Elaboración del informe:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            El Auditor Líder (GC), luego de la reunión con el responsable del área
+                                            auditada, elabora el “Informe de Auditoría” (F56), en el cual hace una
+                                            síntesis de los aspectos evaluados, observaciones y eventuales NC
+                                            detectadas, así como cualquier otra aclaración necesaria.
+                                        </p>
+                                        <div class="ml-4 mt-2 bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
+                                            <p class="text-sm text-gray-700 dark:text-gray-300">
+                                                <strong>NOTA:</strong> En caso de que la auditoría fuese realizada por
+                                                un proveedor externo, el mismo deberá demostrar la formación para la
+                                                realización de esta auditoría. Los informes de auditoría interna podrán
+                                                estar realizadas bajo su propio formato, dando validez como si se
+                                                tratase de un informe de auditoría propio.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.5.2</span>
+                                            Solicitud de acción:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Luego de este informe, GC (o Auditor Líder), emite las eventuales “Solicitud
+                                            de Acción” según P-8-04 “Acciones Correctivas”.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-gray-200 flex items-center">
+                                            <span
+                                                class="bg-primary-100 text-primary-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-2 dark:bg-primary-900 dark:text-primary-200">5.5.3</span>
+                                            Archivo de documentación:
+                                        </h4>
+                                        <p class="text-gray-700 dark:text-gray-300 ml-4 mt-1">
+                                            Toda la documentación original generada en cada Auditoría debe ser archivada
+                                            por Gestión Calidad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REGISTROS
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-2">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">F56: Informe de Auditoría</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">F33a: Plan de Auditorías y
+                                            Revisión por la Dirección</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">F33b: Planificación Detallada –
+                                            Auditoría Interna</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">R16: Check List Auditorías
+                                            Internas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="documentos-referencia" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            DOCUMENTOS DE REFERENCIA
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg">
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Norma <strong>ISO
+                                                19011</strong></span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Manual de Gestión de la
+                                            Calidad</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">P-8-04: Acciones
+                                            Correctivas</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">Informe auditoría de proveedor
+                                            externo</span>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i class="fas fa-file-alt text-primary-600 mt-1 mr-2"></i>
+                                        <span class="text-gray-700 dark:text-gray-300">PG auditoría interna realizada
+                                            por proveedor externo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="diagrama-flujo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            DIAGRAMA DE FLUJO
+                        </h2>
+                        <div class="mb-8">
+                            <div class="bg-gray-50 dark:bg-gray-900/20 p-6 rounded-lg text-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <i class="fas fa-ban text-4xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-700 dark:text-gray-300 text-lg mb-2">No posee diagrama de flujo
+                                    </p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                                        Este procedimiento no incluye diagrama de flujo específico
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-10 h-10 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table
+                                class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Rev. Nº</th>
+                                        <th
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400 border-r border-gray-300 dark:border-gray-700">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            26/02/01</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Punto 5.2 Incorporación de los criterios de selección de Auditores Internos
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/11/01</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            a) Renumeración debido a la adaptación a la <strong>ISO 9001-2000</strong> -
+                                            Era P-17-01<br>
+                                            b) Inclusión de F33 y F33a en el punto 5.1.1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            3</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/01/09</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Incorporación de Lista de Verificación.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            4</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            15/09/14</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            5</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/10/17</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Actualización versión 2015
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            6</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            14/11/19</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            18/04/22</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            10/05/23</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento sin Cambio
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            13/05/24</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento sin Cambio
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50 dark:bg-gray-800">
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white border-r border-gray-300 dark:border-gray-700">
+                                            7</td>
+                                        <td
+                                            class="px-6 py-4 text-center whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-700">
+                                            21/05/25</td>
+                                        <td class="px-6 py-4 text-left text-sm text-gray-700 dark:text-gray-300">
+                                            Revisión completa del documento sin Cambio
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../acciones-correctivas-preventivas/acciones-correctivas-preventivas.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Acciones Correctivas y Preventivas</span>
+                    </a>
+                    <a href="../evaluacion-riesgos-oportunidades/evaluacion-riesgos-oportunidades.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Evaluación de Riesgos y Oportunidades</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objeto"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#responsabilidades"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                RESPONSABILIDADES</a>
+                            <a href="#definiciones-abreviaturas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES Y ABREVIATURAS</a>
+                            <a href="#desarrollo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                DESARROLLO</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REGISTROS</a>
+                            <a href="#documentos-referencia"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DOCUMENTOS DE REFERENCIA</a>
+                            <a href="#diagrama-flujo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DIAGRAMA DE FLUJO</a>
+                            <a href="#revisiones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-2">
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                            <button id="request-info"
+                                class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Solicitar información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P-8-05</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Título:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Auditorías Internas</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Área:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Calidad</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Jesica Villarreal</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Emanuel Ingerl</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">21/05/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">21/05/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resumen del Proceso -->
+                    <div
+                        class="mt-6 bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-lg shadow-sm border border-purple-200 dark:border-purple-800 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-file-contract mr-2 text-purple-600"></i>
+                            Resumen del Procedimiento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Establece método para realizar Auditorías
+                                    Internas al Sistema de Gestión de la Calidad en <strong>PRODISMO SRL</strong></span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Aplica a todas las Áreas, Departamentos,
+                                    Gestión y Unidades Productivas de la empresa</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Define responsabilidades de Gerencia
+                                    General, Gestión de Calidad y Auditores Designados</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Incluye procesos de programación,
+                                    selección de auditores, preparación, realización e informes de auditorías</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Establece criterios para evaluación
+                                    (Conforme, No Conforme Mayor/Menor, No Aplicable)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Cumple con los requisitos de
+                                    <strong>ISO/IEC 9001:2015</strong> y Norma ISO 19011</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <img src="../../../../../images/logo01-bco.png"
+                            data-light-src="../../../../../images/ProdismoFirma.png"
+                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
+                            height="30" data-theme-logo>
+                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
+                            Todos los derechos reservados.</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="../../../../politica-privacidad/politica-privacidad.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
+                        de Privacidad</a>
+                    <a href="../../../../terminos-usos/terminos-usos.html"
+                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
+                        de Uso</a>
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                        <i class="fas fa-award"></i>
+                        <span><strong>ISO 9001:2015</strong> | Sistema de Gestión de Calidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

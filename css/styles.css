@@ -786,3 +786,28 @@ input:focus-visible {
 }
 
 /*----- Google Maps -----*/
+
+#firmaDamian .imagen-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+#firmaDamian .imagen-hover {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1.75s ease-in-out;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+#firmaDamian .imagen-container:hover .imagen-hover {
+    opacity: 1;
+}
