@@ -21,6 +21,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+        integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../../../../css/styles.css">
 
@@ -44,7 +48,7 @@
                                 alt="Logo Prodismo" width="200" height="40" data-theme-logo>
                         </a>
                         <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
+                            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h2>
                             <p class="text-sm text-gray-500 dark:text-gray-400">Organización de Seguridad de la
                                 Información</p>
                         </div>
@@ -179,7 +183,8 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Organización de la Seguridad
                             de la Información</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: MC122-IT-1</span>
@@ -353,7 +358,7 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.1. Comité de Seguridad de la
                                 Información</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Miembros:</strong> Alta Dirección, RSI, IT Manager, Representantes Legales.
+                                <li><strong>Miembros:</strong> Alta Dirección, RSI, IT Manager, Representante Legal.
                                 </li>
                                 <li><strong>Frecuencia de reuniones:</strong> Trimestral.</li>
                                 <li><strong>Responsabilidades:</strong>
@@ -482,6 +487,23 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Incidentes
                                                 (phishing, accesos no autorizados).</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                Representante Legal</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                Mariano Nieto</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                <a href="mailto:rrhh@prodismo.com"
+                                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300"><i
+                                                        class="fa-solid fa-at" style="color: #b2b2b2;"></i>
+                                                    rrhh@prodismo.com</a>
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Representante
+                                                Legal (acuerdos legales, contratos, etc.).</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -559,7 +581,7 @@
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-1">
-                                                    <li>Liderar el SGSI y alinear con TISAX e ISO27000</li>
+                                                    <li>Liderar el SGSI y alinear con TISAX e ISO27001:2022</li>
                                                     <li>Reportar riesgos a la dirección.</li>
                                                     <li>Aprobar políticas de acceso.</li>
                                                 </ul>
@@ -1012,49 +1034,49 @@
 
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 DEFINICIONES</a>
                             <a href="#responsables"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RESPONSABLES</a>
                             <a href="#estructura-organizativa"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
                                 ESTRUCTURA ORGANIZATIVA</a>
                             <a href="#segregacion-responsabilidades"
-                                class="block py-2 px-3 text-[12.5px] text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                class="block py-2 px-3 text-[12.5px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
                                 SEGREGACIÓN DE RESPONSABILIDADES</a>
                             <a href="#comunicacion-concientizacion"
-                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 COMUNICACIÓN Y CONCIENTIZACIÓN</a>
                             <a href="#gestion-cambios"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 GESTIÓN DE CAMBIOS</a>
                             <a href="#registros-evidencias"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 REGISTROS Y EVIDENCIAS</a>
                             <a href="#monitoreo-cumplimiento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 MONITOREO Y CUMPLIMIENTO</a>
                             <a href="#sanciones-incumplimiento"
-                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 SANCIONES POR INCUMPLIMIENTO</a>
                             <a href="#revision-actualizacion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
                                 REVISIÓN Y ACTUALIZACIÓN</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
                                 ANEXOS</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>

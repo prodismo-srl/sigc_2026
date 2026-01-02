@@ -603,8 +603,6 @@ input:focus-visible {
     }
 }
 
-/*-------------------------*/
-
 /*----- SideBar --------*/
 .sidebar {
     transition: transform 0.6s ease-in-out;

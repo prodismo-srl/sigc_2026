@@ -1,0 +1,66 @@
+<header
+    class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
+                    <a href="../../indice-iso27001.html">
+                        <img src="../../../../../images/ITProdimo_logo.png"
+                            data-light-src="../../../../../images/ITProdimo_logo.png"
+                            data-dark-src="../../../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
+                            alt="Logo Prodismo" width="200" height="40" data-theme-logo>
+                    </a>
+
+                    <div class="pl-6">
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h2>
+                        <p class="text-sm text-gray-500 dark:text-gray-400" id="header-subtitle">
+                            <!-- Se llena dinámicamente -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Search Bar -->
+                <div class="relative hidden md:block">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="search-input"
+                        class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        placeholder="Buscar en el contenido...">
+                </div>
+
+                <!-- PDF Download -->
+                <button id="pdf-download"
+                    class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
+                    <i class="fas fa-download"></i>
+                    <span>Descargar PDF</span>
+                </button>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search -->
+        <div class="md:hidden pb-4">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-gray-400"></i>
+                </div>
+                <input type="text" id="mobile-search-input"
+                    class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                    placeholder="Buscar en el contenido...">
+            </div>
+        </div>
+    </div>
+</header>
