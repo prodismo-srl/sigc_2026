@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Política de Configuración Segura y Protección contra Malware">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Política de Configuración Segura">
+    <meta name="description" content="Prodismo - Política de Configuración Segura y Protección contra Malware">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
     <title>Política de Configuración Segura - Prodismo SRL</title>
 
     <!-- Google Fonts -->
@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -27,134 +28,17 @@
     <!-- Tailwind styles -->
     <link href="../../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../indice-iso27001.html">
-                            <img src="../../../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Configuración Segura</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header-container" data-module="header"></div>
 
     <!-- Mobile Sidebar -->
-    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-between p-4 border-b">
-            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
-            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="px-4 py-2 space-y-4">
-            <div class="pt-1">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
-                <a href="../../../../index.html"
-                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
-                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
-                <a href="../../../iso_sig/iso_sig.html"
-                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
-                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
-                <a href="../../../iso9001/iso9001.html"
-                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
-                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
-                <a href="../../../iso14001/iso14001.html"
-                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
-                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
-                <a href="../../../iso27001/iso27001.html"
-                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
-                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
-                <a href="../../../iso45001/iso45001.html"
-                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
-                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
-                <a href="../../../politica-privacidad/politica-privacidad.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
-                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
-                <a href="../../../terminos-usos/terminos-usos.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
-                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
-                <a href="../../../configuracion-cookies/cookies.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
-                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="../../../mapa-sitio/mapa-sitio.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
-                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
-                <div id="mobile-contacto-btn"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
-                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
-                </div>
-            </div>
-
-            <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
-            </div>
-        </nav>
-    </div>
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -178,23 +62,24 @@
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Configuración
-                            Segura</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            Segura y Protección contra Malware</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: MC523-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 7/1/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -213,10 +98,9 @@
                             autorizados, divulgación, modificación o destrucción.<br>Esta política asegura que todos los
                             componentes tecnológicos sean desplegados y mantenidos bajo el principio de
                             "<strong>seguridad por diseño</strong>", cumpliendo con los requisitos de los controles
-                            A.8.1 (Responsabilidad por los activos), A.8.2 (Clasificación de la información), A.8.6
-                            (Mantenimiento de las medidas de seguridad técnicas) de la norma <strong>ISO/IEC
-                                27001:2022</strong> y los estrictos requisitos de protección de información de la
-                            normativa de <strong>TISAX</strong>.
+                            A.8.1 (Dispositivos de usuario), A.8.7 (Protección contra malware) y A.8.9 (Gestión de la
+                            configuración) del Anexo A de la norma <strong>ISO/IEC 27001:2022</strong> y los estrictos
+                            requisitos de protección de información de la normativa de <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -229,8 +113,8 @@
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Sistemas y Servidores:</strong> Servidores físicos y virtuales (Windows Server,
-                                Linux), servicios en la nube (IaaS, PaaS, SaaS), incluido el Servidor de Diseños 3D y
-                                Documentación.</li>
+                                Linux), servicios en la nube (SaaS), incluidos los Servidores de alojamiento de Diseños
+                                3D y Documentación.</li>
                             <li><strong>Estaciones de Trabajo:</strong> PC's de escritorio, laptops, estaciones de
                                 trabajo técnicas y todos los dispositivos de usuario final.</li>
                             <li><strong>Dispositivos Móviles:</strong> Tablets y smartphones propiedad de la empresa que
@@ -252,8 +136,7 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8 (Gestión de activos), A.9 (Controles de
-                                acceso), A.12 (Seguridad de las operaciones)</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.1, A.8.7, A.8.9</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Política de Control de Acceso MC412-IT-1 Política de Autenticación y Control de Accesos
@@ -288,7 +171,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de
-                                    TI/Sistemas:</h3>
+                                    TI:</h3>
                                 <p class="text-gray-700 dark:text-gray-300">Implementar y hacer cumplir los estándares
                                     de configuración segura en todos los activos bajo su control. Realizar auditorías
                                     técnicas periódicas.</p>
@@ -327,8 +210,8 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">5.1. Requisitos Genéricos
                                     para Todos los Dispositivos:</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Inventario:</strong> Todo activo debe estar registrado en el CMDB (Base
-                                        de datos de gestión de configuración) con propietario, ubicación y finalidad.
+                                    <li><strong>Inventario:</strong> Todo activo debe estar registrado en el inventario
+                                        de activos con propietario, ubicación y finalidad.
                                     </li>
                                     <li><strong>Hardening:</strong> Debe aplicarse la hardening de sistemas según
                                         estándares reconocidos (CIS Benchmarks).</li>
@@ -368,16 +251,14 @@
                                         acceso solo a las direcciones IP de las estaciones de trabajo autorizadas.</li>
                                     <li><strong>Control de Acceso Reforzado:</strong>
                                         <ul class="list-circle pl-6 mt-2 space-y-1">
-                                            <li>Autenticación multifactor (MFA) obligatoria para todos los accesos,
-                                                locales y remotos.</li>
                                             <li>Registro de auditoría detallado de todos los accesos (éxito/fracaso),
                                                 visualizaciones, descargas, modificaciones y eliminaciones de archivos.
                                             </li>
                                             <li>Revisión trimestral de permisos de acceso.</li>
                                         </ul>
                                     </li>
-                                    <li><strong>Copias de Seguridad (Backup):</strong> Copias diarias incrementales y
-                                        semanales completas, con retención mínima de 15 días. Las copias deben estar
+                                    <li><strong>Copias de Seguridad (Backup):</strong> Copias diarias incrementales
+                                        completas, con retención mínima de 15 días. Las copias deben estar
                                         cifradas y almacenadas fuera del sitio principal, con verificación regular de
                                         integridad y restauración.</li>
                                     <li><strong>Protección Antimalware Avanzada:</strong> Además del antivirus, debe
@@ -396,29 +277,10 @@
                         </h2>
 
                         <div class="space-y-6">
-                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20 border-l-4 border-blue-400">
-                                <h3 class="font-semibold text-blue-900 dark:text-blue-300 mb-2">6.1. Sistemas SIP/SIP4.0
-                                    (Sistemas de Información de Producción):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Segmentación:</strong> Deben residir en una red industrial (OT)
-                                        segmentada y aislada de la red corporativa (IT) mediante un firewall con reglas
-                                        de filtrado unidireccional (DMZ).</li>
-                                    <li><strong>Acceso Remoto:</strong> Cualquier acceso remoto para mantenimiento debe
-                                        realizarse a través de una VPN segregada y con autenticación MFA. Las sesiones
-                                        deben ser monitoreadas y/o grabadas y reportadas.</li>
-                                    <li><strong>Parches:</strong> Los parches deben probarse primero en un entorno de
-                                        laboratorio idéntico antes de su despliegue en producción, para garantizar la
-                                        estabilidad del proceso productivo.</li>
-                                    <li><strong>Protección:</strong> Implementar listas blancas de aplicaciones
-                                        (Application Whitelisting) para prevenir la ejecución de software no autorizado.
-                                    </li>
-                                </ul>
-                            </div>
-
                             <div class="p-4 bg-green-50 rounded-lg dark:bg-green-900/20 border-l-4 border-green-400">
-                                <h3 class="font-semibold text-green-900 dark:text-green-300 mb-2">6.2. PC's y Laptops
+                                <h3 class="font-semibold text-green-900 dark:text-green-300 mb-2">6.1. PC's y Laptops
                                     (Estaciones de Trabajo Windows/macOS):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                     <li><strong>Configuración Base:</strong> Imagen corporativa pre-hardeneada
                                         desplegada mediante herramientas de MDM (Intune) o SCCM.</li>
                                     <li><strong>Privilegios de Usuario:</strong> Los usuarios deben operar con permisos
@@ -433,22 +295,23 @@
                                                 class="fas fa-ban mr-1"></i>Bloqueados para almacenamiento
                                             masivo.</span> Solo permitidos para dispositivos periféricos autorizados
                                         (teclados, ratones).</li>
+                                    <li><strong>Protección:</strong> Implementar listas blancas de aplicaciones
+                                        (Application Whitelisting) para prevenir la ejecución de software no autorizado.
+                                    </li>
                                 </ul>
                             </div>
 
                             <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20 border-l-4 border-purple-400">
-                                <h3 class="font-semibold text-purple-900 dark:text-purple-300 mb-2">6.3. Tablets y
+                                <h3 class="font-semibold text-purple-900 dark:text-purple-300 mb-2">6.2. Tablets y
                                     Dispositivos Móviles (BYOD y COPE):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Gestión de Dispositivos Móviles (MDM):</strong> Obligatorio el registro
-                                        en la solución MDM corporativa (Microsoft Intune).</li>
-                                    <li><strong>Políticas de MDM:</strong> Se aplicarán políticas que exijan: código de
-                                        desbloqueo, cifrado del dispositivo, capacidad de borrado remoto, y separación
-                                        de datos corporativos y personales (Contenedores de trabajo).</li>
-                                    <li><strong>Jailbreak/Root:</strong> <span class="text-red-600 dark:text-red-400"><i
-                                                class="fas fa-ban mr-1"></i>Está terminantemente prohibido</span> el uso
-                                        de dispositivos con jailbreak o root. El MDM detectará y bloqueará el acceso de
-                                        estos dispositivos.</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
+                                    <li><strong>Gestión de Dispositivos Móviles:</strong> Obligatorio el registro
+                                        de dispositivos en el inventario corporativo.</li>
+                                    <li><strong>Conexion a red interna Prodismo:</strong> <span
+                                            class="text-red-600 dark:text-red-400"><i
+                                                class="fas fa-ban mr-1"></i>Prohibida la conexión de dispositivos
+                                            móviles (BYOD) a la red interna Prodismo.</span> Solo permitidos para
+                                        dispositivos móviles COPE.</li>
                                 </ul>
                             </div>
                         </div>
@@ -461,7 +324,7 @@
                             CICLO DE VIDA Y MANTENIMIENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                             <li><strong>Despliegue:</strong> Ningún dispositivo nuevo será conectado a la red sin haber
                                 aplicado la configuración segura base.</li>
                             <li><strong>Operación:</strong> Monitoreo continuo del cumplimiento de las configuraciones
@@ -565,8 +428,7 @@
                             <li>Esta política será revisada anualmente por el RSI, o ante cambios tecnológicos
                                 significativos.</li>
                             <li>El cumplimiento de esta política se verificará mediante auditorías internas del
-                                <strong>SGSI</strong>, scans de vulnerabilidades trimestrales y evaluaciones
-                                <strong>TISAX</strong>.
+                                <strong>SGSI</strong>, scans de vulnerabilidades y evaluaciones <strong>TISAX</strong>.
                             </li>
                             <li>Los resultados de los scans y las auditorías se presentarán al Comité de Seguridad para
                                 su análisis y se definirán planes de acción para abordar las no conformidades.</li>
@@ -595,13 +457,22 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-300 dark:text-white">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    </tr>
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            0</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
-                                            del documento</td>
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            7/1/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            general del documento</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -722,11 +593,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
                             </div>
                         </div>
                     </div>
@@ -737,33 +608,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../images/logo01-bco.png" data-light-src="../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../images/logo01-bco.png" alt="Logo Prodismo" width="120" height="30"
-                            data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"

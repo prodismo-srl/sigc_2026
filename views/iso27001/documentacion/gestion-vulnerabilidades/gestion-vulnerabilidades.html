@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Política de Gestión de Vulnerabilidades Técnicas">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Prodismo - Política de Gestión de Vulnerabilidades Técnicas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
     <title>Política de Gestión de Vulnerabilidades - Prodismo SRL</title>
 
     <!-- Google Fonts -->
@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -27,135 +28,17 @@
     <!-- Tailwind styles -->
     <link href="../../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../indice-iso27001.html">
-                            <img src="../../../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Monitorización de
-                                Vulnerabilidades</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header-container" data-module="header"></div>
 
     <!-- Mobile Sidebar -->
-    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-between p-4 border-b">
-            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
-            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="px-4 py-2 space-y-4">
-            <div class="pt-1">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
-                <a href="../../../../index.html"
-                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
-                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
-                <a href="../../../iso_sig/iso_sig.html"
-                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
-                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
-                <a href="../../../iso9001/iso9001.html"
-                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
-                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
-                <a href="../../../iso14001/iso14001.html"
-                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
-                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
-                <a href="../../../iso27001/iso27001.html"
-                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
-                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
-                <a href="../../../iso45001/iso45001.html"
-                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
-                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
-                <a href="../../../politica-privacidad/politica-privacidad.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
-                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
-                <a href="../../../terminos-usos/terminos-usos.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
-                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
-                <a href="../../../configuracion-cookies/cookies.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
-                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="../../../mapa-sitio/mapa-sitio.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
-                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
-                <div id="mobile-contacto-btn"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
-                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
-                </div>
-            </div>
-
-            <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
-            </div>
-        </nav>
-    </div>
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -180,22 +63,23 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Monitorización de
                             Vulnerabilidades</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: MC525-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 7/1/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -211,9 +95,10 @@
                             Establecer un programa continuo de identificación, evaluación, tratamiento y monitorización
                             de vulnerabilidades técnicas en los sistemas de información de <strong>PRODISMO
                                 SRL</strong>, con el fin de reducir la superficie de ataque, mitigar riesgos de
-                            seguridad y cumplir con los controles A.8.8 (Gestión de vulnerabilidades técnicas) y A.5.5
-                            (Gestión de riesgos) del Anexo A de la norma <strong>ISO/IEC 27001:2022</strong>, así como
-                            con los requisitos de protección de activos críticos del marco <strong>TISAX</strong>.
+                            seguridad y cumplir con los controles A.8.8 (Gestión de vulnerabilidades técnicas) y A.8.19
+                            (Instalación de software en sistemas operativos) del Anexo A de la norma <strong>ISO/IEC
+                                27001:2022</strong>, así como con los requisitos de protección de activos críticos del
+                            marco <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -224,7 +109,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Sistemas críticos:</strong> ERP SIP 4.0, servidores de diseño 3D, aplicaciones
                                 internas</li>
                             <li><strong>Infraestructura de red:</strong> Firewalls, switches, routers, sistemas de
@@ -233,8 +118,7 @@
                                 confidencial</li>
                             <li><strong>Servicios en la nube:</strong> Microsoft 365, Azure, otros servicios SaaS
                                 corporativos</li>
-                            <li><strong>Dispositivos IoT/OT:</strong> Sistemas de producción y control industrial</li>
-                            <li><strong>Aplicaciones web:</strong> Sitios web corporativos y portales de clientes</li>
+                            <li><strong>Aplicaciones web:</strong> Sitios web corporativos</li>
                         </ul>
                     </section>
 
@@ -245,12 +129,9 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.8, A.5.5</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.8, A.8.19</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Política de Gestión de Cambios: MC521-IT-1 Política de Comunicación de Cambios</li>
-                            <li>Política de Gestión de Riesgos: MC141-IT-1 Politica de Gestión de Eventos de Seguridad
-                                por Departamento</li>
                         </ul>
                     </section>
 
@@ -318,24 +199,16 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de
-                                    TI/Sistemas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Ejecutar scans de vulnerabilidades según la
-                                    frecuencia establecida. Implementar medidas de remediación y parcheo. Mantener el
-                                    inventario de activos actualizado. Configurar y operar herramientas de scanning.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Equipo de SOC/Seguridad:
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300">Monitorizar alertas de vulnerabilidades
+                                    TI:</h3>
+                                <p class="text-gray-700 dark:text-gray-300 mb-3">Ejecutar scans de vulnerabilidades.
+                                    Implementar medidas de remediación y parcheo. Mantener el inventario de activos
+                                    actualizado. Configurar y operar herramientas de scanning.</p>
+                                <p class="text-gray-700 dark:text-gray-300 mb-3">Monitorizar alertas de vulnerabilidades
                                     críticas. Investigar vulnerabilidades explotadas activamente. Coordinar la respuesta
                                     a incidentes relacionados con vulnerabilidades.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Dueños de Sistemas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Aprobar ventanas de mantenimiento para la
-                                    remediación. Validar que las remediaciones no afecten la operación del negocio.</p>
+                                <p class="text-gray-700 dark:text-gray-300 mb-3">Aprobar ventanas de mantenimiento para
+                                    la remediación. Validar que las remediaciones no afecten la operación del negocio.
+                                </p>
                             </div>
                         </div>
                     </section>
@@ -356,16 +229,16 @@
                                         <thead class="bg-gray-50 dark:bg-gray-800">
                                             <tr>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Tipo de Activo</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Frecuencia</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Herramienta</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Nivel de Profundidad</th>
                                             </tr>
                                         </thead>
@@ -452,10 +325,11 @@
                                 <h3 class="font-bold text-gray-900 dark:text-white mb-2">6.2. Escaneos Adicionales
                                     Obligatorios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Después de cambios significativos en la infraestructura (72 horas)</li>
+                                    <li>Después de cambios significativos en la infraestructura (dentro de las 72 horas)
+                                    </li>
                                     <li>Antes del despliegue a producción de nuevas aplicaciones</li>
                                     <li>Después de incidentes de seguridad (como parte del análisis post-incidente)</li>
-                                    <li>Ante vulnerabilidades críticas de día cero (scan inmediato)</li>
+                                    <li>Ante vulnerabilidades críticas de día cero (scaneo inmediato)</li>
                                 </ul>
                             </div>
                         </div>
@@ -477,13 +351,13 @@
                                         <thead class="bg-gray-50 dark:bg-gray-800">
                                             <tr>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     CVSS Score</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Nivel de Criticidad</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Tiempo Máximo de Remedición</th>
                                             </tr>
                                         </thead>
@@ -541,7 +415,7 @@
                             <div>
                                 <h3 class="font-bold text-gray-900 dark:text-white mb-2">7.2. Factores de Contexto
                                     Empresarial</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Exposición a Internet: Vulnerabilidades en sistemas expuestos se priorizan</li>
                                     <li>Datos Procesados: Sistemas con información confidencial tienen mayor prioridad
                                     </li>
@@ -679,8 +553,8 @@
                                 </h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>>10 vulnerabilidades críticas en un sistema: Notificación a dirección</li>
-                                    <li>Tasa de remediación <80% por 2 ciclos consecutivos: Escalación a comité de
-                                            seguridad</li>
+                                    <li>Tasa de remediación <80% por 2 ciclos consecutivos: Escalación Alta
+                                            Gerencia</li>
                                     <li>Vulnerabilidades no remediadas después del plazo máximo: Reporte de
                                         incumplimiento</li>
                                 </ul>
@@ -699,7 +573,7 @@
                             <div>
                                 <h3 class="font-bold text-gray-900 dark:text-white mb-2">10.1. Herramientas Autorizadas
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Escaneo de Red:</strong> Tenable.io, Nessus Professional</li>
                                     <li><strong>Escaneo de Aplicaciones Web:</strong> OWASP ZAP, Burp Suite Enterprise
                                     </li>
@@ -738,9 +612,9 @@
                                         < 24 horas para vulnerabilidades críticas</li>
                                     <li><strong>Tiempo Promedio de Remedición (MTTR):</strong> Según niveles de
                                         criticidad</li>
-                                    <li><strong>Tasa de Remedición:</strong> Objetivo >90% para vulnerabilidades
+                                    <li><strong>Tasa de Remedición:</strong> Objetivo >85% para vulnerabilidades
                                         críticas/altas</li>
-                                    <li><strong>Cobertura de Escaneo:</strong> >95% de activos inventariados</li>
+                                    <li><strong>Cobertura de Escaneo:</strong> >90% de activos inventariados</li>
                                 </ul>
                             </div>
 
@@ -800,7 +674,7 @@
                                 </h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li><strong>Revisión Mensual:</strong> Efectividad de procesos operativos</li>
-                                    <li><strong>Revisión Trimestral:</strong> Actualización basada en threat
+                                    <li><strong>Revisión cuatrimestral:</strong> Actualización basada en threat
                                         intelligence</li>
                                     <li><strong>Revisión Anual:</strong> Evaluación completa del programa frente a
                                         mejores prácticas</li>
@@ -983,13 +857,22 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-300 dark:text-white">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    </tr>
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            0</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
-                                            del documento</td>
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            7/1/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            general del documento</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1126,11 +1009,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
                             </div>
                         </div>
                     </div>
@@ -1141,34 +1024,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../../../images/logo01-bco.png"
-                            data-light-src="../../../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
-                            height="30" data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"

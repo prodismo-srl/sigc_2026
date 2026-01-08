@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Política de Gestión de Medios de Identificación">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Prodismo - Política de Gestión de Medios de Identificación">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
     <title>Política de Gestión de Medios de Identificación - Prodismo SRL</title>
 
     <!-- Google Fonts -->
@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -27,135 +28,17 @@
     <!-- Tailwind styles -->
     <link href="../../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../indice-iso27001.html">
-                            <img src="../../../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Política de Gestión de Medios de
-                                Identificación</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header-container" data-module="header"></div>
 
     <!-- Mobile Sidebar -->
-    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-between p-4 border-b">
-            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
-            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="px-4 py-2 space-y-4">
-            <div class="pt-1">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
-                <a href="../../../../index.html"
-                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
-                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
-                <a href="../../../iso_sig/iso_sig.html"
-                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
-                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
-                <a href="../../../iso9001/iso9001.html"
-                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
-                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
-                <a href="../../../iso14001/iso14001.html"
-                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
-                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
-                <a href="../../../iso27001/iso27001.html"
-                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
-                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
-                <a href="../../../iso45001/iso45001.html"
-                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
-                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
-                <a href="../../../politica-privacidad/politica-privacidad.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
-                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
-                <a href="../../../terminos-usos/terminos-usos.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
-                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
-                <a href="../../../configuracion-cookies/cookies.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
-                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="../../../mapa-sitio/mapa-sitio.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
-                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
-                <div id="mobile-contacto-btn"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
-                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
-                </div>
-            </div>
-
-            <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
-            </div>
-        </nav>
-    </div>
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -180,22 +63,23 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Medios
                             de Identificación</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: MC411-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 6/1/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -212,8 +96,9 @@
                             medios de identificación utilizados en los accesos físicos y electrónicos de
                             <strong>PRODISMO SRL</strong>, con el fin de garantizar la autenticidad, integridad y
                             confidencialidad de los accesos, prevenir el uso no autorizado y cumplir con los requisitos
-                            del marco <strong>TISAX</strong> y los controles A.5.3 (Segregación de funciones), A.8.2
-                            (Autenticación) y A.8.3 (Control de acceso físico) del Anexo A de <strong>ISO/IEC
+                            del marco <strong>TISAX</strong> y los controles A.5.18 (Derechos de acceso), A.8.2
+                            (Derechos de acceso privilegiado) y
+                            A.8.3 (Restricción de acceso a la información) del Anexo A de <strong>ISO/IEC
                                 27001:2022</strong>.
                         </p>
                     </section>
@@ -239,7 +124,7 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.3, A.8.2, A.8.3</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.18, A.8.2, A.8.3</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Política de Control de Acceso de Visitantes MC311-IT-1</li>
@@ -260,12 +145,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Medio de identificación:
                                 </h3>
                                 <p class="text-gray-700 dark:text-gray-300">Elemento físico o electrónico que permite
-                                    autenticar la identidad de un usuario (ej.: tarjeta, contraseña, token).</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Token:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Dispositivo electrónico que genera claves de
-                                    acceso temporales (ej.: YubiKey).</p>
+                                    autenticar la identidad de un usuario (ej.: tarjeta, contraseña).</p>
                             </div>
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Revocación:</h3>
@@ -312,7 +192,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Departamento de IT</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li>Configurar, emitir y mantener los medios electrónicos.</li>
-                                    <li>Realizar la revocación y renovación de contraseñas, tokens y certificados.</li>
+                                    <li>Realizar la revocación y renovación de contraseñas y certificados.</li>
                                 </ul>
                             </div>
 
@@ -364,7 +244,8 @@
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Contraseñas</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mínimo 12
-                                                caracteres, cambio cada 90 días</td>
+                                                caracteres, contener minúsculas, mayúsculas, números y caracteres
+                                                especiales</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -376,16 +257,9 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Tokens</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Configuración
-                                                inicial por el departamento de IT</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Certificados digitales</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Emitidos con
-                                                validez máxima de 6 meses</td>
+                                                validez máxima de 12 meses</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -396,7 +270,7 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Entrega y Registro</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                 <li>Firma de acuse de recibo mediante F411-IT-1.</li>
-                                <li>Registro en el inventario de medios Inventario de Medios.</li>
+                                <li>Registro en el inventario de medios de identificación.</li>
                             </ul>
                         </div>
 
@@ -420,8 +294,8 @@
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Tarjetas físicas</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Vigencia de 1
-                                                año. Renovación con verificación de RRHH</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Vigencia de 2
+                                                años. Renovación con verificación de RRHH</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -429,13 +303,6 @@
                                                 Contraseñas</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">No reutilizar
                                                 las últimas 5 contraseñas</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Tokens</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Uso exclusivo
-                                                para los sistemas autorizados</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -453,7 +320,9 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.5. Pérdida/Robo</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Reportar en menos de 24h a: itprodismo@prodismo.com.</li>
+                                <li>Reportar en menos de 24h a: <a href="mailto:itprodismo@prodismo.com"
+                                        class="text-blue-100 hover:underline bg-blue-600 text-white-200 p-1 rounded">itprodismo@prodismo.com</a>
+                                </li>
                                 <li>Pasos inmediatos:
                                     <ul class="list-circle pl-6 mt-2">
                                         <li>Bloqueo del acceso.</li>
@@ -494,13 +363,6 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revocar con
                                                 la autoridad de firma</td>
                                         </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Tokens</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Restablecimiento de fábrica o destrucción física</td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -516,7 +378,6 @@
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                             <li>Contraseñas: Deben incluir mayúsculas, minúsculas, números y símbolos.</li>
                             <li>Tarjetas: Deben ser compatibles con lectores RFID cifrados.</li>
-                            <li>Tokens: Configuración según estándar FIPS 140-2.</li>
                             <li>Certificados: Emitidos por entidad certificadora reconocida.</li>
                         </ul>
                     </section>
@@ -734,12 +595,19 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="bg-gray-200 text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white">
+                                            0</td>
+                                        <td class="px-6 py-4 text-sm dark:text-gray-300">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm dark:text-gray-300">Primera Emisión
+                                            del documento</td>
+                                    </tr>
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            0</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
+                                            1</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">6/1/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
                                             del documento</td>
                                     </tr>
                                 </tbody>
@@ -873,11 +741,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">6/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">6/1/2027</span>
                             </div>
                         </div>
                     </div>
@@ -888,34 +756,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../../../images/logo01-bco.png"
-                            data-light-src="../../../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
-                            height="30" data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Gestión de Auditorías">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Plan Anual de Auditorías del SGSI 2026">
+    <meta name="description" content="Prodismo - Plan Anual de Auditorías del SGSI">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../images/Logo_Prodismo.ico">
-    <title>Gestión de Auditorías del SGSI 2026 - Prodismo SRL</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
+    <title>Gestión de Auditorías del SGSI - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -27,134 +28,17 @@
     <!-- Tailwind styles -->
     <link href="../../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
 </head>
 
 <body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../indice-iso27001.html">
-                            <img src="../../../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Gestión de Auditorías del SGSI 2026</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="text-gray-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header-container" data-module="header"></div>
 
     <!-- Mobile Sidebar -->
-    <div id="mobile-sidebar" class="sidebar sidebar-hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg">
-        <div class="flex items-center justify-between p-4 border-b">
-            <img src="../../../../images/ProdismoFirma.png" alt="Logo Prodismo" width="150px" height="40px">
-            <button id="close-sidebar" class="text-gray-500 hover:text-red-700">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <nav class="px-4 py-2 space-y-4">
-            <div class="pt-1">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">General</h5>
-                <a href="../../../../index.html"
-                    class="block text-sm text-blue-600 font-semibold hover:text-blue-50 hover:bg-blue-400 py-2"><i
-                        class="fas fa-house mr-2 ms-1"></i>Inicio</a>
-                <a href="../../../iso_sig/iso_sig.html"
-                    class="block text-sm text-gray-900 hover:text-gray-50 hover:bg-gray-700 py-2"><i
-                        class="fas fa-cogs mr-2 ms-1"></i>S.I.G.C.</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Normas ISO</h5>
-                <a href="../../../iso9001/iso9001.html"
-                    class="block text-sm text-blue-600 hover:text-gray-800 hover:bg-blue-100 py-2"><i
-                        class="fas fa-award mr-2 ms-1"></i><strong>ISO 9001:2015</strong></a>
-                <a href="../../../iso14001/iso14001.html"
-                    class="block text-sm text-green-600 hover:text-gray-800 hover:bg-green-100 py-2"><i
-                        class="fas fa-leaf mr-2 ms-1"></i>ISO 14001:2018</a>
-                <a href="../../../iso27001/iso27001.html"
-                    class="block text-sm text-purple-600 hover:text-gray-800 hover:bg-purple-100 py-2"><i
-                        class="fas fa-shield-alt mr-2 ms-1"></i>ISO 27001:2022</a>
-                <a href="../../../iso45001/iso45001.html"
-                    class="block text-sm text-amber-600 hover:text-gray-800 hover:bg-amber-100 py-2"><i
-                        class="fas fa-helmet-safety mr-2 ms-1"></i>ISO 45001:2018</a>
-            </div>
-
-            <div class="pt-4 border-t">
-                <h5 class="text-sm font-semibold text-gray-700 mb-2">Configuraciones</h5>
-                <a href="../../../politica-privacidad/politica-privacidad.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-stone-100 py-2"><i
-                        class="fa-solid fa-user-secret mr-2 ms-1"></i>Política de Privacidad</a>
-                <a href="../../../terminos-usos/terminos-usos.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-slate-100 py-2"><i
-                        class="fa-solid fa-file-signature mr-2 ms-1"></i>Términos de Uso</a>
-                <a href="../../../configuracion-cookies/cookies.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
-                        class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="../../../mapa-sitio/mapa-sitio.html"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
-                        class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
-                <div id="mobile-contacto-btn"
-                    class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-rose-100 hover:cursor-pointer py-2">
-                    <i class="fa-brands fa-whatsapp mr-2 ms-1"></i>Contacto
-                </div>
-            </div>
-
-            <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
-            </div>
-        </nav>
-    </div>
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -178,23 +62,24 @@
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Auditorías del SGSI
-                            2026</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        </h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: MC526-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 7/1/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -210,8 +95,11 @@
                             Establecer el programa de auditorías internas y externas para el <strong>Sistema de Gestión
                                 de Seguridad de la Información (SGSI)</strong> de <strong>PRODISMO SRL</strong> para el
                             año 2026, con el fin de verificar la conformidad, eficacia y mejora continua del SGSI,
-                            cumpliendo con los requisitos de la cláusula 9.2 (Auditoría interna) de <strong>ISO/IEC
-                                27001:2022</strong> y los criterios de evaluación del marco <strong>TISAX</strong>.
+                            cumpliendo con los requisitos de A.5.36 (Cumplimiento de las políticas, normas y estándares
+                            de seguridad de la información), A.8.8 (Gestión de vulnerabilidades técnicas) y A.8.34
+                            (Protección de los sistemas de información durante las pruebas de auditoría) del Anexo A de
+                            la norma <strong>ISO/IEC 27001:2022</strong> y los criterios de evaluación del marco
+                            <strong>TISAX</strong>.
                         </p>
                     </section>
 
@@ -222,7 +110,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Este plan aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Todos los procesos del SGSI incluidos en el alcance de certificación</li>
                             <li>Todos los controles del Anexo A de <strong>ISO/IEC 27001:2022</strong> implementados
                             </li>
@@ -238,7 +126,7 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Cláusula 9.2 (Auditoría interna)</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.36, A.8.8, A.8.34</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>Alcance del <strong>SGSI</strong>: MC111-IT-1 Política de Seguridad de la Información
@@ -298,7 +186,7 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.1. Criterios Generales
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Requisitos de <strong>ISO/IEC 27001:2022</strong></li>
                                     <li>Controles del Anexo A implementados según DoA</li>
                                     <li>Requisitos específicos <strong>TISAX</strong> según alcance</li>
@@ -309,7 +197,7 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.2. Enfoque Basado en
                                     Riesgos</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Alta frecuencia: Procesos/controles de alto riesgo</li>
                                     <li>Media frecuencia: Procesos/controles de riesgo medio</li>
                                     <li>Baja frecuencia: Procesos/controles de bajo riesgo</li>
@@ -322,7 +210,7 @@
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PROGRAMA DE AUDITORÍAS 2026
+                            PROGRAMA DE AUDITORÍAS
                         </h2>
 
                         <div class="space-y-6">
@@ -334,22 +222,22 @@
                                         <thead class="bg-gray-50 dark:bg-gray-800">
                                             <tr>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Sistema/Proceso Auditado</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Tipo Auditoría</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Frecuencia</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Responsable</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Fechas Planificadas</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Herramientas</th>
                                             </tr>
                                         </thead>
@@ -358,54 +246,88 @@
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión
                                                     de Riesgos</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Completa
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1:
-                                                    Mar-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    RSI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO
                                                     27005, Matriz de Riesgos</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Controles
                                                     de Acceso</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Muestreo
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semestral
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Semestral
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor
-                                                    Interno</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1:
-                                                    Feb-2026<br>Q3: Ago-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Auditor Interno</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
                                                     A.5.1-A.8.3</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión
                                                     de Incidentes</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Completa
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2:
-                                                    May-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    RSI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Procedimiento Incidentes</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Protección de Activos Críticos</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Muestreo
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     Trimestral</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Auditor
                                                     Interno</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1:
-                                                    Ene-2026<br>Q2: Abr-2026<br>Q3: Jul-2026<br>Q4: Oct-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
                                                     <strong>TISAX</strong> Prototipos
                                                 </td>
@@ -413,14 +335,23 @@
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Cumplimiento Legal</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Completa
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Externo
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Externo
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4:
-                                                    Nov-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
                                                     RGPD/LOPD</td>
                                             </tr>
@@ -437,22 +368,22 @@
                                         <thead class="bg-gray-50 dark:bg-gray-800">
                                             <tr>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Proceso</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Tipo</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Frecuencia</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Responsable</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Fechas</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Herramientas</th>
                                             </tr>
                                         </thead>
@@ -461,14 +392,23 @@
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ERP SIP
                                                     4.0</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Seguridad
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Seguridad
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Semestral
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Semestral
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditor
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Auditor
                                                     Interno</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2:
-                                                    Jun-2026<br>Q4: Dic-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
                                                     A.8.1-A.8.3</td>
                                             </tr>
@@ -477,38 +417,63 @@
                                                     Desarrollo Seguro</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Proceso
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q3:
-                                                    Sep-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    RSI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OWASP
                                                     ASVS</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Continuidad del Negocio</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completa
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Completa
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Externo
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Externo
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q2:
-                                                    May-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO 22301
                                                     Checklist</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Proveedores Críticos</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestreo
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Muestreo
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Anual
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    Anual
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4:
-                                                    Oct-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    RSI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Questionnaire <strong>TISAX</strong></td>
                                             </tr>
@@ -525,19 +490,19 @@
                                         <thead class="bg-gray-50 dark:bg-gray-800">
                                             <tr>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Auditoría</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Tipo</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Organismo</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Fechas Planificadas</th>
                                                 <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Alcance</th>
                                             </tr>
                                         </thead>
@@ -546,12 +511,18 @@
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Surveillance 1</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     Certificación</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    [Entidad
                                                     Certificadora]</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q1:
-                                                    Mar-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra
                                                     controles ISO 27001</td>
                                             </tr>
@@ -559,36 +530,53 @@
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     <strong>TISAX</strong> Assessment
                                                 </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     Evaluación / Certificación</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     [Proveedor <strong>TISAX</strong>]</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4:
-                                                    Dic-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nivel
                                                     Medio Prototipos (AL2)</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Surveillance 2</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     Certificación</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    [Entidad
                                                     Certificadora]</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q3:
-                                                    Jul-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra
                                                     controles ISO 27001</td>
                                             </tr>
                                             <tr>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Recertificación</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                     Certificación</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">[Entidad
+                                                <td
+                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                    [Entidad
                                                     Certificadora]</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Q4:
-                                                    Oct-2026</td>
+                                                <td
+                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
+                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
+                                                            title="Ver fechas"></i></a>
+                                                </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completo
                                                     ISO 27001</td>
                                             </tr>
@@ -610,7 +598,7 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:textgray-300 mb-2">7.1. Enfoque de Auditoría
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Basado en procesos: Evaluación de entradas, actividades, salidas</li>
                                     <li>Basado en evidencias: Verificación objetiva de la implementación</li>
                                     <li>Basado en riesgos: Enfoque en controles de mayor impacto</li>
@@ -620,7 +608,7 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.2. Técnicas de Auditoría
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Entrevistas con personal clave</li>
                                     <li>Revisión documental de políticas y procedimientos</li>
                                     <li>Observación de actividades in situ</li>
@@ -641,9 +629,9 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. Herramientas de
                                     Auditoría</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Checklists personalizados por dominio de control</li>
-                                    <li>Software de gestión de no conformidades</li>
+                                    <li>Planilla de gestión de no conformidades</li>
                                     <li>Plantillas de informes estandarizadas</li>
                                     <li>Sistema de seguimiento de acciones correctivas</li>
                                 </ul>
@@ -652,9 +640,9 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-grayn-900 dark:text-gray-300 mb-2">8.2. Recursos Necesarios
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Presupuesto asignado: €15,000 para auditorías externas</li>
-                                    <li>Días/hombre: 40 días para auditorías internas</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Presupuesto asignado: USD 7,000 para auditorías externas</li>
+                                    <li>Días/hombre: 30 días para auditorías internas</li>
                                     <li>Equipos: Laptops, software especializado, accesos a sistemas</li>
                                 </ul>
                             </div>
@@ -675,13 +663,13 @@
                                     <thead class="bg-gray-50 dark:bg-gray-800">
                                         <tr>
                                             <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                 Calificación</th>
                                             <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                 Descripción</th>
                                             <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                 Criterios</th>
                                         </tr>
                                     </thead>
@@ -730,19 +718,19 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.1. Reportes de Auditoría
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Informe preliminar: Dentro de 24 horas después de la auditoría</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Informe preliminar: Dentro de 48 horas después de la auditoría</li>
                                     <li>Informe final: Dentro de 5 días hábiles</li>
-                                    <li>Presentación a dirección: Reunión trimestral de revisión</li>
+                                    <li>Presentación a dirección: Reunión cuatrimestral de revisión</li>
                                 </ul>
                             </div>
 
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.2. Indicadores de
                                     Desempeño</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Porcentaje de cumplimiento: Objetivo ≥95%</li>
-                                    <li>Tiempo de cierre de NC: Objetivo ≤30 días</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Porcentaje de cumplimiento: Objetivo ≥90%</li>
+                                    <li>Tiempo de cierre de NC: Objetivo ≤45 días</li>
                                     <li>Satisfacción del auditado: Encuesta post-auditoría</li>
                                 </ul>
                             </div>
@@ -759,7 +747,7 @@
                         <div class="space-y-6">
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.1. Proceso de NC</h3>
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Identificación y registro durante la auditoría</li>
                                     <li>Análisis de causa raíz por área responsable</li>
                                     <li>Definición de acciones correctivas</li>
@@ -769,9 +757,9 @@
 
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.2. Escalación</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>NC críticas: Reporte inmediato a dirección</li>
-                                    <li>NC recurrentes: Revisión en comité de seguridad</li>
+                                    <li>NC recurrentes: Revisión Equipo de Seguridad</li>
                                     <li>NC no resueltas: Escalación a alta dirección</li>
                                 </ul>
                             </div>
@@ -789,8 +777,8 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.1. Revisiones Periódicas
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Revisión trimestral: Ajustes basados en cambios organizativos</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Revisión cuatrimestral: Ajustes basados en cambios organizativos</li>
                                     <li>Revisión anual: Elaboración del plan para el próximo año</li>
                                     <li>Revisión post-auditoría: Incorporación de lecciones aprendidas</li>
                                 </ul>
@@ -799,7 +787,7 @@
                             <div class="p-4">
                                 <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.2. Triggers de
                                     Actualización</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Cambios significativos en la organización</li>
                                     <li>Resultados de auditorías externas</li>
                                     <li>Cambios en requisitos legales o regulatorios</li>
@@ -815,7 +803,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
                             CONFIDENCIALIDAD
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Los resultados de las auditorías son información confidencial</li>
                             <li>Acceso restringido a personal autorizado</li>
                             <li>Destrucción segura de borradores y notas</li>
@@ -925,22 +913,33 @@
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
                                         <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                             Rev. N°</th>
                                         <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                             Fecha</th>
                                         <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                             Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-300 dark:text-white">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    </tr>
                                     <tr>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">0</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
-                                            del documento</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            7/1/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            general del documento</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1072,11 +1071,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
                             </div>
                         </div>
                     </div>
@@ -1087,34 +1086,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../../../images/logo01-bco.png"
-                            data-light-src="../../../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120"
-                            height="30" data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"

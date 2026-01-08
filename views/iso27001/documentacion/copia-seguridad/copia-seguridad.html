@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Política de Gestión de Red">
+<html lang="es" data-page-subtitle="Copia de Seguridad de la Información">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Política de Gestión de Red">
+    <meta name="description" content="Prodismo - Copia de Seguridad de la Información">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo.ico">
-    <title>Política de Gestión de Red - Prodismo SRL</title>
+    <title>Copia de Seguridad de la Información - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,14 +46,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <a href="../gestion-auditorias/gestion-auditorias.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Auditorías</span>
-                    </a>
                     <a href="../preparacion-continuidad-negocio/preparacion-continuidad-negocio.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Preparación de Continuidad de Negocio</span>
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Preparación de TIC para Continuidad de Negocio</span>
+                    </a>
+                    <a href="../requisitos-seguridad/requisitos-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Requisitos de Seguridad</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -61,21 +61,21 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Red de
-                            la Organización</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Copia de Seguridad
+                            de la Información</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
-                                <span>Código: MC527-IT-1</span>
+                                <span>Código: MC529-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 7/1/2026</span>
+                                <span>Última revisión: 8/1/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 0</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -96,7 +96,7 @@
                             diferentes tipos de tráfico y sistemas de información de <strong>PRODISMO SRL</strong>,
                             minimizando el riesgo de propagación de incidentes de seguridad y garantizando la
                             confidencialidad, integridad y disponibilidad de los activos críticos, en cumplimiento de
-                            los controles A.8.20 (Seguridad de las redes) y A.8.22 (Segregación de redes) del Anexo A de
+                            los controles A.8.13 (Copia de seguridad de la información) del Anexo A de
                             <strong>ISO/IEC 27001:2022</strong> y los requisitos de protección de información del
                             marco <strong>TISAX</strong>.
                         </p>
@@ -125,11 +125,10 @@
                             REFERENCIAS NORMATIVAS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.20, A.8.22</li>
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.13</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
                             <li>P527-IT-1 Procedimiento de Gestión y Segmentación de Red</li>
-                            <li>P512-IT-2 Procedimiento de Configuración de VPN</li>
                         </ul>
                     </section>
 
@@ -763,45 +762,6 @@
                                     gestión de configuración para switches, firewalls, routers]</p>
                             </div>
 
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a
-                                    href="../../procedimientos/gestion-red/proc-respuesta-incidentes-seguridad.html"
-                                    title="Procedimiento de Respuesta a Incidentes de Seguridad de Red" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-gears text-gray-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P527-IT-3
-                                    </span>
-                                    Procedimiento de Respuesta a Incidentes de Seguridad de Red
-                                    <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    gestión de respuestas a incidentes de seguridad de red]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="../../procedimientos/ciberseguridad/proc-configuracion-vpn.html"
-                                    title="Procedimiento de Configuración de VPN" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-gears text-gray-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P512-IT-2
-                                    </span>
-                                    Procedimiento de Configuración de VPN
-                                    <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    configuración de VPN]</p>
-                            </div>
-
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
@@ -826,22 +786,15 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr class="text-gray-300 dark:text-white">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            0</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
-                                    </tr>
                                     <tr>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
+                                            0</td>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            7/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
-                                            general del documento</td>
+                                            8/1/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
+                                            del documento</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -851,14 +804,14 @@
 
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mt-12">
-                    <a href="../gestion-auditorias/gestion-auditorias.html"
+                    <a href="../gestion-red/gestion-red.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Auditorías</span>
+                        <span>Anterior: Gestión de Red</span>
                     </a>
-                    <a href="../preparacion-continuidad-negocio/preparacion-continuidad-negocio.html"
+                    <a href="../requisitos-seguridad/requisitos-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Preparación de Continuidad de Negocio</span>
+                        <span>Siguiente: Requisitos de Seguridad</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -955,7 +908,7 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">MC527-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC529-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
@@ -975,11 +928,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">8/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">8/1/2027</span>
                             </div>
                         </div>
                     </div>
