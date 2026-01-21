@@ -54,7 +54,7 @@ function openFlowchartModal() {
     `;
 
     const flowchartImage = document.createElement('img');
-    flowchartImage.src = '../../../images/flow-diagrams/notificacion-reporte-registro-flowchart.png';
+    flowchartImage.src = '../../../../images/flow-diagrams/notificacion-reporte-registro-flowchart.png';
     flowchartImage.alt = 'Flujo de Notificación y Registro de Eventos de Seguridad - Vista ampliada';
     flowchartImage.style.cssText = `
         max-width: 100%;
@@ -99,8 +99,8 @@ function openFlowchartModal() {
 
     // Event listeners
     flowchartImage.addEventListener('click', applyZoom);
-    
-    closeButton.addEventListener('click', function() {
+
+    closeButton.addEventListener('click', function () {
         document.body.style.overflow = 'auto';
         modalOverlay.style.opacity = '0';
         setTimeout(() => {
@@ -110,7 +110,7 @@ function openFlowchartModal() {
         }, 300);
     });
 
-    modalOverlay.addEventListener('click', function(e) {
+    modalOverlay.addEventListener('click', function (e) {
         if (e.target === modalOverlay) {
             closeButton.click();
         }
@@ -129,7 +129,7 @@ function openFlowchartModal() {
     modalContent.appendChild(flowchartImage);
     modalContent.appendChild(imageCaption);
     modalOverlay.appendChild(modalContent);
-    
+
     // Agregar al DOM
     document.body.appendChild(modalOverlay);
     document.body.style.overflow = 'hidden';
@@ -197,7 +197,7 @@ function openFlowchartModalCompleto() {
     `;
 
     const flowchartImageCompleto = document.createElement('img');
-    flowchartImageCompleto.src = '../../../images/flow-diagrams/eventos-seguridad-diagrama-completo.png';
+    flowchartImageCompleto.src = '../../../../images/flow-diagrams/eventos-seguridad-diagrama-completo.png';
     flowchartImageCompleto.alt = 'Flujo de Eventos de Seguridad Completo - Vista ampliada';
     flowchartImageCompleto.style.cssText = `
         max-width: 100%;
@@ -246,8 +246,8 @@ function openFlowchartModalCompleto() {
 
     // Event listeners
     flowchartImageCompleto.addEventListener('click', applyZoom);
-    
-    closeButtonCompleto.addEventListener('click', function() {
+
+    closeButtonCompleto.addEventListener('click', function () {
         document.body.style.overflow = 'auto';
         modalOverlayCompleto.style.opacity = '0';
         setTimeout(() => {
@@ -257,7 +257,7 @@ function openFlowchartModalCompleto() {
         }, 300);
     });
 
-    modalOverlayCompleto.addEventListener('click', function(e) {
+    modalOverlayCompleto.addEventListener('click', function (e) {
         if (e.target === modalOverlayCompleto) {
             closeButtonCompleto.click();
         }
@@ -276,7 +276,7 @@ function openFlowchartModalCompleto() {
     modalContentCompleto.appendChild(flowchartImageCompleto);
     modalContentCompleto.appendChild(imageCaptionCompleto);
     modalOverlayCompleto.appendChild(modalContentCompleto);
-    
+
     // Agregar al DOM
     document.body.appendChild(modalOverlayCompleto);
     document.body.style.overflow = 'hidden';
@@ -302,7 +302,7 @@ function initFlowchartModal() {
         // También agregar un botón debajo de la imagen si se desea
         const buttonContainer = document.createElement('div');
         buttonContainer.style.cssText = 'text-align: center; margin-top: 10px;';
-        
+
         const openModalButton = document.createElement('button');
         openModalButton.textContent = 'Ver diagrama en tamaño completo';
         openModalButton.style.cssText = `
@@ -315,19 +315,19 @@ function initFlowchartModal() {
             font-size: 14px;
             transition: background 0.2s ease;
         `;
-        
-        openModalButton.addEventListener('mouseenter', function() {
+
+        openModalButton.addEventListener('mouseenter', function () {
             this.style.background = '#2563eb';
         });
-        
-        openModalButton.addEventListener('mouseleave', function() {
+
+        openModalButton.addEventListener('mouseleave', function () {
             this.style.background = '#3b82f6';
         });
-        
+
         openModalButton.addEventListener('click', openFlowchartModal);
-        
+
         buttonContainer.appendChild(openModalButton);
-        
+
         // Insertar el botón después de la imagen
         existingImage.parentNode.insertBefore(buttonContainer, existingImage.nextSibling);
     }
@@ -343,11 +343,11 @@ function initFlowchartModalCompleto() {
         existingImageCompleto.style.cursor = 'pointer';
         existingImageCompleto.title = 'Haz clic para ver en tamaño completo';
         existingImageCompleto.addEventListener('click', openFlowchartModalCompleto);
-        
+
         // También agregar un botón debajo de la imagen si se desea
         const buttonContainer = document.createElement('div');
         buttonContainer.style.cssText = 'text-align: center; margin-top: 10px;';
-        
+
         const openModalButton = document.createElement('button');
         openModalButton.textContent = 'Ver diagrama en tamaño completo';
         openModalButton.style.cssText = `
@@ -360,19 +360,19 @@ function initFlowchartModalCompleto() {
             font-size: 14px;
             transition: background 0.2s ease;
         `;
-        
-        openModalButton.addEventListener('mouseenter', function() {
+
+        openModalButton.addEventListener('mouseenter', function () {
             this.style.background = '#2563eb';
         });
-        
-        openModalButton.addEventListener('mouseleave', function() {
+
+        openModalButton.addEventListener('mouseleave', function () {
             this.style.background = '#3b82f6';
         });
-        
+
         openModalButton.addEventListener('click', openFlowchartModalCompleto);
-        
+
         buttonContainer.appendChild(openModalButton);
-        
+
         // Insertar el botón después de la imagen
         existingImageCompleto.parentNode.insertBefore(buttonContainer, existingImageCompleto.nextSibling);
 

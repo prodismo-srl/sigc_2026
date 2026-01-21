@@ -26,6 +26,11 @@ class HTMLModuleLoader {
             // Encontrar la raíz del proyecto
             const projectRoot = segments.slice(0, segments.indexOf('documentacion')).join('/') + '/';
             return projectRoot;
+        } else if (path.includes('/procedimientos/')) {
+            const segments = path.split('/');
+            // Encontrar la raíz del proyecto
+            const projectRoot = segments.slice(0, segments.indexOf('procedimientos')).join('/') + '/';
+            return projectRoot;
         }
 
         // Para desarrollo local o sitio en raíz

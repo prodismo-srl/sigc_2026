@@ -349,7 +349,7 @@
                 <a href="../configuracion-cookies/cookies.html"
                     class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
                         class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="../mapa-sitio/mapa-sitio.html"
+                <a href="../../sitemap.html"
                     class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
                         class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
                 <div id="mobile-contacto-btn"
@@ -359,7 +359,7 @@
             </div>
 
             <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;<span id="current-year">2025</span></p>
             </div>
         </nav>
     </div>
@@ -1150,7 +1150,7 @@
                     <i class="fas fa-shield-alt"></i>
                     <span>ISO 9001:2015</span>
                     <p class="text-gray-200 text-sm">
-                        Calidad Prodismo &copy; 2025
+                        Calidad Prodismo &copy; <span id="current-year">2026</span>
                     </p>
                     <p class="text-gray-300 text-sm">
                         Developed by Germán C. Montalbetti
@@ -1233,25 +1233,6 @@
         document.getElementById('print-btn').addEventListener('click', function () {
             window.print();
         });
-
-        // Contacto con SweetAlert2
-        // document.getElementById('contacto-btn').addEventListener('click', function () {
-        //     Swal.fire({
-        //         title: 'Contacto',
-        //         html: `
-        //             <div class="text-left">
-        //                 <p class="mb-4"><strong>Prodismo SRL</strong></p>
-        //                 <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Av. Japón 2230, Córdoba, Argentina</p>
-        //                 <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 351 1234-5678</p>
-        //                 <p class="mb-4"><i class="fas fa-envelope mr-2"></i> prodismo@prodismo.com</p>
-        //                 <p class="text-sm text-gray-600">Estaremos encantados de atenderle.</p>
-        //             </div>
-        //         `,
-        //         icon: 'info',
-        //         confirmButtonText: 'Cerrar',
-        //         confirmButtonColor: '#3b82f6'
-        //     });
-        // });
 
     </script>
 </body>

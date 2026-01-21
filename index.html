@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -113,7 +114,7 @@
                 <a href="./views/cookies/gestion-cookies.html"
                     class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-zinc-100 py-2"><i
                         class="fa-solid fa-cookie mr-2 ms-1"></i>Configuración de Cookies</a>
-                <a href="./views/mapa-sitio.html"
+                <a href="./sitemap.html"
                     class="block text-sm text-gray-600 hover:text-blue-600 hover:bg-neutral-100 py-2"><i
                         class="fa-solid fa-sitemap mr-2 ms-1"></i>Mapa del Sitio</a>
                 <div id="mobile-contacto-btn"
@@ -123,7 +124,7 @@
             </div>
 
             <div class="pt-4 border-t">
-                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;2025</p>
+                <p class="text-[10px]">Developed by Germán C. Montalbetti &copy;<span id="current-year">2026</span></p>
             </div>
         </nav>
     </div>
@@ -546,7 +547,7 @@
                     <i class="fas fa-shield-alt"></i>
                     <span>ISO 9001:2015 | 14001:2015 | 27001:2022 | 45001:2018</span>
                     <p class="text-gray-200 text-sm">
-                        Sistema de Gestión de Calidad Integrada &copy; 2025
+                        Sistema de Gestión de Calidad Integrada &copy; <span id="current-year">2025</span>
                     </p>
                     <p class="text-gray-300 text-sm">
                         Developed by Germán C. Montalbetti
