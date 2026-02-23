@@ -1,6 +1,6 @@
 
 // auth-system.js - Sistema compatible con ambos entornos
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     checkAuthStatus();
 });
 
@@ -14,7 +14,7 @@ function checkAuthStatus() {
         }
         return;
     }
-    
+
     initializeAuthSystem();
 }
 
@@ -25,7 +25,7 @@ async function initializeAuthSystem() {
             console.warn('Configuración no cargada, reintentando...');
             await new Promise(resolve => setTimeout(resolve, 100));
         }
-        
+
         if (window.CONFIG && window.CONFIG.ACCESS_CODES) {
             console.log('✅ Configuración cargada correctamente');
             console.log('🔐 Entorno:', window.CONFIG.ENV);
@@ -34,10 +34,10 @@ async function initializeAuthSystem() {
         } else {
             throw new Error('No se pudo cargar la configuración');
         }
-        
+
     } catch (error) {
         console.error('Error inicializando sistema de autenticación:', error);
-        
+
         // Fallback: mostrar modal con código de desarrollo
         window.CONFIG = {
             ACCESS_CODES: ['DEV123'],
@@ -64,7 +64,7 @@ function createAuthModal() {
         justify-content: center;
         align-items: center;
     `;
-    
+
     // Crear modal
     const modal = document.createElement('div');
     modal.id = 'auth-modal';
@@ -77,11 +77,11 @@ function createAuthModal() {
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         position: relative;
     `;
-    
+
     // Contenido del modal
     modal.innerHTML = `
         <div style="text-align: center; margin-bottom: 1.5rem;">
-            <img src="./images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
+            <img src="../../images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
             <h2 style="color: #1e40af; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
                 Acceso Restringido
             </h2>
@@ -131,23 +131,23 @@ function createAuthModal() {
             </button>
         </div>
     `;
-    
+
     // Agregar elementos al DOM
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden'; // Prevenir scroll
-    
+
     // Manejar envío del formulario
-    document.getElementById('auth-form').addEventListener('submit', function(e) {
+    document.getElementById('auth-form').addEventListener('submit', function (e) {
         e.preventDefault();
         verifyAuthCode();
     });
-    
+
     // Manejar solicitud de código
-    document.getElementById('request-code-btn').addEventListener('click', function() {
+    document.getElementById('request-code-btn').addEventListener('click', function () {
         requestAccessCode();
     });
-    
+
     // Enfocar el campo de código al cargar
     document.getElementById('auth-code').focus();
 }
@@ -159,10 +159,10 @@ function verifyAuthCode() {
     const code = codeInput.value.trim();
 
     console.log('🔐 Verificando código:', code);
-    
+
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verificando...';
     submitBtn.disabled = true;
-    
+
     setTimeout(() => {
         const isValid = window.CONFIG.ACCESS_CODES.includes(code);
         console.log('✅ Resultado verificación:', isValid);
@@ -178,7 +178,7 @@ function verifyAuthCode() {
 function handleSuccessfulAuth() {
     console.log('🎉 Autenticación exitosa');
     localStorage.setItem('prodismo_auth', 'true');
-    
+
     // Cerrar el modal inmediatamente
     const overlay = document.getElementById('auth-overlay');
     if (overlay) {
@@ -202,11 +202,11 @@ function handleFailedAuth(codeInput, submitBtn, errorDiv) {
     codeInput.style.borderColor = '#dc2626';
     codeInput.value = '';
     codeInput.focus();
-    
+
     submitBtn.innerHTML = 'Verificar Código';
     submitBtn.disabled = false;
     modalShake();
-    
+
     // Mostrar código de desarrollo en consola para debugging
     if (window.CONFIG.ENV === 'development' || window.CONFIG.ENV === 'fallback') {
         // console.log('🔍 Para desarrollo, usa uno de estos códigos:', window.CONFIG.ACCESS_CODES);
