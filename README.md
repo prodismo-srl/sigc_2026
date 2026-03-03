@@ -1,1 +1,1 @@
-Plan de capacitacion en Seguridad de la Informacion de Prodismo SRL
+Portal de normas ISO27001 de Prodismo SRL
