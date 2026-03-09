@@ -26,6 +26,7 @@ class HTMLModuleLoader {
             // Encontrar la raíz del proyecto
             const projectRoot = segments.slice(0, segments.indexOf('documentacion')).join('/') + '/';
             return projectRoot;
+
         } else if (path.includes('/procedimientos/')) {
             const segments = path.split('/');
             // Encontrar la raíz del proyecto
@@ -34,7 +35,7 @@ class HTMLModuleLoader {
         }
 
         // Para desarrollo local o sitio en raíz
-        return '/';
+        return 'sigc_2026/';
     }
 
     init() {
