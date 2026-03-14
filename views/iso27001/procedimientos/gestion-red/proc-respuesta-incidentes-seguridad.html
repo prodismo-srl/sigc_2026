@@ -52,9 +52,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Configuración de Accesos</span>
                     </a>
-                    <a href="#"
+                    <a href="../tic-continuidad/proc-tic-continuidad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Proximo Procedimiento</span>
+                        <span>Siguiente: Continuidad del Negocio</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -193,7 +193,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.1. Fase 1: Detección
                                 y Reporte</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Canales de Reporte:</p>
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mb-2">Canales de Reporte:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-6">
                                 <li>Línea directa Departamento IT:
                                     <a href="https://wa.me/5493515217958" title="Emiliano Ferrari"
@@ -231,10 +231,26 @@
                                         gmontalbetti@prodismo.com
                                     </a>
                                 </li>
+                                <li>Formulario Reporte de Incidentes:
+                                    <a href="#" target="_blank" title="F524-IT-4 Formulario Reporte de Incidente"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F524-IT-4
+                                        </span>
+                                        Formulario Reporte de Incidente
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+                                </li>
                                 <li>Jefe directo: Para empleados sin acceso directo</li>
                             </ul>
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Información Mínima de Reporte:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-semibold font-semibold dark:text-gray-300 mt-4 mb-2">
+                                Información Mínima de Reporte:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Qué ocurrió y cuándo</li>
                                 <li>Sistemas o datos afectados</li>
                                 <li>Impacto observado</li>
@@ -245,7 +261,8 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.2. Fase 2: Contención
                                 Inmediata</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Acciones por Tipo de Incidente:</p>
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mb-2">Acciones por Tipo de
+                                Incidente:</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                     <thead class="bg-gray-50 dark:bg-gray-800">
@@ -270,8 +287,8 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Desconectar
                                                 red, aislar sistemas</td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                IT / Armanet</td>
+                                                class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-700 dark:text-gray-300">
+                                                DIT / Armanet</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -280,7 +297,7 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bloquear
                                                 cuentas, cambiar credenciales</td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-700 dark:text-gray-300">
                                                 RSI</td>
                                         </tr>
                                         <tr>
@@ -290,8 +307,8 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bloquear
                                                 accesos, revisar logs</td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                CSIRT</td>
+                                                class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-700 dark:text-gray-300">
+                                                RSI</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -300,7 +317,7 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Activar
                                                 mitigación con ISP</td>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-700 dark:text-gray-300">
                                                 Armanet</td>
                                         </tr>
                                     </tbody>
@@ -311,15 +328,16 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.3. Fase 3: Análisis e
                                 Investigación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Herramientas de Análisis:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mb-2">Herramientas de Análisis:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>SIEM: Correlación de eventos y logs</li>
                                 <li>EDR: Análisis de endpoints afectados</li>
                                 <li>Network Forensics: Análisis de tráfico de red</li>
                                 <li>Memory Analysis: Análisis de volcados de memoria</li>
                             </ul>
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Evidencias a Recolectar:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mt-4 mb-2">Evidencias a Recolectar:
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Logs de sistema y aplicaciones</li>
                                 <li>Imágenes forenses de discos</li>
                                 <li>Capturas de tráfico de red</li>
@@ -330,15 +348,17 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.4. Fase 4:
                                 Erradicación y Recuperación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Procedimiento de Erradicación:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-bold dark:text-gray-300 mb-2">Procedimiento de Erradicación:
+                            </p>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Eliminar componentes maliciosos identificados</li>
                                 <li>Aplicar parches de seguridad necesarios</li>
                                 <li>Cambiar credenciales comprometidas</li>
                                 <li>Fortificar configuraciones de seguridad</li>
                             </ol>
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Procedimiento de Recuperación:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mt-4 mb-2">Procedimiento de
+                                Recuperación:</p>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Restaurar sistemas desde backups validados</li>
                                 <li>Verificar integridad de datos restaurados</li>
                                 <li>Reestablecer servicios gradualmente</li>
@@ -349,7 +369,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.5. Fase 5:
                                 Comunicación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Matriz de Comunicación:</p>
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mb-2">Matriz de Comunicación:</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                     <thead class="bg-gray-50 dark:bg-gray-800">
@@ -382,13 +402,12 @@
                                                 Inmediata</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                <1 hora</td>
+                                                Menos de 1 hora</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                <4 horas</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Reunión presencial</td>
+                                                Menos de 4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Reunión presencial o<br>Videollamada</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -396,13 +415,13 @@
                                                 Empleados</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                <2 horas</td>
+                                                Menos de 2 horas</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                <4 horas</td>
+                                                Menos de 4 horas</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                <8 horas</td>
+                                                Menos de 8 horas</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                                 Email/MS Teams</td>
@@ -449,14 +468,31 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">3.6. Fase 6: Lecciones
                                 Aprendidas</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Actividades Post-Incidente:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 font-semibold dark:text-gray-300 mb-2">Actividades Post-Incidente:
+                            </p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Reunión de lecciones aprendidas dentro de las 72 horas</li>
                                 <li>Actualización de políticas y procedimientos</li>
                                 <li>Capacitación adicional si es necesario</li>
                                 <li>Seguimiento de acciones de mejora</li>
                             </ul>
                         </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Flujo de Eventos de
+                                Seguridad:
+                            </h3>
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                                <img src="../../../../images/flow-diagrams/respuesta-incidentes.png"
+                                    alt="Diagrama de Eventos de Seguridad"
+                                    class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
+                                    id="flowchart-image">
+                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                    Diagrama de flujo de Eventos de Seguridad
+                                </p>
+                            </div>
+                        </div>
+
                     </section>
 
                     <section id="herramientas-recursos" class="mb-12 scroll-mt-20">
@@ -469,7 +505,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Kit de Respuesta a
                                 Incidentes</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Herramientas forenses: FTK Imager, Wireshark, Volatility</li>
                                 <li>Dispositivos de almacenamiento para evidencias</li>
                                 <li>Plantillas de documentación y reportes</li>
@@ -480,7 +516,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Recursos Externos
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Armanet: Soporte técnico</li>
                                 <li>Asesoría legal externa: Para incidentes con implicaciones legales</li>
                                 <li>CERT nacional: Reporte y colaboración en incidentes graves</li>
@@ -498,24 +534,60 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.1. Registros
                                 Obligatorios</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Formulario de Reporte de Incidente <a href="#"
-                                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-4
-                                        Reporte de Incidentes</a></li>
-                                <li>Registro de Acciones Tomadas <a href="#"
-                                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-2
-                                        Registro de Verificación</a></li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Formulario de Reporte de Incidente
+                                    <a href="#" target="_blank" title="F524-IT-4 Formulario Reporte de Incidente"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F524-IT-4
+                                        </span>
+                                        Reporte de Incidente
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+                                </li>
+                                <li>Registro de Acciones Tomadas
+                                    <a href="#" target="_blank" title="F524-IT-2 Registro de Verificación"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F524-IT-2
+                                        </span>
+                                        Registro de Verificación
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+                                </li>
                                 <li>Evidencias Forenses (logs, imágenes, capturas)</li>
-                                <li>Informe Final de Incidente <a href="#"
-                                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-3
-                                        Informe de Incidencias</a></li>
+                                <li>Informe Final de Incidente
+                                    <a href="#" target="_blank" title="F524-IT-2 Informe de Incidencias"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F524-IT-3
+                                        </span>
+                                        Informe de Incidencias
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.2. Retención de
                                 Documentación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Registros de incidentes TIER 1: 5 años</li>
                                 <li>Registros de incidentes TIER 2: 3 años</li>
                                 <li>Registros de incidentes TIER 3-4: 2 años</li>
@@ -535,8 +607,8 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. Programa de
                                 Simulacros</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Simulacro TIER 3: Trimestral (ejercicio de mesa)</li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Simulacro TIER 3: Cuatrimestral (ejercicio de mesa)</li>
                                 <li>Simulacro TIER 2: Semestral (ejercicio técnico limitado)</li>
                                 <li>Simulacro TIER 1: Anual (ejercicio completo con participación externa)</li>
                             </ul>
@@ -545,7 +617,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. Capacitación del
                                 CSIRT</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Formación técnica: Anual en herramientas y técnicas forenses</li>
                                 <li>Actualización normativa: Semestral en cambios legales y regulatorios</li>
                                 <li>Ejercicios de comunicación: Anual para portavoces</li>
@@ -563,7 +635,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.1. Coordinación con
                                 Armanet</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Protocolo de escalación definido en ANS</li>
                                 <li>Acceso seguro a sistemas para investigación</li>
                                 <li>Comunicaciones cifradas durante incidentes</li>
@@ -574,7 +646,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.2. Colaboración con
                                 Terceros</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Acuerdos de confidencialidad para compartir información</li>
                                 <li>Protocolos de comunicación establecidos</li>
                                 <li>Límites de responsabilidad claramente definidos</li>
@@ -592,7 +664,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.1. Notificaciones
                                 Obligatorias</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>RGPD: 72 horas para violaciones de datos personales (si aplica)</li>
                                 <li>Ley Sectorial: Notificaciones según regulación aplicable</li>
                                 <li><strong>TISAX</strong>: Reporte a ENX según acuerdo de evaluación</li>
@@ -602,7 +674,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.2. Preservación de
                                 Evidencias</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Cadena de custodia para evidencias digitales</li>
                                 <li>Conservación según requisitos legales</li>
                                 <li>Documentación de procesos forenses</li>
@@ -620,7 +692,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.1. Revisiones
                                 Periódicas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Revisión mensual: Efectividad de respuestas recientes</li>
                                 <li>Revisión trimestral: Actualización basada en threat intelligence</li>
                                 <li>Revisión anual: Evaluación completa del procedimiento</li>
@@ -630,7 +702,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.2. Indicadores de
                                 Desempeño</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>MTTD (Mean Time to Detect): Objetivo menor a 1 hora</li>
                                 <li>MTTR (Mean Time to Respond): Objetivo menor a 4 horas</li>
                                 <li>Tasa de recurrencia: Objetivo menor a 5%</li>
@@ -645,16 +717,52 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             FORMULARIOS ASOCIADOS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-4
-                                    Reporte de Incidentes</a></li>
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-2
-                                    Registro de Verificación</a></li>
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F524-IT-3
-                                    Informe Final de Incidente</a></li>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Formulario de Reporte de Incidente
+                                <a href="#" target="_blank" title="F524-IT-4 Formulario Reporte de Incidente"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F524-IT-4
+                                    </span>
+                                    Reporte de Incidente
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+                            <li>Registro de Acciones Tomadas
+                                <a href="#" target="_blank" title="F524-IT-2 Registro de Verificación"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F524-IT-2
+                                    </span>
+                                    Registro de Verificación
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+                            <li>Informe Final de Incidente
+                                <a href="#" target="_blank" title="F524-IT-2 Informe de Incidencias"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F524-IT-3
+                                    </span>
+                                    Informe de Incidencias
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
                         </ul>
                     </section>
 
@@ -715,9 +823,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Configuración de Accesos</span>
                     </a>
-                    <a href="#"
+                    <a href="../tic-continuidad/proc-tic-continuidad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Próximo Procedimiento</span>
+                        <span>Siguiente: Continuidad del Negocio</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -789,7 +897,7 @@
 
                     <!-- Related Documents -->
                     <div
-                        class="mt6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        class="mt-6 mt6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
                         <h3 class="font-semibold text-gray-900 dark:text-white mb-4"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados
@@ -798,29 +906,29 @@
                             <a href="../../documentacion/gestion-red/gestion-red.html"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC527-IT-1
                                         Política de Segmentación de Redes</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link-alt text-gray-400 text-xs"></i>
                             </a>
                             <a href="../gestion-red/proc-gestion-red.html"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P527-IT-1
                                         Procedimiento de Gestión y Segmentación de Red</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link-alt text-gray-400 text-xs"></i>
                             </a>
                             <a href="../gestion-red/proc-configuracion-accesos.html"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P527-IT-2
                                         Procedimiento de Configuración de Accesos</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link-alt text-gray-400 text-xs"></i>
                             </a>
                         </div>
                     </div>

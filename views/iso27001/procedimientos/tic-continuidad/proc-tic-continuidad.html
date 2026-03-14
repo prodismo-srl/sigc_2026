@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Procedimientos de Comunic. (TIC) para la continuidad del negocio">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Prodismo - Procedimiento de la Comunicación (TIC) para la continuidad del negocio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Comunicación (TIC) para la continuidad del negocio - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <div id="header-container" data-module="header"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../gestion-red/proc-respuesta-incidentes-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Respuesta a Incidentes de Seguridad</span>
+                    </a>
+                    <a href="../copias-seguridad/proc-copias-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Copias de Seguridad</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Continuidad
+                            del Negocio <span
+                                class="bg-green-100 text-green-800 text-sm font-medium px-3 py-2 mb-12 rounded-full"><i
+                                    class="fas fa-check"></i> NUEVA</span></h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC528-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 12/3/2026</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 0</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer un proceso estructurado para garantizar la continuidad de los servicios de
+                            <strong>Tecnologías de la Información y Comunicación (TIC)</strong> en <strong>PRODISMO
+                                SRL</strong> ante interrupciones significativas. Este procedimiento define las acciones
+                            para activar, ejecutar y coordinar las estrategias de recuperación de servicios críticos de
+                            TIC, minimizando el impacto en las operaciones del negocio y cumpliendo con los controles de
+                            <strong>ISO/IEC 27001:2022</strong> (A.5.30), así como con los requisitos de continuidad del
+                            marco <strong>TISAX</strong>.
+                        </p>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            RESPONSABLES
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">2.1 Equipo de Continuidad de TIC
+                                (Gestiona la respuesta)</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rol</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Responsabilidades</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Miembros</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-red-500">
+                                                Coordinador de Continuidad de TIC</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Declarar la activación del plan, coordinar equipos, comunicar el estado
+                                                a la Alta Dirección y RSI.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                IT Manager / RSI</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Líder Técnico de Recuperación</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Ejecutar las técnicas de recuperación (restauración de backups,
+                                                conmutación por error), coordinar con proveedores técnicos (Armanet).
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Seguridad IT / Armanet</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-blue-500">
+                                                Coordinador de Comunicaciones Internas</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Informar a los empleados sobre el estado de los servicios y las
+                                                alternativas disponibles.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                RRHH / DIT</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-blue-500">
+                                                Responsable de Enlace con Proveedores</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Gestionar la comunicación con proveedores críticos (ISP, Microsoft,
+                                                etc.) para escalar incidentes y coordinar la recuperación.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT / Compras</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="procedimiento-identificacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            IDENTIFICACIÓN Y CLASIFICACIÓN DE SERVICIOS TIC
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">3.1 Servicios TIC y Objetivos de
+                                Recuperación (basado en BIA)</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Servicio TIC</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Clasificación</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                RTO Objetivo</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                RPO Objetivo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-red-500">
+                                                ERP (SIP 4.0)</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt; 4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Redes Internas (LAN/WAN)</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                N/A (servicio de red)</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Correo Electrónico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                MS Teams</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                N/A (servicio en la nube)</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                MS Azure / SharePoint</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Servicio de Internet</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Corriente Eléctrica</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Inmediato (UPS)<br>
+                                                &lt;15 min (generador)</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                App de Viajes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-center text-orange-700 dark:text-gray-300">
+                                                Medio</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                24 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;24 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Sistema de Gestión Documental</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-center text-orange-700 dark:text-gray-300">
+                                                Medio</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                48 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;24 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Telefonía IP</td>
+                                            <td class="px-6 py-4 text-sm text-center text-blue-700 dark:text-gray-300">
+                                                Bajo</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                72 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Servidor de Archivos (Diseño 3D)</td>
+                                            <td class="px-6 py-4 text-sm text-center text-red-700 dark:text-gray-300">
+                                                Alto</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                12 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;4 horas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="procedimiento-fases-continuidad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            FASES DEL PROCEDIMIENTO DE CONTINUIDAD DE TIC
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">4.1. Fase 1: Detección y
+                                Activación</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Detección</strong>: Una interrupción o degradación grave de un servicio
+                                        crítico es detectada por monitoreo automático (ej. caída de enlace), reportada
+                                        por usuarios o notificada por un proveedor (Armanet).</li>
+                                    <li><strong>Evaluación Inicial</strong>: El Coordinador de Continuidad de TIC evalúa
+                                        el alcance, impacto y duración estimada de la interrupción.</li>
+                                    <li><strong>Decisión de Activación</strong>:
+                                        <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                            <li>
+                                                Si la interrupción de un servicio <strong
+                                                    class="text-red-900">Crítico</strong> supera el umbral de
+                                                tolerancia (ej. &lt;15 min) o se prevé que superará el RTO, se
+                                                <strong>ACTIVA</strong> el plan.
+                                            </li>
+                                            <li>
+                                                Si la interrupción es de un servicio <strong
+                                                    class="text-red-700">Alto</strong>/<strong
+                                                    class="text-orange-700">Medio</strong> y no tiene impacto en
+                                                servicios <strong class="text-red-900">Crítico</strong>, se gestiona
+                                                como un incidente de alta prioridad sin activar el plan completo,
+                                                a menos que su duración ponga en riesgo el RTO.
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">4.2. Fase 2: Ejecución de
+                                Estrategias de Continuidad</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">El Departamento de IT
+                                ejecuta las acciones predefinidas según el servicio afectado.</p>
+
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-4">Acciones por Servicio Afectado
+                            </h3>
+
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Servicio Afectado</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Acciones de Continuidad / Contingencia</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Responsable</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tiempo Objetivo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Servicio de Internet</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Conmutar automática/manualmente a enlace redundante (ISP secundario).
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT / Armanet</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;15 min</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Corriente Eléctrica</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Mantenimiento por UPS.
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Inmediato</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-red-500">
+                                                ERP (SIP 4.0)</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Activar servidor de contingencia (si existe) o iniciar restauración de
+                                                máquina virtual desde backup en sitio alternativo.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Líder Técnico / Enter Gestión</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Correo Electrónico</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Acceso vía webmail (Outlook Web App). Comunicar a usuarios. Si la falla
+                                                es del proveedor (Microsoft), esperar y monitorear su estado.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;1 hora</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                MS Teams</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Utilizar canal alternativo de comunicación: Correo electrónico +
+                                                WhatsApp para comunicaciones urgentes.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Coordinador Comunicaciones</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Inmediato</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Redes Internas (LAN/WAN)</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Reiniciar equipos de red críticos. Si es fallo de hardware, reemplazar
+                                                por equipo de repuesto (proveedor Armanet) y restaurar configuración
+                                                desde backup.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT / Armanet</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;2 horas</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Servidor de Archivos (Diseño 3D)</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Restaurar desde backup a un servidor de archivos secundario o en la nube
+                                                (Azure).</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Líder Técnico</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt;12 horas</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">4.3. Fase 3: Comunicación
+                                durante la Interrupción</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>A la Alta Dirección</strong>: Informes de estado cada 30-60 minutos por
+                                        el Coordinador de Continuidad de TIC.</li>
+                                    <li><strong>A los Empleados</strong>: Comunicados masivos vía canales alternativos
+                                        (WhatsApp, SMS) indicando el estado, servicios afectados y medidas a tomar (ej.
+                                        "Trabajar con datos locales", "Usar webmail").</li>
+                                    <li><strong>A Proveedores/Clientes Clave</strong>: El Coordinador de Comunicaciones
+                                        (o el responsable de cuenta) notifica el impacto y las alternativas de contacto,
+                                        si aplica.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">4.4. Fase 4: Retorno a la
+                                Operación Normal</h3>
+                            <div class="overflow-x-auto">
+                                <h4 class="mb-2">Una vez que la causa raíz ha sido resuelta (por IT o por el proveedor
+                                    externo):</h4>
+                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Verificar Estabilidad</strong>: Confirmar que el servicio principal
+                                        funciona correctamente y sin errores.</li>
+                                    <li><strong>Sincronizar Datos</strong>: Si se usaron sistemas alternativos, asegurar
+                                        que toda la información generada durante la contingencia se sincronice con el
+                                        sistema principal (ej. datos creados localmente se suban al servidor
+                                        restaurado).</li>
+                                    <li><strong>Desactivar Contingencias</strong>: Migrar usuarios de vuelta al servicio
+                                        principal de forma controlada.</li>
+                                    <li><strong>Comunicar el Retorno a la Normalidad</strong>: Enviar comunicación
+                                        formal a todos los interesados indicando que los servicios están plenamente
+                                        restablecidos.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">4.5. Fase 5: Lecciones
+                                Aprendidas y Cierre</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Reunión Post-Mortem</strong>: Dentro de los 10 días hábiles posteriores
+                                        a la resolución, el Equipo de Continuidad de TIC se reúne para analizar la
+                                        efectividad de la respuesta.</li>
+                                    <li><strong>Documentación de Hallazgos</strong>: Registrar qué funcionó, qué no
+                                        funcionó y por qué. Incluir tiempos reales de recuperación (RTA - Recovery Time
+                                        Actual).</li>
+                                    <li><strong>Plan de Acción</strong>: Generar tareas de mejora (actualizar
+                                        documentación, cambiar proveedor, comprar repuestos, ajustar configuraciones) y
+                                        asignar responsables y fechas.</li>
+                                    <li><strong>Actualización de Planes</strong>: Incorporar las lecciones aprendidas en
+                                        el Plan de Continuidad de TIC y en el BIA si es necesario.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+
+
+                    </section>
+
+                    <section id="procedimiento-recursos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RECURSOS PARA LA CONTINUIDAD
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.1. Infraestructura de
+                                Contingencia</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Enlace de Internet Redundante</strong>: ISP secundario con conexión de
+                                        fibra o 4G LTE de respaldo.</li>
+                                    <li><strong>Copias de Seguridad (Backups)</strong>:
+                                        <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                            <li>
+                                                <strong>Ubicación</strong>: Fuera de la sede principal (físico/nube).
+                                            </li>
+                                            <li>
+                                                <strong>Protección</strong>: Inmutables (para proteger contra
+                                                ransomware).
+                                            </li>
+                                            <li>
+                                                <strong>Pruebas</strong>: Restauración completa de un servicio crítico,
+                                                al menos semestral.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong>Hardware de Repuesto</strong>: Switches, routers, servidores (o
+                                        capacidad en nube) críticos disponibles.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.2. Kit de Documentación de
+                                Continuidad</h3>
+
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Enlace de Internet Redundante</strong>: ISP secundario con conexión de
+                                        fibra o 4G LTE de respaldo.</li>
+                                    <li><strong>Copias de Seguridad (Backups)</strong>:
+                                        <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                            <li>
+                                                <strong>Ubicación</strong>: Fuera de la sede principal (físico/nube).
+                                            </li>
+                                            <li>
+                                                <strong>Protección</strong>: Inmutables (para proteger contra
+                                                ransomware).
+                                            </li>
+                                            <li>
+                                                <strong>Pruebas</strong>: Restauración completa de un servicio crítico,
+                                                al menos semestral.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><strong>Hardware de Repuesto</strong>: Switches, routers, servidores (o
+                                        capacidad en nube) críticos disponibles.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            REGISTROS Y DOCUMENTACIÓN
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.1. Registros Obligatorios</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Formulario de Activación de Continuidad</strong>: Documento que registra
+                                        la hora, motivo y servicios afectados.
+                                        <a href="#" target="_blank"
+                                            title="F528-IT-1 Formulario Activación de Continuidad"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                            <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F528-IT-1
+                                            </span>
+                                            Formulario Activación de Continuidad
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
+                                    <li><strong>Registro de Acciones de Recuperación</strong>: Bitácora detallada de las
+                                        acciones tomadas durante la contingencia (relacionado con F524-IT-2).<br>
+                                        <a href="#" target="_blank" title="F528-IT-2 Registro Acciones de Recuperación"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                            <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F528-IT-2
+                                            </span>
+                                            Registro Acciones de Recuperación
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
+                                    <li><strong>Informe Final de Incidente de Continuidad</strong>: Documento que
+                                        resume el incidente, la respuesta, tiempos y lecciones aprendidas (relacionado
+                                        con F524-IT-3).</li>
+                                    <a href="#" target="_blank"
+                                        title="F528-IT-3 Informe Final de Incidente de Continuidad"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F528-IT-3
+                                        </span>
+                                        Informe Final de Incidente de Continuidad
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+                                    <li><strong>Resultados de Pruebas y Simulacros</strong>: Ver Anexo C.</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.2. Retención de Documentación
+                            </h3>
+
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Informes de activación e informes finales</strong>: 3 años.</li>
+                                    <li><strong>Registros de pruebas y simulacros</strong>: 2 años.</li>
+                                    <li><strong>Evidencias de la recuperación (logs, capturas)</strong>: Hasta el cierre
+                                        del informe final.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section id="pruebas-simulacros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            PRUEBAS Y SIMULACROS
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.1. Programa de Simulacros de
+                                Continuidad de TIC</h3>
+                            <div class="overflow-x-auto">
+                                <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Simulacro Cuatrimestral</strong>: Ejercicio de mesa para un servicio de
+                                        clasificación <strong class="text-orange-700">Medio</strong> (ej. App de Viajes,
+                                        Servidor de Archivos).</li>
+                                    <li><strong>Simulacro Semestral</strong>: Prueba técnica de restauración de un
+                                        servicio <strong class="text-red-900">Crítico</strong> en el entorno de
+                                        contingencia (ej. restauración completa de una máquina virtual de ERP desde
+                                        backup inmutable).
+                                    </li>
+                                    <li><strong>Simulacro Anual</strong>: Ejercicio integral que incluya la activación
+                                        completa del plan, con participación de todos los roles y coordinación con un
+                                        proveedor externo (ej. simulacro de pérdida total del centro de datos principal
+                                        y conmutación a la nube).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
+                        </h2>
+                        <div class="space-y-4">
+
+                            <!-- Anexo A -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="#" target="_blank" title="Plantilla de SLA para proveedores críticos"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-contract text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        PL-001
+                                    </span>
+                                    Plantilla de SLA para proveedores críticos
+                                    <i
+                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Plantilla estandarizada para acuerdos
+                                    de nivel de servicio]</p>
+                            </div>
+
+                            <!-- Anexo B -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="#" target="_blank" title="Registro de pruebas de recuperación" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-clipboard-check text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        REG-001
+                                    </span>
+                                    Registro de pruebas de recuperación
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario para documentar resultados
+                                    de pruebas de recuperación]</p>
+                            </div>
+
+                            <!-- Anexo C -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="#" target="_blank" title="Listado de servicios críticos y RTO/RPO"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-server text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        LIST-001
+                                    </span>
+                                    Listado de servicios críticos y RTO/RPO
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Inventario de servicios críticos con
+                                    tiempos de recuperación definidos]</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="mb-6">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Revisión anual y después de cada incidente mayor.</li>
+                            </ul>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Rev. N°</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            0</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            12/3/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                            del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../gestion-red/proc-respuesta-incidentes-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Respuesta Incidentes de Seguridad</span>
+                    </a>
+                    <a href="../copias-seguridad/proc-copias-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Copias de Seguridad</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETIVO</a>
+                            <a href="#responsables"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                RESPONSABLES</a>
+                            <a href="#procedimiento-identificacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                IDENTIFICACIÓN Y CLASIFICACIÓN DE SERVICIOS TIC</a>
+                            <a href="#procedimiento-fases-continuidad"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                FASES DEL PROCEDIMIENTO DE CONTINUIDAD DE TIC</a>
+                            <a href="#procedimiento-recursos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RECURSOS PARA LA CONTINUIDAD</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REGISTROS Y DOCUMENTACIÓN</a>
+                            <a href="#pruebas-simulacros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                PRUEBAS Y SIMULACROS</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                ANEXOS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4"><i
+                                class="fas fa-bolt mr-2 text-primary-600"></i> Acciones Rápidas</h3>
+                        <div class="space-y-3">
+                            <button id="report-incident"
+                                class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Related Documents -->
+                    <div
+                        class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4"><i
+                                class="fas fa-paperclip mr-2 text-primary-600"></i>
+                            Recursos Relacionados
+                        </h3>
+                        <div class="space-y-3">
+                            <a href="#"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-contract text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">PL-001
+                                        Plantilla de SLA para proveedores críticos</span>
+                                </div>
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">REG-001
+                                        Registro de pruebas de recuperación</span>
+                                </div>
+                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">LIST-001
+                                        Listado de servicios críticos y RTO/RPO</span>
+                                </div>
+                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC528-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/3/2026</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/3/2027</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+    <!-- <script type="text/javascript"
+        src="../../../../js/procedimientos/flowChart/openFlowChart-respuesta-malware.js"></script> -->
+
+</body>
+
+</html>
