@@ -81,7 +81,7 @@ function createAuthModal() {
     // Contenido del modal
     modal.innerHTML = `
         <div style="text-align: center; margin-bottom: 1.5rem;">
-            <img src="../../images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
+            <img src="../../../../images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
             <h2 style="color: #1e40af; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
                 Acceso Restringido
             </h2>

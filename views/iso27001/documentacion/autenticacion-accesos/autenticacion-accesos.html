@@ -14,9 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -127,10 +127,10 @@
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.15, A.8.5</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Política de Gestión de Medios de Identificación MC411-IT-1</li>
-                            <li>Procedimiento de Autenticación y Control de Accesos P412-IT-1</li>
-                            <li>Formulario de Solicitud de Acceso F412-IT-1</li>
-                            <li>Matriz de Roles y Permisos M412-IT-1</li>
+                            <li>Política de Gestión de Medios de Identificación <strong>MC411-IT-1</strong></li>
+                            <li>Procedimiento de Autenticación y Control de Accesos <strong>P412-IT-1</strong></li>
+                            <li>Formulario de Solicitud de Acceso <strong>F412-IT-1</strong></li>
+                            <li>Matriz de Roles y Permisos <strong>M412-IT-1</strong></li>
                         </ul>
                     </section>
 
@@ -263,7 +263,7 @@
                                                     src="../../../../images/iso27001/MS-Authenticator.png"
                                                     class="inline p-1 m-1 border-2 border-gray-200 rounded-lg"
                                                     alt="Auth0" width="150" height="70"></td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">180 días</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">90 días</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -276,19 +276,20 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                App Gastos</td>
+                                                App Viajes</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Usuario/contraseña + Autenticación <img
                                                     src="../../../../images/iso27001/Silver_Auth0.jpg"
                                                     class="inline p-1 m-1 border-2 border-gray-200 rounded-lg"
                                                     alt="Auth0" width="80" height="40"></td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">365 días</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">90 días</td>
                                         </tr>
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Redes Internas</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">LDAP</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Usuario/contraseña</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">-</td>
                                         </tr>
                                     </tbody>
@@ -337,14 +338,15 @@
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Altas</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Solicitud
-                                                mediante F412-IT-1 con aprobación del jefe de departamento</td>
+                                                mediante <strong>F412-IT-1</strong> con aprobación del jefe de
+                                                departamento</td>
                                         </tr>
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                 Bajas</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Desactivación
-                                                en menos de 24 horas (automatizado vía Active Directory)</td>
+                                                en menos de 24 horas (autorizado por RRHH)</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -369,9 +371,9 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.3. Segregación de Funciones
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Los permisos deben asignarse según el principio de menor privilegio.</li>
-                                <li>Revisión semestral de la Matriz de Roles y Permisos M412-IT-1.</li>
+                                <li>Revisión semestral de la Matriz de Roles y Permisos <strong>M412-IT-1</strong>.</li>
                             </ul>
                         </div>
                     </section>
@@ -386,8 +388,8 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.1. Registros Obligatorios
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>F412-IT-1: Formulario de Solicitud de Acceso.</li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>F412-IT-1</strong>: Formulario de Solicitud de Acceso.</li>
                                 <li>Registro de autenticaciones: Logs de acceso exitoso y fallido.</li>
                                 <li>Registro de cambios de permisos: Historial de modificaciones.</li>
                             </ul>
@@ -440,12 +442,12 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             MONITOREO Y CUMPLIMIENTO
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Auditorías trimestrales de los controles de acceso.</li>
                             <li>Revisión mensual de logs de autenticación por parte del RSI.</li>
                             <li>Indicadores de desempeño:
-                                <ul class="list-circle pl-6 mt-2">
-                                    <li>Tiempo de desactivación de cuentas: Objetivo < 24 horas</li>
+                                <ul class="list-circle pl-6 mt-2 space-y-3">
+                                    <li>Tiempo de desactivación de cuentas: Objetivo &lt;24 horas</li>
                                     <li>Porcentaje de cuentas con MFA implementado: Objetivo 100%</li>
                                 </ul>
                             </li>
@@ -506,12 +508,11 @@
 
                         <!-- Anexo A -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                            Anexo A: <a href="#" target="_blank"
-                                title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                            Anexo A: <a href="https://forms.office.com/r/Ua3CSAPeu8" target="_blank"
+                                title="F412-IT-1 Formulario de Solicitud de Acceso Críticos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                <i class="fas fa-file-word text-blue-500"></i>
+                                <i class="fas fa-file-alt text-blue-500 mr-2"></i>
                                 <span
                                     class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                     F412-IT-1
@@ -570,16 +571,17 @@
 
                         <!-- Anexo D -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                            Anexo D: <a href="../../procedimientos/gestion-identidad/proc-gestion-identidad.html"
-                                title="Procedimiento de Autenticación y Control de Accesos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                            Anexo D: <a
+                                href="../../procedimientos/gestion-identidad/proc-servicios-sistemas-aplicaciones.html"
+                                title="Procedimiento de Protección del Acceso a Servicios de IT" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                 <i class="fas fa-gears text-gray-500"></i>
                                 <span
                                     class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                    P412-IT-1
+                                    P412-IT-2
                                 </span>
-                                Procedimiento de Autenticación y Control de Accesos
+                                Procedimiento de Protección del Acceso a Servicios de IT
                                 <i
                                     class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                             </a>
