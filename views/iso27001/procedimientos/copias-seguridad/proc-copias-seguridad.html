@@ -89,131 +89,404 @@
 
                     <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-red-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
-                            TO BE DONE
+                            OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer el proceso para responder de manera eficaz y ordenada ante incidentes de
-                            <strong>malware</strong>, minimizando el impacto en las operaciones y garantizando la
-                            recuperación de sistemas, en cumplimiento con <strong>ISO/IEC 27001:2022</strong>,
-                            <strong>TISAX</strong> y clientes automotrices.
+                            Establecer un proceso estructurado para la realización, protección, almacenamiento y
+                            recuperación de las copias de seguridad de la información, el software y los sistemas de
+                            PRODISMO SRL. Este procedimiento define las acciones para garantizar la disponibilidad y
+                            recuperabilidad de los datos críticos ante pérdida, corrupción o desastre, cumpliendo con el
+                            control A.8.13 (Copia de seguridad de la información) de <strong>ISO/IEC 27001:2022</strong>
+                            y los requisitos
+                            de continuidad del marco <strong>TISAX</strong>.
                         </p>
                     </section>
 
-                    <section id="alcance" class="mb-12 scroll-mt-20">
+                    <section id="responsables" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            ALCANCE
+                            RESPONSABLES
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Aplica a todos los incidentes confirmados o sospechosos de <strong>malware</strong> en
-                            sistemas críticos (SIP 4.0, app interna, redes industriales).
-                        </p>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-3">2.1 Equipo de Gestión de Copias
+                                de Seguridad</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rol</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Responsabilidades</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Miembros</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-red-500">
+                                                Supervisor de Copias de Seguridad
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Supervisar la ejecución diaria de los backups, revisar logs de error,
+                                                gestionar la capacidad de almacenamiento y coordinar las pruebas de
+                                                recuperación.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                IT Manager / RSI</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
+                                                Administrador de Infraestructura</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Configurar y mantener las herramientas de backup (software y hardware),
+                                                gestionar las librerías de discos, y administrar los backups en
+                                                la nube (Ej. Azure Backup).
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT / Proveedores</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-blue-500">
+                                                Responsable de Seguridad de la Información (RSI)</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Revisar la política y el procedimiento de backups, validar el
+                                                cumplimiento de RPO/RTO, y auditar la efectividad de las pruebas de
+                                                recuperación.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                RSI</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-blue-500">
+                                                Líder de Recuperación</td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                Ejecutar los procedimientos de restauración de datos durante un
+                                                incidente de pérdida de información o desastre.</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                DIT</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </section>
 
-                    <section id="procedimiento-respuesta" class="mb-12 scroll-mt-20">
+                    <section id="clasificacion-sistemas" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            PROCEDIMIENTO DE RESPUESTA
+                            CLASIFICACIÓN DE SISTEMAS Y DATOS
+                        </h2>
+
+                        <div class="p-4">
+                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-3">3.1. Estrategias de Respaldo por
+                                Nivel de Criticidad (basado en BIA) de Seguridad</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Calsificación</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                RTO</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                RPO</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Frecuencia</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tipo de Backup</th>
+                                            <th
+                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Ejemplo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-center text-red-900 dark:text-white dark:bg-red-500">
+                                                Crítico
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                &lt; 30 min</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt; 4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Cada 4-6 horas (o continua)</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Completo semanal + Incrementales diarios + Logs de transacciones</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                ERP (SIP 4.0), BBDD Clientes, Servidor de Archivos (Diseño 3D)</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-center text-red-600 dark:text-white dark:bg-red-500">
+                                                Alto
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                &lt; 4 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                12-24 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Diaria</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Completo semanal + Incrementales diarios</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                App de Viajes, SharePoint (documentación crítica), Correo Electrónico
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-center text-orange-600 dark:text-white dark:bg-red-500">
+                                                Medio
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                &lt; 24 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                24-48 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Diaria</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Completo semanal + Incrementales diarios</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Sistemas de Gestión Documental, Telefonía IP (configuración)
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-semibold text-center text-blue-600 dark:text-white dark:bg-red-500">
+                                                Bajo
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
+                                                &lt; 48 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                &lt; 72 horas</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Diaria</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Completo semanal</td>
+                                            <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
+                                                Estaciones de trabajo (datos de usuario en perfil de red)
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="gestion-copias-seguridad" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            PROCESO DE GESTIÓN DE COPIAS DE SEGURIDAD
                         </h2>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.1</span>
-                                Detección y Reporte
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.1</span>
+                                Fase 1: Programación y Ejecución
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Detección:</strong> Monitorización vía EDR, reportes de usuarios.</li>
-                                <li><strong>Reporte Inmediato:</strong> Notificar al ERT vía <a
-                                        href="mailto:itprodismo@prodismo.com"
-                                        class="bg-gray-200 text-primary-600 dark:text-primary-400 p-2 m-1 rounded-md cursor-pointer">itprodismo@prodismo.com</a>
-                                    o sistema de ticket interno STI <br><a
-                                        href="https://teams.microsoft.com/l/entity/30cce21b-497f-43de-a892-94b2c8036a51/_djb2_msteams_prefix_707472330?context=%7B%22channelId%22%3A%2219%3ADCAVBsM1XdnXfHbwvMPcP2cwywEpDYR1_yRnDZ6dLd41%40thread.tacv2%22%7D&tenantId=48f8f875-b75a-4037-a9d8-15d6bbd7c5f9"
-                                        class="bg-gray-200 text-primary-600 dark:text-primary-400 p-2 m-1 rounded-md cursor-pointer">MS
-                                        Teams STI</a></li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Planificación:</strong> El Supervisor de Copias de Seguridad define y
+                                    configura las tareas automáticas de backup en la herramienta corporativa (ej.
+                                    Azure Backup, Acronis) según la estrategia definida en el punto 5.1.</li>
+                                <li><strong>Ejecución Automática:</strong> Las copias se ejecutan según la ventana de
+                                    backup programada (generalmente en horario de baja actividad). Se prioriza la no
+                                    afectación del rendimiento de los sistemas productivos.</li>
+                                <li><strong>Verificación Automática:</strong> La herramienta de backup debe generar
+                                    informes de éxito/fallo. Se configurarán alertas automáticas para notificar fallos
+                                    al Departamento de IT.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.2</span>
-                                Contención Inmediata
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.2</span>
+                                Fase 2: Protección y Almacenamiento
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Aislamiento:</strong> Desconectar equipo de red (físicamente o vía VLAN).
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Principio 3-2-1:</strong>
+                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                        <li>
+                                            3 copias de los datos (1 dato principal + 2 copias de seguridad).
+                                        </li>
+                                        <li>
+                                            2 medios de almacenamiento diferentes (ej. disco local/ SAN + nube/cinta).
+                                        </li>
+                                        <li>
+                                            1 copia fuera de la sede principal (offsite/inmutable en la nube).
+                                        </li>
+                                    </ol>
                                 </li>
-                                <li><strong>Bloqueo:</strong> Deshabilitar cuentas comprometidas.</li>
+                                <li><strong>Ubicación Remota Segura:</strong> Al menos una copia de los sistemas
+                                    críticos debe almacenarse en una ubicación geográficamente separada (ej. nube
+                                    pública Azure, o centro de datos alterno de Armanet).</li>
+                                <li><strong>Cifrado:</strong> Todas las copias de seguridad que contengan información
+                                    confidencial o personal (datos de clientes, RRHH, propiedad intelectual) deben ser
+                                    cifradas, tanto en tránsito como en reposo.</li>
+                                <li><strong>Inmutabilidad:</strong> Los backups de sistemas <strong
+                                        class="text-red-800">Críticos</strong> y <strong
+                                        class="text-red-500">Altos</strong> deben configurarse como <b>"inmutables"</b>
+                                    durante su período de retención para protegerlos contra ransomware.</li>
+                                <li><strong>Control de Acceso:</strong> El acceso a los repositorios de backups debe
+                                    estar estrictamente limitado al personal autorizado del DIT y el proveedor
+                                    designado (Ej. Armanet, Enter GEstión), utilizando autenticación fuerte (MFA).</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.3</span>
-                                Análisis e Investigación
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.3</span>
+                                Fase 3: Retención y Rotación
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Identificación:</strong> Determinar tipo de <strong>malware</strong>
-                                    (ransomware, spyware).</li>
-                                <li><strong>Impacto:</strong> Evaluar sistemas afectados y datos comprometidos.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                                <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.4</span>
-                                Erradicación
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Eliminación:</strong> Remover <strong>malware</strong> usando herramientas
-                                    especializadas.</li>
-                                <li><strong>Restauración:</strong> Recuperar sistemas desde backups.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                                <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.5</span>
-                                Recuperación
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Reconexión:</strong> Reintegrar sistemas a la red tras verificación.</li>
-                                <li><strong>Monitorización:</strong> Vigilar comportamientos anómalos post-recuperación.
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Períodos de retención:</strong>
+                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                        <li>
+                                            Backups Diarios/Incrementales: 2 semanas.
+                                        </li>
+                                        <li>
+                                            Backups Semanales: 2 meses.
+                                        </li>
+                                        <li>
+                                            Backups Mensuales: 1 año.
+                                        </li>
+                                        <li>
+                                            Backups Anuales: 5 años (o según requisitos legales específicos).
+                                        </li>
+                                    </ol>
                                 </li>
+                                <li><strong>Política de Rotación:</strong> Se seguirá el esquema <strong>GFS</strong>
+                                    (Grandfather-Father-Son) para gestionar la rotación de cintas o el ciclo de vida de
+                                    los snapshots en disco/nube, asegurando la disponibilidad de puntos de recuperación
+                                    históricos sin un crecimiento infinito del almacenamiento.</li>
+                                <li><strong>Eliminación Segura:</strong> Al finalizar el período de retención, los
+                                    soportes que contengan información confidencial deberán ser destruidos de forma
+                                    segura o, en el caso de archivos digitales, sobrescritos y eliminados de manera que
+                                    no puedan ser recuperados.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="proceso-recuperacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            PROCESO DE RECUPERACIÓN DE DATOS
+                        </h2>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">5.1</span>
+                                Fase 1: Solicitud y Autorización
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Recepción de Solicitud:</strong> El Supervisor de Copias de Seguridad define
+                                    y
+                                    configura las tareas automáticas de backup en la herramienta corporativa (ej.
+                                    Azure Backup, Acronis) según la estrategia definida en el punto 5.1.</li>
+                                <li><strong>Validación:</strong> Las copias se ejecutan según la ventana de
+                                    backup programada (generalmente en horario de baja actividad). Se prioriza la no
+                                    afectación del rendimiento de los sistemas productivos.</li>
+                                <li><strong>Registro:</strong> La herramienta de backup debe generar
+                                    informes de éxito/fallo. Se configurarán alertas automáticas para notificar fallos
+                                    al Departamento de IT.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.6</span>
-                                Comunicación
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.2</span>
+                                Fase 2: Protección y Almacenamiento
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Interna:</strong> Notificar a dirección y áreas afectadas.</li>
-                                <li><strong>Externa:</strong> Reportar a clientes/reguladores si hay fuga de datos
-                                    (según ley aplicable).</li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Principio 3-2-1:</strong>
+                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                        <li>
+                                            3 copias de los datos (1 dato principal + 2 copias de seguridad).
+                                        </li>
+                                        <li>
+                                            2 medios de almacenamiento diferentes (ej. disco local/ SAN + nube/cinta).
+                                        </li>
+                                        <li>
+                                            1 copia fuera de la sede principal (offsite/inmutable en la nube).
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><strong>Ubicación Remota Segura:</strong> Al menos una copia de los sistemas
+                                    críticos debe almacenarse en una ubicación geográficamente separada (ej. nube
+                                    pública Azure, o centro de datos alterno de Armanet).</li>
+                                <li><strong>Cifrado:</strong> Todas las copias de seguridad que contengan información
+                                    confidencial o personal (datos de clientes, RRHH, propiedad intelectual) deben ser
+                                    cifradas, tanto en tránsito como en reposo.</li>
+                                <li><strong>Inmutabilidad:</strong> Los backups de sistemas <strong
+                                        class="text-red-800">Críticos</strong> y <strong
+                                        class="text-red-500">Altos</strong> deben configurarse como <b>"inmutables"</b>
+                                    durante su período de retención para protegerlos contra ransomware.</li>
+                                <li><strong>Control de Acceso:</strong> El acceso a los repositorios de backups debe
+                                    estar estrictamente limitado al personal autorizado del DIT y el proveedor
+                                    designado (Ej. Armanet, Enter GEstión), utilizando autenticación fuerte (MFA).</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">3.7</span>
-                                Lecciones Aprendidas
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.3</span>
+                                Fase 3: Retención y Rotación
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li><strong>Revisión Post-Incidente:</strong> Identificar causas raíz y mejorar
-                                    controles.</li>
-                                <li><strong>Actualización:</strong> Refinar procedimientos y capacitaciones.</li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Períodos de retención:</strong>
+                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                        <li>
+                                            Backups Diarios/Incrementales: 2 semanas.
+                                        </li>
+                                        <li>
+                                            Backups Semanales: 2 meses.
+                                        </li>
+                                        <li>
+                                            Backups Mensuales: 1 año.
+                                        </li>
+                                        <li>
+                                            Backups Anuales: 5 años (o según requisitos legales específicos).
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li><strong>Política de Rotación:</strong> Se seguirá el esquema <strong>GFS</strong>
+                                    (Grandfather-Father-Son) para gestionar la rotación de cintas o el ciclo de vida de
+                                    los snapshots en disco/nube, asegurando la disponibilidad de puntos de recuperación
+                                    históricos sin un crecimiento infinito del almacenamiento.</li>
+                                <li><strong>Eliminación Segura:</strong> Al finalizar el período de retención, los
+                                    soportes que contengan información confidencial deberán ser destruidos de forma
+                                    segura o, en el caso de archivos digitales, sobrescritos y eliminados de manera que
+                                    no puedan ser recuperados.</li>
                             </ul>
                         </div>
                     </section>
@@ -265,7 +538,7 @@
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="mb-6">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Revisión anual y después de cada incidente mayor.</li>
                             </ul>
                         </div>
@@ -329,17 +602,32 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#alcance"
+                            <a href="#responsables"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                ALCANCE</a>
-                            <a href="#procedimiento-respuesta"
+                                RESPONSABLES</a>
+                            <a href="#clasificacion-sistemas"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                PROCEDIMIENTO DE RESPUESTA</a>
-                            <a href="#registros"
+                                CLASIFICACIÓN SISTEMAS Y DATOS</a>
+                            <a href="#gestion-copias-seguridad"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                PROCESO DE GESTIÓN DE COPIAS DE SEGURIDAD</a>
+                            <a href="#proceso-recuperacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                PROCESO DE RECUPERACIÓN DE DATOS</a>
+                            <a href="#"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                PROCESO</a>
+                            <a href="#"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                PROCESO</a>
+                            <a href="#"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                PROCESO</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 REGISTROS</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
