@@ -52,9 +52,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Continuidad del Negocio</span>
                     </a>
-                    <a href="../gestion-entorno/proc-gestion-entorno.html"
+                    <a href="../sistemas-requisitos-desarrollo/proc-ciclo-vida-sistemas.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Gestión del Entorno</span>
+                        <span>Siguiente: Ciclo de Vida de Sistemas IT</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -97,7 +97,8 @@
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                             Establecer un proceso estructurado para la realización, protección, almacenamiento y
                             recuperación de las copias de seguridad de la información, el software y los sistemas de
-                            PRODISMO SRL. Este procedimiento define las acciones para garantizar la disponibilidad y
+                            <strong>PRODISMO SRL</strong>. Este procedimiento define las acciones para garantizar la
+                            disponibilidad y
                             recuperabilidad de los datos críticos ante pérdida, corrupción o desastre, cumpliendo con el
                             control A.8.13 (Copia de seguridad de la información) de <strong>ISO/IEC 27001:2022</strong>
                             y los requisitos
@@ -149,9 +150,8 @@
                                                 class="px-6 py-4 text-sm font-semibold text-left text-gray-900 dark:text-white dark:bg-yellow-500">
                                                 Administrador de Infraestructura</td>
                                             <td class="px-6 py-4 text-sm text-left text-gray-700 dark:text-gray-300">
-                                                Configurar y mantener las herramientas de backup (software y hardware),
-                                                gestionar las librerías de discos, y administrar los backups en
-                                                la nube (Ej. Azure Backup).
+                                                Configurar y mantener las herramientas de backup (software y hardware)
+                                                y administrar los backups en la nube (Ej. Azure Backup).
                                             </td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 DIT / Proveedores</td>
@@ -229,11 +229,11 @@
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 &lt; 4 horas</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Cada 4-6 horas (o continua)</td>
+                                                Diario</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Completo semanal + Incrementales diarios + Logs de transacciones</td>
+                                                Completo + Incrementales diarios</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                ERP (SIP 4.0), BBDD Clientes, Servidor de Archivos (Diseño 3D)</td>
+                                                Servidor de Archivos (Diseño 3D)</td>
                                         </tr>
 
                                         <tr>
@@ -246,11 +246,11 @@
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 12-24 horas</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Diaria</td>
+                                                Diario</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 Completo semanal + Incrementales diarios</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                App de Viajes, SharePoint (documentación crítica), Correo Electrónico
+                                                SharePoint (documentación crítica), Correo Electrónico
                                             </td>
                                         </tr>
 
@@ -264,11 +264,11 @@
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 24-48 horas</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Diaria</td>
+                                                Semanal</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Completo semanal + Incrementales diarios</td>
+                                                Completo semanal</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Sistemas de Gestión Documental, Telefonía IP (configuración)
+                                                App Viajes
                                             </td>
                                         </tr>
 
@@ -282,14 +282,14 @@
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
                                                 &lt; 72 horas</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Diaria</td>
+                                                Mensual</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Completo semanal</td>
+                                                Completo mensual</td>
                                             <td class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                Estaciones de trabajo (datos de usuario en perfil de red)
+                                                Sistemas de Gestión Documental, Estaciones de trabajo (datos de usuario
+                                                en perfil de red)
                                             </td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -329,19 +329,6 @@
                                 Fase 2: Protección y Almacenamiento
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Principio 3-2-1:</strong>
-                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                        <li>
-                                            3 copias de los datos (1 dato principal + 2 copias de seguridad).
-                                        </li>
-                                        <li>
-                                            2 medios de almacenamiento diferentes (ej. disco local/ SAN + nube/cinta).
-                                        </li>
-                                        <li>
-                                            1 copia fuera de la sede principal (offsite/inmutable en la nube).
-                                        </li>
-                                    </ol>
-                                </li>
                                 <li><strong>Ubicación Remota Segura:</strong> Al menos una copia de los sistemas
                                     críticos debe almacenarse en una ubicación geográficamente separada (ej. nube
                                     pública Azure, o centro de datos alterno de Armanet).</li>
@@ -354,7 +341,7 @@
                                     durante su período de retención para protegerlos contra ransomware.</li>
                                 <li><strong>Control de Acceso:</strong> El acceso a los repositorios de backups debe
                                     estar estrictamente limitado al personal autorizado del DIT y el proveedor
-                                    designado (Ej. Armanet, Enter GEstión), utilizando autenticación fuerte (MFA).</li>
+                                    designado (Ej. Armanet, Enter Gestión), utilizando autenticación (MFA).</li>
                             </ul>
                         </div>
 
@@ -374,16 +361,17 @@
                                             Backups Semanales: 2 meses.
                                         </li>
                                         <li>
-                                            Backups Mensuales: 1 año.
+                                            Backups Mensuales: 6 meses.
                                         </li>
                                         <li>
-                                            Backups Anuales: 5 años (o según requisitos legales específicos).
+                                            Backups Anuales: 1 año (o según requisitos legales específicos).
                                         </li>
                                     </ol>
                                 </li>
                                 <li><strong>Política de Rotación:</strong> Se seguirá el esquema <strong>GFS</strong>
-                                    (Grandfather-Father-Son) para gestionar la rotación de cintas o el ciclo de vida de
-                                    los snapshots en disco/nube, asegurando la disponibilidad de puntos de recuperación
+                                    (Grandfather-Father-Son) para gestionar el ciclo de vida de los snapshots en
+                                    disco/nube,
+                                    asegurando la disponibilidad de puntos de recuperación
                                     históricos sin un crecimiento infinito del almacenamiento.</li>
                                 <li><strong>Eliminación Segura:</strong> Al finalizar el período de retención, los
                                     soportes que contengan información confidencial deberán ser destruidos de forma
@@ -407,86 +395,143 @@
                                 Fase 1: Solicitud y Autorización
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Recepción de Solicitud:</strong> El Supervisor de Copias de Seguridad define
-                                    y
-                                    configura las tareas automáticas de backup en la herramienta corporativa (ej.
-                                    Azure Backup, Acronis) según la estrategia definida en el punto 5.1.</li>
-                                <li><strong>Validación:</strong> Las copias se ejecutan según la ventana de
-                                    backup programada (generalmente en horario de baja actividad). Se prioriza la no
-                                    afectación del rendimiento de los sistemas productivos.</li>
-                                <li><strong>Registro:</strong> La herramienta de backup debe generar
-                                    informes de éxito/fallo. Se configurarán alertas automáticas para notificar fallos
-                                    al Departamento de IT.</li>
+                                <li><strong>Recepción de Solicitud:</strong> El usuario, o el responsable del sistema,
+                                    reporta la necesidad de restaurar datos (pérdida accidental, corrupción de archivo,
+                                    etc.) mediante el sistema de tickets.</li>
+                                <li><strong>Validación:</strong> El Departamento de IT verifica la solicitud.</li>
+                                <li><strong>Solicitud a proveedor:</strong>
+                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                        <li>
+                                            Para la recuperación de archivos o carpetas
+                                            borradas accidentalmente del Servidor de Diseños y documentación (diserver),
+                                            se
+                                            utiliza la siguiente plantilla de mail a<br>
+
+                                            <a href="https://apps.powerapps.com/play/e/default-48f8f875-b75a-4037-a9d8-15d6bbd7c5f9/a/fce0c9bd-9de6-4890-b9ad-5d4f8e05b93f?tenantId=48f8f875-b75a-4037-a9d8-15d6bbd7c5f9&hint=0bdd9fd3-167c-40ea-ac48-d4e5868adbad&source=sharebutton&sourcetime=1774450447568"
+                                                target="_blank" title="Mail Recuperación carpeta/archivo"
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                                <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                                                abonados@armanet.zendesk.com
+                                            </a>
+
+                                            <div class="bg-gray-100 p-4 rounded-md m-4">
+                                                Estimados buenos días/tardes.<br>
+                                                Precisamos recuperar una carpeta/archivo. <br>
+                                                Ruta: \\diserver\<strong>*Ruta completa del archivo*</strong> <br>
+                                                Fecha aproximada de la última vez que se abrió/creó. <br>
+                                                Saludos.
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            Para la recuperación de registros del Sistema SIP/SIP4.0, se
+                                            envía al mail
+
+                                            <a href="https://apps.powerapps.com/play/e/default-48f8f875-b75a-4037-a9d8-15d6bbd7c5f9/a/fce0c9bd-9de6-4890-b9ad-5d4f8e05b93f?tenantId=48f8f875-b75a-4037-a9d8-15d6bbd7c5f9&hint=0bdd9fd3-167c-40ea-ac48-d4e5868adbad&source=sharebutton&sourcetime=1774450447568"
+                                                target="_blank" title="Mail Recuperación registros SIP/SIP4.0"
+                                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                                <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                                                soporte.entergestion@gmail.com
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><strong>Registro:</strong> Se crea un registro formal de la solicitud de
+                                    recuperación.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.2</span>
-                                Fase 2: Protección y Almacenamiento
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">5.2</span>
+                                Fase 2: Ejecución de la Recuperación
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Principio 3-2-1:</strong>
-                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                        <li>
-                                            3 copias de los datos (1 dato principal + 2 copias de seguridad).
-                                        </li>
-                                        <li>
-                                            2 medios de almacenamiento diferentes (ej. disco local/ SAN + nube/cinta).
-                                        </li>
-                                        <li>
-                                            1 copia fuera de la sede principal (offsite/inmutable en la nube).
-                                        </li>
-                                    </ol>
+                                <li><strong>Identificación del Backup:</strong> Localizar el conjunto de backups
+                                    (fecha/hora) que contienen los datos a restaurar, cumpliendo con el RPO requerido.
                                 </li>
-                                <li><strong>Ubicación Remota Segura:</strong> Al menos una copia de los sistemas
-                                    críticos debe almacenarse en una ubicación geográficamente separada (ej. nube
-                                    pública Azure, o centro de datos alterno de Armanet).</li>
-                                <li><strong>Cifrado:</strong> Todas las copias de seguridad que contengan información
-                                    confidencial o personal (datos de clientes, RRHH, propiedad intelectual) deben ser
-                                    cifradas, tanto en tránsito como en reposo.</li>
-                                <li><strong>Inmutabilidad:</strong> Los backups de sistemas <strong
-                                        class="text-red-800">Críticos</strong> y <strong
-                                        class="text-red-500">Altos</strong> deben configurarse como <b>"inmutables"</b>
-                                    durante su período de retención para protegerlos contra ransomware.</li>
-                                <li><strong>Control de Acceso:</strong> El acceso a los repositorios de backups debe
-                                    estar estrictamente limitado al personal autorizado del DIT y el proveedor
-                                    designado (Ej. Armanet, Enter GEstión), utilizando autenticación fuerte (MFA).</li>
+                                <li><strong>Selección de Método:</strong> Elegir el tipo de restauración
+                                    (archivo/carpeta individual, base de datos completa, etc.).</li>
+
+                                <li><strong>Restauración en Producción:</strong> Ejecutar la restauración de los datos
+                                    en la ubicación de destino.</li>
+
+                                <li><strong>Verificación de Integridad:</strong> El solicitante y el equipo de IT deben
+                                    verificar que los datos restaurados son legibles, completos y funcionales.</li>
+
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">4.3</span>
-                                Fase 3: Retención y Rotación
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">5.3</span>
+                                Fase 3: Cierre y Documentación
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Períodos de retención:</strong>
-                                    <ol class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                        <li>
-                                            Backups Diarios/Incrementales: 2 semanas.
-                                        </li>
-                                        <li>
-                                            Backups Semanales: 2 meses.
-                                        </li>
-                                        <li>
-                                            Backups Mensuales: 1 año.
-                                        </li>
-                                        <li>
-                                            Backups Anuales: 5 años (o según requisitos legales específicos).
-                                        </li>
-                                    </ol>
+                                <li><strong>Documentación:</strong> Registrar la acción en el Registro de Acciones de
+                                    Recuperación (relacionado con F524-IT-2), incluyendo fecha, hora, sistema,
+                                    responsable, motivo y resultado.</li>
+
+                                <li><strong>Cierre del Ticket:</strong> Actualizar el ticket de solicitud y notificar al
+                                    usuario final.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="pruebas-recuperacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            PRUEBAS DE RECUPERACIÓN
+                        </h2>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">6.1</span>
+                                Programa de Pruebas
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Pruebas Mensuales:</strong> Restauración de archivos/carpetas individuales
+                                    de sistemas <strong class="text-red-700">Críticos</strong> para verificar la
+                                    integridad de los datos.</li>
+                                <li><strong>Pruebas Trimestrales:</strong> Restauración completa de una máquina virtual
+                                    o base de datos de un sistema <strong class="text-red-500">Alto</strong> en un
+                                    entorno de pruebas aislado.</li>
+                                <li><strong>Pruebas Semestrales:</strong>Prueba de recuperación completa de un sistema
+                                    <strong class="text-red-700">Críticos</strong> (ej. ERP) en un entorno de
+                                    contingencia, simulando la pérdida total del
+                                    sistema productivo.
                                 </li>
-                                <li><strong>Política de Rotación:</strong> Se seguirá el esquema <strong>GFS</strong>
-                                    (Grandfather-Father-Son) para gestionar la rotación de cintas o el ciclo de vida de
-                                    los snapshots en disco/nube, asegurando la disponibilidad de puntos de recuperación
-                                    históricos sin un crecimiento infinito del almacenamiento.</li>
-                                <li><strong>Eliminación Segura:</strong> Al finalizar el período de retención, los
-                                    soportes que contengan información confidencial deberán ser destruidos de forma
-                                    segura o, en el caso de archivos digitales, sobrescritos y eliminados de manera que
-                                    no puedan ser recuperados.</li>
+                                <li><strong>Pruebas Anuales:</strong> Ejercicio integral que incluya la recuperación de
+                                    múltiples sistemas.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">6.2</span>
+                                Documentación de Pruebas
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Cada prueba deberá documentarse en el <strong>Anexo C</strong> (Resultados de
+                                    Pruebas de Recuperación), incluyendo:
+                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Sistema probado y fecha</li>
+                                        <li>Tipo de prueba (archivo, VM, BBDD).</li>
+                                        <li>RPO y RTO objetivo vs. real.</li>
+                                        <li>Resultados y desviaciones.</li>
+                                        <li>Lecciones aprendidas y acciones de mejora.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -494,36 +539,90 @@
                     <section id="registros" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            REGISTROS
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REGISTROS Y DOCUMENTACIÓN
+                        </h2>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">7.1</span>
+                                Registros Obligatorios
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Logs de Ejecución de Backups:</strong> Histórico de todas las tareas de
+                                    backup, disponible en la herramienta.</li>
+                                <li><strong>Anexo B:</strong> Registro de Copias de Seguridad y Retención: Inventario de
+                                    los conjuntos de backups y su período de retención.</li>
+                                <li><strong>Anexo C:</strong> Plantilla de Resultados de Pruebas de Recuperación:
+                                    Documentación de las pruebas realizadas.</li>
+                                <li><strong>Solicitudes de Restauración:</strong> Tickets o formularios que justifican
+                                    la recuperación de datos.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">7.2</span>
+                                Retención de Documentación
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Logs de ejecución y resultados de pruebas:</strong> 2 años.</li>
+                                <li><strong>Registro de solicitudes de restauración:</strong> 1 año.</li>
+                                <li><strong>Evidencias de pruebas de recuperación:</strong> Hasta la siguiente prueba
+                                    exitosa del mismo sistema.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            ANEXOS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
 
-                            <li><a href="#" target="_blank" title="F523-IT-1 Registro de Acciones Tomadas"
+                            <li><a href="#" target="_blank" title="F523-IT-1 ????"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                 group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
                                     <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F523-IT-1
+                                        P529-IT-1
                                     </span>
-                                    Registro de Acciones Tomadas
+                                    Anexo B
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                             </li>
 
-                            <li><a href="#" target="_blank" title="F523-IT-2 Informe Post-Incidente"
+                            <li><a href="#" target="_blank" title="F529-IT-2 ?????"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                 group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
                                     <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F523-IT-2
+                                        F529-IT-2
                                     </span>
-                                    Informe Post-Incidente
+                                    Anexo C
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+
+                            <li><a href="#" target="_blank" title="F529-IT-3 ?????"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F529-IT-3
+                                    </span>
+                                    Anexo D
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
@@ -534,12 +633,13 @@
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="mb-6">
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Revisión anual y después de cada incidente mayor.</li>
+                                <li>• Revisión anual y después de cada cambio significativo en la infraestructura, tras
+                                    una falla crítica de backup o después de una recuperación mayor.</li>
                             </ul>
                         </div>
                         <div class="overflow-x-auto">
@@ -581,9 +681,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Continuidad del Negocio</span>
                     </a>
-                    <a href="../gestion-entorno/proc-gestion-entorno.html"
+                    <a href="../sistemas-requisitos-desarrollo/proc-ciclo-vida-sistemas.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Gestión del Entorno</span>
+                        <span>Siguiente: Ciclo de Vida de Sistemas IT</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -614,20 +714,17 @@
                             <a href="#proceso-recuperacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 PROCESO DE RECUPERACIÓN DE DATOS</a>
-                            <a href="#"
+                            <a href="#pruebas-recuperacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PROCESO</a>
-                            <a href="#"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                PROCESO</a>
-                            <a href="#"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                PROCESO</a>
+                                PRUEBAS DE RECUPERACIÓN</a>
                             <a href="#registros"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
-                                REGISTROS</a>
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REGISTROS Y DOCUMENTACIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                ANEXOS</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
