@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -30,73 +29,15 @@
 
     <!-- Cargar sistema de módulos defer -->
     <script src="../../../../js/modules.js" defer></script>
-
-
 </head>
 
 <body
     class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../../index.html">
-                            <img src="../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
+    <div id="header-container" data-module="header"></div>
 
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Evaluación de
-                                Proveedores de Servicios IT</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -128,15 +69,15 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 31/3/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -165,8 +106,8 @@
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                             Este procedimiento aplica a:
                         </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Adquisición de software comercial, soluciones SaaS, PaaS, IaaS y hardware.</li>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Adquisición de software comercial, soluciones SaaS y hardware.</li>
                             <li>Contratación de servicios de IT externalizados (hosting, soporte, desarrollo a medida,
                                 etc.).</li>
                             <li>Todo personal interno involucrado en la selección, contratación o gestión de proveedores
@@ -182,7 +123,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             DEFINICIONES
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><span class="font-medium">SLA (Acuerdo de Nivel de Servicio):</span> Contrato que define
                                 los niveles de servicio esperados.</li>
                             <li><span class="font-medium">MFA (Autenticación Multifactor):</span> Método de control de
@@ -204,10 +145,10 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Fase de
                                 Preselección y Evaluación Inicial</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><span class="font-medium">Verificación de Certificaciones:</span> El proveedor debe
                                     contar con certificaciones de seguridad reconocidas (ISO 27001, SOC 2,
-                                    <strong>TISAX</strong>, etc.) o demostrar compliance mediante cuestionarios o
+                                    <strong>TISAX</strong>, etc.) o demostrar cumplimiento mediante cuestionarios o
                                     informes de auditoría.
                                 </li>
                                 <li><span class="font-medium">Evaluación de Criterios Mínimos:</span> Utilizar la <a
@@ -228,10 +169,10 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Fase de Pruebas
                                 Técnicas (cuando aplique)</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><span class="font-medium">Pruebas de Seguridad:</span> Para software o servicios
-                                    web, se realizarán pruebas de vulnerabilidades utilizando herramientas como OWASP
-                                    ZAP.</li>
+                                    web, se realizarán pruebas de vulnerabilidades utilizando herramientas como <strong>OWASP
+                                    ZAP</strong>.</li>
                                 <li><span class="font-medium">Validación de Funcionalidades de Seguridad:</span>
                                     Confirmar soporte para MFA, gestión de identidades, logs de seguridad, etc.</li>
                             </ul>
@@ -240,7 +181,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.3. Fase de Revisión
                                 Contractual</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><span class="font-medium">Cláusulas de Cumplimiento:</span> Incluir en el contrato
                                     cláusulas que exijan el cumplimiento de <strong>TISAX</strong> y de la Política de
                                     Seguridad de <strong>PRODISMO SRL</strong>.</li>
@@ -256,11 +197,11 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.4. Fase de Decisión y
                                 Aprobación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><span class="font-medium">Puntuación:</span> Asignar una puntuación total basada en
-                                    la <a href="#"
-                                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Matriz
-                                        F531-IT-2</a>.</li>
+                                    la <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M531-IT-2%20Matriz%20de%20Evaluaci%C3%B3n%20de%20Proveedores%20IT.xlsx?d=w0479404274e647b8a96ee8fa418f681f&csf=1&web=1&e=BQ3hQe"
+                                        class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">M531-IT-2 Matriz de Evaluación de proveedores de Servicios IT
+                                        </a>.</li>
                                 <li><span class="font-medium">Aprobación:</span> Se requerirá una puntuación mínima de
                                     80/100 para proceder con la contratación.</li>
                                 <li><span class="font-medium">Documentación:</span> El informe de evaluación y la matriz
@@ -275,17 +216,53 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             DOCUMENTOS Y REGISTROS ASOCIADOS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F531-IT-2:
-                                    Matriz de Evaluación de Proveedores de Servicios IT</a>.</li>
-                            <li><a href="../sistemas-ciclo-vida/proc-ciclo-vida-sistemas.html"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">P531-IT-1:
-                                    Procedimiento de Evaluación de Seguridad en Sistemas</a>.</li>
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">MC531-IT-1:
-                                    Política de Requisitos de Seguridad de Sistemas IT</a>.</li>
-                            <li>Contratos y Adendas con cláusulas de seguridad.</li>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><a href="../../documentacion/requisitos-seguridad/requisitos-seguridad.html" target="_blank"
+                                    title="MC531-IT-1 Política de Requisitos de Seguridad de Sistemas IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-book text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC531-IT-1
+                                    </span>
+                                    Política de Requisitos de Seguridad de Sistemas IT
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+                            <li><a href="../sistemas-ciclo-vida/proc-ciclo-vida-sistemas.html" target="_blank"
+                                    title="P531-IT-1 Procedimiento de Evaluación de Seguridad en Sistemas"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-gears text-gray-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P531-IT-1
+                                    </span>
+                                    Procedimiento de Evaluación de Seguridad en Sistemas IT
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+                            <li><a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M531-IT-2%20Matriz%20de%20Evaluaci%C3%B3n%20de%20Proveedores%20IT.xlsx?d=w0479404274e647b8a96ee8fa418f681f&csf=1&web=1&e=BQ3hQe" target="_blank"
+                                    title="M531-IT-2 Matriz de Evaluación de Proveedores de Servicios IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-excel text-green-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        M531-IT-2
+                                    </span>
+                                    Matriz de Evaluación de Proveedores de Servicios IT
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+                            <li>Contratos con cláusulas de seguridad.</li>
                         </ul>
                     </section>
 
@@ -295,16 +272,35 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
                             FORMATOS Y HERRAMIENTAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Matriz
-                                    de Evaluación de Proveedores F531-IT-2</a> (ver ejemplo tabular en Anexo A).</li>
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Checklist
-                                    de Criterios de Seguridad F531-IT-3</a> (opcional, para desglose detallado).</li>
-                            <li><a href="https://www.zaproxy.org/download/"
-                                    class="bg-gray-200 p-1 rounded-lg text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Descarga
-                                    OWASP ZAP</a>: Herramienta de escaneo OWASP ZAP.</li>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M531-IT-2%20Matriz%20de%20Evaluaci%C3%B3n%20de%20Proveedores%20IT.xlsx?d=w0479404274e647b8a96ee8fa418f681f&csf=1&web=1&e=BQ3hQe" target="_blank"
+                                    title="M531-IT-2 Matriz de Evaluación de Proveedores de Servicios IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fas fa-file-excel text-green-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        M531-IT-2
+                                    </span>
+                                    Matriz de Evaluación de Proveedores de Servicios IT
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a> (ver ejemplo en Anexo A).</li>
+                            <li><a href="https://www.zaproxy.org/download/" target="_blank"
+                                    title="Link de Descarga software OWASP ZAP"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                    <i class="fa-solid fa-bolt-lightning text-blue-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F531-IT-2
+                                    </span>
+                                    OWASP ZAP
+                                    <i
+                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a> Herramienta de escaneo OWASP ZAP.</li>
                         </ul>
                     </section>
 
@@ -314,10 +310,9 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
                             REGISTROS Y RETENCIÓN
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">Matriz
-                                    de Evaluación F531-IT-2</a>: Retención de 3 años después de la finalización del
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M531-IT-2%20Matriz%20de%20Evaluaci%C3%B3n%20de%20Proveedores%20IT.xlsx?d=w0479404274e647b8a96ee8fa418f681f&csf=1&web=1&e=BQ3hQe"
+                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">M531-IT-2 Matriz de Evaluación de proveedores de Servicios IT</a>: Retención de 3 años después de la finalización del
                                 contrato.</li>
                             <li>Informes de pruebas técnicas: Retención de 3 años.</li>
                             <li>Contratos: Retención según política de gestión documental de la organización.</li>
@@ -516,7 +511,7 @@
                             class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Instrucciones de Uso:
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Asignar una puntuación de 0 a 10 por cada criterio, donde 10 es cumplimiento total y
                                     0 es incumplimiento.</li>
                                 <li>El proveedor debe alcanzar al menos un 80% de la puntuación total para ser
@@ -553,14 +548,24 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                             0</td>
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
                                             25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
+                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            31/3/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
                                             del documento</td>
                                     </tr>
                                 </tbody>
@@ -627,7 +632,8 @@
                     <!-- Quick Actions -->
                     <div
                         class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Acciones Rápidas</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i> Acciones Rápidas</h3>
                         <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
@@ -686,7 +692,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -702,11 +708,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">31/3/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">31/3/2027</span>
                             </div>
                         </div>
                     </div>
@@ -716,33 +722,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../images/logo01-bco.png" data-light-src="../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../images/logo01-bco.png" alt="Logo Prodismo" width="120" height="30"
-                            data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
