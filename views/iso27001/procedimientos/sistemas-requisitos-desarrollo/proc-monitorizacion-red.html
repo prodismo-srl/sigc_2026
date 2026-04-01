@@ -297,13 +297,15 @@
 
                         <div class="space-y-4">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">1. Clasificación de
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">1. Clasificación de
                                     Alertas:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Toda alerta generada debe ser clasificada
-                                    según su criticidad (<i class="fa-solid fa-volcano mr-2" style="color: rgb(140, 7, 7);"></i>Crítica, 
-                                    <i class="fa-solid fa-circle-exclamation mr-2" style="color: rgb(210, 121, 19);"></i>Alta, 
-                                    <i class="fa-solid fa-triangle-exclamation mr-2" style="color: rgb(210, 189, 19);"></i>Media, 
-                                    <i class="fa-solid fa-circle-info mr-2" style="color: rgb(12, 92, 156);"></i>Baja).</p>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 my-3 ml-2">
+                                    <p>Toda alerta generada debe ser clasificada según su criticidad:</p>
+                                    <li class="ml-2"><i class="fa-solid fa-volcano mr-2" style="color: rgb(140, 7, 7);"></i><strong class="text-red-700">Crítica</strong>: Alertas que pueden afectar la seguridad de la red o la confidencialidad de los datos.</li>
+                                    <li class="ml-2"><i class="fa-solid fa-circle-exclamation mr-2" style="color: rgb(210, 121, 19);"></i><strong class="text-orange-700">Alta</strong>: Alertas que pueden afectar la operación normal de la red o la confiabilidad de los servicios.</li>
+                                    <li class="ml-2"><i class="fa-solid fa-triangle-exclamation mr-2" style="color: rgb(210, 189, 19);"></i><strong class="text-yellow-500">Media</strong>: Alertas que pueden afectar la operación normal de la red o la confiabilidad de los servicios.</li>
+                                    <li class="ml-2"><i class="fa-solid fa-circle-info mr-2" style="color: rgb(12, 92, 156);"></i><strong class="text-blue-700">Baja</strong>: Alertas que no pueden afectar la operación normal de la red o la confiabilidad de los servicios.</li>
+                                </ul>
                             </div>
 
                             <div>
@@ -391,11 +393,11 @@
                         </div>
                     </section>
 
-                    <section id="herramientas-recomendaciones" class="mb-12 scroll-mt-20">
+                    <section id="herramientas" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            HERRAMIENTAS Y RECOMENDACIONES
+                            HERRAMIENTAS
                         </h2>
 
                         <div class="mb-6">
@@ -686,13 +688,13 @@
                                 ACTIVIDADES DE MONITORIZACIÓN</a>
                             <a href="#gestion-alertas-incidentes"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                GESTIÓN DE ALERTAS E INCIDENTES</a>
+                                GESTIÓN ALERTAS E INCIDENTES</a>
                             <a href="#flujo-procedimiento"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
                                 FLUJO DEL PROCEDIMIENTO</a>
-                            <a href="#herramientas-recomendaciones"
+                            <a href="#herramientas"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                HERRAMIENTAS Y RECOMENDACIONES</a>
+                                HERRAMIENTAS</a>
                             <a href="#registros-evidencias"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 REGISTROS Y EVIDENCIAS</a>
