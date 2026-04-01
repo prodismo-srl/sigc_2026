@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Procedimiento de Monitorización de Red">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Procedimiento de Monitorización">
+    <meta name="description" content="Prodismo - Procedimiento de Monitorización de Red">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
     <title>Procedimiento de Monitorización de Red - Prodismo SRL</title>
@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -30,6 +29,48 @@
 
     <!-- Cargar sistema de módulos defer -->
     <script src="../../../../js/modules.js" defer></script>
+
+    <!-- Personalización de Tailwind para extender transiciones y sombras -->
+    <style>
+        /* Transiciones suaves para el efecto zoom y enfoque */
+        .gallery-img {
+            transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.3s ease;
+            will-change: transform;
+            transform-origin: center center;
+        }
+        /* Al hacer zoom, la imagen crece y gana sombra para destacar */
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.2);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            z-index: 5;
+        }
+        /* Contenedor de la imagen con overflow visible para que el zoom salga del recuadro sin recortes */
+        .img-wrapper {
+            overflow: visible;
+        }
+        /* Mejora para la legibilidad de la descripción cuando la imagen ampliada queda detrás */
+        .desc-text {
+            position: relative;
+            background-color: inherit;
+            z-index: 10;
+            backdrop-filter: none;
+            transition: background 0.2s;
+        }
+        /* Para mantener contraste en modo oscuro/claro */
+        .gallery-card {
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .gallery-card:hover {
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.2);
+        }
+        /* Aseguramos que la imagen tenga un fondo por si falla carga */
+        .gallery-img {
+            background-color: #f3f4f6;
+        }
+        .dark .gallery-img {
+            background-color: #1f2937;
+        }
+    </style>
 
 </head>
 
@@ -64,7 +105,7 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de
                             Monitorización de Red</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div id="metadata" class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: P532-IT-1</span>
@@ -270,7 +311,7 @@
                                 </h3>
                                 <p class="text-gray-700 dark:text-gray-300">El administrador de red investiga la alerta
                                     utilizando: </p>
-                                    <a href="#" target="_blank"
+                                    <a href="https://forms.office.com/r/sHdY6Gp0Fe" target="_blank"
                                         title="F532-IT-5 Formulario de Revisión de Alertas de Seguridad"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                             border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -383,6 +424,117 @@
                                     </div>
                                 </li>
                             </ul>
+
+                            <!-- Título de la galería (opcional pero contextual) -->
+                            <div class="text-center md:text-left mb-4 mt-6">
+                                <h5 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white tracking-tight">7.2. Ejemplos Dashborads de Herramientas</h5>
+                                <p class="text-gray-600 dark:text-gray-300 mt-2 text-base">Galería de métricas, mapas y estado de equipos.</p>
+                            </div>
+
+                            <!-- Contenedor principal grande que cumple "contenedor grande" para las imágenes -->
+                            <div class="bg-gray-50 dark:bg-gray-900 font-sans antialiased max-w-7xl mx-auto px-2 sm:px-3 lg:px-5 py-3 md:py-5">
+
+                                <!-- Galería responsiva con grid de Tailwind: 1 columna en móvil, 2 en tablet, 3 en escritorio -->
+                                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-10 list-none p-0 m-0">
+                                    <!-- Elemento 1: Estado de servidores y alertas por equipo -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_1.png"
+                                                alt="Estado de servidores y alertas por equipo - Monitorización de red"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Estado de servers y alertas por equipo</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Visibilidad de métricas críticas y estado de cada servidor</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 2: Tráfico de red -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_2.png"
+                                                alt="Tráfico de red - Análisis de ancho de banda y paquetes"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Tráfico de red</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Volumen de datos, picos de uso y análisis de rendimiento</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 3: Espacio de los discos (almacenamiento) -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_3.png"
+                                                alt="Espacio de discos y almacenamiento - Uso y alertas"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Espacio de los discos</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Capacidad ocupada, tendencias y umbrales críticos</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 4: Mapa de la red (automatizado), switches y máquinas conectadas -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_4.png"
+                                                alt="Mapa de red automatizado: switches y equipos conectados"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Mapa de la red</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Topología completa generada dinámicamente (automatizado por script)</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 5: Mapa, tiempo encendido, alertas bocas, velocidades de transferencia y enlace -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_5.png"
+                                                alt="Mapa detallado: uptime, velocidades de enlace 10/100/1000, alertas de puertos"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Mapa, tiempo encendido, alertas de bocas, velocidades de transferencia y enlace (10 100 1000)</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Análisis de interfaces, estado y rendimiento por puerto</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 6: Edificio 1, separado por oficinas -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_6.png"
+                                                alt="Edificio 1 segmentado por oficinas - infraestructura de red"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Edificio 1, separado por oficinas</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Distribución por áreas, conectividad y dispositivos por sector</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Elemento 7: Edificio 1, separado por oficinas -->
+                                    <li class="gallery-card bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all duration-300 flex flex-col h-full">
+                                        <div class="img-wrapper p-2 pb-1 flex justify-center items-center bg-gray-100 dark:bg-gray-900/40">
+                                            <img src="../../../../images/monitorizacion-red/monitor_red_7.png"
+                                                alt="Wazuh: Análisis de malware, registros y vulnerabilidades"
+                                                class="gallery-img w-full h-64 md:h-72 object-contain rounded-xl cursor-pointer"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="desc-text p-5 pt-3 bg-white dark:bg-gray-800 rounded-b-2xl flex-1">
+                                            <p class="text-base md:text-lg font-medium text-gray-800 dark:text-gray-100">Wazuh</p>
+                                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Análisis de malware, registros y vulnerabilidades</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>                        
                         </div>
                     </section>
 
@@ -395,7 +547,7 @@
 
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>
-                                <a href="#" target="_blank"
+                                <a href="https://forms.office.com/r/4ciWQrtUN0" target="_blank"
                                     title="F532-IT-4 Checklist de Monitorización de Red"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -411,7 +563,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank"
+                                <a href="https://forms.office.com/r/sHdY6Gp0Fe" target="_blank"
                                     title="F532-IT-5 Formulario de Revisión de Alertas de Seguridad"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -654,6 +806,22 @@
     <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
     <script type="text/javascript"
         src="../../../../js/procedimientos/flowChart/openFlowChart-monitorizacion-red.js"></script>
+
+    <!-- Script para garantizar que las imágenes tengan un soporte robusto
+        y que en dispositivos táctiles el zoom también sea notorio -->
+    <script>
+        (function() {
+            const images = document.querySelectorAll('.gallery-img');
+            images.forEach(img => {
+                img.addEventListener('error', function(e) {
+                    this.style.objectFit = 'contain';
+                    this.style.backgroundColor = '#2d3748';
+                    this.alt = this.alt + ' (imagen no encontrada)';
+                    this.classList.add('bg-gray-300', 'dark:bg-gray-700');
+                });
+            });
+        })();
+    </script>
 
 </body>
 
