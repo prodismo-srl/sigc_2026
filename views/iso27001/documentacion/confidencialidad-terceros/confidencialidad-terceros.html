@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Política de Confidencialidad de la Información Intercambiada con Terceros">
+<html lang="es" data-page-subtitle="Confidencialidad de Información Intercambiada con Terceros">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -134,11 +133,10 @@
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.14, A.6.6</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>P612-IT-1 Procedimiento de Confidencialidad con Terceros</li>
-                            <li>F612-IT-1 Formulario de Clasificación de Información a Compartir</li>
-                            <li>F612-IT-2 Plantilla de Acuerdo de Confidencialidad Específico</li>
-                            <li>F612-IT-3 Checklist de Verificación de Transmisión Segura</li>
-                            <li>F612-IT-4 Registro de Información Compartida con Terceros</li>
+                            <li><strong>P612-IT-1</strong> Procedimiento de Confidencialidad con Terceros</li>
+                            <li><strong>F612-IT-1</strong> Formulario de Clasificación de Información a Compartir</li>
+                            <li><strong>F612-IT-2</strong> Plantilla de Acuerdo de Confidencialidad Específico</li>
+                            <li><strong>F612-IT-3</strong> Registro de Información Compartida con Terceros</li>
                         </ul>
                     </section>
 
@@ -240,7 +238,8 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">6.1. Clasificación de
                                     Información</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Completar F612-IT-1 antes de cualquier intercambio.</li>
+                                    <li>Verificar y/o Completar <strong>F612-IT-1</strong> antes de cualquier
+                                        intercambio.</li>
                                     <li>Categorías de clasificación:</li>
                                     <ul class="list-disc pl-8 mt-2 space-y-2">
                                         <li><strong class="text-green-900 dark:text-green-300">Pública</strong>:
@@ -279,12 +278,12 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.1. Requisitos de
                                     Acuerdos</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Firmar F612-IT-2 antes de transmitir información <strong
-                                            class="text-red-900 dark:text-red-300">confidencial</strong>.</li>
+                                    <li>Firmar <strong>F612-IT-2</strong> antes de transmitir información <strong
+                                            class="text-red-900 dark:text-red-300">Confidencial</strong>.</li>
                                     <li>Acuerdo debe incluir:</li>
                                     <ul class="list-disc pl-8 mt-2 space-y-2">
                                         <li>Definición clara de información <strong
-                                                class="text-red-900 dark:text-red-300">confidencial</strong></li>
+                                                class="text-red-900 dark:text-red-300">Confidencial</strong></li>
                                         <li>Obligaciones de protección</li>
                                         <li>Período de vigencia</li>
                                         <li>Sanciones por incumplimiento</li>
@@ -311,26 +310,33 @@
                                         <tbody
                                             class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                             <tr>
-                                                <td class="px-6 py-4 text-sm text-green-700 dark:text-green-300">Pública
+                                                <td
+                                                    class="px-6 py-4 font-semibold text-sm text-green-700 dark:text-green-300">
+                                                    PÚBLICA
                                                 </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Ninguno
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 text-sm text-blue-700 dark:text-blue-300">Interna
+                                                <td
+                                                    class="px-6 py-4 font-semibold text-sm text-blue-700 dark:text-blue-300">
+                                                    INTERNA
                                                 </td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">NDA
                                                     básico</td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 text-sm text-yellow-700 dark:text-yellow-300">
-                                                    Confidencial</td>
+                                                <td
+                                                    class="px-6 py-4 font-semibold text-sm text-red-500 dark:text-red-400">
+                                                    CONFIDENCIAL</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">NDA
                                                     específico con cláusulas detalladas</td>
                                             </tr>
                                             <tr>
-                                                <td class="px-6 py-4 text-sm text-red-700 dark:text-red-300">Altamente
-                                                    Confidencial</td>
+                                                <td
+                                                    class="px-6 py-4 font-semibold text-sm text-red-700 dark:text-red-500">
+                                                    ALTAMENTE
+                                                    CONFIDENCIAL</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">NDA
                                                     exhaustivo + medidas de seguridad adicionales</td>
                                             </tr>
@@ -350,7 +356,8 @@
 
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.1. Métodos Autorizados
+                                <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.1. Métodos Autorizados de
+                                    Transmisión
                                 </h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
                                     <li><strong>Digital:</strong> Cifrado de datos, transferencia segura por VPN,
@@ -365,7 +372,11 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">8.2. Verificación de
                                     Transmisión</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Utilizar F612-IT-3 para cada envío de información confidencial.</li>
+                                    <li>Utilizar <strong>F612-IT-3</strong> para cada envío de información <span
+                                            class="font-semibold text-red-500 dark:text-red-400">Confidencial</span>
+                                        y <span
+                                            class="font-semibold text-red-700 dark:text-red-500">Altamente Confidencial.</span>
+                                    </li>
                                     <li>Verificar identidad del receptor.</li>
                                     <li>Confirmar recepción mediante acuse.</li>
                                 </ul>
@@ -415,7 +426,11 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">10.1. Registro de
                                     Intercambios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Completar F612-IT-4 para todo intercambio de información confidencial.</li>
+                                    <li>Completar <strong>F612-IT-3</strong> para todo intercambio de información
+                                        <span
+                                            class="font-semibold text-red-500 dark:text-red-400">Confidencial</span>
+                                        y <span
+                                            class="font-semibold text-red-700 dark:text-red-500">Altamente Confidencial</span>.</li>
                                     <li>Incluir:</li>
                                     <ul class="list-disc pl-8 mt-2 space-y-2">
                                         <li>Información compartida</li>
@@ -594,7 +609,7 @@
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo A: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    title="F612-IT-1 Formulario de Clasificación de Información a Compartir"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -613,8 +628,8 @@
 
                             <!-- Anexo B -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo B: <a href="../../procedimientos/contratistas-socios/generador-acuerdo-confidencialidad/generador-acuerdo-confidencialidad.html" target="_blank"
+                                    title="F612-IT-2 Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -634,54 +649,14 @@
                             <!-- Anexo C -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list text-blue-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F612-IT-3
-                                    </span>
-                                    Plantilla de Acuerdo de Confidencialidad Específico
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento formal de confidencialidad
-                                    específico]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list-check text-blue-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F612-IT-4
-                                    </span>
-                                    Checklist de Verificación de Transmisión Segura
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento checklist de verificación de
-                                    transmisión segura de la información]</p>
-                            </div>
-
-                            <!-- Anexo E -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo E: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    title="F612-IT-3 Registro de Información Compartida con Terceros"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fa-solid fa-file-alt text-blue-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F612-IT-5
+                                        F612-IT-3
                                     </span>
                                     Registro de Información Compartida con Terceros
                                     <i
@@ -691,11 +666,11 @@
                                     Terceros]</p>
                             </div>
 
-                            <!-- Anexo F -->
+                            <!-- Anexo D -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo F: <a
+                                Anexo D: <a
                                     href="../../procedimientos/contratistas-socios/proc-confidencialidad-terceros.html"
-                                    title="Procedimiento de Confidencialidad con Terceros"
+                                    title="P612-IT-1 Procedimiento de Confidencialidad con Terceros"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">

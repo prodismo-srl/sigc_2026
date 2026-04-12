@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Seguridad con Contratistas y Socios">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -27,71 +27,17 @@
     <!-- Tailwind styles -->
     <link href="../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
 </head>
 
 <body
     class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../../index.html">
-                            <img src="../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
+    <div id="header-container" data-module="header"></div>
 
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Seguridad con
-                                Contratistas y Socios</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -116,22 +62,22 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Seguridad con
                             Contratistas y Socios</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div id="metadata" class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: P611-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 6/4/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -145,10 +91,10 @@
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                             Establecer el proceso detallado para la gestión de seguridad de la información en las
-                            relaciones con contratistas y socios de cooperación, asegurando el cumplimiento de la <a
+                            relaciones con contratistas y socios de cooperación, asegurando el cumplimiento de la <strong><a
                                 href="../../documentacion/gestion-contratistas-socios/gestion-contratistas-socios.html"
                                 class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">MC611-IT-1
-                                Política de SI entre Contratistas y Socios</a>. Garantizando que los contratistas y
+                                Política de SI entre Contratistas y Socios</a></strong>. Garantizando que los contratistas y
                             socios que acceden a sistemas o datos de la organización cumplan con los mismos estándares
                             de seguridad de la información, mediante evaluaciones de riesgo, acuerdos contractuales y
                             verificaciones periódicas, en cumplimiento de los requisitos de <strong>ISO/IEC
@@ -163,8 +109,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Aplica a todas las relaciones con terceros que accedan a información de <strong>PRODISMO
-                                SRL</strong>.
+                            Aplica a todas las relaciones con terceros que accedan a información de <strong>PRODISMO SRL</strong>.
                         </p>
                     </section>
 
@@ -182,9 +127,9 @@
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 1: Solicitud de
                                     Contratación</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Responsable de área completa solicitud indicando:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li>Tipo de servicio requerido</li>
                                         <li>Información a la que accederá el tercero</li>
                                         <li>Nivel de criticidad estimado</li>
@@ -195,12 +140,25 @@
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 2: Evaluación de Riesgos
                                 </h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>RSI completa <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-1
-                                            Plantilla de Evaluación de Riesgos para Terceros</a></li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Departamento IT completa<br>
+                                        <a href="#"
+                                            title="F611-IT-1 Plantilla de Evaluación de Riesgos para Terceros"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                            <i class="fas fa-file-alt text-blue-500"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F611-IT-1
+                                            </span>
+                                            Plantilla de Evaluación de Riesgos para Terceros
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
                                     <li>Criterios de evaluación:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li>Tipo de información accedida</li>
                                         <li>Nivel de acceso requerido</li>
                                         <li>Tiempo de relación</li>
@@ -212,11 +170,11 @@
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 3: Clasificación de
                                     Riesgo</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li><span class="font-medium">Bajo:</span> Solo información pública</li>
-                                    <li><span class="font-medium">Medio:</span> Información interna no crítica</li>
-                                    <li><span class="font-medium">Alto:</span> Información confidencial</li>
-                                    <li><span class="font-medium">Crítico:</span> Información de clientes OEM/diseños
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><span class="font-medium text-blue-600">Bajo:</span> Solo información pública</li>
+                                    <li><span class="font-medium text-yellow-500">Medio:</span> Información interna no crítica</li>
+                                    <li><span class="font-medium text-red-500">Alto:</span> Información confidencial</li>
+                                    <li><span class="font-medium text-red-700">Crítico:</span> Información de clientes OEM/diseños
                                     </li>
                                 </ul>
                             </div>
@@ -229,23 +187,49 @@
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 4: Elaboración de
                                     Acuerdos</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Departamento Legal prepara <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-2
-                                            Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad</a>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Departamento IT prepara <br>
+                                        <a href="#"
+                                            title="F611-IT-2 Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                            <i class="fas fa-file-alt text-blue-500"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F611-IT-2
+                                            </span>
+                                            Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                        <br>
                                         (si aplica)</li>
                                     <li>Incluir cláusulas específicas según nivel de riesgo</li>
-                                    <li>Para clientes OEM, incluir <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-3
-                                            Plantilla de Adenda para Requisitos de Clientes</a></li>
+                                    <li>Para clientes OEM, incluir <br>
+                                        <a href="#"
+                                            title="F611-IT-3 Plantilla de Adenda para Requisitos de Clientes"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                            <i class="fas fa-file-alt text-blue-500"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F611-IT-3
+                                            </span>
+                                            Plantilla de Adenda para Requisitos de Clientes
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
 
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 5: Negociación y Firma
                                 </h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Departamento de Compras gestiona negociación</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Departamento de IT gestiona negociación</li>
                                     <li>RSI valida cláusulas de seguridad</li>
                                     <li>Archivar acuerdos firmados</li>
                                 </ul>
@@ -258,7 +242,7 @@
 
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 6: Onboarding</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Entrega de políticas de seguridad al tercero</li>
                                     <li>Configuración de accesos según principio de mínimo privilegio</li>
                                     <li>Registro en inventario de terceros</li>
@@ -268,26 +252,52 @@
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 7: Monitoreo Continuo
                                 </h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Revisiones utilizando <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-4
-                                            Checklist de Verificación de Cumplimiento</a></li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Revisiones utilizando <br>
+                                        <a href="#"
+                                            title="F611-IT-4 Checklist de Verificación de Cumplimiento"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                            <i class="fas fa-file-alt text-blue-500"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F611-IT-4
+                                            </span>
+                                            Checklist de Verificación de Cumplimiento
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
                                     <li>Frecuencia:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
-                                        <li><span class="font-medium">Bajo:</span> Anual</li>
-                                        <li><span class="font-medium">Medio:</span> Semestral</li>
-                                        <li><span class="font-medium">Alto:</span> Trimestral</li>
-                                        <li><span class="font-medium">Crítico:</span> Mensual</li>
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
+                                        <li><span class="font-medium text-blue-500">Bajo:</span> Anual</li>
+                                        <li><span class="font-medium text-yellow-500">Medio:</span> Anual</li>
+                                        <li><span class="font-medium text-red-500">Alto:</span> Semestral</li>
+                                        <li><span class="font-medium text-red-700">Crítico:</span> Trimestral</li>
                                     </ul>
                                 </ul>
                             </div>
 
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 8: Auditorías</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Para riesgo Alto y Crítico, auditoría usando <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-5
-                                            Informe de Auditoría a Terceros</a></li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Para riesgos <span class="font-medium text-red-500">Alto</span> y <span class="font-medium text-red-700">Crítico</span>, auditoría usando <br>
+                                        <a href="#"
+                                            title="F611-IT-5 Informe de Auditoría a Terceros"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                            <i class="fas fa-file-alt text-blue-500"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F611-IT-5
+                                            </span>
+                                            Informe de Auditoría a Terceros
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                                    </li>
                                     <li>Frecuencia mínima anual</li>
                                     <li>Seguimiento de hallazgos</li>
                                 </ul>
@@ -300,12 +310,25 @@
 
                             <div class="mb-4">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 9: Offboarding</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Revocación de accesos</li>
                                     <li>Devolución/destrucción de información</li>
                                     <li>Evaluación final de desempeño</li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Flujo del Proceso Detallado</h3>
+                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 mt-4 text-center">
+                                    <img src="../../../../images/flow-diagrams/fases-proceso-detallado.png"
+                                        alt="Flujo de Proceso Detallado"
+                                        class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
+                                        id="flujo-retiro-activos-image">
+                                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                        Diagrama de Flujo del proceso detallado
+                                    </p>
+                                </div>
                         </div>
                     </section>
 
@@ -316,27 +339,87 @@
                             REGISTROS Y FORMULARIOS
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-1
-                                    Plantilla de Evaluación de Riesgos para Terceros</a> (Completar antes de cualquier
-                                contratación)</li>
+                                    title="F611-IT-1 Plantilla de Evaluación de Riesgos para Terceros"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F611-IT-1
+                                    </span>
+                                    Plantilla de Evaluación de Riesgos para Terceros
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p>[Completar antes de cualquier contratación]</p>
+                            </li>
                             <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-2
-                                    Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad</a> (Firmar
-                                antes del inicio de servicios)</li>
+                                    title="F611-IT-2 Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F611-IT-2
+                                    </span>
+                                    Plantilla de Acuerdo de Confidencialidad (NDA) y Cláusulas de Seguridad
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p>[Firmar antes del inicio de servicios]</p>
+                            </li>
                             <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-3
-                                    Plantilla de Adenda para Requisitos de Clientes</a> (Incluir cuando correspondan
-                                requisitos OEM)</li>
+                                    title="F611-IT-3 Plantilla de Adenda para Requisitos de Clientes"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F611-IT-3
+                                    </span>
+                                    Plantilla de Adenda para Requisitos de Clientes
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p>[Incluir cuando correspondan requisitos OEM]</p>
+                            </li>
                             <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-4
-                                    Checklist de Verificación de Cumplimiento</a> (Utilizar en todas las revisiones
-                                periódicas)</li>
+                                    title="F611-IT-4 Checklist de Verificación de Cumplimiento"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F611-IT-4
+                                    </span>
+                                    Checklist de Verificación de Cumplimiento
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p>[Utilizar en todas las revisiones periódicas]</p>
+                            </li>
                             <li><a href="#"
-                                    class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F611-IT-5
-                                    Informe de Auditoría a Terceros</a> (Emplear en auditorías programadas)</li>
-                        </ul>
+                                    title="F611-IT-5 Informe de Auditoría a Terceros"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F611-IT-5
+                                    </span>
+                                    Informe de Auditoría a Terceros
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p>[Emplear en auditorías programadas]</p>
+                            </li>
                     </section>
 
                     <section id="responsabilidades-especificas" class="mb-12 scroll-mt-20">
@@ -348,7 +431,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.1. RSI</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Aprobar evaluaciones de riesgo</li>
                                 <li>Validar acuerdos de seguridad</li>
                                 <li>Realizar auditorías</li>
@@ -358,8 +441,8 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.2. Departamento de
-                                Compras/Administración</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                IT/Compras/Administración</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Mantener base de datos de terceros</li>
                                 <li>Gestionar renovaciones contractuales</li>
                                 <li>Notificar vencimientos</li>
@@ -369,7 +452,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.3. Responsables de
                                 Área</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Identificar necesidades de terceros</li>
                                 <li>Supervisar desempeño</li>
                                 <li>Reportar incidencias</li>
@@ -386,19 +469,21 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. Notificación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Terceros deben reportar incidentes dentro de 4 horas</li>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Terceros deben reportar incidentes dentro de 6 horas</li>
                                 <li>Utilizar canal designado: <a href="mailto:itprodismo@prodismo.com"
-                                        class="p-2 text-primary-600 rounded-lg bg-gray-300 hover:text-primary-800 dark:bg-gray-600 dark:text-primary-400 dark:hover:text-primary-300"><i
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-violet-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-indigo-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-indigo-700 dark:text-indigo-300 text-sm font-semibold ml-2 my-2"><i
                                             class="fas fa-envelope mr-1"></i> itprodismo@prodismo.com</a></li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. Escalamiento</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><span class="font-medium">Incidente menor:</span> RSI y responsable de área</li>
-                                <li><span class="font-medium">Incidente mayor:</span> Comité de Crisis</li>
+                                <li><span class="font-medium">Incidente mayor:</span> Departamento de IT</li>
                                 <li><span class="font-medium">Incidente crítico:</span> Alta Dirección y clientes
                                     afectados</li>
                             </ul>
@@ -412,13 +497,13 @@
                             MÉTRICAS E INDICADORES
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Tiempo promedio de evaluación de riesgos: <span class="font-medium">Objetivo < 5
                                         días</span>
                             </li>
                             <li>Porcentaje de terceros con acuerdos vigentes: <span class="font-medium">Objetivo
                                     100%</span></li>
-                            <li>Tiempo de respuesta a incidentes: <span class="font-medium">Objetivo < 4 horas</span>
+                            <li>Tiempo de respuesta a incidentes: <span class="font-medium">Objetivo < 6 horas</span>
                             </li>
                             <li>Cumplimiento de revisiones programadas: <span class="font-medium">Objetivo > 95%</span>
                             </li>
@@ -432,8 +517,8 @@
                             ACTUALIZACIÓN DEL PROCEDIMIENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Revisión anual por el RSI</li>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Revisión anual por el Departaemnto de IT</li>
                             <li>Actualización ante cambios normativos</li>
                             <li>Mejoras basadas en lecciones aprendidas</li>
                         </ul>
@@ -461,15 +546,22 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-300 dark:text-white">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    </tr>
                                     <tr>
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            0</td>
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            1</td>
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
-                                            del documento</td>
+                                            6/4/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            general del documento</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -535,7 +627,8 @@
                     <!-- Quick Actions -->
                     <div
                         class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Acciones Rápidas</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i> Acciones Rápidas</h3>
                         <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
@@ -580,11 +673,11 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">P6111-IT-2</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P611-IT-2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -600,11 +693,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">6/4/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">6/4/2027</span>
                             </div>
                         </div>
                     </div>
@@ -614,33 +707,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../images/logo01-bco.png" data-light-src="../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../images/logo01-bco.png" alt="Logo Prodismo" width="120" height="30"
-                            data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
@@ -650,6 +717,8 @@
 
     <!-- JavaScript -->
     <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+    <script type="text/javascript"
+        src="../../../../js/procedimientos/flowChart/openFlowChart-proceso-detallado.js"></script>
 
 </body>
 

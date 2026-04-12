@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Generador de Acuerdo de Confidencialidad">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../../images/Logo_Prodismo_fb.ico">
+    <title>Generador de Acuerdo de Confidencialidad | Prodismo NDA</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN + html2pdf Library -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jsPDF y html2canvas (necesarios para la nueva función) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- html2pdf.js library (for PDF generation) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../../css/styles.css">
+    <link href="../../../../../dist/output.css" rel="stylesheet">
+    <script src="../../../../../js/modules.js" defer></script>
+
+    <style>
+        /* Additional print / PDF optimization */
+        .contract-preview {
+            font-family: 'Times New Roman', 'Segoe UI', 'Georgia', serif;
+            line-height: 1.45;
+            background: white;
+            color: black;
+        }
+
+        .contract-preview h1,
+        .contract-preview h2 {
+            font-weight: 600;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contract-preview h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+
+        .contract-preview h2 {
+            font-size: 1.25rem;
+            border-left: 4px solid #1e3a8a;
+            padding-left: 0.75rem;
+            background-color: #f8fafc;
+        }
+
+        .contract-preview p,
+        .contract-preview li {
+            text-align: justify;
+        }
+
+        .signature-line {
+            border-top: 1px solid #000;
+            width: 220px;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Estilos para el encabezado y pie de página del PDF (solo se añaden durante generación) */
+        .pdf-header {
+            text-align: center;
+            border-bottom: 2px solid #1e3a8a;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pdf-header h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin: 0;
+        }
+
+        .pdf-footer {
+            text-align: center;
+            font-size: 9pt;
+            color: #4b5563;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            padding-top: 8px;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @media print {
+            .no-print,
+            .form-sidebar {
+                display: none;
+            }
+
+            .preview-container {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <div id="header-container" data-module="header"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="flex flex-col lg:flex-row gap-6 p-4 md:p-6 max-w-[1600px] mx-auto">
+        <!-- FORMULARIO: panel izquierdo / superior (inputs) -->
+        <div class="lg:w-1/3 bg-white rounded-xl shadow-lg p-5 space-y-4 h-fit no-print">
+            <div class="border-b pb-2 mb-2">
+                <h2 class="text-xl font-bold text-blue-800">✍️ Datos del Acuerdo</h2>
+                <p class="text-sm text-gray-500">Complete los campos para personalizar el contrato NDA (TISAX / ISO
+                    27001)</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-3">
+                <!-- Razón Social Proveedor -->
+                <div>
+                    <label class="block text-sm font-semibold">Razón Social (PROVEEDOR)</label>
+                    <input type="text" id="proveedor" value="Soluciones Tecnológicas SRL"
+                        class="w-full border border-gray-300 rounded-md p-2 text-sm">
+                </div>
+
+                <!-- Saludo (select) + Nombre -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-sm font-semibold">Saludo / Tratamiento</label>
+                        <select id="saludo" class="w-full border rounded-md p-2 text-sm bg-white">
+                            <option value="Ing." selected>Ing.</option>
+                            <option value="Sr.">Sr.</option>
+                            <option value="Sra.">Sra.</option>
+                            <option value="Sres.">Sres.</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold">Nombre Representante</label>
+                        <input type="text" id="nombreRepresentante" value="Gustavo Víctor Gilobert"
+                            class="w-full border rounded-md p-2 text-sm">
+                    </div>
+                </div>
+
+                <!-- Tipo ID (select) + Número -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-sm font-semibold">Tipo ID</label>
+                        <select id="idTipo" class="w-full border rounded-md p-2 text-sm bg-white">
+                            <option value="DNI" selected>DNI</option>
+                            <option value="CUIT">CUIT</option>
+                            <option value="CUIL">CUIL</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="ID">ID</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold">Número ID</label>
+                        <input type="text" id="idNumero" value="20.112.148"
+                            class="w-full border rounded-md p-2 text-sm">
+                    </div>
+                </div>
+
+                <!-- Domicilio, Ciudad, País -->
+                <div>
+                    <label class="block text-sm font-semibold">Domicilio (Representante / Proveedor)</label>
+                    <input type="text" id="domicilio" value="Bv. Rivadavia 797"
+                        class="w-full border rounded-md p-2 text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-sm font-semibold">Ciudad</label>
+                        <input type="text" id="ciudad" value="Córdoba" class="w-full border rounded-md p-2 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold">País</label>
+                        <input type="text" id="pais" value="Argentina" class="w-full border rounded-md p-2 text-sm">
+                    </div>
+                </div>
+
+                <!-- Servicios (definición general) - visible en preview -->
+                <div>
+                    <label class="block text-sm font-semibold">📌 Servicios (definición general)</label>
+                    <textarea id="serviciosDesc" rows="2"
+                        class="w-full border rounded-md p-2 text-sm">Provisión y operación de software (SaaS u On-Premise), soporte técnico, mantenimiento evolutivo, monitoreo y gestión de incidentes.</textarea>
+                    <p class="text-xs text-gray-400">Este texto aparece en la sección "3. DEFINICIONES" del contrato.
+                    </p>
+                </div>
+
+                <!-- Alcance de Servicios (lista) -->
+                <div>
+                    <label class="block text-sm font-semibold">⚙️ Alcance de Servicios (puntos principales)</label>
+                    <textarea id="alcanceServicios" rows="5" class="w-full border rounded-md p-2 text-sm">Soporte Técnico 24/7
+                        Mesa de ayuda
+                        Atención remota y presencial
+                        Mantenimiento Evolutivo y Correctivo
+                        Actualizaciones y despliegue de nuevas versiones</textarea>
+                    <p class="text-xs text-gray-400">Cada línea será un ítem en la cláusula 7</p>
+                </div>
+
+                <!-- Servicios excluidos -->
+                <div>
+                    <label class="block text-sm font-semibold">🚫 Servicios excluidos del alcance</label>
+                    <textarea id="serviciosExcluidos" rows="2" class="w-full border rounded-md p-2 text-sm">Desarrollo de sistemas no contratados
+                        Tareas fuera de alcance sin orden de servicio
+                        Intervención sobre infraestructura de terceros sin autorización</textarea>
+                    <p class="text-xs text-gray-400">Cada línea será un ítem en la cláusula 7.1</p>
+                </div>
+
+                <!-- Propiedad intelectual -->
+                <div>
+                    <label class="block text-sm font-semibold">💡 Propiedad Intelectual (ítems protegidos)</label>
+                    <input type="text" id="propiedadItems" value="sistemas, diseños 2D/3D, desarrollos"
+                        class="w-full border rounded-md p-2 text-sm">
+                    <p class="text-xs text-gray-400">Ej: "sistemas, diseños 2D/3D, desarrollos"</p>
+                </div>
+
+                <!-- NUEVO: selector de fecha unificado (reemplaza día/mes/año y fecha corta) -->
+                <div class="border-t pt-2 mt-1">
+                    <label class="block text-sm font-semibold">📅 Fecha del Acuerdo (selector)</label>
+                    <input type="date" id="fechaAcuerdo"
+                        class="w-full border rounded-md p-2 text-sm">
+                    <p class="text-xs text-gray-400 mt-1">Se usará para generar las fechas (ej. "a los 09 días del
+                        mes de Enero de 2026") y (09/01/2026).</p>
+                </div>
+
+                <!-- Responsable Cliente -->
+                <div>
+                    <label class="block text-sm font-semibold">👤 Nombre Responsable (CLIENTE - Prodismo)</label>
+                    <input type="text" id="nombreResponsable" value="Germán C. Montalbetti"
+                        class="w-full border rounded-md p-2 text-sm">
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex flex-wrap gap-3 pt-3">
+                <button id="generarPdfBtn"
+                    class="bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-5 rounded-lg shadow transition flex items-center gap-2">
+                    📄 Descargar PDF (Contrato Final)
+                </button>
+                <button id="resetBtn" type="button"
+                    class="bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded-lg transition">Restaurar
+                    Ejemplo</button>
+                <button id="translateBtn" type="button"
+                    class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded-lg transition flex items-center gap-2">
+                    <i class="fas fa-language"></i> Traducir a Inglés
+                </button>
+                <button id="backBtn" type="button"
+                    class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> Volver atrás
+                </button>
+            </div>
+            <div class="text-xs text-gray-500 text-center mt-2">* El PDF refleja el contenido completo del acuerdo NDA
+                con estándares TISAX / ISO 27001. Revise antes de enviar.</div>
+        </div>
+
+        <!-- VISTA PREVIA DEL CONTRATO (derecha) -->
+        <div class="lg:w-2/3 bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="bg-white border-b p-3 flex justify-between items-center no-print">
+                <h3 class="font-bold text-gray-700">📄 Vista previa del Acuerdo de Confidencialidad</h3>
+                <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">actualización dinámica</span>
+            </div>
+            <div id="previewContainer" class="contract-preview p-6 md:p-8 overflow-auto max-h-[140vh] bg-white">
+                <div class="text-center text-gray-400">Cargando plantilla...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-general_two.js"></script>
+    <script type="text/javascript" src="../../../../../js/documentacion/scripts-generador.js"></script>
+
+    <script>
+        // Script específico del footer
+        (function () {
+            // Actualizar año actual
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
