@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -109,7 +108,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Sistemas de información:</strong> Servidores, bases de datos, aplicaciones,
                                 entornos cloud (IaaS, PaaS, SaaS).</li>
                             <li><strong>Dispositivos:</strong> Equipos de escritorio, portátiles, dispositivos móviles,
@@ -129,13 +128,14 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.24</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Política de Protocolos Criptográficos MC511-IT-2</li>
-                            <li>Gestión de Procedimientos Criptográficos P511-IT-1</li>
-                            <li>Informe de Pruebas de Cifrado F512-IT-5</li>
+                            <li><strong>MC511-IT-1</strong> Política de Clasificación de Datos</li>
+                            <li><strong>P511-IT-1</strong> Gestión de Procedimientos Criptográficos</li>
+                            <li><strong>F511-IT-2</strong> Algoritmos Aprobados</li>
+                            <li><strong>F512-IT-5</strong> Informe de Pruebas de Cifrado</li>
                         </ul>
                     </section>
 
@@ -199,13 +199,13 @@
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">5.1. Cifrado en Tránsito
                                     (Comunicaciones)</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>TLS (Transport Layer Security):</strong> Versiones TLS 1.2 o TLS 1.3.
                                         Las configuraciones deben deshabilitar explícitamente TLS 1.0, TLS 1.1 y SSL de
                                         todas las versiones.</li>
                                     <li><strong>Algoritmos de Cifrado (Cipher Suites):</strong> Se deben priorizar
                                         suites modernas y robustas. Ejemplos permitidos:
-                                        <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <ul class="list-circle pl-6 mt-2 space-y-2">
                                             <li>TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</li>
                                             <li>TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</li>
                                             <li>TLS_AES_256_GCM_SHA384 (TLS 1.3)</li>
@@ -221,9 +221,9 @@
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">5.2. Cifrado en Reposo
                                     (Almacenamiento)</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Discos/Datos en Reposo:</strong>
-                                        <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <ul class="list-circle pl-6 mt-2 space-y-2">
                                             <li><strong>Algoritmo de Cifrado:</strong> AES (Advanced Encryption
                                                 Standard) con una clave de mínimo 256 bits.</li>
                                             <li><strong>Tecnologías:</strong> BitLocker (Windows), FileVault 2 (macOS),
@@ -232,7 +232,7 @@
                                         </ul>
                                     </li>
                                     <li><strong>Archivos y Correos Electrónicos:</strong>
-                                        <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <ul class="list-circle pl-6 mt-2 space-y-2">
                                             <li>Se utilizarán las etiquetas de sensibilidad de Microsoft 365 (o solución
                                                 equivalente) para aplicar cifrado AES-256 y permisos de acceso basados
                                                 en la clasificación de la información (<strong
@@ -316,7 +316,7 @@
                                     <i class="fa-solid fa-ban mr-2"></i>
                                     Protocolos Prohibidos
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>SSL 2.0, SSL 3.0, TLS 1.0, TLS 1.1</li>
                                 </ul>
                             </div>
@@ -327,7 +327,7 @@
                                     <i class="fa-solid fa-ban mr-2"></i>
                                     Algoritmos de Cifrado Débiles o Comprometidos
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>DES, 3DES (TDES), RC4, MD5, SHA1</li>
                                     <li>Cifrados NULL o anónimos (anon-DH)</li>
                                 </ul>
@@ -339,7 +339,7 @@
                                     <i class="fa-solid fa-ban mr-2"></i>
                                     Prácticas Prohibidas
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>La implementación de cifrados "caseros" o no auditados.</li>
                                     <li>El uso de certificados SSL/TLS auto firmados en entornos de producción, a menos
                                         que estén debidamente justificados y aprobados por el RSI.</li>
@@ -352,10 +352,79 @@
                         </div>
                     </section>
 
-                    <section id="gestion-claves" class="mb-12 scroll-mt-20">
+                    <section id="protocolos-criptograficos-teams" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            PROTOCOLOS CRIPTOGRAFICOS EN AMBIENTE MS TEAMS
+                        </h2>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Cifrado de tráfico por tipo:
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>Servidor a servidor: TLS con MTLS o OAuth de servicio a servicio</li>
+                            <li>Cliente a servidor (mensajería, presencia): TLS</li>
+                            <li>Flujos multimedia (audio, vídeo, uso compartido): TLS y SRTP/TLS</li>
+                            <li>Señalización: TLS</li>
+                            <li>Cifrado mejorado cliente a cliente (llamadas E2EE): SRTP/DTLS.</li>
+                        </ul>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Gestión de certificados:
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>Todo el tráfico usa TLS/HTTPS. Los certificados de servidor deben incluir puntos de distribución de CRL (CDP) en HTTPS para verificar revocación.</li>
+                            <li>Requisito de Uso mejorado de clave (EKU) para autenticación de servidor, esencial para MTLS</li>
+                        </ul>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Cifrado en tránsito y reposo:
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>Datos (mensajes, archivos, reuniones) se cifran con TLS y SRTP. Microsoft permite descifrado por la organización para cumplimiento (eDiscovery).</li>
+                        </ul>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Protección contra ataques:
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>TLS previene escuchas y ataques man-in-the-middle (MITM). Un atacante necesitaría un certificado válido y de confianza con la clave privada correspondiente.</li>
+                        </ul>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Cifrado de medios (llamadas):
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>Negociación de sesión mediante SDP sobre HTTPS. El tráfico multimedia usa SRTP con clave de sesión intercambiada por TLS.</li>
+                            <li>En llamadas E2EE, Teams usa DTLS para derivar claves por llamada desde certificados de cliente (opacas para Microsoft). Se genera un código de seguridad de 20 dígitos (huellas SHA-256) que los usuarios pueden verificar para detectar MITM.</li>
+                        </ul>
+
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                            Acceso seguro a relays multimedia:
+                        </h6>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-4">
+                            <li>Uso de tokens basados en credenciales sobre TLS mediante protocolo TURN.</li>
+                        </ul>
+
+                        <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-6">
+                            Mas información sobre MS TEAMS en:
+                            <a href="https://learn.microsoft.com/es-es/microsoftteams/teams-security-guide#encryption-in-teams-and-microsoft-365"
+                                title="MS Teams Security Guide" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                <i class="fa-brands fa-microsoft"></i>
+                                MS Teams Security Guide
+                                <i
+                                    class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section id="gestion-claves" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
                             GESTIÓN DE CLAVES
                         </h2>
 
@@ -376,38 +445,37 @@
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
                         <div class="space-y-4">
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
-                                    title="Política de Protocolos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                Anexo A: <a href="../clasificacion-datos/clasificacion-datos.html"
+                                    title="MC511-IT-1 Política de Clasificación de Datos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <i class="fas fa-book text-blue-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        MC511-IT-2
+                                        MC511-IT-1
                                     </span>
-                                    Política de Protocolos Criptográficos
+                                    Política de Clasificación de Datos
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Política de protocolos criptográficos,
-                                    algoritmos y estándares de seguridad]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Política de clasificación de datos e información]</p>
                             </div>
 
                             <!-- Anexo B -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo B: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    title="F512-IT-5 Informe de Pruebas de Cifrado"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-file-contract text-gray-700"></i>
+                                    <i class="fa-solid fa-file-contract text-gray-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         F512-IT-5
@@ -416,14 +484,33 @@
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Informe de pruebas de cifrado ]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Informe de pruebas de cifrado]</p>
                             </div>
 
                             <!-- Anexo C -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a
+                                Anexo C: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F512-IT-1%20Registro%20de%20Servicios%20de%20Transferencia.xlsx?d=w930cb96060e24c2791e9771424da8fdb&csf=1&web=1&e=1hD8Ea" target="_blank"
+                                    title="F512-IT-1 Registro de Servicios de Transferencia Autorizados"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F512-IT-1
+                                    </span>
+                                    Registro de Servicios de Transferencia Autorizados
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro de servicios autorizados de transferencia de información]</p>
+                            </div>
+
+                            <!-- Anexo D -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a
                                     href="../../procedimientos/ciberseguridad/proc-procedimientos-criptograficos.html"
-                                    title="Procedimientos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="P511-IT-1 Procedimientos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
@@ -443,11 +530,11 @@
                     <section id="auditoria-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             AUDITORÍA DEL DOCUMENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Esta política será revisada anualmente por el Responsable de Seguridad de la Información
                                 (RSI), o ante cualquier cambio significativo en el entorno tecnológico, regulatorio o de
                                 negocio que pueda afectar su eficacia.</li>
@@ -464,7 +551,7 @@
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-6">
@@ -554,17 +641,20 @@
                             <a href="#configuraciones-prohibidas"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
                                 CONFIGURACIONES PROHIBIDAS</a>
-                            <a href="#gestion-claves"
+                            <a href="#protocolos-criptograficos-teams"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                PROTOCOLOS CRIPTOGRAFICOS EN AMBIENTE MS TEAMS</a>
+                            <a href="#gestion-claves"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 GESTIÓN DE CLAVES</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 ANEXOS</a>
                             <a href="#auditoria-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 AUDITORÍA DEL DOCUMENTO</a>
                             <a href="#revision-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>

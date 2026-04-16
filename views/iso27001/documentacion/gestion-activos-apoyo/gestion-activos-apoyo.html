@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -47,9 +46,12 @@
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
                     <a href="../situaciones-excepcionales/situaciones-excepcionales.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-gray-300 dark:hover:bg-gray-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Situaciones Excepcionales</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../dispositivos-moviles/dispositivos-moviles.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -111,7 +113,7 @@
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los activos de
                             apoyo propiedad de <strong>PRODISMO SRL</strong> o utilizados por esta, incluyendo, pero no
                             limitándose a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Equipos de cómputo (laptops, estaciones de trabajo)</li>
                             <li>Dispositivos de almacenamiento (discos duros, USBs)</li>
                             <li>Equipos de comunicación</li>
@@ -134,7 +136,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Alta Dirección</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Aprobar los recursos para la adquisición y gestión segura de los activos.</li>
                                 </ul>
                             </div>
@@ -142,7 +144,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">IT Manager</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Gestionar el inventario, mantenimiento y disposición segura de los activos de
                                         IT.</li>
                                 </ul>
@@ -151,7 +153,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Recursos Humanos</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Gestionar la firma de acuerdos de responsabilidad con el personal.</li>
                                 </ul>
                             </div>
@@ -159,7 +161,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Responsables de Áreas</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Solicitar, custodiar y asegurar el uso correcto de los activos asignados a su
                                         área.</li>
                                 </ul>
@@ -169,7 +171,7 @@
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Responsable de Seguridad de
                                     la Información (RSI)</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Establecer los requisitos de seguridad y realizar auditorías de cumplimiento.
                                     </li>
                                 </ul>
@@ -178,7 +180,7 @@
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Todos los Empleados</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Utilizar los activos de acuerdo con esta política y reportar cualquier
                                         incidente.</li>
                                 </ul>
@@ -192,7 +194,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.10, A.5.11</li>
                             <li><strong>ISO/IEC 27001:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco <strong>TISAX</strong> (Trusted Information Security Assessment Exchange).</li>
@@ -237,8 +239,8 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
                             INVENTARIO Y CLASIFICACIÓN DE ACTIVOS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>PRODISMO SRL</strong> mantendrá un Inventario de Activos de Apoyo (F313-IT-1)
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><strong>PRODISMO SRL</strong> mantendrá un Inventario de Activos de Apoyo <strong>SnipeIT</strong>
                                 actualizado que incluya, como mínimo, identificador único, tipo de activo, usuario
                                 asignado, ubicación y clasificación de la información que maneja.</li>
                             <li>Cada activo será clasificado según la sensibilidad de la información que almacena o
@@ -258,19 +260,19 @@
 
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Asignación y Uso</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>La asignación de activos se realizará formalmente mediante el Formulario de
-                                    Asignación de Activos (F313-IT-2), que incluirá las responsabilidades del usuario.
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>La asignación de activos se realizará formalmente mediante el mail de
+                                    Asignación de Activos, que incluirá las responsabilidades del usuario.
                                 </li>
                                 <li>Solo se permitirá el uso de dispositivos de almacenamiento USB cifrados y
-                                    autorizados por el área de IT.</li>
+                                    autorizados por el Departamento de IT.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.2. Transporte y
                                 Almacenamiento</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Durante el transporte fuera de las instalaciones, los activos deben estar siempre
                                     bajo custodia del empleado. Las laptops deberán transportarse en mochilas no
                                     identificables y nunca dejarse desatendidas en vehículos.</li>
@@ -282,32 +284,32 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.3. Mantenimiento y Reparación
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Cualquier mantenimiento o reparación que requiera acceso a la información del activo
                                     será realizado por personal autorizado de IT o por un proveedor previamente
                                     aprobado.</li>
                                 <li>Antes de enviar un equipo a reparación externa, se debe realizar una eliminación
                                     segura de la información confidencial o extraer el disco duro, registrando la acción
-                                    en el Formulario de Mantenimiento (F313-IT-3).</li>
+                                    en el Formulario de Mantenimiento <strong>F313-IT-2</strong>.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.4. Pérdida o Robo</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Cualquier pérdida o robo de un activo debe ser reportado de inmediato (en menos de 1
-                                    hora) al área de IT y Seguridad.</li>
+                                    hora) al Departamento de IT y Seguridad.</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.5. Devolución y Baja</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Al final de la vida útil o cuando un empleado deje la empresa, el activo debe ser
                                     devuelto a IT.</li>
-                                <li>El área de IT realizará una eliminación segura de la información mediante métodos de
+                                <li>El Departamento de IT realizará una eliminación segura de la información mediante métodos de
                                     borrado físico o lógico (ej.: degaussing, software de borrado seguro) documentando
-                                    el proceso en el Formulario de Baja de Activos (F313-IT-4).</li>
+                                    el proceso en el Formulario de Baja de Activos <strong>F313-IT-4</strong>.</li>
                             </ul>
                         </div>
                     </section>
@@ -318,9 +320,9 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
                             ELIMINACIÓN SEGURA DE LA INFORMACIÓN
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Todos los medios de almacenamiento magnéticos (discos duros) que hayan contenido
-                                información Confidencial o Restringida serán físicamente destruidos o borrados
+                                información <strong class="text-red-700">Confidencial</strong> o <strong class="text-orange-800">Restringida</strong> serán físicamente destruidos o borrados
                                 utilizando software especializado que cumpla con estándares como el
                                 <a href="https://web.archive.org/web/20110524003922/http://www.dss.mil/isp/odaa/documents/nispom2006-5220.pdf"
                                     target="_blank" title="NATIONAL INDUSTRIAL SECURITY PROGRAM - DoD 5220.22-M" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
@@ -345,16 +347,12 @@
                         </h2>
                         <!-- Anexo A -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                            Anexo A: <a href="#" target="_blank"
-                                title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                            Anexo A: <a href="https://prodismo.snipe-it.io/" target="_blank"
+                                title="Inventario de Activos de Apoyo"
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                <i class="fas fa-file-excel text-green-500"></i>
-                                <span
-                                    class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                    F313-IT-1
-                                </span>
+                                <img src="../../../../images/snipe-it-logo-xs_small.png" width="24" height="24">
                                 Inventario de Activos de Apoyo
                                 <i
                                     class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
@@ -365,8 +363,8 @@
 
                         <!-- Anexo B -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                            Anexo B: <a href="#" target="_blank"
-                                title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                            Anexo B: <a href="https://forms.office.com/r/PMfvLj70eQ" target="_blank"
+                                title="F313-IT-2 Formulario de Mantenimiento y Reparación"
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -385,12 +383,12 @@
 
                         <!-- Anexo C -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                            Anexo C: <a href="#"
-                                title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                            Anexo C: <a href="https://forms.office.com/r/1aXKuqeGjU" target="_blank"
+                                title="F313-IT-4 Formulario de Baja y Eliminación Segura"
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                <i class="fas fa-file-word text-blue-500"></i>
+                                <i class="fas fa-file-alt text-blue-500"></i>
                                 <span
                                     class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                     F313-IT-4
@@ -399,12 +397,14 @@
                                 <i
                                     class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                             </a>
+                            <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario de baja y eliminación segura de
+                                activos de apoyo]</p>
                         </div>
 
                         <!-- Anexo D -->
                         <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                             Anexo D: <a href="../../procedimientos/seguridad-fisica/proc-activos-apoyos.html"
-                                title="Procedimiento de Gestión de Activos de Apoyo" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                title="P313-IT-1 Procedimiento de Gestión de Activos de Apoyo" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                 <i class="fas fa-gears text-gray-500"></i>
@@ -463,9 +463,12 @@
                 <!-- Navigation Arrows (Bottom) -->
                 <div class="flex justify-between items-center mt-12">
                     <a href="../situaciones-excepcionales/situaciones-excepcionales.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-gray-300 dark:hover:bg-gray-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Situaciones Excepcionales</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../dispositivos-moviles/dispositivos-moviles.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">

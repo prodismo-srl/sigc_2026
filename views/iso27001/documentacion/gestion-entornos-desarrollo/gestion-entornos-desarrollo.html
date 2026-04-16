@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -109,7 +108,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Todos los entornos de sistemas de información (desarrollo, pruebas, producción) de
                                 <strong>PRODISMO SRL</strong>.
                             </li>
@@ -128,13 +127,13 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.31</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Procedimiento de Segmentación de Entornos P522-IT-1</li>
-                            <li>Formulario de Solicitud de Acceso a Entornos F522-IT-1</li>
-                            <li>Matriz de Control de Accesos a Entornos M522-IT-1</li>
+                            <li><strong>P522-IT-1</strong> Procedimiento de Segmentación de Entornos</li>
+                            <li><strong>F522-IT-1</strong> Formulario de Solicitud de Acceso a Entornos</li>
+                            <li><strong>M522-IT-1</strong> Matriz de Control de Accesos a Entornos</li>
                         </ul>
                     </section>
 
@@ -233,10 +232,9 @@
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.1. Separación de Entornos
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Los entornos de Desarrollo, Pruebas y Producción deben estar separados mediante
-                                        controles lógicos estrictos (entornos diferentes de servidores y accesos a
-                                        BBDD).
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Los entornos de Desarrollo (Dev), Pruebas (Staging) y Producción (Prod) deben estar separados mediante
+                                        controles lógicos estrictos (entornos diferentes de servidores y accesos a Bases de Datos (BBDD).
                                     </li>
                                     <li>Cada entorno debe tener su propia configuración de seguridad adaptada al nivel
                                         de riesgo.</li>
@@ -245,22 +243,22 @@
 
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Gestión de Datos</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li><strong>Producción:</strong> Contiene exclusivamente datos reales y operativos.
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><i class="fa-solid fa-industry fa-lg text-gray-500 mr-2"></i><strong>Producción:</strong> Contiene exclusivamente datos reales y operativos.
                                     </li>
-                                    <li><strong>Pruebas y Desarrollo:</strong> Solo deben utilizarse datos anonimizados,
+                                    <li><i class="fa-solid fa-flask-vial fa-lg text-blue-500 mr-2"></i><strong>Pruebas y Desarrollo:</strong> Solo deben utilizarse datos anonimizados,
                                         sintéticos o de prueba.</li>
-                                    <li><strong>Prohibición:</strong> Queda terminantemente prohibido el uso de datos
+                                    <li><i class="fa-solid fa-ban fa-lg text-red-500 mr-2"></i><strong>Prohibición:</strong> Queda terminantemente prohibido el uso de datos
                                         reales y sensibles en entornos no productivos sin proceso de anonimización.</li>
                                 </ul>
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.3. Flujo de Cambios</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Todo cambio debe seguir un proceso formal de promoción desde Desarrollo hacia
                                         Pruebas y finalmente a Producción.</li>
-                                    <li><strong>Prohibición:</strong> Se prohíben las modificaciones directas en
+                                    <li><i class="fa-solid fa-ban fa-lg text-red-500 mr-2"></i><strong>Prohibición:</strong> Se prohíben las modificaciones directas en
                                         producción, excepto en procedimientos de recuperación de incidentes previamente
                                         autorizados.</li>
                                     <li>Se debe documentar el flujo de cambios entre entornos.</li>
@@ -280,20 +278,17 @@
                             <div class="p-4">
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.1. Entorno de
                                     Producción</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li><strong>Acceso:</strong> Restringido según el principio de mínimo privilegio.
-                                    </li>
-                                    <li><strong>Modificaciones:</strong> Solo mediante procesos de cambio aprobados.
-                                    </li>
-                                    <li><strong>Monitoreo:</strong> Logging y monitoreo continuo de todas las
-                                        actividades.</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Acceso:</strong> Restringido según el principio de mínimo privilegio.</li>
+                                    <li><strong>Modificaciones:</strong> Solo mediante procesos de cambio aprobados.</li>
+                                    <li><strong>Monitoreo:</strong> Logging y monitoreo continuo de todas las actividades.</li>
                                 </ul>
                             </div>
 
                             <div class="p-4">
                                 <h3 class="font-semibold text-gray-900 dark:text-gray-300 mb-2">7.2. Entornos de
                                     Desarrollo y Pruebas</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Aislamiento:</strong> Implementación en infraestructuras aisladas.</li>
                                     <li><strong>Acceso:</strong> Limitado al personal autorizado.</li>
                                     <li><strong>Datos:</strong> Exclusivamente datos anonimizados o sintéticos.</li>
@@ -344,8 +339,7 @@
                                                     class="px-6 py-4 text-center text-sm text-gray-700 dark:text-gray-300">
                                                     Sí</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Acceso
-                                                    mediante control de versiones (Git). Sin acceso directo a
+                                                    Acceso mediante control de versiones (Git). Sin acceso directo a
                                                     servidores.</td>
                                             </tr>
                                             <tr>
@@ -381,8 +375,7 @@
                                                     Proveedor Externo<br>(ERP, App viajes, etc.)</td>
                                                 <td
                                                     class="px-6 py-4 text-center text-sm text-gray-700 dark:text-gray-300">
-                                                    Sí
-                                                    (Supervisado)</td>
+                                                    Sí (Supervisado)</td>
                                                 <td
                                                     class="px-6 py-4 text-center text-sm text-gray-700 dark:text-gray-300">
                                                     Si</td>
@@ -397,9 +390,9 @@
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.2. Solicitud de Acceso
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Todas las solicitudes de acceso deben realizarse mediante F522-IT-1.</li>
-                                    <li>Aprobación requerida por el RSI y el jefe del área solicitante.</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Todas las solicitudes de acceso deben realizarse mediante <strong>F522-IT-1</strong>.</li>
+                                    <li>Aprobación requerida por el RSI o IT Manager y el jefe del área solicitante.</li>
                                 </ul>
                             </div>
                         </div>
@@ -416,18 +409,18 @@
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">9.1. Registros Obligatorios
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>F522-IT-1: Formulario de Solicitud de Acceso a Entornos.</li>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>F522-IT-1:</strong> Formulario de Solicitud de Acceso a Entornos.</li>
                                     <li>Bitácora de cambios: Historial de modificaciones entre entornos.</li>
                                     <li>Registro de accesos: Logs de acceso a todos los entornos.</li>
-                                    <li>Matriz de Control de Accesos M522-IT-1.</li>
+                                    <li><strong>M522-IT-1</strong> Matriz de Evaluación de Accesos a Entornos de Desarrollo.</li>
                                 </ul>
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">9.2. Retención de Registros
                                 </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Registros de acceso: 2 años.</li>
                                     <li>Bitácoras de cambios: 3 años.</li>
                                     <li>Solicitudes de acceso: 2 años.</li>
@@ -443,11 +436,11 @@
                             MONITOREO Y CUMPLIMIENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Auditorías trimestrales de la segmentación de entornos.</li>
                             <li>Revisión mensual de logs de acceso y cambios.</li>
                             <li>Indicadores de desempeño:
-                                <ul class="list-circle pl-6 mt-2 space-y-1">
+                                <ul class="list-circle pl-6 mt-2 space-y-3">
                                     <li>Porcentaje de entornos correctamente segmentados: Objetivo 100%.</li>
                                     <li>Tiempo de detección de accesos no autorizados: Objetivo < 24 horas.</li>
                                 </ul>
@@ -464,7 +457,7 @@
 
                         <p class="text-gray-700 dark:text-gray-300 mb-4">El incumplimiento de esta política dará lugar
                             a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Acceso no autorizado a entornos: Suspensión temporal del acceso.</li>
                             <li>Modificaciones directas en producción: Sanción disciplinaria según reglamento interno.
                             </li>
@@ -482,8 +475,8 @@
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo A: <a href="https://forms.office.com/r/CSq68zAcUC" target="_blank"
+                                    title="F522-IT-1 Formulario de Solicitud de Acceso a Entornos"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -505,7 +498,7 @@
                                 Anexo B: <a
                                     href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/ISO27001.2022%20-TISAX/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=w897f36f1ecba4392900e24bcc17f108f&csf=1&web=1&e=zKgqi5"
                                     target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    title="M522-IT-1 Matriz de Evaluación de Accesos a Entornos de Desarrollo"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -526,7 +519,7 @@
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a
                                     href="../../procedimientos/separacion-entornos/proc-separacion-entornos.html"
-                                    title="Procedimiento de Segmentación de Entornos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="P522-IT-1 Procedimiento de Segmentación de Entornos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>

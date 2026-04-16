@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -135,15 +134,13 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.1, A.8.7, A.8.9</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Política de Control de Acceso MC412-IT-1 Política de Autenticación y Control de Accesos
-                            </li>
-                            <li>Política de Protocolos Criptográficos MC511-IT-5 Política de Protocolos Criptográficos
-                                Seguros</li>
-                            <li>Política de Transferencia Segura MC512-IT-3 Política de Transferencia Segura</li>
+                            <li><strong>MC511-IT-2</strong> Política de Protocolos Criptográficos Seguros</li>
+                            <li><strong>P523-IT-1</strong> Procedimiento Protección contra Malware</li>
+                            <li><strong>P523-IT-2</strong> Procedimiento Respuesta contra Malware</li>
                         </ul>
                     </section>
 
@@ -250,7 +247,7 @@
                                         red VLAN aislado y restringido, con reglas de firewall estrictas que limiten el
                                         acceso solo a las direcciones IP de las estaciones de trabajo autorizadas.</li>
                                     <li><strong>Control de Acceso Reforzado:</strong>
-                                        <ul class="list-circle pl-6 mt-2 space-y-1">
+                                        <ul class="list-circle pl-6 mt-2 space-y-3">
                                             <li>Registro de auditoría detallado de todos los accesos (éxito/fracaso),
                                                 visualizaciones, descargas, modificaciones y eliminaciones de archivos.
                                             </li>
@@ -310,8 +307,7 @@
                                     <li><strong>Conexion a red interna Prodismo:</strong> <span
                                             class="text-red-600 dark:text-red-400"><i
                                                 class="fas fa-ban mr-1"></i>Prohibida la conexión de dispositivos
-                                            móviles (BYOD) a la red interna Prodismo.</span> Solo permitidos para
-                                        dispositivos móviles COPE.</li>
+                                            móviles (BYOD) sin declarar a la red interna <strong>Prodismo</strong></span>.</li>
                                 </ul>
                             </div>
                         </div>
@@ -359,61 +355,78 @@
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="../../documentacion/autenticacion-accesos/autenticacion-accesos.html"
-                                    title="Política de Autenticación y Control de Accesos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                Anexo A: <a href="../../procedimientos/proteccion-malware/proc-proteccion-malware.html"
+                                    title="P522-IT-1 Procedimiento Protección contra Malware" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <i class="fa-solid fa-gears text-gray-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        MC412-IT-1
+                                        P522-IT-1
                                     </span>
-                                    Política de Autenticación y Control de Accesos
+                                    Procedimiento Protección contra Malware
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de autenticación y control
-                                    de accesos]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de instrucciones y procedimiento
+                                    contra malware]</p>
                             </div>
 
                             <!-- Anexo B -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a
-                                    href="../../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
-                                    title="Política de Protocolos Criptográficos Seguros" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                Anexo B: <a href="../../procedimientos/proteccion-malware/proc-respuesta-contra-malware.html"
+                                    title="P522-IT-2 Procedimiento Respuesta a la Infección de Malware" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <i class="fa-solid fa-gears text-gray-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        MC511-IT-2
+                                        P522-IT-2
                                     </span>
-                                    Política de Protocolos Criptográficos Seguros
+                                    Procedimiento Respuesta contra Malware
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de protocolos criptográficos
-                                    seguros]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de instrucciones y procedimiento de respuesta ante infección de malware]</p>
                             </div>
 
                             <!-- Anexo C -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="../../documentacion/transferencia-segura/transferencia-segura.html"
-                                    title="Política de Transferencia Segura" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                Anexo C: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F523-IT-1%20Registro%20de%20Acciones%20Tomadas.xlsx?d=wccc962a268a246028a006942ad003a7e&csf=1&web=1&e=bs42Ah"
+                                    title="F523-IT-1 Registro de Acciones Tomadas" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <i class="fa-solid fa-file-excel text-green-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        MC512-IT-3
+                                        F523-IT-1
                                     </span>
-                                    Política de Transferencia Segura
+                                    Registro de Acciones Tomadas
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento de transferencia segura de
-                                    la información]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Regsitro de acciones tomadas contra infecciones de malware]</p>
                             </div>
+
+                            <!-- Anexo G -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo G: <a href="https://forms.office.com/r/i2eS6aq8Zy"
+                                    title="F523-IT-2 Informe post-incicente" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-list text-blue-600"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F523-IT-2
+                                    </span>
+                                    Informe post-incicente
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Informe post-incidente contra infecciones de malware]</p>
+                            </div>
+
+                            
 
                     </section>
 
@@ -424,8 +437,8 @@
                             AUDITORÍA DEL DOCUMENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Esta política será revisada anualmente por el RSI, o ante cambios tecnológicos
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Esta política será revisada anualmente por el Departamento de IT, o ante cambios tecnológicos
                                 significativos.</li>
                             <li>El cumplimiento de esta política se verificará mediante auditorías internas del
                                 <strong>SGSI</strong>, scans de vulnerabilidades y evaluaciones <strong>TISAX</strong>.

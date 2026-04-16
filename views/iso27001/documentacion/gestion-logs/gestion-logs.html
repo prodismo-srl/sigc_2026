@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -110,7 +109,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a todos los:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Sistemas de Información:</strong> Servidores (físicos y virtuales), equipos de
                                 red, servicios en la nube.</li>
                             <li><strong>Aplicaciones Críticas:</strong> ERP SIP 4.0, aplicaciones internas de desarrollo
@@ -129,19 +128,16 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.17, A.8.15, 3.1.10</li>
                             <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Política de Gestión de Incidentes: MC161-IT-1 Política Gestión de Eventos de Seguridad
-                                por Departamento</li>
-                            <li>Política de Control de Acceso: MC412-IT-1 Política de Autenticación y Control de Accesos
-                            </li>
-                            <li>Procedimiento de Registro de Eventos: P524-IT-1 Procedimiento Gestión de Registros de
-                                Eventos</li>
-                            <li>Procedimiento de Configuración de Logs: P524-IT-2 Procedimiento de Configuración de Logs
-                            </li>
-                            <li>Formulario: F524-IT-4 Reporte de Incidentes</li>
+                            <li><strong>MC161-IT-1</strong> Política Gestión de Eventos de Seguridad por Departamento</li>
+                            <li><strong>MC412-IT-1</strong> Política de Autenticación y Control de Accesos</li>
+                            <li><strong>MC524-IT-2</strong> Política de Retención y Eliminación de Logs</li>
+                            <li><strong>P524-IT-1</strong> Procedimiento Gestión de Registros de Eventos</li>
+                            <li><strong>P524-IT-2</strong> Procedimiento de Configuración de Logs</li>
+                            <li><strong>F523-IT-1</strong> Registro de Acciones Tomadas</li>
                         </ul>
                     </section>
 
@@ -208,7 +204,7 @@
                             </div>
                             <div
                                 class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Equipo de SOC/Seguridad:
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Administrador de Seguridad IT:
                                 </h3>
                                 <p class="text-gray-700 dark:text-gray-300">Monitorizar y analizar los logs de manera
                                     proactiva en busca de incidentes de seguridad.</p>
@@ -218,7 +214,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Auditores
                                     Internos/Externos:</h3>
                                 <p class="text-gray-700 dark:text-gray-300">Utilizar los logs como evidencia durante las
-                                    auditorías del SGSI y TISAX.</p>
+                                    auditorías del <strong>SGSI</strong> y <strong>TISAX</strong>.</p>
                             </div>
                         </div>
                     </section>
@@ -323,8 +319,7 @@
                         </h2>
 
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                            <li>El departamento de IT monitorizará de forma proactiva los logs centralizados en el
-                                SIEM.</li>
+                            <li>El Departamento de IT monitorizará de forma proactiva los logs centralizados en el SIEM.</li>
                             <li>Se implementarán reglas de correlación para detectar patrones de ataque (ej: múltiples
                                 intentos de login fallidos, acceso a datos fuera del horario laboral).</li>
                             <li>Se generarán alertas automatizadas para eventos críticos de seguridad.</li>
@@ -358,31 +353,30 @@
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo A: <a href="#" target="_blank"
+                                    title="F523-IT-1 Registro de Acciones Tomadas"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list"></i>
+                                    <i class="fa-solid fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F524-IT-4
+                                        F523-IT-1
                                     </span>
-                                    Formulario de Reporte de Incidentes
+                                    Registro de Acciones Tomadas
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Documento para el reporte de
-                                    incidentes de seguridad]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Regsitro de acciones tomadas contra infecciones de malware]</p>
                             </div>
 
                             <!-- Anexo B -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo B: <a href="../../documentacion/autenticacion-accesos/autenticacion-accesos.html"
-                                    title="Política de Autenticación y Control de Accesos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="MC412-IT-1 Política de Autenticación y Control de Accesos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <i class="fa-solid fa-book text-blue-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         MC412-IT-1
@@ -398,10 +392,10 @@
                             <!-- Anexo C -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="../../documentacion/gestion-incidentes/gestion-incidentes.html"
-                                    title="Política Gestión de Eventos de Seguridad por Departamento" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="MC161-IT-1 Política Gestión de Eventos de Seguridad por Departamento" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-600"></i>
+                                    <i class="fa-solid fa-book text-blue-600"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         MC161-IT-1
@@ -417,7 +411,7 @@
                             <!-- Anexo D -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo D: <a href="../../procedimientos/registros-eventos/proc-registros-eventos.html"
-                                    title="Procedimiento Gestión de Registros de Eventos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="P524-IT-1 Procedimiento Gestión de Registros de Eventos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
@@ -436,7 +430,7 @@
                             <!-- Anexo E -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo E: <a href="../../procedimientos/registros-eventos/proc-configuracion-logs.html"
-                                    title="Procedimiento de Configuración de Logs" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    title="P524-IT-2 Procedimiento de Configuración de Logs" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
@@ -461,7 +455,7 @@
                             AUDITORÍA DEL DOCUMENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Esta política será revisada anualmente por el RSI.</li>
                             <li>El cumplimiento de esta política se auditará de forma periódica mediante:
                                 <ul class="list-circle pl-6 mt-2 space-y-3">

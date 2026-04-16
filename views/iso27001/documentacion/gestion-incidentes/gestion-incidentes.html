@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -60,9 +59,11 @@
 
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
-                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                    <div class="relative mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Incidentes por
-                            Departamento</h1>
+                            Departamento <span
+                                class="absolute -top-4 right-0 bg-green-100 text-green-800 text-sm font-medium px-2 py-2 mb-12 rounded-full"><i
+                                    class="fas fa-check"></i> NUEVA</span></h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -137,9 +138,9 @@
                                 A.5.29</li>
                             <li><strong>ISO/IEC 27001:2022</strong> - Guía para los controles de seguridad</li>
                             <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Procedimiento de Gestión de Eventos por Departamento P161-IT-1</li>
-                            <li>Formulario de Reporte de Eventos por Departamento F161-IT-1</li>
-                            <li>Formulario de Escalamiento de Eventos F161-IT-2</li>
+                            <li><strong>P161-IT-1</strong> Procedimiento de Gestión de Eventos por Departamento</li>
+                            <li><strong>F161-IT-1</strong> Formulario de Reporte de Eventos por Departamento</li>
+                            <li><strong>F161-IT-2</strong> Formulario de Escalamiento de Eventos</li>
                         </ul>
                     </section>
 
@@ -227,7 +228,7 @@
                                     <li>Actuar como primer punto de contacto para eventos de seguridad en su
                                         departamento.</li>
                                     <li>Aplicar los procedimientos específicos de respuesta definidos para su área.</li>
-                                    <li>Documentar y reportar eventos utilizando el formulario F161-IT-1.</li>
+                                    <li>Documentar y reportar eventos utilizando el formulario <strong>F161-IT-1</strong>.</li>
                                 </ul>
                             </div>
                             <div
@@ -617,8 +618,8 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.1. Registros Obligatorios
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>F161-IT-1: Formulario de Reporte de Eventos por Departamento.</li>
-                                <li>F161-IT-2: Formulario de Escalamiento de Eventos.</li>
+                                <li><strong>F161-IT-1</strong>: Formulario de Reporte de Eventos por Departamento.</li>
+                                <li><strong>F161-IT-2</strong>: Formulario de Escalamiento de Eventos.</li>
                                 <li>Registro de acciones inmediatas tomadas.</li>
                                 <li>Evidencias del evento (logs, capturas, emails).</li>
                             </ul>
@@ -743,8 +744,8 @@
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="https://forms.office.com/r/eryzXy34gc?origin=lprLink" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo A: <a href="https://forms.office.com/r/eryzXy34gc" target="_blank"
+                                    title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -763,27 +764,7 @@
 
                             <!-- Anexo B -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="#" target="_blank"
-                                    title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-word text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F161-IT-2
-                                    </span>
-                                    Formulario de Escalamiento de Eventos
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario para la notificación formal
-                                    de eventos que requieren escalamiento]</p>
-                            </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="../../procedimientos/gestion-incidentes/proc-eventos-seguridad.html"
+                                Anexo B: <a href="../../procedimientos/gestion-incidentes/proc-eventos-seguridad.html"
                                     target="_blank"
                                     title="Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
