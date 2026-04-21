@@ -364,20 +364,20 @@ function initializeQuickActions() {
                         <div class="space-y-3">
                             <a href="https://www.first.org/cvss/" class="block p-3 bg-gray-600 rounded-lg hover:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors" target="_blank">
                                 <div class="flex items-center">
-                                    <i class="fa-regular fa-file-lines mr-3" style="color:rgb(167, 167, 167);"></i>
+                                    <i class="fa-regular fa-file-lines mr-3" style="color:rgba(212, 222, 255, 1);"></i>
                                     
                                     <div>
-                                        <div class="font-medium text-gray-400 dark:text-gray-200">Documentos CVSS 3.1</div>
+                                        <div class="font-medium text-gray-400 dark:text-gray-200">Documentos CVSS</div>
                                         <div class="text-sm text-gray-300 dark:text-gray-400">https://www.first.org/cvss/</div>
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://www.first.org/cvss/calculator/3-1" class="block p-3 bg-gray-600 rounded-lg hover:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors" target="_blank">
+                            <a href="https://www.first.org/cvss/calculator/4.0" class="block p-3 bg-gray-600 rounded-lg hover:bg-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors" target="_blank">
                                 <div class="flex items-center">
-                                    <i class="fas fa-calculator mr-3" style="color:rgb(225, 158, 70);"></i>
+                                    <i class="fas fa-calculator mr-3" style="color:rgba(230, 146, 35, 1);"></i>
                                     <div>
-                                        <div class="font-medium text-gray-400 dark:text-gray-200">Calculadora CVSS 3.1</div>
-                                        <div class="text-sm text-gray-300 dark:text-gray-400">https://www.first.org/cvss/calculator/3-18</div>
+                                        <div class="font-medium text-gray-400 dark:text-gray-200">Calculadora CVSS 4.0</div>
+                                        <div class="text-sm text-gray-300 dark:text-gray-400">https://www.first.org/cvss/calculator/4.0#</div>
                                     </div>
                                 </div>
                             </a>

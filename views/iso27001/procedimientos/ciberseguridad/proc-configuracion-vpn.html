@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -180,7 +179,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Requisitos Previos
                                 y Recopilación de Información</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Antes de iniciar la configuración, el
-                                personal de Soporte TI debe verificar y documentar lo siguiente para cada solicitud:</p>
+                                personal de Soporte IT debe verificar y documentar lo siguiente para cada solicitud:</p>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Autenticación Multifactor (MFA)</strong> <br>El usuario debe tener
                                     configurado y operativo el aplicativo Microsoft Authenticator en su dispositivo
@@ -188,14 +187,12 @@
                                 <li><strong>Datos para la configuración</strong><br>Para la configuración de la
                                     <strong>VPN</strong> se debe brindar al proveedor los siguientes datos
                                     <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Confirmar si el usuario se encuentra registrado en la plataforma Prodismo.
-                                        </li>
+                                        <li>Confirmar si el usuario se encuentra registrado en la plataforma Prodismo.</li>
                                         <li>Obtener y proporcionar al proveedor el número de teléfono de contacto
                                             directo del usuario para autorizar y gestionar la sesión remota.</li>
                                         <li>Obtener y proporcionar al proveedor el identificador de AnyDesk del equipo
                                             del usuario, ya que se configura remotamente.</li>
-                                        <li>Aclarar si el usuario está o no físicamente en <strong>PRODISMO
-                                                SRL</strong>.</li>
+                                        <li>Aclarar si el usuario está o no físicamente en <strong>PRODISMO SRL</strong>.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Solicitud de Configuración de VPN</strong><br>
@@ -208,12 +205,31 @@
                                     autorización por parte del gestor del solicitante, documentada en el ticket de
                                     servicio.</li>
                             </ol>
+
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                <a href="https://forms.office.com/r/bQ9744Wjhc" target="_blank"
+                                    title="F512-IT-2 Formulario Solicitud Configuración de VPN"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F512-IT-2
+                                    </span>
+                                    Formulario Solicitud Configuración de VPN
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario Solicitud Configuración de VPN]</p>
+                            </div>
+
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Monitorización y
                                 Control</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Auditoría:</strong> Se realizarán revisiones periódicas de los logs de
                                     conexión y acceso de la VPN para detectar actividades anómalas o no autorizadas.
                                 </li>
@@ -231,7 +247,7 @@
                             Como evidencia del cumplimiento de este procedimiento, se deben mantener y archivar los
                             siguientes registros:
                         </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Tickets de servicio con la solicitud y aprobación del acceso.</li>
                             <li>Email de solicitud de servicio de configuración de VPN.</li>
                         </ul>
@@ -352,10 +368,10 @@
                                 Contactar soporte
                             </button>
                             <a id="request-vpn-access"
-                                href="https://teams.microsoft.com/l/app/6c22aa93-2779-488e-bb3d-8e808434fa96?source=app-header-share-entrypoint"
+                                href="https://forms.office.com/r/bQ9744Wjhc"
                                 class="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded-lg hover:bg-green-100 dark:bg-green-900/20 dark:text-green-400 dark:hover:bg-green-900/30 transition-colors flex items-center">
                                 <i class="fas fa-network-wired mr-2"></i>
-                                Solicitar acceso VPN
+                                Solicitar Configuración VPN
                             </a>
                         </div>
                     </div>

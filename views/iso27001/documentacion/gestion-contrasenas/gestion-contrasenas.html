@@ -257,7 +257,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">2. Complejidad</h3>
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-8">2. Complejidad</h3>
                                 <p class="text-gray-700 dark:text-gray-300 mb-3">Debe incluir caracteres de al menos
                                     tres de las siguientes cuatro categorías:</p>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
@@ -269,7 +269,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3. Caducidad
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-8">3. Caducidad
                                     (Rotación)</h3>
                                 <div class="overflow-x-auto">
                                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -317,17 +317,24 @@
                                         </tbody>
                                     </table>
                                 </div>
+
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-3 mt-8 ml-2">Ejemplo de Notificación rotación de contraseñas plataforma Micrsoft</h3>
+                                    <div class="flex bg-blue-50 rounded-lg dark:bg-blue-900/20 p-4 border-l-4 border-blue-400 ml-10">
+                                        <img src="../../../../images/gestion-contrasenas/notificacion_cambio-password.png" alt="Ejemplo de Notificación" class="w-auto h-full m-1 p-3">
+                                    </div>
+                                </div>
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4. Bloqueo de
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-8">4. Bloqueo de
                                     Cuenta</h3>
                                 <p class="text-gray-700 dark:text-gray-300">Tras 5 intentos fallidos de inicio de
                                     sesión, la cuenta se bloqueará durante un período de 15 minutos.</p>
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5. Almacenamiento
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-8">5. Almacenamiento
                                 </h3>
                                 <p class="text-gray-700 dark:text-gray-300 py-2">Las contraseñas deben almacenarse en
                                     forma de hash con (salt) utilizando algoritmos fuertes (ej: bcrypt) para desarrollo.</p>
@@ -340,7 +347,7 @@
                             </div>
 
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6. Autenticación
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3 mt-8">6. Autenticación
                                     Multifactor (MFA)</h3>
                                 <p class="text-gray-700 dark:text-gray-300 mb-3">Es obligatorio el uso de MFA para:</p>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
@@ -408,14 +415,27 @@
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Herramientas:</h3>
                                 <p class="text-gray-700 dark:text-gray-300">Se proporcionará y recomendará el uso de un
-                                    gestor de contraseñas corporativo
-                                    <a href="https://bitwarden.com/download/" target="_blank"
-                                        title="Descarga e instala la Extensión Bitwarden en tu navegador">
-                                        <kbd
-                                            class="px-2 py-1 rounded bg-gray-200 text-blue-700 hover:text-purple-800 dark:text-blue-500 dark:hover:text-purple-800"><strong>Bitwarden</strong></kbd>
+                                    gestor de contraseñas corporativo para almacenar y generar contraseñas fuertes.<br>
+                                    <a href="https://bitwarden.com/download/"
+                                        title="Descarga e instala la Extensión Bitwarden en tu navegador" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-6">
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            <img src="../../../../images/iso27001/Bitwarden-Logo2.jpg" class="w-6 h-6 mr-1">
+                                        </span>
+                                        <strong>Bitwarden</strong>
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                     </a>
-                                    , para almacenar y generar contraseñas fuertes.
                                 </p>
+
+                                <div>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-3 mt-6">Ejemplo de Herramienta Bitwarden</h3>
+                                    <div class="bg-blue-50 rounded-lg dark:bg-blue-900/20 p-4 border-l-4 border-blue-400">
+                                        <img src="../../../../images/gestion-contrasenas/ejemplo_bitwarden_browser.png" alt="Ejemplo de Comunicado" class="w-128 h-full">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -477,7 +497,7 @@
                                     title="MC412-IT-1 Política de Autenticación y Control de Accesos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-book text-blue-800 dark:text-blue-300"></i>
+                                    <i class="fa-solid fa-book text-blue-600 dark:text-blue-300"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         MC412-IT-1
@@ -497,7 +517,7 @@
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-shield-halved text-gray-800 dark:text-gray-300"></i>
+                                    <i class="fa-solid fa-book text-blue-600 dark:text-blue-300"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         MC131-IT-1
