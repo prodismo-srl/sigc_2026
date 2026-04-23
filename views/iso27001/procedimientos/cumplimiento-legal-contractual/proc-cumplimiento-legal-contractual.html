@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Procedimiento de Cumplimiento de Disposiciones Reglamentarias">
 
 <head>
     <meta charset="UTF-8">
@@ -27,71 +27,18 @@
     <!-- Tailwind styles -->
     <link href="../../../../dist/output.css" rel="stylesheet">
 
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
 </head>
 
 <body
     class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-900/90 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex items-center space-x-2">
-                        <a href="../../../index.html">
-                            <img src="../../../images/ITProdimo_logo.png"
-                                data-light-src="../../../images/ITProdimo_logo.png"
-                                data-dark-src="../../../images/ITProdimo_logo_blanco_f_azuloscuro.png"
-                                alt="Logo Prodismo" width="200" height="40" data-theme-logo>
-                        </a>
+    <div id="header-container" data-module="header"></div>
 
-                        <div class="pl-6">
-                            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Prodismo SRL</h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">Procedimiento de Cumplimiento de
-                                Disposiciones Reglamentarias</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
-                        </div>
-                        <input type="text" id="search-input"
-                            class="block w-64 pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                            placeholder="Buscar en el contenido...">
-                    </div>
-
-                    <!-- Theme Toggle -->
-                    <button id="theme-toggle"
-                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors">
-                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
-                    </button>
-
-                    <!-- PDF Download -->
-                    <button id="pdf-download"
-                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2">
-                        <i class="fas fa-download"></i>
-                        <span>Descargar PDF</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Search -->
-            <div class="md:hidden pb-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-search text-gray-400"></i>
-                    </div>
-                    <input type="text" id="mobile-search-input"
-                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent dark:bg-gray-800 dark:border-gray-700 dark:text-white"
-                        placeholder="Buscar en el contenido...">
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
@@ -116,22 +63,22 @@
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Cumplimiento
                             de Disposiciones Reglamentarias</h1>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div  id="metadata" class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: P711-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/8/2025</span>
+                                <span>Última revisión: 22/4/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL2, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -148,8 +95,8 @@
                             reglamentarias y contractuales en materia de Seguridad de la Información, implementando la
                             política <a
                                 href="../../documentacion/cumplimiento-legal-contractual/cumplimiento-legal-contractual.html"
-                                class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">"MC711-IT-1
-                                Política de Cumplimiento Disposiciones Reglamentarias"</a> y asegurando el cumplimiento
+                                class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">"<strong>MC711-IT-1
+                                Política de Cumplimiento Disposiciones Reglamentarias</strong>"</a> y asegurando el cumplimiento
                             de los requisitos de protección de <strong>ISO/IEC 27001:2022</strong>, así como con los
                             requisitos del marco <strong>TISAX</strong>.
                         </p>
@@ -173,7 +120,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             RESPONSABLES
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><span class="font-medium">RSI:</span> Coordinación general y reporte</li>
                             <li><span class="font-medium">Departamento Legal:</span> Identificación y interpretación
                                 normativa</li>
@@ -193,25 +140,37 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Fase de
                                 Identificación</h3>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 1: Revisión del Marco
                                     Normativo</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Departamento Legal realiza revisión trimestral de nuevas disposiciones</li>
                                     <li>Utilizar <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F711-IT-1</a>
+                                    title="F711-IT-1 Formulario de Identificación de Requisitos Legales"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-3 mr-3 my-2 mb-2">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F711-IT-1
+                                    </span>
+                                    Formulario de Identificación de Requisitos Legales
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
                                         para registrar disposiciones identificadas</li>
                                     <li>Categorizar por tipo y ámbito de aplicación</li>
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 2: Evaluación de
                                     Aplicabilidad</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Evaluar si la disposición aplica a <strong>PRODISMO SRL</strong></li>
                                     <li>Considerar:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li>Actividades de la organización</li>
                                         <li>Tipos de información manejada</li>
                                         <li>Relaciones con clientes y proveedores</li>
@@ -220,15 +179,15 @@
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 3: Clasificación por
                                     Impacto</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li><span class="font-medium text-red-700">Alto:</span> Multas significativas,
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><span class="font-medium text-red-600">Alto:</span> Multas significativas,
                                         pérdida de certificaciones, daño reputacional severo</li>
-                                    <li><span class="font-medium text-orange-700">Medio:</span> Sanciones moderadas,
+                                    <li><span class="font-medium text-orange-600">Medio:</span> Sanciones moderadas,
                                         impacto operativo limitado</li>
-                                    <li><span class="font-medium text-green-700">Bajo:</span> Requisitos
+                                    <li><span class="font-medium text-blue-600">Bajo:</span> Requisitos
                                         administrativos, impacto mínimo</li>
                                 </ul>
                             </div>
@@ -238,25 +197,37 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Fase de
                                 Implementación</h3>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 4: Desarrollo de
                                     Controles</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Para cada disposición aplicable, desarrollar controles específicos</li>
                                     <li>Asignar responsable de implementación</li>
                                     <li>Establecer plazo de implementación</li>
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 5: Actualización de
                                     Matriz</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Actualizar <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F711-IT-2</a>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Actualizar <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M711-IT-2%20Matriz%20Legal%20Contractual.xlsx?d=wc61a892f9f6f413db03702a45b81da55&csf=1&web=1&e=zKsZGT" target="_blank"
+                                    title="M711-IT-2 Matriz de Cumplimiento Normativo"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-3 mr-3 my-2">
+                                    <i class="fa-solid fa-file-excel text-green-600"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        M711-IT-2
+                                    </span>
+                                    Matriz de Cumplimiento Normativo
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
                                         con nuevas disposiciones y controles</li>
                                     <li>Incluir:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li>Referencia normativa</li>
                                         <li>Control implementado</li>
                                         <li>Responsable</li>
@@ -266,10 +237,10 @@
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 6: Comunicación y
                                     Capacitación</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Comunicar nuevos requisitos a empleados afectados</li>
                                     <li>Realizar capacitación específica si corresponde</li>
                                     <li>Actualizar material de referencia</li>
@@ -281,15 +252,27 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.3. Fase de
                                 Verificación</h3>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 7: Verificación de
                                     Cumplimiento</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Realizar verificaciones según frecuencia definida usando <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F711-IT-3</a>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Realizar verificaciones según frecuencia definida usando <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F711-IT-3%20Checklist%20de%20Verificaci%C3%B3n.xlsx?d=wd8a6b5ad48624aebbb7b1ebfaf945e57&csf=1&web=1&e=eiHEZf" target="_blank"
+                                            title="F711-IT-3 Checklist de Verificación de Cumplimiento"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-3 mr-3 my-2">
+                                            <i class="fa-solid fa-list-check text-green-600"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F711-IT-3
+                                            </span>
+                                            Checklist de Verificación de Cumplimiento
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
                                     </li>
                                     <li>Verificar:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li>Implementación efectiva de controles</li>
                                         <li>Conocimiento por parte de empleados</li>
                                         <li>Evidencias de cumplimiento</li>
@@ -297,15 +280,27 @@
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 8: Auditorías
                                     Programadas</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                    <li>Realizar auditorías usando <a href="#"
-                                            class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">F711-IT-4</a>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Realizar auditorías usando <a href="https://prodismotemp.sharepoint.com/:w:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F711-IT-4%20Informe%20de%20Evaluaci%C3%B3n%20de%20Cumplimiento.docx?d=wbb188f87907c44cb90005640ac5e6238&csf=1&web=1&e=uk4WrH" target="_blank"
+                                            title="F711-IT-4 Informe de Evaluación de Cumplimiento"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-3 mr-3 my-2">
+                                            <i class="fa-solid fa-info-circle text-blue-600"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F711-IT-4
+                                            </span>
+                                            Informe de Evaluación de Cumplimiento
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
                                     </li>
                                     <li>Frecuencia según criticidad:</li>
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
+                                    <ul class="list-circle pl-6 mt-2 space-y-3">
                                         <li><span class="font-medium">Alto:</span> Trimestral</li>
                                         <li><span class="font-medium">Medio:</span> Semestral</li>
                                         <li><span class="font-medium">Bajo:</span> Anual</li>
@@ -318,20 +313,20 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.4. Fase de Mejora
                                 Continua</h3>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 9: Análisis de
                                     Resultados</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Analizar resultados de verificaciones y auditorías</li>
                                     <li>Identificar tendencias y áreas de mejora</li>
                                     <li>Desarrollar planes de acción</li>
                                 </ul>
                             </div>
 
-                            <div class="mb-4">
+                            <div class="my-6">
                                 <h4 class="font-medium text-gray-900 dark:text-white mb-2">Paso 10: Actualización de
                                     Procesos</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Incorporar lecciones aprendidas</li>
                                     <li>Actualizar procedimientos según cambios normativos</li>
                                     <li>Mejorar controles basado en efectividad</li>
@@ -348,7 +343,7 @@
                         </h2>
                         <div
                             class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-                            <img src="../../../images/flow-diagrams/cumplimiento-disposiciones-reglamentarias.png"
+                            <img src="../../../../images/flow-diagrams/cumplimiento-disposiciones-reglamentarias.png"
                                 alt="Flujograma del Proceso de Cumplimiento de Disposiciones Reglamentarias"
                                 class="mx-auto h-80 w-full object-cover md:h-full md:w-80 cursor-pointer">
                             <p class="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
@@ -366,20 +361,48 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. F711-IT-1:
-                                Inventario de Disposiciones</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Sección A: Identificación de la disposición</li>
-                                <li>Sección B: Evaluación de aplicabilidad</li>
-                                <li>Sección C: Clasificación de impacto</li>
-                                <li>Sección D: Responsable de seguimiento</li>
-                                <li>Sección E: Fecha de próxima revisión</li>
+                                Formulario de Identificación de Requisitos Legales</h3>
+                                <a href="#"
+                                    title="F711-IT-1 Formulario de Identificación de Requisitos Legales"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                    <i class="fas fa-file-alt text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F711-IT-1
+                                    </span>
+                                    Formulario de Identificación de Requisitos Legales
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 ml-6">
+                                <li>Identificación de la disposición</li>
+                                <li>Evaluación de aplicabilidad</li>
+                                <li>Clasificación de impacto</li>
+                                <li>Responsable de seguimiento</li>
+                                <li>Fecha de próxima revisión</li>
                             </ul>
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. F711-IT-2: Matriz
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. M711-IT-2: Matriz
                                 de Cumplimiento</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M711-IT-2%20Matriz%20Legal%20Contractual.xlsx?d=wc61a892f9f6f413db03702a45b81da55&csf=1&web=1&e=zKsZGT" target="_blank"
+                                    title="M711-IT-2 Matriz de Cumplimiento Normativo"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                    <i class="fa-solid fa-file-excel text-green-600"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        M711-IT-2
+                                    </span>
+                                    Matriz de Cumplimiento Normativo
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 ml-6">
                                 <li>Base de datos centralizada de cumplimiento</li>
                                 <li>Campos: ID, disposición, control, responsable, estado, última verificación, próxima
                                     verificación</li>
@@ -390,7 +413,21 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.3. F711-IT-3:
                                 Checklist de Verificación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                        <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F711-IT-3%20Checklist%20de%20Verificaci%C3%B3n.xlsx?d=wd8a6b5ad48624aebbb7b1ebfaf945e57&csf=1&web=1&e=eiHEZf" target="_blank"
+                                            title="F711-IT-3 Checklist de Verificación de Cumplimiento"
+                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                            <i class="fa-solid fa-list-check text-green-600"></i>
+                                            <span
+                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                                F711-IT-3
+                                            </span>
+                                            Checklist de Verificación de Cumplimiento
+                                            <i
+                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        </a>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 ml-6">
                                 <li>Lista de verificación por disposición</li>
                                 <li>Criterios de cumplimiento claros</li>
                                 <li>Espacio para observaciones y acciones correctivas</li>
@@ -401,7 +438,21 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.4. F711-IT-4: Informe
                                 de Evaluación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <a href="https://prodismotemp.sharepoint.com/:w:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F711-IT-4%20Informe%20de%20Evaluaci%C3%B3n%20de%20Cumplimiento.docx?d=wbb188f87907c44cb90005640ac5e6238&csf=1&web=1&e=uk4WrH" target="_blank"
+                                    title="F711-IT-4 Informe de Evaluación de Cumplimiento"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                    <i class="fa-solid fa-info-circle text-blue-600"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F711-IT-4
+                                    </span>
+                                    Informe de Evaluación de Cumplimiento
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 ml-6">
                                 <li>Resumen ejecutivo del estado de cumplimiento</li>
                                 <li>Hallazgos detallados por disposición</li>
                                 <li>Plan de acción con responsables y fechas</li>
@@ -430,7 +481,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.2. Contenido de
                                 Capacitación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Marco normativo aplicable a <strong>PRODISMO SRL</strong></li>
                                 <li>Responsabilidades individuales</li>
                                 <li>Procedimientos de reporte</li>
@@ -449,13 +500,30 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.1. Proceso de Reporte
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Cualquier empleado puede reportar posible incumplimiento</li>
-                                <li>Canales:
-                                    <a href="mailto:itprodismo@prodismo.com"
-                                        class="text-primary-600 bg-gray-200 p-1 rounded-lg hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">itprodismo@prodismo.com</a>;
-                                    <a href="mailto:rrhh@prodismo.com"
-                                        class="text-primary-600 bg-gray-200 p-1 rounded-lg hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300">rrhh@prodismo.com</a>
+                                <li>Canales:<br>
+                                    <a href="mailto:itprodismo@prodismo.com" target="_blank"
+                                        title="itprodismo@prodismo.com"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                            border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                            group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                        <i class="fa-solid fa-envelope-circle-check text-blue-600"></i>
+                                            itprodismo@prodismo.com
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
+
+                                    <a href="mailto:rrhh@prodismo.com" target="_blank"
+                                        title="rrhh@prodismo.com"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                            border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                            group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-2 mb-3">
+                                        <i class="fa-solid fa-envelope-circle-check text-blue-600"></i>
+                                            rrhh@prodismo.com
+                                        <i
+                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                    </a>
                                 </li>
                                 <li>Confidencialidad garantizada</li>
                             </ul>
@@ -464,7 +532,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.2. Investigación y
                                 Acción</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>RSI investiga reportes dentro de las 48 horas</li>
                                 <li>Departamento Legal evalúa implicaciones</li>
                                 <li>Desarrollar plan de acción correctiva</li>
@@ -483,7 +551,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.1. Auditorías
                                 Internas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Programa anual de auditorías de cumplimiento</li>
                                 <li>Muestreo de verificaciones realizadas</li>
                                 <li>Evaluación de efectividad de controles</li>
@@ -493,8 +561,8 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.2. Métricas de
                                 Desempeño</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Tiempo promedio de implementación de controles: <span class="font-medium">Objetivo <
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Tiempo promedio de implementación de controles: <span class="font-medium">Objetivo &lt;
                                             30 días</span>
                                 </li>
                                 <li>Porcentaje de disposiciones con verificaciones al día: <span
@@ -512,7 +580,7 @@
                             ACTUALIZACIÓN DEL PROCEDIMIENTO
                         </h2>
 
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Revisión semestral por el RSI</li>
                             <li>Actualización ante cambios normativos significativos</li>
                             <li>Mejoras basadas en lecciones aprendidas</li>
@@ -541,14 +609,24 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                             0</td>
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
                                             25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
+                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            22/4/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
                                             del documento</td>
                                     </tr>
                                 </tbody>
@@ -639,7 +717,7 @@
 
                     <!-- Related Documents -->
                     <div
-                        class="bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+                        class="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
                         <h3 class="font-semibold text-gray-900 dark:text-white mb-4"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados
@@ -682,7 +760,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">0.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -698,11 +776,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Fecha de emisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">22/4/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/8/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">22/4/2027</span>
                             </div>
                         </div>
                     </div>
@@ -712,33 +790,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <img src="../../../images/logo01-bco.png" data-light-src="../../../images/ProdismoFirma.png"
-                            data-dark-src="../../../images/logo01-bco.png" alt="Logo Prodismo" width="120" height="30"
-                            data-theme-logo>
-                        <span class="text-sm text-gray-600 dark:text-gray-400">© 2025 <strong>PRODISMO SRL</strong>.
-                            Todos los derechos reservados.</span>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="../../politica-privacidad/politica-privacidad.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Política
-                        de Privacidad</a>
-                    <a href="../../terminos-usos/terminos-usos.html"
-                        class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">Términos
-                        de Uso</a>
-                    <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>ISO 27001:2022 | TISAX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"

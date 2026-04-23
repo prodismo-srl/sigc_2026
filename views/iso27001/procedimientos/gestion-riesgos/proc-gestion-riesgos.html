@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -110,7 +109,7 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Metodología:</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-4">
-                                Basada en ISO 27005 y VDA ISA, adaptada a entornos on-premise.
+                                Basada en <strong>ISO 27005</strong> y <strong>VDA ISA</strong>, adaptada a entornos on-premise.
                             </p>
                         </div>
 
@@ -118,11 +117,11 @@
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Pasos:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Identificación de Activos y Amenazas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li><strong>Activos Críticos:</strong> CATIA (🔴), SIP (🔴), Windows Server
                                             (🟡).</li>
                                         <li><strong>Amenazas Comunes:</strong>
-                                            <ul class="list-disc pl-6 mt-2 space-y-1">
+                                            <ul class="list-disc pl-6 mt-2 space-y-3">
                                                 <li>Ransomware en servidores de diseño.</li>
                                                 <li>Acceso no autorizado a SIP por phishing.</li>
                                             </ul>
@@ -130,7 +129,7 @@
                                     </ul>
                                 </li>
                                 <li><strong>Evaluación de Probabilidad e Impacto:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Escala 1-5 (1=Bajo, 5=Crítico).</li>
                                         <li>Ejemplo:</li>
                                     </ul>
@@ -187,7 +186,7 @@
                                     </div>
                                 </li>
                                 <li><strong>Documentación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Registro de Riesgos (Plantilla):</li>
                                     </ul>
                                     <div class="overflow-x-auto mt-3">
@@ -231,9 +230,9 @@
                                                         class="p-2 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
                                                         Medio (8) 🟡</td>
                                                     <td class="p-2 text-sm text-gray-700 dark:text-gray-300">Admin
-                                                        TI</td>
+                                                        IT</td>
                                                     <td class="px-1 py-2 text-sm text-gray-700 dark:text-gray-300">
-                                                        <ol class="list-disc pl-2 mt-2 space-y-1">
+                                                        <ol class="list-disc pl-2 mt-2 space-y-3">
                                                             <li>Backups diarios.</li>
                                                             <li>Firewall perimetral.</li>
                                                             <li>VPN obligatoria para accesos remotos.</li>
@@ -242,7 +241,7 @@
                                                         </ol>
                                                     </td>
                                                     <td class="px-1 py-2 text-sm text-gray-700 dark:text-gray-300">
-                                                        <ol class="list-disc pl-6 mt-2 space-y-1">
+                                                        <ol class="list-disc pl-6 mt-2 space-y-3">
                                                             <li>Segmentar red VLAN para ingeniería.</li>
                                                             <li>Simulacro de ataque Semestral.</li>
                                                         </ol>
@@ -292,7 +291,7 @@
                                                 Ataque ransomware a servidores Internos</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mitigar</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-4 space-y-1">
+                                                <ul class="list-disc pl-4 space-y-3">
                                                     <li>Implementar segmentación VLAN para ingeniería.</li>
                                                     <li>Simulacro de ataque Semestral.</li>
                                                     <li>Cifrado.</li>
@@ -309,7 +308,7 @@
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mitigar
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-4 space-y-1">
+                                                <ul class="list-disc pl-4 space-y-3">
                                                     <li>Capacitación anti-phishing mensual.</li>
                                                     <li>Monitoreo con SIEM.</li>
                                                 </ul>
@@ -325,7 +324,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Responsables:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Dueño del Riesgo:</strong> Asignado según área (ej.: Admin IT para riesgos
                                     de infraestructura).</li>
                                 <li><strong>IT Manager:</strong> Supervisa la implementación de controles.</li>
@@ -342,7 +341,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Frecuencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Trimestral:</strong> Riesgos 🔴 Críticos.</li>
                                 <li><strong>Semestral:</strong> Riesgos 🟠 Altos/🔵 Medios.</li>
                                 <li><strong>Ad-hoc:</strong> Tras incidentes o cambios (ej.: nuevo cliente con
@@ -353,7 +352,7 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Checklist de Revisión:
                             </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>¿Los controles mitigaron el riesgo? (Verificar con métricas).</li>
                                 <li>¿Cambió la probabilidad/impacto? (Actualizar matriz).</li>
                                 <li>¿Se asignaron nuevos responsables?</li>
@@ -370,9 +369,9 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Dashboard de Riesgos:</strong> Power BI o Excel con:
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Nivel de riesgo actualizado.</li>
                                         <li>Estado de acciones de mitigación.</li>
                                     </ul>
@@ -436,7 +435,7 @@
                                             <td
                                                 class="p-2 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
                                                 Medio (8) </td>
-                                            <td class="p-2 text-sm text-gray-700 dark:text-gray-300">Admin TI</td>
+                                            <td class="p-2 text-sm text-gray-700 dark:text-gray-300">Admin IT</td>
                                             <td class="p-2 text-sm text-gray-700 dark:text-gray-300">Segmentar red
                                                 + Simulacro de ataque Semestral.</td>
                                             <td
@@ -462,7 +461,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="text-gray-700 dark:text-gray-300"><strong>Resultados:</strong></p>
-                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                         <li>Controles implementados: ✅ Capacitación de usuarios en seguridad
                                             (Trimestral).</li>
                                         <li>Brechas: ❌ Monitoreo con SIEM (pendiente para 2/03/2026).</li>
@@ -481,11 +480,11 @@
                                 class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
                                 <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Caso: Nuevo requisito de
                                     BMW para watermarking en archivos de diseños CATIA</h4>
-                                <ol class="list-decimal pl-6 text-blue-700 dark:text-blue-300 space-y-2">
+                                <ol class="list-decimal pl-6 text-blue-700 dark:text-blue-300 space-y-3">
                                     <li><strong>Identificar Riesgo:</strong> "Fuga de diseños sin watermarking" →
                                         Impacto: 5 (Crítico).</li>
                                     <li><strong>Mitigación:</strong>
-                                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                                        <ul class="list-disc pl-6 mt-1 space-y-3">
                                             <li>Instalar módulo de watermarking en CATIA.</li>
                                             <li>Capacitar a ingenieros/diseñadores.</li>
                                         </ul>
@@ -497,15 +496,15 @@
 
                         <div>
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Automatización:</strong> Usar Microsoft Defender for Endpoint para detección
                                     de ransomware.</li>
                                 <li><strong>Integración con <strong>TISAX</strong>:</strong> Vincular riesgos a la <a
                                         href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F121-IT-1%20Declaraci%C3%B3n%20de%20Aplicabilidad%20(DoA).xlsx?d=wbe2de912078c4bd1adf21a5fbc4979d6&csf=1&web=1&e=k3xKtM"
-                                        class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">Declaración
-                                        de Aplicabilidad (DoA)</a>.</li>
+                                        class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"><strong>F121-IT-1 Declaración
+                                        de Aplicabilidad (DoA)</strong></a>.</li>
                                 <li><strong>Ejemplo de Clientes Automotrices:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li><strong>VW:</strong> Enfocarse en protección física de servidores
                                             on-premise.</li>
                                         <li><strong>BMW:</strong> Priorizar watermarking y logs detallados.</li>
@@ -617,7 +616,7 @@
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
                         </h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
                                 <i class="fas fa-exclamation-triangle mr-2"></i>
@@ -636,11 +635,11 @@
                         <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados</h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <a href="../../documentacion/gestion-riesgos/gestion-riesgos.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>
-                                Política Analisis de Riesgos
+                                MC141-IT-1 Política Analisis de Riesgos
                             </a>
                         </div>
                     </div>

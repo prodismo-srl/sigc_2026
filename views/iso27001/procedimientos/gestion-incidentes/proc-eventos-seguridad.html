@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -293,7 +292,7 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                SOC (TI)</td>
+                                                RSI (IT)</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Contención
                                                 técnica (ej.: aislar servidor, bloquear IPs maliciosas).</td>
                                         </tr>
@@ -336,7 +335,7 @@
                                 <li><strong>Comunicación:</strong>
                                     <ul class="list-disc pl-6 mt-2 space-y-1">
                                         <li>Interna: Notificar a dirección en menos de 2h.</li>
-                                        <li>Externa: Reportar a BMW/VW si afecta sus datos (en menos de 24h). </li>
+                                        <li>Externa: Reportar a clientes (Ej.: BMW/VW) si afecta sus datos (en menos de 24h). </li>
                                     </ul>
                                 </li>
                                 <li><strong>Erradicación y Recuperación:</strong>
@@ -399,7 +398,7 @@
                                                 dominio + capacitación.</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Cerrado</td>
+                                                <span class="m-2 p-1 bg-green-300 rounded-lg">Cerrado</span></td>
                                         </tr>
                                         <tr>
                                             <td
@@ -416,7 +415,7 @@
                                                 cuenta + Rotación de contraseñas + capacitación.</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Cerrado</td>
+                                                <span class="m-2 p-1 bg-green-300 rounded-lg">Cerrado</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -700,7 +699,7 @@
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
-        class="fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors hidden">
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible">
         <i class="fas fa-arrow-up"></i>
     </button>
 

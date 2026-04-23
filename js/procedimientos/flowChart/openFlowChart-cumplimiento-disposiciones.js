@@ -54,7 +54,7 @@ function openFlowchartModal() {
     `;
 
     const flowchartImage = document.createElement('img');
-    flowchartImage.src = '../../../images/flow-diagrams/cumplimiento-disposiciones-reglamentarias.png';
+    flowchartImage.src = '../../../../images/flow-diagrams/cumplimiento-disposiciones-reglamentarias.png';
     flowchartImage.alt = 'Flujo del proceso de cumplimiento de disposiciones reglamentarias - Vista ampliada';
     flowchartImage.style.cssText = `
         max-width: 100%;
