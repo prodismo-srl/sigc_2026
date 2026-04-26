@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -34,7 +33,7 @@
 </head>
 
 <body
-    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    class="bg-white text-gray-300 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
     <!-- Header -->
     <div id="header-container" data-module="header"></div>
 
@@ -61,11 +60,13 @@
 
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
-                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Seguridad en
-                            Situaciones Excepcionales</h1>
+                    <div class="relative mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-300 dark:text-white mb-4">Procedimiento de Seguridad en
+                            Situaciones Excepcionales <span
+                                class="absolute -top-4 right-1 bg-red-100 text-red-800 text-sm font-medium px-3 py-2 mb-12 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span></h1>
                         <div id="metadata"
-                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-300 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: P312-IT-1</span>
@@ -82,17 +83,21 @@
                                 <i class="fas fa-shield-alt"></i>
                                 <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
+                            <div class="flex items-center space-x-1 text-red-600 dark:text-red-400">
+                                <i class="fas fa-recycle"></i>
+                                <span>Reemplazado por 1.6, 5.2.8 y 5.2.9</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p class="text-gray-300 dark:text-gray-300 leading-relaxed">
                             Mitigar riesgos en eventos disruptivos (ciberataques, desastres naturales, etc.),
                             protegiendo activos críticos (ej.: CATIA/NX, SIP), y en cumplimiento de normativas de
                             <strong>ISO/IEC 27001:2022</strong>, así como los requisitos del marco
@@ -101,14 +106,14 @@
                     </section>
 
                     <section id="identificacion-situaciones" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             IDENTIFICACIÓN DE SITUACIONES EXCEPCIONALES
                         </h2>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Matriz de Riesgos
+                            <h3 class="text-xl font-semibold text-gray-300 dark:text-white mb-3">Matriz de Riesgos
                                 Excepcionales:</h3>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -129,38 +134,38 @@
                                         class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Ransomware en servidores</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Parálisis de
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Parálisis de
                                                 producción (CATIA/SIP)</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Windows
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Windows
                                                 Server, backups</td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Fuego en Data Center</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Daño físico a
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Daño físico a
                                                 servidores on-premise</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Hardware,
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Hardware,
                                                 diseños no cloud</td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Corte eléctrico prolongado</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Interrupción
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Interrupción
                                                 >24h en toda la planta</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servidores
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Servidores
                                                 (Documentación, Diseños, SIP), estaciones CATIA/NX</td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Protestas sociales</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bloqueo de
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Bloqueo de
                                                 acceso a instalaciones</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Personal,
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Personal,
                                                 equipos críticos</td>
                                         </tr>
                                     </tbody>
@@ -169,20 +174,20 @@
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramienta:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <h3 class="text-xl font-semibold text-gray-300 dark:text-white mb-3">Herramienta:</h3>
+                            <ul class="list-disc pl-6 text-gray-300 dark:text-gray-300 space-y-3">
                                 <li>Registro en matriz de riesgos <strong>TISAX</strong> (priorizar por
                                     probabilidad/impacto)</li>
                             </ul>
                             <div class="m-3">
-                                <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F311-IT-7%20Registro%20de%20accesos%20a%20zonas%20rojas.xlsx?d=w4d7d82efc2794c54bbace61dd20bb74c&csf=1&web=1&e=26hDZE"
+                                <a href="#"
                                     target="_blank" title="M141-IT-2 Matriz de riesgos"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-arrow-up-right-dots"></i>
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow cursor-not-allowed
+                                        group no-underline text-blue-400 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fa-solid fa-arrow-up-right-dots text-gray-300"></i>
                                     <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        class="bg-white dark:bg-gray-300 text-blue-400 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         M141-IT-2
                                     </span>
                                     Matriz de riesgos
@@ -194,14 +199,14 @@
                     </section>
 
                     <section id="componentes-infraestructura" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             COMPONENTES DE INFRAESTRUCTURA EN PELIGRO
                         </h2>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Inventario de
+                            <h3 class="text-xl font-semibold text-gray-300 dark:text-white mb-3">Inventario de
                                 Vulnerabilidades:</h3>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -222,33 +227,33 @@
                                         class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Servidor Interno</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Ataque
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Ataque
                                                 físico/cibernético</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 - UPS + generador eléctrico<br>
                                                 - Segmentación de red
                                             </td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Administración SIP</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Falta de
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Falta de
                                                 backups actualizados</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 - Backup automático diario<br>
                                                 - Alojamiento off-premise
                                             </td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Acceso principal</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bloqueo por
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Bloqueo por
                                                 protestas</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 - Ruta alternativa<br>
                                                 - Acceso a Server Interno remotamente (Home Office)
                                             </td>
@@ -260,14 +265,14 @@
                     </section>
 
                     <section id="medidas-limitar-impactos" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             MEDIDAS PARA LIMITAR IMPACTOS
                         </h2>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plan de Contingencia
+                            <h3 class="text-xl font-semibold text-gray-300 dark:text-white mb-3">Plan de Contingencia
                                 por Escenario:</h3>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -288,34 +293,34 @@
                                         class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Ransomware</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 1. Aislar servidores<br>
                                                 2. Activar backups offline<br>
                                                 3. Contactar a proveedor de servicios
                                             </td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin IT / IT
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Admin IT / IT
                                                 Manager</td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Inundación</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 1. Colocar detectores de humo en Salas de Servidores y Archivo<br>
                                                 2. Notificar a clientes
                                             </td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin IT</td>
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Admin IT</td>
                                         </tr>
                                         <tr>
                                             <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                                 Corte eléctrico</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">
                                                 1. Usar UPS para servidores y endpoints
                                             </td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin IT</td>
+                                            <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Admin IT</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -323,15 +328,15 @@
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Protocolos Clave:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <h3 class="text-xl font-semibold text-gray-300 dark:text-white mb-3">Protocolos Clave:</h3>
+                            <ul class="list-disc pl-6 text-gray-300 dark:text-gray-300 space-y-3">
                                 <li><strong>Comunicación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Notificar a clientes automotrices en &lt;2h, si afecta entregas</li>
                                     </ul>
                                 </li>
                                 <li><strong>Recuperación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Tiempo máximo de inactividad para CATIA/NX: 24 horas</li>
                                     </ul>
                                 </li>
@@ -340,27 +345,27 @@
                     </section>
 
                     <section id="recomendaciones-tisax" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             RECOMENDACIONES PARA TISAX
                         </h2>
 
                         <div class="mb-6">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
+                            <ul class="list-disc pl-6 text-gray-300 dark:text-gray-300 space-y-4">
                                 <li><strong>Simulacros:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Realizar 1 simulacro anual de ransomware</li>
                                     </ul>
                                 </li>
                                 <li><strong>Clientes Automotrices:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Reportar planes de contingencia en auditorías</li>
                                         <li>Incluir repuestos críticos en stock de emergencia</li>
                                     </ul>
                                 </li>
                                 <li><strong>Tecnología:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Implementar SIEM para detección temprana de ciberataques</li>
                                     </ul>
                                 </li>
@@ -369,7 +374,7 @@
                     </section>
 
                     <section id="flujo-respuesta" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
                             FLUJO DE RESPUESTA ANTE SITUACIONES EXCEPCIONALES
@@ -379,9 +384,9 @@
                             <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
                                 <img src="../../../../images/flow-diagrams/respuesta-situaciones-excepcionales.png"
                                     alt="Flujo de Respuesta ante Situaciones Excepcionales"
-                                    class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
+                                    class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-not-allowed"
                                     id="flujo-respuesta-image">
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                                <p class="text-sm text-gray-300 dark:text-gray-400 mt-2">
                                     Diagrama de Flujo de Respuesta ante Situaciones Excepcionales
                                 </p>
                             </div>
@@ -389,7 +394,7 @@
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <h2 class="text-2xl font-bold text-gray-300 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
                             REVISIONES DEL DOCUMENTO
@@ -422,12 +427,12 @@
                                     </tr>
                                     <tr>
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
                                             1</td>
                                         <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-300">
                                             20/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
+                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-300">Revisión completa
                                             del documento</td>
                                     </tr>
                                 </tbody>
@@ -463,25 +468,25 @@
                         </h3>
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#identificacion-situaciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 IDENTIFICACIÓN DE SITUACIONES</a>
                             <a href="#componentes-infraestructura"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 COMPONENTES DE INFRAESTRUCTURA</a>
                             <a href="#medidas-limitar-impactos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 MEDIDAS PARA LIMITAR IMPACTOS</a>
                             <a href="#recomendaciones-tisax"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RECOMENDACIONES TISAX</a>
                             <a href="#flujo-respuesta"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
                                 FLUJO DE RESPUESTA</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                class="block py-2 px-3 text-sm text-gray-300 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -493,7 +498,7 @@
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
                         </h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
                                 <i class="fas fa-exclamation-triangle mr-2"></i>
@@ -512,7 +517,7 @@
                         <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados</h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <a href="../../documentacion/situaciones-excepcionales/situaciones-excepcionales.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>
@@ -531,31 +536,35 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">P312-IT-1</span>
+                                <span class="font-medium text-gray-300 dark:text-white">P312-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-300 dark:text-white">1.0</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
-                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                                <span class="font-medium text-red-600 dark:text-red-400">Remplazado</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                                <span class="font-medium text-gray-300 dark:text-white">Germán Montalbetti</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                <span class="font-medium text-gray-300 dark:text-white">Damián Pedrosa</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2026</span>
+                                <span class="font-medium text-gray-300 dark:text-white">20/1/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2027</span>
+                                <span class="font-medium text-gray-300 dark:text-white">20/1/2027</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-red-600 dark:text-red-400">Reemplazado por:</span>
+                                <span class="font-medium text-red-600 dark:text-white">1.6, 5.2.8 y 5.2.9</span>
                             </div>
                         </div>
                     </div>
@@ -569,7 +578,7 @@
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
-        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors hidden">
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
         <i class="fas fa-arrow-up"></i>
     </button>
 

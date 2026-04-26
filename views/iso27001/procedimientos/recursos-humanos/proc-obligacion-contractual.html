@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -112,16 +111,16 @@
                                 Clave:</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>NDA (Acuerdo de Confidencialidad):</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>"El empleado se compromete a no divulgar información clasificada como 🔴
-                                            <strong>[CONFIDENCIAL]</strong> (ej.: diseños CATIA) o 🟡 (ej.: SIP/SIP4.0)
+                                            <strong class="text-red-500">[CONFIDENCIAL]</strong> (ej.: diseños CATIA) o 🟡 (ej.: SIP/SIP4.0)
                                             durante y después de su vinculación con Prodismo SRL."
                                         </li>
                                         <li>Penalidades: Multas por violaciones.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Contratos Laborales:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Incluir anexo de <strong>Políticas de Seguridad</strong> (ej.: prohibición
                                             de dispositivos de almacenamiento de información personales).</li>
                                         <li>Especificar consecuencias legales por acceso no autorizado a sistemas.</li>
@@ -138,7 +137,7 @@
                                     "El empleado conoce y acepta cumplir con la Política de Seguridad de la Información
                                     (<strong>MC111-IT-1</strong> Política de Seguridad de la Información), incluyendo:
                                 </p>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mt-2">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
                                     <li>Uso exclusivo de herramientas autorizadas.</li>
                                     <li>Reportar incidentes en menos de 24h.</li>
                                     <li>Violaciones resultarán en acciones disciplinarias y/o despido.</li>
@@ -181,7 +180,7 @@
                                                 <a href="https://prodismo.tulegajo.com/login.htm" target="_blank">
                                                     <img src="../../../../images/logo_tulegajo.png"
                                                         alt="Logo TuLegajo.com" width="180" height="45"
-                                                        class="my-2 mx-auto p-1 bg-gray-400 rounded-md">
+                                                        class="my-2 mx-auto p-1 bg-gray-400 rounded-md shadow hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
                                                 </a>
                                             </td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Firma
@@ -298,7 +297,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="text-gray-700 dark:text-gray-300"><strong>Contenido:</strong></p>
-                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                         <li>Lista de activos críticos (CATIA/NX, SIP/SIP4.0).</li>
                                         <li>Prohibiciones explícitas (ej.: no subir diseños a la nube personal).</li>
                                         <li>Sanciones detalladas (alineadas con GDPR si aplica).</li>
@@ -320,7 +319,7 @@
                                 <div class="mb-4">
                                     <p class="text-gray-700 dark:text-gray-300"><strong>POLÍTICAS ACEPTADAS:</strong>
                                     </p>
-                                    <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                    <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                         <li>Uso seguro de CATIA/NX/SIP/SIP4.0.</li>
                                         <li>Reporte de incidentes.</li>
                                     </ol>
@@ -338,20 +337,21 @@
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones para
                                 Implementación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Digitalización:</strong> Usar <a
                                         href="https://www.ilovepdf.com/es/firmar-pdf"
-                                        class="text-primary-600 hover:text-primary-700 dark:text-primary-400"
-                                        target="_blank">https://www.ilovepdf.com/es/firmar-pdf</a> para firmas
+                                        title="Herramienta para firmar documentos electrónicos"
+                                        class="bg-blue-200 m-2 p-2 text-red-500 font-medium hover:text-primary-700 shadow hover:shadow-lg hover:scale-105 dark:text-primary-400 rounded-lg transition-all duration-300 cursor-pointer"
+                                        target="_blank">https://www.ilovepdf.com/es/firmar-pdf <i class="fas fa-external-link-alt text-red-400 ml-1"></i></a> para firmas
                                     electrónicas trazables.</li>
                                 <li><strong>Clientes Automotrices:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Incluir requisitos de clientes en contratos individuales (ej.: "Empleado
                                             sujeto a posibles auditorías de clientes automotrices").</li>
                                     </ul>
                                 </li>
                                 <li><strong>Monitorización:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIEM para detectar violaciones (ej.: intentos de exportar archivos
                                             CATIA/NX).</li>
                                     </ul>
@@ -482,7 +482,7 @@
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
                         </h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
                                 <i class="fas fa-exclamation-triangle mr-2"></i>
@@ -501,7 +501,7 @@
                         <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados</h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <a href="../../documentacion/uso-aceptable/uso-aceptable.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>

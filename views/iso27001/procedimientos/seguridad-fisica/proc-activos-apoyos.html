@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -48,9 +47,12 @@
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
                     <a href="../seguridad-fisica/proc-situaciones-excepcionales.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Situaciones Excepcionales</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../seguridad-fisica/proc-dispositivos-moviles.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -180,14 +182,14 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Transporte</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Interno:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Sin requisitos especiales.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Externo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Proveedores de reparación deben firmar NDA <strong>TISAX</strong> o tener
                                             certificación <strong>ISO 27001</strong>.</li>
                                     </ul>
@@ -232,7 +234,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Reparación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Proveedores Autorizados:</strong> Lista aprobada por el IT Manager (ej.:
                                     "Armanet S.A.").</li>
                                 <li><strong>Borrado Seguro:</strong> Eliminar datos del disco o retirar disco antes de
@@ -242,10 +244,10 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Pérdida/Robo</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Reporte Inmediato (&lt;1h)</strong> a Administrador IT o IT Manager.</li>
                                 <li><strong>Acciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Bloqueo remoto vía MDM (Microsoft Intune).</li>
                                         <li>Notificación a clientes si afecta datos.</li>
                                     </ul>
@@ -255,14 +257,14 @@
 
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">E. Eliminación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Electrónicos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Destrucción física de discos (certificado de destrucción).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Documentos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Trituradora de corte cruzado (nivel P-7) para planos.</li>
                                     </ul>
                                 </li>
@@ -329,7 +331,7 @@
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Auditorías Sorpresa:</strong> Verificar estado de USB's (semestral).</li>
                                 <li><strong>Indicadores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>% de dispositivos con cifrado activo (meta: 100%)</li>
                                         <li>Tiempo promedio de respuesta a pérdidas (meta: &lt;2h)</li>
                                     </ul>
@@ -521,9 +523,12 @@
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
                     <a href="../seguridad-fisica/proc-situaciones-excepcionales.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Situaciones Excepcionales</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../seguridad-fisica/proc-dispositivos-moviles.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -578,7 +583,7 @@
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
                         </h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
                                 <i class="fas fa-exclamation-triangle mr-2"></i>
@@ -597,7 +602,7 @@
                         <h4 class="text-sm font-medium text-gray-900 dark:text-white mb-2"><i
                                 class="fas fa-paperclip mr-2 text-primary-600"></i>
                             Recursos Relacionados</h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <a href="../../documentacion/gestion-activos-apoyo/gestion-activos-apoyo.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>
@@ -655,7 +660,7 @@
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
-        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors hidden">
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
         <i class="fas fa-arrow-up"></i>
     </button>
 
