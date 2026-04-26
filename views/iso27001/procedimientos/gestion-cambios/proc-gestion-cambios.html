@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -112,7 +111,7 @@
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
                             Este procedimiento aplica a:
                         </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Todos los cambios realizados en sistemas, aplicaciones, redes, infraestructura
                                 tecnológica y procesos bajo el alcance del <strong>Sistema de Gestión de la Seguridad de
                                     la Información (SGSI)</strong>.</li>
@@ -189,7 +188,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Solicitud de
                                 Cambio</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li>El Solicitante completa el
+                                <li>El Solicitante o Departaemnto de IT, completa el
                                     <a href="#" target="_blank" title="F521-IT-1 Formulario de Solicitud de Cambio"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                             border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -205,7 +204,7 @@
                                     </a>
                                     <br>
                                     Incluyendo:
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Descripción detallada del cambio.</li>
                                         <li>Justificación y beneficio esperado.</li>
                                         <li>Impacto en sistemas, procesos o usuarios.</li>
@@ -219,7 +218,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Clasificación del
                                 Cambio</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">El Gestor de Cambios clasifica el cambio
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">El Equipo de IT clasifica el cambio
                                 según su impacto y riesgo:</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
@@ -253,8 +252,8 @@
                                                 Significativo</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Impacto medio
                                                 en operaciones o seguridad</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestor de
-                                                Cambios + RSI</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Departamento
+                                                IT o RSI</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -262,8 +261,7 @@
                                                 Menor</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Bajo riesgo,
                                                 impacto limitado</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestor de
-                                                Cambios</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -275,14 +273,14 @@
                                 Aprobación</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Cambios Críticos y Significativos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>El departamente de IT se reúne para evaluar el riesgo, impacto y plan de
                                             reversión.</li>
                                         <li>Se documenta la decisión en <br>
                                             <a href="#" target="_blank" title="F521-IT-2 Registro de Cambios"
                                                 class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                             border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                            group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                            group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-3 mb-2">
                                                 <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                                 <span
                                                     class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
@@ -296,8 +294,8 @@
                                     </ul>
                                 </li>
                                 <li><strong>Cambios Menores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
-                                        <li>El Gestor de Cambios aprueba o rechaza la solicitud.</li>
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
+                                        <li>El Equipo de IT aprueba o rechaza la solicitud.</li>
                                     </ul>
                                 </li>
                             </ol>
@@ -312,7 +310,7 @@
                                         title="MC521-IT-1 Política de Comunicación de Cambios"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-3 mb-2">
                                         <i class="fas fa-book text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
@@ -331,7 +329,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.5. Implementación
                             </h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li>El Equipo de Implementación ejecuta el cambio dentro de la ventana autorizada.</li>
+                                <li>El Equipo de Implementación o proveedor autorizado ejecuta el cambio dentro de la ventana autorizada.</li>
                                 <li>Se documentan los pasos realizados y cualquier incidencia.</li>
                             </ol>
                         </div>
@@ -342,7 +340,7 @@
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li>Se valida que el cambio se haya implementado correctamente y cumpla con los
                                     objetivos.</li>
-                                <li>El Gestor de Cambios cierra la solicitud y archiva la documentación.</li>
+                                <li>El Equipo de IT cierra la solicitud y archiva la documentación.</li>
                             </ol>
                         </div>
                     </section>
@@ -373,7 +371,7 @@
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F521-IT-1
                                                 - Formulario Solicitud de Cambio</a>
                                         </td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 años</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">2 años</td>
                                     </tr>
                                     <tr>
                                         <td
@@ -382,7 +380,7 @@
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F521-IT-2
                                                 - Registro de Cambios</a>
                                         </td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">5 años</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">4 años</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -412,7 +410,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
                             PROHIBICIONES
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Queda prohibido implementar cambios sin la aprobación correspondiente.</li>
                             <li>No se permiten cambios fuera de la ventana autorizada, salvo en casos de emergencia
                                 debidamente justificados.</li>
@@ -563,7 +561,7 @@
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC521-IT-1
                                         Política de Comunicación de Cambios</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
                         </div>
                     </div>

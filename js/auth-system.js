@@ -81,12 +81,12 @@ function createAuthModal() {
     // Contenido del modal
     modal.innerHTML = `
         <div style="text-align: center; margin-bottom: 1.5rem;">
-            <img src="../../../../../images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
+            <img src="./images/ITProdimo_logo.png" alt="Logo Prodismo" style="height: 50px; margin-bottom: 1rem; margin-left: auto;margin-right: auto">
             <h2 style="color: #1e40af; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">
                 Acceso Restringido
             </h2>
             <p style="color: #1e40af; font-size: 1.1rem;">
-                Información: [INTERNO]
+                Clasificación: [INTERNO]
             </p>
             <p style="color: #6b7280; font-size: 0.95rem;">
                 Ingrese el código de autorización para acceder al portal
@@ -224,25 +224,36 @@ function requestAccessCode() {
                     <a href="mailto:itprodismo@prodismo.com" style="color: #1e40af;">itprodismo@prodismo.com</a>
                 </div>
                 <p style="font-size: 0.9rem; color: #6b7280;">
-                    Incluya en el asunto: "Solicitud de Código de Acceso - Portal Seguridad"
+                    Incluya en el asunto: "Solicitud de Código de Acceso - Portal SGSI"
                 </p>
             </div>
         `,
         icon: 'info',
+        position: 'top',           // 👈 Muestra el modal en la parte superior
         confirmButtonText: 'Copiar Email',
         confirmButtonColor: '#1e40af',
         showCancelButton: true,
-        cancelButtonText: 'Cerrar'
+        cancelButtonText: 'Cerrar',
+        didOpen: () => {
+            // 👈 Asegura que el modal de SweetAlert esté por encima del overlay de autenticación
+            const swalContainer = document.querySelector('.swal2-container');
+            if (swalContainer) {
+                swalContainer.style.zIndex = '10000';  // mayor que 9999
+            }
+        }
     }).then((result) => {
         if (result.isConfirmed) {
-            // Copiar email al portapapeles
             navigator.clipboard.writeText('itprodismo@prodismo.com').then(() => {
                 Swal.fire({
                     title: 'Email Copiado',
                     text: 'La dirección de email ha sido copiada al portapapeles',
                     icon: 'success',
                     timer: 2000,
-                    showConfirmButton: false
+                    showConfirmButton: false,
+                    didOpen: () => {
+                        const swalContainer = document.querySelector('.swal2-container');
+                        if (swalContainer) swalContainer.style.zIndex = '10000';
+                    }
                 });
             });
         }
@@ -281,5 +292,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-

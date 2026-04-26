@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -47,9 +46,12 @@
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
                     <a href="../gestion-accesos/proc-gestion-respuesta-incidentes.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-gray-300 dark:hover:bg-gray-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Respuesta ante Incidentes</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../ciberseguridad/proc-proteccion-informacion-transferencia.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -67,7 +69,7 @@
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
-                                <span>Código: MC511-IT-1</span>
+                                <span>Código: P511-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
@@ -110,7 +112,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-2">Aplicable a:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Cifrado de datos en reposo (discos, bases de datos).</li>
                                 <li>Cifrado en tránsito (TLS/SSL, VPN).</li>
                                 <li>Firmas digitales y hashing (ej.: SHA-256).</li>
@@ -121,7 +123,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Evaluación de Necesidades:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Clasificar datos según sensibilidad (ej.: Confidencial, Restringido).</li>
                                         <li>Definir requisitos de seguridad para cada categoría<br>
                                             <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html"
@@ -142,9 +144,9 @@
                                     </ul>
                                 </li>
                                 <li><strong>Selección de Algoritmos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Usar solo algoritmos aprobados por estándares (ej.: NIST, BSI):
-                                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                            <ul class="list-circle pl-6 mt-1 space-y-3">
                                                 <li>Cifrado: AES-256 (datos sensibles), AES-128 (otros).</li>
                                                 <li>Hashing: SHA-256 o superior.</li>
                                                 <li>Protocolos: TLS 1.2+, IPSec.</li>
@@ -153,9 +155,9 @@
                                     </ul>
                                 </li>
                                 <li><strong>Validación Técnica:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Verificar compatibilidad con sistemas.</li>
-                                        <li>Documentar en F511-IT-2 Algoritmos Aprobados.</li>
+                                        <li>Documentar en <strong>F511-IT-2 Algoritmos Aprobados</strong>.</li>
                                     </ul>
                                 </li>
                             </ol>
@@ -164,7 +166,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html"
                                         target="_blank" title="MC511-IT-1 Política de Clasificación de Datos"
@@ -182,7 +184,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank" title="F511-IT-2 Algoritmos Aprobados"
+                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F511-IT-2%20Algoritmos%20Aprobados.xlsx?d=w25161763841f4a199c550b9802ec4565&csf=1&web=1&e=QaYq4o"
+                                    target="_blank" title="F511-IT-2 Algoritmos Aprobados"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                             border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                             group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
@@ -209,7 +212,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Generación, almacenamiento, rotación y destrucción de claves.</li>
                             </ul>
                         </div>
@@ -218,26 +221,26 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Generación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Usar herramientas validadas (ej.: OpenSSL, HSM - Hardware Security Module).
                                         </li>
                                         <li>Longitud mínima: 2048 bits (RSA), 256 bits (AES).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Almacenamiento:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Claves maestras en HSM o bóvedas cifradas (ej.: Bitwarden).</li>
                                         <li>Nunca en texto plano.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Rotación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Cada 12 meses para claves de cifrado.</li>
                                         <li>Cada 24 meses para certificados SSL/TLS.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Destrucción:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Métodos seguros (ej.: borrado criptográfico, destrucción física de HSM).
                                         </li>
                                     </ul>
@@ -248,7 +251,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="#" target="_blank" title="F511-IT-4 Rotación Claves"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
@@ -277,7 +280,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Comunicaciones internas/externas (VPN, API, correo electrónico).</li>
                             </ul>
                         </div>
@@ -286,18 +289,18 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Configuración de TLS/SSL:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Deshabilitar protocolos obsoletos (SSLv3, TLS 1.0/1.1).</li>
                                         <li>Usar cifrados fuertes (ej.: AES256-GCM-SHA384).</li>
                                     </ul>
                                 </li>
                                 <li><strong>VPN:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Implementar IPSec/IKEv2 con autenticación MFA.</li>
                                     </ul>
                                 </li>
                                 <li><strong>APIs:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Requerir autenticación mutua (mTLS) + tokens JWT firmados.</li>
                                     </ul>
                                 </li>
@@ -306,7 +309,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Verificación:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Escaneo trimestral con herramientas (ej.: Nessus).</li>
                             </ul>
                         </div>
@@ -314,7 +317,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="../../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
                                         target="_blank" title="MC511-IT-2 Política de Protocolos Criptográficos"
@@ -344,7 +347,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Regulaciones locales/globales (GDPR, ITAR, Ley de Protección de Datos).</li>
                             </ul>
                         </div>
@@ -353,13 +356,13 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Inventario de Requisitos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Identificar leyes aplicables (ej.: AES-256 para datos de clientes en UE).
                                         </li>
                                     </ul>
                                 </li>
                                 <li><strong>Validación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Revisar con departamento legal.<br>
                                             <a href="#" target="_blank"
                                                 title="F511-IT-7 Informe de Cumplimiento Criptográfico"
@@ -383,7 +386,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="#" target="_blank" title="F511-IT-7 Informe de Cumplimiento Criptográfico"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
@@ -412,7 +415,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Pérdida de claves, cifrado comprometido, ataques a protocolos.</li>
                             </ul>
                         </div>
@@ -421,22 +424,22 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Detección:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Monitoreo de logs (ej.: intentos de fuerza bruta).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Contención:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Revocar claves afectadas + regenerar nuevas.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Investigación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Análisis forense (ej.: identificar si hubo fuga de datos).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Comunicación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Notificar a clientes/reguladores, si es requerido.</li>
                                     </ul>
                                 </li>
@@ -475,7 +478,7 @@
                                                     class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                                 MC511-IT-1 Política de Clasificación de Datos</a><br>
 
-                                            <a href="#" target="_blank" title="F511-IT-2 Algoritmos Aprobados"
+                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F511-IT-2%20Algoritmos%20Aprobados.xlsx?d=w25161763841f4a199c550b9802ec4565&csf=1&web=1&e=QaYq4o" target="_blank" title="F511-IT-2 Algoritmos Aprobados"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400 mb-2"><i
                                                     class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
                                                 F511-IT-2 Algoritmos Aprobados</a>
@@ -566,9 +569,12 @@
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
                     <a href="../gestion-accesos/proc-gestion-respuesta-incidentes.html"
-                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        class="relative flex items-center px-4 py-2 bg-gray-50 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-900/20 dark:text-gray-300 dark:hover:bg-gray-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Respuesta ante Incidentes</span>
+                        <span
+                                class="absolute -top-4 left-1 bg-red-100 text-red-800 text-[10px] font-medium px-1 py-1 mb-6 rounded-full"><i
+                                    class="fas fa-recycle"></i> REEMPLAZADA</span>
                     </a>
                     <a href="../ciberseguridad/proc-proteccion-informacion-transferencia.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -622,7 +628,7 @@
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
                         </h4>
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <button id="report-incident"
                                 class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
                                 <i class="fas fa-exclamation-triangle mr-2"></i>
@@ -645,15 +651,21 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html"
-                                class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
-                                <i class="fas fa-book mr-2"></i>
-                                MC511-IT-1 Política de Clasificación de Datos
+                            <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html" title="MC511-IT-1 Política de Clasificación de Datos"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400 mr-2"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC511-IT-1 Política de Clasificación de Datos</span>
+                                </div>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../../documentacion/protocolos-criptograficos/protocolos-criptograficos.html"
-                                class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
-                                <i class="fas fa-book mr-2"></i>
-                                MC511-IT-2 Política de Protocolos Criptográficos
+                            <a href="../../documentacion/protocolos-criptograficos/protocolos-criptograficos.html" title="MC511-IT-2 Política de Protocolos Criptográficos"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400 mr-2"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC511-IT-2 Política de Protocolos Criptográficos</span>
+                                    <i class="fas fa-link text-gray-400 text-xs"></i>
+                                </div>
                             </a>
                         </div>
                     </div>
