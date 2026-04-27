@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -224,6 +223,31 @@
                                 </table>
                             </div>
                         </div>
+
+                        <!--Calculadora CVSS 4.0 -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2 Calculadora CVSS 4.0</h3>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <a href="https://www.first.org/cvss/calculator/4.0" target="_blank"
+                                title="Enlace Calculadora CVSS 4.0"
+                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                <img src="../../../../images/iso27001/Calculator_CVSS4-0.png"
+                                    class="w/2 h-8 px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">                                        
+                                Calculadora CVSS 4.0
+                                <i
+                                    class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-5">4.3 Ejemplo de Puntuación de Vulnerabilidades de sistemas</h3>
+                            <div class="bg-blue-50 rounded-lg dark:bg-blue-900/20 p-4 border-l-4 border-blue-400">
+                                <img src="../../../../images/iso27001/Img_Calculator_CVSS4-0.png" alt="Ejemplo Calculacora" class="w-128 h-full m-1 p-1">
+                            </div>
+                        </div>
+
                     </section>
 
                     <section id="proceso-aplicacion-parches" class="mb-12 scroll-mt-20">
@@ -236,7 +260,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.1. Fase 1:
                                 Identificación y Evaluación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Actividades:</p>
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mb-2">Actividades:</p>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Monitoreo diario de fuentes oficiales (Microsoft, Linux vendors, CVE)</li>
                                 <li>Recepción de alertas del sistema de gestión de vulnerabilidades</li>
@@ -244,8 +268,8 @@
                                 <li>Clasificación según matriz de criticidad</li>
                             </ol>
 
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Criterios de Evaluación:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mt-4 mb-2">Criterios de Evaluación:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Criticidad de la vulnerabilidad (CVSS)</li>
                                 <li>Sistemas afectados y su exposición</li>
                                 <li>Existencia de exploits públicos</li>
@@ -260,7 +284,7 @@
                             <div class="mb-4">
                                 <h4 class="text-md font-semibold text-gray-900 dark:text-white mb-2">5.2.1. Parches
                                     Críticos (Aplicación Emergencia)</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Notificación inmediata al RSI</li>
                                     <li>Evaluación expedita de impacto (máximo 4 horas)</li>
                                     <li>Planificación de ventana de emergencia</li>
@@ -271,7 +295,7 @@
                             <div class="mb-4">
                                 <h4 class="text-md font-semibold text-gray-900 dark:text-white mb-2">5.2.2. Parches No
                                     Críticos (Aplicación Programada)</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Inclusión en ciclo regular de parches</li>
                                     <li>Programación en ventana de mantenimiento estándar</li>
                                     <li>Comunicación con 5 días de antelación mínima</li>
@@ -282,8 +306,8 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.3. Fase 3: Pruebas
                             </h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Entorno de Testing:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mb-2">Entorno de Testing:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Réplica representativa de sistemas productivos</li>
                                 <li>Pruebas de funcionalidad básica y específica</li>
                                 <li>Verificación de compatibilidad con aplicaciones críticas</li>
@@ -292,7 +316,7 @@
 
                             <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Criterios de Aprobación para
                                 Producción:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Sin errores críticos en pruebas</li>
                                 <li>Verificación de funcionalidad de negocio</li>
                                 <li>Confirmación de resolución de vulnerabilidad</li>
@@ -302,15 +326,15 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.4. Fase 4:
                                 Implementación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Pre-Implementación:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mb-2">Pre-Implementación:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Backup completo de sistemas (incluido estado del sistema)</li>
                                 <li>Verificación de plan de rollback</li>
                                 <li>Comunicación final a usuarios</li>
                             </ul>
 
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Implementación:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mt-4 mb-2">Implementación:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Aplicación según ventana autorizada</li>
                                 <li>Monitorización continua durante el proceso</li>
                                 <li>Verificación punto por punto de sistemas críticos</li>
@@ -320,16 +344,16 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.5. Fase 5:
                                 Verificación Post-Implementación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Actividades Inmediatas (0-2 horas):</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mb-2">Actividades Inmediatas (0-2 horas):</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Verificación de servicios críticos</li>
                                 <li>Confirmación de aplicación correcta del parche</li>
                                 <li>Monitoreo de indicadores de performance</li>
                             </ul>
 
-                            <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2">Actividades Posteriores (24-48 horas):
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mt-4 mb-2">Actividades Posteriores (24-48 horas):
                             </p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Escaneo de vulnerabilidades para confirmar remediación</li>
                                 <li>Revisión de logs de sistema para detectar anomalías</li>
                                 <li>Encuesta rápida a usuarios clave</li>
@@ -339,21 +363,8 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.6. Fase 6:
                                 Documentación y Cierre</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-2">Registros Obligatorios:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
-                                <li>
-                                    <a href="#" target="_blank" title="F525-IT-3 Formulario de Aplicación de Parches"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F525-IT-3
-                                        </span>
-                                        Formulario de Aplicación de Parches
-                                    </a>
-                                </li>
+                            <p class="text-gray-700 font-medium dark:text-gray-300 mb-2">Registros:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Evidencias de testing y verificación</li>
                                 <li>Incidencias reportadas y resoluciones</li>
                                 <li>Lecciones aprendidas</li>
@@ -549,6 +560,18 @@
                                 <li>Evaluación de riesgo formal y plan de mitigación</li>
                                 <li>Aprobación requerida del RSI o Departamento de IT</li>
                                 <li>Revisión máxima cada 120 días</li>
+                                <li><a href="https://forms.office.com/r/N57CYehx5p" target="_blank" title="F525-IT-3 Plantilla de Aceptación de Riesgo"
+                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <span
+                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                            F525-IT-3
+                                        </span>
+                                        Plantilla de Aceptación de Riesgo
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -583,27 +606,15 @@
                         </div>
                     </section>
 
-                    <section id="anexos" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
-                            ANEXOS
-                        </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>Anexo A:</strong> Matriz de Criticidad de Parches</li>
-                            <li><strong>Anexo B:</strong> Plantilla de Comunicación a Usuarios</li>
-                        </ul>
-                    </section>
-
                     <section id="formularios-asociados" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                             FORMULARIOS ASOCIADOS
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>
-                                <a href="#" target="_blank" title="F525-IT-3 Formulario de Aplicación de Parches"
+                                <a href="https://forms.office.com/r/N57CYehx5p" target="_blank" title="F525-IT-3 Formulario de Aplicación de Parches"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
@@ -612,33 +623,7 @@
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         F525-IT-3
                                     </span>
-                                    Formulario de Aplicación de Parches
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" title="F525-IT-4 Solicitud de Excepción de Parche"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F525-IT-4
-                                    </span>
-                                    Solicitud de Excepción de Parche
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" title="F525-IT-5 Reporte de Incidencia Post-Parchado"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F525-IT-5
-                                    </span>
-                                    Reporte de Incidencia Post-Parchado
+                                    Plantilla de Aceptación de Riesgo
                                 </a>
                             </li>
                         </ul>
@@ -647,7 +632,7 @@
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
@@ -750,14 +735,11 @@
                             <a href="#revision-auditoria"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 REVISIÓN Y AUDITORÍA</a>
-                            <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
-                                ANEXOS</a>
                             <a href="#formularios-asociados"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 FORMULARIOS ASOCIADOS</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>

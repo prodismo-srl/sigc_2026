@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -98,6 +97,7 @@
                             cumplimiento de los requisitos definidos en la <strong><i
                                     class="fas fa-book text-primary-600 dark:text-primary-400 mr-1"></i> <a
                                     href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html"
+                                    title="MC524-IT-2 Política de Retención de Logs"
                                     class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC524-IT-2
                                     Política de Retención de Logs</a></strong> y la norma <strong>ISO/IEC
                                 27001:2022</strong>, así como con los requisitos de evidencia del marco
@@ -112,7 +112,7 @@
                             ALCANCE
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li>Todos los sistemas nuevos que se incorporen a la infraestructura de IT</li>
                             <li>Sistemas existentes que requieran actualización de configuración de logs</li>
                             <li>Plataformas: Servidores Windows/Linux, ERP SIP 4.0, aplicaciones internas, dispositivos
@@ -127,7 +127,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             DEFINICIONES
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                             <li><strong>Syslog:</strong> Protocolo estándar para el envío de mensajes de log</li>
                             <li><strong>WEF (Windows Event Forwarding):</strong> Tecnología para centralizar logs de
                                 Windows</li>
@@ -148,7 +148,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Configuración
                                 General para Todos los Sistemas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Sincronización horaria: Configurar NTP con servidor corporativo</li>
                                 <li>Formato de timestamp: ISO 8601 (YYYY-MM-DD HH:MM:SS TIMEZONE)</li>
                                 <li>Codificación de caracteres: UTF-8</li>
@@ -232,15 +232,15 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.1. Fase 1:
                                 Planificación y Diseño</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-3">Actividades:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-3">Actividades:</p>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Identificar sistemas sujetos a configuración de logging</li>
                                 <li>Definir eventos específicos a registrar según criticidad del sistema</li>
                                 <li>Establecer formatos de log estándar</li>
                                 <li>Diseñar arquitectura de envío al SIEM centralizado</li>
                             </ol>
-                            <p class="text-gray-700 dark:text-gray-300 mt-3">Entregables:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Entregables:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Matriz de eventos a registrar por sistema</li>
                                 <li>Diagrama de arquitectura de logging</li>
                                 <li>Plan de implementación</li>
@@ -266,7 +266,7 @@
 
                             <div class="mb-4">
                                 <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.2. ERP SIP 4.0</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Habilitar logging de transacciones críticas</li>
                                     <li>Configurar auditoría de acceso a datos sensibles</li>
                                     <li>Establecer envío de logs via agente al SIEM</li>
@@ -290,15 +290,15 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.3. Fase 3:
                                 Verificación y Validación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-3">Actividades:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-3">Actividades:</p>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Generar eventos de prueba para verificar registro</li>
                                 <li>Validar recepción en SIEM centralizado</li>
                                 <li>Verificar formato y contenido de logs</li>
                                 <li>Documentar configuración implementada</li>
                             </ol>
-                            <p class="text-gray-700 dark:text-gray-300 mt-3">Criterios de Aceptación:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-1">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Criterios de Aceptación:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Logs recibidos en SIEM dentro de los 5 minutos del evento</li>
                                 <li>Formato de timestamp correcto</li>
                                 <li>Información mínima requerida presente</li>
@@ -422,7 +422,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.2. Indicadores de
                                 Performance</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Tasa de generación de logs: Volumen normal por sistema</li>
                                 <li>Tiempo de entrega: Máximo 5 minutos desde evento a SIEM</li>
                                 <li>Cobertura de sistemas: Porcentaje de sistemas con logging configurado</li>
@@ -440,7 +440,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.1. Detección de
                                 Problemas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Falta de logs: Alertar cuando un sistema deje de enviar logs</li>
                                 <li>Formato incorrecto: Detectar logs que no cumplan estándares</li>
                                 <li>Volumen anómalo: Alertar por picos o caídas significativas</li>
@@ -450,7 +450,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.2. Procedimiento de
                                 Corrección</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Detectar anomalía en generación/recepción de logs</li>
                                 <li>Investigar causa raíz (configuración, red, sistema)</li>
                                 <li>Aplicar corrección según procedimientos establecidos</li>
@@ -464,13 +464,15 @@
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            REGISTROS Y EVIDENCIAS
+                            REGISTROS Y EVIDENCIAS 
+                            <span
+                                    class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full ml-2"><i class="fas fa-circle-pause text-red-400"></i> TO BE DONE</span>
                         </h2>
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.1. Documentación
                                 Requerida</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Formulario de Configuración de Logs
                                     <a href="#" target="_blank" title="F524-IT-1 Formulario de Configuración de Logs"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
@@ -516,7 +518,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.2. Retención de
                                 Evidencias</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Configuraciones de logging: 36 meses</li>
                                 <li>Registros de verificación: 24 meses</li>
                                 <li>Informes de incidencias: 12 meses después del cierre</li>
@@ -534,7 +536,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.1. Revisiones
                                 Periódicas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Este procedimiento será revisado anualmente por el RSI</li>
                                 <li>Se actualizarán las plantillas según cambios tecnológicos</li>
                                 <li>Se incorporarán lecciones aprendidas de incidentes</li>
@@ -544,7 +546,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.2. Auditorías de
                                 Cumplimiento</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Verificación técnica mensual de configuraciones activas</li>
                                 <li>Auditoría interna semestral del proceso completo</li>
                                 <li>Inclusión en evaluaciones <strong>TISAX</strong> y auditorías <strong>ISO
@@ -555,7 +557,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.3. Métricas de
                                 Control</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Porcentaje de sistemas con logging configurado correctamente</li>
                                 <li>Tiempo promedio de detección de fallos en logging</li>
                                 <li>Número de incidentes relacionados con falta de logs</li>

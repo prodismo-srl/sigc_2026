@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -69,7 +68,7 @@
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
-                                <span>Código: MC522-IT-1</span>
+                                <span>Código: P522-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
@@ -97,7 +96,7 @@
                             Garantizar que los entornos de <strong>desarrollo, pruebas y producción</strong> estén
                             adecuadamente separados para:
                         </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mt-4">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-4">
                             <li>Proteger los datos operativos críticos (ej.: datos financieros en SIP 4.0).</li>
                             <li>Prevenir modificaciones no controladas en sistemas productivos.</li>
                         </ul>
@@ -117,7 +116,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Aplicable a:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>SIP 4.0 (entorno productivo).</li>
                                 <li>Aplicación interna desarrollada (entorno desarrollo/pruebas).</li>
                                 <li>Proveedores externos (acceso a entornos).</li>
@@ -128,19 +127,19 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Identificación de Activos Críticos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Clasificar datos/sistemas según sensibilidad (ej.: SIP 4.0 = "Crítico").
                                         </li>
                                     </ul>
                                 </li>
                                 <li><strong>Análisis de Riesgos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>¿Qué pasaría si el programador modifica directamente producción? → Riesgo
                                             alto.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Determinar Necesidad de Separación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIP 4.0: Entorno productivo aislado (sin acceso directo del programador).
                                         </li>
                                         <li>App interna: Entorno desarrollo/pruebas con datos sintéticos.</li>
@@ -152,7 +151,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=we1454fc34bf24927b7f754949425fa53&csf=1&web=1&e=plpT9z"
                                         target="_blank" title="M522-IT-2 Matriz Evaluación de Riesgos de Entornos"
@@ -182,7 +181,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Implementación de controles técnicos y organizativos.</li>
                             </ul>
                         </div>
@@ -191,16 +190,16 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Separación Física/Lógica:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li><strong>SIP 4.0 (Producción):</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                            <ul class="list-circle pl-6 mt-1 space-y-3">
                                                 <li>Servidor Azure con puertos diferenciados en url para entorno de
                                                     pruebas (:9080) y desarrollo (:8080).</li>
                                                 <li>Credenciales <strong>administrador</strong> solo para Gerencia.</li>
                                             </ul>
                                         </li>
                                         <li><strong>App Interna (Desarrollo/Pruebas):</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                            <ul class="list-circle pl-6 mt-1 space-y-3">
                                                 <li>Instancia separada en servidor local o cloud (ej.: GitHub).</li>
                                                 <li>Usar datos falsos.</li>
                                             </ul>
@@ -208,15 +207,15 @@
                                     </ul>
                                 </li>
                                 <li><strong>Control de Accesos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li><strong>Programador part-time:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                            <ul class="list-circle pl-6 mt-1 space-y-3">
                                                 <li>Acceso solo a entorno desarrollo.</li>
                                                 <li>Cero permisos en SIP 4.0.</li>
                                             </ul>
                                         </li>
                                         <li><strong>Proveedor ERP:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                            <ul class="list-circle pl-6 mt-1 space-y-3">
                                                 <li>Acceso a producción supervisado (sesiones grabadas).</li>
                                             </ul>
                                         </li>
@@ -228,10 +227,10 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
-                                        target="_blank" title="MC522-IT-1 Política de Segmentación de Entornos"
+                                        target="_blank" title="MC522-IT-1 Política de Gestión de Entornos de Desarrollo"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                 group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
@@ -240,7 +239,7 @@
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                             MC522-IT-1
                                         </span>
-                                        Política de Segmentación de Entornos
+                                        Política de Gestión de Entornos de Desarrollo
                                         <i
                                             class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                     </a>
@@ -258,7 +257,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Movimiento de código/configuraciones desde desarrollo → producción.</li>
                             </ul>
                         </div>
@@ -267,19 +266,19 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Desarrollo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Programador trabaja solo en entorno local.
                                         </li>
                                     </ul>
                                 </li>
                                 <li><strong>Pruebas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Validación en entorno aislado con datos de prueba.</li>
                                         <li>Aprobación por responsable de área (ej.: Gerente Proyectos).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Despliegue a Producción:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Realizado por personal designado.</li>
                                         <li>Backup obligatorio pre-despliegue.</li>
                                     </ul>
@@ -313,7 +312,8 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                             Evaluación de riesgos</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#" class="text-green-600 hover:text-green-700 dark:text-green-400">
+                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=we1454fc34bf24927b7f754949425fa53&csf=1&web=1&e=plpT9z"
+                                                class="text-green-600 hover:text-green-700 dark:text-green-400">
                                                 <i class="fas fa-file-excel text-green-400 mr-2"></i> M522-IT-2
                                                 Matriz Evaluación de Riesgos de Entornos</a>
                                         </td>
@@ -323,10 +323,10 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                             Segmentación</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#"
+                                            <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">
                                                 <i class="fas fa-book text-blue-400 mr-2"></i> MC522-IT-1
-                                                Política de Segmentación de Entornos</a>
+                                                Política de Gestión de Entornos de Desarrollo</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -334,10 +334,10 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                             Gestión de cambios</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#"
+                                            <a href="../gestion-cambios/proc-gestion-cambios.html"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">
-                                                <i class="fas fa-gears text-blue-400 mr-2"></i> P522-IT-3
-                                                Procedimiento de Despliegue Seguro</a>
+                                                <i class="fas fa-gears text-blue-400 mr-2"></i> P521-IT-1
+                                                Procedimiento de Gestión de Cambios</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -467,7 +467,8 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="#"
+                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=we1454fc34bf24927b7f754949425fa53&csf=1&web=1&e=plpT9z"
+                                title="M522-IT-2 Matriz Evaluación de Riesgos de Entornos"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
@@ -476,21 +477,13 @@
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
+                                title="MC522-IT-1 Política de Gestión de Entornos de Desarrollo"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC522-IT-1
-                                        Política de Segmentación</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P522-IT-3
-                                        Procedimiento de Despliegue</span>
+                                        Política de Gestión de Entornos de Desarrollo</span>
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
@@ -507,7 +500,7 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">MC522-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P522-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>

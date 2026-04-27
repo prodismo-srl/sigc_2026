@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -80,7 +79,7 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX AL1, ISO 27001:2022</span>
+                                <span>Cumple: TISAX AL3, ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -110,7 +109,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Sistemas críticos:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>ERP SIP 4.0 (versiones).</li>
                                 <li>Aplicaciones internas (dependencias de código).</li>
                                 <li>Infraestructura (servidores, firewalls).</li>
@@ -121,13 +120,13 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Fuentes de información:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Bases de datos públicas (NVD, CVE).</li>
                                         <li>Alertas de proveedores (ej.: notificaciones de parches para SIP 4.0).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Herramientas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Escaneos automáticos mensuales con OpenVAS o Nessus.</li>
                                         <li>Revisión manual de dependencias en código (ej.: npm audit para app interna).
                                         </li>
@@ -139,18 +138,18 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Listado de activos a escanear
-                                    <a href="#" target="_blank" title="F525-IT-1 Inventario de Sistemas"
+                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v" target="_blank" title="F525-IT-1 Inventario de Sistemas"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <i class="fas fa-list text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                             F525-IT-1
                                         </span>
-                                        Formulario de Configuración de Logs
+                                        Inventario de Sistemas
                                     </a>
                                 </li>
                                 <li>Resultados de vulnerabilidades detectadas
@@ -179,7 +178,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Clasificar vulnerabilidades según impacto y urgencia.</li>
                             </ul>
                         </div>
@@ -188,18 +187,18 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Criticidad:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Usar CVSS v3.1 (ej.: puntaje ≥7.0 = Crítico).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Contexto empresarial:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>¿Afecta a datos financieros (SIP 4.0)?</li>
                                         <li>¿Es explotable remotamente?</li>
                                     </ul>
                                 </li>
                                 <li><strong>Matriz de decisión:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Críticas: Parchear en ≤72 horas.</li>
                                         <li>Medias: Planificar en ≤2 semanas.</li>
                                     </ul>
@@ -210,9 +209,9 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Matriz CVSS vs. sistemas afectados
-                                    <a href="#" target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
+                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi" target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
@@ -237,7 +236,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Resolución de vulnerabilidades priorizadas.</li>
                             </ul>
                         </div>
@@ -246,17 +245,17 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Parches:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Aplicar updates de proveedores.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Workarounds:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Si no hay parche: Aislar sistema o deshabilitar funciones vulnerables.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Validación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Re-escanear tras correcciones.</li>
                                     </ul>
                                 </li>
@@ -266,7 +265,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Flujo de actualizaciones
                                     <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html" target="_blank"
                                         title="P525-IT-4 Matriz de Priorización CVSS"
@@ -294,7 +293,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Detección proactiva de nuevas vulnerabilidades.</li>
                             </ul>
                         </div>
@@ -303,12 +302,12 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Suscripciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Alertas RSS de CVE para tecnologías usadas (ej.: Windows Server).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Auditorías trimestrales:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Revisión manual de configuraciones (ej.: puertos abiertos en firewall).</li>
                                     </ul>
                                 </li>
@@ -318,17 +317,17 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Frecuencia y responsables
                                     <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
-                                        target="_blank" title="MC525-IT-5 Monitorización de Vulnerabilidades"
+                                        target="_blank" title="MC525-IT-1 Monitorización de Vulnerabilidades"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-gears text-blue-400 mr-2"></i>
+                                        <i class="fas fa-book text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            MC525-IT-5
+                                            MC525-IT-1
                                         </span>
                                         Monitorización de Vulnerabilidades
                                     </a>
@@ -362,12 +361,13 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                             Identificación</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                            <a href="#"
+                                            <i class="fas fa-list text-blue-400 mr-2"></i>
+                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v"
+                                                target="_blank" title="F525-IT-1 Inventario de Sistemas"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F525-IT-1
                                                 Inventario de Sistemas</a><br>
                                             <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                            <a href="#"
+                                            <a href="#" target="_blank" title="F525-IT-2 Reporte Escaneo de Vulnerabilidades"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F525-IT-2
                                                 Reporte Escaneo de Vulnerabilidades</a>
                                         </td>
@@ -378,7 +378,8 @@
                                             Evaluación</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <i class="fas fa-file-excel text-green-400 mr-2"></i>
-                                            <a href="#"
+                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi"
+                                                target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
                                                 class="text-green-600 hover:text-green-700 dark:text-green-400">M525-IT-1
                                                 Matriz de Priorización CVSS</a>
                                         </td>
@@ -390,6 +391,7 @@
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <i class="fas fa-gears text-blue-400 mr-2"></i>
                                             <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html"
+                                                title="P525-IT-4 Procedimiento de Aplicación de Parches"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400">P525-IT-4
                                                 Procedimiento de Aplicación de Parches</a>
                                         </td>
@@ -401,7 +403,8 @@
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <i class="fas fa-book text-blue-400 mr-2"></i>
                                             <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC525-IT-5
+                                                title="MC525-IT-1 Monitorización de Vulnerabilidades"
+                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC525-IT-1
                                                 Monitorización de Vulnerabilidades</a>
                                         </td>
                                     </tr>
@@ -414,13 +417,13 @@
                                 Implementación Eficiente</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Herramientas de bajo costo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>OpenVAS (gratuito) para escaneos automatizados.</li>
                                         <li>GitHub Dependabot para alertas en código de la app interna.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Proveedores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Exigir SLA de parches para SIP 4.0 en contratos.</li>
                                     </ul>
                                 </li>
@@ -552,16 +555,17 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="#"
+                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v"
+                                target="_blank" title="F525-IT-1 Inventario de Sistemas"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-list text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F525-IT-1
                                         Inventario de Sistemas</span>
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="#" target="_blank" title="F525-IT-2 Reporte Escaneo de Vulnerabilidades"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
@@ -570,7 +574,7 @@
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi" target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
@@ -579,23 +583,23 @@
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html"
+                            <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html" title="P525-IT-2 Procedimiento de Aplicación de Parches"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P525-IT-2
                                         Procedimiento de Aplicación de Parches</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
+                            <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html" title="MC525-IT-1 Monitorización de Vulnerabilidades"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC525-IT-5
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC525-IT-1
                                         Monitorización de Vulnerabilidades</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
                         </div>
                     </div>

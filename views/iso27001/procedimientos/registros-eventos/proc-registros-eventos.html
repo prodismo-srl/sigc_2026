@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -95,7 +94,7 @@
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
                             Establecer un sistema de registro, almacenamiento y análisis de eventos que permita:
                         </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2 mt-4">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-4">
                             <li>Garantizar la trazabilidad de acciones en sistemas críticos (ERP SIP 4.0, redes
                                 industriales).</li>
                             <li>Detectar y responder a incidentes de seguridad.</li>
@@ -116,7 +115,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Sistemas sujetos a logging:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>ERP SIP y SIP 4.0 (transacciones financieras, cambios de configuración).</li>
                                 <li>Servidores y redes internas (accesos, intentos fallidos).</li>
                                 <li>Aplicación interna (eventos de desarrollo).</li>
@@ -127,14 +126,14 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Identificar eventos críticos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Accesos de administradores.</li>
                                         <li>Cambios en datos sensibles (ej.: registros contables).</li>
                                         <li>Intentos de autenticación fallidos (>3 intentos).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Definir nivel de detalle:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIP 4.0: Registrar "quién, qué, cuándo" en transacciones.</li>
                                         <li>Redes: Logs de firewall (IPs origen/destino).</li>
                                     </ul>
@@ -145,10 +144,10 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Política de eventos a registrar
                                     <a href="../../documentacion/gestion-logs/gestion-logs.html" target="_blank"
-                                        title="MC524-IT-1 Política de Requisitos de Logging"
+                                        title="MC524-IT-1 Política de Gestión de Logs"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
@@ -157,7 +156,7 @@
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                             MC524-IT-1
                                         </span>
-                                        Política de Requisitos de Logging
+                                        Política de Gestión de Logs
                                         <i
                                             class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                     </a>
@@ -175,7 +174,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Sistemas internos y proveedores externos (ej.: ERP en la nube).</li>
                             </ul>
                         </div>
@@ -184,20 +183,20 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Configuración técnica:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIP 4.0: Activar auditoría en BD (ej.: triggers en tablas financieras).</li>
                                         <li>Firewall/Active Directory: Habilitar logs de seguridad (eventos 4625 para
                                             intentos fallidos).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Proveedores externos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Exigir contrato con cláusulas de logging (ej.: acceso a logs de AWS/Azure).
                                         </li>
                                     </ul>
                                 </li>
                                 <li><strong>Almacenamiento seguro:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Enviar logs (ej.: Wazuh) o servidor centralizado con retención de 6 meses.
                                         </li>
                                     </ul>
@@ -208,7 +207,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Guía técnica por sistema
                                     <a href="../registros-eventos/proc-configuracion-logs.html" target="_blank"
                                         title="P524-IT-2 Procedimiento de Configuración de Logs"
@@ -236,7 +235,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Monitoreo proactivo e investigación de incidentes.</li>
                             </ul>
                         </div>
@@ -245,20 +244,20 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Revisiones periódicas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Diarias: Alertas automáticas (ej.: múltiples intentos de acceso a red).
                                         </li>
                                         <li>Mensuales: Análisis manual de logs aleatorios.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Análisis forense:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Correlacionar logs de diferentes sistemas (ej.: firewall + Active
                                             Directory).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Acciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Bloquear IPs maliciosas.</li>
                                         <li>Reportar anomalías a dirección.</li>
                                     </ul>
@@ -269,18 +268,20 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Registro de hallazgos
-                                    <a href="#" target="_blank" title="F524-IT-4 Reporte de Incidentes"
+                                    <a href="https://forms.office.com/r/eryzXy34gc" target="_blank" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
+                                        <i class="fas fa-file-alt text-primary-600 dark:text-primary-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F524-IT-4
+                                            F161-IT-1
                                         </span>
-                                        Reporte de Incidentes
+                                        Formulario de Reporte de Eventos por Departamento
+                                        <i
+                                            class="fas fa-external-link-alt text-gray-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -296,7 +297,7 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Alineación con GDPR o normativa local.</li>
                             </ul>
                         </div>
@@ -305,13 +306,13 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Retención:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>6 meses para logs estándar.</li>
                                         <li>2 años para eventos financieros (SIP 4.0).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Protección:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Cifrar logs almacenados (AES-256).</li>
                                         <li>Control de acceso (solo equipo de seguridad).</li>
                                     </ul>
@@ -322,7 +323,7 @@
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
                                 Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>
                                     <a href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html"
                                         target="_blank" title="MC524-IT-2 Política de Retención de Logs"
@@ -367,9 +368,10 @@
                                             Determinación de requisitos</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <a href="../../documentacion/gestion-logs/gestion-logs.html"
+                                                title="MC524-IT-1 Política de Gestión de Logs"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
                                                     class="fas fa-book text-blue-400 mr-2"></i> MC524-IT-1
-                                                Política de Requisitos de Logging</a>
+                                                Política de Gestión de Logs</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -388,10 +390,11 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                             Revisión y análisis</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#"
+                                            <a href="https://forms.office.com/r/eryzXy34gc" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
+                                                target="_blank"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-file-alt text-blue-400 mr-2"></i>F524-IT-4
-                                                Reporte de Incidentes</a>
+                                                    class="fas fa-file-alt text-blue-400 mr-2"></i>F161-IT-1
+                                                Formulario de Reporte de Eventos por Departamento</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -400,6 +403,7 @@
                                             Cumplimiento legal</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <a href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html"
+                                            title="MC524-IT-2 Política de Retención de Logs"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
                                                     class="fas fa-book text-blue-400 mr-2"></i>MC524-IT-2
                                                 Política de Retención de Logs</a>
@@ -414,19 +418,19 @@
                                 Implementación</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                 <li><strong>Herramientas de bajo costo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIEM: Wazuh (gratuito) o Elastic Stack.</li>
                                         <li>Alertas: Reglas personalizadas para SIP 4.0 (ej.: cambios en tablas de
                                             contabilidad).</li>
                                     </ul>
                                 </li>
                                 <li><strong>Automatización:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Scripts PowerShell para extraer logs de AD y enviar a SIEM.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Proveedores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Incluir en contratos acceso a logs en formato estándar (Ej.: JSON).</li>
                                     </ul>
                                 </li>
@@ -568,39 +572,38 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="../../documentacion/gestion-logs/gestion-logs.html"
+                            <a href="../../documentacion/gestion-logs/gestion-logs.html" title="MC524-IT-1 Política de Gestión de Logs"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC524-IT-1
-                                        Política de Requisitos de Logging</span>
+                                        Política de Gestión de Logs</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../registros-eventos/proc-configuracion-logs.html"
+                            <a href="../registros-eventos/proc-configuracion-logs.html" title="P524-IT-2 Procedimiento de Configuración de Logs"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P524-IT-2
                                         Procedimiento de Configuración de Logs</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html"
+                            <a href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html" title="MC524-IT-2 Política de Retención de Logs"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC524-IT-2
                                         Política de Retención de Logs</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://forms.office.com/r/eryzXy34gc" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento" target="_blank"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F524-IT-4 Reporte
-                                        de Incidentes</span>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F161-IT-1 Formulario de Reporte de Eventos por Departamento</span>
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
