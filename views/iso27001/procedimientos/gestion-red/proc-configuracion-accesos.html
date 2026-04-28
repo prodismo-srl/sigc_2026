@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page-subtitle="Procedimiento de Configuración de Accesos">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -216,7 +215,7 @@
                                 </table>
                             </div>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-4">
-                                <li>Revisión trimestral de privilegios por parte de los responsables de área</li>
+                                <li>Revisión trimestral de privilegios por parte del RSI</li>
                             </ul>
                         </div>
 
@@ -297,9 +296,10 @@
                                 Obligatorios</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Autenticación MFA para todos los accesos remotos y privilegiados</li>
-                                <li>Contraseñas seguras según política <a href="#"
-                                        class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC413-IT-4
-                                        Política de Contraseñas Seguras</a></li>
+                                <li>Contraseñas seguras según política <a href="../../documentacion/gestion-contrasenas/gestion-contrasenas.html"
+                                        title="MC413-IT-2 Política de Contraseñas Seguras"
+                                        class="text-primary-600 font-bold hover:text-primary-700 dark:text-primary-400">
+                                        <i class="fas fa-book text-blue-400 mr-2"></i> MC413-IT-2 Política de Contraseñas Seguras</a></li>
                                 <li>Timeout de sesión: 15 minutos de inactividad para sistemas críticos</li>
                                 <li>Bloqueo de cuenta: Tras 5 intentos fallidos (15 minutos de bloqueo)</li>
                             </ul>
@@ -426,11 +426,11 @@
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Procedimiento de
-                                Solicitud de Acceso VPN</h3>
+                                Solicitud de Acceso VPN a proveedor</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Solicitud formal mediante email corporativo a: <a
-                                        href="mailto:abonados@armanet.zendesk.com"
-                                        class="font-mono bg-gray-200 text-primary-600 dark:text-primary-400 p-1 rounded-md cursor-pointer">abonados@armanet.zendesk.com</a>
+                                        href="mailto:abonados@armanet.zendesk.com" title="mail:abonados@armanet.zendesk.com"
+                                        class="font-awesome bg-gray-200 text-primary-700 dark:text-primary-400 p-1 rounded-md cursor-pointer">abonados@armanet.zendesk.com</a>
                                 </li>
                                 <li>Aprobación del responsable directo y RSI</li>
                                 <li>Configuración por Armanet (en trascurso del día de la solicitud)</li>
@@ -609,8 +609,8 @@
                                 Accesos</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Solicitud formal mediante mail corporativo a: <a
-                                        href="mailto:abonados@armanet.zendesk.com"
-                                        class="font-mono bg-gray-200 text-primary-600 dark:text-primary-400 p-1 rounded-md cursor-pointer">abonados@armanet.zendesk.com</a>
+                                        href="mailto:abonados@armanet.zendesk.com" title="mail:abonados@armanet.zendesk.com" target="_blank"
+                                        class="font-awesome bg-gray-200 text-primary-700 dark:text-primary-400 p-1 m-1 rounded-md cursor-pointer">abonados@armanet.zendesk.com</a>
                                 </li>
                                 <li>Aprobación del responsable de área y RSI</li>
                                 <li>Implementación en ventana de mantenimiento autorizada</li>
@@ -781,65 +781,50 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             FORMULARIOS ASOCIADOS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-5">
                             <li>
-                                <a href="#" target="_blank" title="F527-IT-1 Solicitud de Acceso a Sistemas"
+                                <a href="https://forms.office.com/r/bQ9744Wjhc" target="_blank" title="F512-IT-2 Formulario Solicitud Configuración de VPN"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
                                     <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F527-IT-1
+                                        F512-IT-2
                                     </span>
-                                    Solicitud de Acceso a Sistemas
+                                    Formulario Solicitud Configuración de VPN
                                     <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" title="F527-IT-2 Formulario de Aprobación de Accesos"
+                                <a href="https://forms.office.com/r/VXqfEHdDYK" target="_blank" title="F532-IT-1 Formulario de Solicitud de Cambio en Red"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
                                     <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F527-IT-2
+                                        F532-IT-1
                                     </span>
-                                    Formulario de Aprobación de Accesos
+                                    Formulario de Solicitud de Cambio en Red
                                     <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" title="F527-IT-3 Checklist de Configuración de Seguridad"
+                                <a href="https://forms.office.com/r/eryzXy34gc" target="_blank" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
                                     <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F527-IT-3
+                                        F161-IT-1
                                     </span>
-                                    Checklist de Configuración de Seguridad
+                                    Formulario de Reporte de Eventos por Departamento
                                     <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank" title="F527-IT-4 Reporte de Incidente de Acceso"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                    <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F527-IT-4
-                                    </span>
-                                    Reporte de Incidente de Acceso
-                                    <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                             </li>
                         </ul>
@@ -981,10 +966,10 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="../gestion-red/proc-gestion-red.html"
+                            <a href="./proc-gestion-red.html" title="P527-IT-1 Gestión y Segmentación de Red"
                                 class="flex items-center justify-between p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-gears text-gray-600 dark:text-gray-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P527-IT-1 Gestión
                                         y Segmentación de Red</span>
                                 </div>

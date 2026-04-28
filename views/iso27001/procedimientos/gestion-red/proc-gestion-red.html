@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
@@ -117,7 +116,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Redes LAN/WAN de la organización, incluyendo:
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Oficinas administrativas y operativas.</li>
                                     </ul>
                                 </li>
@@ -128,7 +127,7 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Clasificar sistemas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Zona Operativa1: Equipos de producción → VLAN 10.</li>
                                         <li>Zona Operativa1: Equipos de Ingeniería/Proyectos Matrices → VLAN 20.</li>
                                         <li>Zona Operativa1: Equipos de Ingeniería/Proyectos Líneas de Ensamble → VLAN
@@ -136,7 +135,7 @@
                                     </ul>
                                 </li>
                                 <li><strong>Definir reglas de firewall:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Denegar todo tráfico entre VLAN 10, 20 y 30 por defecto.</li>
                                         <li>Permitir solo conexiones autorizadas.</li>
                                     </ul>
@@ -153,7 +152,7 @@
                                         title="MC527-IT-1 Política de Segmentación de Redes"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
                                         <i class="fas fa-book text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
@@ -186,15 +185,15 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Autenticación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>802.1X para conexión a puertos de red.</li>
                                         <li>VPN con certificados digitales para acceso remoto.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Monitorización:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>SIEM para alertar sobre:
-                                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                            <ul class="list-disc pl-6 mt-1 space-y-3">
                                                 <li>Intentos de acceso entre segmentos.</li>
                                                 <li>Tráfico a IPs maliciosas.</li>
                                             </ul>
@@ -213,8 +212,8 @@
                                         title="P527-IT-2 Procedimiento de Configuración de Accesos"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-gears text-blue-400 mr-2"></i>
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
+                                        <i class="fas fa-gears text-gray-500 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                             P527-IT-2
@@ -246,17 +245,17 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Solicitud:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Formulario aprobado por Departamento IT.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Pruebas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Validar en entorno sandbox antes de producción.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Documentación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Actualizar diagramas de red y reglas</li>
                                     </ul>
                                 </li>
@@ -268,17 +267,17 @@
                                 Referencia:</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Formulario de solicitud
-                                    <a href="#" target="_blank"
-                                        title="P527-IT-2 Procedimiento de Configuración de Accesos"
+                                    <a href="https://forms.office.com/r/VXqfEHdDYK" target="_blank"
+                                        title="F532-IT-1 Formulario de Solicitud de Cambio en Red"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
                                         <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F527-IT-3
+                                            F532-IT-1
                                         </span>
-                                        Formulario de Cambios en Red
+                                        Formulario de Solicitud de Cambio en Red
                                         <i
                                             class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                     </a>
@@ -305,18 +304,18 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Detección:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Alertas de IDS/IPS o SIEM por tráfico anómalo.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Contención:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Bloquear IPs/usuarios involucrados.</li>
                                         <li>Aislar segmentos comprometidos.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Investigación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                    <ul class="list-disc pl-6 mt-2 space-y-3">
                                         <li>Análisis forense con logs de firewall y Active Directory.</li>
                                     </ul>
                                 </li>
@@ -332,8 +331,8 @@
                                         title="P527-IT-3 Procedimiento de Respuesta a Incidentes de Seguridad"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-gears text-blue-400 mr-2"></i>
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
+                                        <i class="fas fa-gears text-gray-500 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                             P527-IT-3
@@ -373,9 +372,12 @@
                                             Diseño de segmentación</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <a href="../../documentacion/gestion-red/gestion-red.html"
+                                                title="MC527-IT-1 Política de Segmentación de Redes"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
                                                     class="fas fa-book text-blue-400 mr-2"></i>MC527-IT-1
-                                                Política de Segmentación de Redes</a>
+                                                Política de Segmentación de Redes
+                                            <i class="fas fa-link text-blue-400 ml-1"></i></a>
+
                                         </td>
                                     </tr>
                                     <tr>
@@ -384,9 +386,11 @@
                                             Control de accesos</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <a href="../../procedimientos/gestion-red/proc-configuracion-accesos.html"
+                                                title="P527-IT-2 Procedimiento de Configuración de Accesos"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-gears text-blue-400 mr-2"></i>P527-IT-2
-                                                Procedimiento de Configuración de Accesos</a>
+                                                    class="fas fa-gears text-gray-500 mr-2"></i>P527-IT-2
+                                                Procedimiento de Configuración de Accesos
+                                                <i class="fas fa-link text-blue-400 ml-1"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -394,10 +398,11 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                             Gestión de cambios</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#"
+                                            <a href="https://forms.office.com/r/VXqfEHdDYK" target="_blank" title="F532-IT-1 Formulario de Cambios en Red"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-file-alt text-blue-400 mr-2"></i>F527-IT-3
-                                                Formulario de Cambios en Red</a>
+                                                    class="fas fa-file-alt text-blue-400 mr-2"></i>F532-IT-1
+                                                Formulario de Cambios en Red
+                                                <i class="fas fa-external-link-alt text-blue-400 ml-1"></i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -405,10 +410,11 @@
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                             Respuesta a incidentes</td>
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="#"
+                                            <a href="./proc-respuesta-incidentes-seguridad.html" title="P527-IT-3 Procedimiento de Respuesta a Incidentes de Seguridad"
                                                 class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-gears text-blue-400 mr-2"></i>P527-IT-3
-                                                Procedimiento de Respuesta a Incidentes de Seguridad</a>
+                                                    class="fas fa-gears text-gray-500 mr-2"></i>P527-IT-3
+                                                Procedimiento de Respuesta a Incidentes de Seguridad
+                                                <i class="fas fa-link text-blue-400 ml-1"></i></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -443,7 +449,7 @@
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Zabbix:</strong> Sistemas de gestión de red.</li>
                                 <li><strong>Wazuh:</strong> SIEM open-source para monitoreo.</li>
-                                <li><strong>pfSense:</strong> Firewall gratuito para segmentación.</li>
+                                <li><strong>PRTG:</strong> Firewall para segmentación.</li>
                             </ul>
                         </div>
 
@@ -581,25 +587,25 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="../../documentacion/gestion-red/gestion-red.html"
+                            <a href="../../documentacion/gestion-red/gestion-red.html" title="MC527-IT-1 Política de Segmentación de Redes"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC527-IT-1
                                         Política de Segmentación de Redes</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../gestion-red/proc-configuracion-accesos.html"
+                            <a href="../gestion-red/proc-configuracion-accesos.html" title="P527-IT-2 Procedimiento de Configuración de Accesos"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
                                     <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P527-IT-2
                                         Procedimiento de Configuración de Accesos</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="https://forms.office.com/r/VXqfEHdDYK" target="_blank" title="F527-IT-3 Formulario de Cambios en Red"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
@@ -608,7 +614,7 @@
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="../gestion-red/proc-respuesta-incidentes-seguridad.html"
+                            <a href="./proc-respuesta-incidentes-seguridad.html"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
