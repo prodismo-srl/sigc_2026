@@ -6,7 +6,7 @@ Estos Términos de Uso regulan el acceso y utilización de los servicios digital
 
 Al acceder y utilizar cualquiera de los servicios digitales de **Prodismo SRL**, usted acepta cumplir con estos Términos de Uso y todas las leyes y regulaciones aplicables. Si no está de acuerdo con alguno de estos términos, le rogamos que no utilice nuestros servicios.
 
-> **Servicios incluidos:** Sitio web oficial (https://www.prodismo.com), aplicación de gastos (http://viajes.prodismo.com) y cualquier otra plataforma digital propiedad de **Prodismo SRL**.
+> **Servicios incluidos:** Sitio web oficial (https://www.prodismo.com), aplicación de gastos (https://viajes.prodismo.com) y cualquier otra plataforma digital propiedad de **Prodismo SRL**.
 
 ## 2. Descripción de Servicios
 
@@ -18,7 +18,7 @@ Al acceder y utilizar cualquiera de los servicios digitales de **Prodismo SRL**,
 
 **Aplicación de Gastos**
 - Plataforma para gestión y control de gastos corporativos
-- http://viajes.prodismo.com
+- https://viajes.prodismo.com
 
 ## 3. Uso Aceptable
 

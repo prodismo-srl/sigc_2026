@@ -1,5 +1,5 @@
 // ARCHIVO GENERADO AUTOMÁTICAMENTE - NO EDITAR MANUALMENTE
-    // Generated: 2026-04-29T10:53:50.698Z
+    // Generated: 2026-05-01T15:31:59.668Z
     // Environment: development
     window.CONFIG = {
   "ACCESS_CODES": [
@@ -17,9 +17,45 @@
     "W2#qAz@sXw8$eDc!4RfVb",
     "H7!jKm@lPn3#bVc$9ZxYq",
     "C4#fGt@hYj6$kLp!1WqAz",
-    "D9$sXw@eFv2#rTb!5NmKj"
+    "D9$sXw@eFv2#rTb!5NmKj",
+    "X3@mVn#bQw8$kLp!9RtYz",
+    "Z6&uJk*lPo2#fGh$7WqEr",
+    "Y1!tRf@cVb9#mNk$4LpHj",
+    "U8$qWe@rTy5#zXc!2vBnM",
+    "I4#oLp@jHn7$gFd!6YtRw",
+    "O9@kLp#bVc2$mNx!3ZqWe",
+    "E5!cVb@nHj8#tGf$1WrTy",
+    "A7$dFg@hJk4#lPz!9QuWe",
+    "S2#rTy@uIo6$pLk!8zXcV",
+    "J6&mNk*lPo3@fGh$7WqEr",
+    "V1!bVc@xZq9#mLp$4RtYf",
+    "L8$qWe@rTy5#zXc!2uJkM",
+    "K4#oLp@jHn7$gFd!6YtRw",
+    "W9@kLp#bVc2$mNx!3ZqWe",
+    "N5!cVb@nHj8#tGf$1WrTy",
+    "B7$dFg@hJk4#lPz!9QuWe",
+    "M2#rTy@uIo6$pLk!8zXcV",
+    "Q6&mNk*lPo3@fGh$7WqEr",
+    "C1!bVc@xZq9#mLp$4RtYf",
+    "D8$qWe@rTy5#zXc!2uJkM",
+    "F4#oLp@jHn7$gFd!6YtRw",
+    "G9@kLp#bVc2$mNx!3ZqWe",
+    "H5!cVb@nHj8#tGf$1WrTy",
+    "J7$dFg@hJk4#lPz!9QuWe",
+    "K2#rTy@uIo6$pLk!8zXcV",
+    "Z8&mNk*lPo3@fGh$7WqEr",
+    "X1!bVc@xZq9#mLp$4RtYf",
+    "C5$qWe@rTy5#zXc!2uJkM",
+    "V4#oLp@jHn7$gFd!6YtRw",
+    "B9@kLp#bVc2$mNx!3ZqWe",
+    "N1!cVb@nHj8#tGf$1WrTy",
+    "M7$dFg@hJk4#lPz!9QuWe",
+    "L2#rTy@uIo6$pLk!8zXcV",
+    "P8&mNk*lPo3@fGh$7WqEr",
+    "R1!bVc@xZq9#mLp$4RtYf",
+    "T4$qWe@rTy5#zXc!2uJkM"
   ],
   "ENV": "development",
-  "TIMESTAMP": "2026-04-29T10:53:50.697Z"
+  "TIMESTAMP": "2026-05-01T15:31:59.667Z"
 };
     
