@@ -218,13 +218,20 @@ function requestAccessCode() {
         title: 'Solicitar Código de Acceso',
         html: `
             <div style="text-align: left;">
-                <p style="margin-bottom: 1rem;">Para solicitar un código de acceso, envíe un correo electrónico a nuestro equipo de IT:</p>
+                <p style="margin-bottom: 1rem;">Para solicitar un código de acceso, envíe un correo electrónico a nuestro equipo de IT(*):</p>
                 <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
                     <strong>Email:</strong> 
                     <a href="mailto:itprodismo@prodismo.com" style="color: #1e40af;">itprodismo@prodismo.com</a>
                 </div>
                 <p style="font-size: 0.9rem; color: #6b7280;">
-                    Incluya en el asunto: "Solicitud de Código de Acceso - Portal SGSI"
+                    Incluya en el asunto:
+                </p><br>
+                <p class="text-center" style="font-size: 1.1rem; color: #af1e1eff; background: #f8fafc; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                    "Solicitud de Código de Acceso - Portal SGSI"
+                </p><br>
+                <p style="font-size: 0.8rem; color: #6b7280;">
+                   * Si Usted es un usuario registrado en <strong>PRODISMO SRL</strong>, reciibirá un mail automático de nuestro sistema.<br>
+                   De lo contrario espere la respuesta del administrador del portal.
                 </p>
             </div>
         `,
@@ -243,10 +250,10 @@ function requestAccessCode() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            navigator.clipboard.writeText('itprodismo@prodismo.com').then(() => {
+            navigator.clipboard.writeText('Solicitud de Código de Acceso - Portal SGSI').then(() => {
                 Swal.fire({
-                    title: 'Email Copiado',
-                    text: 'La dirección de email ha sido copiada al portapapeles',
+                    title: 'Asunto Copiado',
+                    text: 'El asunto ha sido copiado al portapapeles',
                     icon: 'success',
                     timer: 2000,
                     showConfirmButton: false,

@@ -549,7 +549,7 @@ function initializePDFDownload() {
                 { icon: '📄', text: docCode },
                 { icon: '📅', text: docDate },
                 { icon: '🔄', text: docRev },
-                { icon: '🛡️', text: 'ISO 27001:2022 | TISAX AL3' }
+                { icon: '🛡️', text: 'ISO 27001:2022 | TISAX AL2' }
 
             ].forEach(item => {
                 const span = document.createElement('span');

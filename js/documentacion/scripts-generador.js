@@ -58,13 +58,13 @@ function generateContractHTML(data, lang = 'es') {
     const texts = {
         // Para español (es)
         es: {
-            headerBadge: "Conforme a Normas TISAX (AL3) & ISO/IEC 27001:2022",
+            headerBadge: "Conforme a Normas TISAX (AL2) & ISO/IEC 27001:2022",
             title: "Acuerdo de Confidencialidad y Cláusulas de Seguridad",
             partiesTitle: "1. PARTES",
             objectTitle: "2. OBJETO DEL ACUERDO",
             definitionsTitle: "3. DEFINICIONES",
-            securityPrinciplesTitle: "4. PRINCIPIOS DE SEGURIDAD DE LA INFORMACIÓN (ISO 27001 - TISAX (AL3))",
-            obligationsTitle: "5. OBLIGACIONES DEL PRESTADOR (ISO 27001 / TISAX (AL3))",
+            securityPrinciplesTitle: "4. PRINCIPIOS DE SEGURIDAD DE LA INFORMACIÓN (ISO 27001 - TISAX (AL2))",
+            obligationsTitle: "5. OBLIGACIONES DEL PRESTADOR (ISO 27001 / TISAX (AL2))",
             clientObligationsTitle: "6. OBLIGACIONES DEL CLIENTE",
             scopeTitle: "7. ALCANCE DE LOS SERVICIOS",
             excludedSubtitle: "7.1 Servicios excluidos del alcance",
@@ -79,7 +79,7 @@ function generateContractHTML(data, lang = 'es') {
             clientRole: "Gerente de IT / Representante",
             providerLabel: "EL PRESTADOR",
             providerRole: "Representante Legal",
-            footerNote: "*F612-IT-2 Documento generado bajo lineamientos TISAX (AL3) & ISO/IEC 27001:2022. La firma digital o manuscrita valida el acuerdo.",
+            footerNote: "*F612-IT-2 Documento generado bajo lineamientos TISAX (AL2) & ISO/IEC 27001:2022. La firma digital o manuscrita valida el acuerdo.",
             
             betweenParties: "Entre",
             and: "y",
@@ -88,7 +88,7 @@ function generateContractHTML(data, lang = 'es') {
             objectPoints: [
                 "Establecer las obligaciones de confidencialidad, protección y uso adecuado de la información que <strong>EL PRESTADOR</strong> reciba, procese o gestione para <strong>EL CLIENTE</strong>.",
                 "Definir el alcance de los servicios, roles y responsabilidades bajo estándares de seguridad.",
-                "Asegurar el cumplimiento de las normas <strong>ISO/IEC 27001:2022, TISAX (AL3)</strong> y prácticas asociadas (ISO 27002, ISO 27017, ISO 27018)."
+                "Asegurar el cumplimiento de las normas <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> y prácticas asociadas (ISO 27002, ISO 27017, ISO 27018)."
             ],
             objectApplicability: "Este acuerdo aplica a toda la información en formato físico, digital, verbal, audiovisual o cualquier otro medio.",
             confidentialityLabel: "<strong>Información Confidencial:</strong>",
@@ -105,13 +105,13 @@ function generateContractHTML(data, lang = 'es') {
         },
         // Para inglés (en)
         en: {
-            headerBadge: "Compliant with TISAX (AL3) & ISO/IEC 27001:2022",
+            headerBadge: "Compliant with TISAX (AL2) & ISO/IEC 27001:2022",
             title: "Non Disclosure Agreement and Security Clauses",
             partiesTitle: "1. PARTIES",
             objectTitle: "2. PURPOSE OF THE AGREEMENT",
             definitionsTitle: "3. DEFINITIONS",
-            securityPrinciplesTitle: "4. INFORMATION SECURITY PRINCIPLES (ISO 27001 - TISAX (AL3))",
-            obligationsTitle: "5. OBLIGATIONS OF THE PROVIDER (ISO 27001 / TISAX (AL3))",
+            securityPrinciplesTitle: "4. INFORMATION SECURITY PRINCIPLES (ISO 27001 - TISAX (AL2))",
+            obligationsTitle: "5. OBLIGATIONS OF THE PROVIDER (ISO 27001 / TISAX (AL2))",
             clientObligationsTitle: "6. OBLIGATIONS OF THE CLIENT",
             scopeTitle: "7. SCOPE OF SERVICES",
             excludedSubtitle: "7.1 Services excluded from the scope",
@@ -126,7 +126,7 @@ function generateContractHTML(data, lang = 'es') {
             clientRole: "IT Manager / Representative",
             providerLabel: "THE PROVIDER",
             providerRole: "Legal Representative",
-            footerNote: "*F612-IT-2 Document generated under TISAX (AL3) and ISO/IEC 27001:2022 guidelines. Digital or handwritten signature validates the agreement.",
+            footerNote: "*F612-IT-2 Document generated under TISAX (AL2) and ISO/IEC 27001:2022 guidelines. Digital or handwritten signature validates the agreement.",
 
             betweenParties: "Between",
             and: "and",
@@ -135,7 +135,7 @@ function generateContractHTML(data, lang = 'es') {
             objectPoints: [
                 "Establish the confidentiality, protection and proper use obligations of the information that <strong>THE PROVIDER</strong> receives, processes or manages for <strong>THE CLIENT</strong>.",
                 "Define the scope of services, roles and responsibilities under security standards.",
-                "Ensure compliance with <strong>ISO/IEC 27001:2022, TISAX (AL3)</strong> and associated practices (ISO 27002, ISO 27017, ISO 27018)."
+                "Ensure compliance with <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> and associated practices (ISO 27002, ISO 27017, ISO 27018)."
             ],
             objectApplicability: "This agreement applies to information in physical, digital, verbal, audiovisual or any other media.",
             confidentialityLabel: "<strong>Confidential Information:</strong>",
@@ -518,7 +518,7 @@ async function generatePDF() {
     headerDiv.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1e3a8a; padding-bottom: 6px;">
             <div style="font-weight: bold; font-size: 1rem; color: #1e3a8a;">PRODISMO SRL</div>
-            <div style="font-size: 0.75rem; color: #2c3e50;">NDA · TISAX(AL3) · ISO/IEC 27001:2022</div>
+            <div style="font-size: 0.75rem; color: #2c3e50;">NDA · TISAX(AL2) · ISO/IEC 27001:2022</div>
         </div>
         <div style="margin-top: 3px; font-size: 0.75rem; color: #4b5563;">F612-IT-2 Acuerdo de Confidencialidad y Cláusulas de Seguridad</div>
     `;
