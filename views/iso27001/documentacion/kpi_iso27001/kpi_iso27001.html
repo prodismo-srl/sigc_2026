@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Dashboard de KPIs | Seguridad de la Información">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Dashboard de KPIs TISAX / ISO 27001">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Dashboard de KPIs | Seguridad de la Información - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- html2pdf para exportar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+        integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- html2canvas (necesarios para la nueva función) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Custom CSS y Tailwind -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+    
+    <style>
+        /* Estilos adicionales */
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1); }
+        .chart-container canvas { max-height: 300px; width: 100%; }
+        .kpi-table-wrapper { overflow-x: auto; border-radius: 1rem; }
+        .kpi-table { min-width: 1100px; }
+        /* Resaltado de fila */
+        .highlight-row {
+            background-color: #fef9c3 !important;
+            transition: background-color 0.3s ease;
+        }
+        .dark .highlight-row {
+            background-color: #854d0e !important;
+            color: #fef9c3 !important;
+        }
+        .toc-link { cursor: pointer; }
+        .toc-link:hover { background-color: #e5e7eb; }
+        .dark .toc-link:hover { background-color: #374151; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+
+    <!-- Header y Sidebar (estructura original de Prodismo) -->
+    <div id="header-container" data-module="header"></div>
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <!-- Header adicional (título principal) -->
+    <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-chart-line text-2xl text-primary-600"></i>
+                <h1 class="text-xl font-bold text-gray-800 dark:text-white">Seguridad de la Información · Dashboard TISAX - ISO/IEC 27001:2022</h1>
+            </div>
+            <div class="flex items-center space-x-3 text-sm">
+                <span class="hidden md:inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 px-3 py-1 rounded-full"><i class="fas fa-shield-alt"></i> ISO 27001:2022</span>
+                <span class="hidden md:inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full"><i class="fas fa-car"></i> TISAX AL2</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-9/10xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="flex-1 max-w-7xl mx-auto lg:mx-auto">
+                <!-- Navegación superior -->
+                <div class="mb-6 flex justify-between items-center flex-wrap gap-3">
+                    <a href="../../indice-iso27001.html" class="bg-gray-200 text-primary-600 dark:text-primary-400 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-2 rounded-lg text-sm flex items-center gap-1"><i class="fas fa-arrow-left"></i> Volver al índice</a>
+                    <div class="flex gap-2">
+                        <button id="refreshDashboard" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm shadow transition flex items-center gap-2"><i class="fas fa-sync-alt"></i> Refrescar datos</button>
+                        <button id="exportReport" class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-4 py-2 rounded-lg text-sm transition"><i class="fas fa-file-pdf text-red-500"></i> Exportar resumen (PDF)</button>
+                    </div>
+                </div>
+
+                <!-- Tarjetas de resumen -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 border-l-8 border-emerald-500 card-hover">
+                        <i class="fas fa-check-circle text-3xl text-emerald-500 mb-2"></i>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Cumplimiento promedio</p>
+                        <p id="avgCompliance" class="text-3xl font-bold text-gray-800 dark:text-white">81%</p>
+                        <span class="text-xs text-green-600"><i class="fas fa-arrow-up"></i> vs trimestre anterior</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 border-l-8 border-sky-500 card-hover">
+                        <i class="fas fa-chart-simple text-3xl text-sky-500 mb-2"></i>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">KPIs en verde</p>
+                        <p id="greenKpis" class="text-3xl font-bold text-gray-800 dark:text-white">12</p>
+                        <span class="text-xs text-gray-500">sobre 18 controles</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 border-l-8 border-amber-500 card-hover">
+                        <i class="fas fa-clock text-3xl text-amber-500 mb-2"></i>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Incidentes abiertos (PRIO alta)</p>
+                        <p id="openIncidents" class="text-3xl font-bold text-gray-800 dark:text-white">2</p>
+                        <span class="text-xs text-red-500">Requiere atención</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-5 border-l-8 border-purple-500 card-hover">
+                        <i class="fas fa-database text-3xl text-purple-500 mb-2"></i>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">Sistemas auditados</p>
+                        <p id="auditedSystems" class="text-3xl font-bold text-gray-800 dark:text-white">94%</p>
+                        <span class="text-xs text-gray-500">Cobertura trimestral</span>
+                    </div>
+                </div>
+
+                <!-- Gráfico de barras (ancho completo) con colores por nivel -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 mb-6">
+                    <h3 class="font-semibold text-gray-800 dark:text-white flex items-center gap-2 mb-4"><i class="fas fa-chart-column text-primary-500"></i> Cumplimiento por KPI (color según umbral)</h3>
+                    <div class="chart-container">
+                        <canvas id="complianceChart" width="800" height="300"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3 text-center">🟢 ≥90% Verde | 🟡 70-89% Amarillo | 🔴 &lt;70% Rojo</p>
+                </div>
+
+                <!-- Gráfico de dona (debajo) -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 mb-8">
+                    <h3 class="font-semibold text-gray-800 dark:text-white flex items-center gap-2 mb-4"><i class="fas fa-chart-pie text-primary-500"></i> Controles con mayor desviación (Top 5 peor rendimiento)</h3>
+                    <div class="chart-container max-w-md mx-auto">
+                        <canvas id="priorityDonut" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!-- Tabla de KPIs completa (18 filas) -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-5 mt-2">
+                    <div class="flex justify-between items-center mb-4 flex-wrap">
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-white flex items-center gap-2"><i class="fas fa-table-list text-primary-500"></i> Detalle de KPIs - Seguridad TISAX</h2>
+                        <span class="text-xs bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full">Última Actualización: 7/5/2026</span>
+                    </div>
+                    <div class="kpi-table-wrapper">
+                        <table class="kpi-table min-w-full divide-y divide-gray-200 dark:divide-gray-700 text-sm">
+                            <thead class="bg-gray-50 dark:bg-gray-900">
+                                <tr>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">ID (enlace)</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Control ISA</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Descripción</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Objetivo Estratégico</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Cumplimiento</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Umbrales</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Frecuencia</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Responsables</th>
+                                    <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase text-center">Componentes clave</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kpiTableBody" class="divide-y divide-gray-100 dark:divide-gray-800"></tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4 italic"><i class="fas fa-edit"></i> Valores de rendimiento generales y enlaces.</p>
+                </div>
+
+                <!-- Gráfico de líneas (histórico mensual) -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-5 mt-8">
+                    <h3 class="font-semibold text-gray-800 dark:text-white flex items-center gap-2 mb-4"><i class="fas fa-chart-line text-primary-500"></i> Evolución mensual del cumplimiento promedio (Abr 2025 - Abr 2026)</h3>
+                    <div class="chart-container">
+                        <canvas id="trendChart" width="800" height="300"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-3 text-center">Datos históricos editables en <code>datosHistoricos</code> (dentro del script).</p>
+                </div>
+
+                <!-- Metodología -->
+                <div class="mt-8 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-5 border border-blue-100 dark:border-blue-800">
+                    <h3 class="font-bold flex items-center gap-2"><i class="fas fa-diagram-project"></i> Metodología de medición (Basado en ISO 27001:2022)</h3>
+                    <p class="text-sm text-gray-700 dark:text-gray-300 mt-2">Los KPIs combinan métricas de cobertura y efectividad. Los datos reflejan el estado actual según auditorías internas y tableros de control. Estos se actualizan mensualmente</p>
+                    <p class="text-sm text-gray-700 dark:text-gray-300 mt-2">Umbrales: </p>
+                    <div class="flex flex-wrap gap-3 mt-3 text-sm ms-4">
+                        <span><i class="fas fa-chart-line text-green-600"></i> Verde ≥90%: Cumple objetivo</span>
+                        <span><i class="fas fa-chart-line text-yellow-600"></i> Amarillo 70-89%: Riesgo moderado</span>
+                        <span><i class="fas fa-chart-line text-red-600"></i> Rojo &lt;70%: Acción urgente</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Sidebar con TOC y acciones -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold flex items-center gap-2 mb-4"><i class="fas fa-chart-simple text-primary-500"></i> Índice de KPIs (18)</h3>
+                        <nav class="space-y-2 text-sm" id="tocContainer"></nav>
+                    </div>
+                    <div class="mt-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm p-4">
+                        <h4 class="font-semibold mb-3 flex items-center gap-2"><i class="fas fa-bolt text-amber-500"></i> Acciones rápidas</h4>
+                        <div class="space-y-2">
+                            <button id="simulateUpdate" class="w-full text-left px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 transition"><i class="fas fa-chart-line"></i> Simular mejora de KPIs</button>
+                            <button id="resetData" class="w-full text-left px-3 py-2 bg-gray-100 dark:bg-gray-700 rounded-lg text-sm hover:bg-gray-200 transition"><i class="fas fa-undo-alt"></i> Resetear datos originales</button>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-xs text-gray-400 text-center">
+                        <i class="fas fa-chart-simple"></i> Dashboard actualizado con 18 KPIs según ISA6_EN.
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+    <button id="back-to-top" class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-kpi_iso27001.js"></script>
+</body>
+</html>
