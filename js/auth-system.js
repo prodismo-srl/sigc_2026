@@ -230,14 +230,14 @@ function requestAccessCode() {
                     "Solicitud de Código de Acceso - Portal SGSI"
                 </p><br>
                 <p style="font-size: 0.8rem; color: #6b7280;">
-                   * Si Usted es un usuario registrado en <strong>PRODISMO SRL</strong>, reciibirá un mail automático de nuestro sistema.<br>
+                   * Si Usted es un usuario registrado en <strong>PRODISMO SRL</strong>, recibirá un mail automático de nuestro sistema con el código de acceso.<br>
                    De lo contrario espere la respuesta del administrador del portal.
                 </p>
             </div>
         `,
         icon: 'info',
         position: 'top',           // 👈 Muestra el modal en la parte superior
-        confirmButtonText: 'Copiar Email',
+        confirmButtonText: 'Copiar Asunto',
         confirmButtonColor: '#1e40af',
         showCancelButton: true,
         cancelButtonText: 'Cerrar',
