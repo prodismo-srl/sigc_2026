@@ -121,7 +121,7 @@
                             <!-- Sección 3 -->
                             <div class="py-2">
                                 <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
-                                    3 - Seguridad Física y Continuidad del Negocio
+                                    3 - Seguridad Física
                                 </div>
                                 <a href="./documentacion/acceso-visitantes/accesos-visitantes.html"
                                     class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
@@ -417,7 +417,7 @@
 
                             <div class="py-2">
                                 <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
-                                    3 - Seguridad Física y Continuidad del Negocio
+                                    3 - Seguridad Física
                                 </div>
                                 <a href="./procedimientos/seguridad-fisica/proc-zonas-seguridad.html"
                                     class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
@@ -793,7 +793,7 @@
 
                             <div class="py-2">
                                 <div class="px-4 py-1 text-sm font-semibold text-gray-700 border-b border-gray-100">
-                                    3 - Seguridad Física y Continuidad del Negocio
+                                    3 - Seguridad Física
                                 </div>
                                 <a href="https://forms.office.com/r/RR3wYqHg8v" target="_blank"
                                     class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
@@ -1161,6 +1161,19 @@
                         Contacto
                     </button>
 
+                    <!-- PDF Download -->
+                    <button id="pdf-download"
+                        class="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors flex items-center space-x-2 hidden">
+                        <i class="fas fa-download"></i>
+                        <span>Descargar PDF</span>
+                    </button>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors hidden">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-400" id="theme-icon"></i>
+                    </button>
+
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-button" class="text-gray-600">
                         <i class="fas fa-bars text-xl"></i>
@@ -1270,6 +1283,16 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
+                <div class="w-full mt-6">
+                    <div class="mb-8 flex flex-wrap gap-3 justify-center">
+                        <button data-filter="Todos" class="filter-btn bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium"><i class="fas fa-users mr-2"></i>Todos</button>
+                        <button data-filter="Basico" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300"><i class="fa-solid fa-desktop mr-2"></i>Básico General</button>
+                        <button data-filter="IT" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300"><i class="fas fa-database mr-2"></i>IT / Seguridad</button>
+                        <button data-filter="Compras" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300"><i class="fa-solid fa-money-bill-1-wave mr-2"></i>Compras / Proyectos</button>
+                        <button data-filter="RRHH" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300"><i class="fa-solid fa-people-group mr-2"></i>RRHH</button>
+                        <button data-filter="Gerencia" class="filter-btn bg-gray-200 text-gray-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-300"><i class="fas fa-user-tie mr-2"></i>Gerencia</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Documentación Sectiones -->
@@ -1302,10 +1325,8 @@
                                         <i class="fas fa-file-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.1 - Seguridad
-                                            de la Información</h4>
-                                        <p class="text-sm text-gray-600">Política general de seguridad de la información
-                                        </p>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.1 - Seguridad de la Información</h4>
+                                        <p class="text-sm text-gray-600">Política general de seguridad de la información</p>
                                         <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.1</p>
                                     </div>
                                 </a>
@@ -1315,8 +1336,7 @@
                                         <i class="fas fa-sitemap text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.2 -
-                                            Organización de la Seguridad de la Información</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.2 - Organización de la seguridad de la información</h4>
                                         <p class="text-sm text-gray-600">Estructura organizativa de la seguridad</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: 4,
                                             A.5.2, A.5.3 A.5.8, A.8.9</p>
@@ -1328,8 +1348,7 @@
                                         <i class="fas fa-boxes text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3 - Gestión de
-                                            Activos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3 - Gestión de Activos</h4>
                                         <p class="text-sm text-gray-600">Gestión y clasificación de activos de
                                             información</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.9,
@@ -1342,8 +1361,7 @@
                                         <i class="fas fa-chart-line text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.4 - Gestión de
-                                            Riesgos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.4 - Gestión de Riesgos</h4>
                                         <p class="text-sm text-gray-600">Identificación, análisis y tratamiento de
                                             riesgos</p>
                                         <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.3,
@@ -1356,8 +1374,7 @@
                                         <i class="fas fa-clipboard-check text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.5 -
-                                            Evaluaciones</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.5 - Evaluaciones</h4>
                                         <p class="text-sm text-gray-600">Auditorías internas y evaluaciones del SGSI</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.35,
                                             A.5.36, A.8.8</p>
@@ -1369,8 +1386,7 @@
                                         <i class="fas fa-exclamation-triangle text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.6 - Gestión de
-                                            Incidentes <span
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.6 - Gestión de Incidentes <span
                                                 class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-check"></i> NUEVA</span></h4>
                                         <p class="text-sm text-gray-600">Procedimientos para manejo de incidentes de
@@ -1415,8 +1431,7 @@
                                         <i class="fas fa-laptop text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1.2 - Uso
-                                            Aceptable de Recursos de IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1.2 - Uso Aceptable de Recursos de IT</h4>
                                         <p class="text-sm text-gray-600">Normas para el uso adecuado de recursos
                                             tecnológicos</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.10
@@ -1454,8 +1469,7 @@
                                         <i class="fas fa-home text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.4 - Gestión
-                                            Segura de Teletrabajo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.4 - Gestión Segura de Teletrabajo</h4>
                                         <p class="text-sm text-gray-600">Seguridad en entornos de trabajo remoto</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.6.7,
                                             A.8.1 </p>
@@ -1465,13 +1479,12 @@
                         </div>
                     </div>
 
-                    <!-- Sección 3 - Seguridad Física y Continuidad del Negocio - Documentación-->
+                    <!-- Sección 3 - Seguridad Física - Documentación-->
                     <div class="border-b border-gray-200">
                         <button
                             class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física y Continuidad del
-                                    Negocio</h3>
+                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física</h3>
                                 <p class="text-gray-600 mt-1">Acceso físico, situaciones excepcionales, activos de apoyo
                                     y dispositivos móviles</p>
                             </div>
@@ -1485,8 +1498,7 @@
                                         <i class="fas fa-door-open text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1 - Acceso
-                                            para Visitantes</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1 - Acceso para Visitantes</h4>
                                         <p class="text-sm text-gray-600">Control de acceso de personas externas</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.7.1,
                                             A.7.2, A.7.3, A.7.4, A.7.5, A.7.6</p>
@@ -1497,8 +1509,7 @@
                                         <i class="fas fa-exclamation text-red-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-300">3.1.2 -
-                                            Seguridad en Situaciones Excepcionales <span
+                                        <h4 class="font-medium text-gray-300">3.1.2 - Seguridad en Situaciones Excepcionales <span
                                                 class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-recycle"></i> Reemplazada</span></h4>
                                         <p class="text-sm text-gray-300">Protocolos para emergencias y situaciones
@@ -1512,8 +1523,7 @@
                                         <i class="fas fa-tools text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.3 - Gestión
-                                            de Activos de Apoyo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.3 - Gestión de Activos de Apoyo</h4>
                                         <p class="text-sm text-gray-600">Gestión de infraestructura y equipos de apoyo
                                         </p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.10,
@@ -1526,8 +1536,7 @@
                                         <i class="fas fa-mobile-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.4 -
-                                            Seguridad para Dispositivos Móviles y Medios de Almacenamiento</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.4 - Seguridad para Dispositivos Móviles y Medios de Almacenamiento</h4>
                                         <p class="text-sm text-gray-600">Seguridad en dispositivos portátiles y medios
                                             de almacenamiento</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.6.7,
@@ -1557,8 +1566,7 @@
                                         <i class="fas fa-id-card text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.1 - Gestión
-                                            de Medios de Identificación</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.1 - Gestión de Medios de Identificación</h4>
                                         <p class="text-sm text-gray-600">Gestión de credenciales y medios de
                                             identificación</p>
                                         <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.5.18</p>
@@ -1610,8 +1618,7 @@
                                         <i class="fas fa-user-shield text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1 - Mínimos
-                                            Privilegios</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1 - Mínimos Privilegios</h4>
                                         <p class="text-sm text-gray-600">Principio de mínimo privilegio en accesos</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.2,
                                             A.8.3</p>
@@ -1679,8 +1686,7 @@
                                         <i class="fas fa-sync-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.1 - Gestión
-                                            de Cambios</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.1 - Gestión de Cambios</h4>
                                         <p class="text-sm text-gray-600">Control de cambios en sistemas y
                                             configuraciones</p>
                                         <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.8.32</p>
@@ -1692,8 +1698,7 @@
                                         <i class="fas fa-code text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.2 - Gestión
-                                            de Entornos de Desarrollo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.2 - Gestión de Entornos de Desarrollo</h4>
                                         <p class="text-sm text-gray-600">Seguridad en entornos de desarrollo y pruebas
                                         </p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.25,
@@ -1707,8 +1712,7 @@
                                         <i class="fas fa-virus text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3 - Gestión
-                                            de Sistemas IT contra Malware</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3 - Gestión de Sistemas IT contra Malware</h4>
                                         <p class="text-sm text-gray-600">Configuración Segura - Protección contra
                                             malware</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.1,
@@ -1722,8 +1726,7 @@
                                         <i class="fas fa-tasks text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.1 - Gestión y 
-                                            Análisis de Registros de Eventos (Logs)</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.1 - Gestión y Análisis de Registros de Eventos (Logs)</h4>
                                         <p class="text-sm text-gray-600">Gestión y Análisis de logs</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.17,
                                             A.8.1, A.8.15</p>
@@ -1736,8 +1739,7 @@
                                         <i class="fas fa-list-ul text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.2 - Retención y
-                                            Eliminación de Logs</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.2 - Retención y Eliminación de Logs</h4>
                                         <p class="text-sm text-gray-600">Retención y Eliminación de logs</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.17,
                                             A.8.1, A.8.15</p>
@@ -1750,8 +1752,7 @@
                                         <i class="fas fa-lock-open text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5 - Gestión
-                                            de Monitorización de Vulnerabilidades</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5 - Gestión de Monitorización de Vulnerabilidades</h4>
                                         <p class="text-sm text-gray-600">Gestión de vulnerabilidades técnicas</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.8,
                                             A.8.19 </p>
@@ -1764,8 +1765,7 @@
                                         <i class="fas fa-vial text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6 - Gestión
-                                            de Auditoría de Sistemas IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6 - Gestión de Auditoría de Sistemas IT</h4>
                                         <p class="text-sm text-gray-600">Protección de los sistemas de información
                                             durante pruebas de auditoría.</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.36,
@@ -1779,8 +1779,7 @@
                                         <i class="fas fa-network-wired text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7 - Gestión
-                                            de Red de la Organización </h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7 - Gestión de Red de la Organización </h4>
                                         <p class="text-sm text-gray-600">Seguridad de redes. Segregación de redes</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.8.20,
                                             A.8.22 </p>
@@ -1814,8 +1813,7 @@
                                         <i class="fas fa-copy text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.9 - Copia de
-                                            seguridad de la información <span
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.9 - Copia de seguridad de la información <span
                                                 class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-check"></i> NUEVA</span></h4>
                                         <p class="text-sm text-gray-600">Gestión de copias de seguridad.</p>
@@ -1830,8 +1828,8 @@
                                         <i class="fas fa-laptop-code text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1 - Gestión
-                                            de Sistemas IT Nuevos o en Desarrollo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1 -
+                                            Requisitos de Seguridad de Sistemas IT Nuevos o en Desarrollo</h4>
                                         <p class="text-sm text-gray-600">Seguridad de la información en el proyecto.
                                             Ciclo de vida de desarrollo seguro.</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.8,
@@ -1859,8 +1857,7 @@
                                         <i class="fas fa-cloud-download-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.3 - Retirada
-                                            Segura de Activos Externos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.3 - Retirada Segura de Activos Externos</h4>
                                         <p class="text-sm text-gray-600">Gestión de controles para la retirada segura de
                                             activos externos.</p>
                                         <p class="text-sm text-gray-400">Referencia a control ISO 27001:2022: A.8.1,
@@ -1907,8 +1904,7 @@
                                         <i class="fas fa-handshake text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.1 -
-                                            Seguridad de la Información entre Contratistas y Socios</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.1 - Gestión de Contratistas y Socios</h4>
                                         <p class="text-sm text-gray-600">Gestión de seguridad con socios comerciales</p>
                                         <p class="text-sm text-gray-400">Referencia a controles ISO 27001:2022: A.5.19 -
                                             A.5.22</p>
@@ -2007,8 +2003,7 @@
                                         <i class="fas fa-file-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.1 - Seguridad
-                                            de la Información</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.1 - Procedimiento de seguridad de la información</h4>
                                         <p class="text-sm text-gray-600">Procedimiento general de seguridad de la
                                             información
                                         </p>
@@ -2020,8 +2015,7 @@
                                         <i class="fas fa-sitemap text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.2 -
-                                            Organización de la Seguridad de la Información</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.2 - Procedimiento organización de la seguridad de la información</h4>
                                         <p class="text-sm text-gray-600">Estructura organizativa de la seguridad</p>
                                     </div>
                                 </a>
@@ -2032,7 +2026,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3.1 -
-                                            Identificación y Registro de Activos de Información</h4>
+                                            Procedimiento identificación y registro de activos de información</h4>
                                         <p class="text-sm text-gray-600">Identificación y Registro de Activos de
                                             información</p>
                                     </div>
@@ -2043,8 +2037,7 @@
                                         <i class="fas fa-box-open text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3.2 -
-                                            Clasificación y Gestión de Activos de Información</h4>
+                                        <h4 class="font900 group900 group-hover:text-blue-600">1.3.2 - Procedimiento clasificación y de activos de información</h4>
                                         <p class="text-sm text-gray-600">Gestión y clasificación de activos de
                                             información</p>
                                     </div>
@@ -2055,8 +2048,7 @@
                                         <i class="fas fa-cloud text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3.3 - Gestión
-                                            de Servicios IT Externos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.3.3 - Procedimiento gestión de servicios IT externos</h4>
                                         <p class="text-sm text-gray-600">Gestión y clasificación de servicios IT
                                             externos</p>
                                     </div>
@@ -2067,8 +2059,7 @@
                                         <i class="fas fa-chart-line text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.4 - Gestión de
-                                            Riesgos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.4 - Procedimiento de gestión de riesgos</h4>
                                         <p class="text-sm text-gray-600">Identificación, análisis y tratamiento de
                                             riesgos</p>
                                     </div>
@@ -2080,7 +2071,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.5.1 -
-                                            Verificación y Mejora Continua</h4>
+                                            Procedimiento verificación y mejora continua</h4>
                                         <p class="text-sm text-gray-600">Verificación y mejora continua</p>
                                     </div>
                                 </a>
@@ -2091,7 +2082,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.5.2 -
-                                            Auditoría Externa Independiente del SGSI</h4>
+                                            Procedimiento auditoría externa independiente del SGSI</h4>
                                         <p class="text-sm text-gray-600">Auditorías externas independientes del SGSI</p>
                                     </div>
                                 </a>
@@ -2101,8 +2092,7 @@
                                         <i class="fas fa-exclamation-triangle text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.6 - Gestión de
-                                            Incidentes <span
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">1.6 - Procedimiento gestión de incidentes <span
                                                 class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-check"></i> NUEVA</span></h4>
                                         <p class="text-sm text-gray-600">Gestión de Eventos de Seguridad de la
@@ -2132,8 +2122,7 @@
                                         <i class="fas fa-user-tie text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1 -
-                                            Cualificación de Personal en Áreas Sensibles</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.1 - Procedimiento cualificación de personal en áreas sensibles</h4>
                                         <p class="text-sm text-gray-600">Requisitos para puestos de alta responsabilidad
                                         </p>
                                     </div>
@@ -2144,8 +2133,7 @@
                                         <i class="fas fa-file-contract text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.2 -
-                                            Obligación Contractual de Cumplimiento</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.2 - Procedimiento obligación contractual de cumplimiento</h4>
                                         <p class="text-sm text-gray-600">Compromisos contractuales de seguridad</p>
                                     </div>
                                 </a>
@@ -2155,8 +2143,7 @@
                                         <i class="fas fa-graduation-cap text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.3 -
-                                            Concientización y Capacitación en SI</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.3 - Procedimiento concientización y capacitación en SI</h4>
                                         <p class="text-sm text-gray-600">Programas de formación en seguridad</p>
                                     </div>
                                 </a>
@@ -2166,8 +2153,7 @@
                                         <i class="fas fa-home text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.4 - Gestión
-                                            Segura de Teletrabajo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">2.1.4 - Procedimiento gestión segura del teletrabajo</h4>
                                         <p class="text-sm text-gray-600">Seguridad en entornos de trabajo remoto</p>
                                     </div>
                                 </a>
@@ -2175,13 +2161,12 @@
                         </div>
                     </div>
 
-                    <!-- Sección 3 Seguridad física y Continuidad del Negocio - Procedimientos-->
+                    <!-- Sección 3 Seguridad física - Procedimientos-->
                     <div class="border-b border-gray-200">
                         <button
                             class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física y Continuidad del
-                                    Negocio</h3>
+                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física</h3>
                                 <p class="text-gray-600 mt-1">Acceso físico, activos de apoyo y dispositivos móviles</p>
                             </div>
                             <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
@@ -2194,8 +2179,7 @@
                                         <i class="fa-solid fa-building-lock text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1.1 -
-                                            Gestión de Zonas de Seguridad</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1.1 - Procedimiento gestión de zonas de seguridad</h4>
                                         <p class="text-sm text-gray-600">Control de acceso a zonas de seguridad</p>
                                     </div>
                                 </a>
@@ -2205,8 +2189,7 @@
                                         <i class="fas fa-door-open text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1.2 -
-                                            Acceso para Visitantes</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.1.2 - Procedimiento acceso para visitantes</h4>
                                         <p class="text-sm text-gray-600">Protocolos para acceso a visitantes</p>
                                     </div>
                                 </a>
@@ -2215,8 +2198,7 @@
                                         <i class="fas fa-exclamation text-red-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-300">3.1.2 -
-                                            Seguridad en Situaciones Excepcionales <span
+                                        <h4 class="font-medium text-gray-300">3.1.2 - Procedimiento gestión de seguridad en situaciones excepcionales <span
                                                 class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-recycle"></i> Reemplazado</span></h4>
                                         <p class="text-sm text-gray-300">Protocolos para emergencias y situaciones
@@ -2230,8 +2212,7 @@
                                         <i class="fas fa-mobile-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.3 -
-                                            Gestión de Activos de Apoyo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.3 - Procedimiento gestión de activos de apoyo</h4>
                                         <p class="text-sm text-gray-600">Procedimientos de Gestión de activos de apoyo
                                         </p>
                                     </div>
@@ -2242,8 +2223,7 @@
                                         <i class="fa-solid fa-laptop-file text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.4 -
-                                            Seguridad para Dispositivos Móviles y Medios de Almacenamiento</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">3.1.4 - Procedimiento seguridad para dispositivos móviles y medios de almacenamiento</h4>
                                         <p class="text-sm text-gray-600">Seguridad en dispositivos portátiles y medios
                                             de almacenamiento</p>
                                     </div>
@@ -2271,8 +2251,7 @@
                                         <i class="fas fa-id-card text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.1 - Gestión
-                                            de Medios de Identificación</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.1 - Procedimiento gestión de medios de identificación</h4>
                                         <p class="text-sm text-gray-600">Gestión de credenciales y medios de
                                             identificación</p>
                                     </div>
@@ -2283,8 +2262,7 @@
                                         <i class="fas fa-fingerprint text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.2 -
-                                            Protección de Acceso a Servicios de Red, Sistemas IT y Aplicaciones</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.2 - Procedimiento protección de acceso a servicios de red, sistemas IT y aplicaciones</h4>
                                         <p class="text-sm text-gray-600">Mecanismos de autenticación y control de acceso
                                         </p>
                                     </div>
@@ -2295,8 +2273,7 @@
                                         <i class="fas fa-user text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.1 -
-                                            Cuentas de Usuario</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.1 - Procedimiento cuentas de usuario</h4>
                                         <p class="text-sm text-gray-600">Ciclo de vida de cuentas de usuario</p>
                                     </div>
                                 </a>
@@ -2306,8 +2283,7 @@
                                         <i class="fas fa-key text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.2 -
-                                            Contraseñas Seguras</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.1.3.2 - Procedimiento contraseñas seguras</h4>
                                         <p class="text-sm text-gray-600">Requisitos y gestión de contraseñas</p>
                                     </div>
                                 </a>
@@ -2317,8 +2293,7 @@
                                         <i class="fas fa-user-shield text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1.1 -
-                                            Gestión de Accesos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1.1 - Procedimiento gestión de accesos</h4>
                                         <p class="text-sm text-gray-600">Protocolos de accesos</p>
                                     </div>
                                 </a>
@@ -2328,8 +2303,7 @@
                                         <i class="fas fa-user-shield text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1.2 -
-                                            Cuentas Privilegiadas</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">4.2.1.2 - Procedimiento cuentas privilegiadas</h4>
                                         <p class="text-sm text-gray-600">Principio de mínimo privilegio en accesos</p>
                                     </div>
                                 </a>
@@ -2339,8 +2313,7 @@
                                         <i class="fas fa-exclamation text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-300">4.2.1.3 -
-                                            Respuesta ante Incidentes <span
+                                        <h4 class="font-medium text-gray-300">4.2.1.3 - Procedimiento Respuesta ante Incidentes <span
                                                 class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-recycle"></i> Reemplazado</span></h4>
                                         <p class="text-sm text-gray-300">Protocolos para incidentes</p>
@@ -2372,8 +2345,7 @@
                                         <i class="fas fa-database text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.1 -
-                                            Procedimientos Criptográficos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.1 - Procedimientos criptográficos</h4>
                                         <p class="text-sm text-gray-600">Uso de protocolos criptográficos</p>
                                     </div>
                                 </a>
@@ -2383,8 +2355,7 @@
                                         <i class="fas fa-lock text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.2.1 -
-                                            Protección de la Información Durante Transferencia</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.2.1 - Procedimiento protección de la información durante transferencia</h4>
                                         <p class="text-sm text-gray-600">Transferencia Segura de Información</p>
                                     </div>
                                 </a>
@@ -2394,8 +2365,7 @@
                                         <i class="fas fa-exchange-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.2.2 -
-                                            Configuración de VPN</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.1.2.2 - Procedimiento configuración de VPN</h4>
                                         <p class="text-sm text-gray-600">Protocolos de Configuración de VPN</p>
                                     </div>
                                 </a>
@@ -2405,8 +2375,7 @@
                                         <i class="fas fa-sync-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.1 - Gestión
-                                            de Cambios</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.1 - Procedimiento gestión de cambios</h4>
                                         <p class="text-sm text-gray-600">Control de cambios en sistemas y
                                             configuraciones</p>
                                     </div>
@@ -2417,8 +2386,7 @@
                                         <i class="fas fa-code text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.2 - Gestión
-                                            de Entornos de Desarrollo</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.2 - Procedimiento gestión de entornos de desarrollo</h4>
                                         <p class="text-sm text-gray-600">Seguridad en entornos de desarrollo y pruebas
                                         </p>
                                     </div>
@@ -2429,8 +2397,7 @@
                                         <i class="fas fa-virus text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3.1 -
-                                            Protección contra Malware</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3.1 - Procedimiento protección contra malware</h4>
                                         <p class="text-sm text-gray-600">Configuración Segura - Protección contra
                                             malware</p>
                                     </div>
@@ -2441,8 +2408,7 @@
                                         <i class="fas fa-shield-virus text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3.2 -
-                                            Respuesta contra Malware</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.3.2 - Procedimiento respuesta contra malware</h4>
                                         <p class="text-sm text-gray-600">Respuesta ante ataques de malware</p>
                                     </div>
                                 </a>
@@ -2452,8 +2418,7 @@
                                         <i class="fas fa-tasks text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.1 -
-                                            Registros de Eventos (Logs)</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.1 - Procedimiento registros de eventos (Logs)</h4>
                                         <p class="text-sm text-gray-600">Gestión, Retención y Eliminación de logs</p>
                                     </div>
                                 </a>
@@ -2463,8 +2428,7 @@
                                         <i class="fa-solid fa-cubes-stacked text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.2 -
-                                            Configuración de Logs</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.4.2 - Procedimiento configuración de logs</h4>
                                         <p class="text-sm text-gray-600">Protocolos de Configuración de logs</p>
                                     </div>
                                 </a>
@@ -2474,8 +2438,7 @@
                                         <i class="fas fa-lock-open text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5.1 -
-                                            Gestión de Vulnerabilidades</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5.1 - Procedimiento gestión de vulnerabilidades</h4>
                                         <p class="text-sm text-gray-600">Gestión de vulnerabilidades técnicas</p>
                                     </div>
                                 </a>
@@ -2485,8 +2448,7 @@
                                         <i class="fa-solid fa-bandage text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5.2 -
-                                            Aplicación de Parches de Seguridad</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.5.2 - Procedimiento aplicación de parches de seguridad</h4>
                                         <p class="text-sm text-gray-600">Aplicación de parches de seguridad</p>
                                     </div>
                                 </a>
@@ -2496,8 +2458,7 @@
                                         <i class="fas fa-vial text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6.1 -
-                                            Auditoría de Sistemas IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6.1 - Procedimiento auditoría de sistemas IT</h4>
                                         <p class="text-sm text-gray-600">Protección de los sistemas de información
                                             durante pruebas de auditoría.</p>
                                     </div>
@@ -2508,8 +2469,7 @@
                                         <i class="fa-solid fa-flask-vial text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6.2 -
-                                            Seguimiento de Auditoría de Sistemas IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.6.2 - Procedimiento seguimiento de auditoría de sistemas IT</h4>
                                         <p class="text-sm text-gray-600">Seguimiento de auditoría de sistemas IT.</p>
                                     </div>
                                 </a>
@@ -2519,8 +2479,7 @@
                                         <i class="fas fa-network-wired text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.1 -
-                                            Gestión de Red de la Organización </h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.1 - Procedimiento gestión de red de la organización</h4>
                                         <p class="text-sm text-gray-600">Seguridad de redes. Segregación de redes</p>
                                     </div>
                                 </a>
@@ -2530,8 +2489,7 @@
                                         <i class="fas fa-circle-nodes text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.2 -
-                                            Configuración de Accesos </h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.2 - Procedimiento configuración de accesos</h4>
                                         <p class="text-sm text-gray-600">Configuración de accesos a la red.</p>
                                     </div>
                                 </a>
@@ -2541,8 +2499,7 @@
                                         <i class="fa-solid fa-hospital-user text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.3 -
-                                            Respuesta a Incidentes de Seguridad </h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.7.3 - Procedimiento respuesta a incidentes de seguridad</h4>
                                         <p class="text-sm text-gray-600">Respuesta ante incidentes de seguridad.</p>
                                     </div>
                                 </a>
@@ -2552,8 +2509,7 @@
                                         <i class="fas fa-satellite-dish text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.8 -
-                                            Preparación de las <strong>TIC</strong> para la continuidad del negocio
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.8 - Procedimiento preparación de las <strong>TIC</strong> para la continuidad del negocio
                                             <span
                                                 class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-check"></i> NUEVA</span>
@@ -2571,8 +2527,8 @@
                                         <i class="fas fa-copy text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.9 - Copia de
-                                            seguridad de la información <span
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.2.9 - Procedimiento copias de seguridad de la información
+                                            <span
                                                 class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full"><i
                                                     class="fas fa-check"></i> NUEVA</span></h4>
                                         <p class="text-sm text-gray-600">Protocolos de copias de seguridad.</p>
@@ -2584,8 +2540,7 @@
                                         <i class="fas fa-laptop-code text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1.1 -
-                                            Seguridad en el Ciclo de Vida de Sistemas IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1.1 - Procedimiento seguridad en el ciclo de vida de sistemas IT</h4>
                                         <p class="text-sm text-gray-600">Seguridad de la información en el proyecto.
                                             Ciclo de vida de desarrollo seguro.</p>
                                     </div>
@@ -2596,8 +2551,7 @@
                                         <i class="fa-solid fa-code text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1.2 -
-                                            Evaluación de Proveedores de Servicios IT</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.1.2 - Procedimiento evaluación de proveedores de servicios IT</h4>
                                         <p class="text-sm text-gray-600">Evaluación de proveedores de servicios IT.</p>
                                     </div>
                                 </a>
@@ -2607,8 +2561,7 @@
                                         <i class="fas fa-project-diagram text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.2 -
-                                            Monitorización de Red</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.2 - Procedimiento monitorización de red</h4>
                                         <p class="text-sm text-gray-600">Protocolos de control de red.</p>
                                     </div>
                                 </a>
@@ -2618,8 +2571,7 @@
                                         <i class="fas fa-cloud-download-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.3 -
-                                            Devolución y Retiro Seguro de Activos en Servicios IT Externos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.3 - Procedimiento devolución y retiro seguro de activos en servicios IT externos</h4>
                                         <p class="text-sm text-gray-600">Protocolos de control para la retirada segura
                                             de activos externos.</p>
                                     </div>
@@ -2630,8 +2582,7 @@
                                         <i class="fas fa-cloud text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.4 -
-                                            Protección de Información en Servicios IT Compartidos</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">5.3.4 - Procedimiento protección de información en servicios IT compartidos</h4>
                                         <p class="text-sm text-gray-600">Protocolos de control para el uso de
                                             servicios en la nube.</p>
                                     </div>
@@ -2659,8 +2610,7 @@
                                         <i class="fas fa-handshake text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.1 -
-                                            Gestión de SI entre Contratistas y Socios</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.1 - Procedimiento gestión de SI entre contratistas y socios</h4>
                                         <p class="text-sm text-gray-600">Procedimeintos de seguridad con socios
                                             comerciales</p>
                                     </div>
@@ -2671,8 +2621,7 @@
                                         <i class="fas fa-user-secret text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.2 -
-                                            Confidencialidad de la Información Intercambiada con Terceros</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">6.1.2 - Procedimiento confidencialidad de la información intercambiada con terceros</h4>
                                         <p class="text-sm text-gray-600">Protocolos de protección de información
                                             compartida con terceros</p>
                                     </div>
@@ -2700,8 +2649,7 @@
                                         <i class="fas fa-balance-scale text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.1 -
-                                            Cumplimiento de Disposiciones Reglamentarias</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.1 - Procedimiento cumplimiento de disposiciones reglamentarias</h4>
                                         <p class="text-sm text-gray-600">Cumplimiento de normativas legales y
                                             regulatorias</p>
                                     </div>
@@ -2712,8 +2660,7 @@
                                         <i class="fas fa-shield-alt text-blue-600 text-sm"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.2 -
-                                            Protección de Datos Personales</h4>
+                                        <h4 class="font-medium text-gray-900 group-hover:text-blue-600">7.1.2 - Procedimiento protección de datos personales</h4>
                                         <p class="text-sm text-gray-600">Protección de datos personales y privacidad</p>
                                     </div>
                                 </a>
@@ -2951,13 +2898,12 @@
                         </div>
                     </div>
 
-                    <!-- Sección 3 Seguridad física y Continuidad del Negocio - Formularios-->
+                    <!-- Sección 3 Seguridad física - Formularios-->
                     <div class="border-b border-gray-200">
                         <button
                             class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física y Continuidad del
-                                    Negocio</h3>
+                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física</h3>
                                 <p class="text-gray-600 mt-1">Acceso físico, activos de apoyo y dispositivos móviles</p>
                             </div>
                             <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
@@ -3745,13 +3691,12 @@
                         </div>
                     </div>
 
-                    <!-- Sección 3 Seguridad física y Continuidad del Negocio - Matrices-->
+                    <!-- Sección 3 Seguridad física - Matrices-->
                     <div class="border-b border-gray-200">
                         <button
                             class="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors">
                             <div>
-                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física y Continuidad del
-                                    Negocio</h3>
+                                <h3 class="text-xl font-semibold text-gray-900">3 - Seguridad Física</h3>
                                 <p class="text-gray-600 mt-1">Acceso físico, activos de apoyo y dispositivos móviles</p>
                             </div>
                             <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
@@ -4213,88 +4158,12 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- enlaces JavaScript -->
     <script type="text/javascript" src="../../js/documentacion/scripts-general_two.js"></script>
     <script type="text/javascript" src="../../js/config.generated.js"></script>
     <script type="text/javascript" src="../../js/auth-system.js"></script>
+    <script type="text/javascript" src="../../js/documentacion/enhanced-index.js"></script>
 
-    <!-- JavaScript -->
-    <script>
-        // Actualizar año actual
-        (function () {
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-        })();
-
-        // Toggle para expandir/contraer secciones
-        document.querySelectorAll('.border-b button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('i');
-
-                content.classList.toggle('hidden');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-
-        // Función de búsqueda
-        document.getElementById('search-input').addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const items = document.querySelectorAll('.grid a');
-            let visibleCount = 0;
-
-            items.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    item.style.display = 'flex';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Actualizar contador
-            document.getElementById('doc-count').textContent = visibleCount;
-        });
-
-        // Limpiar búsqueda
-        document.getElementById('clear-search').addEventListener('click', function () {
-            document.getElementById('search-input').value = '';
-            document.getElementById('search-input').dispatchEvent(new Event('input'));
-        });
-
-        // Botón de búsqueda
-        document.getElementById('search-btn').addEventListener('click', function () {
-            document.getElementById('search-input').focus();
-        });
-
-        // Botón de impresión
-        document.getElementById('print-btn').addEventListener('click', function () {
-            window.print();
-        });
-
-        // Contacto con SweetAlert2
-        document.getElementById('contacto-btn').addEventListener('click', function () {
-            Swal.fire({
-                title: 'Contacto',
-                html: `
-                    <div class="text-left">
-                        <p class="mb-4"><strong>Prodismo SRL</strong></p>
-                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Av. Japón 2230, Córdoba, Argentina</p>
-                        <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 3541 669-937</p>
-                        <p class="mb-4"><i class="fas fa-envelope mr-2"></i> itprodismo@prodismo.com</p>
-                        <p class="text-sm text-gray-600">Estaremos encantados de atenderle.</p>
-                    </div>
-                `,
-                icon: 'info',
-                confirmButtonText: 'Cerrar',
-                confirmButtonColor: '#3b82f6'
-            });
-        });
-
-    </script>
 </body>
 
 </html>
