@@ -149,10 +149,9 @@
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Configuración
                                 General para Todos los Sistemas</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <!-- <li>Sincronización horaria: Configurar NTP con servidor corporativo</li> -->
                                 <li>Formato de timestamp: <b>YYYY-MM-DD HH:MM:SS TIMEZONE</b></li>
                                 <li>Codificación de caracteres: <b>UTF-8</b></li>
-                                <li>Rotación de logs: Implementar para evitar llenado de discos</li>
+                                <li>Rotación de logs: Implementar para evitar llenado de discos. Sobreescribir eventos si es necesario (Los anteriores primero)</li>
                             </ul>
                         </div>
 
@@ -237,7 +236,7 @@
                                 <li>Identificar sistemas sujetos a configuración de logging</li>
                                 <li>Definir eventos específicos a registrar según criticidad del sistema</li>
                                 <li>Establecer formatos de log estándar</li>
-                                <li>Diseñar arquitectura de envío al SIEM centralizado</li>
+                                <li>Arquitectura por defecto <strong>WAZUH</strong></li>
                             </ol>
                             <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Entregables:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
@@ -246,43 +245,32 @@
                                 <li>Plan de implementación</li>
                             </ul>
                         </div>
-
+<!-- 148.227.121.179/32 -->
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.2. Fase 2:
                                 Implementación Técnica</h3>
 
                             <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.1. Servidores Windows
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.1. Servidores Windows y Dispositivos de Red (imagen 1)
                                 </h4>
                                 <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                    <pre class="text-sm text-gray-800 dark:text-gray-200">
-                                        # Configuración mediante Group Policy
-                                        - Habilitar auditoría detallada
-                                        - Configurar WEF para envío a SIEM
-                                        - Establecer tamaño máximo y rotación de logs
-                                    </pre>
+                                    <img src="../../../../images/monitorizacion-red/wazuh_logs_0.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
                                 </div>
                             </div>
 
                             <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.2. ERP SIP 4.0</h4>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Habilitar logging de transacciones críticas</li>
-                                    <li>Configurar auditoría de acceso a datos sensibles</li>
-                                    <li>Establecer envío de logs via agente al SIEM</li>
-                                </ul>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.2. Servidores Windows y Dispositivos de Red (imagen 2)
+                                </h4>
+                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
+                                    <img src="../../../../images/monitorizacion-red/wazuh_logs_1.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
+                                </div>
                             </div>
 
                             <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.3. Dispositivos de Red
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.3. Visor de Eventos de Windows (para endpoints fuera de Prodismo)
                                 </h4>
                                 <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                    <pre class="text-sm text-gray-800 dark:text-gray-200">
-                                        # Configuración estándar
-                                        logging host [IP-SIEM]
-                                        logging trap informational
-                                        logging source-interface [interface]
-                                    </pre>
+                                    <img src="../../../../images/monitorizacion-red/Visor_de_eventos_1.png.jpg" alt="Configuración de logs en Visor de Eventos en Windows" class="w-full h-auto rounded-lg">
                                 </div>
                             </div>
                         </div>
@@ -293,13 +281,13 @@
                             <p class="text-gray-700 dark:text-gray-300 font-medium mb-3">Actividades:</p>
                             <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Generar eventos de prueba para verificar registro</li>
-                                <li>Validar recepción en SIEM centralizado</li>
+                                <li>Validar recepción en <strong>WAZUH</strong></li>
                                 <li>Verificar formato y contenido de logs</li>
                                 <li>Documentar configuración implementada</li>
                             </ol>
                             <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Criterios de Aceptación:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Logs recibidos en SIEM dentro de los 5 minutos del evento</li>
+                                <li>Logs recibidos en <strong>WAZUH</strong> dentro de los 3 minutos del evento</li>
                                 <li>Formato de timestamp correcto</li>
                                 <li>Información mínima requerida presente</li>
                             </ul>
@@ -314,46 +302,21 @@
                         </h2>
 
                         <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. Plantilla para
-                                Servidores Windows</h3>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. Configuración estándar de <strong>WAZUH</strong></h3>
                             <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                <pre class="text-sm text-gray-800 dark:text-gray-200">
-                                    &lt;!-- Configuración GPO para Logging --&gt;
-                                    &lt;Configuration&gt;
-                                        &lt;AuditPolicy&gt;
-                                            &lt;AuditLogon enabled="true"/&gt;
-                                            &lt;AuditObjectAccess enabled="true"/&gt;
-                                            &lt;AuditPolicyChange enabled="true"/&gt;
-                                        &lt;/AuditPolicy&gt;
-                                        &lt;EventLog&gt;
-                                            &lt;MaxSize&gt;2048MB&lt;/MaxSize&gt;
-                                            &lt;Retention&gt;60&lt;/Retention&gt;
-                                        &lt;/EventLog&gt;
-                                    &lt;/Configuration&gt;
-                                </pre>
+                                <img src="../../../../images/monitorizacion-red/wazuh_logs_2.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
                             </div>
                         </div>
 
                         <div class="mb-6">
                             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. Plantilla para
                                 Aplicaciones Web</h3>
-                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                <pre class="text-sm text-gray-800 dark:text-gray-200">
-                                    {
-                                        "logging": {
-                                            "level": "INFO",
-                                            "format": "TIMESTAMP LEVEL [THREAD] CLASS - MESSAGE",
-                                            "appenders": [
-                                                {
-                                                    "type": "file",
-                                                    "file": "/var/log/applications/app.log",
-                                                    "maxSize": "100MB",
-                                                    "maxFiles": 10
-                                                }
-                                            ]
-                                        }
-                                    }
-                                </pre>
+                            <div class="p-3 bg-gray-50 rounded-lg dark:bg-gray-800 my-3 text-center overflow-x-auto">
+                                <img src="../../../../images/monitorizacion-red/Session_plantilla_1.png.jpg" alt="MS Authenticator"
+                                    title="Configuración de logs en App Interna" class="inline w-86 h-auto m-2 rounded-lg">
+
+                                <img src="../../../../images/monitorizacion-red/Session_plantilla_2.png.jpg" alt="Configuración de logs en App Interna"
+                                    title="Configuración de logs en App Interna" class="inline w-86 h-auto m-2 rounded-lg">
                             </div>
                         </div>
                     </section>
@@ -392,7 +355,7 @@
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                                 Diaria</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipo de SOC
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI
                                             </td>
                                         </tr>
                                         <tr>
@@ -401,7 +364,7 @@
                                                 Revisión de configuración</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Mensual</td>
+                                                Trimestral</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Administradores de sistemas</td>
                                         </tr>
@@ -411,7 +374,7 @@
                                                 Actualización de plantillas</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Trimestral</td>
+                                                Anual</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
                                         </tr>
                                     </tbody>
@@ -424,7 +387,7 @@
                                 Performance</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Tasa de generación de logs: Volumen normal por sistema</li>
-                                <li>Tiempo de entrega: Máximo 5 minutos desde evento a SIEM</li>
+                                <li>Tiempo de entrega: Máximo 3 minutos desde evento a <strong>WAZUH</strong></li>
                                 <li>Cobertura de sistemas: Porcentaje de sistemas con logging configurado</li>
                             </ul>
                         </div>
@@ -500,16 +463,16 @@
                                     </a>
                                 </li>
                                 <li>Informe de Incidencias
-                                    <a href="#" target="_blank" title="F524-IT-3 Informe de Incidencias"
+                                    <a href="https://forms.office.com/r/eryzXy34gc" target="_blank" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
                                         class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
                                         <i class="fas fa-file-alt text-blue-400 mr-2"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F524-IT-3
+                                            F161-IT-1
                                         </span>
-                                        Informe de Incidencias
+                                        Formulario de Reporte de Eventos por Departamento
                                     </a>
                                 </li>
                             </ul>

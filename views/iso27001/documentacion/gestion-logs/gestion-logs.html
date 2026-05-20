@@ -229,15 +229,12 @@
                         <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                             <li><strong>Habilitación de Logs:</strong> El registro de eventos debe estar habilitado en
                                 todos los sistemas y aplicaciones dentro del alcance.</li>
-                            <li><strong>Sincronización de Hora:</strong> Todos los sistemas generadores de logs deben
-                                estar sincronizados con un servidor NTP (Network Time Protocol) corporativo para
-                                garantizar la precisión de las marcas de tiempo.</li>
                             <li><strong>Protección de Logs:</strong> Los logs deben ser protegidos contra
                                 modificaciones, alteraciones y eliminaciones no autorizadas. Se implementarán controles
                                 de integridad (ej: hashing).</li>
                             <li><strong>Almacenamiento Centralizado:</strong> Los logs deben ser enviados a un sistema
                                 SIEM centralizado para su agregación, correlación y análisis.</li>
-                            <li><strong>Retención:</strong> Los logs deben ser almacenados por un período mínimo de 90
+                            <li><strong>Retención:</strong> Los logs deben ser almacenados por un período mínimo de 45
                                 días en línea para análisis inmediato y por 12 meses en almacenamiento frío (offline)
                                 para fines de auditoría e investigación forense. Los logs relacionados con incidentes de
                                 seguridad deben ser retenidos hasta que el incidente sea cerrado.</li>
@@ -253,22 +250,7 @@
 
                         <div class="space-y-6">
                             <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.1. ERP SIP 4.0</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                    <li><strong>Eventos de Autenticación:</strong> Inicios de sesión exitosos y fallidos
-                                        (timestamp, usuario).</li>
-                                    <li><strong>Eventos de Autorización:</strong> Intentos de acceso a funciones o datos
-                                        sensibles (ej: módulos financieros, exportación masiva de datos).</li>
-                                    <li><strong>Eventos de Modificación de Datos:</strong> Creación, modificación y
-                                        eliminación de registros críticos (ej.: datos de clientes, transacciones
-                                        financieras).</li>
-                                    <li><strong>Eventos de Administración:</strong> Cambios en la configuración del
-                                        sistema, permisos de usuario y roles.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.2. Servidores (Windows/Linux)
+                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.1. Servidores (Windows/Linux)
                                 </h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                     <li><strong>Eventos de Autenticación:</strong> Logon/logoff exitosos y fallidos.
@@ -283,7 +265,7 @@
                             </div>
 
                             <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.3. Redes Internas (Firewalls,
+                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.2. Redes Internas (Firewalls,
                                     Switches)</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
                                     <li><strong>Eventos de Tráfico:</strong> Intentos de conexión denegados (bloqueos
@@ -296,12 +278,41 @@
                             </div>
 
                             <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.4. Aplicaciones Internas</h3>
+                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.3. Endpoints (Fuera de Prodismo)</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4"> 
+                                    <li><strong>Registro de Windows (Visor de Enventos de Windows):</strong>
+                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                            <li>Aplicación</li>
+                                            <li>Seguridad</li>
+                                            <li>Instalación</li>
+                                            <li>Sistema</li>
+                                            <li>Eventos reenviados</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Registro de aplicaciones y servicios</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 relative">
+                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.4. ERP SIP 4.0</h3><span class="absolute top-0 left-40 text-sm font-bold bg-gray-200 text-gray-500 dark:text-gray-400 dark:bg-gray-100 mt-3 p-1 rounded-full">En proceso</span>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                    <li><strong>Eventos de Autenticación y Autorización:</strong> Accesos a la
-                                        aplicación y a funcionalidades sensibles.</li>
-                                    <li><strong>Eventos de Negocio:</strong> Transacciones críticas ejecutadas (ej:
-                                        aprobaciones, cambios de estado).</li>
+                                    <li><strong>Eventos de Autenticación:</strong> Inicios de sesión exitosos y fallidos
+                                        (timestamp, usuario).</li>
+                                    <li><strong>Eventos de Autorización:</strong> Intentos de acceso a funciones o datos
+                                        sensibles (ej: módulos financieros, exportación masiva de datos).</li>
+                                    <li><strong>Eventos de Modificación de Datos:</strong> Creación, modificación y
+                                        eliminación de registros críticos (ej.: datos de clientes, transacciones
+                                        financieras).</li>
+                                    <li><strong>Eventos de Administración:</strong> Cambios en la configuración del
+                                        sistema, permisos de usuario y roles.</li>
+                                </ul>
+                            </div>
+
+                            <div class="p-4 relative">
+                                <h3 class="font-bold text-gray-900 dark:text-white mb-3">7.5. Aplicaciones Internas</h3><span class="absolute top-0 left-60 text-sm font-bold bg-gray-200 text-gray-500 dark:text-gray-400 dark:bg-gray-100 mt-3 p-1 rounded-full">En proceso</span>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
+                                    <li><strong>Eventos de Accesos:</strong> Accesos a la
+                                        aplicación.</li>
                                     <li><strong>Eventos de Error:</strong> Errores de aplicación, excepciones no
                                         manejadas (stack traces para debugging).</li>
                                     <li><strong>Eventos de Auditoría:</strong> Cualquier acción que modifique datos
@@ -319,7 +330,7 @@
                         </h2>
 
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                            <li>El Departamento de IT monitorizará de forma proactiva los logs centralizados en el SIEM.</li>
+                            <li>El Departamento de IT monitorizará de forma proactiva los logs centralizados en <b>Wazuh</b> como herramienta principal para la recolección y análisis de logs en la red interna, mientras que <b>Sabix</b> y <b>PRTG</b> se utilizan para visualización y detección de nuevos dispositivos</li>
                             <li>Se implementarán reglas de correlación para detectar patrones de ataque (ej: múltiples
                                 intentos de login fallidos, acceso a datos fuera del horario laboral).</li>
                             <li>Se generarán alertas automatizadas para eventos críticos de seguridad.</li>

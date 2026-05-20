@@ -1,5 +1,5 @@
 // ARCHIVO GENERADO AUTOMÁTICAMENTE - NO EDITAR MANUALMENTE
-    // Generated: 2026-05-17T01:43:40.388Z
+    // Generated: 2026-05-20T11:17:03.893Z
     // Environment: development
     window.CONFIG = {
   "ACCESS_CODES": [
@@ -154,6 +154,6 @@
     "N2!cVb@nHj8#tGf$1WrTy"
   ],
   "ENV": "development",
-  "TIMESTAMP": "2026-05-17T01:43:40.386Z"
+  "TIMESTAMP": "2026-05-20T11:17:03.892Z"
 };
     
