@@ -209,7 +209,7 @@ const instructivos = [
     { nombre: "Instructivo Configuración 2FA_Rev01", codigo: "I413-IT-3", revision: 0, fecha: "2026-01-15", areas: ["Todas"], complejidad: "Media" },
     { nombre: "Instructivo Cambio Contraseña SIP actual", codigo: "I413-IT-4", revision: 0, fecha: "2025-08-25", areas: ["Todas"], complejidad: "Baja" },
     { nombre: "BitLocker Windows_Rev01", codigo: "I511-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
-    { nombre: "PIN inicio de Sesión Windows_Rev01", codigo: "I511-IT-2", revision: 0, fecha: "2025-12-29", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Instructivo Etiquetas de Confidencialidad_Rev01", codigo: "I511-IT-3", revision: 0, fecha: "2026-05-17", areas: ["Todas"], complejidad: "Baja" },
     { nombre: "Guía de Identificación de Phishing", codigo: "I523-IT-3", revision: 0, fecha: "2025-08-25", areas: ["Todas"], complejidad: "Media" },
     { nombre: "Guía de Desarrollo Seguro Apps Internas - Nivel Básico", codigo: "I531-IT-1", revision: 0, fecha: "2025-12-18", areas: ["IT"], complejidad: "Alta" }
 ];
