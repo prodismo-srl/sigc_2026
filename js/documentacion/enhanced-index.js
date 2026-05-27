@@ -199,18 +199,21 @@ const matrices = [
 
 // 4. INSTRUCTIVOS (hoja "Instructivos")
 const instructivos = [
-    { nombre: "Instructivo acceso portal SGSI 2026", codigo: "I111-IT-1", revision: 0, fecha: "2026-05-11", areas: ["Todas"], complejidad: "Baja" },
-    { nombre: "Identificación y Registro de Activos de Información_Rev01", codigo: "I131-IT-1", revision: 0, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Media" },
-    { nombre: "Instructivo datos de equipos (laptops, pc y tel.)", codigo: "I131-IT-1_b", revision: 0, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Instructivo acceso portal SGSI", codigo: "I111-IT-1", revision: 0, fecha: "2026-05-11", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Identificación y Registro de Activos de Información", codigo: "I131-IT-1", revision: 0, fecha: "2025-10-30", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "Instructivo datos de equipos (laptops, pc y tel.)", codigo: "I131-IT-1_b", revision: 0, fecha: "2025-10-30", areas: ["Todas"], complejidad: "Baja" },
     { nombre: "Instructivo uso 7-Zip, WinRAR", codigo: "I214-IT-1", revision: 0, fecha: "2026-01-05", areas: ["Todas"], complejidad: "Baja" },
-    { nombre: "Configuracion de Seguridad de Anydesk", codigo: "I411-IT-1", revision: 0, fecha: "2025-08-25", areas: ["Todas"], complejidad: "Media" },
-    { nombre: "MS Authenticator + MS Teams_Rev00", codigo: "I413-IT-1", revision: 0, fecha: "2026-01-05", areas: ["Todas"], complejidad: "Baja" },
-    { nombre: "Gestor de Contraseñas Bitwarden", codigo: "I413-IT-2", revision: 0, fecha: "2025-12-30", areas: ["Todas"], complejidad: "Media" },
-    { nombre: "Instructivo Configuración 2FA_Rev01", codigo: "I413-IT-3", revision: 0, fecha: "2026-01-15", areas: ["Todas"], complejidad: "Media" },
-    { nombre: "Instructivo Cambio Contraseña SIP actual", codigo: "I413-IT-4", revision: 0, fecha: "2025-08-25", areas: ["Todas"], complejidad: "Baja" },
-    { nombre: "BitLocker Windows_Rev01", codigo: "I511-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
-    { nombre: "Instructivo Etiquetas de Confidencialidad_Rev01", codigo: "I511-IT-3", revision: 0, fecha: "2026-05-17", areas: ["Todas"], complejidad: "Baja" },
-    { nombre: "Guía de Identificación de Phishing", codigo: "I523-IT-3", revision: 0, fecha: "2025-08-25", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "Configuracion de Seguridad de Anydesk", codigo: "I411-IT-1", revision: 0, fecha: "2026-01-22", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "MS Authenticator + MS Teams", codigo: "I413-IT-1", revision: 1, fecha: "2026-02-10", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Gestor de Contraseñas Bitwarden", codigo: "I413-IT-2", revision: 1, fecha: "2026-02-02", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "Instructivo Configuración 2FA", codigo: "I413-IT-3", revision: 1, fecha: "2026-10-10", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "Instructivo Cambio Contraseña SIP actual", codigo: "I413-IT-4", revision: 0, fecha: "2024-08-20", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Pantalla y Escritorio Limpio", codigo: "I413-IT-5", revision: 1, fecha: "2025-11-17", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "BitLocker Windows", codigo: "I511-IT-1", revision: 1, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
+    { nombre: "PIN inicio de Sesion", codigo: "I511-IT-2", revision: 1, fecha: "2025-11-17", areas: ["IT"], complejidad: "Media" },
+    { nombre: "Instructivo Etiquetas de Confidencialidad", codigo: "I511-IT-3", revision: 0, fecha: "2026-05-17", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Instructivo Instalación Outlook PWA", codigo: "I-11-06", revision: 0, fecha: "2024-11-19", areas: ["Todas"], complejidad: "Baja" },
+    { nombre: "Guía de Identificación de Phishing", codigo: "I523-IT-3", revision: 1, fecha: "2026-02-18", areas: ["Todas"], complejidad: "Media" },
     { nombre: "Guía de Desarrollo Seguro Apps Internas - Nivel Básico", codigo: "I531-IT-1", revision: 0, fecha: "2025-12-18", areas: ["IT"], complejidad: "Alta" }
 ];
 
@@ -244,7 +247,7 @@ function enrichAllItems() {
         // Obtener el título: buscar dentro de h4 o del propio texto
         let title = '';
         const h4 = item.querySelector('h4');
-        console.log('h4: ', h4);
+        // console.log('h4: ', h4);
         if (h4) {
             title = h4.innerText.trim();
         } else {
@@ -259,8 +262,8 @@ function enrichAllItems() {
         for (let d of allDocuments) {
             // Comparar por nombre o por código (si el título incluye el código)
             if ( title.includes(d.nombre) ||  title === d.nombre || title.includes(d.codigo)) {
-                console.log('title: ', title);
-                console.log('d: ', d);
+                // console.log('title: ', title);
+                // console.log('d: ', d);
                 docData = d;
                 break;
             }
@@ -322,7 +325,7 @@ function enrichAllItems() {
     });
 }
 
-// Filtro combinado: texto + perfil
+// Filtro combinado: texto + perfil - aplica a todas las secciones y expande los acordeones
 function applyFilters() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
     const activeFilter = document.querySelector('.filter-btn.bg-purple-600')?.getAttribute('data-filter') || 'Todos';
@@ -338,30 +341,72 @@ function applyFilters() {
     };
     
     const requiredAreas = profileAreaMap[activeFilter];
-    const items = document.querySelectorAll('.grid > div, .grid a, .grid .disabled');
-    let visibleCount = 0;
-
-    items.forEach(item => {
-        const text = item.innerText.toLowerCase();
-        const areasAttr = item.getAttribute('data-areas') || '';
-        const areas = areasAttr.split(',');
-        
-        let areaMatch = true;
-        if (requiredAreas) {
-            areaMatch = areas.some(area => requiredAreas.includes(area));
-        }
-        const textMatch = text.includes(searchTerm);
-        
-        if (areaMatch && textMatch) {
-            item.style.display = 'flex';
-            visibleCount++;
-        } else {
-            item.style.display = 'none';
-        }
-    });
     
-    const docCountSpan = document.getElementById('doc-count');
-    if (docCountSpan) docCountSpan.innerText = visibleCount;
+    // Definir las secciones principales con sus contadores y selectores
+    const sections = [
+        { counterId: 'doc-count', headingId: 'documentacion' },
+        { counterId: 'proc-count', headingId: 'procedimientos' },
+        { counterId: 'form-count', headingId: 'formularios' },
+        { counterId: 'matrices-count', headingId: 'matrices' },
+        { counterId: 'instructivo-count', headingId: 'instructivos' }
+    ];
+    
+    sections.forEach(section => {
+        // Encontrar el contenedor principal de la sección (el div con clase mb-16 que contiene el heading)
+        const heading = document.getElementById(section.headingId);
+        if (!heading) return;
+        const sectionContainer = heading.closest('.mb-16');
+        if (!sectionContainer) return;
+        
+        // Dentro de la sección, seleccionar todos los grids (cada subsección)
+        const grids = sectionContainer.querySelectorAll('.grid');
+        let totalVisible = 0;
+        
+        grids.forEach(grid => {
+            // Obtener los elementos dentro de este grid (hijos directos)
+            const items = grid.querySelectorAll(':scope > a'); // :scope > div, :scope > .disabled
+            // console.log('items: ', items)
+            let visibleCount = 0;
+            
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                const areasAttr = item.getAttribute('data-areas') || '';
+                const areas = areasAttr.split(',');
+                
+                let areaMatch = true;
+                if (requiredAreas) {
+                    areaMatch = areas.some(area => requiredAreas.includes(area));
+                }
+                const textMatch = text.includes(searchTerm);
+                
+                if (areaMatch && textMatch) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            totalVisible += visibleCount;
+        });
+        
+        // Actualizar el span contador correspondiente
+        const countSpan = document.getElementById(section.counterId);
+        if (countSpan) countSpan.innerText = totalVisible;
+        
+        // Expandir todas las subsecciones (acordeones) dentro de esta sección principal
+        const buttons = sectionContainer.querySelectorAll('.border-b button');
+        buttons.forEach(button => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            if (content && content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            }
+        });
+    });
 }
 
 // ============================================================================
