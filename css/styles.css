@@ -809,3 +809,7 @@ input:focus-visible {
 #firmaDamian .imagen-container:hover .imagen-hover {
     opacity: 1;
 }
+
+#mobile-menu-button:hover {
+    color: #3b82f6;
+}

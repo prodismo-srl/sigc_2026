@@ -36,8 +36,8 @@
 
         // DATOS HISTÓRICOS (para gráfico de líneas) - EDITABLE
         // Meses desde Abr 2025 hasta Abr 2026 (13 puntos)
-        const mesesHistoricos = ["Abr 2025", "May 2025", "Jun 2025", "Jul 2025", "Ago 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026"];
-        let datosHistoricos = [0, 0, 0, 0, 5, 10, 22, 34, 43, 51, 60, 77, 86]; // cumplimiento promedio histórico
+        const mesesHistoricos = ["May 2025", "Jun 2025", "Jul 2025", "Ago 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026", "May 2026"];
+        let datosHistoricos = [0, 0, 0, 5, 10, 22, 34, 43, 51, 60, 77, 86, 88]; // cumplimiento promedio histórico
 
         // ========== FUNCIONES AUXILIARES ==========
         function getColorForValue(value) {
