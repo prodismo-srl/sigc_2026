@@ -31,7 +31,7 @@
         };
 
         // Métricas adicionales
-        let incidentesAbiertosAlta = 1;
+        let incidentesAbiertosAlta = 0;
         let porcentajeAuditados = 94;
 
         // DATOS HISTÓRICOS (para gráfico de líneas) - EDITABLE
@@ -171,7 +171,7 @@
                 "KPI-11": 73, "KPI-12": 94, "KPI-13": 82, "KPI-14": 87, "KPI-15": 99,
                 "KPI-16": 78, "KPI-17": 68, "KPI-18": 75
             };
-            incidentesAbiertosAlta = 2;
+            incidentesAbiertosAlta = 1;
             porcentajeAuditados = 90;
             datosHistoricos = [0, 0, 5, 10, 22, 34, 43, 51, 60, 77, 86, 88, 90];
             renderDashboard();
