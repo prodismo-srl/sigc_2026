@@ -215,6 +215,7 @@ const instructivos = [
     { nombre: "Instructivo Etiquetas de Confidencialidad", codigo: "I511-IT-3", revision: 0, fecha: "2026-05-17", areas: ["Todas"], complejidad: "Baja" },
     { nombre: "Instructivo Instalación Outlook PWA", codigo: "I-11-06", revision: 0, fecha: "2024-11-19", areas: ["Todas"], complejidad: "Baja" },
     { nombre: "Guía de Identificación de Phishing", codigo: "I523-IT-3", revision: 1, fecha: "2026-02-18", areas: ["Todas"], complejidad: "Media" },
+    { nombre: "Instructivo de Restauración de Copias de Seguridad", codigo: "I529-IT-1", revision: 0, fecha: "2026-06-16", areas: ["IT"], complejidad: "Media" },
     { nombre: "Guía de Desarrollo Seguro Apps Internas - Nivel Básico", codigo: "I531-IT-1", revision: 0, fecha: "2025-12-18", areas: ["IT"], complejidad: "Alta" }
 ];
 

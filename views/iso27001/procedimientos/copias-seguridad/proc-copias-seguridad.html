@@ -29,7 +29,6 @@
 
     <!-- Cargar sistema de módulos defer -->
     <script src="../../../../js/modules.js" defer></script>
-
 </head>
 
 <body
@@ -310,8 +309,8 @@
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Planificación:</strong> El Supervisor de Copias de Seguridad define y
-                                    configura las tareas automáticas de backup en la herramienta corporativa (ej.
-                                    Azure Backup, Acronis) según la estrategia definida en el punto 5.1.</li>
+                                    configura las tareas automáticas de backup en la herramienta Veeam Backup &
+                                    Replication Shell según la estrategia definida en el punto 5.1.</li>
                                 <li><strong>Ejecución Automática:</strong> Las copias se ejecutan según la ventana de
                                     backup programada (generalmente en horario de baja actividad). Se prioriza la no
                                     afectación del rendimiento de los sistemas productivos.</li>
@@ -339,8 +338,8 @@
                                         class="text-red-500">Altos</strong> deben configurarse como <b>"inmutables"</b>
                                     durante su período de retención para protegerlos contra ransomware.</li>
                                 <li><strong>Control de Acceso:</strong> El acceso a los repositorios de backups debe
-                                    estar estrictamente limitado al personal autorizado del DIT y el proveedor
-                                    designado (Ej. Armanet, Enter Gestión), utilizando autenticación (MFA).</li>
+                                    estar estrictamente limitado al personal autorizado del DIT y/o el proveedor
+                                    designado (Ej. Armanet, Enter Gestión).</li>
                             </ul>
                         </div>
 
@@ -357,10 +356,10 @@
                                             Backups Diarios/Incrementales: 2 semanas.
                                         </li>
                                         <li>
-                                            Backups Semanales: 2 meses.
+                                            Backups Semanales: 1 mes.
                                         </li>
                                         <li>
-                                            Backups Mensuales: 6 meses.
+                                            Backups Mensuales: 3 a 6 meses.
                                         </li>
                                         <li>
                                             Backups Anuales: 1 año (o según requisitos legales específicos).
@@ -369,8 +368,7 @@
                                 </li>
                                 <li><strong>Política de Rotación:</strong> Se seguirá el esquema <strong>GFS</strong>
                                     (Grandfather-Father-Son) para gestionar el ciclo de vida de los snapshots en
-                                    disco/nube,
-                                    asegurando la disponibilidad de puntos de recuperación
+                                    disco/nube, asegurando la disponibilidad de puntos de recuperación
                                     históricos sin un crecimiento infinito del almacenamiento.</li>
                                 <li><strong>Eliminación Segura:</strong> Al finalizar el período de retención, los
                                     soportes que contengan información confidencial deberán ser destruidos de forma
@@ -401,8 +399,9 @@
                                 <li><strong>Solicitud de recuperación:</strong>
                                     <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                         <li>
-                                            Para la recuperación de archivos o carpetas borradas accidentalmente del Servidor de Diseños y documentación (diserver),
-                                            se utiliza la siguiente plantilla de a:<br>
+                                            Para la recuperación de archivos o carpetas borradas accidentalmente del
+                                            Servidor de Diseños y documentación (diserver),
+                                            se utiliza la siguiente plantilla:<br>
 
                                             <a href="https://teams.microsoft.com/l/app/6c22aa93-2779-488e-bb3d-8e808434fa96?source=app-bar-share-entrypoint"
                                                 target="_blank" title="Texto de Recuperación carpeta/archivo"
@@ -424,7 +423,7 @@
 
                                         <li>
                                             Para la recuperación de registros del Sistema SIP/SIP4.0, se
-                                            envía al mail
+                                            envía al mail:
 
                                             <a href="https://apps.powerapps.com/play/e/default-48f8f875-b75a-4037-a9d8-15d6bbd7c5f9/a/fce0c9bd-9de6-4890-b9ad-5d4f8e05b93f?tenantId=48f8f875-b75a-4037-a9d8-15d6bbd7c5f9&hint=0bdd9fd3-167c-40ea-ac48-d4e5868adbad&source=sharebutton&sourcetime=1774450447568"
                                                 target="_blank" title="Mail Recuperación registros SIP/SIP4.0"
@@ -438,7 +437,7 @@
                                     </ul>
                                 </li>
 
-                                <li><strong>Registro:</strong> Se crea un registro formal de la solicitud de
+                                <li><strong>Registro:</strong> La solicitud en el STI, será el registro formal de la solicitud de
                                     recuperación.</li>
                             </ul>
                         </div>
@@ -463,7 +462,9 @@
                                     verificar que los datos restaurados son legibles, completos y funcionales.</li>
                             </ul>
 
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2 mt-5 ml-3 flex items-center">Video Recuperación Datos Server</h4>
+                            <h4
+                                class="text-lg font-semibold text-gray-900 dark:text-white mb-2 mt-5 ml-3 flex items-center">
+                                Video Recuperación Datos Server</h4>
                             <a href="https://prodismotemp.sharepoint.com/:f:/r/sites/IT/Documentos%20compartidos/Capacitaci%C3%B3n/Videos?csf=1&web=1&e=DwXaK3"
                                 target="_blank" title="Video Recuperación archivos/carpetas Server"
                                 class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
@@ -473,6 +474,9 @@
                                 Video Recuperación Archivos/Carpetas Server
                                 <i class="fa-solid fa-video text-gray-500 ml-2"></i>
                             </a>
+
+                           <img src="../../../../images/iso27001/Backup_01.jpg" alt="Imagen Veeam Recuperación archivos/carpetas Server"
+                            class="my-auto mx-auto h-full w-1/2 object-cover md:h-1/2 md:w-full mt-4 mb-4 ml-4 mr-4 py-4 px-4 shadow-lg rounded-lg"> 
                         </div>
 
                         <div class="mb-6">
@@ -555,9 +559,13 @@
                                     class="bg-primary-100 text-white-800 rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 dark:bg-primary-900 dark:text-white-200">7.1</span>
                                 Registros Obligatorios
                             </h3>
+
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Logs de Ejecución de Backups:</strong> Histórico de todas las tareas de
-                                    backup, disponible en la herramienta.</li>
+                                    backup, disponible en la herramienta.
+                                <img src="../../../../images/iso27001/Backup_History.jpg" alt="Imagen Veeam Recuperación archivos/carpetas Server"
+                                    class="my-auto mx-auto h-full w-1/2 object-cover md:h-1/2 md:w-full mt-4 mb-4 ml-4 mr-4 py-4 px-4 shadow-lg rounded-lg"> 
+                                </li>
                                 <li><strong>Anexo A:</strong> Registro de Copias de Seguridad y Retención: Inventario de
                                     los conjuntos de backups y su período de retención.</li>
                                 <li><strong>Solicitudes de Restauración:</strong> Tickets o formularios que justifican
@@ -588,7 +596,8 @@
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
 
-                            <li>Anexo A: <a href="https://forms.office.com/r/XkzFU0XfWs" target="_blank" title="F529-IT-2 Registro de Restauración y Pruebas de Copias de Seguridad"
+                            <li>Anexo A: <a href="https://forms.office.com/r/XkzFU0XfWs" target="_blank"
+                                    title="F529-IT-2 Registro de Restauración y Pruebas de Copias de Seguridad"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                                 border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                                 group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
@@ -600,6 +609,22 @@
                                     Registro de Restauración y Pruebas de Copias de Seguridad
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                            </li>
+
+                            <li>Anexo B: <a href="../../../../outputs_files/I529-IT-1_Instructivo_Restauración_Copias_de_Seguridad.pdf" target="_blank"
+                                    title="I529-IT-1 Instructivo de Restauración de Copias de Seguridad"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 mt-2 mb-2">
+                                    <i class="fas fa-file-pdf text-red-400 mr-2"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        I529-IT-1
+                                    </span>
+                                    Instructivo de Restauración de Copias de Seguridad
+                                    <i
+                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                             </li>
                         </ul>
@@ -640,7 +665,7 @@
                                         <td
                                             class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                             12/3/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Priemra emisión 
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Priemra emisión
                                             del documento</td>
                                     </tr>
                                 </tbody>
@@ -731,15 +756,18 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="https://forms.office.com/r/eryzXy34gc" target="_blank" title="F161-IT-1 Reporte de Eventos por Departamento"
+                            <a href="https://forms.office.com/r/eryzXy34gc" target="_blank"
+                                title="F161-IT-1 Reporte de Eventos por Departamento"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F161-IT-1 Reporte de Eventos por Departamento</span>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F161-IT-1 Reporte
+                                        de Eventos por Departamento</span>
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
-                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F523-IT-1%20Registro%20de%20Acciones%20Tomadas.xlsx?d=wccc962a268a246028a006942ad003a7e&csf=1&web=1&e=bs42Ah" target="_blank" title="F523-IT-1 Registro de Acciones Tomadas"
+                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F523-IT-1%20Registro%20de%20Acciones%20Tomadas.xlsx?d=wccc962a268a246028a006942ad003a7e&csf=1&web=1&e=bs42Ah"
+                                target="_blank" title="F523-IT-1 Registro de Acciones Tomadas"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
