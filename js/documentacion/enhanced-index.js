@@ -37,7 +37,7 @@ const politicas = [
     { tipo: "Política", nombre: "Gestión de Auditoría de Sistemas IT", codigo: "MC526-IT-1", revision: 1, fecha: "2026-01-07", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Gestión de Red de la Organización", codigo: "MC527-IT-1", revision: 1, fecha: "2026-01-07", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Preparación de las TIC para la continuidad del negocio", codigo: "MC528-IT-1", revision: 0, fecha: "2026-01-08", areas: ["Ingeniería","Compras","Proyectos"], complejidad: "Media" },
-    { tipo: "Política", nombre: "Copia de seguridad de la información", codigo: "MC529-IT-1", revision: 0, fecha: "2026-01-09", areas: ["IT"], complejidad: "Media" },
+    { tipo: "Política", nombre: "Copia de seguridad de la información", codigo: "MC529-IT-1", revision: 1, fecha: "2026-06-09", areas: ["IT"], complejidad: "Media" },
     { tipo: "Política", nombre: "Requisitos de Seguridad de Sistemas IT Nuevos o en Desarrollo", codigo: "MC531-IT-1", revision: 1, fecha: "2026-01-07", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Requisitos de Servicios de Red", codigo: "MC532-IT-1", revision: 1, fecha: "2026-01-08", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Retirada Segura de Activos Externos", codigo: "MC533-IT-1", revision: 1, fecha: "2026-01-08", areas: ["IT"], complejidad: "Alta" },

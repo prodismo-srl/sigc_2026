@@ -813,3 +813,56 @@ input:focus-visible {
 #mobile-menu-button:hover {
     color: #3b82f6;
 }
+
+/* Ícono QR al lado del enlace */
+.qr-icon {
+    display: inline-block;
+    margin-left: 6px;
+    color: #1a73e8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.qr-icon:hover {
+    color: #0d47a1;
+}
+
+/* Tooltip que contiene el QR */
+.qr-tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+    display: none;
+    min-width: 160px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.qr-tooltip canvas,
+.qr-tooltip img {
+    display: block;
+    margin: 0 auto;
+}
+
+.qr-icon:hover .qr-tooltip {
+    display: block;
+}
+
+.qr-card {
+    transition: all 0.4s ease;
+}
+
+.qr-card:hover {
+    transform: scale(1.03);
+    z-index: 100;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}

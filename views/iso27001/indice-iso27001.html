@@ -25,6 +25,12 @@
 
     <!-- Tailwind styles -->
     <link href="../../dist/output.css" rel="stylesheet">
+
+    <!-- QR Codes Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body class="font-sans bg-gray-50 overflow-x-hidden">
@@ -1023,9 +1029,9 @@
                                                 class="bg-gray-200 text-gray-800 text-sm font-medium px-1 py-1 rounded-full ml-2">
                                                 <i class="fa-solid fa-microchip text-gray-800"></i> DIT</span>
                                     </a>
-                                    <a href="https://forms.office.com/r/XkzFU0XfWs" target="_blank"
+                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F529-IT-2%20Registro%20de%20Copias%20de%20Seguridad.xlsx?d=w8fb9debf2d204b97a4867347518c66e8&csf=1&web=1&e=PC7Ped" target="_blank"
                                         class="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                                        <strong>F529-IT-2</strong> - Registro Restauración y Pruebas Copias de Seguridad<span
+                                        <strong>F529-IT-2</strong> - Registro de Copias de Seguridad<span
                                                 class="bg-gray-200 text-gray-800 text-sm font-medium px-1 py-1 rounded-full ml-1">
                                                 <i class="fa-solid fa-microchip text-gray-800"></i> DIT</span>
                                     </a>
@@ -2703,11 +2709,18 @@
 
             <!-- Formularios Section -->
             <div class="mb-16">
-                <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center justify-between mb-3">
                     <h2 id="formularios" class="text-3xl font-bold text-gray-900">Formularios</h2>
                     <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">
                         <span id="form-count">67</span> formularios
                     </span>
+                </div>
+                <!-- Botón debajo -->
+                <div class="flex justify-center md:justify-start mb-3">
+                    <button id="btn-cheatsheet"
+                        class="ml-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium shadow-sm items-center gap-2">
+                        📋 Generar Cheatsheet
+                    </button>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
@@ -3395,7 +3408,7 @@
                                         <p class="text-base text-gray-600">Registro de pruebas de recuperación (TIC)</p>
                                     </div>
                                 </a>                                
-                                <a href="https://forms.office.com/r/XkzFU0XfWs" target="_blank"
+                                <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F529-IT-2%20Registro%20de%20Copias%20de%20Seguridad.xlsx?d=w8fb9debf2d204b97a4867347518c66e8&csf=1&web=1&e=PC7Ped" target="_blank"
                                     class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-colors group">
                                     <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
                                         <i class="fas fa-file-excel text-green-600 text-sm"></i>
@@ -3404,7 +3417,7 @@
                                         <h4 class="font-medium text-gray-900 group-hover:text-blue-600">F529-IT-2 <span
                                                 class="bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full ml-6">
                                                 <i class="fa-solid fa-microchip text-gray-800"></i> DIT</span></h4>
-                                        <p class="text-base text-gray-600">Registro de Restauración y Pruebas de Copias de Seguridad</p>
+                                        <p class="text-base text-gray-600">Registro de Copias de Seguridad</p>
                                     </div>
                                 </a>
                                 <a href="https://forms.office.com/r/stELxve2T8" target="_blank"
@@ -4281,6 +4294,7 @@
     <script type="text/javascript" src="../../js/auth-system.js"></script>
     <script type="text/javascript" src="../../js/documentacion/enhanced-index.js"></script>
     <script type="text/javascript" src="../../js/script-record.js"></script>
+    <script type="text/javascript" src="../../js/documentacion/script-qrcodes.js"></script>
 
 </body>
 
