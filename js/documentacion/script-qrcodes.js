@@ -340,7 +340,8 @@ document.addEventListener('DOMContentLoaded', function() {
             areasEl.style.flexWrap = 'wrap';
             areasEl.style.gap = '4px';
             areasEl.style.justifyContent = 'center';
-            areasEl.style.marginBottom = '8px';
+            areasEl.style.marginTop = '4px';
+            areasEl.style.marginBottom = '4px';
             item.areas.forEach(area => {
                 const span = document.createElement('span');
                 span.textContent = area;
