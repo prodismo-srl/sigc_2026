@@ -24,7 +24,7 @@
 
         // VALORES DE RENDIMIENTO ACTUALES (0-100) - EDITAR SEGÚN MEDICIONES REALES
         let valoresRendimiento = {
-            "KPI-01": 94, "KPI-02": 88, "KPI-03": 78, "KPI-04": 97, "KPI-05": 89,
+            "KPI-01":72.4, "KPI-02": 98, "KPI-03": 78, "KPI-04": 97, "KPI-05": 89,
             "KPI-06": 81, "KPI-07": 92, "KPI-08": 84, "KPI-09": 100, "KPI-10": 99,
             "KPI-11": 74, "KPI-12": 96, "KPI-13": 89, "KPI-14": 87, "KPI-15": 100,
             "KPI-16": 82, "KPI-17": 73, "KPI-18": 79
@@ -36,8 +36,8 @@
 
         // DATOS HISTÓRICOS (para gráfico de líneas) - EDITABLE
         // Meses desde Abr 2025 hasta Abr 2026 (13 puntos)
-        const mesesHistoricos = ["Jun 2025", "Jul 2025", "Ago 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026", "May 2026", "Jun 2026"];
-        let datosHistoricos = [0, 0, 5, 10, 22, 34, 43, 51, 60, 77, 81, 83, 88]; // cumplimiento promedio histórico
+        const mesesHistoricos = ["Jun 2025", "Jul 2025", "Ago 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026", "May 2026", "Jun 2026", "Jul 2025"];
+        let datosHistoricos = [0, 5, 10, 22, 34, 43, 51, 60, 77, 81, 83, 88, 90]; // cumplimiento promedio histórico
 
         // ========== FUNCIONES AUXILIARES ==========
         function getColorForValue(value) {
@@ -382,32 +382,6 @@
                 });
             }
         }
-
-        // función vieja -------------------------------
-        // function exportToPDF() {
-        //     const element = document.querySelector('main');
-        //     const opt = {
-        //         margin: [0.5, 0.5, 0.5, 0.5],
-        //         filename: 'dashboard_kpis_seguridad.pdf',
-        //         image: { type: 'jpeg', quality: 0.98 },
-        //         html2canvas: { scale: 2, useCORS: true },
-        //         jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-        //     };
-        //     Swal.fire({
-        //         title: 'Generando PDF...',
-        //         text: 'Por favor espera mientras se prepara el informe.',
-        //         allowOutsideClick: false,
-        //         didOpen: () => { Swal.showLoading(); }
-        //     });
-        //     html2pdf().set(opt).from(element).save().then(() => {
-        //         Swal.close();
-        //         Swal.fire('Éxito', 'El informe PDF ha sido descargado.', 'success');
-        //     }).catch(err => {
-        //         Swal.close();
-        //         Swal.fire('Error', 'No se pudo generar el PDF: ' + err, 'error');
-        //     });
-        // }
-
 
         // Eventos y carga inicial
         document.getElementById('refreshDashboard')?.addEventListener('click', () => { renderDashboard(); Swal.fire('Actualizado', 'Dashboard refrescado con los datos actuales', 'info'); });
