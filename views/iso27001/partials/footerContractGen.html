@@ -1,0 +1,43 @@
+<footer class="bg-gray-50 border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <div class="flex items-center space-x-2">
+                    <img src="../../../../../images/ProdismoFirma.png"
+                        data-light-src="../../../../../images/ProdismoFirma.png"
+                        data-dark-src="../../../../../images/logo01-bco.png" alt="Logo Prodismo" width="120" height="30"
+                        data-theme-logo>
+                    <span class="text-sm text-gray-600 dark:text-gray-400">
+                        © <span id="current-year">2025</span> <strong>PRODISMO SRL</strong>.
+                        Todos los derechos reservados.
+                    </span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="../../../../politica-privacidad/politica-privacidad.html"
+                    class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                    Política de Privacidad
+                </a>
+                <a href="../../../../terminos-usos/terminos-usos.html"
+                    class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                    Términos de Uso
+                </a>
+                <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ISO 27001:2022 | TISAX</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Script específico del footer
+    (function () {
+        // Actualizar año actual
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    })();
+</script>

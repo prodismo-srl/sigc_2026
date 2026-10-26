@@ -24,10 +24,10 @@
 
         // VALORES DE RENDIMIENTO ACTUALES (0-100) - EDITAR SEGÚN MEDICIONES REALES
         let valoresRendimiento = {
-            "KPI-01":72.4, "KPI-02": 98, "KPI-03": 78, "KPI-04": 97, "KPI-05": 89,
+            "KPI-01":83.1, "KPI-02": 98, "KPI-03": 78, "KPI-04": 97, "KPI-05": 95,
             "KPI-06": 81, "KPI-07": 92, "KPI-08": 84, "KPI-09": 100, "KPI-10": 99,
-            "KPI-11": 74, "KPI-12": 96, "KPI-13": 89, "KPI-14": 87, "KPI-15": 100,
-            "KPI-16": 82, "KPI-17": 73, "KPI-18": 79
+            "KPI-11": 74, "KPI-12": 96, "KPI-13": 93, "KPI-14": 87, "KPI-15": 100,
+            "KPI-16": 85, "KPI-17": 73, "KPI-18": 82
         };
 
         // Métricas adicionales
@@ -36,8 +36,8 @@
 
         // DATOS HISTÓRICOS (para gráfico de líneas) - EDITABLE
         // Meses desde Abr 2025 hasta Abr 2026 (13 puntos)
-        const mesesHistoricos = ["Jun 2025", "Jul 2025", "Ago 2025", "Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026", "May 2026", "Jun 2026", "Jul 2025"];
-        let datosHistoricos = [0, 5, 10, 22, 34, 43, 51, 60, 77, 81, 83, 88, 90]; // cumplimiento promedio histórico
+        const mesesHistoricos = ["Sep 2025", "Oct 2025", "Nov 2025", "Dic 2025", "Ene 2026", "Feb 2026", "Mar 2026", "Abr 2026", "May 2026", "Jun 2026", "Jul 2026", "Ago 2026"];
+        let datosHistoricos = [22, 34, 43, 51, 60, 77, 81, 83, 85, 86, 88, 89]; // cumplimiento promedio histórico
 
         // ========== FUNCIONES AUXILIARES ==========
         function getColorForValue(value) {
@@ -166,7 +166,7 @@
 
         function resetDataOriginal() {
             valoresRendimiento = {
-                "KPI-01": 92, "KPI-02": 88, "KPI-03": 76, "KPI-04": 98, "KPI-05": 85,
+                "KPI-01": 83.1, "KPI-02": 88, "KPI-03": 76, "KPI-04": 98, "KPI-05": 85,
                 "KPI-06": 79, "KPI-07": 91, "KPI-08": 84, "KPI-09": 100, "KPI-10": 96,
                 "KPI-11": 73, "KPI-12": 94, "KPI-13": 82, "KPI-14": 87, "KPI-15": 99,
                 "KPI-16": 78, "KPI-17": 68, "KPI-18": 75
