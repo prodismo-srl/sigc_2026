@@ -427,6 +427,9 @@ function initializeQuickActions() {
     titleSelector: 'h1',
     metadataSelector: '#metadata span',
     logoSelector: 'img[alt="Logo Prodismo"], img[alt="LogoProdismo"]',
+    infoExclude: ['Código', 'Última revisión'],   // ahora Versión también se muestra
+    infoColumns: 4,                               // campos por fila (si hay más, pasan a otra fila)
+    infoTitle: 'Información del Documento',       // texto del título de la tarjeta en el HTML
 
     company: 'Prodismo SRL',
     brandColor: '#1a429a',
