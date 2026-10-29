@@ -185,6 +185,7 @@ const formularios = [
 // 3. MATRICES (hoja "Matrices")
 const matrices = [
     { nombre: "Matriz de Roles y Responsabilidades de S.I.", codigo: "M121-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
+    { nombre: "Matriz de Clasificación de Proyectos", codigo: "M123-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
     { nombre: "Matriz de Riesgos", codigo: "M141-IT-2", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Media" },
     { nombre: "Matriz de Riesgos Excepcionales", codigo: "M312-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Alta" },
     { nombre: "Matriz de Riesgos de Accesos", codigo: "M411-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Alta" },
