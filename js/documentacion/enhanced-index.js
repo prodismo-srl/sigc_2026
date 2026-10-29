@@ -8,7 +8,10 @@
 const politicas = [
     { tipo: "Política", nombre: "Seguridad de la Información", codigo: "MC111-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
     { tipo: "Política", nombre: "Organización de la seguridad de la información", codigo: "MC121-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
+    { tipo: "Política", nombre: "Responsabilidades de la organización de la seguridad de la información", codigo: "MC122-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
+    { tipo: "Política", nombre: "Requisitos de seguridad de proyectos", codigo: "MC123-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
     { tipo: "Política", nombre: "Gestión de Activos", codigo: "MC131-IT-1", revision: 1, fecha: "2026-01-05", areas: ["Todas"], complejidad: "Media" },
+    { tipo: "Política", nombre: "Clasificación y de activos de información", codigo: "MC132-IT-1", revision: 1, fecha: "2026-01-05", areas: ["Todas"], complejidad: "Media" },
     { tipo: "Política", nombre: "Gestión de Riesgos", codigo: "MC141-IT-1", revision: 0, fecha: "2025-08-25", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Evaluaciones", codigo: "MC151-IT-1", revision: 1, fecha: "2026-01-05", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Política", nombre: "Gestión de Incidentes", codigo: "MC161-IT-1", revision: 1, fecha: "2025-12-30", areas: ["Todas"], complejidad: "Media" },
