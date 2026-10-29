@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Requisitos de Seguridad en Proyectos">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Requisitos de Seguridad en Proyectos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Requisitos de Seguridad en Proyectos - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <div id="header-container" data-module="header" class="sticky top-0 z-50"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <a href="../organizacion-seguridad/organizacion-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Organización de Seguridad</span>
+                    </a>
+                    <a href="../gestion-activos/gestion-activos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Activos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Requisitos de Seguridad en
+                            Proyectos</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC123-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 25/11/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                            OBJETIVO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Establecer los lineamientos para que la <strong>seguridad de la información</strong> sea
+                            considerada e integrada en todas las etapas de los proyectos que ejecuta
+                            <strong>PRODISMO SRL</strong>, tanto <strong>tecnológicos</strong> como
+                            <strong>industriales</strong> (diseño y fabricación de líneas de ensamble, herramentales y
+                            matrices de estampado para clientes automotrices), garantizando la protección de la
+                            información propia y de los clientes, en cumplimiento del control <strong>A.5.8 (Seguridad
+                            de la información en la gestión de proyectos)</strong> del Anexo A de <strong>ISO/IEC
+                            27001:2022</strong> y de los requisitos del marco <strong>TISAX</strong> (VDA ISA), incluida
+                            la protección de prototipos y datos confidenciales de clientes.
+                        </p>
+                    </section>
+
+                    <section id="alcance" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            ALCANCE
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><strong>Todos los proyectos</strong> de PRODISMO SRL, independientemente de su tamaño,
+                                duración o metodología de gestión, incluyendo:
+                                <ul class="list-circle pl-5 mt-2 space-y-3">
+                                    <li><strong>Proyectos industriales para clientes:</strong> diseño, fabricación,
+                                        try-out, puesta en marcha y entrega de líneas de ensamble, dispositivos de
+                                        control, matrices y herramientas de estampado.</li>
+                                    <li><strong>Proyectos tecnológicos:</strong> nuevos sistemas, migraciones,
+                                        integraciones, actualizaciones de infraestructura, implementación de software
+                                        CAD/CAM/CAE, SIP / SIP4.0 y servicios en la nube.</li>
+                                    <li><strong>Proyectos internos de mejora:</strong> incorporación de maquinaria CNC
+                                        o automatización, cambios de layout de planta, mudanzas de áreas, mejoras de
+                                        procesos y proyectos de mantenimiento mayor.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Todos los empleados, contratistas, proveedores y terceros</strong> que
+                                participen en un proyecto o accedan a información asociada a él.</li>
+                            <li><strong>Toda la información del proyecto</strong> en cualquier formato: datos CAD 3D
+                                (CATIA/NX), simulaciones (AutoForm), programas CAM/CNC, planos, especificaciones del
+                                cliente, documentación APQP/PPAP, fotografías, piezas físicas, prototipos y
+                                herramentales.</li>
+                        </ul>
+                    </section>
+
+                    <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            REFERENCIAS NORMATIVAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.8 (Seguridad de la información en la
+                                gestión de proyectos)</li>
+                            <li><strong>ISO/IEC 27002:2022</strong> - Apartado 5.8, guía de implementación del control
+                            </li>
+                            <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA</strong> (gestión
+                                de la seguridad en proyectos y protección de prototipos)</li>
+                            <li><strong>IATF 16949:2016</strong> / <strong>APQP</strong> - Planificación avanzada de la
+                                calidad del producto (como marco de gestión de proyectos automotrices)</li>
+                            <li><strong>P123-IT-1</strong> Procedimiento para Incorporar Requisitos de Seguridad en
+                                Proyectos</li>
+                            <li><strong>MC122-IT-1</strong> Política de Organización de la Seguridad de la Información
+                            </li>
+                            <li><strong>P121-IT-1</strong> Procedimiento de Gestión de Incidentes</li>
+                        </ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Proyecto:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Conjunto de actividades planificadas, con
+                                    inicio y fin definidos, orientadas a obtener un resultado específico (producto,
+                                    herramental, línea, sistema o servicio).</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Líder de Proyecto:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Persona designada para planificar,
+                                    coordinar y controlar el proyecto, responsable de su cronograma, presupuesto y
+                                    resultados.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable de Seguridad
+                                    del Proyecto (RSP):</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Miembro del equipo de IT, o el IT Manager,
+                                    designado para asegurar el cumplimiento de los requisitos de seguridad en el
+                                    proyecto.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Información Confidencial
+                                    del Cliente:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Datos técnicos o comerciales entregados por
+                                    el cliente automotriz (geometrías de pieza, modelos 3D, especificaciones, volúmenes,
+                                    cronogramas de lanzamiento) sujetos a acuerdos de confidencialidad.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Prototipo:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Pieza, componente, herramental o vehículo
+                                    aún no presentado públicamente por el cliente, cuya información o apariencia debe
+                                    ser protegida según los requisitos <strong>TISAX</strong> de protección de
+                                    prototipos.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Try-out:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Etapa de prueba y ajuste de matrices y
+                                    líneas en la que se producen piezas de muestra para validación del cliente.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">NDA:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Acuerdo de confidencialidad firmado con
+                                    clientes, proveedores o terceros.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Evaluación de Riesgos del
+                                    Proyecto:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Identificación, análisis y tratamiento de
+                                    los riesgos de seguridad de la información propios de un proyecto.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="responsables" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            RESPONSABLES
+                        </h2>
+                        <div class="space-y-4">
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Aprobar esta política y asegurar que la seguridad de la información forme parte
+                                        de la gestión de todos los proyectos.</li>
+                                    <li>Asignar recursos y presupuesto para los controles de seguridad requeridos por
+                                        cada proyecto.</li>
+                                    <li>Aprobar la aceptación de riesgos residuales altos en proyectos
+                                        <strong>Críticos</strong>.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">IT Manager / Responsable de
+                                    Seguridad de la Información (RSI)</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Mantener esta política y el procedimiento <strong>P123-IT-1</strong>.</li>
+                                    <li>Designar al <strong>RSP</strong> de cada proyecto Crítico o Alto y aprobar la
+                                        arquitectura de seguridad propuesta.</li>
+                                    <li>Aprobar excepciones y escalar riesgos significativos a la Alta Dirección.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Líder de Proyecto (Ingeniería /
+                                    Producción / IT)</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Clasificar el proyecto en el kickoff e incorporar los requisitos de seguridad en
+                                        el plan, cronograma y presupuesto.</li>
+                                    <li>Asegurar que el equipo conozca las obligaciones de confidencialidad del cliente
+                                        y los NDA aplicables.</li>
+                                    <li>Completar los checklists de seguridad de cada fase y conservar las evidencias.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Responsable de Seguridad del
+                                    Proyecto (RSP)</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Realizar o coordinar la evaluación de riesgos de seguridad del proyecto.</li>
+                                    <li>Verificar la implementación de los controles definidos y validar el cierre de
+                                        seguridad.</li>
+                                    <li>Asesorar al Líder de Proyecto sobre requisitos <strong>TISAX</strong> y del
+                                        cliente.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Responsables de Datos / Oficina
+                                    Técnica</h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Gestionar accesos y cifrado de los datos CAD/CAM/CAE del proyecto (CATIA/NX,
+                                        AutoForm, Cad-Cam).</li>
+                                    <li>Controlar el intercambio de datos con clientes y proveedores a través de canales
+                                        aprobados.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Producción, Calidad y Compras
+                                </h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li><strong>Producción / Taller:</strong> Proteger herramentales, matrices, piezas
+                                        de try-out y prototipos en planta; controlar el acceso físico a las áreas del
+                                        proyecto.</li>
+                                    <li><strong>Calidad:</strong> Resguardar la documentación APQP/PPAP, informes de
+                                        medición y piezas de muestra del cliente.</li>
+                                    <li><strong>Compras:</strong> Asegurar que los proveedores que participen en el
+                                        proyecto (mecanizado, tratamientos térmicos, automatización, software) firmen
+                                        NDA y cumplan los requisitos de seguridad.</li>
+                                </ul>
+                            </div>
+                            <div
+                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Miembros del Equipo de Proyecto
+                                </h3>
+                                <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                    <li>Cumplir esta política y los requisitos de confidencialidad del cliente.</li>
+                                    <li>Reportar de inmediato cualquier incidente o fuga de información según
+                                        <strong>P121-IT-1</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="clasificacion-proyectos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            CLASIFICACIÓN DE PROYECTOS
+                        </h2>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.1. Tipos de Proyecto</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tipo</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Descripción</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Ejemplos en PRODISMO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                Industrial – Cliente</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseño,
+                                                fabricación y entrega de equipos o herramentales para clientes
+                                                automotrices.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Matriz progresiva de estampado para nuevo modelo.</li>
+                                                    <li>Línea de ensamble robotizada de subconjuntos.</li>
+                                                    <li>Dispositivos de control y soldadura.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                Tecnológico</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Sistemas de
+                                                información, infraestructura, software e integraciones.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Migración de CATIA/NX a nueva versión o a la nube.</li>
+                                                    <li>Implementación de MFA en SIP4.0.</li>
+                                                    <li>Actualización de Windows Server.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                Interno / Mejora</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inversiones y
+                                                cambios en procesos, planta o maquinaria.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Incorporación de centro de mecanizado CNC conectado a red.</li>
+                                                    <li>Cambio de layout de planta o de áreas de try-out.</li>
+                                                    <li>Digitalización de registros de producción.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Categorías de Seguridad
+                            </h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Todo proyecto se clasifica en el kickoff
+                                mediante la <strong>Matriz de Clasificación (F123-IT-1)</strong>, según la información
+                                que maneja:</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Categoría</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Criterio</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Ejemplos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-red-600 dark:text-red-400">
+                                                Crítico</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Maneja
+                                                información <strong>Crítica</strong> del cliente o prototipos (datos 3D
+                                                de piezas no lanzadas, piezas de pre-serie), o afecta infraestructura
+                                                clave.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Matrices para un vehículo no presentado públicamente.</li>
+                                                    <li>Migración de CATIA a la nube.</li>
+                                                    <li>Cambios en SIP / SIP4.0.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-orange-600 dark:text-orange-400">
+                                                Alto</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Maneja
+                                                información <strong>Confidencial</strong> del cliente o de PRODISMO, o
+                                                sistemas importantes.</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Línea de ensamble para pieza en serie con datos bajo NDA.</li>
+                                                    <li>Despliegue de nuevo SharePoint.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-green-600 dark:text-green-400">
+                                                Estándar</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Maneja
+                                                información <strong>Interna / Pública</strong> sin datos del cliente.
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3">
+                                                    <li>Renovación de licencias de MS Teams.</li>
+                                                    <li>Mejora de layout sin datos de clientes.</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="ciclo-vida" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REQUISITOS DE SEGURIDAD EN EL CICLO DE VIDA DEL PROYECTO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">La seguridad de la información debe
+                            integrarse en cada fase del proyecto, según el método de gestión utilizado (APQP para
+                            proyectos de cliente, o la metodología interna para proyectos de IT y mejora):</p>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Inicio (Kickoff / Oferta)
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Clasificar el proyecto (<strong>F123-IT-1</strong>) y designar al
+                                    <strong>RSP</strong> para proyectos Críticos y Altos.</li>
+                                <li>Identificar los requisitos de seguridad del cliente: NDA, cláusulas contractuales,
+                                    nivel de evaluación TISAX exigido y requisitos de protección de prototipos.</li>
+                                <li>Definir quiénes integran el equipo y qué información necesita cada uno (principio
+                                    de <strong>necesidad de conocer</strong>).</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.2. Planificación</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Realizar la <strong>evaluación de riesgos de seguridad</strong> del proyecto
+                                    (<strong>F123-IT-3</strong>) para proyectos Críticos y Altos.</li>
+                                <li>Documentar en el plan del proyecto los controles definidos, responsables, plazos y
+                                    presupuesto de seguridad. Ejemplos:
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li>Carpetas de proyecto con accesos restringidos en SharePoint/OneDrive y
+                                            cifrado de datos CAD.</li>
+                                        <li>Canales seguros para intercambio de datos con el cliente (portales del
+                                            cliente, transferencia cifrada).</li>
+                                        <li>Área física delimitada y señalizada para matrices, piezas de try-out y
+                                            prototipos.</li>
+                                        <li>Requisitos de seguridad para máquinas y equipos conectados a la red (CNC,
+                                            PLC, robots).</li>
+                                    </ul>
+                                </li>
+                                <li>Obtener la aprobación del <strong>IT Manager</strong> de la arquitectura de
+                                    seguridad en proyectos Críticos.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.3. Ejecución</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Aplicar y verificar los controles planificados; revisar accesos ante altas o bajas
+                                    en el equipo.</li>
+                                <li>Controlar el uso de fotografía, video y dispositivos móviles en áreas con
+                                    prototipos o herramentales del cliente.</li>
+                                <li>Registrar visitas de clientes y terceros durante el try-out y acompañarlas en todo
+                                    momento.</li>
+                                <li>Proteger piezas y herramentales en traslados (embalaje cubierto, sin
+                                    identificación del cliente o modelo cuando sea requerido).</li>
+                                <li>Gestionar los cambios del proyecto evaluando su impacto en la seguridad.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.4. Cierre y Entrega</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Completar el <strong>checklist de cierre de seguridad (F123-IT-2)</strong>.</li>
+                                <li>Revocar accesos temporales de proveedores, contratistas y miembros que ya no
+                                    participan.</li>
+                                <li>Devolver, archivar o destruir de forma segura la información y piezas del cliente
+                                    según el contrato (incluye scrap de piezas de try-out con geometría confidencial).
+                                </li>
+                                <li>Actualizar el inventario de activos y registrar las lecciones aprendidas de
+                                    seguridad.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="proyectos-industriales" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REQUISITOS ESPECÍFICOS PARA PROYECTOS INDUSTRIALES
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Ámbito</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Requisito de seguridad</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            Datos técnicos del cliente</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <ul class="list-disc pl-5 space-y-3">
+                                                <li>Almacenar solo en repositorios aprobados con acceso por proyecto.
+                                                </li>
+                                                <li>Prohibido el uso de correo personal, pendrives no autorizados o
+                                                    nubes públicas.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            Programas CAM / CNC</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <ul class="list-disc pl-5 space-y-3">
+                                                <li>Transferencia a máquinas solo por la red o medios autorizados.</li>
+                                                <li>Respaldo de programas y control de versiones.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            Prototipos y piezas de try-out</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <ul class="list-disc pl-5 space-y-3">
+                                                <li>Almacenamiento en área restringida y cubierta.</li>
+                                                <li>Inventario y control de piezas de muestra enviadas y recibidas.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            Acceso físico a planta</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <ul class="list-disc pl-5 space-y-3">
+                                                <li>Visitas registradas y acompañadas.</li>
+                                                <li>Prohibición de fotografías sin autorización del Líder de Proyecto.
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            Comunicación externa</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                            <ul class="list-disc pl-5 space-y-3">
+                                                <li>No publicar imágenes, nombres de modelos ni datos del cliente en
+                                                    redes sociales, ferias o referencias comerciales sin autorización
+                                                    escrita del cliente.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="proveedores-terceros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            PROVEEDORES Y TERCEROS EN PROYECTOS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Todo proveedor que acceda a información del proyecto debe firmar un
+                                <strong>NDA</strong> antes de recibir datos.</li>
+                            <li>Se entregará únicamente la información mínima necesaria (por ejemplo, solo el plano del
+                                componente a mecanizar).</li>
+                            <li>Para proyectos Críticos, se verificará que el proveedor cumpla requisitos equivalentes
+                                de seguridad (evaluación TISAX o cuestionario de seguridad).</li>
+                            <li>Los accesos remotos de proveedores (Anydesk / Escritorio Remoto) serán temporales,
+                                autorizados por el IT Manager y registrados.</li>
+                        </ul>
+                    </section>
+
+                    <section id="gestion-excepciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                            GESTIÓN DE EXCEPCIONES
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Cualquier desvío de esta política debe justificarse por escrito, con análisis de riesgo
+                                y controles compensatorios.</li>
+                            <li>Las excepciones en proyectos Altos son aprobadas por el <strong>IT Manager</strong>; en
+                                proyectos Críticos, además por la <strong>Alta Dirección</strong>.</li>
+                            <li>Las excepciones tendrán fecha de vencimiento y serán revisadas al cierre del proyecto.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="comunicacion-concientizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            COMUNICACIÓN Y CONCIENTIZACIÓN
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Esta política será comunicada a líderes de proyecto, oficina técnica, producción,
+                                calidad y compras.</li>
+                            <li>En cada kickoff se informará al equipo sobre los requisitos de confidencialidad del
+                                cliente.</li>
+                            <li>Se incluirán módulos de seguridad en proyectos en la capacitación anual del personal.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="registros-evidencias" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                            REGISTROS Y EVIDENCIAS
+                        </h2>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">12.1. Registros Obligatorios
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>F123-IT-1</strong>: Matriz de Clasificación de Proyectos.</li>
+                                <li><strong>F123-IT-2</strong>: Checklist de Seguridad por Fase del Proyecto.</li>
+                                <li><strong>F123-IT-3</strong>: Evaluación de Riesgos de Seguridad del Proyecto.</li>
+                                <li>NDA firmados con clientes, proveedores y terceros.</li>
+                                <li>Acta de aprobación del IT Manager para proyectos Críticos.</li>
+                                <li>Registros de capacitación y de visitas asociados al proyecto.</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-6">
+                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">12.2. Retención de Registros
+                            </h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Registros de proyectos Críticos y Altos: 5 años desde el cierre del proyecto, o lo
+                                    que exija el contrato con el cliente.</li>
+                                <li>Registros de proyectos Estándar: 3 años desde el cierre.</li>
+                                <li>NDA: durante su vigencia y 5 años posteriores.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="monitoreo-cumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                            MONITOREO Y CUMPLIMIENTO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Auditorías internas semestrales sobre una muestra de proyectos en curso y cerrados.</li>
+                            <li>Revisión de la seguridad en proyectos en el Comité de Seguridad de la Información.</li>
+                            <li>Indicadores de desempeño:
+                                <ul class="list-circle pl-5 mt-2 space-y-3">
+                                    <li>Proyectos con clasificación de seguridad en el kickoff: Objetivo 100%.</li>
+                                    <li>Proyectos Críticos/Altos con evaluación de riesgos documentada: Objetivo 100%.
+                                    </li>
+                                    <li>Proyectos cerrados con checklist de seguridad completo: Objetivo &gt; 95%.</li>
+                                    <li>Incidentes de fuga de información de clientes en proyectos: Objetivo 0.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="sanciones-incumplimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                            SANCIONES POR INCUMPLIMIENTO
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            El incumplimiento de esta política podrá dar lugar a acciones disciplinarias de acuerdo con
+                            la política de sanciones de la empresa, que pueden incluir desde amonestaciones hasta la
+                            desvinculación laboral, dependiendo de la gravedad de la infracción. En el caso de
+                            proveedores y terceros, podrá implicar la rescisión del contrato y las acciones legales que
+                            correspondan.
+                        </p>
+                    </section>
+
+                    <section id="revision-actualizacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                            REVISIÓN Y ACTUALIZACIÓN
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                            <li>Revisión anual de esta política y del procedimiento <strong>P123-IT-1</strong>.</li>
+                            <li>Actualización inmediata ante cambios en requisitos de clientes, normativos o incidentes
+                                significativos.</li>
+                            <li>Responsable de la revisión: RSI en coordinación con el IT Manager.</li>
+                        </ul>
+                    </section>
+
+                    <section id="anexos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                            ANEXOS
+                        </h2>
+                        <div class="space-y-4">
+                            <!-- Anexo A -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del formulario F123-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="#" target="_blank"
+                                    title="M123-IT-1 Matriz de Clasificación de Proyectos - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        M123-IT-1
+                                    </span>
+                                    Matriz de Clasificación de Proyectos
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Criterios de categorización Crítico /
+                                    Alto / Estándar y designación del RSP]</p>
+                            </div>
+
+                            <!-- Anexo B -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del formulario F123-IT-2 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="#" target="_blank"
+                                    title="F123-IT-1 Checklist de Seguridad por Fase - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F123-IT-1
+                                    </span>
+                                    Checklist de Seguridad por Fase
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Verificaciones de Inicio,
+                                    Planificación, Ejecución y Cierre]</p>
+                            </div>
+
+                            <!-- Anexo C -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del formulario F123-IT-3 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="#" target="_blank"
+                                    title="F123-IT-3 Evaluación de Riesgos de Seguridad del Proyecto - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F123-IT-3
+                                    </span>
+                                    Evaluación de Riesgos de Seguridad del Proyecto
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Riesgos identificados, controles
+                                    propuestos, responsables y estado]</p>
+                            </div>
+
+                            <!-- Procedimiento asociado -->
+                            <!-- TODO: verificar la ruta del procedimiento P123-IT-1 dentro del sitio -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Procedimiento: <a
+                                    href="../../procedimientos/requisitos-seguridad-proyectos/proc-requisitos-seguridad-proyectos.html"
+                                    title="P123-IT-1 Procedimiento para Incorporar Requisitos de Seguridad en Proyectos"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P123-IT-1
+                                    </span>
+                                    Incorporar Requisitos de Seguridad en Proyectos
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Flujo operativo, checklists y plantilla
+                                    de evaluación de riesgos por proyecto]</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">17</span>
+                            REVISIONES DEL DOCUMENTO
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Rev. N°</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Fecha</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                            Descripción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                            0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                            25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión
+                                            del documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            1</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            25/11/2025</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
+                                            general del documento</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <a href="../organizacion-seguridad/organizacion-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Organización de Seguridad</span>
+                    </a>
+                    <a href="../gestion-activos/gestion-activos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: Gestión de Activos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+
+                        <nav class="space-y-2">
+                            <a href="#objetivo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETIVO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#referencias-normativas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES</a>
+                            <a href="#responsables"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RESPONSABLES</a>
+                            <a href="#clasificacion-proyectos"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                CLASIFICACIÓN DE PROYECTOS</a>
+                            <a href="#ciclo-vida"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                CICLO DE VIDA DEL PROYECTO</a>
+                            <a href="#proyectos-industriales"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                PROYECTOS INDUSTRIALES</a>
+                            <a href="#proveedores-terceros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                PROVEEDORES Y TERCEROS</a>
+                            <a href="#gestion-excepciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                GESTIÓN DE EXCEPCIONES</a>
+                            <a href="#comunicacion-concientizacion"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                COMUNICACIÓN Y CONCIENTIZACIÓN</a>
+                            <a href="#registros-evidencias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-cumplimiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-incumplimiento"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                SANCIONES POR INCUMPLIMIENTO</a>
+                            <a href="#revision-actualizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                REVISIÓN Y ACTUALIZACIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16.
+                                ANEXOS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">17.
+                                REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-3">
+                            <button id="report-incident"
+                                class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC123-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/11/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">25/11/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>
