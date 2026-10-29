@@ -128,7 +128,7 @@
                                 participen en un proyecto o accedan a información asociada a él.</li>
                             <li><strong>Toda la información del proyecto</strong> en cualquier formato: datos CAD 3D
                                 (CATIA/NX), simulaciones (AutoForm), programas CAM/CNC, planos, especificaciones del
-                                cliente, documentación APQP/PPAP, fotografías, piezas físicas, prototipos y
+                                cliente, documentación APQP/PPAP, fotografías y
                                 herramentales.</li>
                         </ul>
                     </section>
@@ -188,13 +188,6 @@
                                 <p class="text-gray-700 dark:text-gray-300">Datos técnicos o comerciales entregados por
                                     el cliente automotriz (geometrías de pieza, modelos 3D, especificaciones, volúmenes,
                                     cronogramas de lanzamiento) sujetos a acuerdos de confidencialidad.</p>
-                            </div>
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Prototipo:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Pieza, componente, herramental o vehículo
-                                    aún no presentado públicamente por el cliente, cuya información o apariencia debe
-                                    ser protegida según los requisitos <strong>TISAX</strong> de protección de
-                                    prototipos.</p>
                             </div>
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Try-out:</h3>
@@ -286,8 +279,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white">Producción, Calidad y Compras
                                 </h3>
                                 <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                    <li><strong>Producción / Taller:</strong> Proteger herramentales, matrices, piezas
-                                        de try-out y prototipos en planta; controlar el acceso físico a las áreas del
+                                    <li><strong>Producción / Taller:</strong> Proteger herramentales y matrices en planta; controlar el acceso físico a las áreas del
                                         proyecto.</li>
                                     <li><strong>Calidad:</strong> Resguardar la documentación APQP/PPAP, informes de
                                         medición y piezas de muestra del cliente.</li>
@@ -338,7 +330,7 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Industrial – Cliente</td>
+                                                Industrial - Cliente</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseño,
                                                 fabricación y entrega de equipos o herramentales para clientes
                                                 automotrices.</td>
@@ -411,8 +403,8 @@
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-red-600 dark:text-red-400">
                                                 Crítico</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Maneja
-                                                información <strong>Crítica</strong> del cliente o prototipos (datos 3D
-                                                de piezas no lanzadas, piezas de pre-serie), o afecta infraestructura
+                                                información <strong>Crítica</strong> del cliente (datos 3D
+                                                de piezas no lanzadas), o afecta infraestructura
                                                 clave.</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3">
@@ -470,10 +462,10 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Inicio (Kickoff / Oferta)
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Clasificar el proyecto (<strong>F123-IT-1</strong>) y designar al
+                                <li>Clasificar el proyecto (<strong>M123-IT-1</strong>) y designar al
                                     <strong>RSP</strong> para proyectos Críticos y Altos.</li>
                                 <li>Identificar los requisitos de seguridad del cliente: NDA, cláusulas contractuales,
-                                    nivel de evaluación TISAX exigido y requisitos de protección de prototipos.</li>
+                                    nivel de evaluación TISAX exigido.</li>
                                 <li>Definir quiénes integran el equipo y qué información necesita cada uno (principio
                                     de <strong>necesidad de conocer</strong>).</li>
                             </ul>
@@ -483,7 +475,7 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.2. Planificación</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>Realizar la <strong>evaluación de riesgos de seguridad</strong> del proyecto
-                                    (<strong>F123-IT-3</strong>) para proyectos Críticos y Altos.</li>
+                                    (<strong>F123-IT-2</strong>) para proyectos Críticos y Altos.</li>
                                 <li>Documentar en el plan del proyecto los controles definidos, responsables, plazos y
                                     presupuesto de seguridad. Ejemplos:
                                     <ul class="list-circle pl-5 mt-2 space-y-3">
@@ -491,8 +483,7 @@
                                             cifrado de datos CAD.</li>
                                         <li>Canales seguros para intercambio de datos con el cliente (portales del
                                             cliente, transferencia cifrada).</li>
-                                        <li>Área física delimitada y señalizada para matrices, piezas de try-out y
-                                            prototipos.</li>
+                                        <li>Área física delimitada y señalizada para matrices y celdas.</li>
                                         <li>Requisitos de seguridad para máquinas y equipos conectados a la red (CNC,
                                             PLC, robots).</li>
                                     </ul>
@@ -520,14 +511,13 @@
                         <div class="mb-6">
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.4. Cierre y Entrega</h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Completar el <strong>checklist de cierre de seguridad (F123-IT-2)</strong>.</li>
+                                <li>Completar el <strong>checklist de cierre de seguridad (F123-IT-1)</strong>.</li>
                                 <li>Revocar accesos temporales de proveedores, contratistas y miembros que ya no
                                     participan.</li>
-                                <li>Devolver, archivar o destruir de forma segura la información y piezas del cliente
-                                    según el contrato (incluye scrap de piezas de try-out con geometría confidencial).
+                                <li>Devolver, archivar o destruir de forma segura la información del cliente
+                                    según el contrato.
                                 </li>
-                                <li>Actualizar el inventario de activos y registrar las lecciones aprendidas de
-                                    seguridad.</li>
+                                <li>Registrar las lecciones aprendidas de seguridad.</li>
                             </ul>
                         </div>
                     </section>
@@ -572,17 +562,6 @@
                                             <ul class="list-disc pl-5 space-y-3">
                                                 <li>Transferencia a máquinas solo por la red o medios autorizados.</li>
                                                 <li>Respaldo de programas y control de versiones.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Prototipos y piezas de try-out</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <ul class="list-disc pl-5 space-y-3">
-                                                <li>Almacenamiento en área restringida y cubierta.</li>
-                                                <li>Inventario y control de piezas de muestra enviadas y recibidas.</li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -676,9 +655,9 @@
                             <h3 class="font-semibold text-gray-900 dark:text-white mb-3">12.1. Registros Obligatorios
                             </h3>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>F123-IT-1</strong>: Matriz de Clasificación de Proyectos.</li>
-                                <li><strong>F123-IT-2</strong>: Checklist de Seguridad por Fase del Proyecto.</li>
-                                <li><strong>F123-IT-3</strong>: Evaluación de Riesgos de Seguridad del Proyecto.</li>
+                                <li><strong>M123-IT-1</strong>: Matriz de Clasificación de Proyectos.</li>
+                                <li><strong>F123-IT-1</strong>: Checklist de Seguridad por Fase del Proyecto.</li>
+                                <li><strong>F123-IT-2</strong>: Evaluación de Riesgos de Seguridad del Proyecto.</li>
                                 <li>NDA firmados con clientes, proveedores y terceros.</li>
                                 <li>Acta de aprobación del IT Manager para proyectos Críticos.</li>
                                 <li>Registros de capacitación y de visitas asociados al proyecto.</li>
@@ -704,8 +683,8 @@
                             MONITOREO Y CUMPLIMIENTO
                         </h2>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Auditorías internas semestrales sobre una muestra de proyectos en curso y cerrados.</li>
-                            <li>Revisión de la seguridad en proyectos en el Comité de Seguridad de la Información.</li>
+                            <li>Auditorías internas semestrales sobre una muestra de proyectos en curso.</li>
+                            <li>Revisión de la seguridad en proyectos por el Euipo de IT.</li>
                             <li>Indicadores de desempeño:
                                 <ul class="list-circle pl-5 mt-2 space-y-3">
                                     <li>Proyectos con clasificación de seguridad en el kickoff: Objetivo 100%.</li>
@@ -800,14 +779,14 @@
                             <!-- TODO: reemplazar href="#" por el enlace de SharePoint del formulario F123-IT-3 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="#" target="_blank"
-                                    title="F123-IT-3 Evaluación de Riesgos de Seguridad del Proyecto - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    title="F123-IT-2 Evaluación de Riesgos de Seguridad del Proyecto - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F123-IT-3
+                                        F123-IT-2
                                     </span>
                                     Evaluación de Riesgos de Seguridad del Proyecto
                                     <i
