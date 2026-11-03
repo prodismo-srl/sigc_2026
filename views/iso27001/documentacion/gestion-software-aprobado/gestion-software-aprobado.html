@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Gestión de Software Aprobado">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Gestión de Software Aprobado">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Gestión de Software Aprobado - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <div id="header-container" data-module="header" class="sticky top-0 z-50"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <!-- --TODO-- verificar ruta de la página MC133-IT-1 -->
+                    <a href="../gestion-activos/gestion-servicios-externos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Servicios de TI Externos</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título de la página siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Software
+                            Aprobado</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC134-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 2/12/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX (VDA ISA 1.3.4), ISO 27001:2022 (A.8.19, A.8.8, A.5.9, A.8.32, A.5.32)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+
+                        <section id="objetivo" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                                OBJETIVO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Garantizar que en <strong>PRODISMO SRL</strong> solo se utilice <strong>software evaluado y aprobado</strong> para el procesamiento de los activos de información, determinando los <strong>tipos de software gestionados</strong> (firmware, sistemas operativos, aplicaciones, bibliotecas y controladores), manteniendo <strong>repositorios de software gestionado protegidos contra manipulaciones no autorizadas</strong>, conociendo las <strong>versiones y niveles de parche</strong> del software en uso y <strong>revisando periódicamente su aprobación</strong>. Esta política da cumplimiento al control <strong>1.3.4</strong> del catálogo <strong>VDA ISA 6</strong> del marco <strong>TISAX</strong> y al control <strong>A.8.19 (Instalación de software en sistemas operacionales)</strong> del Anexo A de <strong>ISO/IEC 27001:2022</strong>, complementado por los controles <strong>A.8.8</strong>, <strong>A.5.9</strong>, <strong>A.8.32</strong> y <strong>A.5.32</strong>.</p>
+                        </section>
+
+                        <section id="alcance" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                                ALCANCE
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Todo el software</strong> instalado o ejecutado en activos de PRODISMO SRL o utilizado para procesar su información y la de sus clientes, incluyendo:
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li><strong>Estaciones de trabajo y servidores:</strong> sistemas operativos, aplicaciones de oficina, software CAD/CAM/CAE (CATIA, NX, AutoForm, Cad-Cam), cliente del ERP SIP / SIP4.0, AnyDesk y herramientas de seguridad.</li>
+                                        <li><strong>Equipos de red, cámaras de vigilancia y hardware:</strong> firmware y BIOS/UEFI.</li>
+                                        <li><strong>Equipos de planta:</strong> firmware y software de controladores CNC, PLC y robots de las líneas de ensamble.</li>
+                                        <li><strong>Software desarrollado por terceros:</strong> ERP SIP / SIP4.0 (Enter-Geminus) y aplicación web viajes.prodismo.com (Cubits S.R.L.), incluidas sus bibliotecas y componentes.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Todos los empleados, contratistas y proveedores</strong> que soliciten, instalen, actualicen o utilicen software en activos de PRODISMO SRL.</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Los servicios en la nube (SaaS) se evalúan según la política <strong>MC133-IT-1</strong>; esta política alcanza el software que dichos servicios requieran instalar en los equipos de PRODISMO SRL.</p>
+                        </section>
+
+                        <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                                REFERENCIAS NORMATIVAS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.19 (Instalación de software en sistemas operacionales); A.8.8 (Gestión de vulnerabilidades técnicas); A.5.9 (Inventario de información y otros activos asociados); A.8.32 (Gestión de cambios); A.5.32 (Derechos de propiedad intelectual)</li>
+                                <li><strong>ISO/IEC 27002:2022</strong> - Apartados 8.19, 8.8, 5.9, 8.32 y 5.32, guía de implementación de los controles</li>
+                                <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.3.4</strong> (Uso de software aprobado)</li>
+                                <li><strong>Ley 11.723</strong> de Propiedad Intelectual (República Argentina)</li>
+                                <li>Procedimiento de Gestión de Software Aprobado <strong>P134-IT-1</strong></li>
+                                <li>Política de Organización de la Seguridad de la Información <strong>MC121-IT-1</strong></li>
+                                <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
+                                <li>Política de Requisitos de Seguridad en Proyectos <strong>MC123-IT-1</strong></li>
+                                <li>Política y procedimiento de Responsabilidades con Proveedores Externos de Servicios de TI <strong>MC124-IT-1 / P124-IT-1</strong> (registro de configuración segura <strong>F124-IT-3</strong>)</li>
+                                <li>Política y procedimiento de Gestión de Servicios de TI Externos <strong>MC133-IT-1 / P133-IT-1</strong></li>
+                                <li>Procedimiento de Gestión de Incidentes <strong>P121-IT-1</strong></li>
+                            </ul>
+                        </section>
+
+                        <section id="definiciones" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                                DEFINICIONES
+                            </h2>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Software gestionado:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software cuyo uso, versión, origen y actualización están bajo control de IT y registrados en el inventario <strong>F134-IT-1</strong>.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Software aprobado:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software evaluado según el procedimiento <strong>P134-IT-1</strong> y autorizado por el IT Manager para su uso en PRODISMO SRL.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Firmware:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software embebido en un dispositivo de hardware (equipos de red, cámaras, BIOS/UEFI, controladores CNC, PLC, robots).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Sistema operativo:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software base que gestiona el hardware de un equipo (por ejemplo, Windows y Windows Server).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Aplicación:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software que ejecutan los usuarios para realizar tareas (por ejemplo, Microsoft 365, CATIA, NX, cliente SIP4.0).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Biblioteca o componente:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software reutilizable del que dependen otras aplicaciones (frameworks, runtimes como .NET o Visual C++ Redistributable).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Controlador (driver):</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software que permite al sistema operativo comunicarse con un dispositivo (placas de video, impresoras, periféricos).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Repositorio de software gestionado:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Ubicación controlada desde la que se obtiene e instala el software aprobado.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Nivel de parche:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Versión y actualizaciones de seguridad aplicadas a un software.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Fin de soporte (EOL):</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Fecha a partir de la cual el fabricante deja de publicar actualizaciones de seguridad para un software.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Software no autorizado:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Software no incluido en el inventario de software aprobado.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="responsables" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                                RESPONSABLES
+                            </h2>
+                            <div class="space-y-4">
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Aprobar esta política y asignar los recursos para licencias, herramientas y actualizaciones.</li>
+                                        <li>Aprobar las excepciones por software sin soporte con riesgo Alto.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">IT Manager / Responsable de Seguridad de la Información (RSI)</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Aprobar o rechazar el software solicitado y mantener el inventario <strong>F134-IT-1</strong>.</li>
+                                        <li>Realizar la revisión periódica de la aprobación y definir los plazos de aplicación de parches.</li>
+                                        <li>Aprobar las excepciones de bajo riesgo y escalar las de riesgo Alto.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Instalar el software aprobado, únicamente desde los repositorios gestionados.</li>
+                                        <li>Mantener y proteger los repositorios, y registrar versiones y niveles de parche.</li>
+                                        <li>Aplicar las actualizaciones y detectar software no autorizado.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Responsables de Datos y de Área</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Solicitar el software que necesita su área y validar su necesidad (por ejemplo, CATIA, NX, AutoForm y Cad-Cam en Ingeniería).</li>
+                                        <li>Participar en las pruebas de nuevas versiones del software de su área.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Mantenimiento / Producción</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Coordinar con fabricantes e integradores la actualización del firmware y software de equipos de planta (responsable: --TODO--).</li>
+                                        <li>Definir las ventanas de mantenimiento para actualizaciones en la planta.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Proveedores</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Entregar versiones con notas de versión y origen verificable (Enter-Geminus, Cubits S.R.L., Armanet S.A., fabricantes de equipos).</li>
+                                        <li>Informar vulnerabilidades y actualizaciones de seguridad de su software (según <strong>MC124-IT-1</strong>).</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Usuarios</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Utilizar solo software aprobado y no instalar, descargar ni ejecutar software por su cuenta.</li>
+                                        <li>Reportar software sospechoso o no autorizado a IT.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="tipos-de-software-gestionados" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                                TIPOS DE SOFTWARE GESTIONADOS
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tipo</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Ejemplos en PRODISMO</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Responsable de gestión</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Fuente de actualizaciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Firmware</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Equipos de red y firewall.</li><li>Cámaras y NVR.</li><li>BIOS/UEFI de PCs y servidores.</li><li>Controladores CNC, PLC y robots.</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Armanet S.A. (red y CCTV) con supervisión de IT.</li><li>Administrador de IT (BIOS/UEFI).</li><li>Mantenimiento con el fabricante (planta).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Sitio oficial del fabricante o integrador</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Sistemas operativos</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Windows en PCs (versión: --TODO--).</li><li>Windows Server (versión: --TODO--).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Administrador de IT</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Microsoft Update</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Aplicaciones</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Microsoft 365 Apps.</li><li>CATIA, NX, AutoForm, Cad-Cam (--TODO--).</li><li>Cliente SIP / SIP4.0, AnyDesk.</li><li>Antivirus / EDR (--TODO--).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Administrador de IT.</li><li>Responsables de Datos (CAD/CAE).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Microsoft 365 y portales oficiales de cada fabricante</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Software de terceros a medida</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>ERP SIP / SIP4.0 (Enter-Geminus).</li><li>viajes.prodismo.com (Cubits S.R.L.).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Esteban Manzoni (SIP4.0).</li><li>Germán Montalbetti (aplicación web).</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Entregas del proveedor con notas de versión</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Bibliotecas y componentes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Runtimes (.NET, Visual C++ Redistributable, Java).</li><li>Frameworks del ERP y de la aplicación web.</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Administrador de IT.</li><li>Proveedores de desarrollo.</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Fabricante del componente o proveedor</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Controladores</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Placas de video de estaciones CAD.</li><li>Impresoras y periféricos.</li></ul></td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Administrador de IT</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Sitio oficial del fabricante del hardware</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="software-aprobado" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                SOFTWARE APROBADO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Solo se instala y utiliza software aprobado</strong> y registrado en el <strong>F134-IT-1</strong>, incluido el software gratuito, de prueba o de código abierto.</li>
+                                <li>La <strong>instalación la realiza únicamente IT</strong>; los usuarios no tienen privilegios de administrador en sus equipos (situación actual y plan de adecuación: --TODO--).</li>
+                                <li>Antes de aprobar un software se evalúa, según <strong>P134-IT-1</strong>: necesidad, origen oficial, licencia válida (Ley 11.723), soporte vigente del fabricante, vulnerabilidades conocidas, compatibilidad y acceso a datos o a la red.</li>
+                                <li>Si el software requiere un servicio en la nube o envía información a terceros, se evalúa además según <strong>MC133-IT-1</strong>.</li>
+                                <li>Está <strong>prohibido</strong> utilizar software sin licencia, de fuentes no oficiales, sin soporte del fabricante (salvo excepción aprobada) o instalado desde cuentas o medios personales.</li>
+                            </ul>
+                        </section>
+
+                        <section id="repositorios-de-software-gestionado" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                REPOSITORIOS DE SOFTWARE GESTIONADO
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.1. Repositorios Definidos</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Repositorio</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Contenido</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Ubicación / acceso</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Repositorio de instaladores de IT</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Instaladores aprobados, licencias y valores hash</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO-- ubicación. Escritura: solo administradores de IT.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Microsoft Update / Centro de administración de Microsoft 365</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Actualizaciones de Windows, Windows Server y Microsoft 365 Apps</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Fuente oficial de Microsoft. Gestión: Administrador de IT.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Portales oficiales de fabricantes</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    CATIA (Dassault Systèmes), NX (Siemens), AutoForm, AnyDesk y otros</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Cuentas corporativas del fabricante. Acceso: IT y Responsables de Datos.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Versiones del ERP SIP / SIP4.0</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Versiones entregadas por Enter-Geminus y notas de versión</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--. Aprobación: Esteban Manzoni.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Código y versiones de viajes.prodismo.com</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Código fuente y versiones de la aplicación</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO-- (Cubits S.R.L. / Donweb.com).</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Respaldo de firmware y configuraciones de red</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Firmware y configuraciones de equipos de red y CCTV</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Armanet S.A., según F124-IT-3.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.2. Protección contra Manipulaciones No Autorizadas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Solo los administradores de IT, con cuentas nominativas y MFA, pueden escribir en el repositorio de instaladores; el resto de los usuarios no tiene acceso o tiene solo lectura.</li>
+                                    <li>El software se descarga únicamente de <strong>fuentes oficiales</strong>; se verifica la <strong>firma digital</strong> del fabricante o el <strong>valor hash (SHA-256)</strong> antes de guardarlo, y se registra en el <strong>F134-IT-1</strong>.</li>
+                                    <li>Todo instalador se analiza con el antivirus antes de incorporarlo al repositorio.</li>
+                                    <li>El repositorio se respalda periódicamente y sus accesos y cambios quedan registrados.</li>
+                                    <li>El acceso de proveedores a los repositorios de software de terceros se controla según <strong>MC124-IT-1</strong>.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="versiones-y-niveles-de-parche" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                VERSIONES Y NIVELES DE PARCHE
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>El <strong>F134-IT-1</strong> registra, para cada software aprobado, la versión aprobada, el nivel de parche, la fecha de fin de soporte y los equipos donde se usa.</li>
+                                <li>Las actualizaciones de Windows, Windows Server y Microsoft 365 se aplican en un <strong>ciclo mensual</strong>.</li>
+                                <li><strong>Plazos para vulnerabilidades:</strong> Crítica, hasta <strong>7 días</strong>; Alta, hasta <strong>30 días</strong>; Media y Baja, en el siguiente ciclo mensual.</li>
+                                <li>El firmware se revisa al menos <strong>semestralmente</strong>; en equipos de planta, la actualización se realiza en ventanas de mantenimiento coordinadas con Producción.</li>
+                                <li>El software que llega a su <strong>fin de soporte</strong> se reemplaza o actualiza; si no es posible (por ejemplo, controladores de máquinas con sistemas antiguos), se aprueba una excepción con controles compensatorios, como el aislamiento de red (<strong>F124-IT-3</strong>).</li>
+                            </ul>
+                        </section>
+
+                        <section id="revision-periodica-de-la-aprobacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                                REVISIÓN PERIÓDICA DE LA APROBACIÓN
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>La aprobación de cada software se revisa <strong>una vez al año</strong>, verificando que siga siendo necesario, tenga licencia y soporte vigentes y no presente vulnerabilidades sin tratar.</li>
+                                <li>Además, se revisa ante: fin de soporte, vulnerabilidades críticas, vencimiento de licencias o cambio de proveedor.</li>
+                                <li>El software cuya aprobación se retira se desinstala de todos los equipos y se marca como <strong>Retirado</strong> en el <strong>F134-IT-1</strong>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="deteccion-de-software-no-autorizado" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                DETECCIÓN DE SOFTWARE NO AUTORIZADO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>IT compara <strong>trimestralmente</strong> el software instalado en los equipos con el inventario de software aprobado (herramienta: --TODO--).</li>
+                                <li>El software no autorizado se desinstala; si es malicioso o produjo un incidente, se gestiona según <strong>P121-IT-1</strong>.</li>
+                                <li>Los casos detectados se informan al Comité de Seguridad de la Información.</li>
+                            </ul>
+                        </section>
+
+                        <section id="cambios-y-nuevas-versiones-de-software-d" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                                CAMBIOS Y NUEVAS VERSIONES DE SOFTWARE DE TERCEROS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Las nuevas versiones del ERP SIP / SIP4.0 y de viajes.prodismo.com se prueban y aprueban <strong>antes del pase a producción</strong>, por una persona distinta de quien las desarrolla (segregación de funciones, <strong>MC122-IT-1</strong>).</li>
+                                <li>Cada versión aprobada se registra en el <strong>F134-IT-1</strong> con sus notas de versión y se conserva la versión anterior para poder volver atrás.</li>
+                                <li>Los cambios de software en el marco de proyectos se gestionan además según <strong>MC123-IT-1</strong>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="comunicacion-y-concientizacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                                COMUNICACIÓN Y CONCIENTIZACIÓN
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Esta política y la lista de software aprobado se publican en la intranet.</li>
+                                <li>Las campañas anuales de concientización incluyen los riesgos de instalar software no autorizado.</li>
+                            </ul>
+                        </section>
+
+                        <section id="registros-y-evidencias" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                                REGISTROS Y EVIDENCIAS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">14.1. Registros Obligatorios</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>F134-IT-1:</strong> Inventario de Software Aprobado (incluye repositorios).</li>
+                                    <li><strong>F134-IT-2:</strong> Solicitud y Evaluación de Software Nuevo.</li>
+                                    <li><strong>Registros de aplicación de parches</strong> y de revisiones anuales de aprobación.</li>
+                                    <li><strong>Informes trimestrales</strong> de detección de software no autorizado.</li>
+                                    <li><strong>Excepciones aprobadas</strong> por software sin soporte.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">14.2. Retención de Registros</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Inventario de software aprobado:</strong> versión vigente y versiones de los últimos 3 años.</li>
+                                    <li><strong>Solicitudes, evaluaciones y excepciones:</strong> 3 años.</li>
+                                    <li><strong>Registros de parches y detección de software no autorizado:</strong> 1 año.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="monitoreo-y-cumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                MONITOREO Y CUMPLIMIENTO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Auditorías internas</strong> anuales sobre una muestra de equipos.</li>
+                                <li><strong>Indicadores de desempeño:</strong>
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li>Software instalado que figura en el inventario aprobado: Objetivo 100%.</li>
+                                        <li>Equipos con el ciclo mensual de parches aplicado: Objetivo &gt; 95%.</li>
+                                        <li>Vulnerabilidades críticas corregidas en plazo: Objetivo &gt; 95%.</li>
+                                        <li>Software aprobado con versión y nivel de parche registrados: Objetivo 100%.</li>
+                                        <li>Revisiones anuales de aprobación realizadas en plazo: Objetivo 100%.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="sanciones-por-incumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                                SANCIONES POR INCUMPLIMIENTO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">El incumplimiento de esta política podrá dar lugar a acciones disciplinarias de acuerdo con la política de sanciones de la empresa, que pueden incluir desde amonestaciones hasta la desvinculación laboral, dependiendo de la gravedad de la infracción. En el caso de proveedores, podrá implicar la rescisión del contrato y las acciones legales que correspondan.</p>
+                        </section>
+
+                        <section id="revision-y-actualizacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">17</span>
+                                REVISIÓN Y ACTUALIZACIÓN
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Revisión anual</strong> de esta política, del procedimiento P134-IT-1 y del inventario de software aprobado.</li>
+                                <li><strong>Actualización inmediata</strong> ante cambios tecnológicos significativos o nuevas amenazas.</li>
+                                <li><strong>Responsable de la revisión:</strong> RSI en coordinación con el IT Manager.</li>
+                            </ul>
+                        </section>
+
+                        <section id="anexos" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">18</span>
+                                ANEXOS
+                            </h2>
+                            <div class="space-y-4">
+                            <!-- Anexo A -->
+                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F134-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="--TODO--" target="_blank"
+                                    title="F134-IT-1 Inventario de Software Aprobado - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F134-IT-1
+                                    </span>
+                                    Inventario de Software Aprobado
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Software aprobado por tipo, versión, nivel de parche, soporte, repositorio y revisión; repositorios gestionados]</p>
+                            </div>
+
+                            <!-- Anexo B -->
+                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F134-IT-2 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="--TODO--" target="_blank"
+                                    title="F134-IT-2 Solicitud y Evaluación de Software Nuevo - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F134-IT-2
+                                    </span>
+                                    Solicitud y Evaluación de Software Nuevo
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario de solicitud, checklist de evaluación y registro de decisiones]</p>
+                            </div>
+
+                            <!-- Anexo C -->
+                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P134-IT-1 dentro del sitio -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="../../procedimientos/gestion-activos/proc-gestion-software-aprobado.html"
+                                    title="P134-IT-1 Procedimiento de Gestión de Software Aprobado"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P134-IT-1
+                                    </span>
+                                    Procedimiento de Gestión de Software Aprobado
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Etapas: solicitud, evaluación, aprobación, repositorio, instalación, parches, revisión y detección]</p>
+                            </div>
+
+                            <!-- Anexo D -->
+                            <!-- TODO: --TODO-- verificar la ruta de la página MC133-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="../gestion-activos/gestion-servicios-externos.html"
+                                    title="MC133-IT-1 Gestión de Servicios de TI Externos"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-lines text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC133-IT-1
+                                    </span>
+                                    Gestión de Servicios de TI Externos
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Evaluación de servicios en la nube y software que envía información a terceros]</p>
+                            </div>
+                            </div>
+                        </section>
+
+                        <section id="revisiones-del-documento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">19</span>
+                                REVISIONES DEL DOCUMENTO
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rev. N°</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Fecha</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                0</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                1/9/2025</td>
+                                            <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                1</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                2/12/2025</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <!-- --TODO-- verificar ruta de la página MC133-IT-1 -->
+                    <a href="../gestion-activos/gestion-servicios-externos.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Servicios de TI Externos</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título de la página siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+
+                        <nav class="space-y-2">
+                            <a href="#objetivo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETIVO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#referencias-normativas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES</a>
+                            <a href="#responsables"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RESPONSABLES</a>
+                            <a href="#tipos-de-software-gestionados"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                TIPOS DE SOFTWARE GESTIONADOS</a>
+                            <a href="#software-aprobado"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                SOFTWARE APROBADO</a>
+                            <a href="#repositorios-de-software-gestionado"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                REPOSITORIOS DE SOFTWARE</a>
+                            <a href="#versiones-y-niveles-de-parche"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                VERSIONES Y NIVELES DE PARCHE</a>
+                            <a href="#revision-periodica-de-la-aprobacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                REVISIÓN DE LA APROBACIÓN</a>
+                            <a href="#deteccion-de-software-no-autorizado"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                SOFTWARE NO AUTORIZADO</a>
+                            <a href="#cambios-y-nuevas-versiones-de-software-d"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                NUEVAS VERSIONES DE TERCEROS</a>
+                            <a href="#comunicacion-y-concientizacion"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                COMUNICACIÓN Y CONCIENTIZACIÓN</a>
+                            <a href="#registros-y-evidencias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-y-cumplimiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-por-incumplimiento"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16.
+                                SANCIONES POR INCUMPLIMIENTO</a>
+                            <a href="#revision-y-actualizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">17.
+                                REVISIÓN Y ACTUALIZACIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">18.
+                                ANEXOS</a>
+                            <a href="#revisiones-del-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">19.
+                                REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-3">
+                            <button id="report-incident"
+                                class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC134-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>

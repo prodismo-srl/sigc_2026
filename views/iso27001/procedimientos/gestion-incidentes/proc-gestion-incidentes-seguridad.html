@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Gestión de Incidentes de Seguridad de la Información">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Gestión de Incidentes de Seguridad de la Información">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Procedimiento de Gestión de Incidentes de Seguridad de la Información - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
+</head>
+
+<body
+    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+    <!-- Header -->
+    <div id="header-container" data-module="header" class="sticky top-0 z-50"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <!-- --TODO-- completar ruta del procedimiento P161-IT-1 -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Eventos de Seguridad</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Incidentes
+                            de Seguridad de la Información</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: P162-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 2/12/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX (VDA ISA 1.6.2), ISO 27001:2022 (A.5.24–A.5.28)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+
+                        <section id="objetivo" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                                OBJETIVO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Describir las actividades para procesar <strong>sin demoras indebidas</strong> los eventos e incidentes de seguridad reportados en <strong>PRODISMO SRL</strong>: registro, categorización, calificación y priorización, asignación de responsables, respuesta, comunicación interna y externa, reportes oficiales y acciones legales, y cierre con <strong>lecciones aprendidas</strong>, en cumplimiento de la política <strong>MC162-IT-1</strong>, del control <strong>1.6.2</strong> del catálogo <strong>VDA ISA 6 (TISAX)</strong> y de los controles <strong>A.5.24 a A.5.28</strong> de <strong>ISO/IEC 27001:2022</strong>.</p>
+                        </section>
+
+                        <section id="alcance" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                                ALCANCE
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Todos los eventos reportados</strong> por los canales de <strong>P161-IT-1</strong> (correo, formulario <strong>F161-IT-1</strong>, teléfono 24/7) y los informados por proveedores.</li>
+                                <li><strong>Incidentes cibernéticos, físicos y de personal</strong>, en todos los departamentos y sitios de PRODISMO SRL.</li>
+                                <li><strong>El equipo de respuesta</strong>, los Coordinadores de Eventos y las personas involucradas en cada incidente.</li>
+                            </ul>
+                        </section>
+
+                        <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                                REFERENCIAS NORMATIVAS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.24, A.5.25, A.5.26, A.5.27, A.5.28</li>
+                                <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.6.2</strong></li>
+                                <li>Política de Gestión de Incidentes de Seguridad de la Información <strong>MC162-IT-1</strong></li>
+                                <li>Política y procedimiento de Gestión de Eventos de Seguridad <strong>MC161-IT-1 / P161-IT-1</strong> y formularios <strong>F161-IT-1 / F161-IT-2</strong></li>
+                                <li>Políticas <strong>MC122-IT-1</strong> (responsabilidades), <strong>MC124-IT-1</strong> (proveedores) y <strong>MC133-IT-1</strong> (servicios de TI externos)</li>
+                                <li><strong>Ley 26.388</strong> de Delitos Informáticos y <strong>Ley 25.326</strong> de Protección de Datos Personales</li>
+                            </ul>
+                        </section>
+
+                        <section id="definiciones" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                                DEFINICIONES
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Se aplican las definiciones de la política <strong>MC162-IT-1</strong>. En particular:</p>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Categoría:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Cibernético, físico o de personal.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Calificación:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">No relevante para la seguridad, observación, sugerencia de mejora, vulnerabilidad o incidente.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Prioridad:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Crítico, Alto o Medio/Bajo.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Cadena de custodia:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Registro de quién obtuvo, manipuló y conservó cada evidencia.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="roles-y-responsabilidades" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                                ROLES Y RESPONSABILIDADES
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rol</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Titular / suplente</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tareas en el procedimiento</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Coordinador de incidentes (RSI / IT Manager)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Germán Montalbetti / Emiliano Ferrari</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Validar categoría, calificación y prioridad.</li><li>Asignar responsables y coordinar la comunicación.</li><li>Aprobar el cierre y el Informe Post-Incidente.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Respuesta técnica (Administrador de IT / Soporte Seguridad)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Emiliano Ferrari / Germán Montalbetti</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Contención, investigación, erradicación y recuperación de incidentes cibernéticos.</li><li>Preservación de evidencias técnicas.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Legal y personal (Representante Legal / RRHH)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Mariano Nieto / Damián Pedrosa</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Incidentes de personal.</li><li>Notificaciones externas, denuncias y aspectos legales.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Seguridad física (Guardia)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Guardia / Mariano Nieto (RRHH)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Respuesta a incidentes físicos.</li><li>Preservación de grabaciones de CCTV y registros de acceso.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Alta Dirección</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Damián Pedrosa / --TODO--</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Decisiones en incidentes Críticos, notificaciones relevantes y denuncias penales.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Coordinador de Eventos del departamento</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Según MC161-IT-1</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Reportar el evento y aplicar las acciones inmediatas de su área.</li></ul></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="flujo-general" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                                FLUJO GENERAL
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Etapa</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Responsable</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Plazo</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Registro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                1. Recepción y registro</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Soporte Seguridad</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Al recibir el reporte</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                STI / App Help Desk + F162-IT-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                2. Categorización, calificación y priorización</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador de incidentes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Mismo día</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                3. Asignación y notificación</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador de incidentes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Según prioridad</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1 / F161-IT-2</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                4. Contención</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Responsable de la categoría</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico &lt; 4 h · Alto &lt; 24 h</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                5. Investigación y evidencias</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Responsable de la categoría</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Según el caso</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1 + cadena de custodia</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                6. Comunicación y notificación externa</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador / Legal</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Clientes &lt; 24 h</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                7. Erradicación y recuperación</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Responsable de la categoría</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Según el caso</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-1</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                8. Cierre y lecciones aprendidas</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador de incidentes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Informe &lt; 10 días hábiles</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                F162-IT-2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="descripcion-del-procedimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                DESCRIPCIÓN DEL PROCEDIMIENTO
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.1. Etapa 1 – Recepción y Registro</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Soporte Seguridad registra cada reporte en <strong>STI / App Help Desk</strong> y en el <strong>F162-IT-1</strong> con el identificador <strong>INC-AAAA-NNN</strong>, fecha y hora de recepción, quién reportó y por qué canal.</li>
+                                    <li>Envía acuse de recibo a quien reportó e indica que no debe modificar ni apagar los equipos involucrados hasta recibir instrucciones.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.2. Etapa 2 – Categorización, Calificación y Priorización</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>El Coordinador de incidentes determina:
+                                        <ul class="list-circle pl-5 mt-2 space-y-3">
+                                            <li><strong>Categoría:</strong> cibernético, físico o personal (puede ser más de una).</li>
+                                            <li><strong>Calificación:</strong> no relevante, observación, sugerencia de mejora, vulnerabilidad o incidente.</li>
+                                            <li><strong>Prioridad:</strong> Crítico, Alto o Medio/Bajo, según los criterios de <strong>MC162-IT-1</strong>.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Los eventos <strong>no relevantes</strong> se derivan al área que corresponda y se cierran; las <strong>observaciones</strong> y <strong>sugerencias</strong> se registran para seguimiento; las <strong>vulnerabilidades</strong> se tratan según su prioridad (por ejemplo, mediante <strong>P134-IT-1</strong>).</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.3. Etapa 3 – Asignación y Notificación al Responsable</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Se asigna el responsable según la categoría y se lo contacta por el mecanismo que corresponde a la prioridad (sección 9).</li>
+                                    <li>Si no responde a tiempo, se aplica la gestión de ausencias (sección 10).</li>
+                                    <li>Los incidentes Crítico y Alto se escalan con el formulario <strong>F161-IT-2</strong>: Crítico a RSI y Alta Dirección en menos de 1 hora; Alto a RSI e IT Manager en menos de 4 horas.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.4. Etapa 4 – Contención</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Se limita el daño sin destruir evidencias: aislar el equipo de la red (sin apagarlo), bloquear cuentas o accesos, revocar sesiones remotas, restringir el acceso físico.</li>
+                                    <li>Se aplican las acciones inmediatas por departamento de <strong>MC161-IT-1</strong>.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.5. Etapa 5 – Investigación y Preservación de Evidencias</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Se identifican el vector, el alcance y la información afectada (C, I, A).</li>
+                                    <li>Se preservan las evidencias: registros de Microsoft 365, del firewall y de AnyDesk; grabaciones del CCTV; correos originales; copias o imágenes de equipos.</li>
+                                    <li>Para cada evidencia se registra la <strong>cadena de custodia</strong>: descripción, fecha y hora de obtención, quién la obtuvo, valor hash (si es digital), dónde se guarda y cada traspaso.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.6. Etapa 6 – Comunicación y Notificación Externa</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Destinatario</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Cuándo</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Plazo</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Quién comunica</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Alta Dirección</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Incidentes Crítico y Alto</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Crítico &lt; 1 h · Alto &lt; 4 h</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Coordinador de incidentes</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Áreas y personas afectadas</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Cuando deban actuar o estén afectadas</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Según el caso</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Coordinador de incidentes</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Clientes automotrices</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Si se afectan sus datos o lo exige el contrato o NDA</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    &lt; 24 h</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    IT Manager con revisión de Legal</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Proveedores involucrados</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Si el incidente afecta o proviene de su servicio</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Lo antes posible</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Responsable interno del servicio</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    AAIP</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Si se afectan datos personales y corresponde según la normativa</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Según normativa vigente</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Representante Legal</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    ENX / TISAX</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Si lo requiere el marco TISAX o un cliente</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Según requisito</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    IT Manager</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Fiscalía / policía</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Si la Alta Dirección decide denunciar</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Según decisión</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Representante Legal</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.7. Etapa 7 – Erradicación y Recuperación</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Se elimina la causa (malware, cuentas comprometidas, configuraciones inseguras) y se restauran los servicios desde respaldos verificados.</li>
+                                    <li>Se monitorea el entorno para confirmar que el incidente no se repite antes de volver a la operación normal.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.8. Etapa 8 – Cierre y Lecciones Aprendidas</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>El Coordinador de incidentes verifica que se completaron las acciones y cierra el caso en el <strong>F162-IT-1</strong>.</li>
+                                    <li>Para los incidentes Crítico y Alto, se elabora el <strong>Informe Post-Incidente (F162-IT-2)</strong> dentro de los <strong>10 días hábiles</strong>, con causa raíz, lecciones aprendidas y acciones de mejora con responsable y fecha.</li>
+                                    <li>Las acciones de mejora se siguen hasta su cierre y se informan al Comité de Seguridad.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="respuesta-por-tipo-de-incidente" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                RESPUESTA POR TIPO DE INCIDENTE
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tipo de incidente</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Categoría / responsable</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Acciones clave</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Phishing o compromiso de cuenta</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Cibernético / Administrador de IT</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Bloquear la cuenta y cambiar contraseñas.</li><li>Revocar sesiones y revisar reglas de reenvío.</li><li>Bloquear el dominio remitente y avisar al personal.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Malware o ransomware</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Cibernético / IT Manager</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Aislar los equipos afectados sin apagarlos.</li><li>Verificar respaldos y restaurar.</li><li>Evaluar notificación a clientes y denuncia.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Fuga de diseños CATIA/NX o datos de clientes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Cibernético o Personal / IT Manager + Legal</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Revocar accesos y enlaces compartidos.</li><li>Identificar el alcance.</li><li>Notificar al cliente en &lt; 24 h.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Acceso físico no autorizado, robo de equipo o de prototipo</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Físico / Guardia + IT Manager</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Preservar grabaciones y registros de acceso.</li><li>Bloquear y borrar remotamente el equipo robado.</li><li>Evaluar denuncia policial.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Incidente en un servicio de proveedor</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Cibernético / Responsable interno del servicio</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Solicitar informe al proveedor (MC124-IT-1).</li><li>Evaluar el impacto en PRODISMO SRL y en clientes.</li></ul></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Conducta indebida de un empleado</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Personal / RRHH</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                <ul class="list-disc pl-5 space-y-3"><li>Restringir accesos del empleado.</li><li>Preservar evidencias.</li><li>Aplicar la política de sanciones con asesoría legal.</li></ul></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="mecanismos-de-contacto-segun-prioridad" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                MECANISMOS DE CONTACTO SEGÚN PRIORIDAD
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Prioridad</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Tipo de comunicación</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Canal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Medio/Bajo</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                No urgente</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Correo a itprodismo@prodismo.com o ticket en STI / App Help Desk.</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Alto</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Urgente</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Teléfono 24/7 (+54 9 3541 66-9837) y mensaje por Microsoft Teams.</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                Crítico</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Emergencia</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Llamada directa al IT Manager y a la Alta Dirección; si no responden, al suplente.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="gestion-de-ausencias-y-escalamiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                                GESTIÓN DE AUSENCIAS Y ESCALAMIENTO
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rol</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Titular</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Suplente</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Pasar al suplente si no responde en</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Coordinador de incidentes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Germán Montalbetti</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Emiliano Ferrari</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico: 15 min · Alto: 1 h</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Respuesta técnica</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Emiliano Ferrari</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Germán Montalbetti</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico: 15 min · Alto: 1 h</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Legal y personal</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Mariano Nieto</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Damián Pedrosa</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico: 30 min · Alto: 4 h</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Seguridad física</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Guardia</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Mariano Nieto (RRHH)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico: 15 min · Alto: 1 h</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Alta Dirección</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Damián Pedrosa</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                --TODO--</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Crítico: 30 min</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">Si tampoco responde el suplente, se escala al nivel siguiente (RSI o Alta Dirección). Las ausencias programadas se informan con anticipación al suplente y al RSI.</p>
+                        </section>
+
+                        <section id="reportes-oficiales-y-acciones-legales" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                REPORTES OFICIALES Y ACCIONES LEGALES
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Evaluación:</strong> en incidentes Crítico y Alto, el Representante Legal evalúa si hay aspectos potencialmente penales (Ley 26.388: acceso indebido, daño informático, fraude), afecten la confidencialidad, la integridad o la disponibilidad.</li>
+                                <li><strong>Preservación:</strong> antes de cualquier acción, se aseguran las evidencias con cadena de custodia (Etapa 5).</li>
+                                <li><strong>Decisión:</strong> la Alta Dirección decide si presentar la denuncia, con asesoría legal externa (--TODO--).</li>
+                                <li><strong>Presentación:</strong> el Representante Legal presenta la denuncia ante la fiscalía especializada en delitos informáticos o la policía, y registra el número de causa en el <strong>F162-IT-1</strong>.</li>
+                                <li><strong>Comunicación:</strong> los reportes oficiales a clientes, autoridades y ENX se revisan por Legal antes del envío.</li>
+                            </ul>
+                        </section>
+
+                        <section id="plantilla-de-comunicacion-a-clientes" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                                PLANTILLA DE COMUNICACIÓN A CLIENTES
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed"><strong>Asunto:</strong> Notificación de incidente de seguridad de la información – PRODISMO SRL</p>
+                            <p class="text-gray-700 dark:text-gray-300 italic">"Estimado equipo de [Nombre del cliente]: el [fecha] detectamos un incidente de seguridad que afecta [descripción breve de la información afectada]. El incidente fue contenido el [fecha y hora] y continuamos la investigación. Las medidas adoptadas son: [acciones]. Les enviaremos el informe técnico al concluir el análisis. Contacto: Germán Montalbetti, IT Manager (gmontalbetti@prodismo.com). Atentamente, PRODISMO SRL."</p>
+                        </section>
+
+                        <section id="registros-y-evidencias" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                                REGISTROS Y EVIDENCIAS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">13.1. Registros</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>F162-IT-1:</strong> Registro de Incidentes de Seguridad.</li>
+                                    <li><strong>F162-IT-2:</strong> Informe Post-Incidente y Lecciones Aprendidas.</li>
+                                    <li><strong>F161-IT-1 / F161-IT-2:</strong> Reporte y escalamiento de eventos.</li>
+                                    <li>Tickets de STI / App Help Desk, comunicaciones y evidencias con cadena de custodia.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">13.2. Evidencias para TISAX AL2</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Eventos registrados con categoría, calificación y prioridad.</li>
+                                    <li>Respuesta inicial dentro de los plazos y responsables asignados.</li>
+                                    <li>Notificaciones externas realizadas cuando correspondía.</li>
+                                    <li>Informes Post-Incidente con lecciones aprendidas y acciones de mejora cerradas.</li>
+                                    <li>Resultados de simulacros anuales.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="revisiones-del-documento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                                REVISIONES DEL DOCUMENTO
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rev. N°</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Fecha</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                0</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                1/9/2025</td>
+                                            <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                1</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                2/12/2025</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <!-- --TODO-- completar ruta del procedimiento P161-IT-1 -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Eventos de Seguridad</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Floating Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+                        <nav class="space-y-2">
+                            <a href="#objetivo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETIVO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#referencias-normativas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES</a>
+                            <a href="#roles-y-responsabilidades"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                ROLES Y RESPONSABILIDADES</a>
+                            <a href="#flujo-general"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                FLUJO GENERAL</a>
+                            <a href="#descripcion-del-procedimiento"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DESCRIPCIÓN DEL PROCEDIMIENTO</a>
+                            <a href="#respuesta-por-tipo-de-incidente"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                RESPUESTA POR TIPO DE INCIDENTE</a>
+                            <a href="#mecanismos-de-contacto-segun-prioridad"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                MECANISMOS DE CONTACTO</a>
+                            <a href="#gestion-de-ausencias-y-escalamiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                AUSENCIAS Y ESCALAMIENTO</a>
+                            <a href="#reportes-oficiales-y-acciones-legales"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                REPORTES Y ACCIONES LEGALES</a>
+                            <a href="#plantilla-de-comunicacion-a-clientes"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                COMUNICACIÓN A CLIENTES</a>
+                            <a href="#registros-y-evidencias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#revisiones-del-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-3">
+                            <button id="report-incident"
+                                class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P162-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer-container" data-module="footer"></footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>
