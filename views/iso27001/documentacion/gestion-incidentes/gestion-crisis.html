@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="es" data-page-subtitle="Gestión de Crisis">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Prodismo - Política de Gestión de Crisis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
+    <title>Gestión de Crisis - Prodismo SRL</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../../../css/styles.css">
+
+    <!-- Tailwind styles -->
+    <link href="../../../../dist/output.css" rel="stylesheet">
+
+    <!-- Cargar sistema de módulos defer -->
+    <script src="../../../../js/modules.js" defer></script>
+
+</head>
+
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <div id="header-container" data-module="header" class="sticky top-0 z-50"></div>
+
+    <!-- Mobile Sidebar -->
+    <div id="sidebar-container" data-module="sidebar"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <main class="flex-1 max-w-4xl mx-auto">
+                <!-- Navigation Arrows -->
+                <div class="flex justify-between items-center mb-8">
+                    <!-- --TODO-- verificar ruta de la página MC162-IT-1 -->
+                    <a href="../gestion-incidentes/gestion-incidentes-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Incidentes de Seguridad</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título de la página siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <article class="prose prose-lg max-w-none dark:prose-invert">
+                    <!-- Document Header -->
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Crisis</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                            <div class="flex items-center space-x-1">
+                                <i class="fa-solid fa-file-code"></i>
+                                <span>Código: MC163-IT-1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-calendar"></i>
+                                <span>Última revisión: 2/12/2025</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Rev. N°: 1</span>
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cumple: TISAX (VDA ISA 1.6.3), ISO 27001:2022 (A.5.29, A.5.30)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+
+                        <section id="objetivo" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
+                                OBJETIVO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Establecer el marco para que <strong>PRODISMO SRL</strong> pueda <strong>detectar, afrontar y recuperarse</strong> de situaciones de crisis que perturben gravemente sus operaciones clave, mediante una <strong>planificación</strong> adecuada, los <strong>recursos</strong> necesarios, un <strong>Comité de Crisis</strong> con responsabilidades y autoridad definidas, documentadas y asignadas, personal <strong>cualificado</strong>, <strong>procedimientos preestablecidos</strong> de activación y gestión, y <strong>objetivos estratégicos y prioridades</strong> conocidos, manteniendo una <strong>seguridad de la información adecuada</strong> durante la interrupción. Esta política da cumplimiento al control <strong>1.6.3</strong> del catálogo <strong>VDA ISA 6</strong> del marco <strong>TISAX</strong> y al control <strong>A.5.29 (Seguridad de la información durante una interrupción)</strong> del Anexo A de <strong>ISO/IEC 27001:2022</strong>, complementado por el control <strong>A.5.30</strong>.</p>
+                        </section>
+
+                        <section id="alcance" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                                ALCANCE
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Las situaciones de crisis</strong> que afecten gravemente las operaciones clave de PRODISMO SRL, cualquiera sea su origen: ciberataques, siniestros, fallas de infraestructura o de proveedores críticos, pandemias o situaciones sociales excepcionales.</li>
+                                <li><strong>Todas las instalaciones, procesos y sistemas</strong> incluidos en el alcance del SGSI (<strong>MC121-IT-1</strong>).</li>
+                                <li><strong>Todo el personal</strong>, en especial los integrantes del Comité de Crisis, y los <strong>proveedores críticos</strong> que intervengan en la respuesta.</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Los incidentes que no alcanzan el nivel de crisis se gestionan según <strong>MC162-IT-1</strong> y <strong>P162-IT-1</strong>.</p>
+                        </section>
+
+                        <section id="referencias-normativas" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                                REFERENCIAS NORMATIVAS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.29 (Seguridad de la información durante una interrupción); A.5.30 (Preparación de las TIC para la continuidad del negocio)</li>
+                                <li><strong>ISO/IEC 27002:2022</strong> - Apartados 5.29 y 5.30, guía de implementación de los controles</li>
+                                <li><strong>ISO 22301</strong> (Sistemas de gestión de la continuidad del negocio) e <strong>ISO 22361</strong> (Gestión de crisis) - referencias</li>
+                                <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.6.3</strong> (Gestión de crisis)</li>
+                                <li>Procedimiento de Gestión de Crisis <strong>P163-IT-1</strong></li>
+                                <li>Política y procedimiento de Gestión de Incidentes de Seguridad de la Información <strong>MC162-IT-1 / P162-IT-1</strong></li>
+                                <li>Política de Gestión de Eventos de Seguridad por Departamento <strong>MC161-IT-1</strong></li>
+                                <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
+                                <li>Políticas de Responsabilidades con Proveedores <strong>MC124-IT-1</strong> y de Gestión de Servicios de TI Externos <strong>MC133-IT-1</strong></li>
+                            </ul>
+                        </section>
+
+                        <section id="definiciones" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                                DEFINICIONES
+                            </h2>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Crisis:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Situación excepcional que perturba gravemente las operaciones clave de la empresa y requiere decisiones rápidas fuera de la operación normal.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Gestión de crisis:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Modo de gestión excepcional, con estructuras, responsabilidades y procedimientos preestablecidos, para afrontar la crisis y recuperarse lo antes posible.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Comité de Crisis:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Equipo designado y aprobado por la Alta Dirección para dirigir la respuesta a una crisis.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Coordinador de Crisis:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Persona que coordina la gestión operativa de la crisis, consolida la información y asegura el registro de las decisiones.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Activación:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Decisión formal de pasar al modo de gestión de crisis.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Intensificación:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Aumento del nivel de crisis y de los recursos movilizados cuando la situación empeora.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Indicador de crisis:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Señal que indica la existencia o inminencia de una crisis.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Proceso esencial:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Proceso de negocio necesario para la supervivencia de la empresa y el cumplimiento con sus clientes.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Tiempo objetivo de recuperación (RTO):</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Tiempo máximo aceptable para restablecer un proceso o sistema después de una interrupción.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Procedimiento operativo de emergencia:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Forma alternativa y temporal de operar mientras no están disponibles los recursos habituales.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="responsables" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                                RESPONSABLES
+                            </h2>
+                            <div class="space-y-4">
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Aprobar esta política, el Plan de Crisis (<strong>F163-IT-1</strong>) y la composición del Comité de Crisis.</li>
+                                        <li>Presidir el Comité de Crisis y tomar las decisiones estratégicas y excepcionales.</li>
+                                        <li>Asegurar los recursos humanos, técnicos y financieros para la gestión de crisis.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Coordinador de Crisis (IT Manager / RSI)</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Mantener el Plan de Crisis y proponer la activación o intensificación.</li>
+                                        <li>Coordinar la respuesta, consolidar la información y registrar las decisiones (<strong>F163-IT-2</strong>).</li>
+                                        <li>Organizar las capacitaciones y los ejercicios.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Responsable Técnico (Administrador de IT)</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Ejecutar la contención y recuperación de los sistemas de TI y la conmutación a recursos alternativos.</li>
+                                        <li>Reemplazar al Coordinador de Crisis en su ausencia.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Integrantes Convocados según el Escenario</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li><strong>RRHH / Legal:</strong> personas, comunicación interna, aspectos legales y relación con la ART.</li>
+                                        <li><strong>Producción, Administración / Finanzas y Seguridad corporativa (Guardia):</strong> continuidad de su área, recursos y seguridad física.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Todos los Empleados</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Reportar las señales de crisis, seguir las instrucciones del Comité y priorizar siempre la vida y la salud.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="objetivos-estrategicos-y-prioridades-en" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                                OBJETIVOS ESTRATÉGICOS Y PRIORIDADES EN CRISIS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.1. Orden de Prioridades</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Prioridad</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Objetivo</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Ejemplos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    1</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Proteger la vida y la salud de las personas (prioridad ética).</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Evacuación.</li><li>Asistencia médica.</li><li>Comunicación con las familias.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    2</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Contener el daño y proteger la información de clientes y los prototipos.</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Aislar sistemas comprometidos.</li><li>Resguardar diseños CATIA/NX y piezas.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    3</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Mantener o restablecer los procesos esenciales.</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Comunicación con clientes automotrices.</li><li>Producción y entregas comprometidas.</li><li>ERP SIP4.0, Microsoft 365, pago de haberes.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    4</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Mantener una seguridad de la información adecuada durante y después de la crisis.</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Excepciones de seguridad solo autorizadas y temporales.</li><li>Restauración segura.</li></ul></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Procesos Esenciales y Tiempos Objetivo de Recuperación</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Proceso esencial</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Recursos críticos</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    RTO objetivo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Comunicación con clientes y proveedores</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Microsoft 365 (correo, Teams), Internet (Airsat / Batcom), celulares</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    24 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Gestión comercial, administrativa y de producción</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    ERP SIP / SIP4.0 (Enter-Geminus), red interna (Armanet)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    24 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Ingeniería y diseño</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    CATIA, NX, AutoForm, Cad-Cam, estaciones CAD, servidores</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    48 horas</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Producción y entregas comprometidas</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Planta, máquinas CNC, líneas de ensamble, energía (EPEC)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Pago de haberes</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    TuLegajo.com, SIP4.0, banca</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Antes de la fecha de pago</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">Los objetivos y prioridades se comunican a los integrantes del Comité de Crisis y a los responsables de área.</p>
+                            </div>
+                        </section>
+
+                        <section id="deteccion-de-situaciones-de-crisis" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                DETECCIÓN DE SITUACIONES DE CRISIS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Métodos de Detección</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Escalamiento de incidentes:</strong> todo incidente Crítico (<strong>MC162-IT-1</strong>) se evalúa como posible crisis.</li>
+                                    <li><strong>Monitoreo de servicios:</strong> alertas de disponibilidad de Internet, red, servidores, Microsoft 365 y SIP4.0.</li>
+                                    <li><strong>Avisos de proveedores críticos:</strong> Airsat S.A., Batcom, Armanet S.A., Microsoft / Telecom Argentina, Enter-Geminus.</li>
+                                    <li><strong>Avisos externos:</strong> cortes programados o emergencias de EPEC, alertas de autoridades y de clientes.</li>
+                                    <li><strong>Reportes de la Guardia y del personal.</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.2. Indicadores Generales de Crisis</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Riesgo para la vida o la salud de las personas.</li>
+                                    <li>Interrupción de un proceso esencial que supera o superará su tiempo objetivo de recuperación.</li>
+                                    <li>Afectación simultánea de varias áreas o de la planta completa.</li>
+                                    <li>Compromiso masivo de información de clientes o de prototipos.</li>
+                                    <li>Impacto contractual, financiero o reputacional significativo (por ejemplo, incumplimiento de entregas a un cliente automotriz).</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.3. Crisis Específicas Previsibles</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Escenario</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Indicadores típicos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Ransomware o ciberataque mayor</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Archivos cifrados, servidores caídos, mensaje de rescate.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Caída prolongada de Internet o de Microsoft 365</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Sin conexión en enlace principal (Airsat) y de respaldo (Batcom); sin correo ni Teams.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Incendio o siniestro en la planta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Alarma, humo, daño en instalaciones.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Corte prolongado de energía</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Corte de EPEC sin fecha de restablecimiento.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Pandemia o ausentismo masivo</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Más del 30% del personal ausente o restricciones de las autoridades.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Conflicto gremial o social</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Bloqueo de accesos, paro, imposibilidad de operar.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Robo o sabotaje físico</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Faltantes de equipos, prototipos o daño intencional.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Falla de un proveedor crítico</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Airsat S.A., Batcom o Armanet S.A. sin servicio o sin respuesta.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="comite-de-crisis" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                COMITÉ DE CRISIS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.1. Compromiso de la Dirección</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>La Alta Dirección aprueba el Comité de Crisis, lo preside y asume la responsabilidad final de las decisiones durante la crisis.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.2. Composición</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Función</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Titular</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Suplente</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Rol en la crisis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Dirección (preside)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Damián Pedrosa</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Decisiones estratégicas y excepcionales; vocero externo.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Coordinación de crisis, seguridad de la información y TI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Coordinación, información, registro y comunicación con proveedores.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    TI / ciberseguridad</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Respuesta técnica y recuperación de sistemas.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    RRHH / Legal</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Mariano Nieto</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Damián Pedrosa</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Personas, comunicación interna, aspectos legales, ART.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Administración / Finanzas</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Esteban Manzoni (a confirmar)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Recursos financieros, pagos, ERP SIP4.0.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Producción / operaciones</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    --TODO--</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Continuidad de producción y entregas.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Seguridad corporativa y emergencias</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Guardia</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Mariano Nieto (RRHH)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Seguridad física, evacuación, servicios de emergencia.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.3. Estructura y Funciones</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Núcleo operativo:</strong> Coordinador de Crisis y Responsable Técnico (Germán Montalbetti y Emiliano Ferrari). Se activa siempre y lleva la gestión diaria de la crisis.</li>
+                                    <li><strong>Comité de decisión:</strong> Dirección y núcleo operativo. Toma las decisiones estratégicas.</li>
+                                    <li><strong>Integrantes convocados:</strong> RRHH / Legal, Administración / Finanzas, Producción y Guardia, según el escenario.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.4. Competencias de los Integrantes</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Conocimiento de esta política, del procedimiento <strong>P163-IT-1</strong> y del Plan de Crisis.</li>
+                                    <li>Participación en al menos un ejercicio de crisis por año.</li>
+                                    <li>Competencias técnicas de su función (por ejemplo, restauración de sistemas para TI, primeros auxilios y evacuación para la Guardia).</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.5. Expectativas y Autoridad</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>El Comité de Crisis está autorizado a: desconectar sistemas o redes, suspender actividades o turnos, ordenar trabajo remoto, contratar servicios de emergencia y aprobar gastos de emergencia hasta un monto de --TODO--.</li>
+                                    <li>Se espera que los integrantes estén localizables, respondan dentro de los plazos de <strong>P163-IT-1</strong> y mantengan la confidencialidad.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.6. Toma de Decisiones</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Las decisiones las toma el Comité de decisión; ante empate o urgencia decide la Dirección.</li>
+                                    <li>Si la Dirección no está disponible, el Coordinador de Crisis puede tomar las decisiones urgentes necesarias para proteger la vida, la salud y la información, e informa a la Dirección a la mayor brevedad.</li>
+                                    <li>Toda decisión se registra en la bitácora del <strong>F163-IT-2</strong> con fecha, hora y responsable.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="activacion-e-intensificacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                ACTIVACIÓN E INTENSIFICACIÓN
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Nivel</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Criterio</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Quién activa</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Movilización</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                1 – Alerta</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Incidente Crítico o indicador de posible crisis</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador de Crisis</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Núcleo operativo; se informa a la Dirección.</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                2 – Crisis</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Se cumple al menos un indicador general (sección 7.2)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Coordinador o Dirección</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Comité de decisión e integrantes según escenario.</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                3 – Crisis mayor</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Riesgo para la vida, planta inoperable o impacto grave en clientes</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Dirección</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Comité completo, recursos externos y autoridades.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Cualquier integrante puede proponer la activación; ante riesgo para la vida, cualquier persona llama primero a los servicios de emergencia.</li>
+                                <li>La desactivación la decide la Dirección cuando se restablecen los procesos esenciales y no hay riesgos activos.</li>
+                            </ul>
+                        </section>
+
+                        <section id="politicas-y-procedimientos-de-crisis" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                                POLÍTICAS Y PROCEDIMIENTOS DE CRISIS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">10.1. Autoridades y Decisiones Excepcionales</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Durante la crisis, las decisiones del Comité prevalecen sobre los procesos habituales de aprobación.</li>
+                                    <li>Si ningún integrante del Comité está disponible, el responsable de área presente actúa para proteger a las personas y los activos, e informa en cuanto sea posible.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">10.2. Medios de Comunicación Principales y Alternativos</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Medio principal</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Medio alternativo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Microsoft Teams y correo corporativo</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Grupo de WhatsApp empresarial y grupo del Comité de Crisis</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Teléfono corporativo / línea 24/7 (+54 9 3541 66-9837)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Celulares personales de los integrantes (lista impresa en el kit de crisis)</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Internet principal (Airsat S.A.)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Internet de respaldo (Batcom) y datos móviles</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Reuniones en oficina</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Punto de reunión alternativo: --TODO--</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">10.3. Procedimientos Operativos de Emergencia</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Evacuación de la planta y oficinas según el plan de Seguridad e Higiene.</li>
+                                    <li>Desconexión de red ante ransomware o ataque en curso.</li>
+                                    <li>Operación manual temporal sin ERP (pedidos, remitos y registros en planillas) y carga posterior en SIP4.0.</li>
+                                    <li>Trabajo remoto del personal administrativo y de ingeniería cuando la planta no esté disponible.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">10.4. Estructuras Organizativas, Funciones y Reportes Excepcionales</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Toda la información de la crisis se centraliza en el Coordinador de Crisis.</li>
+                                    <li>Los responsables de área reportan al Coordinador según la frecuencia definida por el Comité (por ejemplo, cada 4 horas en Nivel 2 y cada 2 horas en Nivel 3).</li>
+                                    <li>El Comité puede asignar funciones temporales distintas de las habituales, que se registran en la bitácora.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">10.5. Herramientas Excepcionales</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Kit de crisis:</strong> lista impresa de contactos, credenciales de emergencia en sobre cerrado, notebook de contingencia, copias de respaldo fuera de línea (NAS) y planillas de operación manual.</li>
+                                    <li>El contenido del kit se verifica semestralmente (<strong>F163-IT-1</strong>).</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="recursos-para-la-gestion-de-crisis" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                RECURSOS PARA LA GESTIÓN DE CRISIS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Humanos:</strong> Comité de Crisis con titulares y suplentes (sección 8.2).</li>
+                                <li><strong>Tecnológicos:</strong> Internet de respaldo, copias de respaldo fuera de línea, kit de crisis y acceso remoto.</li>
+                                <li><strong>Financieros:</strong> fondo o autorización de gastos de emergencia de --TODO--.</li>
+                                <li><strong>Contactos externos:</strong> servicios de emergencia (911, Bomberos 100, Emergencias médicas 107), EPEC, Airsat S.A., Batcom, Armanet S.A., Microsoft / Telecom Argentina, Enter-Geminus, ART, aseguradora y asesoría legal, registrados en el <strong>F163-IT-1</strong>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="seguridad-de-la-informacion-durante-la-c" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                                SEGURIDAD DE LA INFORMACIÓN DURANTE LA CRISIS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Los controles de seguridad se mantienen durante la crisis; cualquier excepción (por ejemplo, uso de equipos o canales alternativos) debe ser <strong>autorizada por el Coordinador</strong>, ser <strong>temporal</strong> y quedar <strong>registrada</strong>.</li>
+                                <li>La información de clientes y los prototipos se protegen con la misma prioridad que los procesos esenciales.</li>
+                                <li>Las evidencias de incidentes se preservan según <strong>MC162-IT-1</strong>.</li>
+                                <li>Al finalizar la crisis se revierten las excepciones y se verifica la seguridad de los sistemas restaurados.</li>
+                            </ul>
+                        </section>
+
+                        <section id="comunicacion-en-crisis" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                                COMUNICACIÓN EN CRISIS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Vocero único:</strong> la Dirección (suplente: Coordinador de Crisis). Nadie más comunica la crisis a terceros.</li>
+                                <li><strong>Personal:</strong> información periódica por el grupo de WhatsApp empresarial, coordinada por RRHH.</li>
+                                <li><strong>Clientes automotrices:</strong> comunicación dentro de las <strong>24 horas</strong> cuando la crisis afecte entregas o información del cliente.</li>
+                                <li><strong>Proveedores y autoridades:</strong> según el escenario y los requisitos de <strong>MC162-IT-1</strong>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="recuperacion-y-lecciones-aprendidas" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
+                                RECUPERACIÓN Y LECCIONES APRENDIDAS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>La recuperación sigue el orden de prioridades de la sección 6 y los tiempos objetivo de recuperación.</li>
+                                <li>Después de cada crisis o ejercicio se elabora un análisis de lecciones aprendidas dentro de los <strong>10 días hábiles</strong>, registrado en el <strong>F163-IT-2</strong>.</li>
+                                <li>Las acciones de mejora actualizan el Plan de Crisis, esta política y el procedimiento.</li>
+                            </ul>
+                        </section>
+
+                        <section id="capacitacion-y-ejercicios" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                CAPACITACIÓN Y EJERCICIOS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Prueba del árbol de llamadas</strong> (contacto con todos los integrantes): semestral.</li>
+                                <li><strong>Ejercicio de escritorio</strong> sobre un escenario previsible: anual.</li>
+                                <li><strong>Prueba técnica de recuperación</strong> (restauración de backups y conmutación a Internet de respaldo): anual.</li>
+                                <li>Los resultados se registran en el <strong>F163-IT-1</strong> y las mejoras en el <strong>F163-IT-2</strong>.</li>
+                            </ul>
+                        </section>
+
+                        <section id="registros-y-evidencias" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                                REGISTROS Y EVIDENCIAS
+                            </h2>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">16.1. Registros Obligatorios</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>F163-IT-1:</strong> Plan de Crisis (comité, contactos, procesos esenciales, escenarios, recursos y ejercicios).</li>
+                                    <li><strong>F163-IT-2:</strong> Registro de Activación de Crisis, Bitácora y Lecciones Aprendidas.</li>
+                                    <li><strong>Aprobación del Comité de Crisis</strong> por la Alta Dirección.</li>
+                                    <li><strong>Registros de capacitación y ejercicios.</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">16.2. Retención de Registros</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Registros de crisis, bitácoras y lecciones aprendidas:</strong> 5 años.</li>
+                                    <li><strong>Plan de Crisis:</strong> versión vigente y versiones de los últimos 3 años.</li>
+                                    <li><strong>Registros de ejercicios:</strong> 3 años.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="monitoreo-y-cumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">17</span>
+                                MONITOREO Y CUMPLIMIENTO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Indicadores de desempeño:</strong>
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li>Integrantes del Comité con titular y suplente asignados: Objetivo 100%.</li>
+                                        <li>Ejercicios realizados según el programa: Objetivo 100%.</li>
+                                        <li>Integrantes contactados en la prueba del árbol de llamadas en menos de 1 hora: Objetivo &gt; 90%.</li>
+                                        <li>Acciones de mejora de crisis y ejercicios cerradas en plazo: Objetivo &gt; 90%.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="sanciones-por-incumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">18</span>
+                                SANCIONES POR INCUMPLIMIENTO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">El incumplimiento de esta política, como no seguir las instrucciones del Comité de Crisis durante una emergencia o comunicar información sin autorización, podrá dar lugar a acciones disciplinarias de acuerdo con la política de sanciones de la empresa, que pueden incluir desde amonestaciones hasta la desvinculación laboral, dependiendo de la gravedad de la infracción.</p>
+                        </section>
+
+                        <section id="revision-y-actualizacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">19</span>
+                                REVISIÓN Y ACTUALIZACIÓN
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Revisión anual</strong> de esta política, del procedimiento P163-IT-1 y del Plan de Crisis.</li>
+                                <li><strong>Actualización inmediata</strong> después de una crisis, de un ejercicio o ante cambios en el personal clave, los proveedores críticos o los procesos esenciales.</li>
+                                <li><strong>Responsable de la revisión:</strong> Coordinador de Crisis, con aprobación de la Alta Dirección.</li>
+                            </ul>
+                        </section>
+
+                        <section id="anexos" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">20</span>
+                                ANEXOS
+                            </h2>
+                            <div class="space-y-4">
+                            <!-- Anexo A -->
+                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F163-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="--TODO--" target="_blank"
+                                    title="F163-IT-1 Plan de Crisis - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F163-IT-1
+                                    </span>
+                                    Plan de Crisis
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Comité de Crisis, contactos de emergencia, procesos esenciales, escenarios, recursos, kit de crisis y ejercicios]</p>
+                            </div>
+
+                            <!-- Anexo B -->
+                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F163-IT-2 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="--TODO--" target="_blank"
+                                    title="F163-IT-2 Registro de Activación de Crisis, Bitácora y Lecciones Aprendidas - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F163-IT-2
+                                    </span>
+                                    Registro de Activación de Crisis, Bitácora y Lecciones Aprendidas
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Activaciones, decisiones, acciones y mejoras]</p>
+                            </div>
+
+                            <!-- Anexo C -->
+                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P163-IT-1 dentro del sitio -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="../../procedimientos/gestion-incidentes/proc-gestion-crisis.html"
+                                    title="P163-IT-1 Procedimiento de Gestión de Crisis"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P163-IT-1
+                                    </span>
+                                    Procedimiento de Gestión de Crisis
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Detección, activación, respuesta, continuidad, recuperación y desactivación]</p>
+                            </div>
+
+                            <!-- Anexo D -->
+                            <!-- TODO: --TODO-- verificar la ruta de la página MC162-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="../gestion-incidentes/gestion-incidentes-seguridad.html"
+                                    title="MC162-IT-1 Gestión de Incidentes de Seguridad de la Información"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-lines text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC162-IT-1
+                                    </span>
+                                    Gestión de Incidentes de Seguridad de la Información (y P162-IT-1)
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Gestión de incidentes y escalamiento a crisis]</p>
+                            </div>
+                            </div>
+                        </section>
+
+                        <section id="revisiones-del-documento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">21</span>
+                                REVISIONES DEL DOCUMENTO
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead class="bg-gray-50 dark:bg-gray-800">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Rev. N°</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Fecha</th>
+                                            <th
+                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                Descripción</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                        <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                0</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                1/9/2025</td>
+                                            <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                1</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                2/12/2025</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                </article>
+
+                <!-- Navigation Arrows Bottom -->
+                <div class="flex justify-between items-center mt-8">
+                    <!-- --TODO-- verificar ruta de la página MC162-IT-1 -->
+                    <a href="../gestion-incidentes/gestion-incidentes-seguridad.html"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        <span>Anterior: Gestión de Incidentes de Seguridad</span>
+                    </a>
+                    <!-- --TODO-- completar ruta y título de la página siguiente -->
+                    <a href="--TODO--"
+                        class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
+                        <span>Siguiente: --TODO--</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Table of Contents -->
+            <aside class="lg:w-80 xl:w-90 flex-shrink-0">
+                <div class="sticky top-24">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-list-ul mr-2 text-primary-600"></i>
+                            Tabla de Contenidos
+                        </h3>
+
+                        <nav class="space-y-2">
+                            <a href="#objetivo"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                OBJETIVO</a>
+                            <a href="#alcance"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                ALCANCE</a>
+                            <a href="#referencias-normativas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES</a>
+                            <a href="#responsables"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RESPONSABLES</a>
+                            <a href="#objetivos-estrategicos-y-prioridades-en"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                OBJETIVOS Y PRIORIDADES</a>
+                            <a href="#deteccion-de-situaciones-de-crisis"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                DETECCIÓN DE CRISIS</a>
+                            <a href="#comite-de-crisis"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                COMITÉ DE CRISIS</a>
+                            <a href="#activacion-e-intensificacion"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                ACTIVACIÓN E INTENSIFICACIÓN</a>
+                            <a href="#politicas-y-procedimientos-de-crisis"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                PROCEDIMIENTOS DE CRISIS</a>
+                            <a href="#recursos-para-la-gestion-de-crisis"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                RECURSOS</a>
+                            <a href="#seguridad-de-la-informacion-durante-la-c"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                SEGURIDAD DE LA INFORMACIÓN</a>
+                            <a href="#comunicacion-en-crisis"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                COMUNICACIÓN EN CRISIS</a>
+                            <a href="#recuperacion-y-lecciones-aprendidas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                RECUPERACIÓN Y LECCIONES</a>
+                            <a href="#capacitacion-y-ejercicios"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                CAPACITACIÓN Y EJERCICIOS</a>
+                            <a href="#registros-y-evidencias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-y-cumplimiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">17.
+                                MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-por-incumplimiento"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">18.
+                                SANCIONES POR INCUMPLIMIENTO</a>
+                            <a href="#revision-y-actualizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">19.
+                                REVISIÓN Y ACTUALIZACIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">20.
+                                ANEXOS</a>
+                            <a href="#revisiones-del-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">21.
+                                REVISIONES DEL DOCUMENTO</a>
+                        </nav>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                            <i class="fas fa-bolt mr-2 text-primary-600"></i>
+                            Acciones Rápidas
+                        </h4>
+                        <div class="space-y-3">
+                            <button id="report-incident"
+                                class="w-full text-left px-3 py-2 text-sm bg-red-50 text-red-700 rounded-lg hover:bg-red-100 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 transition-colors flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Reportar incidente
+                            </button>
+                            <button id="contact-support"
+                                class="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 dark:bg-blue-900/20 dark:text-blue-400 dark:hover:bg-blue-900/30 transition-colors flex items-center">
+                                <i class="fas fa-headset mr-2"></i>
+                                Contactar soporte
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Informacion del Documento -->
+                    <div
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <i class="fas fa-info-circle mr-2 text-primary-600"></i>
+                            Información del Documento
+                        </h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Código:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC163-IT-1</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Estado:</span>
+                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" data-module="footer"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
+</body>
+
+</html>
