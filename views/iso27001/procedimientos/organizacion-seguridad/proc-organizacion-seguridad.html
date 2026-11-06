@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Organización de la Seguridad">
+    <meta name="description" content="Prodismo - Procedimiento de Organización de la Seguridad de la Información">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
     <title>Organización de la Seguridad - Prodismo SRL</title>
@@ -49,7 +49,7 @@
                     <a href="../politicas-seguridad/proc-seguridad-informacion.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Política de Seguridad</span>
+                        <span>Anterior: Procedimiento de Seguridad de la Información</span>
                     </a>
                     <a href="../organizacion-seguridad/proc-responsables-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -62,7 +62,7 @@
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
                         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Organización
-                            de la Seguridad</h1>
+                            de la Seguridad de la Información</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -71,20 +71,20 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 13/1/2026</span>
+                                <span>Última revisión: 06/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 1.2.1), ISO 27001:2022 (4, 5.1, 6.1.3, 9)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
+                    <!-- 1. OBJETIVO -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
@@ -92,248 +92,374 @@
                             OBJETIVO
                         </h2>
                         <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Este esquema garantiza que el <strong>Sistema de Gestión de Seguridad de la Información
-                                (SGSI)</strong> esté integrado en la estrategia organizacional, con roles definidos,
-                            controles adecuados y revisiones periódicas, cumpliendo con los requisitos de
-                            <strong>ISO/IEC 27001:2022, TISAX</strong> y requisitos de clientes automotrices.
+                            Establecer las actividades, responsables y registros necesarios para establecer, aprobar,
+                            controlar y revisar el <strong>Sistema de Gestión de la Seguridad de la Información
+                            (SGSI)</strong> de <strong>PRODISMO SRL</strong>, aplicando lo definido en la política
+                            <strong>MC121-IT-1 Organización de la Seguridad de la Información</strong>, de acuerdo con
+                            <strong>ISO/IEC 27001:2022</strong> y el control 1.2.1 del catálogo <strong>VDA ISA</strong>
+                            (<strong>TISAX</strong>).
                         </p>
                     </section>
 
-                    <section id="alcance-sgsi" class="mb-12 scroll-mt-20">
+                    <!-- 2. ALCANCE -->
+                    <section id="alcance" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            DEFINICIÓN DEL ALCANCE DEL SGSI (ENFOQUE IT)
+                            ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Documentar:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Límites físicos y lógicos: Sistemas de IT (redes, servidores, endpoints, iCloud), datos
-                                gestionados por IT.</li>
-                            <li>Exclusiones explícitas: Equipos operativos fuera de IT (ej.: maquinaria de producción).
-                            </li>
-                            <li>Partes interesadas: Empleados de IT, proveedores con acceso a sistemas.</li>
-                        </ul>
-                        <div
-                            class="mt-4 p-4 bg-primary-50 rounded-lg dark:bg-primary-800 border-l-4 border-primary-500">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><i
-                                    class="fa-solid fa-file-export mr-2"></i> Salida:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">Documento "Alcance del <strong>SGSI</strong>"
-                                (aprobado por la dirección).</p>
-                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Aplica al SGSI definido en la política MC121-IT-1 §8: PRODISMO SRL, ubicación PRODISMO CORDOBA
+                            (Avenida Japón 2230, X5019BHW Córdoba, Argentina), alcance TISAX S36HF8, objetivos de
+                            evaluación Confidential y High Availability, nivel AL2.
+                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mt-4 font-medium">Excluye: equipos operativos de planta
+                            fuera del control de IT (ej.: máquinas CNC y maquinaria de producción).</p>
                     </section>
 
-                    <section id="requisitos-sgsi" class="mb-12 scroll-mt-20">
+                    <!-- 3. REFERENCIAS -->
+                    <section id="referencias" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            REQUISITOS DEL SGSI
+                            REFERENCIAS
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Basados en:</p>
                         <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li><strong>TISAX</strong> (requisitos del catálogo VDA ISA).</li>
-                            <li>Necesidades del negocio: Continuidad de servicios críticos (ej.: ERP, correo, MS Teams).
-                            </li>
-                            <li>Legales: GDPR (cuando aplique), normativas de clientes automotrices.</li>
+                            <li><a href="../../documentacion/organizacion-seguridad/organizacion-seguridad.html" class="text-blue-700 dark:text-blue-300"><strong>MC121-IT-1</strong>
+                                    Organización de la Seguridad de la Información</a> (documento de nivel superior)</li>
+                            <li><a href="../../documentacion/politicas-seguridad/politica-seguridad.html" class="text-blue-700 dark:text-blue-300"><strong>MC111-IT-1</strong>
+                                    Política de Seguridad de la Información</a></li>
+                            <li><a href="../../documentacion/organizacion-seguridad/responsabilidad-organizacion-seguridad.html" class="text-blue-700 dark:text-blue-300"><strong>MC122-IT-1</strong>
+                                    Responsabilidades de la Organización de la Seguridad de la Información</a></li>
+                            <li><strong>P121-IT-2</strong> Organizar Responsabilidades de Seguridad de la Información</li>
+                            <li><strong>F121-IT-1</strong> Declaración de Aplicabilidad (DoA)</li>
+                            <li><strong>F121-IT-2</strong> Registro de Contexto y Partes Interesadas</li>
+                            <li><strong>M141-IT-1</strong> Matriz de Riesgos</li>
+                            <li>Autoevaluación del catálogo <strong>VDA ISA 6</strong></li>
+                            <li><strong>ISO/IEC 27001:2022</strong>: cláusulas 4, 5.1, 6.1.3, 6.2, 9.1, 9.2, 9.3 y 10</li>
                         </ul>
-                        <div
-                            class="mt-4 p-4 bg-primary-50 rounded-lg dark:bg-primary-800 border-l-4 border-primary-500">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><i
-                                    class="fa-solid fa-file-export mr-2"></i> Salida:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">Lista de requisitos legales, contractuales y de
-                                negocio.</p>
-                        </div>
                     </section>
 
-                    <section id="aprobacion-sgsi" class="mb-12 scroll-mt-20">
+                    <!-- 4. DEFINICIONES -->
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            APROBACIÓN DEL SGSI POR LA DIRECCIÓN
+                            DEFINICIONES
                         </h2>
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Acciones clave:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Carta de compromiso: Firmada por la dirección, asignando recursos y
-                                    responsabilidades.</li>
-                                <li>Designación de roles:
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
-                                        <li>Responsable del <strong>SGSI</strong> (ej.: IT Manager o líder de IT).</li>
-                                        <li>Equipo de seguridad: Personal dedicado o funciones asignadas.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-4 bg-primary-50 rounded-lg dark:bg-primary-800 border-l-4 border-primary-500">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><i
-                                    class="fa-solid fa-file-export mr-2"></i> Salida:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">Acta de aprobación inicial del
-                                <strong>SGSI</strong>.
-                            </p>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                            <li><strong>SGSI:</strong> Sistema de Gestión de la Seguridad de la Información.</li>
+                            <li><strong>RSI:</strong> Responsable de Seguridad de la Información (IT Manager).</li>
+                            <li><strong>DoA / SoA:</strong> Declaración de Aplicabilidad de los controles del Anexo A de
+                                ISO/IEC 27001:2022.</li>
+                            <li><strong>VDA ISA:</strong> catálogo de controles de la VDA usado en la evaluación TISAX.</li>
+                            <li><strong>KPI:</strong> indicador de desempeño del SGSI.</li>
+                            <li><strong>Revisión por la dirección:</strong> evaluación formal y periódica de la eficacia
+                                del SGSI por la Alta Dirección.</li>
+                        </ul>
                     </section>
 
-                    <section id="controles-sgsi" class="mb-12 scroll-mt-20">
+                    <!-- 5. RESPONSABILIDADES -->
+                    <section id="responsabilidades" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            CONTROLES DEL SGSI (ALINEADOS CON TISAX)
+                            RESPONSABILIDADES
                         </h2>
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Metodología:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li>Seleccionar controles del catálogo VDA ISA o Anexo A de
-                                    <strong>ISO27001:2021</strong>:
-                                    <ul class="list-disc pl-6 mt-2 space-y-2">
-                                        <li><strong>A.5.1 - A.5.8</strong>: Controles Organizacionales.</li>
-                                        <li><strong>A.5.9 - A.5.14</strong>: Control de Activos.</li>
-                                        <li><strong>A.5.15 - A.5.18</strong>: Control de Accesos.</li>
-                                        <li><strong>A.5.19 - A.5.23</strong>: Proveedores.</li>
-                                        <li><strong>A.5.24 - A.5.30</strong>: Gestión de Incidentes.</li>
-                                        <li><strong>A.5.31 - A.5.37</strong>: Controles de Cumplimiento Legal y
-                                            Contractual.</li>
-                                        <li><strong>A.6.1 - A.6.8</strong>: Controles de personas.</li>
-                                        <li><strong>A.7.1 - A.7.14</strong>: Controles Físicos.</li>
-                                        <li><strong>A.8.1 - A.8.6</strong>: Controles Tecnológicos.</li>
-                                        <li><strong>A.8.15 - A.8.19</strong>: Controles de Sistemas.</li>
-                                        <li><strong>A.8.20 - A.8.24</strong>: Controles de Redes.</li>
-                                        <li><strong>A.8.25 - A.8.34</strong>: Controles de Desarrollos.</li>
-                                    </ul>
-                                </li>
-                                <li><a class="text-blue-600 p-2 m-2 rounded-lg hover:bg-blue-400 hover:text-white text-decoration-none dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-white"
-                                        target="_blank"
-                                        href="https://prodismotemp.sharepoint.com/:f:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022?csf=1&web=1&e=X1ZKcc"><strong><i
-                                                class="fa-solid fa-route mr-2 text-blue-600 hover:text-white dark:hover:text-white"></i>
-                                            F121-IT-1 Declaración de Aplicabilidad (DoA)</strong></a>
-                                    <p class="text-gray-700 dark:text-gray-300 mt-2">Controles implementados/no
-                                        implementados con justificación.</p>
-                                </li>
-
-                            </ol>
-                        </div>
-                        <div class="p-4 bg-primary-50 rounded-lg dark:bg-primary-800 border-l-4 border-primary-500">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><i
-                                    class="fa-solid fa-file-export mr-2"></i> Salida:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">Declaración de Aplicabilidad (DoA) y matriz de
-                                controles.</p>
-                        </div>
-                    </section>
-
-                    <section id="monitoreo-revision" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            MONITOREO Y REVISIÓN POR LA DIRECCIÓN
-                        </h2>
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                                <li>Indicadores clave (KPIs):
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
-                                        <li>% de sistemas con parches actualizados.</li>
-                                        <li>Tiempo de respuesta a incidentes.</li>
-                                    </ul>
-                                </li>
-                                <li>Auditorías internas: Anuales, enfocadas en controles <strong>TISAX</strong>.</li>
-                                <li>Revisión por la dirección: Informe trimestral/anual con:
-                                    <ul class="list-circle pl-6 mt-2 space-y-1">
-                                        <li>Resultados de auditorías.</li>
-                                        <li>Estado de acciones correctivas.</li>
-                                        <li>Cambios en riesgos.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="p-4 bg-primary-50 rounded-lg dark:bg-primary-800 border-l-4 border-primary-500">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><i
-                                    class="fa-solid fa-file-export mr-2"></i> Salida:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">Informes de revisión y registros de acciones.
-                            </p>
-                        </div>
-                    </section>
-
-                    <section id="mejora-continua" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            MEJORA CONTINUA
-                        </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
-                            <li>Plan de acción: Para brechas identificadas (ej.: falta de cifrado en backups).</li>
-                            <li>Actualización del <strong>SGSI</strong>: Ajustar políticas/controles ante cambios
-                                normativos o tecnológicos.</li>
-                        </ul>
-
-                        <div
-                            class="mt-6 p-4 rounded-lg bg-yellow-50 border-l-4 border-yellow-400 dark:bg-yellow-900/20 dark:border-yellow-600">
-                            <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Evidencias Clave para
-                                <strong>TISAX</strong>
-                            </h3>
-                            <div class="space-y-4">
-                                <div>
-                                    <h4 class="font-medium text-gray-800 dark:text-gray-200 mb-1">1. Documentos:</h4>
-                                    <ul class="list-circle pl-5 text-gray-700 dark:text-gray-300 space-y-1">
-                                        <li>Alcance del <strong>SGSI</strong>.</li>
-                                        <li>Declaración de Aplicabilidad (DoA).</li>
-                                        <li>Carta de compromiso de la dirección.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800 dark:text-gray-200 mb-1">2. Registros:</h4>
-                                    <ul class="list-circle pl-5 text-gray-700 dark:text-gray-300 space-y-1">
-                                        <li>Actas de revisiones por la dirección.</li>
-                                        <li>Resultados de auditorías internas.</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-gray-800 dark:text-gray-200 mb-1">3. KPIs:</h4>
-                                    <p class="text-gray-700 dark:text-gray-300">Reportes de cumplimiento de controles.
-                                    </p>
-                                </div>
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección (CEO)</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Encargar y aprobar el SGSI, su alcance y la DoA;
+                                    aprobar objetivos y el plan de auditoría; realizar la revisión por la dirección y
+                                    asignar recursos.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">RSI / IT Manager</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Ejecutar y registrar las actividades de este
+                                    procedimiento: contexto, requisitos, alcance, DoA, autoevaluación VDA ISA, indicadores,
+                                    auditorías, preparación de la revisión por la dirección y gestión de cambios.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Proveer los datos técnicos para la medición de
+                                    indicadores y la evidencia de los controles.</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">Responsables de área</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Informar al RSI los requisitos de clientes y los
+                                    cambios en sus procesos que afecten la seguridad de la información.</p>
                             </div>
                         </div>
                     </section>
 
-                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                    <!-- 6. DESARROLLO -->
+                    <section id="desarrollo" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            DESARROLLO
+                        </h2>
+
+                        <!-- 6.1 -->
+                        <div id="contexto" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1 Contexto y partes interesadas</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Identificar</strong> (RSI): determina las cuestiones internas y externas y las
+                                    partes interesadas pertinentes (clientes automotrices, ENX, Dirección y socios,
+                                    empleados, proveedores, AAIP) y sus requisitos.</li>
+                                <li><strong>Registrar</strong> (RSI): los vuelca en el F121-IT-2.</li>
+                                <li><strong>Revisar</strong> (RSI): actualiza el F121-IT-2 al menos una vez al año, antes de
+                                    la revisión por la dirección y ante cambios significativos.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> F121-IT-2 Registro de
+                                Contexto y Partes Interesadas.</p>
+                        </div>
+
+                        <!-- 6.2 -->
+                        <div id="requisitos" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2 Requisitos del SGSI</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Recibir</strong> (Responsables de área): informan al RSI los requisitos de
+                                    seguridad de contratos, NDA y pedidos de clientes (ej.: etiqueta TISAX).</li>
+                                <li><strong>Consolidar</strong> (RSI): mantiene la lista de requisitos:
+                                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                                        <li>Legales: Ley 25.326, Ley 24.766, Ley 11.723 y GDPR cuando aplique.</li>
+                                        <li>Contractuales: requisitos de clientes automotrices (OEM y Tier 1), NDA, TISAX.</li>
+                                        <li>De negocio: continuidad de servicios críticos (ej.: ERP, correo, MS Teams).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Trasladar</strong> (RSI): verifica que cada requisito esté cubierto por un
+                                    control de la DoA o por un riesgo de la M141-IT-1.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> lista de requisitos
+                                (F121-IT-2); contratos y NDA de clientes.</p>
+                        </div>
+
+                        <!-- 6.3 -->
+                        <div id="alcance-sgsi" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.3 Alcance del SGSI</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Definir</strong> (RSI): mantiene el alcance en la MC121-IT-1 §8 (organización,
+                                    ubicación, procesos, información, activos, interfaces y exclusiones justificadas).</li>
+                                <li><strong>Verificar coherencia</strong> (RSI): compara el alcance con el registrado en el
+                                    portal ENX (Scope ID S36HF8: ubicaciones, objetivos de evaluación y nivel AL).</li>
+                                <li><strong>Aprobar</strong> (Alta Dirección): aprueba el alcance y sus exclusiones.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> MC121-IT-1 §8;
+                                extracto de alcance TISAX de ENX (Scope Excerpt S36HF8).</p>
+                        </div>
+
+                        <!-- 6.4 -->
+                        <div id="aprobacion-sgsi" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.4 Encargo y aprobación del SGSI</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Encargar</strong> (CEO): encarga formalmente la implementación del SGSI al RSI
+                                    y designa a los responsables según MC122-IT-1 y P121-IT-2.</li>
+                                <li><strong>Aprobar</strong> (CEO): firma el Acta de Aprobación del SGSI, que aprueba la
+                                    política MC111-IT-1, la MC121-IT-1, el alcance y la DoA. El CEO tiene autoridad sobre
+                                    todo el alcance de la evaluación, incluidas todas las ubicaciones.</li>
+                                <li><strong>Comunicar</strong> (RSI): publica la política, el alcance y los objetivos en el
+                                    portal de documentación y los comunica al personal (P111-IT-1 §6.9).</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> Acta de Aprobación
+                                del SGSI; comunicado de nombramiento de responsables (P121-IT-2); registro de comunicación.</p>
+                        </div>
+
+                        <!-- 6.5 -->
+                        <div id="controles" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.5 Determinación de los controles aplicables</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Evaluar riesgos</strong> (RSI): actualiza la Matriz de Riesgos M141-IT-1.</li>
+                                <li><strong>Seleccionar controles</strong> (RSI): mantiene la DoA F121-IT-1 con los 93
+                                    controles del Anexo A de ISO/IEC 27001:2022 (aplicabilidad, justificación, responsable,
+                                    estado y evidencia) y la hoja de controles TISAX.</li>
+                                <li><strong>Autoevaluar</strong> (RSI): completa la autoevaluación del catálogo VDA ISA
+                                    completo, con nivel de madurez objetivo 3.</li>
+                                <li><strong>Aprobar</strong> (CEO): aprueba la DoA y la autoevaluación, al menos una vez al
+                                    año o ante cambios significativos.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> F121-IT-1; M141-IT-1;
+                                autoevaluación VDA ISA.</p>
+                        </div>
+
+                        <!-- 6.6 -->
+                        <div id="objetivos-indicadores" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.6 Objetivos e indicadores</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Definir objetivos</strong> (RSI → CEO): propone cada año objetivos de seguridad
+                                    medibles, alineados con los requisitos de clientes; el CEO los aprueba.</li>
+                                <li><strong>Medir</strong> (RSI, con datos del Administrador de IT): mide los indicadores de
+                                    la MC121-IT-1 §11.1 con la frecuencia allí indicada.</li>
+                                <li><strong>Informar</strong> (RSI): reporta los resultados a la Alta Dirección y los usa
+                                    como entrada de la revisión por la dirección.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> objetivos de seguridad
+                                del año; reporte de indicadores.</p>
+                        </div>
+
+                        <!-- 6.7 -->
+                        <div id="auditoria-interna" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.7 Auditoría interna</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Planificar</strong> (RSI → CEO): elabora el plan anual de auditoría, que cubre
+                                    todo el alcance del SGSI y los controles VDA ISA; el CEO lo aprueba.</li>
+                                <li><strong>Auditar</strong> (Auditor independiente del área auditada, interno o externo):
+                                    ejecuta la auditoría y emite el informe.</li>
+                                <li><strong>Tratar hallazgos</strong> (RSI): registra las no conformidades, define acciones
+                                    correctivas y hace su seguimiento hasta el cierre.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> plan de auditoría;
+                                informe de auditoría; registro de no conformidades y acciones correctivas.</p>
+                        </div>
+
+                        <!-- 6.8 -->
+                        <div id="revision-direccion" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.8 Revisión por la dirección</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Preparar entradas</strong> (RSI): reúne las entradas de la MC121-IT-1 §11.3:
+                                    estado de acciones anteriores, cambios de contexto y partes interesadas, indicadores,
+                                    no conformidades, resultados de auditorías, cumplimiento de objetivos, resultados de la
+                                    evaluación de riesgos y oportunidades de mejora.</li>
+                                <li><strong>Revisar</strong> (CEO y RSI): al menos una vez al año, y en forma extraordinaria
+                                    ante cambios o incidentes significativos.</li>
+                                <li><strong>Decidir</strong> (CEO): define mejoras, cambios en el SGSI, recursos y objetivos,
+                                    con responsable y fecha.</li>
+                                <li><strong>Registrar y seguir</strong> (RSI): firma del Acta de Revisión por la Dirección y
+                                    seguimiento de las acciones hasta su cierre.</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> Acta de Revisión por
+                                la Dirección.</p>
+                        </div>
+
+                        <!-- 6.9 -->
+                        <div id="gestion-cambios" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.9 Gestión de cambios en el SGSI</h3>
+                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li><strong>Informar</strong> (Responsables de área): comunican al RSI los cambios en la
+                                    organización, procesos, tecnologías, clientes o requisitos.</li>
+                                <li><strong>Evaluar</strong> (RSI): analiza el impacto sobre el alcance, los riesgos, la DoA y
+                                    la autoevaluación VDA ISA, y lo registra.</li>
+                                <li><strong>Aprobar</strong> (CEO): aprueba los cambios significativos antes de su
+                                    implementación.</li>
+                                <li><strong>Actualizar</strong> (RSI): actualiza los documentos afectados (F121-IT-2,
+                                    M141-IT-1, F121-IT-1, MC121-IT-1 §8 y, si corresponde, el alcance en ENX).</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 mt-3"><strong>Registros:</strong> registro de evaluación
+                                de cambios; documentos actualizados.</p>
+                        </div>
+
+                        <!-- 6.10 -->
+                        <div id="mejora-continua" class="mb-8 scroll-mt-20">
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.10 Mejora continua</h3>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>Las brechas detectadas en auditorías, indicadores, riesgos o incidentes se tratan con un
+                                    plan de acción con responsable y fecha (RSI).</li>
+                                <li>Las políticas y controles se ajustan ante cambios normativos, tecnológicos o de
+                                    requisitos de clientes.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- 7. REGISTROS -->
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REGISTROS
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Retención</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800 text-sm text-gray-700 dark:text-gray-300">
+                                    <tr><td class="px-6 py-3">F121-IT-2 Registro de Contexto y Partes Interesadas</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Anual / por cambio</td><td class="px-6 py-3">Vigente + 3 años</td></tr>
+                                    <tr><td class="px-6 py-3">Alcance del SGSI (MC121-IT-1 §8) y extracto de alcance ENX</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Anual / por cambio</td><td class="px-6 py-3">Vigente + 3 años</td></tr>
+                                    <tr><td class="px-6 py-3">Acta de Aprobación del SGSI</td><td class="px-6 py-3">CEO</td><td class="px-6 py-3">Al establecer el SGSI / por cambio</td><td class="px-6 py-3">5 años</td></tr>
+                                    <tr><td class="px-6 py-3">F121-IT-1 Declaración de Aplicabilidad</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Anual / por cambio</td><td class="px-6 py-3">Vigente + 3 años</td></tr>
+                                    <tr><td class="px-6 py-3">Autoevaluación VDA ISA</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Anual / por cambio</td><td class="px-6 py-3">Vigente + 3 años</td></tr>
+                                    <tr><td class="px-6 py-3">Objetivos de seguridad y reporte de indicadores</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Según MC121-IT-1 §11.1</td><td class="px-6 py-3">5 años</td></tr>
+                                    <tr><td class="px-6 py-3">Plan e informe de auditoría interna</td><td class="px-6 py-3">RSI / Auditor</td><td class="px-6 py-3">Anual</td><td class="px-6 py-3">5 años</td></tr>
+                                    <tr><td class="px-6 py-3">Registro de no conformidades y acciones correctivas</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Por evento</td><td class="px-6 py-3">5 años</td></tr>
+                                    <tr><td class="px-6 py-3">Acta de Revisión por la Dirección</td><td class="px-6 py-3">CEO / RSI</td><td class="px-6 py-3">Anual / extraordinaria</td><td class="px-6 py-3">5 años</td></tr>
+                                    <tr><td class="px-6 py-3">Registro de evaluación de cambios</td><td class="px-6 py-3">RSI</td><td class="px-6 py-3">Por cambio</td><td class="px-6 py-3">5 años</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- 8. REVISIÓN -->
+                    <section id="ciclo-revision" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            CICLO DE REVISIÓN
+                        </h2>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Este procedimiento se revisa anualmente o cuando cambie la política MC121-IT-1.
+                        </p>
+                    </section>
+
+                    <!-- 9. APROBACIÓN -->
+                    <section id="aprobacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            APROBACIÓN
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">CEO Prodismo:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Damián Pedrosa</p>
+                            </div>
+                            <div class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                <h3 class="font-semibold text-gray-900 dark:text-white">IT Manager:</h3>
+                                <p class="text-gray-700 dark:text-gray-300">Germán Montalbetti</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 10. REVISIONES -->
+                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm">14/1/2026</td>
+                                        <td class="px-6 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            14/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">06/11/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Reestructuración como
+                                            procedimiento derivado de MC121-IT-1: actividades con responsables y registros para
+                                            contexto, requisitos, alcance (TISAX S36HF8), aprobación, controles, indicadores,
+                                            auditoría interna, revisión por la dirección y gestión de cambios. Se alinearon las
+                                            partes interesadas, los requisitos legales y la frecuencia de revisión con la
+                                            política; se corrigió ISO/IEC 27001:2022 y se eliminaron las notas de trabajo.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -346,7 +472,7 @@
                     <a href="../politicas-seguridad/proc-seguridad-informacion.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Política de Seguridad</span>
+                        <span>Anterior: Procedimiento de Seguridad de la Información</span>
                     </a>
                     <a href="../organizacion-seguridad/proc-responsables-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -367,30 +493,16 @@
                             Tabla de Contenidos
                         </h3>
                         <nav class="space-y-2">
-                            <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
-                                OBJETIVO</a>
-                            <a href="#alcance-sgsi"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                ALCANCE DEL SGSI</a>
-                            <a href="#requisitos-sgsi"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                REQUISITOS DEL SGSI</a>
-                            <a href="#aprobacion-sgsi"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                APROBACIÓN DEL SGSI</a>
-                            <a href="#controles-sgsi"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                CONTROLES DEL SGSI</a>
-                            <a href="#monitoreo-revision"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                MONITOREO Y REVISIÓN</a>
-                            <a href="#mejora-continua"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                MEJORA CONTINUA</a>
-                            <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                REVISIONES DEL DOCUMENTO</a>
+                            <a href="#objetivo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1. OBJETIVO</a>
+                            <a href="#alcance" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2. ALCANCE</a>
+                            <a href="#referencias" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3. REFERENCIAS</a>
+                            <a href="#definiciones" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4. DEFINICIONES</a>
+                            <a href="#responsabilidades" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5. RESPONSABILIDADES</a>
+                            <a href="#desarrollo" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6. DESARROLLO</a>
+                            <a href="#registros" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7. REGISTROS</a>
+                            <a href="#ciclo-revision" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8. CICLO DE REVISIÓN</a>
+                            <a href="#aprobacion" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9. APROBACIÓN</a>
+                            <a href="#revisiones-documento" class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10. REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
 
@@ -428,12 +540,16 @@
                                 <span class="font-medium text-gray-900 dark:text-white">P121-IT-1</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="text-gray-600 dark:text-gray-400">Rev. N°:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
                                 <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600 dark:text-gray-400">Documento superior:</span>
+                                <a href="../../documentacion/organizacion-seguridad/organizacion-seguridad.html" class="font-medium text-blue-700 dark:text-blue-300">MC121-IT-1</a>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
@@ -445,11 +561,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">14/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">06/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">14/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">06/11/2027</span>
                             </div>
                         </div>
                     </div>
