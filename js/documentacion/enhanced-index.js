@@ -6,7 +6,7 @@
 
 // 1. POLÍTICAS (hoja "Politicas-Procedimientos")
 const politicas = [
-    { tipo: "Política", nombre: "Seguridad de la Información", codigo: "MC111-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
+    { tipo: "Política", nombre: "Seguridad de la Información", codigo: "MC111-IT-1", revision: 1, fecha: "2026-05-20", areas: ["Todas"], complejidad: "Baja" },
     { tipo: "Política", nombre: "Organización de la seguridad de la información", codigo: "MC121-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
     { tipo: "Política", nombre: "Responsabilidades de la organización de la seguridad de la información", codigo: "MC122-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
     { tipo: "Política", nombre: "Requisitos de seguridad de proyectos", codigo: "MC123-IT-1", revision: 1, fecha: "2025-11-25", areas: ["Todas"], complejidad: "Baja" },
