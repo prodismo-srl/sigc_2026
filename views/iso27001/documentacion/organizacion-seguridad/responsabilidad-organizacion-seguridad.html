@@ -28,7 +28,7 @@
     <link href="../../../../dist/output.css" rel="stylesheet">
 
     <!-- Cargar sistema de módulos defer -->
-    <script src="../../../../js/modules.js"></script>
+    <script src="../../../../js/modules.js" defer></script>
 
 </head>
 
@@ -69,11 +69,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/11/2025</span>
+                                <span>Última revisión: 06/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -120,8 +120,8 @@
                                 <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control 1.2.2 (Responsabilidades de seguridad de la información)</li>
                                 <li><strong>P122-IT-1</strong> Procedimiento para Organizar Responsabilidades de Seguridad de la Información</li>
                                 <li><strong>M121-IT-1</strong> Matriz de Roles y Responsabilidades</li>
-                                <li><strong>F121-IT-1</strong> Formulario de Asignación de Roles</li>
-                                <li><strong>P121-IT-2</strong> Procedimiento de Gestión de Cambios Organizacionales</li>
+                                <li><strong>P121-IT-1</strong> Procedimiento de Organización de la Seguridad de la Información (§6.9 Gestión de cambios en el SGSI)</li>
+                                <li><strong>P111-IT-1</strong> Procedimiento de Seguridad de la Información</li>
                             </ul>
                         </section>
 
@@ -199,7 +199,7 @@
                                     <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT / Soporte Seguridad</h3>
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
                                         <li>Aplicar los controles técnicos asignados (MFA, parches, backups, monitoreo).</li>
-                                        <li>Gestionar y responder a incidentes de seguridad según <strong>P121-IT-1</strong>.</li>
+                                        <li>Gestionar y responder a incidentes de seguridad según <strong>P111-IT-1</strong> §6.3.</li>
                                     </ul>
                                 </div>
                                 <div
@@ -763,7 +763,7 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Ninguna persona podrá controlar por sí sola un proceso crítico de principio a fin sin supervisión independiente.</li>
                                     <li>Los roles con privilegios elevados (ej.: administradores de sistemas) no podrán auditar sus propias acciones en los mismos sistemas.</li>
-                                    <li>La solicitud, aprobación y ejecución de accesos seguirán flujos separados según el procedimiento <strong>P121-IT-2</strong>.</li>
+                                    <li>La solicitud, aprobación y ejecución de accesos seguirán flujos separados según el procedimiento <strong>P111-IT-1</strong> §6.1.</li>
                                     <li>Los cambios en sistemas productivos (configuraciones, SIP / SIP4.0) requieren aprobación formal de una persona distinta a quien los ejecuta.</li>
                                 </ul>
                             </div>
@@ -867,7 +867,7 @@
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>La descripción de roles y responsabilidades será comunicada a todos los empleados mediante este documento <strong>MC122-IT-1</strong> y el comunicado del procedimiento <strong>P122-IT-1</strong>.</li>
                                 <li>Se realizarán campañas de concientización anuales sobre la importancia de la seguridad de la información.</li>
-                                <li>Los cambios en roles o responsabilidades serán comunicados formalmente y registrados en el formulario <strong>F121-IT-1</strong>.</li>
+                                <li>Los cambios en roles o responsabilidades serán comunicados formalmente vía mail.</li>
                             </ul>
                         </section>
 
@@ -878,7 +878,7 @@
                                 GESTIÓN DE CAMBIOS ORGANIZACIONALES
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Cualquier cambio organizacional que afecte la seguridad de la información será evaluado mediante el formulario <strong>F121-IT-2</strong>.</li>
+                                <li>Cualquier cambio organizacional que afecte la seguridad de la información será evaluado y registrado según el procedimiento <strong>P121-IT-1</strong> §6.9.</li>
                                 <li>Los nuevos roles serán definidos, documentados y asignados antes de su implementación.</li>
                                 <li>Ante bajas o cambios de puesto, se reasignarán las responsabilidades y se actualizarán accesos y contactos.</li>
                                 <li>La revisión de la estructura organizacional se realizará anualmente.</li>
@@ -895,8 +895,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">13.1. Registros Obligatorios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>M121-IT-1</strong>: Matriz de Roles y Responsabilidades.</li>
-                                    <li><strong>F121-IT-1</strong>: Formulario de Asignación de Roles y Responsabilidades.</li>
-                                    <li><strong>F121-IT-2</strong>: Evaluación de Impacto por Cambios Organizacionales.</li>
+                                    <li>Registro de evaluación de cambios organizacionales (P121-IT-1 §6.9).</li>
                                     <li>Comunicado interno firmado (<strong>P122-IT-1</strong>) y registro de envío (captura de email o publicación en MS Teams).</li>
                                     <li>Descripciones de tareas firmadas por RRHH y Dirección.</li>
                                     <li>Registros de capacitación y cualificación de los responsables.</li>
@@ -984,7 +983,7 @@
                             <!-- Anexo B -->
                             <!-- TODO: verificar la ruta del procedimiento P122-IT-1 dentro del sitio -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="../../procedimientos/organizacion-seguridad/proc-organizar-responsabilidades.html"
+                                Anexo B: <a href="../../procedimientos/organizacion-seguridad/proc-responsables-seguridad.html"
                                     title="P122-IT-1 Procedimiento para Organizar Responsabilidades de Seguridad de la Información"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -1004,20 +1003,20 @@
                             <!-- Anexo C -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="../../procedimientos/organizacion-seguridad/proc-organizacion-seguridad.html"
-                                    title="P121-IT-2 Procedimiento de Gestión de Cambios Organizacionales"
+                                    title="P121-IT-1 Procedimiento de Organización de la Seguridad de la Información"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P121-IT-2
+                                        P121-IT-1
                                     </span>
-                                    Procedimiento de Gestión de Cambios Organizacionales
+                                    Procedimiento de Organización de la Seguridad de la Información
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Flujo para la evaluación y aprobación de cambios que afecten la seguridad]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[§6.9: evaluación y aprobación de cambios que afecten la seguridad de la información]</p>
                             </div>
                             </div>
                         </section>
@@ -1052,15 +1051,23 @@
                                             <td class="px-6 py-4 text-sm">Primera Emisión
                                                 del documento</td>
                                         </tr>
+                                        <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                1</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                25/11/2025</td>
+                                            <td class="px-6 py-4 text-sm">Actualización
+                                                general del documento</td>
+                                        </tr>
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                1</td>
+                                                2</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                25/11/2025</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
-                                                general del documento</td>
+                                                06/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Corrección de
+                                                códigos y referencias a enlace al procedimiento P122-IT-1.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1187,8 +1194,8 @@
                                 <span class="font-medium text-gray-900 dark:text-white">MC122-IT-1</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="text-gray-600 dark:text-gray-400">Rev. N°:</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1204,11 +1211,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/11/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">06/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/11/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">06/11/2027</span>
                             </div>
                         </div>
                     </div>

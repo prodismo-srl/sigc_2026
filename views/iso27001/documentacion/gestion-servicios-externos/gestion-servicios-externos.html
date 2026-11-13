@@ -45,13 +45,11 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- completar ruta y título de la página anterior -->
                     <a href="../clasificacion-activos/clasificacion-activos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Clasificación de Activos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
                     <a href="../gestion-software-aprobado/gestion-software-aprobado.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <span>Siguiente: Gestión Software Aprobado</span>
@@ -71,11 +69,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 13/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -469,7 +467,7 @@
                                                     Muy alto</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Crítica: datos de clientes, prototipos, diseños CAD, ERP</td>
+                                                    Confidencial (MC132-IT-1): datos de clientes, prototipos, diseños CAD, ERP, configuración de red</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     <ul class="list-disc pl-5 space-y-3"><li>Evaluación de riesgos aprobada.</li><li>MFA, cifrado y registros de acceso.</li><li>Contrato con cláusulas obligatorias o términos verificados.</li><li>Configuración documentada (F124-IT-3).</li></ul></td>
@@ -480,7 +478,7 @@
                                                     Alto</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Confidencial: datos personales, información comercial, redes</td>
+                                                    Restringido (MC132-IT-1): datos personales del personal, información financiera interna</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     <ul class="list-disc pl-5 space-y-3"><li>Evaluación de riesgos aprobada.</li><li>MFA o control de acceso equivalente.</li><li>NDA y notificación de incidentes.</li></ul></td>
@@ -491,7 +489,7 @@
                                                     Normal</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Interna o Pública</td>
+                                                    Interno o Público (MC132-IT-1)</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     <ul class="list-disc pl-5 space-y-3"><li>Evaluación simplificada.</li><li>Cuentas corporativas y términos de uso aceptados.</li></ul></td>
@@ -524,205 +522,117 @@
                                         <tbody
                                             class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Microsoft 365 / Azure AD</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Microsoft · Telecom Argentina (partner)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Correo y archivos de ingeniería y de clientes</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Muy alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-01 · Microsoft 365 / Azure AD (correo, Teams, SharePoint, OneDrive, Copilot)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Microsoft · Telecom Argentina (partner)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Correo, archivos de ingeniería y de clientes</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    ERP SIP / SIP4.0</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Enter-Geminus</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Datos comerciales, administrativos y de producción</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Muy alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-02 · Internet principal</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Airsat S.A.</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tráfico de Internet (cifrado TLS)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Administración de redes</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Armanet S.A.</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Tráfico de red interna</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-03 · Administración de redes</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Armanet S.A.</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Configuración de red y firewall; acceso a la red interna</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Cámaras de vigilancia (CCTV)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Armanet S.A.</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Grabaciones de planta y oficinas</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-04 · Cámaras de vigilancia (CCTV)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Armanet S.A.</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Grabaciones de planta y oficinas</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Internet principal</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Airsat S.A.</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Tráfico de Internet (disponibilidad)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-05 · Internet de respaldo</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Batcom</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tráfico de Internet (contingencia)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Normal</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Internet de respaldo</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Batcom</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Tráfico de Internet (contingencia)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Normal</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-06 · Desarrollo y soporte del ERP SIP / SIP4.0</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Enter-Geminus (en baja)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Datos comerciales, administrativos y de producción; código fuente</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Aplicaciones web (viajes.prodismo.com)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Cubits S.R.L.</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Datos personales de viajes</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-07 · Aplicación web de viajes (viajes.prodismo.com)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cubits S.R.L.</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Datos personales de viajes y gastos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Hosting, dominio, DNS y SSL</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Donweb.com</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Aplicaciones web y DNS</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-08 · Hosting, dominio, DNS y certificados SSL</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Donweb.com</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Aplicaciones web y DNS</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Recibos de sueldo digitales</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    TuLegajo.com</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Datos personales y salariales</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-09 · Ciberseguridad: pentesting</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Telecom Argentina</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Vulnerabilidades e informes de seguridad</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Ciberseguridad (pentesting)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Telecom Argentina</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Vulnerabilidades e informes</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-10 · Telefonía IP</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Telecom Argentina</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Comunicaciones telefónicas</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Normal</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Acceso remoto</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    AnyDesk</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Sesiones a equipos internos</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Alto</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-11 · Acceso remoto (AnyDesk)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">AnyDesk (directo)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Sesiones de soporte a equipos internos</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Telefonía IP</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Telecom Argentina</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Comunicaciones telefónicas</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Normal</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-12 · Suministro de hardware</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">PCCore · Armanet S.A. · Venex</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipos nuevos; discos en devoluciones (RMA)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Normal</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Licencias CAD/CAE</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Dassault Systèmes · Siemens · AutoForm</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Solo licenciamiento</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Normal</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-13 · Borrado y destrucción física de soportes</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CBL Tecnología</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Discos y equipos dados de baja</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                             <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Suministro de hardware</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    PCCore · Armanet S.A. · Venex</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Discos en devoluciones (RMA)</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Normal</td>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-14 · Licencias CAD/CAE</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Dassault Systèmes · Siemens · AutoForm</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Solo licenciamiento</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Normal</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-15 · Recibos de sueldo y legajos (Tulegajo.com)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tulegajo.com</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Datos personales y salariales del personal</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alto</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-16 · Inventario de activos (Snipe-IT SaaS)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Snipe-IT (Grokability, Inc.)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inventario de activos, usuarios, IP y MAC</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-17 · Hosting de la App de Seguimiento Ing/Fab</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Railway</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Seguimiento de proyectos (staging)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Normal</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">SE-18 · Servidor virtual en Azure para SIP4.0</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Microsoft Azure</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Datos del SIP4.0 (staging)</td>
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muy alto</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">Un servicio solo puede procesar información con una necesidad de protección <strong>igual o menor</strong> a la que fue aprobada. Si se requiere procesar información de mayor nivel, el servicio debe reevaluarse antes.</p>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">La evaluación de riesgos y la decisión de uso de cada servicio se registran en el <strong>F133-IT-1</strong>. Un servicio solo puede procesar información con una necesidad de protección <strong>igual o menor</strong> a la que fue aprobada. Si se requiere procesar información de mayor nivel, el servicio debe reevaluarse antes.</p>
                             </div>
                         </section>
 
@@ -733,10 +643,12 @@
                                 SERVICIOS APROBADOS Y SERVICIOS NO AUTORIZADOS
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>IT publica en la intranet la <strong>lista de servicios aprobados</strong>, con el nivel máximo de información permitido en cada uno.</li>
+                                <li>IT publica en el portal de documentación la <a href="servicios-aprobados.html" class="text-primary-600 underline"><strong>Lista de Servicios Aprobados</strong></a>, con el nivel máximo de información permitido en cada uno, y la actualiza con cada alta, baja o reevaluación.</li>
+                                <li>Los servicios nuevos se solicitan por ticket de soporte o mail a <strong>itprodismo@prodismo.com</strong>; las aplicaciones de terceros de Microsoft 365 requieren la aprobación del IT Manager o del Admin IT (P133-IT-1).</li>
                                 <li>Para intercambiar archivos con clientes y proveedores se utilizan únicamente <strong>Microsoft 365 (SharePoint / OneDrive / Teams)</strong> o los portales indicados por cada cliente.</li>
-                                <li>Está <strong>prohibido</strong> utilizar con información de la empresa o de clientes servicios no aprobados, por ejemplo: almacenamiento o correo personal, servicios públicos de transferencia de archivos (WeTransfer, Dropbox u otros) y herramientas públicas de inteligencia artificial.</li>
-                                <li>IT revisa periódicamente las aplicaciones conectadas a Microsoft 365 y los registros del firewall para detectar el uso de servicios no autorizados (<strong>Shadow IT</strong>).</li>
+                                <li>Está <strong>prohibido</strong> utilizar con información de la empresa o de clientes servicios no aprobados, por ejemplo: almacenamiento o correo personal, servicios públicos de transferencia de archivos (WeTransfer, Dropbox u otros) y software sin licencia o crackeado.</li>
+                                <li><strong>Inteligencia artificial:</strong> la única herramienta aprobada para información de la empresa es Microsoft Copilot (licencia solicitada por el supervisor). Las herramientas públicas gratuitas solo se usan con cuenta personal, sin ingresar información Restringida o Confidencial y sin conceder permisos de acceso al entorno Microsoft corporativo.</li>
+                                <li>IT verifica <strong>semestralmente</strong> que solo se usen servicios y software aprobados (aplicaciones de Entra ID, inventario de software de Defender for Endpoint / Wazuh, registros del firewall y mail general a usuarios con copia a Dirección) y registra el resultado en el <strong>F133-IT-3</strong> (<strong>Shadow IT</strong>).</li>
                             </ul>
                         </section>
 
@@ -778,6 +690,8 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>F133-IT-1:</strong> Evaluación de Riesgos de Servicios de TI Externos.</li>
                                     <li><strong>F133-IT-2:</strong> Registro de Requisitos Legales, Reglamentarios y Contractuales.</li>
+                                    <li><strong>F133-IT-3:</strong> Verificación de Servicios y Software No Aprobados (semestral).</li>
+                                    <li>Tickets o mails de solicitud y aprobación de servicios.</li>
                                     <li><strong>Lista de servicios aprobados</strong> publicada.</li>
                                     <li><strong>Contratos, NDA y términos de servicio</strong> revisados.</li>
                                     <li><strong>F124-IT-1</strong> y <strong>F124-IT-3</strong> (responsabilidades y configuración, según MC124-IT-1).</li>
@@ -802,7 +716,7 @@
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Auditorías internas</strong> anuales sobre una muestra de servicios de TI externos.</li>
-                                <li><strong>Informe trimestral</strong> al Comité de Seguridad sobre el estado de las evaluaciones y los servicios no autorizados detectados.</li>
+                                <li><strong>Informe en la revisión por la dirección</strong> sobre el estado de las evaluaciones, las verificaciones semestrales y los servicios no autorizados detectados.</li>
                                 <li><strong>Indicadores de desempeño:</strong>
                                     <ul class="list-circle pl-5 mt-2 space-y-3">
                                         <li>Servicios de TI externos en uso con evaluación de riesgos aprobada: Objetivo 100%.</li>
@@ -844,9 +758,8 @@
                             </h2>
                             <div class="space-y-4">
                             <!-- Anexo A -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F133-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="--TODO--" target="_blank"
+                                Anexo A: <a href="#anexos"
                                     title="F133-IT-1 Evaluación de Riesgos de Servicios de TI Externos - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -860,13 +773,12 @@
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Criterios de valoración, riesgos por servicio, controles, riesgo residual y aprobación de uso]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Criterios de valoración, riesgos por servicio, controles, riesgo residual y aprobación de uso. SharePoint IT – solicitar acceso al administrador de IT]</p>
                             </div>
 
                             <!-- Anexo B -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F133-IT-2 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="--TODO--" target="_blank"
+                                Anexo B: <a href="#anexos"
                                     title="F133-IT-2 Registro de Requisitos Legales, Reglamentarios y Contractuales - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -880,11 +792,10 @@
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Requisitos aplicables por servicio, forma de cumplimiento y evidencia]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Requisitos aplicables por servicio, forma de cumplimiento y evidencia. SharePoint IT – solicitar acceso al administrador de IT]</p>
                             </div>
 
                             <!-- Anexo C -->
-                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P133-IT-1 dentro del sitio -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="../../procedimientos/gestion-activos/proc-gestion-servicios-externos.html"
                                     title="P133-IT-1 Procedimiento de Gestión de Servicios de TI Externos"
@@ -904,9 +815,8 @@
                             </div>
 
                             <!-- Anexo D -->
-                            <!-- TODO: --TODO-- completar la ruta de la página MC124-IT-1 (responsabilidades-proveedores.html) -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="--TODO--"
+                                Anexo D: <a href="../organizacion-seguridad/responsabilidades-proveedores.html"
                                     title="MC124-IT-1 Responsabilidades entre Proveedores Externos de Servicios de TI y la Propia Organización"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -921,6 +831,32 @@
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                                 <p class="text-gray-700 dark:text-gray-300 mt-2">[Distribución de responsabilidades y configuración segura de los servicios (F124-IT-1 / F124-IT-3)]</p>
+                            </div>
+
+                            <!-- Anexo E -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo E: <a href="servicios-aprobados.html"
+                                    title="Lista de Servicios Aprobados"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-list-check text-green-600"></i>
+                                    Lista de Servicios Aprobados
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Servicios aprobados, nivel máximo de información permitido y reglas de uso]</p>
+                            </div>
+
+                            <!-- Anexo F -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo F: <span
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 border border-blue-200 dark:border-gray-600 rounded-lg text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">F133-IT-3</span>
+                                    Verificación de Servicios y Software No Aprobados
+                                </span>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro de la verificación semestral. SharePoint IT – solicitar acceso al administrador de IT]</p>
                             </div>
                             </div>
                         </section>
@@ -963,6 +899,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                13/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Necesidad de protección alineada con MC132-IT-1; servicios vigentes actualizados (SE-01 a SE-18, baja de Enter-Geminus); Lista de Servicios Aprobados publicada en el portal; solicitud por ticket o mail; reglas de uso de IA (Copilot); verificación semestral F133-IT-3; informe en la revisión por la dirección.</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -971,16 +916,14 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <!-- --TODO-- completar ruta y título de la página anterior -->
                     <a href="../clasificacion-activos/clasificacion-activos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Clasificación de activos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
                     <a href="../gestion-software-aprobado/gestion-software-aprobado.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: .Gestion Software Aprobados</span>
+                        <span>Siguiente: Gestión Software Aprobado</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -1090,7 +1033,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1106,11 +1049,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2027</span>
                             </div>
                         </div>
                     </div>

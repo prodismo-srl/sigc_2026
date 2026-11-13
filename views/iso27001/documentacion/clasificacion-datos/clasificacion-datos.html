@@ -48,7 +48,7 @@
                     <a href="../gestion-activos/gestion-activos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Principio de Mínimo Privilegio</span>
+                        <span>Anterior: Gestión Activos de la Información</span>
                     </a>
                     <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -60,7 +60,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Clasificación de
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Clasificación de Activos de 
                             la Información</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
@@ -70,11 +70,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 6/1/2026</span>
+                                <span>Última revisión: 12/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -129,9 +129,11 @@
                             <li><strong>ISO/IEC 27002:2022</strong> - Controles para la seguridad de la información.
                             </li>
                             <li>Marco <strong>TISAX</strong> (Trusted Information Security Assessment Exchange).</li>
-                            <li><strong>MC511-IT-2</strong> Política de Protocolos Criptográficos</li>
-                            <li><strong>P511-IT-1</strong> Gestión de Procedimientos Criptográficos</li>
-                            <li><strong>F511-IT-2</strong> Algoritmos Aprobados</li>
+                            <li><strong>Ley 25.326</strong> de Protección de los Datos Personales (Argentina).</li>
+                            <li><strong>MC131-IT-1</strong> Política de Gestión de Activos de Información y <strong>F131-IT-1</strong> Registro de Activos de Información.</li>
+                            <li><strong>P132-IT-1</strong> Procedimiento de Clasificación y Gestión de Activos de Información.</li>
+                            <li><strong>I132-IT-1</strong> Instructivo Etiquetas de Confidencialidad.</li>
+                            <li><strong>MC511-IT-2</strong> Política de Protocolos Criptográficos (requisitos de cifrado).</li>
                         </ul>
                     </section>
 
@@ -257,11 +259,11 @@
                                         </td>
                                         <td class="px-2 py-4 text-sm text-gray-700 dark:text-gray-300">
                                             <ul class="list-disc pl-4 space-y-1">
-                                                <li>Cifrado fuerte en reposo y tránsito.</li>
-                                                <li>Estricto control de acceso (Mínimo Privilegio).</li>
-                                                <li>Almacenamiento en repositorios seguros.</li>
-                                                <li>Registro detallado de accesos (logging).</li>
-                                                <li>Etiquetado claro.</li>
+                                                <li>Etiqueta «Confidencial» de Microsoft Purview, que restringe los permisos de acceso.</li>
+                                                <li>Acceso solo al equipo del proyecto o proceso (mínimo privilegio) con MFA.</li>
+                                                <li>Almacenamiento en repositorios corporativos (SharePoint, OneDrive, servidores internos) y laptops cifradas con BitLocker; cifrado en tránsito (TLS).</li>
+                                                <li>Registro de accesos (auditoría de Microsoft 365 y SIEM Wazuh).</li>
+                                                <li>Archivos CAD: intercambio externo solo por portales de los OEM o enlaces de SharePoint; prohibido por correo.</li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -290,7 +292,7 @@
                                                 <li>Cifrado recomendado.</li>
                                                 <li>Control de acceso basado en roles.</li>
                                                 <li>No debe ser compartido externamente sin autorización.</li>
-                                                <li>Marca de agua "Restringido" en documentos.</li>
+                                                <li>Etiqueta «Restringido» de Microsoft Purview; en documentos impresos, encabezado o pie con la clasificación.</li>
                                             </ul>
                                         </td>
                                     </tr>
@@ -375,8 +377,8 @@
                                         disponible en todo momento. Evaluación del impacto de la falta de
                                         disponibilidad.</li>
                                     <li><strong>Obligaciones legales y regulatorias:</strong> Verificación de si los
-                                        datos están sujetos a leyes de protección de datos como RGPD, HIPAA, o
-                                        requisitos contractuales.</li>
+                                        datos están sujetos a la Ley 25.326 de Protección de los Datos Personales o a
+                                        requisitos contractuales de clientes (NDA, requisitos de seguridad de los OEM).</li>
                                     <li><strong>Valor comercial y criticidad:</strong> Evaluación de qué tan críticos
                                         son los datos para las operaciones comerciales, reputación o ventaja
                                         competitiva.</li>
@@ -494,23 +496,24 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Documentos físicos</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Encabezados, pies de página o marcas de agua que indiquen la
-                                                    clasificación (ej: "Confidencial")</td>
+                                                    Encabezado o pie de página con la clasificación (ej.: «CONFIDENCIAL»); si el
+                                                    documento no la tiene impresa, sello o etiqueta física.</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Archivos electrónicos (*)</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Aplicación de etiquetas digitales, etiquetas de metadatos o
-                                                    propiedades del documento</td>
+                                                    Etiqueta de confidencialidad de Microsoft Purview en Office, SharePoint, OneDrive y Teams.
+                                                    Los archivos que no admiten etiquetas (CAD nativos de CATIA/NX, PDF) se clasifican
+                                                    por la carpeta o sitio del proyecto donde se guardan y, cuando corresponde, por su nombre o propiedades.</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Correos electrónicos (*)</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inclusión
-                                                    de etiquetas de clasificación en el asunto o cuerpo del documento
+                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Etiqueta de confidencialidad de Microsoft Purview en
+                                                    Outlook; si se adjunta un archivo con una etiqueta de mayor nivel, el correo toma esa etiqueta.
                                                 </td>
                                             </tr>
                                             <tr>
@@ -539,15 +542,21 @@
                                 </div>
 
                                 <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mt-4 mb-4">
-                                    <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Ver instructivo Anexo D</h4>
-                                    <a href="../../../../outputs_files/I511-IT-3_Instructivo_Etiquetas_de_Confidencialidad.pdf" target="_blank"
-                                        title="I511-IT-3 Instructivo Etiquetas de Confidencialidad" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 mt-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Etiquetas en Microsoft 365 – ver instructivo (Anexo B)</h4>
+                                    <ul class="list-disc pl-5 text-blue-700 dark:text-blue-300 text-sm space-y-2">
+                                        <li>Etiquetas disponibles: Público, Interno, Restringido y Confidencial (mismo orden y significado que la sección 6).</li>
+                                        <li>Purview aplica una etiqueta por defecto a archivos y correos nuevos; el usuario debe confirmarla o cambiarla según el contenido.</li>
+                                        <li>Bajar el nivel de una etiqueta requiere una justificación, que queda registrada.</li>
+                                        <li>«Confidencial» restringe los permisos de acceso al archivo o correo.</li>
+                                    </ul>
+                                    <a href="../../../../outputs_files/I132-IT-1_Instructivo_Etiquetas_de_Confidencialidad.pdf" target="_blank"
+                                        title="I132-IT-1 Instructivo Etiquetas de Confidencialidad" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 mt-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                         <i class="fas fa-file-pdf text-red-500"></i>
                                         <span
                                             class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            I511-IT-3
+                                            I132-IT-1
                                         </span>
                                         Instructivo Etiquetas de Confidencialidad
                                         <i
@@ -559,11 +568,9 @@
                                     <h4 class="font-semibold text-blue-800 dark:text-blue-300 mb-2">Definición de
                                         Requisitos de Gestión</h4>
                                     <p class="text-blue-700 dark:text-blue-300 text-sm">
-                                        Se definirán los requisitos de gestión para cada nivel de clasificación,
-                                        incluyendo almacenamiento, transmisión, uso compartido y eliminación. Por
-                                        ejemplo, la información "<strong>Confidencial</strong>" puede requerir cifrado
-                                        en tránsito y en
-                                        reposo, acceso restringido y métodos seguros de eliminación.
+                                        Los requisitos de manejo de cada nivel (etiquetado, acceso, almacenamiento, transmisión,
+                                        transporte de soportes, devolución y eliminación) están definidos en la matriz de manejo
+                                        del procedimiento <strong>P132-IT-1</strong> y son de cumplimiento obligatorio.
                                     </p>
                                 </div>
                             </div>
@@ -632,8 +639,7 @@
                         <div class="space-y-6">
                             <div>
                                 <p class="text-gray-700 dark:text-gray-300 mb-4">
-                                    Cada clase de datos debe establecer requisitos específicos en la plantilla de
-                                    política de clasificación de datos:
+                                    Requisitos generales (el detalle por nivel está en la matriz de manejo de <strong>P132-IT-1</strong>):
                                 </p>
 
                                 <div class="overflow-x-auto">
@@ -655,9 +661,9 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Almacenamiento</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Dónde y cómo se puede almacenar la información: unidades cifradas
-                                                    para datos confidenciales, gabinetes cerrados para documentos
-                                                    físicos, etc.
+                                                    Repositorios corporativos (SharePoint, OneDrive, servidores internos con backup diario);
+                                                    laptops cifradas con BitLocker; documentos físicos Confidenciales o Restringidos en
+                                                    armarios con llave.
                                                 </td>
                                             </tr>
                                             <tr>
@@ -665,9 +671,9 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Transmisión</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Especificación de métodos seguros para el envío de información:
-                                                    correo electrónico cifrado, transferencia segura de archivos o
-                                                    mensajería para documentos físicos.
+                                                    Información Confidencial a clientes solo por portales de los OEM o enlaces de SharePoint con
+                                                    acceso nominativo; prohibido enviar archivos CAD por correo electrónico; documentos físicos en
+                                                    sobre cerrado.
                                                 </td>
                                             </tr>
                                             <tr>
@@ -675,8 +681,9 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Eliminación</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Métodos seguros de eliminación, por ejemplo, trituración para papel,
-                                                    borrado seguro o destrucción para medios electrónicos.
+                                                    Papel Confidencial o Restringido: destrucción por trituración. Equipos: formateo con la imagen
+                                                    predefinida al reasignarlos; borrado seguro o destrucción con certificado (CBL Tecnología) al
+                                                    darlos de baja o enviarlos a reparación.
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -782,8 +789,8 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Leyes de protección de datos</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Protecciones específicas necesarias para datos personales o
-                                                    sensibles, como las del RGPD, HIPAA, CCPA, etc.
+                                                    Ley 25.326 de Protección de los Datos Personales (Argentina): datos personales de empleados,
+                                                    clientes y proveedores (clasificados como Restringido o Confidencial).
                                                 </td>
                                             </tr>
                                             <tr>
@@ -791,8 +798,8 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Estándares del sector</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    PCI DSS, SOX o cualquier otro de la misma naturaleza, para hacer
-                                                    cumplir las normas de clasificación y manejo.
+                                                    VDA ISA / TISAX e ISO/IEC 27001:2022, que exigen clasificar y manejar la información de
+                                                    clientes según su necesidad de protección.
                                                 </td>
                                             </tr>
                                             <tr>
@@ -800,9 +807,8 @@
                                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
                                                     Contratos con clientes</td>
                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Disposiciones específicas en los acuerdos con clientes o socios
-                                                    pueden exigir el manejo de un elemento de datos específico en
-                                                    ciertos niveles de clasificación.
+                                                    NDA y requisitos de seguridad de los clientes OEM (registrados en F611-IT-3); si un cliente exige
+                                                    un manejo más estricto, prevalece el requisito del cliente.
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -929,8 +935,59 @@
 
                             <!-- Anexo A -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
-                                    title="Política de Protocolos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                Anexo A: <a href="../../procedimientos/gestion-activos/proc-clasificacion-activos.html"
+                                    title="P132-IT-1 Procedimiento de Clasificación y Gestión de Activos de Información" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P132-IT-1
+                                    </span>
+                                    Procedimiento de Clasificación y Gestión de Activos de Información
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Evaluación y clasificación de activos, criticidad de activos de soporte y matriz de manejo por nivel]</p>
+                            </div>
+                            <!-- Anexo B -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="../../../../outputs_files/I132-IT-1_Instructivo_Etiquetas_de_Confidencialidad.pdf" target="_blank"
+                                    title="I132-IT-1 Instructivo Etiquetas de Confidencialidad" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-pdf text-red-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        I132-IT-1
+                                    </span>
+                                    Instructivo Etiquetas de Confidencialidad
+                                    <i
+                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Aplicación de etiquetas de confidencialidad de Microsoft Purview en archivos y correos]</p>
+                            </div>
+                            <!-- Anexo C -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="../gestion-activos/gestion-activos.html"
+                                    title="MC131-IT-1 Política de Gestión de Activos de Información" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-book text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        MC131-IT-1
+                                    </span>
+                                    Política de Gestión de Activos de Información (catálogo F131-IT-1)
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Inventario y catálogo de activos de información con su clasificación]</p>
+                            </div>
+                            <!-- Anexo D -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
+                                    title="MC511-IT-2 Política de Protocolos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                     border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                     group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-book text-blue-500"></i>
@@ -942,65 +999,9 @@
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Política de protocolos criptográficos,
-                                    algoritmos y estándares de seguridad]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Requisitos de cifrado aplicables a la información Confidencial y Restringida]</p>
                             </div>
-
-                            <!-- Anexo B -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F511-IT-2%20Algoritmos%20Aprobados.xlsx?d=w25161763841f4a199c550b9802ec4565&csf=1&web=1&e=QaYq4o" target="_blank"
-                                    title="F511-IT-2 Registro de Algoritmos Aprobados"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-file-alt text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F511-IT-2
-                                    </span>
-                                    Algoritmos Aprobados
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro de Algoritmos aprobados]</p>
-                            </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="../../procedimientos/ciberseguridad/proc-procedimientos-criptograficos.html"
-                                    title="Procedimientos Criptográficos" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-gears text-gray-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P511-IT-1
-                                    </span>
-                                    Procedimientos Criptográficos
-                                    <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Flujo detallado del proceso de gestión
-                                    de procedimientos criptográficos]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="../../../../outputs_files/I511-IT-3_Instructivo_Etiquetas_de_Confidencialidad.pdf" target="_blank"
-                                    title="I511-IT-3 Instructivo Etiquetas de Confidencialidad" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-pdf text-red-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        I511-IT-3
-                                    </span>
-                                    Instructivo Etiquetas de Confidencialidad
-                                    <i
-                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instructivo para la aplicación de etiquetas de confidencialidad en archivos y correos]</p>
-                            </div>
+                        </div>
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
@@ -1048,6 +1049,15 @@
                                         <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
                                             general del documento</td>
                                     </tr>
+                                    <tr>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                            2</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                            12/11/2026</td>
+                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Código unificado MC132-IT-1; controles por nivel y etiquetado alineados con Microsoft Purview; requisitos de manejo remitidos a la matriz de P132-IT-1; marco legal argentino (Ley 25.326) y contractual; anexos reemplazados por los documentos de clasificación (P132-IT-1, I132-IT-1, MC131-IT-1) y MC511-IT-2 como referencia de cifrado.</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1059,7 +1069,7 @@
                     <a href="../minimos-privilegios/minimos-privilegios.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Principio de Mínimo Privilegio</span>
+                        <span>Anterior: Gestión de Activos de la información</span>
                     </a>
                     <a href="../protocolos-criptograficos/protocolos-criptograficos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -1165,11 +1175,11 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">MC511-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC132-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1185,11 +1195,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">6/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">6/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">12/11/2027</span>
                             </div>
                         </div>
                     </div>

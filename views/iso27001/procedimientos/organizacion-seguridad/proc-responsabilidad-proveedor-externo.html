@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Responsabilidades con Proveedores de TI Externos">
+    <meta name="description" content="Prodismo - Política de Responsabilidades entre Proveedores Externos de Servicios de TI y la Propia Organización">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Procedimiento Responsabilidades entre los Proveedores Externos de Servicios de TI y la Propia Organización - Prodismo SRL</title>
+    <title>Responsabilidades entre Proveedores Externos de Servicios de TI y la Propia Organización - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
 
     <!-- Font Awesome -->
@@ -32,8 +32,7 @@
 
 </head>
 
-<body
-    class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
+<body class="bg-white text-gray-900 font-sans transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
     <!-- Header -->
     <div id="header-container" data-module="header" class="sticky top-0 z-50"></div>
 
@@ -46,40 +45,40 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <a href="../organizacion-seguridad/proc-responsables-seguridad.html"
+                    <!-- TODO: verificar la ruta de la página MC123-IT-1 -->
+                    <a href="../requisitos-seguridad-proyectos/requisitos-seguridad-proyectos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Responsables de Seguridad</span>
+                        <span>Anterior: Requisitos de Seguridad en Proyectos</span>
                     </a>
-                    <a href="../gestion-activos/proc-identificacion-registro-activos.html"
+                    <a href="../gestion-activos/gestion-activos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Identificación y Registro de Activos</span>
+                        <span>Siguiente: Gestión de Activos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
-
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento Responsabilidades entre los
-                            Proveedores Externos de Servicios de TI y la Propia Organización</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Responsabilidades entre Proveedores Externos
+                            de Servicios de TI y la Propia Organización</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
-                                <span>Código: P124-IT-1</span>
+                                <span>Código: MC124-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 10/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX (VDA ISA 1.2.4), ISO 27001:2022 (A.8.9, A.5.19–A.5.23)</span>
+                                <span>Cumple: TISAX (VDA ISA 1.2.4), ISO 27001:2022</span>
                             </div>
                         </div>
                     </div>
@@ -92,7 +91,7 @@
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                                 OBJETIVO
                             </h2>
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Describir las actividades para identificar los <strong>servicios de TI externos</strong>, determinar sus requisitos de seguridad, asignar y comunicar de forma verificable las responsabilidades entre <strong>PRODISMO SRL</strong> y cada <strong>proveedor</strong>, asegurar la <strong>configuración segura</strong> de los servicios y verificar periódicamente que cada organización cumpla sus responsabilidades, en cumplimiento de la política <strong>MC124-IT-1</strong>, del control <strong>A.8.9</strong> y de los controles <strong>A.5.19 a A.5.23</strong> de <strong>ISO/IEC 27001:2022</strong>, y del control <strong>1.2.4</strong> del catálogo <strong>VDA ISA 6 (TISAX)</strong>.</p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Establecer los lineamientos para que, al utilizar <strong>proveedores y servicios de TI externos</strong>, <strong>PRODISMO SRL</strong> identifique los servicios involucrados, determine sus requisitos de seguridad de la información y defina y documente de forma verificable <strong>qué organización es responsable de implementar cada requisito</strong>, asegurando que dicha organización conozca y cumpla su responsabilidad y que la <strong>configuración de los servicios</strong> se conciba, implemente y documente de acuerdo con los requisitos de seguridad. Esta política da cumplimiento al control <strong>A.8.9 (Gestión de la configuración)</strong> y a los controles <strong>A.5.19 a A.5.23</strong> (relación con proveedores y servicios en la nube) del Anexo A de <strong>ISO/IEC 27001:2022</strong>, así como al control <strong>1.2.4</strong> del catálogo <strong>VDA ISA 6</strong> del marco <strong>TISAX</strong>.</p>
                         </section>
 
                         <section id="alcance" class="mb-12 scroll-mt-20">
@@ -101,11 +100,22 @@
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                                 ALCANCE
                             </h2>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Todos los servicios de TI externos</strong> registrados en el <strong>F124-IT-1</strong>, nuevos o vigentes.</li>
-                                <li><strong>Todas las etapas</strong> de la relación con el proveedor: selección, contratación, puesta en servicio, operación, cambios y finalización.</li>
-                                <li><strong>El personal de PRODISMO SRL</strong> que contrata, configura, administra o supervisa servicios de TI externos.</li>
+                                <li><strong>Todos los servicios de TI externos</strong> utilizados por PRODISMO SRL, incluyendo:
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li><strong>Servicios en la nube:</strong> plataforma Microsoft 365 / Azure AD (comunicaciones e intercambio de archivos e información).</li>
+                                        <li><strong>Servicios gestionados:</strong> administración de redes, enlaces de Internet, cámaras de vigilancia (CCTV) y telefonía IP.</li>
+                                        <li><strong>Desarrollo y soporte de software:</strong> ERP SIP / SIP4.0 y aplicaciones web (por ejemplo, viajes.prodismo.com).</li>
+                                        <li><strong>Hosting, dominio, DNS y certificados SSL</strong> de prodismo.com.</li>
+                                        <li><strong>Servicios de ciberseguridad:</strong> pruebas de penetración (pentesting) y fortalecimiento de usuarios.</li>
+                                        <li><strong>Software con licencia y herramientas de acceso remoto:</strong> CATIA, NX, AutoForm y AnyDesk.</li>
+                                        <li><strong>Suministro de hardware</strong> informático y de red.</li>
+                                        <li><strong>Borrado seguro y destrucción física de soportes</strong> de información (discos y equipos dados de baja).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Todos los proveedores</strong> que presten dichos servicios y <strong>todo el personal de PRODISMO SRL</strong> responsable de contratarlos, configurarlos, administrarlos o supervisarlos.</li>
+                                <li><strong>Toda la información</strong> de PRODISMO SRL y de sus clientes automotrices que sea procesada, almacenada o transmitida mediante servicios de TI externos.</li>
                             </ul>
                         </section>
 
@@ -116,12 +126,14 @@
                                 REFERENCIAS NORMATIVAS
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.9, A.5.19, A.5.20, A.5.21, A.5.22, A.5.23</li>
-                                <li><strong>ISO/IEC 27002:2022</strong> - Apartados 5.19 a 5.23 y 8.9</li>
-                                <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.2.4</strong></li>
-                                <li>Política de Responsabilidades entre Proveedores Externos de Servicios de TI y la Propia Organización <strong>MC124-IT-1</strong></li>
+                                <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.9 (Gestión de la configuración); A.5.19 (Seguridad de la información en las relaciones con proveedores); A.5.20 (Tratamiento de la seguridad en los acuerdos con proveedores); A.5.21 (Gestión de la seguridad en la cadena de suministro de TIC); A.5.22 (Seguimiento, revisión y gestión de cambios de los servicios de proveedores); A.5.23 (Seguridad de la información en el uso de servicios en la nube)</li>
+                                <li><strong>ISO/IEC 27002:2022</strong> - Apartados 5.19 a 5.23 y 8.9, guía de implementación de los controles</li>
+                                <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.2.4</strong> (Responsabilidades entre proveedores externos de servicios de TI y la propia organización)</li>
+                                <li><strong>Ley 25.326</strong> de Protección de Datos Personales (República Argentina)</li>
+                                <li>Procedimiento de Responsabilidades entre los Proveedores Externos de Servicios de TI y la Propia Organización <strong>P124-IT-1</strong></li>
+                                <li>Política de Organización de la Seguridad de la Información <strong>MC121-IT-1</strong></li>
                                 <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
-                                <li>Procedimiento de Gestión de Incidentes <strong>P121-IT-1</strong></li>
+                                <li>Procedimiento de Seguridad de la Información <strong>P111-IT-1</strong> (sección 6.3, gestión de incidentes)</li>
                             </ul>
                         </section>
 
@@ -131,626 +143,892 @@
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                                 DEFINICIONES
                             </h2>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">Se aplican las definiciones de la política <strong>MC124-IT-1</strong>. En particular:</p>
                             <div class="space-y-4">
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Proveedor de servicios de TI:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Organización externa que presta a PRODISMO SRL servicios de tecnología de la información (nube, redes, desarrollo, hosting, soporte, seguridad o suministro de hardware y software).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Servicio de TI externo:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Servicio de tecnología de la información prestado total o parcialmente por un proveedor de servicios de TI.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable interno del servicio:</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Persona de PRODISMO SRL que gestiona la relación con el proveedor y supervisa el cumplimiento de las responsabilidades de seguridad.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Persona de PRODISMO SRL designada para gestionar la relación con el proveedor y supervisar el cumplimiento de las responsabilidades de seguridad del servicio.</p>
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Matriz de responsabilidades (RACI):</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Documento que indica, para cada requisito de seguridad, quién lo ejecuta, aprueba, es consultado o informado.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Documento que indica, para cada requisito de seguridad, quién es Responsable de ejecutarlo, quién Aprueba, a quién se Consulta y a quién se Informa.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Modelo de responsabilidad compartida:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Distribución de las responsabilidades de seguridad entre el proveedor de un servicio (en especial, en la nube) y el cliente que lo utiliza.</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">SLA (Acuerdo de Nivel de Servicio):</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Acuerdo que establece los niveles de servicio comprometidos por el proveedor (disponibilidad, tiempos de respuesta y resolución).</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white mb-2">NDA:</h3>
+                                    <p class="text-gray-700 dark:text-gray-300">Acuerdo de confidencialidad firmado con el proveedor.</p>
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Línea base de configuración (hardening):</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Parámetros documentados de configuración segura de un sistema o servicio.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Conjunto documentado de parámetros de configuración segura que debe cumplir un sistema o servicio.</p>
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Acceso remoto de terceros:</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Conexión de un proveedor a los sistemas de PRODISMO SRL desde fuera de sus instalaciones (AnyDesk, VPN).</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Conexión de un proveedor a los sistemas de PRODISMO SRL desde fuera de sus instalaciones (por ejemplo, mediante AnyDesk o VPN).</p>
                                 </div>
                             </div>
                         </section>
 
-                        <section id="roles-y-responsabilidades" class="mb-12 scroll-mt-20">
+                        <section id="responsables" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                                ROLES Y RESPONSABILIDADES
+                                RESPONSABLES
                             </h2>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Rol</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Tareas en el procedimiento</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Ejemplo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                IT Manager / RSI</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Determinar requisitos de seguridad.</li><li>Aprobar la matriz y las líneas base.</li><li>Aprobar excepciones.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Aprobar la matriz de Armanet S.A. para redes y CCTV.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Responsable interno del servicio</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Registrar el servicio en F124-IT-1.</li><li>Comunicar responsabilidades y obtener aceptación.</li><li>Evaluar al proveedor (F124-IT-2).</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Esteban Manzoni evalúa a Enter-Geminus (SIP4.0).</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Administrador de IT</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Implementar configuraciones a cargo de PRODISMO.</li><li>Verificar configuraciones (F124-IT-3).</li><li>Controlar accesos remotos.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Verificar MFA en Microsoft 365.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Representante Legal / Compras</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Incluir cláusulas y NDA en contratos u órdenes de compra.</li><li>Custodiar contratos.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                NDA con Cubits S.R.L.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Proveedor</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Aceptar y cumplir sus responsabilidades.</li><li>Notificar incidentes y cambios.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Telecom Argentina entrega informe de pentesting.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="space-y-4">
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Aprobar esta política y la contratación de servicios de TI externos de criticidad Crítica o Alta.</li>
+                                        <li>Asignar los recursos necesarios para la gestión y supervisión de los proveedores.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">IT Manager / Responsable de Seguridad de la Información (RSI)</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Mantener esta política, el procedimiento <strong>P124-IT-1</strong> y el registro <strong>F124-IT-1</strong>.</li>
+                                        <li>Determinar los requisitos de seguridad de cada servicio y aprobar la matriz de responsabilidades.</li>
+                                        <li>Aprobar las líneas base de configuración y las excepciones.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Responsable Interno del Servicio</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Comunicar al proveedor sus responsabilidades de seguridad y obtener su aceptación.</li>
+                                        <li>Supervisar el cumplimiento del proveedor y de PRODISMO SRL, y realizar las evaluaciones <strong>F124-IT-2</strong>.</li>
+                                        <li>Mantener actualizada la configuración documentada del servicio (<strong>F124-IT-3</strong>).</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Implementar y verificar las configuraciones de seguridad a cargo de PRODISMO SRL.</li>
+                                        <li>Controlar y registrar los accesos remotos de los proveedores.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Representante Legal / Administración y Compras</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Incluir las cláusulas de seguridad, confidencialidad y SLA en contratos, órdenes de compra y NDA.</li>
+                                        <li>Custodiar los contratos y acuerdos firmados con los proveedores.</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Proveedores Externos de Servicios de TI</h3>
+                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
+                                        <li>Cumplir las responsabilidades de seguridad asignadas y aceptadas.</li>
+                                        <li>Notificar a PRODISMO SRL los incidentes de seguridad y los cambios relevantes en el servicio.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </section>
 
-                        <section id="descripcion-del-procedimiento" class="mb-12 scroll-mt-20">
+                        <section id="servicios-de-ti-externos-identificados" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                                DESCRIPCIÓN DEL PROCEDIMIENTO
+                                SERVICIOS DE TI EXTERNOS IDENTIFICADOS
                             </h2>
                             <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1. Etapa 1 – Identificación del Servicio</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El responsable interno registra el servicio en el <strong>F124-IT-1</strong> (hoja "Servicios"): servicio, proveedor, tipo, información involucrada, accesos del proveedor, contrato y contactos.</li>
-                                    <li>Se asigna la <strong>criticidad</strong> (Crítica, Alta, Media o Baja) según los criterios de la política <strong>MC124-IT-1</strong>.</li>
-                                    <li>Para servicios nuevos, el registro se realiza <strong>antes de la contratación</strong>; para servicios vigentes, en la primera revisión posterior a la emisión de este procedimiento.</li>
-                                </ul>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.1. Inventario de Servicios</h3>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">Los servicios de TI externos se registran en el <strong>F124-IT-1</strong>. A la fecha de emisión se identifican los siguientes:</p>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Servicio</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Proveedor</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Criticidad</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Responsable interno</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Microsoft 365 / Azure AD (Teams, SharePoint, OneDrive, Exchange)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Microsoft (licencias directas) y Telecom Argentina (partner)</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                    Crítica</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Servicio de Internet principal</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Airsat S.A.</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                    Crítica</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Administración de redes</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Armanet S.A.</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                    Crítica</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Cámaras de vigilancia (CCTV)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Armanet S.A.</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Internet de respaldo</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Batcom</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Desarrollo y soporte del ERP SIP / SIP4.0</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Enter-Geminus</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                    Crítica</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Esteban Manzoni</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Desarrollo y administración de aplicaciones web (viajes.prodismo.com)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Cubits S.R.L.</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Hosting de aplicaciones web, dominio, DNS y certificados SSL</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Donweb.com</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Ciberseguridad: pentesting y fortalecimiento de usuarios</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Telecom Argentina</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Telefonía IP</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Telecom Argentina</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">
+                                                    Baja</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Acceso remoto (licencias pagas)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    AnyDesk (directo)</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Licencias CAD/CAE (sin soporte remoto)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Dassault Systèmes – CATIA (directo); Siemens – NX (directo); AutoForm (revendedor)</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Nicolás Altamirano / Javier Solimano</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Suministro de hardware</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    PCCore, Armanet S.A., Venex</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Borrado de información / Destrucción física de hardware</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    CBL Tecnología</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Emiliano Ferrari</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Gestión de legajos y recibos de sueldo</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Tulegajo.com</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Mariano Nieto</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Inventario de activos de TI</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Snipe-IT (SaaS)</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Hosting de la App de Seguimiento Ing/Fab</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Railway</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">
+                                                    Baja</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Servidor virtual en la nube para SIP4.0</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Microsoft Azure</td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    Germán Montalbetti</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">No se utilizan servicios externos de antivirus/EDR, backup en la nube ni impresión gestionada: dichas funciones se gestionan internamente.</p>
                             </div>
 
                             <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2. Etapa 2 – Determinación de los Requisitos de Seguridad</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El IT Manager determina los requisitos aplicables considerando: la clasificación de la información involucrada, los requisitos de clientes automotrices (TISAX, NDA), los requisitos legales y el tipo de servicio.</li>
-                                    <li>Los requisitos se cargan en la hoja "Matriz de Responsabilidades" del <strong>F124-IT-1</strong>, uno por fila.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.3. Etapa 3 – Evaluación del Proveedor</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Para servicios Críticos y Altos se completa el <strong>checklist F124-IT-2</strong> antes de contratar o, para servicios vigentes, en la primera evaluación.</li>
-                                    <li><strong>Resultado aceptable:</strong> cumplimiento igual o mayor al <strong>80 %</strong> de los ítems aplicables y ningún incumplimiento en ítems marcados como obligatorios.</li>
-                                    <li>Si el resultado no es aceptable, se define un plan de acción con el proveedor o se eleva la decisión a la Alta Dirección.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.4. Etapa 4 – Asignación y Comunicación de Responsabilidades</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Para cada requisito se define la organización responsable (<strong>PRODISMO</strong>, <strong>Proveedor</strong> o <strong>Compartida</strong>, indicando la división) y el responsable de PRODISMO.</li>
-                                    <li>Se define el <strong>mecanismo de asignación</strong>: contrato u orden de compra, NDA, SLA o términos del servicio, aceptación de la matriz o configuración de roles en el portal.</li>
-                                    <li>El responsable interno <strong>envía al proveedor</strong> la parte de la matriz que le corresponde y obtiene su <strong>aceptación por escrito</strong> (firma o correo electrónico), que se archiva como evidencia.</li>
-                                    <li>Para servicios estándar sin posibilidad de negociación (por ejemplo, Microsoft 365 o AnyDesk), se documentan los términos del servicio y el modelo de responsabilidad compartida publicado por el proveedor.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.5. Etapa 5 – Configuración Segura e Implementación</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Se documenta la <strong>línea base de configuración</strong> del servicio en el <strong>F124-IT-3</strong>, indicando quién configura cada elemento.</li>
-                                    <li>Antes de la puesta en producción, el Administrador de IT <strong>verifica</strong> cada elemento y registra fecha, resultado y evidencia.</li>
-                                    <li>Los cambios de configuración posteriores requieren aprobación del responsable interno y actualización del <strong>F124-IT-3</strong>.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.6. Etapa 6 – Seguimiento y Verificación del Cumplimiento</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Se realizan las verificaciones con la frecuencia indicada en la sección 8.</li>
-                                    <li>Se revisan: SLA, incidentes, informes del proveedor, accesos remotos registrados y estado de la configuración.</li>
-                                    <li>Se verifica también el cumplimiento de las responsabilidades <strong>a cargo de PRODISMO SRL</strong>.</li>
-                                    <li>Los desvíos se registran en el F124-IT-2 con acción, responsable y fecha; los graves se informan al Comité de Seguridad.</li>
-                                </ul>
-                            </div>
-
-                            <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.7. Etapa 7 – Cambios y Finalización del Servicio</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Ante cambios de proveedor, alcance o tecnología, se repiten las etapas 2 a 5 para los elementos afectados.</li>
-                                    <li>Al finalizar el servicio: se revocan accesos y cuentas, se cambian credenciales compartidas, se solicita la devolución o el borrado seguro de la información (con constancia escrita) y se da de baja el servicio en el <strong>F124-IT-1</strong>.</li>
-                                </ul>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">6.2. Criterios de Criticidad</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Criticidad</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Criterio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
+                                                    Crítica</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    El servicio procesa información Crítica o de clientes (datos CAD, prototipos, ERP), o su indisponibilidad detiene la operación.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
+                                                    Alta</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    El servicio tiene acceso a la red o a sistemas internos, protege la seguridad física o afecta la identidad digital de la empresa (dominio, correo).</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
+                                                    Media</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    El servicio procesa información Interna o tiene alternativas de continuidad.</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">
+                                                    Baja</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    El servicio no procesa información sensible ni tiene acceso a sistemas internos.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </section>
 
-                        <section id="matriz-de-responsabilidades-por-servicio" class="mb-12 scroll-mt-20">
+                        <section id="requisitos-de-seguridad-de-los-servicios" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                                MATRIZ DE RESPONSABILIDADES POR SERVICIO
+                                REQUISITOS DE SEGURIDAD DE LOS SERVICIOS DE TI EXTERNOS
                             </h2>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">Resumen de la distribución de responsabilidades vigente. El detalle por requisito se mantiene en el <strong>F124-IT-1</strong>.</p>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Servicio / Proveedor</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsabilidades del proveedor</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsabilidades de PRODISMO</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Microsoft 365 / Azure AD<br>Microsoft · Telecom Argentina (partner)</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Infraestructura, disponibilidad y seguridad física del servicio en la nube.</li><li>Partner: gestión de licencias con privilegios de administración mínimos.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Altas y bajas de usuarios, MFA y permisos.</li><li>Configuración de compartición externa y cifrado de archivos CATIA/NX.</li><li>Revisión de privilegios del partner.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Redes e Internet principal<br>Armanet S.A.</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Configuración y mantenimiento de equipos de red y firewall.</li><li>Actualización de firmware y respaldo de configuraciones.</li><li>Disponibilidad según SLA.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Aprobar cambios y reglas de firewall.</li><li>Verificar segmentación y accesos.</li><li>Autorizar accesos remotos del proveedor.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                CCTV<br>Armanet S.A.</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Instalación, mantenimiento y actualización de cámaras y grabador (NVR).</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Definir ubicación de cámaras y retención de grabaciones.</li><li>Controlar quién accede a las grabaciones.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Internet de respaldo<br>Batcom</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Disponibilidad del enlace según contrato.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Configurar y probar la conmutación (failover).</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                ERP SIP / SIP4.0<br>Enter-Geminus</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Desarrollo seguro, pruebas y corrección de vulnerabilidades.</li><li>Acceso a producción solo autorizado.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Aprobar cambios y pases a producción.</li><li>Gestionar usuarios y perfiles.</li><li>Backups de la base de datos.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Aplicaciones web (viajes.prodismo.com)<br>Cubits S.R.L. · Donweb.com</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Cubits: desarrollo seguro, actualizaciones y administración de la aplicación.</li><li>Donweb: hosting, backups del servidor, certificado SSL, dominio y DNS.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Aprobar publicaciones y cambios.</li><li>Proteger las credenciales del panel Donweb con MFA.</li><li>Controlar renovación del dominio.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Ciberseguridad<br>Telecom Argentina</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Ejecutar pentesting y acciones de fortalecimiento de usuarios dentro del alcance autorizado.</li><li>Confidencialidad de los informes.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Autorizar por escrito el alcance.</li><li>Remediar los hallazgos.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Telefonía IP<br>Telecom Argentina</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Disponibilidad del servicio telefónico.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Gestión de internos y usuarios.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Acceso remoto<br>AnyDesk</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Seguridad de la plataforma y del servicio de licencias.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Administración de licencias, listas de acceso y aceptación de sesiones.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Licencias CAD/CAE<br>Dassault Systèmes · Siemens · AutoForm (revendedor)</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Provisión y vigencia de licencias.</li><li>Actualizaciones de software.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Instalación y gestión interna de licencias.</li><li>No enviar datos de clientes al soporte sin autorización.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Hardware<br>PCCore · Armanet S.A. · Venex</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Equipos originales y garantía.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Configuración segura antes de la entrega a usuarios.</li><li>Borrado seguro de discos antes de devoluciones (RMA) o bajas.</li></ul></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Requisitos Generales (todos los proveedores)</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Firma de <strong>NDA</strong> antes de acceder a información de PRODISMO SRL o de sus clientes.</li>
+                                    <li>Acceso a información y sistemas limitado a lo necesario para prestar el servicio, con cuentas nominativas.</li>
+                                    <li><strong>Notificación de incidentes</strong> de seguridad que afecten a PRODISMO SRL en un plazo máximo de <strong>24 horas</strong> desde su detección.</li>
+                                    <li>Aviso previo de cambios relevantes en el servicio y de la subcontratación de terceros.</li>
+                                    <li>Devolución o borrado seguro de la información al finalizar el servicio.</li>
+                                    <li>Cumplimiento de la Ley 25.326 cuando se traten datos personales.</li>
+                                    <li>Disponibilidad de evidencias que permitan verificar el cumplimiento de sus responsabilidades.</li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.2. Requisitos según el Tipo de Servicio</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Tipo de servicio</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Requisitos de seguridad principales</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Nube (SaaS)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>MFA para todas las cuentas.</li><li>Restricción de compartición externa.</li><li>Registro de auditoría habilitado.</li><li>Privilegios mínimos para el partner (administración delegada).</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Servicios gestionados (redes, CCTV, Internet)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Segmentación de redes.</li><li>Credenciales no predeterminadas.</li><li>Acceso remoto del proveedor controlado y registrado.</li><li>Respaldo de configuraciones.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Desarrollo y soporte de software</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Separación de entornos.</li><li>Cambios aprobados antes del pase a producción.</li><li>Pruebas de seguridad.</li><li>Acceso a producción solo autorizado y temporal.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Hosting, dominio y DNS</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>HTTPS con certificado vigente.</li><li>Bloqueo de transferencia y renovación del dominio.</li><li>MFA en el panel de administración.</li><li>Backups del sitio.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Ciberseguridad</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Autorización escrita y alcance definido.</li><li>Confidencialidad de informes y hallazgos.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Acceso remoto / software</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Licencias corporativas centralizadas.</li><li>Listas de acceso y aceptación manual de sesiones.</li><li>Datos de clientes no se comparten con soporte del fabricante sin autorización.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Suministro de hardware</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Origen confiable y garantía.</li><li>Borrado seguro de discos antes de devolver equipos (RMA) o darlos de baja.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Borrado y destrucción de soportes</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Borrado seguro o destrucción física con certificado por equipo / n° de serie.</li><li>Cadena de custodia: inventario de soportes entregados y constancia de retiro.</li><li>Confidencialidad de la información contenida en los soportes.</li></ul></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </section>
 
-                        <section id="frecuencias-de-verificacion" class="mb-12 scroll-mt-20">
+                        <section id="distribucion-de-responsabilidades" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                                FRECUENCIAS DE VERIFICACIÓN
+                                DISTRIBUCIÓN DE RESPONSABILIDADES
                             </h2>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Criticidad</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Evaluación del proveedor (F124-IT-2)</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Verificación de configuración (F124-IT-3)</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Revisión de la matriz (F124-IT-1)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-red-600 dark:text-red-400">
-                                                Crítica</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Semestral</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-orange-600 dark:text-orange-400">
-                                                Alta</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-yellow-600 dark:text-yellow-400">
-                                                Media</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Cada 2 años</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">
-                                                Baja</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Al renovar el servicio</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                No requerida</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.1. Principios</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li>Cada requisito de seguridad de un servicio tiene <strong>una organización responsable</strong> de implementarlo: PRODISMO SRL, el proveedor o ambas (responsabilidad compartida con división explícita).</li>
+                                    <li>La distribución se documenta en la <strong>Matriz de Responsabilidades (F124-IT-1)</strong> antes de iniciar el servicio o, para servicios vigentes, en la primera revisión.</li>
+                                    <li>El proveedor es <strong>informado</strong> de sus responsabilidades y las <strong>acepta</strong> en forma verificable.</li>
+                                    <li>Ningún requisito puede quedar sin responsable asignado.</li>
+                                </ul>
                             </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.2. Modelo de Responsabilidad Compartida</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                        <thead class="bg-gray-50 dark:bg-gray-800">
+                                            <tr>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Ámbito</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    PRODISMO SRL</th>
+                                                <th
+                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
+                                                    Proveedor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Nube (Microsoft 365)</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Usuarios, MFA y permisos.</li><li>Clasificación y cifrado de datos.</li><li>Configuración de compartición.</li></ul></td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Infraestructura, disponibilidad y seguridad física del servicio.</li><li>Partner: licencias con privilegios mínimos.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Redes, CCTV e Internet</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Definir requisitos y aprobar cambios.</li><li>Verificar configuraciones.</li></ul></td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Configurar, mantener y actualizar equipos.</li><li>Respaldar configuraciones.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    ERP y aplicaciones web</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Aprobar cambios y gestionar usuarios.</li><li>Backups de datos internos (SIP).</li></ul></td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Desarrollo seguro y pruebas.</li><li>Hosting y backups del sitio web.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Ciberseguridad</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Autorizar pruebas y remediar hallazgos.</li></ul></td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Ejecutar pruebas e informar resultados.</li></ul></td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                    Hardware</td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Configuración segura antes de la entrega a usuarios.</li></ul></td>
+                                                <td
+                                                    class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Suministro original y garantía.</li></ul></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">El detalle por servicio se establece en el procedimiento <strong>P124-IT-1</strong> y en el registro <strong>F124-IT-1</strong>.</p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">8.3. Mecanismos de Asignación de Responsabilidades</h3>
+                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>Contratos u órdenes de compra</strong> con cláusulas de seguridad y confidencialidad.</li>
+                                    <li><strong>NDA</strong> firmados por el proveedor.</li>
+                                    <li><strong>SLA</strong> o condiciones del servicio publicadas por el proveedor (en el caso de servicios estándar como Microsoft 365 o AnyDesk).</li>
+                                    <li><strong>Envío de la Matriz de Responsabilidades</strong> al proveedor y registro de su aceptación (firma o correo electrónico de confirmación).</li>
+                                    <li><strong>Configuración técnica de roles y permisos</strong> en los portales de administración (por ejemplo, administración delegada del partner en Microsoft 365).</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section id="gestion-de-la-configuracion-de-los-servi" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                GESTIÓN DE LA CONFIGURACIÓN DE LOS SERVICIOS
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Cada servicio de criticidad Crítica o Alta tiene una <strong>línea base de configuración segura</strong> documentada en el <strong>F124-IT-3</strong>, que indica quién es responsable de cada elemento.</li>
+                                <li>La configuración se verifica <strong>antes de la puesta en producción</strong> y en las revisiones periódicas.</li>
+                                <li>Los cambios de configuración realizados por el proveedor requieren <strong>aprobación previa</strong> del responsable interno del servicio y quedan registrados.</li>
+                                <li>Las configuraciones de equipos de red y servicios críticos se respaldan para permitir su restauración.</li>
+                                <li>Las credenciales de administración se almacenan de forma segura y se cambian al finalizar la relación con el proveedor.</li>
+                            </ul>
+                        </section>
+
+                        <section id="acceso-de-proveedores" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
+                                ACCESO DE PROVEEDORES
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Los accesos remotos de proveedores (AnyDesk / VPN) son <strong>temporales, autorizados</strong> por el IT Manager o el Administrador de IT y <strong>registrados</strong>.</li>
+                                <li>Las sesiones remotas requieren aceptación del usuario de PRODISMO SRL y se realizan con cuentas nominativas.</li>
+                                <li>Los accesos físicos de proveedores a planta o sala de servidores se registran y son acompañados.</li>
+                                <li>Los accesos se revocan al finalizar cada intervención o el contrato.</li>
+                            </ul>
+                        </section>
+
+                        <section id="seguimiento-y-verificacion-del-cumplimie" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                SEGUIMIENTO Y VERIFICACIÓN DEL CUMPLIMIENTO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Los responsables internos evalúan a los proveedores con el <strong>checklist F124-IT-2</strong>, con una frecuencia según su criticidad (Crítica y Alta: anual; Media: cada dos años; Baja: al renovar el servicio).</li>
+                                <li>Se revisan los SLA, los incidentes, los informes del proveedor (por ejemplo, informes de pentesting) y la configuración documentada.</li>
+                                <li>Se verifica también que <strong>PRODISMO SRL cumpla sus propias responsabilidades</strong> en la matriz.</li>
+                                <li>Los incumplimientos se registran y se tratan con un plan de acción; los incumplimientos graves se escalan a la Alta Dirección, que puede decidir el cambio de proveedor.</li>
+                            </ul>
                         </section>
 
                         <section id="capacitacion-del-personal-responsable" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                                 CAPACITACIÓN DEL PERSONAL RESPONSABLE
                             </h2>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Servicios a cargo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Capacitación requerida</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Germán Montalbetti</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                CCTV, aplicaciones web, Donweb, ciberseguridad</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Gestión de proveedores y requisitos TISAX.</li><li>Seguridad en aplicaciones web y DNS.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Emiliano Ferrari</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Microsoft 365, redes, Internet, AnyDesk, telefonía, hardware</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Seguridad en Microsoft 365 / Azure AD.</li><li>Administración segura de AnyDesk y redes.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Esteban Manzoni</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                ERP SIP / SIP4.0</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Gestión de usuarios y cambios en SIP4.0.</li><li>Requisitos de este procedimiento.</li></ul></td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Nicolás Altamirano / Javier Solimano</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Licencias CAD/CAE</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Protección de datos de clientes en soporte técnico.</li></ul></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>El personal responsable de administrar servicios externos recibe capacitación en la configuración segura de dichos servicios (por ejemplo, seguridad en Microsoft 365, administración de AnyDesk, gestión del ERP SIP4.0).</li>
+                                <li>Los responsables internos conocen esta política, el procedimiento <strong>P124-IT-1</strong> y los requisitos TISAX aplicables.</li>
+                                <li>La capacitación se registra en el legajo del empleado y se evalúa según la política <strong>MC122-IT-1</strong>.</li>
+                            </ul>
                         </section>
 
-                        <section id="resumen-del-procedimiento" class="mb-12 scroll-mt-20">
+                        <section id="cambios-y-finalizacion-de-servicios" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                                RESUMEN DEL PROCEDIMIENTO
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
+                                CAMBIOS Y FINALIZACIÓN DE SERVICIOS
                             </h2>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Etapa</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Registro</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                1. Identificación del servicio</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Responsable interno</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-1 (Servicios)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                2. Requisitos de seguridad</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                IT Manager</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-1 (Matriz)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                3. Evaluación del proveedor</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Responsable interno</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-2</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                4. Asignación y comunicación</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Responsable interno / Legal</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-1 + aceptación del proveedor</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                5. Configuración segura</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Administrador de IT</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-3</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                6. Seguimiento</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Responsable interno</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-2 / F124-IT-3</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                7. Cambios y finalización</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Responsable interno / IT</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                F124-IT-1 + constancia de borrado</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li>Todo cambio de proveedor, alcance o tecnología de un servicio se evalúa antes de su implementación y actualiza el <strong>F124-IT-1</strong> y el <strong>F124-IT-3</strong>.</li>
+                                <li>Al finalizar un servicio se revocan los accesos y credenciales, se cambian contraseñas compartidas y se obtiene la devolución o el borrado seguro de la información.</li>
+                                <li>Los incidentes de seguridad informados por proveedores se gestionan según el procedimiento <strong>P111-IT-1</strong>, sección 6.3.</li>
+                            </ul>
                         </section>
 
                         <section id="registros-y-evidencias" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
                                 REGISTROS Y EVIDENCIAS
                             </h2>
                             <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">11.1. Registros</h3>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">14.1. Registros Obligatorios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>F124-IT-1:</strong> Registro de Servicios de TI Externos y Matriz de Responsabilidades.</li>
                                     <li><strong>F124-IT-2:</strong> Checklist de Evaluación de Seguridad del Proveedor.</li>
                                     <li><strong>F124-IT-3:</strong> Registro de Configuración Segura del Servicio.</li>
-                                    <li>Contratos, órdenes de compra, NDA, SLA y aceptaciones de responsabilidades de los proveedores.</li>
+                                    <li><strong>Contratos, órdenes de compra, SLA y NDA</strong> firmados con los proveedores.</li>
+                                    <li><strong>Aceptación de responsabilidades</strong> por parte del proveedor (firma o correo electrónico).</li>
+                                    <li><strong>Registros de accesos remotos</strong> y de capacitación del personal responsable.</li>
                                 </ul>
                             </div>
 
                             <div class="mb-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">11.2. Evidencias para TISAX AL2</h3>
+                                <h3 class="font-semibold text-gray-900 dark:text-white mb-3">14.2. Retención de Registros</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Inventario de servicios de TI externos completo y actualizado.</li>
-                                    <li>Matriz de responsabilidades con aceptación del proveedor para servicios Críticos y Altos.</li>
-                                    <li>Configuración documentada y verificada de los servicios Críticos y Altos.</li>
-                                    <li>Evaluaciones periódicas de proveedores con acciones de seguimiento.</li>
-                                    <li>Registros de capacitación del personal responsable.</li>
+                                    <li><strong>Contratos, NDA y aceptaciones de responsabilidades:</strong> durante la vigencia del servicio y 5 años posteriores.</li>
+                                    <li><strong>Evaluaciones de proveedores y registros de configuración:</strong> 3 años.</li>
+                                    <li><strong>Registros de accesos remotos:</strong> 1 año.</li>
                                 </ul>
+                            </div>
+                        </section>
+
+                        <section id="monitoreo-y-cumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                MONITOREO Y CUMPLIMIENTO
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Auditorías internas</strong> anuales sobre una muestra de servicios de TI externos.</li>
+                                <li><strong>Revisión</strong> del estado de los proveedores en el Comité de Seguridad de la Información.</li>
+                                <li><strong>Indicadores de desempeño:</strong>
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li>Servicios de TI externos registrados con matriz de responsabilidades: Objetivo 100%.</li>
+                                        <li>Proveedores Críticos y Altos con aceptación de responsabilidades: Objetivo 100%.</li>
+                                        <li>Evaluaciones de proveedores realizadas en plazo: Objetivo &gt; 90%.</li>
+                                        <li>Servicios Críticos y Altos con configuración documentada y verificada: Objetivo &gt; 90%.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="sanciones-por-incumplimiento" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                                SANCIONES POR INCUMPLIMIENTO
+                            </h2>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">El incumplimiento de esta política podrá dar lugar a acciones disciplinarias de acuerdo con la política de sanciones de la empresa, que pueden incluir desde amonestaciones hasta la desvinculación laboral, dependiendo de la gravedad de la infracción. En el caso de proveedores, podrá implicar la rescisión del contrato y las acciones legales que correspondan.</p>
+                        </section>
+
+                        <section id="revision-y-actualizacion" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">17</span>
+                                REVISIÓN Y ACTUALIZACIÓN
+                            </h2>
+                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                <li><strong>Revisión anual</strong> de esta política, del procedimiento P124-IT-1 y del inventario de servicios.</li>
+                                <li><strong>Actualización inmediata</strong> ante la incorporación o baja de proveedores, o cambios significativos en los servicios.</li>
+                                <li><strong>Responsable de la revisión:</strong> RSI en coordinación con el IT Manager.</li>
+                            </ul>
+                        </section>
+
+                        <section id="anexos" class="mb-12 scroll-mt-20">
+                            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                                <span
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">18</span>
+                                ANEXOS
+                            </h2>
+                            <div class="space-y-4">
+                            <!-- Anexo A -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del registro F124-IT-1 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="#" target="_blank"
+                                    title="F124-IT-1 Registro de Servicios de TI Externos y Matriz de Responsabilidades - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F124-IT-1
+                                    </span>
+                                    Registro de Servicios de TI Externos y Matriz de Responsabilidades
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Inventario de servicios, proveedores, criticidad y distribución de responsabilidades por requisito]</p>
+                            </div>
+
+                            <!-- Anexo B -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del registro F124-IT-2 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="#" target="_blank"
+                                    title="F124-IT-2 Checklist de Evaluación de Seguridad del Proveedor - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F124-IT-2
+                                    </span>
+                                    Checklist de Evaluación de Seguridad del Proveedor
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Verificación periódica del cumplimiento de los proveedores y plan de evaluaciones]</p>
+                            </div>
+
+                            <!-- Anexo C -->
+                            <!-- TODO: reemplazar href="#" por el enlace de SharePoint del registro F124-IT-3 -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="#" target="_blank"
+                                    title="F124-IT-3 Registro de Configuración Segura del Servicio - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F124-IT-3
+                                    </span>
+                                    Registro de Configuración Segura del Servicio
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Líneas base de configuración por servicio, responsable y verificación]</p>
+                            </div>
+
+                            <!-- Anexo D -->
+                            <!-- TODO: verificar la ruta del procedimiento P124-IT-1 dentro del sitio -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="../../procedimientos/organizacion-seguridad/proc-responsabilidad-proveedor-externo.html"
+                                    title="P124-IT-1 Procedimiento Responsabilidades entre los Proveedores Externos de Servicios de TI y la Propia Organización"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P124-IT-1
+                                    </span>
+                                    Procedimiento de Responsabilidades con Proveedores Externos de Servicios de TI
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Etapas operativas: identificación, requisitos, evaluación, asignación, configuración y seguimiento]</p>
+                            </div>
                             </div>
                         </section>
 
                         <section id="revisiones-del-documento" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
-                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                                    class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">19</span>
                                 REVISIONES DEL DOCUMENTO
                             </h2>
                             <div class="overflow-x-auto">
@@ -785,6 +1063,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                10/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Proveedor de Internet principal corregido (Airsat S.A.); incorporación de CBL Tecnología (borrado y destrucción de soportes) al alcance, al inventario y a los requisitos por tipo de servicio; incorporación al inventario de Tulegajo.com, Snipe-IT, Railway y Microsoft Azure (SIP4.0); referencia de gestión de incidentes corregida a P111-IT-1.</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -793,21 +1080,22 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <a href="../organizacion-seguridad/proc-responsables-seguridad.html"
+                    <!-- TODO: verificar la ruta de la página MC123-IT-1 -->
+                    <a href="../requisitos-seguridad-proyectos/requisitos-seguridad-proyectos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Responsables de Seguridad</span>
+                        <span>Anterior: Requisitos de Seguridad en Proyectos</span>
                     </a>
-                    <a href="../gestion-activos/proc-identificacion-registro-activos.html"
+                    <a href="../gestion-activos/gestion-activos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Identificación y Registro de Activos</span>
+                        <span>Siguiente: Gestión de Activos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
             </main>
 
-            <!-- Floating Table of Contents -->
+            <!-- Table of Contents -->
             <aside class="lg:w-80 xl:w-90 flex-shrink-0">
                 <div class="sticky top-24">
                     <div
@@ -816,48 +1104,71 @@
                             <i class="fas fa-list-ul mr-2 text-primary-600"></i>
                             Tabla de Contenidos
                         </h3>
+
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 DEFINICIONES</a>
-                            <a href="#roles-y-responsabilidades"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                ROLES Y RESPONSABILIDADES</a>
-                            <a href="#descripcion-del-procedimiento"
-                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                DESCRIPCIÓN DEL PROCEDIMIENTO</a>
-                            <a href="#matriz-de-responsabilidades-por-servicio"
-                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                MATRIZ DE RESPONSABILIDADES</a>
-                            <a href="#frecuencias-de-verificacion"
-                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                FRECUENCIAS DE VERIFICACIÓN</a>
+                            <a href="#responsables"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                RESPONSABLES</a>
+                            <a href="#servicios-de-ti-externos-identificados"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                SERVICIOS DE TI EXTERNOS</a>
+                            <a href="#requisitos-de-seguridad-de-los-servicios"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REQUISITOS DE SEGURIDAD</a>
+                            <a href="#distribucion-de-responsabilidades"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DISTRIBUCIÓN DE RESPONSABILIDADES</a>
+                            <a href="#gestion-de-la-configuracion-de-los-servi"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                GESTIÓN DE LA CONFIGURACIÓN</a>
+                            <a href="#acceso-de-proveedores"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                ACCESO DE PROVEEDORES</a>
+                            <a href="#seguimiento-y-verificacion-del-cumplimie"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                SEGUIMIENTO Y VERIFICACIÓN</a>
                             <a href="#capacitacion-del-personal-responsable"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 CAPACITACIÓN DEL PERSONAL</a>
-                            <a href="#resumen-del-procedimiento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
-                                RESUMEN DEL PROCEDIMIENTO</a>
+                            <a href="#cambios-y-finalizacion-de-servicios"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                CAMBIOS Y FINALIZACIÓN</a>
                             <a href="#registros-y-evidencias"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
                                 REGISTROS Y EVIDENCIAS</a>
+                            <a href="#monitoreo-y-cumplimiento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                MONITOREO Y CUMPLIMIENTO</a>
+                            <a href="#sanciones-por-incumplimiento"
+                                class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16.
+                                SANCIONES POR INCUMPLIMIENTO</a>
+                            <a href="#revision-y-actualizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">17.
+                                REVISIÓN Y ACTUALIZACIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">18.
+                                ANEXOS</a>
                             <a href="#revisiones-del-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-400 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">19.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
+
                     <!-- Quick Actions -->
                     <div
-                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6">
+                        class="mt-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4">
                         <h4 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
                             <i class="fas fa-bolt mr-2 text-primary-600"></i>
                             Acciones Rápidas
@@ -886,11 +1197,11 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">P124-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">MC124-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -906,7 +1217,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">10/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
@@ -914,20 +1225,22 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </aside>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer id="footer-container" data-module="footer"></footer>
+    <div id="footer-container" data-module="footer"></div>
 
     <!-- Back to Top Button -->
     <button id="back-to-top"
-        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 invisible transform translate-y-4">
-        <i class="fas fa-arrow-up"></i>
+        class="fixed bottom-8 right-8 p-3 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-colors opacity-0 invisible z-50">
+        <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- JavaScript -->
     <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
 </body>
 
