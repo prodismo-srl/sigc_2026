@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Procedimientos de Gestión de Activos de Apoyo">
+<html lang="es" data-page-subtitle="Procedimiento de Gestión de Activos de Apoyo">
 
 <head>
     <meta charset="UTF-8">
@@ -64,8 +64,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de
-                            Activos de Apoyo</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Activos de Apoyo</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -74,407 +73,215 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 20/1/2026</span>
+                                <span>Última revisión: 16/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 3.1.3), ISO 27001:2022 (A.5.11, A.7.9, A.7.10, A.7.14)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer controles para el manejo seguro de activos de apoyo (hardware, dispositivos,
-                            medios) durante su ciclo de vida, garantizando la protección de activos críticos (CATIA/NX,
-                            SIP/SIP4.0), y en cumplimiento de normativas de <strong>ISO/IEC 27001:2022</strong>, así
-                            como los requisitos del marco <strong>TISAX</strong> y clientes automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir los pasos para gestionar los activos de apoyo en cada fase de su ciclo de vida, según <strong>MC313-IT-1</strong> y el control <strong>3.1.3</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
-                    <section id="clasificacion-activos" class="mb-12 scroll-mt-20">
+                    <section id="asignacion-devolucion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            CLASIFICACIÓN DE ACTIVOS DE APOYO
+                            ASIGNACIÓN, DEVOLUCIÓN Y REUTILIZACIÓN
                         </h2>
-
-                        <div class="mb-6">
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Tipo de Activo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Ejemplo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Nivel de Riesgo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Dispositivos de Almacenamiento</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">USB con
-                                                backups de CATIA</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-red-600 dark:text-red-400">
-                                                🔴 Crítico</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Equipos de IT</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Laptops con
-                                                acceso a SIP</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-yellow-600 dark:text-yellow-400">
-                                                🟡 Alto</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Medios Impresos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Planos de
-                                                diseño impresos</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-yellow-600 dark:text-yellow-400">
-                                                🟡 Alto</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Hardware en Reparación</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Servidor
-                                                enviado a mantenimiento</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-yellow-600 dark:text-yellow-400">
-                                                🟡 Alto</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Alta del equipo en Snipe-IT (tipo, serie, ubicación)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Checkout al usuario; correo de asignación y aviso por Teams</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Egreso o cambio de puesto: RRHH avisa a IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Correo</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Devolución: checkin y revisión del estado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Reutilización: borrado del disco y reinstalación de Windows desde la imagen predefinida</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT (nota en el activo)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="requisitos-fases" class="mb-12 scroll-mt-20">
+                    <section id="almacenamiento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            REQUISITOS POR FASE DEL CICLO DE VIDA
+                            ALMACENAMIENTO Y DISCOS DE BACKUP
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Transporte</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Interno:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Sin requisitos especiales.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Externo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Proveedores de reparación deben firmar NDA <strong>TISAX</strong> o tener
-                                            certificación <strong>ISO 27001</strong>.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Almacenamiento</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Activo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Medida de Seguridad</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                USB con datos confidenciales o diseños críticos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cajón/Armario
-                                                con llave + registro.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Laptops</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Armario con
-                                                llave.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Reparación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Proveedores Autorizados:</strong> Lista aprobada por el IT Manager (ej.:
-                                    "Armanet S.A.").</li>
-                                <li><strong>Borrado Seguro:</strong> Eliminar datos del disco o retirar disco antes de
-                                    enviar equipos.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Pérdida/Robo</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Reporte Inmediato (&lt;1h)</strong> a Administrador IT o IT Manager.</li>
-                                <li><strong>Acciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Bloqueo remoto vía MDM (Microsoft Intune).</li>
-                                        <li>Notificación a clientes si afecta datos.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">E. Eliminación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Electrónicos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Destrucción física de discos (certificado de destrucción).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Documentos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Trituradora de corte cruzado (nivel P-7) para planos.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los equipos sin asignar se guardan bajo llave a cargo de IT.</li><li>Los discos extraíbles de backup se cifran con BitLocker To Go, se registran en Snipe-IT con su ubicación y responsable, y se guardan bajo llave, preferentemente en una zona roja (MC311-IT-1). Hasta completar estas medidas se aplica NC-2026-12.</li></ul>
                     </section>
 
-                    <section id="responsables-documentacion" class="mb-12 scroll-mt-20">
+                    <section id="reparacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            RESPONSABLES Y DOCUMENTACIÓN
+                            REPARACIÓN Y TRANSPORTE
                         </h2>
-
-                        <div class="mb-6">
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Fase</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Registro Obligatorio</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Almacenamiento</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin IT</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Inventario
-                                                digital (Snipe-IT)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Eliminación</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin IT
-                                            </td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Certificado
-                                                de destrucción</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.1. Reparación interna</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>La hace IT y la registra en el F313-IT-2 (proveedor: "interno").</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">4.2. Reparación externa</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Solo con un proveedor del F313-IT-3 que tenga el acuerdo de confidencialidad firmado.</li><li>Antes de la salida: backup de la información del usuario; verificar que BitLocker esté activo; si la falla lo permite, retirar el disco o borrar la información confidencial.</li><li>Si el disco no se puede retirar ni borrar (por ejemplo, equipo en garantía), se registra en el F313-IT-2 y el equipo solo sale con BitLocker activo.</li><li>El proveedor retira y devuelve el equipo; IT registra en el F313-IT-2 la fecha de salida, la fecha estimada y la fecha real de retorno.</li></ul>
                     </section>
 
-                    <section id="monitoreo-auditoria" class="mb-12 scroll-mt-20">
+                    <section id="perdida-robo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            MONITOREO Y AUDITORÍA
+                            PÉRDIDA O ROBO
                         </h2>
-
-                        <div class="mb-6">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Auditorías Sorpresa:</strong> Verificar estado de USB's (semestral).</li>
-                                <li><strong>Indicadores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>% de dispositivos con cifrado activo (meta: 100%)</li>
-                                        <li>Tiempo promedio de respuesta a pérdidas (meta: &lt;2h)</li>
-                                    </ul>
-                                </li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Aviso inmediato a IT (correo itprodismo@prodismo.com o teléfono de MC161-IT-1)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Bloqueo del inicio de sesión o cambio de contraseña en Microsoft 365 y revocación de sesiones</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Estado del equipo en Snipe-IT ("perdido / robado")</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Registro del incidente y evaluación de la información afectada (P162-IT-1)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager / RSI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Denuncia policial en caso de robo; copia a IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="plantillas-clave" class="mb-12 scroll-mt-20">
+                    <section id="eliminacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PLANTILLAS CLAVE
+                            BAJA Y ELIMINACIÓN SEGURA
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Formulario de
-                                Transporte de Activos Críticos</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Campo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Valor</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Activo</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">USB-024
-                                                (Código: CATIA-BKP-2025)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Origen</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Prodismo
-                                                Córdoba
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Destino</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Oficinas
-                                                (Buenos Aires)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Transportista</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">LogiTech
-                                                (Vehiculo #45)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Medidas</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">GPS de
-                                                vehículo activo</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Responsable</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Emiliano Ferrari</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Medio</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Método</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel mínimo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Discos HDD, SSD y extraíbles</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Retiro del disco y entrega a CBL Tech: sanitización (degausser) y destrucción física</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Purge + Destroy (NIST SP 800-88) · equivalente a H-4 / E-4 (ISO/IEC 21964)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F313-IT-4 + certificado con número de serie</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Equipos sin disco</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Chatarra</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Baja en Snipe-IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Memorias USB</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Destrucción física con el proveedor</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">E-4 (ISO/IEC 21964)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F313-IT-4 + certificado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Papel confidencial o restringido</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Trituradora de corte cruzado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">P-4 (ISO/IEC 21964)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">No requiere registro individual</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Certificado de
-                                Destrucción</h3>
-                            <div class="mb-6">
-                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
-                                    <img src="../../../../images/gestion-activos/certificado-destruccion-de-documentos.jpg"
-                                        alt="Certificado de destrucción de documentos"
-                                        class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
-                                        id="certificado-destruccion-image">
-                                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                                        Ejemplo Certificado de destrucción de documentos/discos duros
-                                    </p>
-                                </div>
-                            </div>
-                            <p>El certificado de destrucción se genera automáticamente al eliminar un activo.</p>
-
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">Empresas
-                                Referentes</h3>
-
-                            <div class="bg-gray-300 dark:bg-gray-800 rounded-lg p-6 text-center">
-                                <a href="https://www.cbltech.com.ar/" target="_blank">
-                                    <img src="../../../../images/gestion-activos/logo_CBL.png"
-                                        alt="Logo CBL"
-                                        class="inline-block mx-auto h-32 w-full object-cover md:h-full md:w-32 cursor-pointer mr-8 hover:scale-110 transition duration-500"
-                                        id="logo-clear-image2">
-                                </a>
-                                <a href="https://www.efra.com.ar/" target="_blank">
-                                    <img src="../../../../images/gestion-activos/logo-principal-clear.png"
-                                        alt="Logo EFRA"
-                                        class="inline-block mx-auto h-32 w-full object-cover md:h-full md:w-32 cursor-pointer mr-8 hover:scale-110 transition duration-500"
-                                        id="logo-clear-image">
-                                </a>
-                                <a href="https://www.puroscrap.com.ar/" target="_blank">
-                                    <img src="../../../../images/gestion-activos/logotipo-puro-scrap-corto-verde.png"
-                                        alt="Logo Puro Scrap"
-                                        class="inline-block mx-auto h-32 w-full object-cover md:h-full md:w-32 cursor-pointer ml-8 hover:scale-110 transition duration-500"
-                                        id="logo-scrap-image">
-                                </a>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                                    Empresas Certificadas de Destrucción Digital y Física de Datos y Unidades de
-                                    Almacenamiento
-                                </p>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los discos a eliminar se guardan bajo llave en IT hasta su entrega al proveedor.</li><li>El certificado del proveedor se adjunta a la baja del F313-IT-4 y se conserva 5 años.</li></ul>
                     </section>
 
-                    <section id="flujo-gestion" class="mb-12 scroll-mt-20">
+                    <section id="registros" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            FLUJO DE GESTIÓN DE ACTIVOS
+                            REGISTROS
                         </h2>
-
-                        <div class="mb-6">
-                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
-                                <img src="../../../../images/flow-diagrams/gestion-activos-apoyo.png"
-                                    alt="Flujo de Gestión de Activos de Apoyo"
-                                    class="mx-auto h-64 w-full object-cover md:h-full md:w-64 cursor-pointer"
-                                    id="flujo-gestion-image">
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                                    Diagrama de Flujo de Gestión de Activos de Apoyo
-                                </p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Retención</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Snipe-IT (inventario, checkout y checkin)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Vida útil del activo + 2 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F313-IT-2 Mantenimiento y Reparación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">3 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F313-IT-3 Proveedores Autorizados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Vigente + 3 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F313-IT-4 Baja y Eliminación Segura y certificados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 años</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -488,42 +295,32 @@
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">20/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            20/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">16/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Pasos reales con Snipe-IT; reparación con proveedores autorizados y BitLocker; pérdida o robo sin MDM; tabla de eliminación con niveles de ISO/IEC 21964; discos de backup; se quitan Intune, la plantilla de transporte de ejemplo, logos de proveedores no contratados y el diagrama de flujo; se corrige el código del documento. Aprueba la Gerencia de RRHH.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -558,24 +355,24 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#clasificacion-activos"
+                            <a href="#asignacion-devolucion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                CLASIFICACIÓN DE ACTIVOS</a>
-                            <a href="#requisitos-fases"
+                                ASIGNACIÓN Y DEVOLUCIÓN</a>
+                            <a href="#almacenamiento"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                REQUISITOS POR FASES</a>
-                            <a href="#responsables-documentacion"
+                                ALMACENAMIENTO</a>
+                            <a href="#reparacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                RESPONSABLES Y DOCUMENTACIÓN</a>
-                            <a href="#monitoreo-auditoria"
+                                REPARACIÓN Y TRANSPORTE</a>
+                            <a href="#perdida-robo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                MONITOREO Y AUDITORÍA</a>
-                            <a href="#plantillas-clave"
+                                PÉRDIDA O ROBO</a>
+                            <a href="#eliminacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PLANTILLAS CLAVE</a>
-                            <a href="#flujo-gestion"
+                                BAJA Y ELIMINACIÓN</a>
+                            <a href="#registros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                FLUJO DE GESTIÓN</a>
+                                REGISTROS</a>
                             <a href="#revisiones-documento"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 REVISIONES DEL DOCUMENTO</a>
@@ -627,11 +424,11 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">P311-IT-1</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P313-IT-1</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -643,15 +440,15 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2027</span>
                             </div>
                         </div>
                     </div>
@@ -672,8 +469,6 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
-    <script type="text/javascript"
-        src="../../../../js/procedimientos/flowChart/openFlowChart-activos-apoyo.js"></script>
 
 </body>
 

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Procedimiento de Manejo de Dispositivos Informáticos Móviles">
+<html lang="es" data-page-subtitle="Procedimiento de Gestión de Dispositivos Móviles">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Procedimiento de Manejo de Dispositivos Informáticos Móviles">
+    <meta name="description" content="Prodismo - Procedimiento de Gestión de Dispositivos Móviles">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Procedimiento de Manejo de Dispositivos Informáticos Móviles - Prodismo SRL</title>
+    <title>Procedimiento de Gestión de Dispositivos Móviles - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,8 +61,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Manejo de
-                            Dispositivos Informáticos Móviles</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Dispositivos Móviles</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -71,476 +70,229 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 20/1/2026</span>
+                                <span>Última revisión: 16/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 3.1.4), ISO 27001:2022 (A.7.9, A.7.10, A.8.1)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Regular los controles y establecer los procedimientos para cumplir con el requisito sobre el
-                            manejo de dispositivos informáticos móviles y dispositivos de almacenamiento de datos
-                            móviles, se deben implementar controles que mitiguen los riesgos asociados a su uso fuera de
-                            las instalaciones de la organización, en cumplimiento de normativas de <strong>ISO/IEC
-                                27001:2022</strong>, así como los requisitos del marco <strong>TISAX</strong> y clientes
-                            automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir el alta, la configuración de seguridad, la verificación y la respuesta ante pérdida o robo de los dispositivos móviles y medios extraíbles, según <strong>MC314-IT-1</strong> y el control <strong>3.1.4</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
-                    <section id="medidas-clave" class="mb-12 scroll-mt-20">
+                    <section id="alta-registro" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            MEDIDAS CLAVE QUE DEBEN ADOPTARSE
+                            ALTA Y REGISTRO
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Cifrado de Datos
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Todos los dispositivos móviles (portátiles, tablets, smartphones) y medios de
-                                    almacenamiento (USB, discos duros externos, tarjetas SD) deben utilizar cifrado
-                                    robusto (ej.: AES-256) para proteger la información en caso de pérdida o robo.</li>
-                                <li>Se recomienda el uso de soluciones como BitLocker (Windows), FileVault (macOS) o
-                                    cifrado nativo en dispositivos móviles (Android/iOS).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Protección de Acceso
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Autenticación obligatoria:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Contraseñas complejas o PIN en dispositivos móviles.</li>
-                                        <li>Uso de autenticación multifactor (MFA) cuando sea posible.</li>
-                                        <li>Bloqueo automático tras inactividad.</li>
-                                    </ul>
-                                </li>
-                                <li>En el caso de dispositivos de almacenamiento, se deben usar soluciones con cifrado
-                                    hardware + contraseña (ej.: unidades USB cifradas).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Marcado e
-                                Identificación</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Los dispositivos deben estar marcados (etiquetados) con información de la empresa
-                                    para facilitar su identificación en caso de pérdida.</li>
-                                <li>Si se usan en presencia de clientes, deben cumplir con políticas de confidencialidad
-                                    y branding (ej.: sin logos o datos sensibles visibles).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Políticas y
-                                Concientización</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Política de uso aceptable:</strong> Definir reglas claras sobre el uso de
-                                    dispositivos móviles y almacenamiento externo.
-                                    <p>• Se utilizará <a href="https://prodismo.snipe-it.io/" target="_blank"
-                                            class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"><img
-                                                src="../../../../images/snipe-it-logo-xs_fondoBlanco.png"
-                                                class="inline m-2 shadow-lg rounded-md hover:scale-110 transition duration-500 ease-in-out"
-                                                alt="Snipe-IT" width="120" height="60"></a> como herramienta
-                                        centralizada para el mantenimiento del inventario.</p>
-                                </li>
-                                <li><strong>Inventario y gestión:</strong> Mantener un registro de dispositivos
-                                    asignados y su estado de seguridad.</li>
-                                <li><strong>Capacitación:</strong> Formar a los empleados en buenas prácticas (ej.: no
-                                    dejar dispositivos desatendidos, evitar el uso de medios no autorizados).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">E. Medidas Adicionales
-                                Recomendadas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Control remoto:</strong> Capacidad de borrado remoto (remote wipe) en caso
-                                    de pérdida/robo.</li>
-                                <li><strong>Restricción de conectividad:</strong> Uso de VPN para acceso seguro a redes
-                                    corporativas.</li>
-                                <li><strong>Auditoría periódica:</strong> Verificar el cumplimiento de las políticas de
-                                    seguridad.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencia para
-                                Auditoría TISAX</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Documentación de políticas de seguridad para dispositivos móviles.</li>
-                                <li>Registros de cifrado y asignación de dispositivos.</li>
-                                <li>Reportes de capacitación y concientización.</li>
-                                <li>Procedimientos de respuesta ante pérdida/robo.</li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Dispositivo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Pasos</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Notebook</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Alta en Snipe-IT y etiqueta física con número de inventario y contacto de IT.</li><li>Activar BitLocker y verificar con <code>manage-bde -status C:</code>.</li><li>Configurar bloqueo y contraseña (I314-IT-1).</li><li>Checkout al usuario; si BitLocker todavía no está activo, el correo de asignación lo avisa.</li></ul></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT · F314-IT-4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Celular de la empresa</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Alta en Snipe-IT con número de serie o IMEI.</li><li>Configurar PIN y bloqueo automático con el usuario (I314-IT-1).</li><li>Checkout al usuario.</li></ul></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT · F314-IT-4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Celular personal (BYOD)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Antes de instalar Outlook o Teams, el usuario firma el F314-IT-3.</li><li>IT verifica con el usuario el PIN y el bloqueo y registra el equipo en Snipe-IT.</li></ul></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F314-IT-3 · Snipe-IT · F314-IT-4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Medio extraíble de la empresa</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Alta en Snipe-IT con ubicación y responsable.</li><li>Cifrar con BitLocker To Go; IT guarda la contraseña.</li><li>Guardar bajo llave.</li></ul></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT · F314-IT-4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="documentacion-politicas" class="mb-12 scroll-mt-20">
+                    <section id="configuracion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            DOCUMENTACIÓN DE SEGURIDAD PARA DISPOSITIVOS MÓVILES
+                            CONFIGURACIÓN DE SEGURIDAD
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Establecer reglas claras sobre el uso, protección y gestión de dispositivos móviles y
-                                medios de almacenamiento.
-                            </p>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Parámetro</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Notebooks</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Celulares</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Bloqueo por inactividad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 minutos (máximo 10)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">2 minutos como máximo</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Contraseña / PIN</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al menos 7 caracteres</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PIN de al menos 6 dígitos o biometría</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cifrado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">BitLocker</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Nativo (se activa con el PIN)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Contenido mínimo
-                                requerido:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Alcance:</strong> ¿Qué dispositivos están cubiertos? (ej.: portátiles,
-                                    smartphones, USBs, discos externos).</li>
-                                <li><strong>Requisitos de seguridad obligatorios:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Cifrado de datos (estándares aceptados, ej.: AES-256).</li>
-                                        <li>Autenticación (contraseñas/PIN, MFA, bloqueo automático).</li>
-                                        <li>Restricciones de uso (ej.: prohibición de USBs no autorizados).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Uso fuera de las instalaciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Condiciones para trabajar en remoto o en viajes.</li>
-                                        <li>Prohibición de almacenar datos críticos sin cifrado.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Marcado y etiquetado:</strong> Cómo deben identificarse los dispositivos
-                                    (ej.: número de inventario, contacto en caso de pérdida).</li>
-                                <li><strong>Sanciones por incumplimiento:</strong> Consecuencias de violar las
-                                    políticas.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6 mt-4">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de estructura
-                                del documento:</h3>
-                            <div
-                                class="bg-gray-50 dark:bg-gray-800 rounded-lg ml-3 p-4 border-l-4 border-gray-600 border border-gray-200 dark:border-gray-700">
-                                <div class="space-y-4">
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">1.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Propósito</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">2.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Ámbito de aplicación</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">3.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Responsabilidades (IT, empleados,
-                                            gerencia)</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">4.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Requisitos técnicos (cifrado,
-                                            autenticación)</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">5.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Procedimientos de uso
-                                            seguro</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">6.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Incidentes y reporte de
-                                            pérdidas</span>
-                                    </div>
-                                    <div class="flex items-start">
-                                        <span class="text-gray-700 dark:text-gray-300 font-bold mr-2">7.</span>
-                                        <span class="text-gray-700 dark:text-gray-300">Anexos (ej.: lista de
-                                            dispositivos autorizados)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Evidencia para
-                                auditoría:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Política firmada por la dirección.</li>
-                                <li>Versiones actualizadas con historial de cambios.</li>
-                            </ul>
-                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">No hay administración centralizada (GPO o MDM): IT configura cada equipo en forma local según el instructivo <strong>I314-IT-1</strong> y registra la fecha en el F314-IT-4.</p>
                     </section>
 
-                    <section id="registros-cifrado" class="mb-12 scroll-mt-20">
+                    <section id="uso-clientes" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            REGISTROS DE CIFRADO Y ASIGNACIÓN DE DISPOSITIVOS
+                            USO EN PRESENCIA DE CLIENTES
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Demostrar que todos los dispositivos están protegidos y asignados de manera controlada.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Contenido mínimo:
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Inventario de dispositivos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Tipo (portátil, smartphone, USB cifrado).</li>
-                                        <li>Modelo, número de serie, identificador único.</li>
-                                        <li>Usuario asignado y fecha de entrega.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Estado de cifrado:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Software/hardware utilizado (ej.: BitLocker, VeraCrypt).</li>
-                                        <li>Fecha de implementación y verificación.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Renovación y bajas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Dispositivos retirados y método de borrado seguro (ej.: certificado de
-                                            destrucción).</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Formato recomendado:
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Base de datos gestionada por IT (ej.: Excel, CMDB, herramientas MDM como Microsoft
-                                    Intune o Jamf).</li>
-                                <li>Reportes periódicos de cumplimiento (ej.: "100% de portátiles cifrados").</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Evidencia para
-                                auditoría:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Exportación del inventario con columnas: Dispositivo | Usuario | Estado de cifrado |
-                                    Fecha de verificación.</li>
-                                <li>Capturas de pantalla de herramientas MDM que muestran el cifrado activo.</li>
-                            </ul>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>La etiqueta del equipo solo muestra el número de inventario y el contacto de IT; no se pegan logos ni nombres de clientes en los equipos.</li><li>Fondo de pantalla neutro, sin información de clientes ni de proyectos.</li><li>Antes de mostrar la pantalla a un cliente, cerrar archivos, correos y portales de otros clientes y desactivar las notificaciones.</li><li>Filtros de privacidad cuando el cliente lo pide; no conectar el equipo a la red del cliente sin autorización (MC214-IT-1).</li></ul>
                     </section>
 
-                    <section id="reportes-capacitacion" class="mb-12 scroll-mt-20">
+                    <section id="aviso-usuarios" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            REPORTES DE CAPACITACIÓN Y CONCIENTIZACIÓN
+                            AVISO A LOS USUARIOS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Probar que los empleados conocen los riesgos y buenas prácticas.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Contenido mínimo:
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Programa de formación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Frecuencia (ej.: anual o al recibir un dispositivo).</li>
-                                        <li><strong>Temas cubiertos:</strong>
-                                            <ul class="list-disc pl-6 mt-2 space-y-3">
-                                                <li>Uso seguro de dispositivos móviles.</li>
-                                                <li>Riesgos de pérdida/robo y protección de datos.</li>
-                                                <li>Procedimiento para reportar incidentes.</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Registro de asistencia:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Nombre del empleado, departamento, fecha de capacitación.</li>
-                                        <li>Evaluación (ej.: test de conocimientos).</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencia para
-                                auditoría:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Certificados de finalización de cursos.</li>
-                                <li>Estadísticas de participación (ej.: "95% del personal capacitado en 2024").</li>
-                            </ul>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Correo de asignación de Snipe-IT: indica si el equipo todavía no tiene BitLocker y qué hacer mientras tanto. Texto propuesto: <em>"Este equipo aún no tiene cifrado de disco. No guarde información confidencial en el equipo: use OneDrive o SharePoint. IT le avisará cuando se active el cifrado."</em></li><li>Acuerdo F314-IT-3: el celular personal no está administrado por la empresa; la empresa no puede cifrarlo ni borrarlo a distancia, por lo que el usuario es responsable del PIN y del cifrado, y no debe guardar archivos de clientes en el teléfono.</li><li>Curso e-learning (módulo 4): qué dispositivos están protegidos y cuáles no, y cómo actuar en cada caso.</li><li>Mientras un equipo o medio no esté cifrado, la información confidencial se guarda solo en OneDrive, SharePoint o los servidores.</li></ul>
                     </section>
 
                     <section id="procedimientos-respuesta" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PROCEDIMIENTOS DE RESPUESTA ANTE PÉRDIDA/ROBO
+                            PÉRDIDA O ROBO
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Minimizar el impacto de un incidente y cumplir con los plazos de reporte (ej.:
-                                <strong>TISAX</strong> exige acción inmediata).
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Contenido mínimo:
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Pasos inmediatos:</strong>
-                                    <ol class="list-decimal pl-6 mt-2 space-y-3">
-                                        <li>Bloqueo remoto (si el dispositivo lo permite).</li>
-                                        <li>Reporte al equipo de seguridad/IT (en menos de 24 horas).</li>
-                                        <li>Cambio de credenciales asociadas (ej.: contraseñas de VPN).</li>
-                                    </ol>
-                                </li>
-                                <li><strong>Investigación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Circunstancias del incidente (¿hubo negligencia?).</li>
-                                        <li>Datos afectados (ej.: ¿contiene información crítica?).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Comunicación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>¿Se debe notificar al cliente o autoridades (según GDPR/leyes locales)?</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Lecciones aprendidas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Actualización de políticas para evitar recurrencia.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Documentación
-                                relacionada:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Formulario de reporte de incidentes:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Fecha/hora, dispositivo, datos afectados, acciones tomadas.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Registro de incidentes históricos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Para análisis de tendencias (ej.: "3 pérdidas en 2024, todas por descuido en
-                                            viajes").</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencia para
-                                auditoría:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Ejemplo de un reporte de incidente completado (sin datos sensibles).</li>
-                                <li>Registros de acciones tomadas (ej.: email a IT con timestamp).</li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Aviso inmediato a IT (correo, teléfono o Teams) y formulario F314-IT-2</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F314-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Bloqueo del inicio de sesión o cambio de contraseña en Microsoft 365 y revocación de sesiones</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ticket STI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Celulares: borrado con la función del fabricante, si es posible</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario con apoyo de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F314-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Estado "perdido / robado" en Snipe-IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Snipe-IT</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Evaluación de la información afectada (cifrado sí o no) y gestión del incidente</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F162-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">6. Denuncia policial en caso de robo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Copia a IT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="recomendaciones-adicionales" class="mb-12 scroll-mt-20">
+                    <section id="verificacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            RECOMENDACIONES ADICIONALES PARA TISAX
+                            VERIFICACIÓN
                         </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cada 6 meses, IT compara Snipe-IT con el F314-IT-4: notebooks con BitLocker y bloqueo configurado, celulares registrados, F314-IT-3 firmados y medios extraíbles cifrados. Prueba en una muestra de equipos que el bloqueo funciona (F151-IT-5, V-27).</li><li>Los desvíos se registran en el F151-IT-4.</li></ul>
+                    </section>
 
-                        <div class="mb-6">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Integrar con otros controles:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>ISO/IEC 27001</strong> (A.8.3 - Gestión de activos móviles).</li>
-                                        <li>GDPR (protección de datos personales en dispositivos).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Automatizar donde sea posible:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Herramientas MDM (Mobile Device Management) para aplicar cifrado y
-                                            políticas.</li>
-                                        <li>Plataformas de gestión de incidentes.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REGISTROS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Snipe-IT · F314-IT-2 · F314-IT-3 · F314-IT-4 · I314-IT-1.</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">20/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            20/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">16/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título; se reemplaza el texto de guía por pasos reales: alta y registro por tipo de dispositivo, configuración local (I314-IT-1), uso ante clientes, aviso a los usuarios, pérdida o robo y verificación semestral (F314-IT-4); se quitan MDM, productos de cifrado no usados y recomendaciones. Aprueba la Gerencia de RRHH.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -572,26 +324,29 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#medidas-clave"
+                            <a href="#alta-registro"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                MEDIDAS CLAVE</a>
-                            <a href="#documentacion-politicas"
+                                ALTA Y REGISTRO</a>
+                            <a href="#configuracion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                DOCUMENTACIÓN DE SEGURIDAD</a>
-                            <a href="#registros-cifrado"
+                                CONFIGURACIÓN</a>
+                            <a href="#uso-clientes"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                REGISTROS DE CIFRADO</a>
-                            <a href="#reportes-capacitacion"
+                                USO ANTE CLIENTES</a>
+                            <a href="#aviso-usuarios"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                REPORTES DE CAPACITACIÓN</a>
+                                AVISO A LOS USUARIOS</a>
                             <a href="#procedimientos-respuesta"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PROCEDIMIENTOS DE RESPUESTA</a>
-                            <a href="#recomendaciones-adicionales"
+                                PÉRDIDA O ROBO</a>
+                            <a href="#verificacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                RECOMENDACIONES ADICIONALES</a>
-                            <a href="#revisiones-documento"
+                                VERIFICACIÓN</a>
+                            <a href="#registros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                REGISTROS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -645,7 +400,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -657,15 +412,15 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">20/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2027</span>
                             </div>
                         </div>
                     </div>

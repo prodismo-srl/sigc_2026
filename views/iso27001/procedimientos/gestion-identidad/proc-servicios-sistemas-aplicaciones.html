@@ -63,8 +63,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de
-                            Acceso a Servicios de Red, Sistemas IT y Aplicaciones</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección del Acceso a Servicios de Red, Sistemas IT y Aplicaciones</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -73,101 +72,71 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 21/1/2026</span>
+                                <span>Última revisión: 16/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 4.1.2), ISO 27001:2022 (A.5.15, A.8.2, A.8.5)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Regular los controles y establecer los procedimientos esenciales para la Autenticación
-                            segura y gestión de accesos a Servicios de Red, Sistemas IT y Aplicaciones Internas basada
-                            en riesgos, alineada con amenazas modernas (ej.: ciberataques, phishing), en cumplimiento de
-                            normativas de <strong>ISO/IEC 27001:2022</strong>, así como los requisitos del marco
-                            <strong>TISAX</strong> y clientes automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir cómo se evalúan los riesgos de acceso, se configuran los métodos de autenticación, se gestionan los pedidos de acceso y se monitorean los inicios de sesión, según <strong>MC412-IT-1</strong> y el control <strong>4.1.2</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
                     <section id="evaluacion-riesgos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            EVALUACIÓN DE RIESGOS PARA SELECCIONAR MÉTODOS DE AUTENTICACIÓN
+                            EVALUACIÓN DE RIESGOS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Definir niveles de autenticación según criticidad de los sistemas.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Clasificar sistemas y datos (ej.: CRM, servidores, VPN):</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong class="text-yellow-600">Nivel 1 (Bajo riesgo):</strong> Acceso a
-                                            intranet corporativa → VPN + Contraseña.</li>
-                                        <li><strong class="text-orange-600">Nivel 2 (Riesgo medio):</strong> Correo
-                                            electrónico → MFA + Contraseña</li>
-                                        <li><strong class="text-red-600">Nivel 3 (Alto riesgo):</strong> Acceso a datos
-                                            de clientes → MFA + Contraseña + Bloqueo tras 5 intentos fallidos.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Identificar amenazas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>Escenario 1:</strong> Ataque de fuerza bruta → Implementar <strong>CAPTCHA</strong> o
-                                            retardos entre intentos.</li>
-                                        <li><strong>Escenario 2:</strong> Phishing → Preferencia MFA no basado en SMS
-                                            (ej.: app Authenticator).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Documentar decisiones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Matriz de riesgos con métodos de autenticación asignados.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Salida:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                        <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M411-IT-1%20Matriz%20de%20Riesgos%20de%20Accesos.xlsx?d=w260ecc6704ca4a5e9c4d75ae22101171&csf=1&web=1&e=rH3QaX"
-                                            target="_blank"
-                                            title="M411-IT-1 Matriz de riesgos de accesos a servicios IT, sistemas y aplicaciones"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                            <i class="fas fa-file-excel text-green-500"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                M411-IT-1
-                                            </span>
-                                            Matriz de riesgos de accesos a servicios IT, sistemas y aplicaciones
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Por cada sistema: exposición, información, riesgo y escenarios de ataque</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M411-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Elegir el método: MFA si está expuesto a Internet con riesgo Alto o si es cuenta privilegiada</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M411-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Registrar brechas y acciones; las que no se cierran enseguida van al F151-IT-4</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F151-IT-4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Aprobación de la matriz</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Alta Dirección</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M411-IT-1 firmada</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Revisión anual y ante cada sistema nuevo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M411-IT-1 (nueva revisión)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -175,207 +144,57 @@
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            IMPLEMENTACIÓN DE AUTENTICACIÓN SEGURA
+                            CONFIGURACIÓN DE LA AUTENTICACIÓN
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Asegurar que solo usuarios autorizados accedan a sistemas.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-
-                            <div class="mb-6">
-                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">I. Para Acceso
-                                    Local/Red Interna:</h4>
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Contraseñas:</strong>
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>Longitud mínima: 12 caracteres (mayúsculas, minúsculas, números,
-                                                símbolos).</li>
-                                            <li>Cambio obligatorio cada 90/180/360 días (dependiendo de criticidad del
-                                                sistema).</li>
-                                            <li>Prohibir reutilización de últimas 5 contraseñas.</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>Bloqueo de Cuentas:</strong>
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>5 intentos fallidos → Bloqueo por 30 minutos + notificación a IT.</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-
-                            <div class="mb-6">
-                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">II. Para Acceso
-                                    Remoto/Internet:</h4>
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>VPN:</strong>
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>Certificado digital.</li>
-                                            <li>Usuario + Contraseña fuerte.</li>
-                                            <li>Configuración de Anydesk con contraseña fuerte y bloqueo/denegación de
-                                                accesos sin concentimiento del usuario destino.</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>Aplicaciones Web:</strong>
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>MFA (Multi Factor Authentication) Auth0, MS Authenticator o Google
-                                                Authenticator.</li>
-                                            <li>Sesiones expiran tras 15 minutos máximo de inactividad.</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-
-                                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                    <a href="../../../../outputs_files/I411-IT-1 Configuracion de Seguridad de Anydesk.pdf"
-                                        target="_blank" title="Instructivo de configuración segura de Anydesk"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                        <i class="fas fa-file-pdf text-red-500"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            I411-IT-1
-                                        </span>
-                                        Instructivo de configuración segura de Anydesk
-                                        <i
-                                            class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="mb-6">
-                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">III. Para Sistemas
-                                    Críticos:</h4>
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Biometría:</strong>
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>Huella dactilar o reconocimiento facial en dispositivos móviles
-                                                personales (teléfonos inteligentes).</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Herramientas
-                                Recomendadas:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Gestión de Identidades:</strong> Microsoft Azure AD.</li>
-                                <li><strong>MFA:</strong> MS Authenticator, Auth0, Google Authenticator.</li>
-                            </ul>
-
-                            <div class="p-3 bg-gray-50 rounded-lg dark:bg-gray-800 my-3 text-center">
-                                <img src="../../../../images/iso27001/MS-Authenticator.png" alt="MS Authenticator"
-                                    title="MS Authenticator" class="inline w-32 h-auto m-2">
-
-                                <img src="../../../../images/iso27001/Silver_Auth0.jpg" alt="Silver_Auth0"
-                                    title="Silver_Auth0" class="inline w-24 h-auto m-2">
-
-                                <img src="../../../../images/iso27001/googleAuthenticator_logo.jpg"
-                                    alt="Google_Authenticator" title="Google_Authenticator"
-                                    class="inline w-24 h-auto m-2">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Evidencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Configuraciones de MS Entra.</li>
-                                <li>Registros de autenticación / inicio de sesión (logs).</li>
-                                <li>Registros de auditoría.</li>
-                            </ul>
-
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                <a href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/SignInLogsList.ReactView/timeRangeType/last24hours/showApplicationSignIns~/true?Microsoft_AAD_IAM_legacyAADRedirect=true"
-                                    target="_blank" title="F413-IT-2 Logs Autenticación y Auditoria"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                    <img src="../../../../images/iso27001/MsEntra_logo.png" alt="MS Entra"
-                                        title="MS Entra" class="inline w-6 h-auto m-1 p-1 shadow-lg rounded-md">
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F413-IT-2
-                                    </span>
-                                    Logs Autenticación y Auditoria
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </div>
-
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3 text-center">
-                                <img src="../../../../images/iso27001/LogsAutenticacionAuditoria.png" alt="MS Entra"
-                                    title="Logs Autenticación y Auditoria"
-                                    class="inline w-96 h-auto m-1 p-1 shadow-lg rounded-md bg-gray-50 dark:bg-gray-800 text-center">
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3.1. Microsoft 365</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>MFA por usuario activado para cada cuenta nueva; el usuario registra Authenticator (o SMS si no puede) en el primer inicio de sesión.</li><li>Política de contraseñas: mínimo 8 caracteres, lista de contraseñas prohibidas, cambio cada 90 días.</li><li>Buzones compartidos: inicio de sesión bloqueado.</li><li>Administradores globales: cuenta de administración separada con MFA (NC-2026-17).</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">3.2. Otros sistemas</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>SIP y SIP4.0: usuario personal, contraseña de 12 caracteres con cambio cada 180 días (SIP4.0), bloqueo por intentos fallidos y cierre de sesión por inactividad activos.</li><li>Equipos Windows: cuenta local según I314-IT-1; sin rol de administrador local para los usuarios (NC-2026-17).</li><li>AnyDesk: según I411-IT-1 (contraseña, MFA, sin acceso desatendido).</li><li>Cuentas de administración de Snipe-IT, Railway, MongoDB, Donweb y GitHub: con MFA; servidores, firewall, switches y Tuya: habilitar MFA cuando sea posible (NC-2026-16).</li></ul>
                     </section>
 
                     <section id="gestion-ciclo-vida" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            GESTIÓN DEL CICLO DE VIDA DE CREDENCIALES
+                            PEDIDOS DE ACCESO, CAMBIOS Y BAJAS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Evitar accesos no autorizados por credenciales obsoletas.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Alta de Usuarios:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>RRHH notifica a IT sobre nuevo empleado → Crear cuenta con permisos mínimos.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Bajas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Desactivar cuentas en menos de 24 horas tras baja laboral.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Cambios de Rol:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Revisar y ajustar permisos (ej.: herramienta de IAM).</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Registro:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Inventario de cuentas activas (usuario, fecha creación, último acceso).</li>
-                            </ul>
-
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F413-IT-3%20Inventario%20de%20Cuentas.xlsx?d=w8ce74d6a1a1a4ed29f5b434823eba74e&csf=1&web=1&e=yj2CCU"
-                                    target="_blank" title="F413-IT-3 Inventario de Cuentas"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                    <img src="../../../../images/iso27001/MsEntra_logo.png" alt="MS Entra"
-                                        title="MS Entra" class="inline w-6 h-auto m-1 p-1 shadow-lg rounded-md">
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F413-IT-3
-                                    </span>
-                                    Inventario de Cuentas
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Pedido de acceso o instalación con motivo y plazo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuario</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Aprobación según la M421-IT-3</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Responsable de área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Configuración del acceso y marca "Realizado" con fecha</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Accesos con plazo: baja al vencer</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Egreso: bloqueo de cuentas el mismo día del aviso de RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Administrador de IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft 365 / sistemas</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -383,129 +202,54 @@
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            MONITOREO Y RESPUESTA A INCIDENTES
+                            MONITOREO Y RESPUESTA
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Detectar y actuar ante accesos sospechosos.
-                            </p>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Qué se revisa cada mes</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Dónde</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Inicios de sesión fallidos o bloqueados en cantidad anómala</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Entra – Inicios de sesión</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Inicios desde países o ubicaciones inusuales</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Entra – Inicios de sesión</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alertas de Microsoft 365 y usuarios marcados en riesgo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Centro de seguridad de Microsoft 365</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Usuarios sin MFA registrado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Entra – Métodos de autenticación</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Bloqueos por intentos fallidos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">SIP4.0 y equipo VPN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cuentas con roles de administración (altas, cambios, uso)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Entra – Roles y administradores; demás sistemas</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Alertas Automáticas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Configurar SIEM (ej.: Microsoft Sentinel) para:
-                                            <ul class="list-disc pl-6 mt-2 space-y-3">
-                                                <li>Múltiples intentos fallidos.</li>
-                                                <li>Accesos desde ubicaciones inusuales.</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Respuesta:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Bloquear IP/cuenta temporalmente.</li>
-                                        <li>Investigar con equipo de IT.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Evidencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Reportes de incidentes con acciones tomadas.</li>
-                            </ul>
-                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Se registra cada revisión en el F412-IT-2 con una captura o exportación. Ante actividad sospechosa: bloquear la cuenta, revocar sesiones, cambiar la contraseña, revisar el MFA registrado y gestionar el incidente (P162-IT-1).</p>
                     </section>
 
-                    <section id="auditoria-mejora" class="mb-12 scroll-mt-20">
+                    <section id="registros" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            AUDITORÍA Y MEJORA CONTINUA
+                            REGISTROS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">A. Objetivo:</h3>
-                            <p class="text-gray-700 dark:text-gray-300">
-                                Garantizar que los controles siguen siendo efectivos.
-                            </p>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Auditorías Cuatrimestrales:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Revisar logs de autenticación.</li>
-                                        <li>Verificar que no hay cuentas "huérfanas" (ej.: empleados que ya no están).
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">C. Documentación:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Informe de auditoría con hallazgos y planes de acción.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">D. Resumen de
-                                Documentación Requerida para TISAX 4.1.2</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Documento</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Contenido</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Política de Autenticación</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Niveles de
-                                                riesgo y métodos asignados.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Procedimiento de Gestión de Accesos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Alta/baja de
-                                                usuarios, MFA.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Registros de Auditoría</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Logs de
-                                                autenticación, reportes de incidentes.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Matriz de Riesgos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Justificación
-                                                de métodos elegidos.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>M411-IT-1 · F412-IT-1 · F412-IT-2 · exportaciones de inicios de sesión de Microsoft Entra · F151-IT-4.</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
@@ -518,42 +262,32 @@
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">21/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            21/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">16/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Evaluación de riesgos con la M411-IT-1 Rev. 1; configuración real por sistema; pedidos con F412-IT-1; monitoreo mensual con registro F412-IT-2; se quitan SIEM, CAPTCHA, biometría, certificado en la VPN, sesiones de 15 minutos y herramientas recomendadas no usadas.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -590,16 +324,16 @@
                                 EVALUACIÓN DE RIESGOS</a>
                             <a href="#implementacion-autenticacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                IMPLEMENTACIÓN DE AUTENTICACIÓN</a>
+                                CONFIGURACIÓN</a>
                             <a href="#gestion-ciclo-vida"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                GESTIÓN DEL CICLO DE VIDA</a>
+                                PEDIDOS DE ACCESO Y BAJAS</a>
                             <a href="#monitoreo-respuesta"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 MONITOREO Y RESPUESTA</a>
-                            <a href="#auditoria-mejora"
+                            <a href="#registros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                AUDITORÍA Y MEJORA</a>
+                                REGISTROS</a>
                             <a href="#revisiones-documento"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
                                 REVISIONES DEL DOCUMENTO</a>
@@ -655,7 +389,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -671,11 +405,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">21/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">21/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">16/11/2027</span>
                             </div>
                         </div>
                     </div>
