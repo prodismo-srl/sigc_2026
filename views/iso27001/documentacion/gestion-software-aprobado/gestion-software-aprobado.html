@@ -45,16 +45,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- verificar ruta de la página MC133-IT-1 -->
                     <a href="../gestion-activos/gestion-servicios-externos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Servicios de TI Externos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
-                    <a href="--TODO--"
+                    <a href="../gestion-riesgos/gestion-riesgos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Riesgos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -71,11 +69,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 13/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -107,8 +105,8 @@
                                     <ul class="list-circle pl-5 mt-2 space-y-3">
                                         <li><strong>Estaciones de trabajo y servidores:</strong> sistemas operativos, aplicaciones de oficina, software CAD/CAM/CAE (CATIA, NX, AutoForm, Cad-Cam), cliente del ERP SIP / SIP4.0, AnyDesk y herramientas de seguridad.</li>
                                         <li><strong>Equipos de red, cámaras de vigilancia y hardware:</strong> firmware y BIOS/UEFI.</li>
-                                        <li><strong>Equipos de planta:</strong> firmware y software de controladores CNC, PLC y robots de las líneas de ensamble.</li>
-                                        <li><strong>Software desarrollado por terceros:</strong> ERP SIP / SIP4.0 (Enter-Geminus) y aplicación web viajes.prodismo.com (Cubits S.R.L.), incluidas sus bibliotecas y componentes.</li>
+                                        <li><strong>Exclusión:</strong> los equipos de planta (controladores CNC, PLC y robots de las líneas de ensamble) están fuera del alcance del SGSI y de la evaluación TISAX.</li>
+                                        <li><strong>Software desarrollado por terceros:</strong> ERP SIP / SIP4.0 (desarrollado por el desarrollador interno de Prodismo; antes, Enter-Geminus) y aplicación web viajes.prodismo.com (Cubits S.R.L.), incluidas sus bibliotecas y componentes.</li>
                                     </ul>
                                 </li>
                                 <li><strong>Todos los empleados, contratistas y proveedores</strong> que soliciten, instalen, actualicen o utilicen software en activos de PRODISMO SRL.</li>
@@ -133,7 +131,8 @@
                                 <li>Política de Requisitos de Seguridad en Proyectos <strong>MC123-IT-1</strong></li>
                                 <li>Política y procedimiento de Responsabilidades con Proveedores Externos de Servicios de TI <strong>MC124-IT-1 / P124-IT-1</strong> (registro de configuración segura <strong>F124-IT-3</strong>)</li>
                                 <li>Política y procedimiento de Gestión de Servicios de TI Externos <strong>MC133-IT-1 / P133-IT-1</strong></li>
-                                <li>Procedimiento de Gestión de Incidentes <strong>P121-IT-1</strong></li>
+                                <li>Procedimiento de Seguridad de la Información <strong>P111-IT-1</strong> (sección 6.3, gestión de incidentes)</li>
+                                <li>Matriz de Riesgos <strong>M141-IT-1</strong> (R1-IT-26 y R1-IT-27) y registro de excepciones <strong>F134-IT-3</strong></li>
                             </ul>
                         </section>
 
@@ -154,7 +153,7 @@
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Firmware:</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Software embebido en un dispositivo de hardware (equipos de red, cámaras, BIOS/UEFI, controladores CNC, PLC, robots).</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Software embebido en un dispositivo de hardware (equipos de red, cámaras, BIOS/UEFI).</p>
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Sistema operativo:</h3>
@@ -234,17 +233,9 @@
                                 </div>
                                 <div
                                     class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                    <h3 class="font-semibold text-gray-900 dark:text-white">Mantenimiento / Producción</h3>
-                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                        <li>Coordinar con fabricantes e integradores la actualización del firmware y software de equipos de planta (responsable: --TODO--).</li>
-                                        <li>Definir las ventanas de mantenimiento para actualizaciones en la planta.</li>
-                                    </ul>
-                                </div>
-                                <div
-                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                     <h3 class="font-semibold text-gray-900 dark:text-white">Proveedores</h3>
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                        <li>Entregar versiones con notas de versión y origen verificable (Enter-Geminus, Cubits S.R.L., Armanet S.A., fabricantes de equipos).</li>
+                                        <li>Entregar versiones con notas de versión y origen verificable (Cubits S.R.L., Armanet S.A., fabricantes de software y equipos).</li>
                                         <li>Informar vulnerabilidades y actualizaciones de seguridad de su software (según <strong>MC124-IT-1</strong>).</li>
                                     </ul>
                                 </div>
@@ -252,7 +243,7 @@
                                     class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
                                     <h3 class="font-semibold text-gray-900 dark:text-white">Usuarios</h3>
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                        <li>Utilizar solo software aprobado y no instalar, descargar ni ejecutar software por su cuenta.</li>
+                                        <li>Utilizar e instalar solo software aprobado (F134-IT-1); para software nuevo, solicitarlo con el F134-IT-2. Está prohibido el software sin licencia o crackeado.</li>
                                         <li>Reportar software sospechoso o no autorizado a IT.</li>
                                     </ul>
                                 </div>
@@ -291,10 +282,10 @@
                                                 Firmware</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Equipos de red y firewall.</li><li>Cámaras y NVR.</li><li>BIOS/UEFI de PCs y servidores.</li><li>Controladores CNC, PLC y robots.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Equipos de red y firewall.</li><li>Cámaras y NVR.</li><li>BIOS/UEFI de PCs y servidores.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Armanet S.A. (red y CCTV) con supervisión de IT.</li><li>Administrador de IT (BIOS/UEFI).</li><li>Mantenimiento con el fabricante (planta).</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Armanet S.A. (red y CCTV) con supervisión de IT.</li><li>Administrador de IT (BIOS/UEFI).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Sitio oficial del fabricante o integrador</td>
@@ -305,7 +296,7 @@
                                                 Sistemas operativos</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Windows en PCs (versión: --TODO--).</li><li>Windows Server (versión: --TODO--).</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Windows 11 y Windows 10 en PC y notebooks (~100 equipos cada uno).</li><li>Windows Server 2012 / 2012 R2 en los servidores principales (sin soporte, excepción EX-01; migración a Windows Server 2022 en 03/2027).</li><li>Proxmox VE (hipervisor).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Administrador de IT</td>
@@ -319,7 +310,7 @@
                                                 Aplicaciones</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Microsoft 365 Apps.</li><li>CATIA, NX, AutoForm, Cad-Cam (--TODO--).</li><li>Cliente SIP / SIP4.0, AnyDesk.</li><li>Antivirus / EDR (--TODO--).</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Microsoft 365 Apps.</li><li>CATIA V5, NX, AutoForm 14 y Cimatron (CAD-CAM).</li><li>Cliente SIP / SIP4.0, AnyDesk.</li><li>Microsoft Defender for Endpoint (antivirus / EDR) y agente Wazuh (SIEM).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Administrador de IT.</li><li>Responsables de Datos (CAD/CAE).</li></ul></td>
@@ -333,7 +324,7 @@
                                                 Software de terceros a medida</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>ERP SIP / SIP4.0 (Enter-Geminus).</li><li>viajes.prodismo.com (Cubits S.R.L.).</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>ERP SIP / SIP4.0 (desarrollo interno).</li><li>viajes.prodismo.com (Cubits S.R.L.).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Esteban Manzoni (SIP4.0).</li><li>Germán Montalbetti (aplicación web).</li></ul></td>
@@ -382,7 +373,8 @@
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Solo se instala y utiliza software aprobado</strong> y registrado en el <strong>F134-IT-1</strong>, incluido el software gratuito, de prueba o de código abierto.</li>
-                                <li>La <strong>instalación la realiza únicamente IT</strong>; los usuarios no tienen privilegios de administrador en sus equipos (situación actual y plan de adecuación: --TODO--).</li>
+                                <li>Los usuarios tienen permisos de administrador local en sus equipos y pueden instalar software, pero <strong>solo software aprobado</strong> en el F134-IT-1, descargado del sitio oficial o del repositorio de IT. El software nuevo se solicita con el <strong>F134-IT-2</strong>.</li>
+                                <li>Este riesgo está registrado en la matriz <strong>M141-IT-1 (R1-IT-26)</strong> con plan de acción: verificación semestral del software instalado y reducción progresiva de los permisos de administrador local.</li>
                                 <li>Antes de aprobar un software se evalúa, según <strong>P134-IT-1</strong>: necesidad, origen oficial, licencia válida (Ley 11.723), soporte vigente del fabricante, vulnerabilidades conocidas, compatibilidad y acceso a datos o a la red.</li>
                                 <li>Si el software requiere un servicio en la nube o envía información a terceros, se evalúa además según <strong>MC133-IT-1</strong>.</li>
                                 <li>Está <strong>prohibido</strong> utilizar software sin licencia, de fuentes no oficiales, sin soporte del fabricante (salvo excepción aprobada) o instalado desde cuentas o medios personales.</li>
@@ -423,7 +415,7 @@
                                                     Instaladores aprobados, licencias y valores hash</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    --TODO-- ubicación. Escritura: solo administradores de IT.</td>
+                                                    Servidor de archivos "Diserver", carpeta de instaladores de IT. Escritura: solo administradores de IT; sin acceso para el resto de los usuarios.</td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -453,10 +445,10 @@
                                                     Versiones del ERP SIP / SIP4.0</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Versiones entregadas por Enter-Geminus y notas de versión</td>
+                                                    Versiones del desarrollo interno y notas de versión</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    --TODO--. Aprobación: Esteban Manzoni.</td>
+                                                    Código fuente en GitHub Prodismo (MFA obligatorio); despliegue en la VM de Azure. Aprobación de versiones: Esteban Manzoni.</td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -467,7 +459,7 @@
                                                     Código fuente y versiones de la aplicación</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    --TODO-- (Cubits S.R.L. / Donweb.com).</td>
+                                                    GitHub Prodismo (MFA obligatorio); hosting Donweb.com. Desarrollo: Cubits S.R.L.</td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -505,10 +497,10 @@
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>El <strong>F134-IT-1</strong> registra, para cada software aprobado, la versión aprobada, el nivel de parche, la fecha de fin de soporte y los equipos donde se usa.</li>
-                                <li>Las actualizaciones de Windows, Windows Server y Microsoft 365 se aplican en un <strong>ciclo mensual</strong>.</li>
+                                <li>Las actualizaciones de Windows (Windows Update) y de Microsoft 365 Apps se instalan de forma <strong>automática</strong> en cada equipo; el cumplimiento se verifica mensualmente con el inventario de Microsoft Defender for Endpoint (versiones de sistema operativo y vulnerabilidades).</li>
                                 <li><strong>Plazos para vulnerabilidades:</strong> Crítica, hasta <strong>7 días</strong>; Alta, hasta <strong>30 días</strong>; Media y Baja, en el siguiente ciclo mensual.</li>
-                                <li>El firmware se revisa al menos <strong>semestralmente</strong>; en equipos de planta, la actualización se realiza en ventanas de mantenimiento coordinadas con Producción.</li>
-                                <li>El software que llega a su <strong>fin de soporte</strong> se reemplaza o actualiza; si no es posible (por ejemplo, controladores de máquinas con sistemas antiguos), se aprueba una excepción con controles compensatorios, como el aislamiento de red (<strong>F124-IT-3</strong>).</li>
+                                <li>El firmware de red, CCTV y BIOS/UEFI se revisa al menos <strong>semestralmente</strong>.</li>
+                                <li>El software que llega a su <strong>fin de soporte</strong> se reemplaza o actualiza; si no es posible, se aprueba una <strong>excepción</strong> con controles compensatorios, plan de salida y fecha límite en el <strong>F134-IT-3</strong> (aprobada por la Alta Dirección cuando el riesgo es Alto). Excepciones vigentes: Windows Server 2012 (EX-01), Windows 10 (EX-02), CATIA V5 (EX-03) y Cimatron (EX-04).</li>
                             </ul>
                         </section>
 
@@ -532,9 +524,10 @@
                                 DETECCIÓN DE SOFTWARE NO AUTORIZADO
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>IT compara <strong>trimestralmente</strong> el software instalado en los equipos con el inventario de software aprobado (herramienta: --TODO--).</li>
-                                <li>El software no autorizado se desinstala; si es malicioso o produjo un incidente, se gestiona según <strong>P121-IT-1</strong>.</li>
-                                <li>Los casos detectados se informan al Comité de Seguridad de la Información.</li>
+                                <li>IT compara <strong>semestralmente</strong> el software instalado en los equipos con el inventario de software aprobado, usando el inventario de software de Microsoft Defender for Endpoint y de Wazuh, y registra el resultado en el <strong>F133-IT-3</strong>.</li>
+                                <li>Además, se envía un mail general a los usuarios, con copia a Dirección, solicitando eliminar el software no aprobado, sin licencia o crackeado.</li>
+                                <li>El software no autorizado se desinstala; si es malicioso o produjo un incidente, se gestiona según <strong>P111-IT-1</strong> (sección 6.3).</li>
+                                <li>Los casos detectados se informan en la revisión por la dirección.</li>
                             </ul>
                         </section>
 
@@ -558,7 +551,7 @@
                                 COMUNICACIÓN Y CONCIENTIZACIÓN
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Esta política y la lista de software aprobado se publican en la intranet.</li>
+                                <li>Esta política y la lista de software aprobado se publican en el portal de documentación.</li>
                                 <li>Las campañas anuales de concientización incluyen los riesgos de instalar software no autorizado.</li>
                             </ul>
                         </section>
@@ -574,9 +567,11 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>F134-IT-1:</strong> Inventario de Software Aprobado (incluye repositorios).</li>
                                     <li><strong>F134-IT-2:</strong> Solicitud y Evaluación de Software Nuevo.</li>
+                                    <li><strong>F134-IT-3:</strong> Registro de Excepciones de Software sin Soporte.</li>
+                                    <li><strong>F133-IT-3:</strong> Verificación semestral de servicios y software no aprobados.</li>
                                     <li><strong>Registros de aplicación de parches</strong> y de revisiones anuales de aprobación.</li>
-                                    <li><strong>Informes trimestrales</strong> de detección de software no autorizado.</li>
-                                    <li><strong>Excepciones aprobadas</strong> por software sin soporte.</li>
+                                    
+                                    
                                 </ul>
                             </div>
 
@@ -601,7 +596,8 @@
                                 <li><strong>Indicadores de desempeño:</strong>
                                     <ul class="list-circle pl-5 mt-2 space-y-3">
                                         <li>Software instalado que figura en el inventario aprobado: Objetivo 100%.</li>
-                                        <li>Equipos con el ciclo mensual de parches aplicado: Objetivo &gt; 95%.</li>
+                                        <li>Equipos con Windows y Microsoft 365 actualizados según Defender for Endpoint: Objetivo &gt; 95%.</li>
+                                        <li>Excepciones de software sin soporte con plan de salida y fecha (F134-IT-3): Objetivo 100%.</li>
                                         <li>Vulnerabilidades críticas corregidas en plazo: Objetivo &gt; 95%.</li>
                                         <li>Software aprobado con versión y nivel de parche registrados: Objetivo 100%.</li>
                                         <li>Revisiones anuales de aprobación realizadas en plazo: Objetivo 100%.</li>
@@ -640,9 +636,8 @@
                             </h2>
                             <div class="space-y-4">
                             <!-- Anexo A -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F134-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="--TODO--" target="_blank"
+                                Anexo A: <a href="--TODO--"
                                     title="F134-IT-1 Inventario de Software Aprobado - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -660,9 +655,8 @@
                             </div>
 
                             <!-- Anexo B -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F134-IT-2 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="--TODO--" target="_blank"
+                                Anexo B: <a href="#anexos"
                                     title="F134-IT-2 Solicitud y Evaluación de Software Nuevo - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -680,9 +674,8 @@
                             </div>
 
                             <!-- Anexo C -->
-                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P134-IT-1 dentro del sitio -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="../../procedimientos/gestion-activos/proc-gestion-software-aprobado.html"
+                                Anexo C: <a href="../../procedimientos/gestion-sowtware-aprobado/proc-gestion-software-aprobado.html"
                                     title="P134-IT-1 Procedimiento de Gestión de Software Aprobado"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -700,9 +693,8 @@
                             </div>
 
                             <!-- Anexo D -->
-                            <!-- TODO: --TODO-- verificar la ruta de la página MC133-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="../gestion-activos/gestion-servicios-externos.html"
+                                Anexo D: <a href="../gestion-servicios-externos/gestion-servicios-externos.html"
                                     title="MC133-IT-1 Gestión de Servicios de TI Externos"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -717,6 +709,24 @@
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
                                 <p class="text-gray-700 dark:text-gray-300 mt-2">[Evaluación de servicios en la nube y software que envía información a terceros]</p>
+                            </div>
+                            <!-- Anexo E -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo E: <a href="#anexos"
+                                    title="F134-IT-3 Registro de Excepciones de Software sin Soporte - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-600"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F134-IT-3
+                                    </span>
+                                    Registro de Excepciones de Software sin Soporte
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Software sin soporte en uso, riesgo, controles compensatorios, plan de salida, fecha límite y aprobación]</p>
                             </div>
                             </div>
                         </section>
@@ -759,6 +769,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                13/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipos de planta excluidos del alcance; versiones reales de sistemas operativos y aplicaciones; permisos de administrador local documentados con riesgo R1-IT-26; excepciones de software sin soporte (F134-IT-3); actualizaciones automáticas verificadas con Defender for Endpoint; detección semestral (F133-IT-3) con Defender y Wazuh; repositorios definidos (Diserver, GitHub); SIP con desarrollo interno; referencias corregidas (P111-IT-1, revisión por la dirección).</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -767,16 +786,14 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <!-- --TODO-- verificar ruta de la página MC133-IT-1 -->
                     <a href="../gestion-activos/gestion-servicios-externos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Servicios de TI Externos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
-                    <a href="--TODO--"
+                    <a href="../gestion-riesgos/gestion-riesgos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Riesgos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -889,7 +906,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -905,11 +922,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2027</span>
                             </div>
                         </div>
                     </div>

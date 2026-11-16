@@ -46,16 +46,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- verificar ruta del procedimiento P133-IT-1 -->
                     <a href="proc-gestion-servicios-externos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Servicios de TI Externos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
-                    <a href="--TODO--"
+                    <a href="../gestion-riesgos/proc-gestion-riesgos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Riesgos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -73,11 +71,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 13/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -106,7 +104,7 @@
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Todo el software</strong> gestionado: firmware, sistemas operativos, aplicaciones, software de terceros a medida, bibliotecas y controladores.</li>
-                                <li><strong>Todos los equipos</strong> de PRODISMO SRL: estaciones de trabajo, servidores, equipos de red, cámaras y equipos de planta.</li>
+                                <li><strong>Todos los equipos</strong> de PRODISMO SRL: estaciones de trabajo, servidores, equipos de red y cámaras. Los equipos de planta (CNC, PLC, robots) están fuera del alcance.</li>
                                 <li><strong>Todas las personas</strong> que soliciten, instalen o actualicen software, incluidos los proveedores.</li>
                             </ul>
                         </section>
@@ -124,7 +122,8 @@
                                 <li>Política y procedimiento de Gestión de Servicios de TI Externos <strong>MC133-IT-1 / P133-IT-1</strong></li>
                                 <li>Política y procedimiento de Responsabilidades con Proveedores Externos de Servicios de TI <strong>MC124-IT-1 / P124-IT-1</strong></li>
                                 <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
-                                <li>Procedimiento de Gestión de Incidentes <strong>P121-IT-1</strong></li>
+                                <li>Procedimiento de Seguridad de la Información <strong>P111-IT-1</strong> (sección 6.3, gestión de incidentes)</li>
+                                <li>Matriz de Riesgos <strong>M141-IT-1</strong> (R1-IT-26 y R1-IT-27)</li>
                                 <li><strong>Ley 11.723</strong> de Propiedad Intelectual</li>
                             </ul>
                         </section>
@@ -210,18 +209,7 @@
                                                 <ul class="list-disc pl-5 space-y-3"><li>Descargar, verificar e incorporar al repositorio.</li><li>Instalar y aplicar parches.</li><li>Detectar software no autorizado.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Aplicar el ciclo mensual de actualizaciones de Windows.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Mantenimiento / Producción</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Coordinar actualizaciones de firmware de planta con fabricantes.</li><li>Definir ventanas de mantenimiento.</li></ul></td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Actualizar el firmware de un controlador CNC en una parada programada.</td>
+                                                Verificar en Defender for Endpoint que los equipos tengan Windows y Microsoft 365 actualizados.</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -232,7 +220,7 @@
                                                 <ul class="list-disc pl-5 space-y-3"><li>Entregar versiones con notas de versión.</li><li>Informar vulnerabilidades.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Enter-Geminus entrega una nueva versión de SIP4.0.</td>
+                                                Cubits S.R.L. entrega una nueva versión de viajes.prodismo.com.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -248,7 +236,7 @@
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1. Etapa 1 – Solicitud</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El solicitante completa el <strong>F134-IT-2</strong> (hoja "Solicitud") y lo envía a <strong>itprodismo@prodismo.com</strong>, indicando software, fabricante, versión, finalidad, equipos, licencia y si procesará información de clientes o datos personales.</li>
+                                    <li>El solicitante completa el formulario <strong>F134-IT-2</strong> y lo envía por ticket de soporte o por mail a <strong>itprodismo@prodismo.com</strong>, indicando software, fabricante, versión, finalidad, equipos, licencia y si procesará información de clientes o datos personales.</li>
                                     <li>IT verifica primero si existe un <strong>software aprobado equivalente</strong> en el <strong>F134-IT-1</strong>; si existe, se ofrece ese.</li>
                                 </ul>
                             </div>
@@ -355,14 +343,16 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>El Administrador de IT descarga el instalador <strong>solo desde la fuente oficial</strong>.</li>
                                     <li>Verifica la <strong>firma digital</strong> o el <strong>hash SHA-256</strong> publicado por el fabricante y lo analiza con el antivirus.</li>
-                                    <li>Guarda el instalador en el <strong>repositorio de instaladores de IT</strong> (--TODO-- ubicación) y registra el hash en el <strong>F134-IT-1</strong>.</li>
+                                    <li>Guarda el instalador en el <strong>repositorio de instaladores de IT</strong> (servidor de archivos "Diserver", carpeta de instaladores con escritura solo para administradores de IT – REP-01) y registra el hash en el <strong>F134-IT-1</strong>.</li>
                                 </ul>
                             </div>
 
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.5. Etapa 5 – Instalación</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>La instalación la realiza <strong>únicamente IT</strong>, desde el repositorio gestionado o desde la fuente oficial registrada.</li>
+                                    <li>Los usuarios tienen permisos de administrador local y pueden instalar <strong>solo software aprobado</strong> en el F134-IT-1, desde el repositorio de IT o desde la fuente oficial registrada.</li>
+                                    <li>El software de servidores, el software crítico (CAD/CAM, ERP SIP) y el que requiere licencia corporativa lo instala <strong>IT</strong>.</li>
+                                    <li>El riesgo de los permisos de administrador local está registrado como <strong>R1-IT-26</strong> en la M141-IT-1, con plan de acción para reducirlos.</li>
                                     <li>Se registran los equipos donde se instala el software.</li>
                                 </ul>
                             </div>
@@ -370,7 +360,8 @@
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.6. Etapa 6 – Actualizaciones y Parches</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Se aplican las actualizaciones según las frecuencias y plazos de la sección 7.</li>
+                                    <li>Se aplican las actualizaciones según las frecuencias y plazos de la sección 7. Windows Update y Microsoft 365 Apps se actualizan de forma automática en cada equipo.</li>
+                                    <li>Mensualmente, el Administrador de IT revisa en Microsoft Defender for Endpoint las versiones de sistema operativo y las vulnerabilidades pendientes, y exporta el informe como evidencia.</li>
                                     <li>Después de cada actualización se actualiza la versión y el nivel de parche en el <strong>F134-IT-1</strong>.</li>
                                     <li>Las nuevas versiones de software de terceros se gestionan según la sección 9.</li>
                                 </ul>
@@ -380,7 +371,7 @@
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.7. Etapa 7 – Revisión Anual y Retiro</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>El IT Manager revisa <strong>anualmente</strong> cada software del F134-IT-1: necesidad, licencia, soporte y vulnerabilidades.</li>
-                                    <li>También se revisa ante fin de soporte, vulnerabilidades críticas o vencimiento de licencias.</li>
+                                    <li>También se revisa ante fin de soporte, vulnerabilidades críticas o vencimiento de licencias. El software sin soporte que deba seguir en uso se gestiona como excepción (sección 8).</li>
                                     <li>Si se retira la aprobación, IT desinstala el software y lo marca como <strong>Retirado</strong>.</li>
                                 </ul>
                             </div>
@@ -388,8 +379,9 @@
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.8. Etapa 8 – Detección de Software No Autorizado</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>IT compara <strong>trimestralmente</strong> el software instalado con el F134-IT-1 (herramienta: --TODO--).</li>
-                                    <li>El software no autorizado se desinstala y se informa al responsable del área; si es malicioso, se aplica <strong>P121-IT-1</strong>.</li>
+                                    <li>IT compara <strong>semestralmente</strong> el software instalado con el F134-IT-1, usando el inventario de software de Microsoft Defender for Endpoint y de Wazuh, y registra el resultado en el <strong>F133-IT-3</strong>.</li>
+                                    <li>IT envía un mail general a los usuarios, con copia a Dirección, solicitando desinstalar el software no aprobado, sin licencia o crackeado y usar alternativas aprobadas.</li>
+                                    <li>El software no autorizado se desinstala y se informa al responsable del área; si es malicioso, se aplica <strong>P111-IT-1</strong> (sección 6.3). El resultado se informa en la revisión por la dirección.</li>
                                 </ul>
                             </div>
                         </section>
@@ -423,10 +415,10 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Windows y Windows Server</td>
+                                                Windows (PC) y Windows Server</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Ciclo mensual</td>
+                                                PC: Windows Update automático. Servidores: mensual, en ventana fuera de horario. Verificación mensual en Defender for Endpoint.</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Microsoft Update</td>
@@ -440,7 +432,7 @@
                                                 Microsoft 365 Apps</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Automática / mensual</td>
+                                                Automática (canal mensual)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Microsoft 365</td>
@@ -493,27 +485,13 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Firmware de planta (CNC, PLC, robots)</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Según fabricante, en ventanas de mantenimiento</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Fabricante o integrador</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Mantenimiento (--TODO--)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Software de terceros a medida</td>
+                                                Software a medida (SIP4.0, viajes.prodismo.com)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Por versión entregada</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Proveedor</td>
+                                                Desarrollador interno / Cubits S.R.L.</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Responsable interno del servicio</td>
@@ -524,17 +502,24 @@
                             <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4"><strong>Plazos para vulnerabilidades de seguridad:</strong> Crítica, hasta <strong>7 días</strong>; Alta, hasta <strong>30 días</strong>; Media y Baja, en el siguiente ciclo mensual. Si no puede cumplirse el plazo, se registra una excepción con controles compensatorios.</p>
                         </section>
 
-                        <section id="software-de-planta-y-equipos-con-soporte" class="mb-12 scroll-mt-20">
+                        <section id="software-sin-soporte" class="mb-12 scroll-mt-20">
                             <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                                 <span
                                     class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                                SOFTWARE DE PLANTA Y EQUIPOS CON SOPORTE LIMITADO
+                                SOFTWARE SIN SOPORTE: EXCEPCIONES
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>El firmware y el software de controladores CNC, PLC y robots se registran en el <strong>F134-IT-1</strong> con versión y fabricante.</li>
-                                <li>Antes de cada actualización se respaldan los programas y la configuración del equipo.</li>
-                                <li>Las actualizaciones se realizan en paradas programadas y se verifican con Producción.</li>
-                                <li>Los equipos con sistemas operativos sin soporte se <strong>aíslan de la red</strong> (segmentación según <strong>F124-IT-3</strong>), no se usan para navegar en Internet ni para correo, y solo se conectan por accesos remotos autorizados.</li>
+                                <li>El software sin soporte del fabricante (sin parches de seguridad) solo puede seguir en uso con una <strong>excepción</strong> registrada en el <strong>F134-IT-3</strong>, que indica: motivo, riesgo, controles compensatorios, plan de salida, fecha límite y aprobación.</li>
+                                <li>La excepción la aprueba el IT Manager; si el riesgo es Alto, también la Alta Dirección. Se revisa al menos trimestralmente y vence en la fecha límite.</li>
+                                <li>Controles compensatorios mínimos: Defender for Endpoint activo, agente Wazuh, sin navegación ni correo en el equipo cuando sea posible, acceso restringido y backup.</li>
+                                <li>Excepciones vigentes (riesgo <strong>R1-IT-27</strong> en la M141-IT-1):
+                                    <ul class="list-circle pl-5 mt-2 space-y-3">
+                                        <li><strong>EX-01</strong> Windows Server 2012 / 2012 R2: migración a Windows Server 2022 hasta 03/2027.</li>
+                                        <li><strong>EX-02</strong> Windows 10 (~100 equipos): migración a Windows 11 o ESU.</li>
+                                        <li><strong>EX-03</strong> CATIA V5 (R19, R20, R29, R30): sin mantenimiento del fabricante.</li>
+                                        <li><strong>EX-04</strong> Cimatron: sin soporte ni mantenimiento.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </section>
 
@@ -553,7 +538,7 @@
                                                 Paso</th>
                                             <th
                                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                ERP SIP / SIP4.0 (Enter-Geminus)</th>
+                                                ERP SIP / SIP4.0 (desarrollador interno)</th>
                                             <th
                                                 class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                 viajes.prodismo.com (Cubits S.R.L.)</th>
@@ -589,7 +574,7 @@
                                                 Aprobación</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Esteban Manzoni (distinto del desarrollador).</td>
+                                                Esteban Manzoni (distinto del desarrollador interno).</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Germán Montalbetti (distinto del desarrollador).</td>
@@ -778,7 +763,7 @@
                                                 6. Actualizaciones y parches</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Administrador de IT / Mantenimiento</td>
+                                                Administrador de IT</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 F134-IT-1 (versión y parche)</td>
@@ -803,7 +788,7 @@
                                                 Administrador de IT</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Informe trimestral</td>
+                                                F133-IT-3 (semestral)</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -821,7 +806,9 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>F134-IT-1:</strong> Inventario de Software Aprobado (incluye repositorios).</li>
                                     <li><strong>F134-IT-2:</strong> Solicitud y Evaluación de Software Nuevo (incluye registro de solicitudes).</li>
-                                    <li>Registros de parches, excepciones e informes trimestrales de software no autorizado.</li>
+                                    <li><strong>F134-IT-3:</strong> Registro de Excepciones de Software sin Soporte.</li>
+                                    <li><strong>F133-IT-3:</strong> Verificación semestral de software y servicios no aprobados (con el mail general enviado).</li>
+                                    <li>Informes mensuales exportados de Microsoft Defender for Endpoint (versiones y vulnerabilidades).</li>
                                 </ul>
                             </div>
 
@@ -833,6 +820,8 @@
                                     <li>Inventario con versiones y niveles de parche actualizados.</li>
                                     <li>Revisiones anuales de aprobación registradas.</li>
                                     <li>Solicitudes evaluadas, aprobadas y rechazadas.</li>
+                                    <li>Excepciones de software sin soporte aprobadas, con plan de salida (F134-IT-3).</li>
+                                    <li>Riesgos R1-IT-26 y R1-IT-27 con plan de acción en la M141-IT-1.</li>
                                 </ul>
                             </div>
                         </section>
@@ -875,6 +864,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                13/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipos de planta fuera del alcance; instalación por usuarios solo de software aprobado (R1-IT-26); repositorio Diserver; verificación de parches con Defender for Endpoint; detección semestral (F133-IT-3); sección 8 reemplazada por excepciones de software sin soporte (F134-IT-3); SIP con desarrollador interno; referencias a P111-IT-1.</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -883,16 +881,14 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <!-- --TODO-- verificar ruta del procedimiento P133-IT-1 -->
                     <a href="proc-gestion-servicios-externos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Servicios de TI Externos</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
-                    <a href="--TODO--"
+                    <a href="../gestion-riesgos/proc-gestion-riesgos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Riesgos</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -930,9 +926,9 @@
                             <a href="#frecuencias-y-plazos-de-actualizacion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
                                 FRECUENCIAS Y PLAZOS</a>
-                            <a href="#software-de-planta-y-equipos-con-soporte"
+                            <a href="#software-sin-soporte"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                SOFTWARE DE PLANTA</a>
+                                SOFTWARE SIN SOPORTE</a>
                             <a href="#software-de-terceros-a-medida"
                                 class="block py-2 px-3 text-[13px] text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 SOFTWARE DE TERCEROS A MEDIDA</a>
@@ -985,7 +981,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1001,11 +997,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">13/11/2027</span>
                             </div>
                         </div>
                     </div>

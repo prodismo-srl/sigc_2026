@@ -45,16 +45,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- completar ruta de la página MC161-IT-1 -->
-                    <a href="--TODO--"
+                    <a href="gestion-incidentes.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Eventos de Seguridad</span>
+                        <span>Anterior: Reporte de Eventos de Seguridad</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
-                    <a href="--TODO--"
+                    <a href="gestion-crisis.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Crisis</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -71,11 +69,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 15/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -123,8 +121,8 @@
                                 <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.6.2</strong> (Gestión de incidentes de seguridad reportados)</li>
                                 <li><strong>Ley 26.388</strong> de Delitos Informáticos y <strong>Ley 25.326</strong> de Protección de Datos Personales (República Argentina)</li>
                                 <li>Procedimiento de Gestión de Incidentes de Seguridad de la Información <strong>P162-IT-1</strong></li>
-                                <li>Política de Gestión de Eventos de Seguridad por Departamento <strong>MC161-IT-1</strong> y Procedimiento de Gestión de Eventos de Seguridad <strong>P161-IT-1</strong></li>
-                                <li>Formularios de Reporte y de Escalamiento de Eventos <strong>F161-IT-1</strong> y <strong>F161-IT-2</strong></li>
+                                <li>Política de Reporte de Eventos de Seguridad de la Información <strong>MC161-IT-1</strong>, Procedimiento <strong>P161-IT-1</strong> y Guía rápida para reportar eventos <strong>F161-IT-1</strong></li>
+                                <li>Registro de Eventos e Incidentes <strong>F162-IT-1</strong>, Informe Post-Incidente <strong>F162-IT-2</strong> y Plan y Acta de Simulacro <strong>F162-IT-3</strong></li>
                                 <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
                                 <li>Políticas de Responsabilidades con Proveedores <strong>MC124-IT-1</strong> y de Gestión de Servicios de TI Externos <strong>MC133-IT-1</strong></li>
                             </ul>
@@ -159,7 +157,7 @@
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Prioridad:</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Nivel de urgencia y gravedad del evento: Crítico, Alto o Medio/Bajo (según <strong>MC161-IT-1</strong>).</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Nivel de urgencia y gravedad del evento: Crítico, Alto o Medio/Bajo (sección 6.4).</p>
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Equipo de respuesta:</h3>
@@ -206,7 +204,7 @@
                                 </div>
                                 <div
                                     class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                    <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT / Soporte Seguridad</h3>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Administrador de IT</h3>
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
                                         <li>Gestionar técnicamente los incidentes cibernéticos: contención, investigación, erradicación y recuperación.</li>
                                         <li>Preservar las evidencias técnicas (registros, imágenes de equipos, sesiones remotas).</li>
@@ -226,14 +224,6 @@
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
                                         <li>Responder a los incidentes físicos (accesos no autorizados, robos, intrusiones) e informar de inmediato al RSI.</li>
                                         <li>Preservar las grabaciones del CCTV y los registros de acceso relacionados.</li>
-                                    </ul>
-                                </div>
-                                <div
-                                    class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                    <h3 class="font-semibold text-gray-900 dark:text-white">Coordinadores de Eventos por Departamento</h3>
-                                    <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                        <li>Recibir y reportar los eventos de su área (<strong>F161-IT-1</strong>) y aplicar las acciones inmediatas de <strong>MC161-IT-1</strong>.</li>
-                                        <li>Colaborar con el equipo de respuesta y en la implementación de las acciones de mejora.</li>
                                     </ul>
                                 </div>
                                 <div
@@ -288,7 +278,7 @@
                                                     Cibernético</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    <ul class="list-disc pl-5 space-y-3"><li>Phishing y compromiso de cuentas.</li><li>Malware o ransomware.</li><li>Acceso no autorizado a CATIA/NX o SIP4.0.</li><li>Incidentes en servicios externos (Microsoft 365, Armanet, Enter-Geminus).</li></ul></td>
+                                                    <ul class="list-disc pl-5 space-y-3"><li>Phishing y compromiso de cuentas.</li><li>Malware o ransomware.</li><li>Acceso no autorizado a CATIA/NX o SIP4.0.</li><li>Incidentes en servicios externos (Microsoft 365, Armanet S.A., Azure, AnyDesk).</li></ul></td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Germán Montalbetti (IT Manager)</td>
@@ -420,7 +410,7 @@
                                                     Prioridad</th>
                                                 <th
                                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Criterios (MC161-IT-1)</th>
+                                                    Criterios</th>
                                                 <th
                                                     class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
                                                     Respuesta inicial</th>
@@ -519,12 +509,12 @@
                                                     Emiliano Ferrari</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    gmontalbetti@prodismo.com<br>Tel. 24/7: +54 9 3541 66-9837</td>
+                                                    gmontalbetti@prodismo.com<br>Tel.: +54 9 3541 66-9837 (también fuera de horario)</td>
                                             </tr>
                                             <tr>
                                                 <td
                                                     class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                    Respuesta técnica (Administrador de IT / Soporte Seguridad)</td>
+                                                    Respuesta técnica (Administrador de IT)</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                     Emiliano Ferrari</td>
@@ -561,7 +551,7 @@
                                                     Mariano Nieto (RRHH)</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Tel.: --TODO--</td>
+                                                    Supervisor de Guardia: Eduardo Sánchez<br>Tel.: +54 (0351) 499 5921, interno 121</td>
                                             </tr>
                                             <tr>
                                                 <td
@@ -572,10 +562,10 @@
                                                     Damián Pedrosa</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    --TODO--</td>
+                                                    Mariano Nieto (Gte. RRHH); en su defecto, Federico Lehmann (Director de Finanzas)</td>
                                                 <td
                                                     class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Tel.: --TODO--</td>
+                                                    A través del Coordinador de incidentes</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -595,7 +585,7 @@
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.3. Calificación y Recursos</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li>Los integrantes del equipo de respuesta reciben capacitación anual en gestión de incidentes y en sus herramientas.</li>
-                                    <li>Se cuenta con apoyo externo cuando se requiere: Telecom Argentina (ciberseguridad), Armanet S.A. (redes y CCTV) y los proveedores de cada servicio según <strong>MC124-IT-1</strong>; asesoría legal externa: --TODO--.</li>
+                                    <li>Se cuenta con apoyo externo cuando se requiere: Armanet S.A. (redes, firewall, VPN y CCTV), por ticket de soporte, y los proveedores de cada servicio según <strong>MC124-IT-1</strong>; asesoría legal externa: a designar por la Alta Dirección cuando sea necesario.</li>
                                     <li>La Alta Dirección asigna los recursos necesarios para la respuesta a incidentes Críticos.</li>
                                 </ul>
                             </div>
@@ -659,7 +649,7 @@
                                                 Prioridad Alto</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Teléfono 24/7: +54 9 3541 66-9837.</li><li>Mensaje por Microsoft Teams.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Teléfono del IT Manager: +54 9 3541 66-9837 (suplente: Emiliano Ferrari, +54 9 351 521-7958).</li><li>Mensaje por Microsoft Teams.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 &lt; 4 horas</td>
@@ -673,7 +663,7 @@
                                                 Prioridad Crítico o incidente en curso</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Llamada directa al IT Manager y a la Alta Dirección.</li><li>Si no responden, llamada al suplente.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Llamada directa al IT Manager (+54 9 3541 66-9837) y a la Alta Dirección.</li><li>Si no responden, llamada a los suplentes: Emiliano Ferrari (+54 9 351 521-7958) y, para la Alta Dirección, Mariano Nieto o Federico Lehmann.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 &lt; 1 hora</td>
@@ -691,7 +681,7 @@
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>La respuesta sigue las fases de <strong>contención, investigación, erradicación, recuperación y cierre</strong> definidas en el procedimiento <strong>P162-IT-1</strong>.</li>
-                                <li>Las acciones inmediatas por departamento se aplican según <strong>MC161-IT-1</strong>.</li>
+                                <li>Las acciones clave por tipo de incidente están en la sección 8 del procedimiento <strong>P162-IT-1</strong>.</li>
                                 <li>Toda acción relevante se registra en el <strong>F162-IT-1</strong> con fecha, hora y responsable.</li>
                                 <li>Las evidencias se preservan desde el inicio, aun cuando no se prevean acciones legales.</li>
                             </ul>
@@ -730,7 +720,7 @@
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li>En todo incidente <strong>Crítico</strong> o <strong>Alto</strong> se evalúa si existen aspectos potencialmente <strong>penales</strong> (por ejemplo, acceso indebido a sistemas, daño informático o fraude, previstos por la <strong>Ley 26.388</strong>), afecten la confidencialidad, la integridad o la disponibilidad (C, I, A).</li>
-                                <li>La decisión de presentar una <strong>denuncia penal</strong> (ante la fiscalía especializada en delitos informáticos o la policía) la toma la <strong>Alta Dirección</strong>, con el asesoramiento del Representante Legal y de la asesoría legal externa (--TODO--).</li>
+                                <li>La decisión de presentar una <strong>denuncia penal</strong> (ante la fiscalía especializada en delitos informáticos o la policía) la toma la <strong>Alta Dirección</strong>, con el asesoramiento del Representante Legal (Mariano Nieto) y de la asesoría legal externa que designe la Alta Dirección cuando sea necesario.</li>
                                 <li>Las evidencias se recopilan y conservan con <strong>cadena de custodia</strong> (control <strong>A.5.28</strong>), evitando alterar los equipos o registros originales.</li>
                                 <li>Los reportes oficiales a clientes, autoridades y ENX/TISAX se redactan y revisan por el Representante Legal antes de su envío y se registran en el <strong>F162-IT-1</strong>.</li>
                             </ul>
@@ -746,7 +736,7 @@
                                 <li>Para todo incidente <strong>Crítico</strong> o <strong>Alto</strong> se elabora el <strong>Informe Post-Incidente (F162-IT-2)</strong> dentro de los <strong>10 días hábiles</strong> posteriores al cierre, con causa raíz, impacto y lecciones aprendidas.</li>
                                 <li>Cada lección aprendida genera una <strong>acción de mejora</strong> con responsable y fecha, cuyo seguimiento se registra en el <strong>F162-IT-2</strong>.</li>
                                 <li>Las lecciones aprendidas se utilizan para actualizar la evaluación de riesgos, los controles, las políticas y las capacitaciones.</li>
-                                <li>El Comité de Seguridad de la Información revisa trimestralmente los incidentes, su recurrencia y el estado de las acciones de mejora.</li>
+                                <li>El RSI revisa mensualmente los incidentes, su recurrencia y el estado de las acciones de mejora, y los presenta en la revisión por la dirección.</li>
                             </ul>
                         </section>
 
@@ -757,8 +747,8 @@
                                 CAPACITACIÓN Y SIMULACROS
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>El equipo de respuesta y los Coordinadores de Eventos reciben capacitación anual en gestión de incidentes.</li>
-                                <li>Se realiza al menos <strong>un simulacro anual</strong> de un incidente Crítico (por ejemplo, ransomware) y sus resultados se tratan como lecciones aprendidas.</li>
+                                <li>El equipo de respuesta recibe capacitación anual en gestión de incidentes.</li>
+                                <li>Se realiza al menos <strong>un simulacro anual</strong> de un incidente Crítico (por ejemplo, ransomware) y sus resultados se tratan como lecciones aprendidas. El plan, el desarrollo y las conclusiones se registran en el <strong>F162-IT-3</strong>.</li>
                             </ul>
                         </section>
 
@@ -771,9 +761,9 @@
                             <div class="mb-6">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">14.1. Registros Obligatorios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>F162-IT-1:</strong> Registro de Incidentes de Seguridad.</li>
+                                    <li><strong>F162-IT-1:</strong> Registro de Eventos e Incidentes de Seguridad.</li>
                                     <li><strong>F162-IT-2:</strong> Informe Post-Incidente y Lecciones Aprendidas.</li>
-                                    <li><strong>F161-IT-1 / F161-IT-2:</strong> Reportes y escalamientos de eventos.</li>
+                                    <li><strong>F162-IT-3:</strong> Plan y Acta de Simulacro de Incidente.</li>
                                     <li><strong>Tickets</strong> de STI / App Help Desk y comunicaciones internas y externas.</li>
                                     <li><strong>Evidencias</strong> del incidente con su cadena de custodia.</li>
                                 </ul>
@@ -839,10 +829,9 @@
                             </h2>
                             <div class="space-y-4">
                             <!-- Anexo A -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F162-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="--TODO--" target="_blank"
-                                    title="F162-IT-1 Registro de Incidentes de Seguridad - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo A: <a href="#anexos"
+                                    title="F162-IT-1 Registro de Eventos e Incidentes de Seguridad - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -851,7 +840,7 @@
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         F162-IT-1
                                     </span>
-                                    Registro de Incidentes de Seguridad
+                                    Registro de Eventos e Incidentes de Seguridad
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
@@ -859,9 +848,8 @@
                             </div>
 
                             <!-- Anexo B -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F162-IT-2 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="--TODO--" target="_blank"
+                                Anexo B: <a href="#anexos"
                                     title="F162-IT-2 Informe Post-Incidente y Lecciones Aprendidas - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -879,7 +867,6 @@
                             </div>
 
                             <!-- Anexo C -->
-                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P162-IT-1 dentro del sitio -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="../../procedimientos/gestion-incidentes/proc-gestion-incidentes-seguridad.html"
                                     title="P162-IT-1 Procedimiento de Gestión de Incidentes de Seguridad de la Información"
@@ -899,10 +886,9 @@
                             </div>
 
                             <!-- Anexo D -->
-                            <!-- TODO: --TODO-- completar la ruta de la página MC161-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="--TODO--"
-                                    title="MC161-IT-1 Gestión de Eventos de Seguridad por Departamento"
+                                Anexo D: <a href="gestion-incidentes.html"
+                                    title="MC161-IT-1 Reporte de Eventos de Seguridad de la Información"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
@@ -911,11 +897,30 @@
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         MC161-IT-1
                                     </span>
-                                    Gestión de Eventos de Seguridad por Departamento (y P161-IT-1)
+                                    Reporte de Eventos de Seguridad de la Información (y P161-IT-1)
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Reporte de eventos, acciones inmediatas por departamento y escalamiento]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Qué reportar, canales según gravedad, reportes de terceros y respuesta al reportante]</p>
+                            </div>
+
+                            <!-- Anexo E -->
+                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo E: <a href="#anexos"
+                                    title="F162-IT-3 Plan y Acta de Simulacro de Incidente - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F162-IT-3
+                                    </span>
+                                    Plan y Acta de Simulacro de Incidente
+                                    <i
+                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Escenario, participantes, desarrollo, tiempos, conclusiones y acciones de mejora del simulacro anual]</p>
                             </div>
                             </div>
                         </section>
@@ -958,6 +963,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                15/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Suplentes de la Alta Dirección (Mariano Nieto, Federico Lehmann) y del teléfono de emergencia (Emiliano Ferrari); contacto de la guardia; apoyo externo de Armanet S.A. por ticket; asesoría legal a designar; se eliminan el Comité de Seguridad, los Coordinadores de Eventos y el formulario F161-IT-2; referencias a MC161-IT-1 Rev. 2; simulacro registrado en el F162-IT-3.</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -966,16 +980,14 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <!-- --TODO-- completar ruta de la página MC161-IT-1 -->
-                    <a href="--TODO--"
+                    <a href="gestion-incidentes.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Eventos de Seguridad</span>
+                        <span>Anterior: Reporte de Eventos de Seguridad</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título de la página siguiente -->
-                    <a href="--TODO--"
+                    <a href="gestion-crisis.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Gestión de Crisis</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -1088,7 +1100,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1104,11 +1116,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2027</span>
                             </div>
                         </div>
                     </div>

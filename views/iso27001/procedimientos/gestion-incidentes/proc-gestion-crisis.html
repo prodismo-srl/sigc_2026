@@ -46,16 +46,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- verificar ruta del procedimiento P162-IT-1 -->
                     <a href="proc-gestion-incidentes-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Incidentes de Seguridad</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
-                    <a href="--TODO--"
+                    <a href="../recursos-humanos/proc-cualificacion-personal.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Cualificación de Personal en Puestos Sensibles</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -72,11 +70,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 15/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -105,7 +103,7 @@
                             <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                 <li><strong>Toda situación</strong> que cumpla los criterios de crisis de <strong>MC163-IT-1</strong>, incluidos los incidentes Críticos escalados desde <strong>P162-IT-1</strong>.</li>
-                                <li><strong>El Comité de Crisis</strong>, los responsables de área y el personal que participe en la respuesta.</li>
+                                <li><strong>El Equipo de Gestión de Crisis</strong>, los responsables de área y el personal que participe en la respuesta.</li>
                                 <li><strong>Los ejercicios y pruebas</strong> del Plan de Crisis.</li>
                             </ul>
                         </section>
@@ -120,7 +118,8 @@
                                 <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.29, A.5.30</li>
                                 <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.6.3</strong></li>
                                 <li>Política de Gestión de Crisis <strong>MC163-IT-1</strong></li>
-                                <li>Política y procedimiento de Gestión de Incidentes <strong>MC162-IT-1 / P162-IT-1</strong></li>
+                                <li>Política y procedimiento de Gestión de Incidentes <strong>MC162-IT-1 / P162-IT-1</strong> y simulacro anual <strong>F162-IT-3</strong></li>
+                                <li><strong>F163-IT-1</strong> Plan de Crisis · <strong>F163-IT-2</strong> Registro de Activación, Bitácora y Lecciones Aprendidas · <strong>F163-IT-3</strong> Acta de Conformación del Equipo de Gestión de Crisis</li>
                                 <li>Políticas <strong>MC124-IT-1</strong> y <strong>MC133-IT-1</strong> (proveedores y servicios de TI externos)</li>
                             </ul>
                         </section>
@@ -147,7 +146,7 @@
                                 </div>
                                 <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800">
                                     <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Árbol de llamadas:</h3>
-                                    <p class="text-gray-700 dark:text-gray-300">Orden y medios de contacto para convocar al Comité de Crisis.</p>
+                                    <p class="text-gray-700 dark:text-gray-300">Orden y medios de contacto para convocar al Equipo de Gestión de Crisis.</p>
                                 </div>
                             </div>
                         </section>
@@ -178,10 +177,10 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Presidente del Comité (Dirección)</td>
+                                                Presidente del Equipo (Dirección)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Damián Pedrosa / --TODO--</td>
+                                                Damián Pedrosa / Mariano Nieto (en su defecto, Federico Lehmann)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Activar Nivel 3 y desactivar la crisis.</li><li>Decisiones estratégicas; vocero externo.</li></ul></td>
@@ -195,7 +194,7 @@
                                                 Germán Montalbetti / Emiliano Ferrari</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Evaluar y activar Niveles 1 y 2.</li><li>Convocar al Comité y llevar la bitácora.</li><li>Coordinar proveedores y comunicación.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Evaluar y activar Niveles 1 y 2.</li><li>Convocar al Equipo y llevar la bitácora.</li><li>Coordinar proveedores y comunicación.</li></ul></td>
                                         </tr>
                                         <tr>
                                             <td
@@ -225,7 +224,7 @@
                                                 Administración / Finanzas</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Esteban Manzoni (a confirmar) / --TODO--</td>
+                                                Esteban Manzoni (Administración) / Federico Lehmann (Director de Finanzas)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Fondos de emergencia, pagos y operación manual sin ERP.</li></ul></td>
@@ -236,7 +235,7 @@
                                                 Producción</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                --TODO-- / --TODO--</td>
+                                                Gerencia de Fabricación – [a definir por la Alta Dirección]</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Continuidad de producción y entregas.</li></ul></td>
@@ -247,7 +246,7 @@
                                                 Seguridad corporativa (Guardia)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Guardia / Mariano Nieto</td>
+                                                Supervisor de Guardia Eduardo Sánchez (+54 (0351) 499 5921, int. 121) / Mariano Nieto</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 <ul class="list-disc pl-5 space-y-3"><li>Seguridad física, evacuación, llamado a emergencias.</li></ul></td>
@@ -315,7 +314,7 @@
                                                 Coordinador o Dirección</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Comité de decisión + integrantes según escenario</td>
+                                                Grupo de decisión + integrantes según escenario</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Cada 4 horas</td>
@@ -332,7 +331,7 @@
                                                 Dirección</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Comité completo + recursos externos</td>
+                                                Equipo completo + recursos externos</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Cada 2 horas</td>
@@ -351,7 +350,7 @@
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.1. Etapa 1 – Detección y Evaluación Inicial (hasta 30 minutos)</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Quien detecta la situación avisa al Coordinador de Crisis por el canal más rápido (teléfono 24/7 o WhatsApp). <strong>Si hay riesgo para la vida, primero llama al 911, Bomberos (100) o Emergencias médicas (107).</strong></li>
+                                    <li>Quien detecta la situación avisa al Coordinador de Crisis por el canal más rápido: teléfono del IT Manager (+54 9 3541 66-9837), de su suplente Emiliano Ferrari (+54 9 351 521-7958) o WhatsApp empresarial. <strong>Si hay riesgo para la vida, primero llama al 911, Bomberos (100) o Emergencias médicas (107).</strong></li>
                                     <li>El Coordinador evalúa con estas preguntas:
                                         <ul class="list-circle pl-5 mt-2 space-y-3">
                                             <li>¿Hay personas en riesgo?</li>
@@ -367,9 +366,9 @@
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.2. Etapa 2 – Activación y Convocatoria (hasta 1 hora)</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El Coordinador convoca a los integrantes según el nivel, por el grupo de WhatsApp del Comité y por teléfono (árbol de llamadas del <strong>F163-IT-1</strong>).</li>
+                                    <li>El Coordinador convoca a los integrantes según el nivel, por WhatsApp empresarial y por teléfono (árbol de llamadas del <strong>F163-IT-1</strong>). La convocatoria inicial del Equipo se anota en la bitácora del <strong>F163-IT-2</strong>.</li>
                                     <li>Si un titular no responde en <strong>15 minutos</strong>, se convoca a su suplente.</li>
-                                    <li>La primera reunión del Comité se realiza dentro de la hora, presencial o por llamada; si no hay Internet ni Teams, en el punto de reunión alternativo (--TODO--).</li>
+                                    <li>La primera reunión del Equipo se realiza dentro de la hora, presencial o por llamada; si no hay Internet ni Teams, en el punto de reunión alternativo ([a definir por la Alta Dirección]).</li>
                                 </ul>
                             </div>
 
@@ -378,24 +377,24 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>Personas:</strong> evacuación, asistencia y recuento del personal.</li>
                                     <li><strong>Contención:</strong> aislar sistemas comprometidos, cortar accesos, proteger la planta y los prototipos.</li>
-                                    <li><strong>Información:</strong> asegurar las copias de respaldo fuera de línea (NAS) y preservar evidencias (<strong>P162-IT-1</strong>).</li>
+                                    <li><strong>Información:</strong> proteger las copias de respaldo disponibles (aislarlas de la red si hay un ataque en curso) y preservar evidencias (<strong>P162-IT-1</strong>).</li>
                                 </ul>
                             </div>
 
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.4. Etapa 4 – Gestión de la Crisis</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El Comité revisa la situación en cada ciclo de reporte: estado, decisiones necesarias, recursos, comunicación.</li>
+                                    <li>El Equipo revisa la situación en cada ciclo de reporte: estado, decisiones necesarias, recursos, comunicación.</li>
                                     <li>Todas las decisiones, acciones y comunicaciones se registran en la <strong>bitácora</strong> del <strong>F163-IT-2</strong>.</li>
                                     <li>Las excepciones de seguridad (canales o equipos alternativos) las autoriza el Coordinador y se registran.</li>
-                                    <li>Si la situación empeora, el Comité <strong>intensifica</strong> el nivel; si mejora, puede reducirlo.</li>
+                                    <li>Si la situación empeora, el Equipo <strong>intensifica</strong> el nivel; si mejora, puede reducirlo.</li>
                                 </ul>
                             </div>
 
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">7.5. Etapa 5 – Continuidad de los Procesos Esenciales</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Se activan las alternativas definidas en el <strong>F163-IT-1</strong> (hoja "Procesos Esenciales"): Internet de respaldo, trabajo remoto, operación manual sin ERP, comunicación por canales alternativos.</li>
+                                    <li>Se activan las alternativas definidas en el <strong>F163-IT-1</strong> (hoja "Procesos Esenciales"): Internet de respaldo, trabajo remoto, notebooks de respaldo, operación manual sin ERP (planillas pendientes de elaborar), comunicación por canales alternativos.</li>
                                     <li>Se informa a los clientes automotrices dentro de las <strong>24 horas</strong> si se afectan entregas o su información.</li>
                                 </ul>
                             </div>
@@ -453,10 +452,10 @@
                                                 <ul class="list-disc pl-5 space-y-3"><li>Desconectar la red afectada.</li><li>No pagar ni negociar sin decisión de la Dirección.</li><li>Preservar evidencias.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Restaurar desde backups fuera de línea.</li><li>Notebooks de contingencia.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Restaurar desde las copias de respaldo verificadas.</li><li>Notebooks de respaldo (inventario Snipe-IT).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Telecom Argentina (ciberseguridad), Microsoft / Telecom, Armanet S.A.</td>
+                                                Microsoft, Armanet S.A. (por ticket), asesoría legal que designe la Alta Dirección</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -467,10 +466,10 @@
                                                 <ul class="list-disc pl-5 space-y-3"><li>Verificar conmutación a Batcom.</li><li>Consultar estado a Airsat S.A. y Microsoft.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Datos móviles y WhatsApp.</li><li>Trabajo local con archivos sincronizados.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Datos móviles y WhatsApp empresarial.</li><li>Trabajo local con archivos sincronizados.</li><li>Si la caída supera las 24 h, avisar por teléfono a clientes y proveedores clave.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Airsat S.A., Batcom, Microsoft / Telecom</td>
+                                                Airsat S.A., Batcom, Microsoft</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -551,7 +550,7 @@
                                                 <ul class="list-disc pl-5 space-y-3"><li>Contactar al proveedor y escalar.</li><li>Evaluar el impacto.</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Enlace alternativo.</li><li>Proveedor de reemplazo (--TODO--).</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Enlace alternativo.</li><li>No hay proveedor de reemplazo definido (acción de mejora en el F151-IT-4).</li></ul></td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Airsat S.A., Batcom, Armanet S.A.</td>
@@ -590,13 +589,13 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Comité de Crisis</td>
+                                                Equipo de Gestión de Crisis</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 En la activación y en cada ciclo de reporte</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Teams / WhatsApp del Comité y celulares</td>
+                                                Teléfono / WhatsApp empresarial</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Coordinador</td>
@@ -610,7 +609,7 @@
                                                 Activación, instrucciones y cierre</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Correo / WhatsApp empresarial</td>
+                                                WhatsApp empresarial / correo</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 RRHH</td>
@@ -703,21 +702,10 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Lista impresa de contactos (Comité, emergencias, proveedores, clientes)</td>
+                                                Lista de contactos de emergencia (Equipo de Gestión de Crisis, emergencias, proveedores)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                --TODO--</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Semestral</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Credenciales de emergencia en sobre cerrado</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Caja fuerte / --TODO--</td>
+                                                Tableros de comunicados de la planta; copia en el F163-IT-1</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Semestral</td>
@@ -725,35 +713,24 @@
                                         <tr>
                                             <td
                                                 class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Notebook de contingencia con herramientas de recuperación</td>
+                                                Notebooks de respaldo</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                IT – registradas en el inventario de activos (Snipe-IT)</td>
+                                            <td
+                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                                                Semestral</td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
+                                                Copias de respaldo (la copia fuera de línea está planificada para 2027)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 IT</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Semestral</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Copias de respaldo fuera de línea (NAS)</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                IT</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Mensual (prueba de restauración)</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-gray-900 dark:text-white">
-                                                Planillas de operación manual sin ERP</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Administración</td>
-                                            <td
-                                                class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
+                                                Restauraciones de prueba periódicas, registradas en el F163-IT-1</td>
                                         </tr>
                                         <tr>
                                             <td
@@ -769,6 +746,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <p class="text-gray-700 dark:text-gray-300 mt-4"><strong>Pendientes de implementar</strong> (acciones de mejora en el F151-IT-4): copia de respaldo fuera de línea (2027), credenciales de emergencia de resguardo, planillas de operación manual sin ERP y proveedor alternativo para Internet y red.</p>
                         </section>
 
                         <section id="ejercicios-y-pruebas" class="mb-12 scroll-mt-20">
@@ -817,10 +795,10 @@
                                                 Ejercicio de escritorio (escenario previsible)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
+                                                Anual (junto con el simulacro de incidentes F162-IT-3)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Coordinador + Comité</td>
+                                                Coordinador + Equipo</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 F163-IT-1 / F163-IT-2</td>
@@ -831,7 +809,7 @@
                                                 Prueba técnica de recuperación (backups y conmutación de Internet)</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
+                                                Anual como mínimo; además, cada restauración de backup que se haga</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                                                 Responsable Técnico</td>
@@ -851,7 +829,7 @@
                                                 Guardia / RRHH</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Registro de Seguridad e Higiene</td>
+                                                Registro de Seguridad e Higiene (RRHH); copia en el F163-IT-1</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -869,16 +847,17 @@
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
                                     <li><strong>F163-IT-1:</strong> Plan de Crisis.</li>
                                     <li><strong>F163-IT-2:</strong> Registro de Activación de Crisis, Bitácora y Lecciones Aprendidas.</li>
-                                    <li>Comunicaciones emitidas durante la crisis y registros de ejercicios.</li>
+                                    <li><strong>F163-IT-3:</strong> Acta de Conformación del Equipo de Gestión de Crisis.</li>
+                                    <li>Comunicaciones emitidas durante la crisis y registros de ejercicios (restauraciones de backup, conmutación a Batcom, simulacros de evacuación, F162-IT-3).</li>
                                 </ul>
                             </div>
 
                             <div class="mb-6">
                                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">12.2. Evidencias para TISAX AL2</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Comité de Crisis aprobado por la Dirección, con titulares, suplentes y competencias.</li>
+                                    <li>Equipo de Gestión de Crisis aprobado por la Dirección (F163-IT-3), con titulares, suplentes y competencias.</li>
                                     <li>Plan de Crisis con escenarios, indicadores, procesos esenciales, recursos y contactos.</li>
-                                    <li>Procedimiento de activación e intensificación conocido por el Comité.</li>
+                                    <li>Procedimiento de activación e intensificación conocido por el Equipo.</li>
                                     <li>Ejercicios realizados, lecciones aprendidas y revisiones periódicas del plan.</li>
                                 </ul>
                             </div>
@@ -913,14 +892,21 @@
                                                 1/9/2025</td>
                                             <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
                                         </tr>
+                                        <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                                1</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                                2/12/2025</td>
+                                            <td class="px-6 py-4 text-sm">Actualización general del documento</td>
+                                        </tr>
                                         <tr>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                1</td>
+                                                2</td>
                                             <td
                                                 class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                2/12/2025</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
+                                                15/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipo de Gestión de Crisis en lugar del Comité; suplentes de la Dirección y de Administración / Finanzas; teléfonos del IT Manager y su suplente y WhatsApp empresarial; kit de crisis según los recursos disponibles y lista de pendientes; se quita a Telecom de los contactos; ejercicio de escritorio junto con el simulacro F162-IT-3; nuevo registro F163-IT-3.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -930,16 +916,14 @@
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <!-- --TODO-- verificar ruta del procedimiento P162-IT-1 -->
                     <a href="proc-gestion-incidentes-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Gestión de Incidentes de Seguridad</span>
                     </a>
-                    <!-- --TODO-- completar ruta y título del procedimiento siguiente -->
-                    <a href="--TODO--"
+                    <a href="../recursos-humanos/proc-cualificacion-personal.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: --TODO--</span>
+                        <span>Siguiente: Cualificación de Personal en Puestos Sensibles</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -1032,7 +1016,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1048,11 +1032,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2027</span>
                             </div>
                         </div>
                     </div>

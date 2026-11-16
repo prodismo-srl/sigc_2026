@@ -68,7 +68,7 @@ const procedimientos = [
     { tipo: "Procedimiento", nombre: "Procedimiento identificación y registro de activos de información", codigo: "P131-IT-1", revision: 1, fecha: "2026-01-14", areas: ["Todas"], complejidad: "Media" },
     { tipo: "Procedimiento", nombre: "Procedimiento clasificación y de activos de información", codigo: "P132-IT-1", revision: 1, fecha: "2026-01-14", areas: ["Todas"], complejidad: "Media" },
     { tipo: "Procedimiento", nombre: "Procedimiento gestión de servicios IT externos", codigo: "P133-IT-1", revision: 1, fecha: "2026-01-14", areas: ["IT"], complejidad: "Media" },
-    { tipo: "Procedimiento", nombre: "Procedimineto gestión software aprobado", codigo: "P134-IT-1", revision: 1, fecha: "2026-01-14", areas: ["IT"], complejidad: "Media" },
+    { tipo: "Procedimiento", nombre: "Procedimineto gestión software aprobado", codigo: "P134-IT-1", revision: 2, fecha: "2026-11-13", areas: ["IT"], complejidad: "Media" },
     { tipo: "Procedimiento", nombre: "Procedimiento de gestión de riesgos", codigo: "P141-IT-1", revision: 1, fecha: "2026-01-15", areas: ["IT"], complejidad: "Alta" },
     { tipo: "Procedimiento", nombre: "Procedimiento verificación y mejora continua", codigo: "P151-IT-1", revision: 1, fecha: "2026-01-15", areas: ["IT"], complejidad: "Media" },
     { tipo: "Procedimiento", nombre: "Procedimiento auditoría externa independiente del SGSI", codigo: "P152-IT-1", revision: 1, fecha: "2026-01-15", areas: ["IT"], complejidad: "Alta" },

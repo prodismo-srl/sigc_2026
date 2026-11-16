@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Procedimiento de Cualificación de Personal en Áreas Sensibles">
+<html lang="es" data-page-subtitle="Procedimiento de Cualificación de Personal en Puestos Sensibles">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Procedimiento de Cualificación de Personal en Áreas Sensibles">
+    <meta name="description" content="Prodismo - Procedimiento de Cualificación de Personal en Puestos Sensibles">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Procedimiento de Cualificación de Personal en Áreas Sensibles - Prodismo SRL</title>
+    <title>Procedimiento de Cualificación de Personal en Puestos Sensibles - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,10 +46,10 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <a href="../gestion-incidentes/proc-eventos-seguridad.html"
+                    <a href="../gestion-incidentes/proc-gestion-crisis.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Eventos de Seguridad</span>
+                        <span>Anterior: Gestión de Crisis</span>
                     </a>
                     <a href="../recursos-humanos/proc-obligacion-contractual.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -61,8 +61,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Cualificación
-                            de Personal en Áreas Sensibles</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Cualificación de Personal en Puestos Sensibles</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -71,443 +70,234 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 15/1/2026</span>
+                                <span>Última revisión: 15/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 2.1.1), ISO 27001:2022 (A.6.1, A.6.2, A.6.3)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Asegurar que empleados en puestos críticos cumplan con requisitos de competencia,
-                            confiabilidad y verificaciones de identidad, alineados con estándares de <strong>ISO/IEC
-                                27001:2022</strong>, así como los requisitos del marco <strong>TISAX</strong> y clientes
-                            automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir cómo <strong>PRODISMO SRL</strong> selecciona, verifica, habilita, capacita y evalúa a las personas que ocupan puestos sensibles, para cumplir la política <strong>MC211-IT-1</strong> y el control <strong>2.1.1</strong> de <strong>TISAX</strong> (VDA ISA 6).</p>
                     </section>
 
-                    <section id="identificacion-puestos-sensibles" class="mb-12 scroll-mt-20">
+                    <section id="alcance" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            IDENTIFICACIÓN DE PUESTOS SENSIBLES
+                            ALCANCE
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Departamentos y Roles
-                                Críticos en Prodismo</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Departamento</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Puesto Sensible</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Razón</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Ingeniería</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Diseñador
-                                                CATIA/NX</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso a
-                                                diseños 3D (🔴 Crítico).</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Proyectos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestionador Diseños 3D
-                                                CATIA/NX</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso a
-                                                diseños 3D (🔴 Crítico).</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                IT</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administrador
-                                                de Redes</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Control sobre
-                                                servidores on-premise (CATIA, SIP).</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Fabricación / Producción</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Supervisor
-                                            </td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso a
-                                                órdenes de producción confidenciales.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Compras</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestor de
-                                                Compras</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Manejo de
-                                                información de proveedores y contratos.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los puestos sensibles de MC211-IT-1 §6: IT Manager / RSI, Administrador de IT, Desarrollador del ERP SIP4.0, Diseñadores CAD (Ingeniería y Oficina de Proyectos), Compras / Abastecimiento, Administración / Finanzas, RRHH y Supervisor de Fabricación.</li><li>Ingresos, cambios de puesto y personal actual en esos puestos.</li></ul>
                     </section>
 
-                    <section id="requisitos-perfil-laboral" class="mb-12 scroll-mt-20">
+                    <section id="referencias" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            REQUISITOS POR PERFIL LABORAL
+                            REFERENCIAS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Matriz de Competencias
-                                y Verificaciones:</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Puesto</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Requisitos Técnicos</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Verificación de Identidad</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Certificaciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Diseñador<br>CATIA/NX</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Experiencia
-                                                en Siemens NX.</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                ✔ DNI/Pasaporte validado.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">-
-                                                Certificación CATIA V5/V6.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Administrador IT</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- CISSP o ISO
-                                                27001.<br>- Hardening de servidores.</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                ✔ DNI/Pasaporte validado.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Microsoft
-                                                Certified.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Política <strong>MC211-IT-1</strong> Requisitos para Puestos Sensibles · <strong>MC211-IT-2</strong> Uso Aceptable de Recursos IT</li><li><strong>ISO/IEC 27001:2022</strong> – A.6.1, A.6.2, A.6.3 · <strong>VDA ISA 6</strong> – control 2.1.1</li><li>Ley 25.326 de Protección de Datos Personales · Ley 27.555 de Teletrabajo</li></ul>
                     </section>
 
-                    <section id="proceso-verificacion-identidad" class="mb-12 scroll-mt-20">
+                    <section id="roles" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            PROCESO DE VERIFICACIÓN DE IDENTIDAD Y ANTECEDENTES
+                            ROLES Y RESPONSABILIDADES
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Pasos para
-                                Contratación:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Validación de Documentos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>DNI/pasaporte escaneado con software anti-falsificación (ej.: DocuSign
-                                            Identify).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Referencias Laborales:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Contactar al menos 2 empleadores anteriores (especialmente para Compras).
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Base de Datos Interna:</strong> Registrar resultados en Plataforma interna.
-                                </li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Titular</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tareas en el procedimiento</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Gerencia de RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mariano Nieto</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Verificar la identidad y, cuando corresponda, las referencias.</li><li>Gestionar las firmas en tulegajo.com y confirmar a IT.</li><li>Mantener el F211-IT-1 y los legajos.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">IT Manager / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Definir los requisitos de seguridad de los puestos y entrevistar a los candidatos de IT e Ingeniería.</li><li>Organizar la capacitación de seguridad y revisar el F211-IT-1 una vez al año.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Departamento IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Dar los accesos solo después de la confirmación de RRHH.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Responsable de área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Definir los requisitos técnicos (F69-2), participar en la selección y evaluar la competencia una vez al año.</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="capacitacion-continua" class="mb-12 scroll-mt-20">
+                    <section id="flujo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            CAPACITACIÓN CONTINUA
+                            FLUJO DEL PROCESO
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Programas Obligatorios:
-                            </h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Puesto</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Capacitación Anual</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Requisito Cliente</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Diseñador CATIA/NX</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Seguridad
-                                                IP.<br>- Phishing.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">BMW GS.11
-                                                (watermarking).</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Administrador IT</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">- Respuesta a
-                                                ransomware.<br>- Normativa TISAX.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VW
-                                                IT-Security Requirements.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Gestor de Proveedores</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">-
-                                                Ciberseguridad en cadena de suministro.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Mercedes-Benz.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencias:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Registros de asistencia.</li>
-                                <li>Evaluaciones post-capacitación (ej.: test de phishing simulado).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plantillas Clave</h3>
-
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">A. Formulario de
-                                Verificación de Identidad</h4>
-                            <div
-                                class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                                <div class="grid grid-cols-2 gap-4 mb-4">
-                                    <div>
-                                        <p class="text-gray-700 dark:text-gray-300"><strong>Candidato:</strong> [Nombre]
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p class="text-gray-700 dark:text-gray-300"><strong>Puesto:</strong> [Diseñador
-                                            CATIA]</p>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Documento:</strong></p>
-                                    <div class="flex items-center space-x-4 mt-2">
-                                        <div class="flex items-center">
-                                            <input type="checkbox"
-                                                class="rounded text-primary-600 focus:ring-primary-500" checked
-                                                disabled>
-                                            <span class="ml-2 text-gray-700 dark:text-gray-300">DNI</span>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <input type="checkbox"
-                                                class="rounded text-primary-600 focus:ring-primary-500" disabled>
-                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Pasaporte</span>
-                                        </div>
-                                        <div>
-                                            <span class="text-gray-700 dark:text-gray-300">Nº: [XXX]</span>
-                                        </div>
-                                    </div>
-                                    <div class="mt-2">
-                                        <span class="text-gray-700 dark:text-gray-300"><strong>Validez:</strong>
-                                            [DD/MM/AAAA]</span>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Biometría:</strong></p>
-                                    <div class="flex items-center space-x-4 mt-2">
-                                        <div class="flex items-center">
-                                            <input type="checkbox"
-                                                class="rounded text-primary-600 focus:ring-primary-500" disabled>
-                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Facial</span>
-                                        </div>
-                                        <div class="flex items-center">
-                                            <input type="checkbox"
-                                                class="rounded text-primary-600 focus:ring-primary-500" checked
-                                                disabled>
-                                            <span class="ml-2 text-gray-700 dark:text-gray-300">Huella</span>
-                                        </div>
-                                        <div>
-                                            <span class="text-gray-700 dark:text-gray-300"><strong>Resultado:</strong> ✔
-                                                Válido / ❌ Falsificado</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Firma del Responsable de
-                                            RRHH:</strong> ________________</p>
-                                </div>
-                            </div>
-
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">B. Checklist de
-                                Contratación para Puestos 🔴</h4>
-                            <div
-                                class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Validación de identidad (DNI/Pasaporte).</li>
-                                    <li>Certificación técnica verificada (ej.: CATIA V6).</li>
-                                    <li>Entrevista con IT Manager (para IT/Ingeniería).</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de No
-                                Conformidad y Corrección</h3>
-                            <div
-                                class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border border-yellow-200 dark:border-yellow-800">
-                                <p class="text-gray-700 dark:text-gray-300"><strong>Hallazgo:</strong> Diseñador
-                                    contratado sin certificación CATIA V6 (Por ejemplo requerido por BMW).</p>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2"><strong>Acción:</strong></p>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                    <li>Contratar consultor externo mientras el empleado se certifica (plazo: 3 meses).
-                                    </li>
-                                    <li>Actualizar política de RH para incluir validación previa.</li>
-                                </ul>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Etapa</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cuándo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Definir el puesto y sus requisitos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Responsable de área + RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Antes de la búsqueda</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F69-2 · MC211-IT-1 §6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Selección y entrevista</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH + responsable de área (IT Manager para IT e Ingeniería)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Durante la búsqueda</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Legajo del candidato</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Verificación de identidad y referencias</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Antes del ingreso</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Legajo: copia de DNI, CUIL, alta temprana; referencias si se piden</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Firma de documentos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH + empleado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al ingreso, antes de los accesos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F212-IT-1, F712-IT-1 y, si corresponde, F214-IT-1 (tulegajo.com)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Alta de accesos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Departamento IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Después de la confirmación de RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ticket de alta (MC211-IT-2 §6.5)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">6. Inducción y capacitación de seguridad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT / RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Primer mes y luego anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Planilla de asistencia R12a-3 (ISO 9001) o F213-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">7. Registro de la cualificación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al completar las etapas 3 a 6</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F211-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">8. Evaluación anual y revisión</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Responsable de área + RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual y ante cambio de puesto</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Registro de evaluación de competencias (ISO 9001) · F211-IT-1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="flujo-proceso" class="mb-12 scroll-mt-20">
+                    <section id="descripcion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            FLUJO DEL PROCESO
+                            DESCRIPCIÓN DEL PROCEDIMIENTO
                         </h2>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1. Requisitos del puesto</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los requisitos comunes y por puesto están en MC211-IT-1 §6.</li><li>El responsable de área los incluye en la descripción de puesto F69-2. Mientras el F69-2 no tenga los requisitos de seguridad, se toma la tabla de MC211-IT-1 (OM-2026-05).</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2. Selección</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>RRHH y el responsable de área evalúan la formación y la experiencia del candidato contra los requisitos.</li><li>Para IT e Ingeniería participa el IT Manager en la entrevista.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.3. Verificación de identidad y antecedentes</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Antes del ingreso, RRHH compara el DNI original con la persona y con la copia que queda en el legajo, verifica el CUIL y registra el alta temprana. La constancia queda en el legajo.</li><li>Cuando RRHH lo considera necesario, pide referencias a empleadores anteriores y deja registro del resultado en el legajo.</li><li>Los datos se tratan según la Ley 25.326 y el consentimiento F712-IT-1.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.4. Firma de documentos</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>El empleado firma electrónicamente en tulegajo.com el Anexo de Confidencialidad y Seguridad <strong>F212-IT-1</strong> y el Consentimiento para el Tratamiento de Datos Personales <strong>F712-IT-1</strong>.</li><li>Si va a trabajar desde su domicilio, firma también el Acuerdo de Teletrabajo <strong>F214-IT-1</strong>, que se renueva cada año.</li><li>Se le comunica la Política de Uso Aceptable <strong>MC211-IT-2</strong>.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.5. Alta de accesos</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>RRHH confirma a IT que se completaron la verificación y las firmas.</li><li>IT crea la cuenta y da solo los accesos que el responsable de área autoriza para el puesto.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.6. Capacitación</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Inducción de seguridad en el primer mes: políticas, guía F161-IT-1 para reportar eventos, uso aceptable.</li><li>Capacitación anual de seguridad. Las presenciales se registran en la planilla de asistencia R12a-3 (ISO 9001); las e-learning, en el <strong>F213-IT-1</strong>.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.7. Registro y evaluación anual</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>RRHH registra en el <strong>F211-IT-1</strong> la fecha de cada etapa para cada persona en un puesto sensible.</li><li>El responsable de área evalúa una vez al año la competencia de su personal en el registro de evaluación de competencias del sistema ISO 9001. Las brechas se cierran con un plan de capacitación con fecha.</li><li>El RSI revisa el F211-IT-1 con RRHH una vez al año (F151-IT-5, V-21).</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.8. Cambio de puesto y desvíos</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Si una persona pasa a un puesto sensible, se completan las etapas que falten antes de darle los nuevos accesos.</li><li>Si falta un requisito, el acceso se limita hasta cumplirlo y el desvío se registra en el F151-IT-4.</li></ul>
+                    </section>
 
-                        <div class="mb-6">
-                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
-                                <img src="../../../../images/flow-diagrams/cualificacion-personal-flowchart.png"
-                                    alt="Flujo del Proceso de Cualificación de Personal"
-                                    class="mx-auto h-80 w-full object-cover md:h-full md:w-80 h-auto cursor-pointer"
-                                    id="cualificacion-flowchart-image">
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                                    Diagrama de Flujo del Proceso de Cualificación de Personal en Áreas Sensibles
-                                </p>
-                            </div>
-                        </div>
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REGISTROS Y EVIDENCIAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>F211-IT-1</strong> Registro de Cualificación de Personal en Puestos Sensibles.</li><li><strong>F212-IT-1</strong>, <strong>F712-IT-1</strong> y <strong>F214-IT-1</strong> firmados en tulegajo.com.</li><li>Legajo: copia de DNI, CUIL, constancia de alta temprana y referencias, cuando se pidieron.</li><li><strong>F69-2</strong> Descripciones de puesto y registro de evaluación de competencias (ISO 9001).</li><li>Planilla de asistencia R12a-3 (ISO 9001) y <strong>F213-IT-1</strong> (e-learning).</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">15/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            15/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">15/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título "Puestos Sensibles"; puestos unificados con MC211-IT-1; verificación de identidad según la práctica de RRHH (DNI, CUIL, alta temprana) y referencias cuando se piden; firmas en tulegajo.com; alta de accesos después de la confirmación de RRHH; registro F211-IT-1; flujo en tabla en lugar del diagrama; se quitan herramientas, certificaciones y requisitos de clientes que no se aplican.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <a href="../gestion-incidentes/proc-eventos-seguridad.html"
+                    <a href="../gestion-incidentes/proc-gestion-crisis.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Eventos de Seguridad</span>
+                        <span>Anterior: Gestión de Crisis</span>
                     </a>
                     <a href="../recursos-humanos/proc-obligacion-contractual.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -531,23 +321,26 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#identificacion-puestos-sensibles"
+                            <a href="#alcance"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                IDENTIFICACIÓN DE PUESTOS SENSIBLES</a>
-                            <a href="#requisitos-perfil-laboral"
+                                ALCANCE</a>
+                            <a href="#referencias"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                REQUISITOS POR PERFIL LABORAL</a>
-                            <a href="#proceso-verificacion-identidad"
+                                REFERENCIAS</a>
+                            <a href="#roles"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                PROCESO DE VERIFICACIÓN</a>
-                            <a href="#capacitacion-continua"
+                                ROLES Y RESPONSABILIDADES</a>
+                            <a href="#flujo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                CAPACITACIÓN CONTINUA</a>
-                            <a href="#flujo-proceso"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
                                 FLUJO DEL PROCESO</a>
-                            <a href="#revisiones-documento"
+                            <a href="#descripcion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                DESCRIPCIÓN</a>
+                            <a href="#registros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -582,7 +375,7 @@
                             <a href="../../documentacion/puestos-clave/puestos-clave.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>
-                                Política Requisitos Específicos Puestos Claves
+                                MC211-IT-1 Política de Requisitos para Puestos Sensibles
                             </a>
                         </div>
                     </div>
@@ -601,7 +394,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -617,11 +410,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">15/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">15/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">15/11/2027</span>
                             </div>
                         </div>
                     </div>
@@ -641,8 +434,6 @@
 
     <!-- JavaScript -->
     <script type="text/javascript" src="../../../../js/documentacion/scripts-general_two.js"></script>
-    <script type="text/javascript"
-        src="../../../../js/procedimientos/flowChart/openFlowChart-cualificacion-personal.js"></script>
 </body>
 
 </html>

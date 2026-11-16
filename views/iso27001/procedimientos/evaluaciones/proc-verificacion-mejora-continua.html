@@ -62,8 +62,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento Verificación y
-                            Mejora Continua de la Seguridad de la Información</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Verificación y Mejora Continua de la Seguridad de la Información</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -72,196 +71,179 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 15/1/2026</span>
+                                <span>Última revisión: 14/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 1.5.1), ISO 27001:2022 (9.2, 10.2, A.5.36, A.8.8)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Asegurar que las políticas y controles de seguridad se cumplan, revisen y mejoren
-                            periódicamente, con foco en servidores on-premise (CATIA/NX, SIP), cumpliendo con los
-                            requisitos de <strong>ISO/IEC 27001:2022</strong>, <strong>TISAX</strong> y de clientes
-                            automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Definir cómo <strong>PRODISMO SRL</strong> verifica de forma periódica que se cumplen las políticas, los procedimientos y los requisitos técnicos de seguridad de la información; cómo se revisan las políticas; cómo se realiza la auditoría interna; y cómo se corrigen las no conformidades, según la política <strong>MC151-IT-1</strong>. Toda verificación deja un registro.</p>
                     </section>
 
-                    <section id="verificacion-cumplimiento" class="mb-12 scroll-mt-20">
+                    <section id="alcance" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            VERIFICACIÓN DE CUMPLIMIENTO
+                            ALCANCE
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Herramientas y Métodos:
-                            </h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Qué Verificar</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Cómo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Frecuencia</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Políticas de Acceso</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Auditoría de
-                                                permisos en Active Directory (ej.: ¿Solo ingeniería accede a CATIA?).
-                                            </td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Mensual</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin TI</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Cumplimiento Técnico</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Scans con
-                                                Nessus o OpenVAS (ej.: parches faltantes en Windows Server).</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Trimestral</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">IT Manager
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Requisitos de Clientes</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist BMW
-                                                GS.11 (ej.: watermarking en CATIA).</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Semestral</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Responsable
-                                                de Datos</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo de Hallazgo:
-                            </h3>
-                            <div
-                                class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border border-yellow-200 dark:border-yellow-800">
-                                <ul class="list-disc pl-6 text-yellow-700 dark:text-yellow-300 space-y-3">
-                                    <li><strong>No conformidad:</strong> 2 empleados de Finanzas tenían acceso a
-                                        archivos CATIA
-                                        (🔴).</li>
-                                    <li><strong>Acción correctiva:</strong> Revocar accesos y capacitar al equipo.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Todas las áreas y procesos incluidos en el alcance del SGSI (sede de Córdoba).</li><li>Verificaciones técnicas de los sistemas de IT (accesos, vulnerabilidades, autenticación, cifrado, backups, software y accesos remotos).</li><li>Todas las políticas y procedimientos del SGSI publicados en el portal de documentación.</li><li>No conformidades que surgen de auditorías internas y externas, verificaciones, incidentes y de la revisión por la dirección.</li></ul>
                     </section>
 
-                    <section id="revisiones-politicas" class="mb-12 scroll-mt-20">
+                    <section id="referencias" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            REVISIONES PERIÓDICAS DE POLÍTICAS
+                            REFERENCIAS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Evaluación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Revisar políticas vs. cambios en:
-                                            <ul class="list-disc pl-6 mt-2 space-y-3">
-                                                <li>Normativas (ej.: nuevo requisito de Mercedes).</li>
-                                                <li>Infraestructura (ej.: migración a nuevo servidor).</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Documentación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Acta de Revisión:</li>
-                                    </ul>
-                                    <div
-                                        class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700 mt-3">
-                                        <div class="mb-4">
-                                            <div class="flex justify-between items-center">
-                                                <span class="font-medium text-gray-900 dark:text-white">Fecha:
-                                                    15/10/2025</span>
-                                            </div>
-                                        </div>
-                                        <div class="mb-4">
-                                            <p class="text-gray-700 dark:text-gray-300"><strong>Política
-                                                    Evaluada:</strong> "Acceso a CATIA/NX".</p>
-                                        </div>
-                                        <div class="mb-4">
-                                            <p class="text-gray-700 dark:text-gray-300"><strong>Cambios:</strong></p>
-                                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                                <li>Añadir watermarking obligatorio (requerido por BMW).</li>
-                                            </ul>
-                                        </div>
-                                        <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                                            <p class="text-gray-700 dark:text-gray-300"><strong>Aprobado por:</strong>
-                                                [Nombre del IT Manager].</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><strong>Comunicación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Enviar actualizaciones por email y capacitar a afectados.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Frecuencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Políticas Críticas</strong> (ej.: CATIA): Anual + tras cambios mayores.</li>
-                                <li><strong>Políticas Generales:</strong> Cada 2 años.</li>
-                            </ul>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Política <strong>MC151-IT-1</strong> Auditorías Internas del SGSI.</li><li><strong>ISO/IEC 27001:2022</strong> cláusulas 9.2 y 10.2, controles A.5.36 y A.8.8; <strong>ISO 19011:2018</strong>; <strong>VDA ISA 6</strong> control 1.5.1.</li><li><strong>F151-IT-1</strong> Informe de Auditoría Interna; <strong>F151-IT-2</strong> Checklist de Auditoría Interna; <strong>F151-IT-3</strong> Plan de Acción Correctiva; <strong>F151-IT-4</strong> Registro de No Conformidades y Acciones Correctivas; <strong>F151-IT-5</strong> Programa de Verificación de Cumplimiento.</li><li><strong>F33a-0</strong> Plan de auditorías y revisión por la dirección; <strong>F33b-0</strong> Planificación detallada de la auditoría interna.</li><li><strong>M141-IT-1</strong> Matriz de Riesgos; <strong>F133-IT-3</strong> Verificación de Servicios y Software No Aprobados.</li></ul>
                     </section>
 
-                    <section id="gestion-no-conformidades" class="mb-12 scroll-mt-20">
+                    <section id="roles" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            GESTIÓN DE NO CONFORMIDADES
+                            ROLES Y RESPONSABILIDADES
                         </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsabilidades</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alta Dirección (Damián Pedrosa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprueba el plan anual de auditorías (F33a-0).</li><li>Revisa los resultados de auditorías y verificaciones en la revisión por la dirección.</li><li>Asigna recursos para las acciones correctivas.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">RSI (Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Mantiene el programa F151-IT-5 y el listado maestro de documentos.</li><li>Registra y sigue las no conformidades en el F151-IT-4.</li><li>Designa a los auditores internos y organiza la auditoría anual.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administrador de IT (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Ejecuta y registra las verificaciones técnicas del F151-IT-5.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Auditores internos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Germán Montalbetti y Emiliano Ferrari (auditores internos ISO/IEC 27001 certificados); Jessica Villarreal (auditora interna ISO 9001), que audita los procesos del Departamento IT.</li><li>Planifican, ejecutan e informan la auditoría (F151-IT-1, F151-IT-2) y verifican la eficacia de las acciones correctivas.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Responsables de áreas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Facilitan la auditoría, analizan la causa de las no conformidades y ejecutan las acciones correctivas (F151-IT-3).</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Flujo de Corrección:
-                            </h3>
-                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
+                    <section id="descripcion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            DESCRIPCIÓN DEL PROCEDIMIENTO
+                        </h2>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.1. Programa de verificación de cumplimiento</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">El RSI mantiene el programa anual <strong>F151-IT-5</strong>, con el contenido, la herramienta, la frecuencia, el responsable y los meses previstos de cada verificación:</p>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">ID</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Verificación</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cómo / herramienta</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-01</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Permisos de acceso (Active Directory, SharePoint, Teams)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Export de grupos y miembros; revisión con los responsables de área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cuatrimestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-02</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cuentas de personal dado de baja (Microsoft 365, tulegajo.com, SIP, Snipe-IT)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cruce con la lista de bajas de RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cuatrimestral y en cada baja</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari / Mariano Nieto</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-03</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Vulnerabilidades y parches</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Defender for Endpoint y Wazuh</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mensual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-04 / V-05</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA en cuentas corporativas / BitLocker en notebooks</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Informes de Entra ID y de Defender / Intune</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Trimestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-06 / V-07</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ejecución de backups / prueba de restauración</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Registros de la herramienta de backup; restauración de una muestra</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mensual / trimestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-08</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Software y servicios no aprobados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Inventario de software contra F134-IT-1; apps de Entra ID (F133-IT-3)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-09</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Configuración segura de AnyDesk</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA y acceso desatendido en todos los equipos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-10</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Prueba de penetración / escaneo externo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Proveedor externo (primera: 11/2026)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">V-11 a V-16</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Seguimiento de no conformidades, revisión de riesgos, revisión de políticas, auditoría interna, revisión por la dirección y evaluación TISAX</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ver F151-IT-5</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mensual a anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI / Alta Dirección</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cada verificación realizada se registra en la hoja "Registro de verificaciones" del F151-IT-5: fecha, quién la hizo, resultado y ubicación de la evidencia (export, captura o informe).</li><li>La evidencia se guarda en SharePoint IT, en la carpeta del año y de la verificación.</li><li>Todo desvío se registra como hallazgo en el <strong>F151-IT-4</strong> (sección 5.4).</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.2. Revisión de políticas y procedimientos</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>El RSI revisa cada política y procedimiento al menos una vez al año, y antes si cambian la organización, la infraestructura, los requisitos legales o de clientes, o después de un incidente o una auditoría.</li><li>Las fechas de última y próxima revisión de cada documento están en la hoja "Listado maestro de documentos" del F151-IT-5.</li><li>Cada revisión queda en el historial de revisiones del documento (número, fecha y cambios) y la nueva revisión la aprueba la Alta Dirección.</li><li>Los cambios se comunican al personal por mail o Teams y, si corresponde, con capacitación.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.3. Auditoría interna</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>Planificación:</strong> la auditoría completa del SGSI es anual, según el plan F33a-0; el detalle por área, requisitos, responsable y auditor se define en el F33b-0. Se notifica a las áreas con al menos 15 días de anticipación.</li><li><strong>Independencia:</strong> ningún auditor audita su propio trabajo; los procesos del Departamento IT los audita Jessica Villarreal.</li><li><strong>Ejecución:</strong> reunión de apertura, entrevistas, revisión documental y verificación en sistemas por muestreo. El auditor completa el checklist <strong>F151-IT-2</strong> durante la auditoría (resultado, observación y fecha por ítem) y conserva sus notas.</li><li><strong>Cierre:</strong> reunión de cierre con los hallazgos clasificados (no conformidad mayor, menor u observación, según MC151-IT-1 §7.3).</li><li><strong>Informe:</strong> el informe <strong>F151-IT-1</strong> se emite dentro de los 10 días hábiles (Microsoft Forms o Word) y se distribuye a la Alta Dirección, el RSI y las áreas auditadas.</li></ul>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.4. Gestión de no conformidades</h3>
+                        <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 text-center">
                                 <img src="../../../../images/flow-diagrams/gestion-no-conformidades-flowchart.png"
                                     alt="Flujo de Corrección de No Conformidades"
                                     class="mx-auto max-w-full h-auto cursor-pointer" id="flowchart-image">
@@ -273,279 +255,138 @@
                                     </button> -->
                                 </p>
                             </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>Registro:</strong> todo hallazgo se registra en el <strong>F151-IT-4</strong> con ID (NC-AAAA-NN u OBS-AAAA-NN), origen, requisito y descripción.</li><li><strong>Corrección inmediata:</strong> se elimina el desvío detectado (por ejemplo, desinstalar el software o dar de baja la cuenta).</li><li><strong>Causa raíz:</strong> el responsable del área analiza por qué ocurrió.</li><li><strong>Acción correctiva:</strong> se define en el <strong>F151-IT-3</strong> con responsable y fecha (no conformidad mayor: 30 días; menor: 90 días).</li><li><strong>Verificación de eficacia:</strong> una persona distinta del responsable comprueba que el problema no se repite.</li><li><strong>Cierre:</strong> se registra la fecha de cierre en el F151-IT-4. Si la no conformidad revela un riesgo nuevo, se agrega a la Matriz de Riesgos M141-IT-1.</li></ul>
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800 mb-6">
+                            <p class="text-blue-800 dark:text-blue-300 text-sm"><strong>Ejemplo real (auditoría interna AUD-2026-01):</strong> NC-2026-01 software sin licencia en PC de usuarios; NC-2026-02 AnyDesk con acceso desatendido y sin MFA; NC-2026-03 cuentas de personal dado de baja activas en Microsoft 365 y tulegajo.com. Corrección, causa y acciones en el F151-IT-3 y el F151-IT-4.</p>
                         </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ejemplo:</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                No Conformidad</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Causa Raíz</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Acción Correctiva</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Plazo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Estado</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Backup de SIP no probado en mas de 6 meses</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Falta de
-                                                procedimiento.</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Implementar
-                                                test trimestral.</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                30 días</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center text-green-600 dark:text-green-400">
-                                                ✅ Cerrado</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.5. Comunicación de resultados</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">El RSI presenta en la revisión por la dirección el estado del programa de verificación, los resultados de la auditoría interna y las no conformidades abiertas y cerradas.</p>
                     </section>
 
-                    <section id="verificacion-tecnica" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            VERIFICACIÓN TÉCNICA
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Checklist para
-                                Servidores On-Premise:</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Control</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Ejemplo (CATIA/NX)</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Herramienta</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Cifrado de datos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿BitLocker
-                                                activo en servidor?</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">PowerShell
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Configuraciones seguras</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿SSH
-                                                deshabilitado en puertos públicos?</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nmap.</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Watermarking</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">¿Siemens NX
-                                                con módulo activo?</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Validación
-                                                manual.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="registro-conservacion" class="mb-12 scroll-mt-20">
+                    <section id="resumen" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            REGISTRO Y CONSERVACIÓN
+                            RESUMEN DEL PROCEDIMIENTO
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Documentos Clave:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Lista de No Conformidades:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>ID, fecha, descripción, responsable, estado.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Actas de Revisión:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Firmadas por dirección.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Evidencias Técnicas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Reportes de scans (ej.: Nessus).</li>
-                                        <li>Capturas de logs (ej.: acceso a CATIA).</li>
-                                    </ul>
-                                </li>
-                            </ol>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Actividad</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Verificaciones técnicas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según F151-IT-5</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari / Germán Montalbetti</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F151-IT-5 (registro) + evidencia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Revisión de políticas y procedimientos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual y ante cambios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI; aprueba la Alta Dirección</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Historial del documento; listado maestro</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Auditoría interna</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Auditores internos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F33a-0, F33b-0, F151-IT-2, F151-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">No conformidades y acciones correctivas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ante cada hallazgo; seguimiento mensual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI y responsables de área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F151-IT-4, F151-IT-3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Comunicación de resultados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Acta de revisión por la dirección</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plazo de Conservación:
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Mínimo 3 años (requisito <strong>TISAX</strong>).</li>
-                            </ul>
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REGISTROS Y EVIDENCIAS
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Retención</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F151-IT-1 Informe de Auditoría Interna; F151-IT-2 Checklist completo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F151-IT-3 Plan de Acción Correctiva; F151-IT-4 Registro de No Conformidades</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">3 años después del cierre</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F151-IT-5 Programa y registro de verificaciones, con la evidencia de cada verificación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">3 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F33a-0 / F33b-0 Planes de auditoría</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 años</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Certificados de los auditores internos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mientras el auditor esté activo + 2 años</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Plantillas Clave</h3>
-
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">A. Lista de No
-                                Conformidades</h4>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                ID</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Descripción</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Fecha</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Acción</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Fecha Cierre</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                NC-001</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Backup de SIP
-                                                no probado.</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                10/10/2025</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Admin TI</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Implementar
-                                                test trimestral.</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                15/11/2025</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3 mt-6">B. Acta de
-                                Revisión de Políticas</h4>
-                            <div
-                                class="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
-                                <div class="mb-4">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Política:</strong> "Uso
-                                        Aceptable de Recursos IT".</p>
-                                </div>
-                                <div class="mb-4">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Cambios:</strong></p>
-                                    <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                        <li>Prohibir WhatsApp para compartir diseños CATIA.</li>
-                                    </ul>
-                                </div>
-                                <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                                    <p class="text-gray-700 dark:text-gray-300"><strong>Firma del IT Manager:</strong>
-                                        ________________________</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Automatización:</strong> Usar Microsoft Compliance Manager para trackear
-                                    cumplimiento.</li>
-                                <li><strong>Ejemplos Clientes Automotrices específicos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>BMW:</strong> Auditorías sorpresa.</li>
-                                        <li><strong>Mercedes:</strong> Reportes anuales de cumplimiento técnico.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Integración:</strong> Vincular no conformidades a la matriz de riesgos.</li>
-                            </ul>
-                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Evidencias para TISAX AL2</h3>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Programa de verificación vigente (F151-IT-5) con contenido, cronograma y responsables.</li><li>Registros de las verificaciones realizadas, con su evidencia.</li><li>Listado maestro con la revisión anual de cada política y procedimiento.</li><li>Último informe de auditoría interna (F151-IT-1) y checklist (F151-IT-2).</li><li>No conformidades con su acción correctiva, seguimiento y cierre (F151-IT-3, F151-IT-4).</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">15/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            15/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">14/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Reescritura: programa de verificación de cumplimiento (F151-IT-5) con frecuencias reales; revisión de políticas con listado maestro; auditoría interna con independencia de auditores; gestión de no conformidades con registro F151-IT-4 y plan F151-IT-3; se eliminan los ejemplos genéricos de clientes, herramientas no usadas y registros de ejemplo.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -582,23 +423,26 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#verificacion-cumplimiento"
+                            <a href="#alcance"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                VERIFICACIÓN DE CUMPLIMIENTO</a>
-                            <a href="#revisiones-politicas"
+                                ALCANCE</a>
+                            <a href="#referencias"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                REVISIONES PERIÓDICAS DE POLÍTICAS</a>
-                            <a href="#gestion-no-conformidades"
+                                REFERENCIAS</a>
+                            <a href="#roles"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                GESTIÓN DE NO CONFORMIDADES</a>
-                            <a href="#verificacion-tecnica"
+                                ROLES Y RESPONSABILIDADES</a>
+                            <a href="#descripcion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                VERIFICACIÓN TÉCNICA</a>
-                            <a href="#registro-conservacion"
+                                DESCRIPCIÓN DEL PROCEDIMIENTO</a>
+                            <a href="#resumen"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                REGISTRO Y CONSERVACIÓN</a>
-                            <a href="#revisiones-documento"
+                                RESUMEN DEL PROCEDIMIENTO</a>
+                            <a href="#registros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REGISTROS Y EVIDENCIAS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -633,7 +477,7 @@
                             <a href="../../documentacion/evaluaciones/auditorias-internas.html"
                                 class="flex items-center text-sm text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
                                 <i class="fas fa-book mr-2"></i>
-                                Política de Mejora Continua
+                                MC151-IT-1 Auditorías Internas del SGSI
                             </a>
                         </div>
                     </div>
@@ -652,7 +496,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -668,11 +512,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">15/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">14/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">15/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">14/11/2027</span>
                             </div>
                         </div>
                     </div>

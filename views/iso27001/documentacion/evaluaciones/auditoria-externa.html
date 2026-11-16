@@ -45,7 +45,6 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <!-- --TODO-- verificar ruta de la página MC151-IT-1 -->
                     <a href="../evaluaciones/auditorias-internas.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
@@ -71,11 +70,11 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 2/12/2025</span>
+                                <span>Última revisión: 14/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
@@ -108,7 +107,7 @@
                                 <li><strong>Las acciones correctivas</strong> derivadas de los hallazgos de dichas revisiones.</li>
                                 <li><strong>Todo el personal y los proveedores</strong> que participen en la preparación, ejecución o seguimiento de las revisiones.</li>
                             </ul>
-                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Las auditorías internas del SGSI (MC121-IT-1, sección 11.3) complementan, pero no reemplazan, las revisiones independientes de esta política.</p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Las auditorías internas y la verificación de cumplimiento del SGSI (MC151-IT-1) complementan, pero no reemplazan, las revisiones independientes de esta política.</p>
                         </section>
 
                         <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -123,6 +122,8 @@
                                 <li><strong>ISO 19011</strong> - Directrices para la auditoría de sistemas de gestión (referencia)</li>
                                 <li>Marco de evaluación <strong>TISAX</strong> - Catálogo <strong>VDA ISA 6</strong>, control <strong>1.5.2</strong> (Revisión independiente del SGSI)</li>
                                 <li>Procedimiento de Auditoría Externa Independiente del SGSI <strong>P152-IT-1</strong></li>
+                                <li>Política de Auditorías Internas del SGSI <strong>MC151-IT-1</strong> y Registro de No Conformidades y Acciones Correctivas <strong>F151-IT-4</strong></li>
+                                <li>Programa y Registro de Revisiones Independientes <strong>F152-IT-1</strong></li>
                                 <li>Política de Organización de la Seguridad de la Información <strong>MC121-IT-1</strong> (alcance, auditorías internas y revisión por la dirección)</li>
                                 <li>Política de Responsabilidades de la Organización de la Seguridad de la Información <strong>MC122-IT-1</strong></li>
                                 <li>Política de Gestión de Incidentes de Seguridad de la Información <strong>MC162-IT-1</strong> (lecciones aprendidas)</li>
@@ -192,7 +193,7 @@
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
                                         <li>Planificar las revisiones, proponer y coordinar al organismo independiente y preparar la documentación.</li>
                                         <li>Elaborar el plan de acciones correctivas y verificar su cierre.</li>
-                                        <li>Informar los resultados a la Alta Dirección y al Comité de Seguridad.</li>
+                                        <li>Informar los resultados a la Alta Dirección y presentarlos en la revisión por la dirección.</li>
                                     </ul>
                                 </div>
                                 <div
@@ -205,9 +206,9 @@
                                 </div>
                                 <div
                                     class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                    <h3 class="font-semibold text-gray-900 dark:text-white">Representante Legal / Compras</h3>
+                                    <h3 class="font-semibold text-gray-900 dark:text-white">Alta Dirección (contratación) y Abastecimiento</h3>
                                     <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-3 mt-2">
-                                        <li>Formalizar la contratación del organismo independiente con cláusulas de confidencialidad y alcance.</li>
+                                        <li>La Alta Dirección (Damián Pedrosa, CEO) firma la aceptación de la propuesta del organismo independiente, con cláusulas de confidencialidad y alcance; Abastecimiento emite la nota de pedido.</li>
                                     </ul>
                                 </div>
                                 <div
@@ -247,7 +248,7 @@
                                                 Independencia</td>
                                             <td
                                                 class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                <ul class="list-disc pl-5 space-y-3"><li>Sin relación comercial con PRODISMO SRL en servicios de consultoría o implementación del SGSI en los últimos 3 años.</li><li>Sin responsabilidad sobre las áreas o sistemas revisados.</li><li>Declaración de independencia y conflicto de interés firmada.</li></ul></td>
+                                                <ul class="list-disc pl-5 space-y-3"><li>Sin relación comercial con PRODISMO SRL en servicios de consultoría o implementación del SGSI en los últimos 3 años.</li><li>Sin responsabilidad sobre las áreas o sistemas revisados.</li><li>Declaración de independencia o evidencia equivalente (por ejemplo, la acreditación ENX del proveedor y la indicación "No support by consultancy provider" del TISAX Scope Excerpt).</li></ul></td>
                                         </tr>
                                         <tr>
                                             <td
@@ -287,9 +288,16 @@
                             <div class="mb-6">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">7.1. Revisiones Periódicas</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Evaluación TISAX</strong> antes del vencimiento de la etiqueta (cada 3 años), por un proveedor de auditoría acreditado por ENX.</li>
-                                    <li><strong>Revisión independiente intermedia</strong> del SGSI, de modo que no transcurran más de <strong>24 meses</strong> entre dos revisiones independientes.</li>
-                                    <li>Las fechas se registran en el programa de revisiones del <strong>F152-IT-1</strong>.</li>
+                                    <li><strong>Evaluación TISAX</strong> antes del vencimiento de la etiqueta (cada 3 años), por un proveedor de auditoría acreditado por ENX. La contratación se inicia al menos 6 meses antes del vencimiento.</li>
+                                    <li><strong>Revisiones independientes adicionales</strong> ante cambios fundamentales (sección 7.2).</li>
+                                    <li><strong>Revisiones técnicas independientes complementarias</strong>, como la prueba de penetración externa anual, que no reemplazan a la evaluación del SGSI.</li>
+                                    <li>Las revisiones realizadas y planificadas se registran en el <strong>F152-IT-1</strong>.</li>
+                                </ul>
+                                <p class="text-gray-700 dark:text-gray-300 mt-4 mb-2"><strong>Revisiones independientes realizadas y programadas:</strong></p>
+<ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
+                                    <li><strong>03 al 05/11/2025</strong> – Auditoría de diagnóstico ISO/IEC 27001:2022 por TÜV Rheinland (auditor líder Martin Ambort); los 96 hallazgos se siguen en el F151-IT-4.</li>
+                                    <li><strong>11/2026</strong> – Prueba de penetración externa (black box) por Personal Tech.</li>
+                                    <li><strong>12/2026</strong> – Evaluación TISAX AL2 por DNV (kickoff: 22/10/2026; ENX Scope ID S36HF8).</li>
                                 </ul>
                             </div>
 
@@ -389,8 +397,9 @@
                                 </table>
                             </div>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Cada acción correctiva incluye análisis de causa raíz, responsable, fecha y evidencia de cierre, y se registra en el <strong>F152-IT-2</strong>.</li>
-                                <li>El IT Manager verifica la eficacia de cada acción antes de cerrarla.</li>
+                                <li>Cada acción correctiva incluye análisis de causa raíz, responsable, fecha y evidencia de cierre, y se registra en el registro único de no conformidades <strong>F151-IT-4</strong>, indicando el origen (por ejemplo, "Evaluación TISAX – DNV").</li>
+                                <li>El RSI verifica la eficacia de cada acción antes de cerrarla; si el RSI es responsable de la acción, la verifica otra persona (por ejemplo, la auditora interna).</li>
+                                <li>En las evaluaciones TISAX se respetan además los plazos del proveedor de auditoría: las medidas de más de 3 meses deben justificarse y todas las no conformidades deben resolverse dentro de los 9 meses desde la reunión de cierre.</li>
                                 <li>Los hallazgos se incorporan a la evaluación de riesgos y, cuando corresponda, a la actualización de políticas y controles.</li>
                             </ul>
                         </section>
@@ -418,10 +427,10 @@
                             <div class="mb-6">
                                 <h3 class="font-semibold text-gray-900 dark:text-white mb-3">11.1. Registros Obligatorios</h3>
                                 <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>F152-IT-1:</strong> Programa y Registro de Revisiones Independientes.</li>
-                                    <li><strong>F152-IT-2:</strong> Registro de Hallazgos y Acciones Correctivas.</li>
+                                    <li><strong>F152-IT-1:</strong> Programa y Registro de Revisiones Independientes (incluye la selección del organismo revisor).</li>
+                                    <li><strong>F151-IT-4:</strong> Registro de No Conformidades y Acciones Correctivas (hallazgos de revisiones independientes).</li>
                                     <li><strong>Informes</strong> de las revisiones independientes y resultados de las evaluaciones TISAX.</li>
-                                    <li><strong>Contrato y declaración de independencia</strong> del organismo revisor.</li>
+                                    <li><strong>Propuesta aceptada, nota de pedido y evidencia de independencia</strong> del organismo revisor; TISAX Scope Excerpt de ENX.</li>
                                     <li><strong>Presentaciones a la Alta Dirección</strong> y actas de revisión por la dirección.</li>
                                     <li><strong>Evidencias de cierre</strong> de las acciones correctivas.</li>
                                 </ul>
@@ -443,10 +452,10 @@
                                 MONITOREO Y CUMPLIMIENTO
                             </h2>
                             <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>El RSI informa trimestralmente al Comité de Seguridad el estado de las acciones correctivas.</li>
+                                <li>El RSI revisa mensualmente el estado de las acciones correctivas (F151-IT-4) y lo informa en la revisión por la dirección.</li>
                                 <li><strong>Indicadores de desempeño:</strong>
                                     <ul class="list-circle pl-5 mt-2 space-y-3">
-                                        <li>Revisiones independientes realizadas según el programa: Objetivo 100%.</li>
+                                        <li>Evaluaciones TISAX realizadas antes del vencimiento de la etiqueta: Objetivo 100%.</li>
                                         <li>Planes de acción presentados en plazo: Objetivo 100%.</li>
                                         <li>No conformidades cerradas en plazo: Objetivo &gt; 90%.</li>
                                         <li>Resultados informados a la Alta Dirección en plazo: Objetivo 100%.</li>
@@ -486,9 +495,8 @@
                             </h2>
                             <div class="space-y-4">
                             <!-- Anexo A -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F152-IT-1 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="--TODO--" target="_blank"
+                                Anexo A: <a href="#anexos"
                                     title="F152-IT-1 Programa y Registro de Revisiones Independientes - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
@@ -502,31 +510,29 @@
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Programa de revisiones, organismo revisor, independencia, resultados e informe a la dirección]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Revisiones realizadas y programadas, selección del organismo revisor, independencia, resultados e informe a la dirección]</p>
                             </div>
 
                             <!-- Anexo B -->
-                            <!-- TODO: --TODO-- reemplazar href por el enlace de SharePoint del registro F152-IT-2 -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="--TODO--" target="_blank"
-                                    title="F152-IT-2 Registro de Hallazgos y Acciones Correctivas - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                Anexo B: <a href="#anexos"
+                                    title="F151-IT-4 Registro de No Conformidades y Acciones Correctivas - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F152-IT-2
+                                        F151-IT-4
                                     </span>
-                                    Registro de Hallazgos y Acciones Correctivas
+                                    Registro de No Conformidades y Acciones Correctivas
                                     <i
                                         class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Hallazgos, causa raíz, acciones, responsables, plazos y verificación de eficacia]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro único de hallazgos de auditorías internas, revisiones independientes y verificaciones: causa raíz, acciones, responsables, plazos y eficacia]</p>
                             </div>
 
                             <!-- Anexo C -->
-                            <!-- TODO: --TODO-- verificar la ruta del procedimiento P152-IT-1 dentro del sitio -->
                             <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo C: <a href="../../procedimientos/evaluaciones/proc-auditoria-externa.html"
                                     title="P152-IT-1 Procedimiento de Auditoría Externa Independiente del SGSI"
@@ -604,6 +610,15 @@
                                                 2/12/2025</td>
                                             <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización general del documento</td>
                                         </tr>
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
+                                                2</td>
+                                            <td
+                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                                14/11/2026</td>
+                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Frecuencia: evaluación TISAX cada 3 años y revisiones por cambios fundamentales (sin revisión intermedia); revisiones realizadas y programadas (TÜV Rheinland 11/2025, Personal Tech 11/2026, DNV 12/2026); hallazgos en el registro único F151-IT-4; plazos TISAX; contratación firmada por la Alta Dirección; se elimina el Comité de Seguridad; referencias a MC151-IT-1.</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -612,7 +627,6 @@
 
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mt-12">
-                    <!-- --TODO-- verificar ruta de la página MC151-IT-1 -->
                     <a href="../evaluaciones/auditorias-internas.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
@@ -722,7 +736,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -738,11 +752,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2025</span>
+                                <span class="font-medium text-gray-900 dark:text-white">14/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">2/12/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">14/11/2027</span>
                             </div>
                         </div>
                     </div>
