@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Procedimiento de Protección de Información en Transferencia">
+<html lang="es" data-page-subtitle="Procedimiento de Protección de la Información en Transferencia">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Prodismo - Procedimiento de Protección de Información en Transferencia">
+    <meta name="description" content="Prodismo - Procedimiento de Protección de la Información en Transferencia">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Protección de Información en Transferencia - Prodismo SRL</title>
+    <title>Procedimiento de Protección de la Información en Transferencia - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,7 @@
                     <a href="../ciberseguridad/proc-procedimientos-criptograficos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Procedimientos Criptográficos</span>
+                        <span>Anterior: Gestión Criptográfica</span>
                     </a>
                     <a href="../ciberseguridad/proc-configuracion-vpn.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -62,8 +62,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de
-                            Información en Transferencia</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de la Información en Transferencia</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -72,429 +71,306 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 25/2/2026</span>
+                                <span>Última revisión: 17/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.1.2), ISO 27001:2022 (A.5.14, A.8.20)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Garantizar que la información transferida a través de redes públicas o privadas esté
-                            protegida contra accesos no autorizados, manipulación o interceptación, mediante medidas
-                            técnicas y organizativas alineadas con su clasificación de seguridad, en cumplimiento de los
-                            requisitos de <strong>ISO/IEC 27001:2022</strong>, <strong>TISAX</strong> y clientes
-                            automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir los pasos para transferir información de forma segura por cada servicio autorizado y en medios físicos, mantener el inventario de servicios y responder ante errores o incidentes, según <strong>MC512-IT-1</strong> y el control <strong>5.1.2</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
-                    <section id="inventario-evaluacion" class="mb-12 scroll-mt-20">
+                    <section id="inventario" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            INVENTARIO Y EVALUACIÓN DE SERVICIOS DE TRANSFERENCIA
+                            INVENTARIO Y ALTA DE SERVICIOS DE TRANSFERENCIA
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Identificar todos los servicios/protocolos utilizados para transferir datos:
-                                    <ul class="list-circle pl-6 mt-1 space-y-3">
-                                        <li>Redes internas: FTP, APIs.</li>
-                                        <li>Redes externas: Correo electrónico, VPN, servicios cloud (SharePoint).</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Mapeo de Servicios:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Documentar en
-                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F512-IT-1%20Registro%20de%20Servicios%20de%20Transferencia.xlsx?d=w930cb96060e24c2791e9771424da8fdb&csf=1&web=1&e=1hD8Ea" target="_blank"
-                                                title="F512-IT-1 Registro de Servicios de Transferencia"
-                                                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                                <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                                <span
-                                                    class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                    F512-IT-1
-                                                </span>
-                                                Registro de Servicios de Transferencia
-                                                <i
-                                                    class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                            </a>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Nombre del servicio (ej.: "VPN").</li>
-                                                <li>Tipo de datos transferidos (ej.: "Diseños CATIA").</li>
-                                                <li>Protocolos usados (ej.: SFTP, TLS 1.3).</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Evaluación de Riesgos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Clasificar cada servicio según nivel de riesgo (ej.: FTP sin cifrado = "Alto
-                                            riesgo").</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F512-IT-1%20Registro%20de%20Servicios%20de%20Transferencia.xlsx?d=w930cb96060e24c2791e9771424da8fdb&csf=1&web=1&e=1hD8Ea"
-                                        target="_blank" title="F512-IT-1 Registro de Servicios de Transferencia"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F512-IT-1
-                                        </span>
-                                        Registro de Servicios de Transferencia
-                                        <i
-                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                                <li>Para priorizar protección<br>
-                                    <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html"
-                                        target="_blank" title="MC511-IT-1 Política de Clasificación de Datos"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-book text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            MC511-IT-1
-                                        </span>
-                                        Política de Clasificación de Datos
-                                        <i
-                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="definicion-politicas" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            DEFINICIÓN DE POLÍTICAS DE TRANSFERENCIA SEGURA
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Establecer reglas para transferencias según clasificación de datos (Confidencial,
-                                    Restringido, Público).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Políticas por Nivel:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>Confidencial:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Cifrado AES-256 + TLS 1.3 obligatorio.</li>
-                                                <li>Prohibido enviar por email estándar (usar soluciones cifradas).</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Restringido:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>TLS 1.2+ o SFTP.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Público:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>No requiere cifrado (pero verificar integridad con hashes).</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Excepciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Requieren aprobación por escrito del Departamento de IT.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <a href="../../documentacion/transferencia-segura/transferencia-segura.html"
-                                        target="_blank" title="MC512-IT-1 Política de Transferencia Segura"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-book text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            MC512-IT-1
-                                        </span>
-                                        Política de Transferencia Segura
-                                        <i
-                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="implementacion-medidas" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            IMPLEMENTACIÓN DE MEDIDAS TÉCNICAS
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Protección activa durante la transferencia.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Cifrado en Tránsito:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>VPN: Usar IPSec/IKEv2 para acceso remoto.</li>
-                                        <li>APIs: Implementar mTLS (autenticación mutua).</li>
-                                        <li>Correo: S/MIME o PGP para adjuntos sensibles.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Controles de Integridad:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Firmas digitales (ej.: SHA-256 + RSA) para archivos críticos.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <a href="../ciberseguridad/proc-configuracion-vpn.html" target="_blank" title="P512-IT-3
-                                        Procedimiento de Configuración VPN"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            P512-IT-3
-                                        </span>
-                                        Procedimiento de Configuración VPN
-                                        <i
-                                            class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="gestion-incidentes" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            GESTIÓN DE INCIDENTES EN TRANSFERENCIA
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Respuesta a interceptaciones, fugas o fallos de cifrado.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Procedimiento:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Detección:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Alertas de SIEM por patrones sospechosos (ej.: múltiples intentos de
-                                            conexión).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Contención:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Bloquear IPs/usuarios involucrados.</li>
-                                        <li>Revocar certificados comprometidos.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Investigación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Análisis forense (logs de firewall, servidores).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Mejora:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Actualizar políticas/protocolos si se identifican vulnerabilidades.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-                    </section>
-
-                    <section id="resumen-documentacion" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            RESUMEN DE DOCUMENTACIÓN REQUERIDA
-                        </h2>
-
-                        <div class="mb-6 overflow-x-auto">
+<div class="overflow-x-auto mb-6">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Procedimiento</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Documentos Asociados</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Inventario de servicios</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F512-IT-1%20Registro%20de%20Servicios%20de%20Transferencia.xlsx?d=w930cb96060e24c2791e9771424da8fdb&csf=1&web=1&e=1hD8Ea"
-                                                title="F512-IT-1 Registro de Servicios de Transferencia"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                                F512-IT-1 Registro de Servicios de Transferencia</a><br>
-                                            <a href="../../documentacion/clasificacion-datos/clasificacion-datos.html"
-                                                title="MC511-IT-1 Política de Clasificación de Datos"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-book text-primary-600 dark:text-primary-400"></i>
-                                                MC511-IT-1 Política de Clasificación de Datos</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Identificar el servicio, para qué se usa, con quién y qué información transfiere</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Quien lo necesita / IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Políticas de transferencia</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="../../documentacion/transferencia-segura/transferencia-segura.html"
-                                                title="MC512-IT-1 Política de Transferencia Segur"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-book text-primary-600 dark:text-primary-400"></i>
-                                                MC512-IT-1 Política de Transferencia Segura</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Verificar la protección: protocolo y cifrado (por ejemplo, certificado TLS en el navegador, documentación del fabricante, informe del proveedor)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F512-IT-1 (columna "Verificación")</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Implementación técnica</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="../ciberseguridad/proc-configuracion-vpn.html"
-                                                title="P512-IT-2 Procedimiento de Configuración VPN"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i
-                                                    class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                                P512-IT-2 Procedimiento de Configuración VPN</a><br>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Definir la clasificación máxima permitida y las condiciones de uso</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT Manager / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F512-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Aprobar el servicio; si no cumple, rechazarlo o pedir medidas adicionales</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F512-IT-1 (fecha y aprobó)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Comunicar a los usuarios que pueden usarlo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Correo de IT</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
 
-                    <section id="recomendaciones-clave" class="mb-12 scroll-mt-20">
+                    <section id="envio-terceros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            ENVÍO DE INFORMACIÓN A CLIENTES Y PROVEEDORES
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Canal</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Pasos</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Portal del cliente</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Usar la cuenta personal registrada en el F413-IT-6; subir solo lo que pide el proyecto.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">SharePoint / OneDrive</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Compartir > "Personas específicas" > escribir la dirección completa del destinatario y verificarla.</li><li>Elegir el permiso mínimo ("Puede ver" o "Puede editar"); para solo lectura, considerar "Bloquear descarga".</li><li>Si es un acceso nuevo de una empresa externa a un sitio o carpeta de proyecto, pedirlo a IT, que lo registra en el F512-IT-1 (hoja "Accesos externos").</li><li>Al terminar el proyecto, el responsable avisa a IT para quitar el acceso (los vínculos no vencen solos).</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Correo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Nunca adjuntar modelos CAD 3D.</li><li>Planos 2D a proveedores (DWG, DXF, PDF): comprimir en 7-Zip con AES-256 y dar la contraseña por teléfono, o compartir un vínculo de SharePoint a personas específicas.</li><li>Información Confidencial o Restringida: compartir un vínculo de SharePoint o cifrar el correo (I511-IT-4).</li><li>Revisar la advertencia de destinatario externo antes de enviar (I512-IT-1).</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Archivo cifrado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>7-Zip o WinRAR con AES-256 (no ZipCrypto); contraseña larga enviada por teléfono u otro canal, nunca en el mismo correo (P511-IT-1).</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="medios-fisicos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            ENVÍO EN MEDIOS FÍSICOS (PAPEL, PENDRIVE, DISCO)
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Preparar solo la información necesaria para el trabajo encargado y verificar que el proveedor tenga acuerdo de confidencialidad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Área que envía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Pendrive o disco: cifrar con BitLocker To Go o guardar los archivos en un 7-Zip AES-256; la contraseña se da por teléfono al destinatario</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Área que envía / IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Papel: sobre cerrado, con el destinatario y sin indicar el contenido por fuera</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Área que envía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Entregar en mano o por el transporte autorizado [Confirmar]; el destinatario firma la recepción (remito o constancia)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Área que envía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F512-IT-3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Registrar el envío y la recepción; al terminar, pedir la devolución del medio o la confirmación de borrado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Área que envía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F512-IT-3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="destinatario" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            VERIFICACIÓN DEL DESTINATARIO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Revisar la dirección completa (dominio incluido) antes de enviar o compartir; desconfiar del autocompletado.</li><li>Si Outlook advierte que hay destinatarios externos, confirmar que corresponde.</li><li>No reenviar a terceros correos ni vínculos recibidos con información de clientes.</li><li>Usar el retraso de envío configurado en Outlook para corregir errores (I512-IT-1, Parte F).</li></ul>
+                    </section>
+
+                    <section id="configuracion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            CONFIGURACIÓN TÉCNICA (IT)
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Control</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Estado</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Referencia</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Vínculo "Cualquier persona" deshabilitado en SharePoint/OneDrive</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Captura del centro de administración de SharePoint</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Advertencia de destinatario externo y etiqueta "Externo" en Outlook</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">[Pendiente]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I512-IT-1 Partes A y B</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Regla de correo que rechaza adjuntos CAD sin cifrar (incluidos DWG y DXF) a destinatarios externos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">[Pendiente]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I512-IT-1 Parte D</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Retraso de envío en Outlook</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">[Pendiente]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I512-IT-1 Parte F</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Bloqueo en el firewall de WeTransfer y almacenamiento personal (Drive, Dropbox)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">WeTransfer bloqueado [Confirmar]; Drive personal [Confirmar]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Pedido a Armanet</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">VPN: protocolo, cifrado y MFA</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">SSTP en 84 cuentas y L2TP en 3 (Armanet, 17/11/2026); versión de TLS y cifrado [Confirmar]; MFA pendiente (NC-2026-06)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">P512-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section id="incidentes" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            RECOMENDACIONES CLAVE
+                            ERRORES E INCIDENTES EN LA TRANSFERENCIA
                         </h2>
-
-                        <div class="mb-6">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Capacitación:</strong> Entrenar a empleados en detección de phishing
-                                    (principal vector de fuga).</li>
-                                <li><strong>Auditoría:</strong> Testear trimestralmente con PRTG para
-                                    identificar puertos abiertos no seguros.</li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Situación</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Qué hacer</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Correo o vínculo enviado a un destinatario equivocado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Avisar a IT de inmediato.</li><li>Quitar el acceso al vínculo de SharePoint; pedir al destinatario que borre el correo y lo confirme por escrito.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Pérdida de un pendrive, disco o planos en papel</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Avisar a IT y al responsable del área; registrar en el F512-IT-3.</li><li>Si el medio no estaba cifrado o el papel tenía información de clientes, evaluar si hay que avisar al cliente.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Sospecha de interceptación o de acceso indebido (VPN, cuenta, vínculo)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>IT bloquea la cuenta o el acceso, cambia las credenciales y pide a Armanet o Microsoft los registros.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Todos los casos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Se gestionan como incidente según P162-IT-1; si se detecta una debilidad, se actualiza esta política o el F512-IT-1.</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                    </section>
+
+                    <section id="revision" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REVISIÓN PERIÓDICA
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cada 6 meses (V-33): revisión de los servicios del F512-IT-1; comparación de la lista de usuarios de VPN de Armanet con el personal activo; revisión con cada responsable de los accesos externos a SharePoint y baja de los que ya no se necesitan; revisión del F512-IT-3.</li></ul>
+                    </section>
+
+                    <section id="registros" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REGISTROS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>F512-IT-1 (servicios, usuarios de VPN, accesos externos) · F512-IT-2 · F512-IT-3 · correos de alta y baja a Armanet · capturas de la configuración de Microsoft 365.</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/2/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            25/2/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">17/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título; alta de servicios con verificación de la protección; pasos por canal (portal, SharePoint, correo, archivo cifrado); planos 2D a proveedores por correo solo cifrados; envío en medios físicos con registro F512-IT-3; verificación del destinatario; estado de la configuración técnica; errores e incidentes; revisión semestral; se quitan SIEM, mTLS, S/MIME/PGP, firmas RSA, FTP y APIs (no se usan); se corrigen los códigos MC132-IT-1 y P512-IT-2.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -502,7 +378,7 @@
                     <a href="../ciberseguridad/proc-procedimientos-criptograficos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Procedimientos Criptográficos</span>
+                        <span>Anterior: Gestión Criptográfica</span>
                     </a>
                     <a href="../ciberseguridad/proc-configuracion-vpn.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -525,26 +401,32 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#inventario-evaluacion"
+                            <a href="#inventario"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                INVENTARIO Y EVALUACIÓN DE SERVICIOS</a>
-                            <a href="#definicion-politicas"
+                                INVENTARIO DE SERVICIOS</a>
+                            <a href="#envio-terceros"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                DEFINICIÓN DE POLÍTICAS DE TRANSFERENCIA</a>
-                            <a href="#implementacion-medidas"
+                                ENVÍO A CLIENTES Y PROVEEDORES</a>
+                            <a href="#medios-fisicos"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                IMPLEMENTACIÓN DE MEDIDAS TÉCNICAS</a>
-                            <a href="#gestion-incidentes"
+                                MEDIOS FÍSICOS</a>
+                            <a href="#destinatario"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                GESTIÓN DE INCIDENTES EN TRANSFERENCIA</a>
-                            <a href="#resumen-documentacion"
+                                VERIFICACIÓN DEL DESTINATARIO</a>
+                            <a href="#configuracion"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                RESUMEN DE DOCUMENTACIÓN REQUERIDA</a>
-                            <a href="#recomendaciones-clave"
+                                CONFIGURACIÓN TÉCNICA</a>
+                            <a href="#incidentes"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                RECOMENDACIONES CLAVE</a>
-                            <a href="#revisiones-documento"
+                                ERRORES E INCIDENTES</a>
+                            <a href="#revision"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                REVISIÓN PERIÓDICA</a>
+                            <a href="#registros"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REGISTROS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -603,7 +485,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -619,11 +501,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/2/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">17/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">25/2/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">17/11/2027</span>
                             </div>
                         </div>
                     </div>

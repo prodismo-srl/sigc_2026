@@ -61,364 +61,237 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de
-                            Datos Personales</h1>
-                        <div id="metadata" class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Protección de Datos Personales</h1>
+                        <div id="metadata"
+                            class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
                                 <i class="fa-solid fa-file-code"></i>
                                 <span>Código: P712-IT-1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 22/4/2026</span>
+                                <span>Última revisión: 17/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 7.1.2), ISO 27001:2022 (A.5.34), Ley 25.326</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Describir los procedimientos y actividades específicas para implementar <a
-                                href="../../documentacion/proteccion-datos-personales/proteccion-datos-personales.html"
-                                class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300"><strong>MC712-IT-1
-                                Política de Protección de Datos Personales</strong></a>, asegurando el tratamiento lícito, leal y
-                            seguro de los datos personales en <strong>PRODISMO SRL</strong>, y asegurando el
-                            cumplimiento de los requisitos de protección de <strong>ISO/IEC 27001:2022</strong>, así
-                            como con los requisitos del marco <strong>TISAX</strong>.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir las actividades para aplicar la <strong>MC712-IT-1</strong> Política de Protección de Datos Personales y cumplir el control <strong>7.1.2</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
                     <section id="actividades" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            ACTIVIDADES
+                            REGISTRO Y EVALUACIÓN DE TRATAMIENTOS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.1. Inventario y Mapeo
-                                de Datos (Uso del formulario F712-IT-1)
-                            </h3>
-
-                            <div class="mb-4">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El RSI/RDP, en conjunto con cada responsable de área, identificará anualmente
-                                        los procesos que tratan datos personales.</li>
-                                    <li>Se completará el<br>
-                                        <a href="https://forms.office.com/r/gjvfmDrkrf" target="_blank"
-                                            title="F712-IT-1 Inventario de Tratamiento de Datos Personales"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-alt text-blue-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                F712-IT-1
-                                            </span>
-                                            Inventario de Tratamiento de Datos Personales
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a><br>
-                                        por cada proceso, detallando:
-                                        <ul class="list-disc pl-6 mt-2 space-y-3">
-                                            <li>Nombre del proceso (ej.: "Reclutamiento y Selección", "Gestión de
-                                                Nómina", "Control de Acceso Físico").</li>
-                                            <li>Finalidad del tratamiento.</li>
-                                            <li>Categorías de titulares (empleados, postulantes, contactos de clientes).
-                                            </li>
-                                            <li>Tipos de datos tratados (DNI, datos de salud, datos biométricos, etc.).
-                                            </li>
-                                            <li>Base legal que sustenta el tratamiento.</li>
-                                            <li>Flujo de los datos (origen, destinos, transferencias).</li>
-                                        </ul>
-                                    </li>
-                                    <li>El inventario será la base para las evaluaciones de riesgo y la aplicación de
-                                        controles.</li>
-                                </ol>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Antes de iniciar un tratamiento nuevo o cambiar uno existente, informar al RDP la finalidad, los datos, el sistema y los proveedores</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Responsable de área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Correo</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Registrar el tratamiento: finalidad, titulares, datos (indicar sensibles o biométricos), base legal, sistema, encargados, transferencias, plazo de conservación y medidas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP con IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F712-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Evaluar el riesgo (probabilidad × impacto) y definir los controles</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M712-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Si hay encargados, verificar que el contrato o los términos incluyan confidencialidad y seguridad de los datos; si los datos salen del país, verificar la región y las garantías (Disp. 60/2016)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F712-IT-1 (hoja "Encargados")</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Inscribir la base o modificar su inscripción en la AAIP</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I712-IT-1 · constancia de la AAIP</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">6. Informar al titular (finalidad, destinatarios, responsable y derechos) y, si corresponde, obtener el consentimiento</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH / área</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F712-IT-3 en tulegajo.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.2. Evaluación de
-                                Riesgos de Privacidad (Uso de la Matriz M712-IT-2)
-                            </h3>
+                    <section id="consentimiento" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            CONSENTIMIENTO (F712-IT-3)
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Se pide al ingreso y a todo el personal actual para datos biométricos y médicos; se firma y se guarda en tulegajo.com.</li><li>RRHH controla cada 6 meses que todo el personal activo tenga el consentimiento firmado [hoy faltan 18 personas, NC-2026-29].</li><li>Si el titular retira el consentimiento, RRHH lo registra en el F712-IT-4 y deja de tratar esos datos (por ejemplo, se registra la asistencia por otro medio).</li></ul>
+                    </section>
 
-                            <div class="mb-4">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Para cada tratamiento de datos identificado, se realizará una evaluación de
-                                        riesgos utilizando la <br>
-                                        <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M712-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Privacidad.xlsx?d=wb885f1894cd042128e2e3c7ce9197896&csf=1&web=1&e=nUCzOP" target="_blank"
-                                            title="M712-IT-2 Matriz de Evaluación de Riesgos de Privacidad"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-excel text-green-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                M712-IT-1
-                                            </span>
-                                            Matriz de Evaluación de Riesgos de Privacidad
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a>
-                                    </li>
-                                    <li>La evaluación considerará la probabilidad e impacto de un incidente que afecte
-                                        los derechos de los titulares.</li>
-                                    <li>Según el nivel de riesgo (<span class="font-medium text-red-600">Alto</span>,
-                                        <span class="font-medium text-orange-600">Medio</span>, <span
-                                            class="font-medium text-green-600">Bajo</span>), se definirán e
-                                        implementarán controles de seguridad específicos (ej.: encriptación, controles
-                                        de acceso, acuerdos de confidencialidad).
-                                    </li>
-                                </ol>
-                            </div>
+                    <section id="derechos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            SOLICITUDES DE LOS TITULARES (F712-IT-4)
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Plazo</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Recibir la solicitud por rrhh@prodismo.com o tulegajo.com y registrarla</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al recibirla</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Verificar la identidad del solicitante</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Responder: acceso</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP / área que tiene los datos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">10 días corridos</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Responder: rectificación, actualización o supresión, y corregir los datos en todos los sistemas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP / área / IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 días hábiles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Registrar la respuesta y la fecha</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RRHH</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F712-IT-4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.3. Gestión del
-                                Consentimiento (Uso del formulario F712-IT-3)
-                            </h3>
+                    <section id="conservacion" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            CONSERVACIÓN Y ELIMINACIÓN
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Biométricos: se borran del reloj al egreso (lista de bajas de RRHH).</li><li>Exámenes médicos: 5 años en el legajo; luego se eliminan o se pide la destrucción a Interfile S.A. con constancia.</li><li>CCTV: el grabador sobrescribe a los 15 días; una grabación solo se conserva más tiempo ante un incidente.</li><li>Postulantes: [Propuesta: 6 meses desde el cierre de la búsqueda; hasta 1 año con consentimiento].</li><li>Los soportes se eliminan según MC313-IT-1.</li></ul>
+                    </section>
 
-                            <div class="mb-4">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Cuando la base legal sea el consentimiento, se deberá utilizar el <br>
-                                        <a href="https://prodismo.tulegajo.com/login.htm" target="_blank"
-                                            title="F713-IT-1 Formulario de Consentimiento"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-contract text-blue-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                F712-IT-3
-                                            </span>
-                                            Formulario de Consentimiento
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a>
-                                    </li>
-                                    <li>El formulario debe ser claro, específico y destacado, informando al titular
-                                        sobre la finalidad del tratamiento.</li>
-                                    <li>Los consentimientos otorgados se almacenarán de forma segura y se gestionarán de
-                                        manera que se pueda demostrar su obtención.</li>
-                                </ol>
-                            </div>
-                        </div>
+                    <section id="incidentes" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            INCIDENTES CON DATOS PERSONALES
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Informar de inmediato a itprodismo@prodismo.com; se gestionan según P162-IT-1 con participación del RDP.</li><li>El RDP evalúa con el abogado externo el aviso a los titulares y a la AAIP y lo registra en el informe del incidente.</li></ul>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.4. Gestión de los
-                                Derechos de los Titulares (Uso del formulario F712-IT-4)
-                            </h3>
-
-                            <div class="mb-4">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Las solicitudes de los titulares (acceso, rectificación, etc.) se recibirán en:
-                                        <a href="mailto:rrhh@prodismo.com"
-                                            class="bg-amber-100 text-gray-600 hover:text-gray-800 hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer transition-all duration-300 dark:text-gray-400 dark:hover:text-gray-300 rounded-lg p-2 m-2"><i class="fas fa-envelope text-gray-400 mr-2"></i>rrhh@prodismo.com</a>.
-                                    </li>
-                                    <li>El RSI/RDP registrará la solicitud en el <br>
-                                        <a href="https://forms.office.com/r/vnCcE3ufCV" target="_blank"
-                                            title="F713-IT-4 Registro de Ejercicio de Derechos de los Titulares"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-alt text-blue-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                F712-IT-4
-                                            </span>
-                                            Registro de Ejercicio de Derechos de los Titulares
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a>
-                                    </li>
-                                    <li>Se verificará la identidad del solicitante.</li>
-                                    <li>El Departamento Legal y el área involucrada (ej.: RRHH) colaborarán para
-                                        responder la solicitud en un plazo no mayor a 10 días hábiles, prorrogables por
-                                        5 más en caso necesario.</li>
-                                    <li>La respuesta se documentará en el mismo registro.</li>
-                                </ol>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">2.5. Revisión y
-                                Actualización</h3>
-
-                            <div class="mb-4">
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>El RSI/RDP revisará trimestralmente el cumplimiento de este procedimiento.</li>
-                                    <li>El inventario <br>
-                                        <a href="https://forms.office.com/r/gjvfmDrkrf" target="_blank"
-                                            title="F712-IT-1 Inventario de Tratamiento de Datos Personales"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-alt text-blue-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                F712-IT-1
-                                            </span>
-                                            Inventario de Tratamiento de Datos Personales
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a> <br>
-                                        y las evaluaciones de riesgo <br>
-                                        <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M712-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Privacidad.xlsx?d=wb885f1894cd042128e2e3c7ce9197896&csf=1&web=1&e=nUCzOP" target="_blank"
-                                            title="M712-IT-2 Matriz de Evaluación de Riesgos de Privacidad"
-                                            class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                            <i class="fa-solid fa-file-excel text-green-600"></i>
-                                            <span
-                                                class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                                M712-IT-1
-                                            </span>
-                                            Matriz de Evaluación de Riesgos de Privacidad
-                                            <i
-                                                class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                        </a>
-                                        <br>
-                                        se actualizarán anualmente o cuando se introduzca un nuevo proceso o cambio normativo.</li>
-                                </ol>
-                            </div>
+                    <section id="revision" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            REVISIÓN
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Actividad</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Revisión del F712-IT-1, la M712-IT-2 y la inscripción en la AAIP</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual y ante cambios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP con RSI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Consentimientos firmados, eliminaciones (biométricos, exámenes, CV) y solicitudes del F712-IT-4</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral (V-37)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RDP</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            ANEXOS
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            REGISTROS
                         </h2>
-
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>Anexo A</strong>:
-                                <a href="https://forms.office.com/r/gjvfmDrkrf" target="_blank"
-                                    title="F712-IT-1 Inventario de Tratamiento de Datos Personales"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                    <i class="fa-solid fa-file-alt text-blue-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F712-IT-1
-                                    </span>
-                                    Inventario de Tratamiento de Datos Personales
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </li>
-                            <li><strong>Anexo B</strong>:
-                                <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M712-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Privacidad.xlsx?d=wb885f1894cd042128e2e3c7ce9197896&csf=1&web=1&e=nUCzOP" target="_blank"
-                                    title="M712-IT-2 Matriz de Evaluación de Riesgos de Privacidad"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                    <i class="fa-solid fa-file-excel text-green-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        M712-IT-1
-                                    </span>
-                                    Matriz de Evaluación de Riesgos de Privacidad
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </li>
-                            <li><strong>Anexo C</strong>:
-                                <a href="https://prodismo.tulegajo.com/login.htm" target="_blank"
-                                    title="F713-IT-1 Formulario de Consentimiento"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                    <i class="fa-solid fa-file-contract text-blue-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F712-IT-3
-                                    </span>
-                                    Formulario de Consentimiento
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </li>
-                            <li><strong>Anexo D</strong>:
-                                <a href="https://forms.office.com/r/vnCcE3ufCV" target="_blank"
-                                    title="F713-IT-4 Registro de Ejercicio de Derechos de los Titulares"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-6 mt-3 mb-3">
-                                    <i class="fa-solid fa-file-alt text-blue-600"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F712-IT-4
-                                    </span>
-                                    Registro de Ejercicio de Derechos de los Titulares
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>F712-IT-1 Registro de Tratamientos de Datos Personales · M712-IT-2 Matriz de Evaluación de Riesgos de Privacidad · F712-IT-3 Consentimiento (tulegajo.com) · F712-IT-4 Registro de Solicitudes de Titulares · F712-IT-5 Acta de Designación del RDP · I712-IT-1 Instructivo de inscripción en la AAIP.</li></ul>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">22/4/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            22/4/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">17/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Pasos para registrar y evaluar tratamientos, encargados y transferencias; inscripción en la AAIP; consentimiento y su control; solicitudes de titulares con plazos legales; conservación y eliminación; incidentes; revisión anual y semestral; códigos corregidos; aprueba el RDP; se quitan el Departamento Legal y la revisión trimestral.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -451,12 +324,27 @@
                                 OBJETIVO</a>
                             <a href="#actividades"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                ACTIVIDADES</a>
-                            <a href="#anexos"
+                                REGISTRO Y EVALUACIÓN</a>
+                            <a href="#consentimiento"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                ANEXOS</a>
-                            <a href="#revisiones-documento"
+                                CONSENTIMIENTO</a>
+                            <a href="#derechos"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                SOLICITUDES DE TITULARES</a>
+                            <a href="#conservacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                CONSERVACIÓN Y ELIMINACIÓN</a>
+                            <a href="#incidentes"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                INCIDENTES</a>
+                            <a href="#revision"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REVISIÓN</a>
+                            <a href="#anexos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                REGISTROS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -523,7 +411,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -535,15 +423,15 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Mariano Nieto</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Fecha de emisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">22/4/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">17/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">22/4/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">17/11/2027</span>
                             </div>
                         </div>
                     </div>

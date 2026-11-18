@@ -70,28 +70,32 @@ function generateContractHTML(data, lang = 'es') {
             excludedSubtitle: "7.1 Servicios excluidos del alcance",
             ipTitle: "8. PROPIEDAD INTELECTUAL",
             incidentTitle: "9. INCIDENTES DE SEGURIDAD Y REPORTE OBLIGATORIO",
-            termTitle: "10. PLAZO DE VIGENCIA",
-            terminationTitle: "11. RESCISIÓN",
-            jurisdictionTitle: "12. JURISDICCIÓN",
-            addressesTitle: "13. DOMICILIOS",
+            verificationTitle: "10. VERIFICACIÓN DEL CUMPLIMIENTO",
+            returnTitle: "11. DEVOLUCIÓN Y DESTRUCCIÓN DE LA INFORMACIÓN",
+            termTitle: "12. PLAZO DE VIGENCIA",
+            terminationTitle: "13. RESCISIÓN",
+            jurisdictionTitle: "14. JURISDICCIÓN",
+            addressesTitle: "15. DOMICILIOS",
             signatureText: "En prueba de conformidad, se firman dos ejemplares de idéntico tenor, en la Ciudad de Córdoba,",
             clientLabel: "PRODISMO SRL",
-            clientRole: "Gerente de IT / Representante",
+            clientRole: "%CARGO%",
             providerLabel: "EL PRESTADOR",
             providerRole: "Representante Legal",
-            footerNote: "*F612-IT-2 Documento generado bajo lineamientos TISAX (AL2) & ISO/IEC 27001:2022. La firma digital o manuscrita valida el acuerdo.",
+            footerNote: "*F612-IT-2 Rev. 1 Documento generado bajo lineamientos TISAX (AL2) & ISO/IEC 27001:2022. La firma digital o manuscrita valida el acuerdo.",
             
             betweenParties: "Entre",
             and: "y",
-            partiesParagraph: "Entre <strong>PRODISMO SRL, CUIT 33-54778858-9</strong>, con domicilio en Av. Japón 2230, Ciudad de Córdoba, representada por su Responsable del Área de IT, %CLIENTE% (en adelante \"<strong>EL CLIENTE</strong>\") y <strong>%PROVEEDOR%</strong>, representada por %REPRESENTANTE%, %ID%, con domicilio en %DOMICILIO% (en adelante \"<strong>EL PRESTADOR</strong>\"); se celebra el presente <strong>Contrato de Confidencialidad y Alcance de Servicios</strong>, conforme a las exigencias de <strong>TISAX</strong> — Information Security Assessment e <strong>ISO/IEC 27001:2022</strong>.",
+            partiesParagraph: "Entre <strong>PRODISMO SRL, CUIT 33-54778858-9</strong>, con domicilio en Av. Japón 2230, Ciudad de Córdoba, representada por %CLIENTE%, %CARGO% (en adelante \"<strong>EL CLIENTE</strong>\") y <strong>%PROVEEDOR%</strong>, representada por %REPRESENTANTE%, %ID%, con domicilio en %DOMICILIO% (en adelante \"<strong>EL PRESTADOR</strong>\"); se celebra el presente <strong>Contrato de Confidencialidad y Alcance de Servicios</strong>, conforme a las exigencias de <strong>TISAX</strong> — Information Security Assessment e <strong>ISO/IEC 27001:2022</strong>.",
             objectPurpose: "El presente acuerdo tiene por finalidad:",
             objectPoints: [
                 "Establecer las obligaciones de confidencialidad, protección y uso adecuado de la información que <strong>EL PRESTADOR</strong> reciba, procese o gestione para <strong>EL CLIENTE</strong>.",
                 "Definir el alcance de los servicios, roles y responsabilidades bajo estándares de seguridad.",
-                "Asegurar el cumplimiento de las normas <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> y prácticas asociadas (ISO 27002, ISO 27017, ISO 27018)."
+                "Asegurar el cumplimiento de las normas <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> y la guía ISO/IEC 27002."
             ],
             objectApplicability: "Este acuerdo aplica a toda la información en formato físico, digital, verbal, audiovisual o cualquier otro medio.",
             confidentialityLabel: "<strong>Información Confidencial:</strong>",
+            coveredLabel: "<strong>Información cubierta por este acuerdo:</strong>",
+            projectLabel: "<strong>Proyecto(s) o servicio objeto:</strong>",
             servicesLabel: "<strong>Servicios:</strong>",
             providerCommitPrinciples: "<strong>EL PRESTADOR</strong> se compromete a cumplir los principios de:",
             providerCommitObligations: "<strong>EL PRESTADOR</strong> se compromete a:",
@@ -117,28 +121,32 @@ function generateContractHTML(data, lang = 'es') {
             excludedSubtitle: "7.1 Services excluded from the scope",
             ipTitle: "8. INTELLECTUAL PROPERTY",
             incidentTitle: "9. SECURITY INCIDENTS AND MANDATORY REPORTING",
-            termTitle: "10. TERM OF VALIDITY",
-            terminationTitle: "11. TERMINATION",
-            jurisdictionTitle: "12. JURISDICTION",
-            addressesTitle: "13. NOTICE ADDRESSES",
+            verificationTitle: "10. VERIFICATION OF COMPLIANCE",
+            returnTitle: "11. RETURN AND DESTRUCTION OF INFORMATION",
+            termTitle: "12. TERM OF VALIDITY",
+            terminationTitle: "13. TERMINATION",
+            jurisdictionTitle: "14. JURISDICTION",
+            addressesTitle: "15. NOTICE ADDRESSES",
             signatureText: "As proof of agreement, two copies of identical content are signed in the City of Córdoba,",
             clientLabel: "PRODISMO SRL",
-            clientRole: "IT Manager / Representative",
+            clientRole: "%CARGO%",
             providerLabel: "THE PROVIDER",
             providerRole: "Legal Representative",
-            footerNote: "*F612-IT-2 Document generated under TISAX (AL2) and ISO/IEC 27001:2022 guidelines. Digital or handwritten signature validates the agreement.",
+            footerNote: "*F612-IT-2 Rev. 1 Document generated under TISAX (AL2) and ISO/IEC 27001:2022 guidelines. Digital or handwritten signature validates the agreement.",
 
             betweenParties: "Between",
             and: "and",
-            partiesParagraph: "Between <strong>PRODISMO SRL, TAX ID 33-54778858-9</strong>, with registered address at Av. Japón 2230, City of Córdoba, represented by its IT Area Responsible, %CLIENTE% (hereinafter \"<strong>THE CLIENT</strong>\") and <strong>%PROVEEDOR%</strong>, represented by %REPRESENTANTE%, %ID%, with address at %DOMICILIO% (hereinafter \"<strong>THE PROVIDER</strong>\"); this <strong>Confidentiality and Scope of Services Agreement</strong> is entered into, in compliance with the requirements of <strong>TISAX</strong> — Information Security Assessment and <strong>ISO/IEC 27001:2022</strong>.",
+            partiesParagraph: "Between <strong>PRODISMO SRL, TAX ID 33-54778858-9</strong>, with registered address at Av. Japón 2230, City of Córdoba, represented by %CLIENTE%, %CARGO% (hereinafter \"<strong>THE CLIENT</strong>\") and <strong>%PROVEEDOR%</strong>, represented by %REPRESENTANTE%, %ID%, with address at %DOMICILIO% (hereinafter \"<strong>THE PROVIDER</strong>\"); this <strong>Confidentiality and Scope of Services Agreement</strong> is entered into, in compliance with the requirements of <strong>TISAX</strong> — Information Security Assessment and <strong>ISO/IEC 27001:2022</strong>.",
             objectPurpose: "This agreement aims to:",
             objectPoints: [
                 "Establish the confidentiality, protection and proper use obligations of the information that <strong>THE PROVIDER</strong> receives, processes or manages for <strong>THE CLIENT</strong>.",
                 "Define the scope of services, roles and responsibilities under security standards.",
-                "Ensure compliance with <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> and associated practices (ISO 27002, ISO 27017, ISO 27018)."
+                "Ensure compliance with <strong>ISO/IEC 27001:2022, TISAX (AL2)</strong> and the ISO/IEC 27002 guidance."
             ],
             objectApplicability: "This agreement applies to information in physical, digital, verbal, audiovisual or any other media.",
             confidentialityLabel: "<strong>Confidential Information:</strong>",
+            coveredLabel: "<strong>Information covered by this agreement:</strong>",
+            projectLabel: "<strong>Project(s) or service covered:</strong>",
             servicesLabel: "<strong>Services:</strong>",
             providerCommitPrinciples: "<strong>THE PROVIDER</strong> undertakes to comply with the following principles:",
             providerCommitObligations: "<strong>THE PROVIDER</strong> undertakes to:",
@@ -170,8 +178,8 @@ function generateContractHTML(data, lang = 'es') {
 
     // Textos de definiciones y principios (también traducibles)
     const confidentialityDef = lang === 'es' 
-        ? "Toda información técnica, operativa, financiera, personal, estratégica, de infraestructura o procesos del CLIENTE, incluyendo datos personales, accesos, credenciales, configuraciones, bases de datos, documentación funcional, código fuente, reportes y logs, propiedad intelectual o normativa de privacidad."
-        : "Any technical, operational, financial, personal, strategic, infrastructure or process information of the CLIENT, including but not limited to personal data, accesses, credentials, configurations, databases, functional documentation, source code, reports and logs, intellectual property or privacy regulations.";
+        ? "Toda información técnica, operativa, financiera, personal, estratégica, de infraestructura o procesos del CLIENTE y de los clientes del CLIENTE, incluyendo planos, modelos y diseños, datos personales, accesos, credenciales, configuraciones, bases de datos, documentación funcional, código fuente, reportes y logs, propiedad intelectual o normativa de privacidad."
+        : "Any technical, operational, financial, personal, strategic, infrastructure or process information of the CLIENT and of the CLIENT's customers, including but not limited to drawings, models and designs, personal data, accesses, credentials, configurations, databases, functional documentation, source code, reports and logs, intellectual property or privacy regulations.";
     
     const servicesDefText = lang === 'es'
         ? `Actividades ejecutadas por <strong>EL PRESTADOR</strong> que incluyen: <strong>${serviciosDef}</strong>.`
@@ -218,8 +226,16 @@ function generateContractHTML(data, lang = 'es') {
         : `According to <strong>ISO 27035</strong> and <strong>TISAX</strong> standards: Any incident affecting <strong>CLIENT</strong> data must be reported within the <strong>first 24 hours</strong>. <strong>THE PROVIDER</strong> will cooperate in mitigation, root cause analysis and remediation actions.`;
 
     const termText = lang === 'es'
-        ? `Este acuerdo tendrá una vigencia de <strong>5 (cinco) años</strong> desde su firma y continuará aplicando durante <strong>5 (cinco) años</strong> posteriores a la finalización de la relación comercial, respecto de la confidencialidad.`
-        : `This agreement will be valid for <strong>5 (five) years</strong> from its signature and will continue to apply for <strong>5 (five) years</strong> after the termination of the commercial relationship, with respect to confidentiality.`;
+        ? `Este acuerdo tiene vigencia por <strong>tiempo indeterminado</strong> desde su firma y mientras dure la relación comercial. Las obligaciones de confidencialidad continúan durante <strong>5 (cinco) años</strong> posteriores a la finalización de la relación comercial.`
+        : `This agreement is valid for an <strong>indefinite term</strong> from its signature and for as long as the commercial relationship lasts. Confidentiality obligations continue for <strong>5 (five) years</strong> after the termination of the commercial relationship.`;
+
+    const verificationText = lang === 'es'
+        ? `<strong>EL PRESTADOR</strong> acepta que <strong>EL CLIENTE</strong> verifique el cumplimiento de este acuerdo mediante el pedido de evidencias, el cuestionario de autoevaluación de seguridad y auditorías con aviso previo razonable, propias o de los clientes de <strong>EL CLIENTE</strong> cuando sus contratos lo exijan.`
+        : `<strong>THE PROVIDER</strong> agrees that <strong>THE CLIENT</strong> may verify compliance with this agreement by requesting evidence, a security self-assessment questionnaire and audits with reasonable prior notice, carried out by <strong>THE CLIENT</strong> or by its customers when their contracts so require.`;
+
+    const returnText = lang === 'es'
+        ? `Al finalizar la relación o a pedido de <strong>EL CLIENTE</strong>, <strong>EL PRESTADOR</strong> devolverá o destruirá de forma segura toda la Información Confidencial y sus copias, en cualquier soporte, dentro de los 10 (diez) días hábiles, y lo confirmará por escrito. Si por obligación legal debe conservar alguna copia, la seguirá protegiendo según este acuerdo.`
+        : `Upon termination of the relationship or at <strong>THE CLIENT</strong>'s request, <strong>THE PROVIDER</strong> shall securely return or destroy all Confidential Information and its copies, on any medium, within 10 (ten) business days, and confirm it in writing. If it must keep a copy by legal obligation, it shall continue to protect it under this agreement.`;
 
     const terminationText = lang === 'es'
         ? `Cualquiera de las partes podrá rescindir este acuerdo mediante notificación fehaciente con 30 días de anticipación. Las obligaciones de confidencialidad no se extinguen.`
@@ -242,6 +258,7 @@ function generateContractHTML(data, lang = 'es') {
         <h2>${t.partiesTitle}</h2>
         <p>${t.partiesParagraph
             .replace('%CLIENTE%', escapeHtml(data.nombreResponsable))
+            .replace('%CARGO%', escapeHtml(data.cargoFirmante))
             .replace('%PROVEEDOR%', escapeHtml(data.proveedor))
             .replace('%REPRESENTANTE%', representanteFull)
             .replace('%ID%', idCompleto)
@@ -257,6 +274,8 @@ function generateContractHTML(data, lang = 'es') {
 
         <h2>${t.definitionsTitle}</h2>
         <p>${t.confidentialityLabel} ${confidentialityDef}</p>
+        <p>${t.coveredLabel} ${escapeHtml(data.informacionCubierta)}.</p>
+        <p>${t.projectLabel} ${escapeHtml(data.proyecto)}.</p>
         <p>${t.servicesLabel} ${servicesDefText}</p>
 
         <h2>${t.securityPrinciplesTitle}</h2>
@@ -283,6 +302,12 @@ function generateContractHTML(data, lang = 'es') {
         <h2>${t.incidentTitle}</h2>
         <p>${incidentText}</p>
 
+        <h2>${t.verificationTitle}</h2>
+        <p>${verificationText}</p>
+
+        <h2>${t.returnTitle}</h2>
+        <p>${returnText}</p>
+
         <h2>${t.termTitle}</h2>
         <p>${termText}</p>
 
@@ -302,7 +327,7 @@ function generateContractHTML(data, lang = 'es') {
                     <div class="font-bold">${t.clientLabel}</div>
                     <div class="mt-4 mb-1">${escapeHtml(data.nombreResponsable)}</div>
                     <div class="signature-line mx-auto w-48"></div>
-                    <div class="text-sm">${t.clientRole}</div>
+                    <div class="text-sm">${t.clientRole.replace('%CARGO%', escapeHtml(data.cargoFirmante))}</div>
                     <div class="text-xs text-gray-500">Fecha: ${escapeHtml(data.fechaCorta)}</div>
                 </div>
                 <div class="text-center flex-1">
@@ -333,6 +358,9 @@ const fields = {
     serviciosExcluidos: document.getElementById('serviciosExcluidos'),
     propiedadItems: document.getElementById('propiedadItems'),
     nombreResponsable: document.getElementById('nombreResponsable'),
+    cargoFirmante: document.getElementById('cargoFirmante'),
+    informacionCubierta: document.getElementById('informacionCubierta'),
+    proyecto: document.getElementById('proyecto'),
     fechaAcuerdo: document.getElementById('fechaAcuerdo')
 };
 
@@ -359,7 +387,10 @@ function getCurrentData() {
         mesLargoEn: mesLargoEn,
         anoLargo: anoLargo,
         fechaCorta: fechaCorta,
-        nombreResponsable: fields.nombreResponsable.value
+        nombreResponsable: fields.nombreResponsable.value,
+        cargoFirmante: fields.cargoFirmante ? fields.cargoFirmante.value : '',
+        informacionCubierta: fields.informacionCubierta ? fields.informacionCubierta.value : '',
+        proyecto: fields.proyecto ? fields.proyecto.value : ''
     };
 }
 
@@ -391,19 +422,22 @@ function resetToExample() {
     currentLang = 'es';
     translateBtn.innerHTML = '<i class="fas fa-language"></i> Traducir a Inglés';
 
-    fields.proveedor.value = "Soluciones Tecnológicas SRL";
+    fields.proveedor.value = "[Razón social del proveedor]";
     fields.saludo.value = "Ing.";
-    fields.nombreRepresentante.value = "Gustavo Víctor Gilobert";
+    fields.nombreRepresentante.value = "[Nombre y apellido]";
     fields.idTipo.value = "DNI";
-    fields.idNumero.value = "20.112.148";
-    fields.domicilio.value = "Bv. Rivadavia 797";
+    fields.idNumero.value = "[Número]";
+    fields.domicilio.value = "[Domicilio]";
     fields.ciudad.value = "Córdoba";
     fields.pais.value = "Argentina";
     fields.serviciosDesc.value = "Provisión y operación de software (SaaS u On-Premise), soporte técnico, mantenimiento evolutivo, monitoreo y gestión de incidentes.";
     fields.alcanceServicios.value = "Soporte Técnico 24/7\nMesa de ayuda\nAtención remota y presencial\nMantenimiento Evolutivo y Correctivo\nActualizaciones y despliegue de nuevas versiones";
     fields.serviciosExcluidos.value = "Desarrollo de sistemas no contratados\nTareas fuera de alcance sin orden de servicio\nIntervención sobre infraestructura de terceros sin autorización";
-    fields.propiedadItems.value = "sistemas, diseños 2D/3D, desarrollos";
-    fields.nombreResponsable.value = "Germán C. Montalbetti";
+    fields.propiedadItems.value = "[Ítems propios del proveedor, si los hay]";
+    fields.nombreResponsable.value = "[Nombre del gerente que firma]";
+    if (fields.cargoFirmante) fields.cargoFirmante.value = "Gerente de Compras";
+    if (fields.informacionCubierta) fields.informacionCubierta.value = "Planos y modelos CAD 2D/3D, layouts, especificaciones técnicas, ofertas y órdenes de compra";
+    if (fields.proyecto) fields.proyecto.value = "[Cliente / proyecto o servicio]";
     fields.fechaAcuerdo.value = getCurrentDateString();
     updatePreview();
 }
@@ -520,7 +554,7 @@ async function generatePDF() {
             <div style="font-weight: bold; font-size: 1rem; color: #1e3a8a;">PRODISMO SRL</div>
             <div style="font-size: 0.75rem; color: #2c3e50;">NDA · TISAX(AL2) · ISO/IEC 27001:2022</div>
         </div>
-        <div style="margin-top: 3px; font-size: 0.75rem; color: #4b5563;">F612-IT-2 Acuerdo de Confidencialidad y Cláusulas de Seguridad</div>
+        <div style="margin-top: 3px; font-size: 0.75rem; color: #4b5563;">F612-IT-2 Rev. 1 Acuerdo de Confidencialidad y Cláusulas de Seguridad</div>
     `;
     
     // Footer con fecha y hora de generación
