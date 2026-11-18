@@ -62,8 +62,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Separación de
-                            Entornos de Desarrollo</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Separación de Entornos de Desarrollo</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -72,103 +71,66 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 26/2/2025</span>
+                                <span>Última revisión: 18/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.2), ISO 27001:2022 (A.8.31)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Garantizar que los entornos de <strong>desarrollo, pruebas y producción</strong> estén
-                            adecuadamente separados para:
-                        </p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mt-4">
-                            <li>Proteger los datos operativos críticos (ej.: datos financieros en SIP 4.0).</li>
-                            <li>Prevenir modificaciones no controladas en sistemas productivos.</li>
-                        </ul>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
-                            Este procedimiento se alinea con los requisitos de <strong>ISO/IEC 27001:2022</strong>,
-                            <strong>TISAX</strong> y clientes automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir los pasos para evaluar la necesidad de separar entornos, mantener la separación de los entornos de SIP4.0, gestionar los accesos de personas y proveedores y pasar cambios a producción, según la <strong>MC522-IT-1</strong> y el control <strong>5.2.2</strong> de <strong>TISAX</strong>.</p>
                     </section>
 
                     <section id="evaluacion-riesgos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            EVALUACIÓN DE RIESGOS PARA SEPARACIÓN DE ENTORNOS
+                            EVALUACIÓN DE RIESGOS
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">Aplicable a:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>SIP 4.0 (entorno productivo).</li>
-                                <li>Aplicación interna desarrollada (entorno desarrollo/pruebas).</li>
-                                <li>Proveedores externos (acceso a entornos).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Identificación de Activos Críticos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Clasificar datos/sistemas según sensibilidad (ej.: SIP 4.0 = "Crítico").
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Análisis de Riesgos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>¿Qué pasaría si el programador modifica directamente producción? → Riesgo
-                                            alto.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Determinar Necesidad de Separación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>SIP 4.0: Entorno productivo aislado (sin acceso directo del programador).
-                                        </li>
-                                        <li>App interna: Entorno desarrollo/pruebas con datos sintéticos.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=we1454fc34bf24927b7f754949425fa53&csf=1&web=1&e=plpT9z"
-                                        target="_blank" title="M522-IT-2 Matriz Evaluación de Riesgos de Entornos"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-green-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-green-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-green-700 dark:text-green-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-excel text-green-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-green-800 dark:text-white px-2 py-0.5 rounded border border-green-300 dark:border-gray-500">
-                                            M522-IT-2
-                                        </span>
-                                        Matriz Evaluación de Riesgos de Entornos
-                                        <i
-                                            class="fas fa-external-link-alt text-green-400 group-hover:text-green-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Identificar los sistemas con desarrollo o pruebas (propios o de proveedores) y los datos que contienen, con su clasificación (MC132-IT-1)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Evaluar el riesgo de desarrollar o probar sin separación (Bajo, Medio, Alto) y decidir: entornos separados, pruebas en el entorno del proveedor, o pruebas sobre copias o con piloto</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Definir los requisitos del entorno (infraestructura, datos, herramientas, credenciales, usuarios) y verificar que se cumplen</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI / desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-2 (estado y verificación)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Repetir la evaluación ante un sistema o desarrollo nuevo, un cambio de proveedor o de infraestructura, y en la revisión semestral (V-39)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-2 (nueva revisión)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -176,222 +138,262 @@
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            SEGMENTACIÓN DE ENTORNOS
+                            ENTORNOS DE SIP4.0
                         </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Aspecto</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Desarrollo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Pruebas (staging)</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Producción</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Infraestructura</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Máquina virtual propia en Azure, con IP y URL propias</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Máquina virtual propia en Azure (staging.sip4.prodismo.com)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Máquina virtual propia en Azure (sip4.prodismo.com)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Base de datos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Datos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ficticios o de prueba</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ficticios o de prueba</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Datos reales de la operación</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Herramientas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Herramientas de desarrollo permitidas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Lo necesario para probar</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo lo necesario para que el sistema funcione: sin IDE, compiladores, Git ni clientes de base de datos de escritura</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Credenciales</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Propias del entorno</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Propias del entorno (distintas de producción)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Propias del entorno (distintas de desarrollo y pruebas)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Usuarios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desarrollador y usuarios clave con <strong>usuarios de prueba</strong>, distintos de los de producción</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuarios de negocio con permisos por grupo (MC421-IT-1); administradores: Germán Montalbetti y Nicolás Donato</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Verificación de la separación</h3>                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Las tres máquinas virtuales y las tres bases de datos PostgreSQL son distintas (IP, URL y credenciales).</li><li>En el servidor de producción solo está instalado el software necesario para funcionar; se revisa la lista de programas instalados.</li><li>Las bases de desarrollo y staging contienen solo datos de prueba.</li><li>Los usuarios clave tienen usuarios de prueba en staging.</li><li>El resultado se registra en el F151-IT-5 (V-39) y, si algo no se cumple, en el F151-IT-4.</li></ol>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Implementación de controles técnicos y organizativos.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Separación Física/Lógica:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>SIP 4.0 (Producción):</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Servidor Azure con puertos diferenciados en url para entorno de
-                                                    pruebas (:9080) y desarrollo (:8080).</li>
-                                                <li>Credenciales <strong>administrador</strong> solo para Gerencia.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>App Interna (Desarrollo/Pruebas):</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Instancia separada en servidor local o cloud (ej.: GitHub).</li>
-                                                <li>Usar datos falsos.</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Control de Accesos:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li><strong>Programador part-time:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Acceso solo a entorno desarrollo.</li>
-                                                <li>Cero permisos en SIP 4.0.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Proveedor ERP:</strong>
-                                            <ul class="list-circle pl-6 mt-1 space-y-3">
-                                                <li>Acceso a producción supervisado (sesiones grabadas).</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>
-                                    <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
-                                        target="_blank" title="MC522-IT-1 Política de Gestión de Entornos de Desarrollo"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-book text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            MC522-IT-1
-                                        </span>
-                                        Política de Gestión de Entornos de Desarrollo
-                                        <i
-                                            class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <section id="gestion-accesos" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            ACCESOS A LOS ENTORNOS
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Pedir el acceso al entorno indicando persona o proveedor, entorno, nivel (usuario, base de datos, servidor, administrador) y motivo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Responsable del área / IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Aprobar; los accesos a producción con privilegios los aprueba el RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F412-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Crear la cuenta propia del entorno (sin reutilizar credenciales de otro entorno) y registrarla</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT / desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-1 · F421-IT-2 (cuentas privilegiadas)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Quitar el acceso cuando ya no se necesita y cambiar las credenciales compartidas que la persona o el proveedor conocía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">M522-IT-1 · F521-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Accesos de proveedores</h3>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>Enter-Geminus</strong>: el 1/12/2026 se quitan sus accesos a Azure, a las máquinas virtuales, a las bases de datos, a SIP4.0 y a GitHub, y se cambian las contraseñas que conocía. Se registra en el F521-IT-2 y en la M522-IT-1.</li><li><strong>Cubits SRL</strong> (App de Viajes): para un despliegue en producción, el IT Manager habilita la IP que informa el proveedor en el servidor de Donweb, supervisa el despliegue, quita la IP al terminar y registra el cambio en el F521-IT-2.</li><li><strong>Otros proveedores</strong> (por ejemplo, Kolossus): sesión remota por AnyDesk iniciada y supervisada por el IT Manager, solo para el trabajo pedido.</li></ul>
                     </section>
 
                     <section id="gestion-cambios" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            GESTIÓN DE CAMBIOS ENTRE ENTORNOS
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            PASE A PRODUCCIÓN DE SIP4.0
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Movimiento de código/configuraciones desde desarrollo → producción.</li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Desarrollar en el entorno de desarrollo y subir el código a una rama de GitHub</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">GitHub</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Abrir un pull request y desplegar la versión en staging</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">GitHub (pull request)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Probar en staging con usuarios clave y usuarios de prueba; registrar el resultado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Usuarios clave / desarrollador</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F521-IT-2 (pruebas)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Aprobar el pull request y el pase a producción</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">GitHub · F521-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Hacer una copia de seguridad de la base de datos de producción</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Quien despliega</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F521-IT-2 (respaldo)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">6. Desplegar en producción (hasta el 30/11/2026, Enter-Geminus; desde el 1/12/2026, Nicolás Donato)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Quien despliega</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F521-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">7. Verificar el funcionamiento y los requisitos de seguridad (permisos, HTTPS) y cerrar el registro</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desarrollador / RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F521-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4 border border-red-200 dark:border-red-800 mb-6">
+                            <p class="text-red-800 dark:text-red-300 text-sm">No se modifica código ni datos directamente en producción. Si un incidente lo exige, lo autoriza el RSI y se registra en el F521-IT-2 como cambio de emergencia, con la consulta o corrección ejecutada.</p>
                         </div>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Desarrollo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Programador trabaja solo en entorno local.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><strong>Pruebas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Validación en entorno aislado con datos de prueba.</li>
-                                        <li>Aprobación por responsable de área (ej.: Gerente Proyectos).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Despliegue a Producción:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Realizado por personal designado.</li>
-                                        <li>Backup obligatorio pre-despliegue.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
+                    <section id="app-viajes" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            DESPLIEGUES DE LA APP DE VIAJES
+                        </h2>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cubits SRL desarrolla y prueba en su entorno de pruebas, con datos de prueba.</li><li>Cubits pide el despliegue por correo; el IT Manager lo aprueba y acuerda la ventana.</li><li>El IT Manager habilita la IP del proveedor en Donweb, supervisa el despliegue y quita la IP al terminar.</li><li>Se verifica el funcionamiento (inicio de sesión, HTTPS, datos personales protegidos) y se registra en el F521-IT-2.</li></ol>
+                    </section>
+
+                    <section id="automatizaciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            AUTOMATIZACIONES MENORES
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Power Apps: desarrollar y probar con una copia de la lista o del origen de datos, o con datos de prueba; publicar después de probar. El historial de versiones permite volver atrás.</li><li>Macros de Excel o CATIA: probar sobre una copia del archivo, no sobre el original.</li><li>Si la automatización usa información confidencial o afecta a varias áreas, registrar el cambio en el F521-IT-2.</li></ul>
+                    </section>
+
+                    <section id="datos-prueba" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            DATOS DE PRUEBA
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los entornos de desarrollo y staging se cargan con datos ficticios o de prueba.</li><li>No se copian bases de producción a desarrollo o staging. Si fuera imprescindible, se anonimizan antes, lo aprueba el RSI por escrito y se registra en el F521-IT-2.</li><li>Los proveedores no usan datos reales de PRODISMO en sus entornos de pruebas.</li></ul>
                     </section>
 
                     <section id="resumen-documentacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            RESUMEN DE DOCUMENTACIÓN REQUERIDA
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REGISTROS Y DOCUMENTOS
                         </h2>
-
-                        <div class="mb-6 overflow-x-auto">
+<div class="overflow-x-auto mb-6">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Procedimiento</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Documentos Asociados</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Documento / registro</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Uso</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Evaluación de riesgos</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx?d=we1454fc34bf24927b7f754949425fa53&csf=1&web=1&e=plpT9z"
-                                                class="text-green-600 hover:text-green-700 dark:text-green-400">
-                                                <i class="fas fa-file-excel text-green-400 mr-2"></i> M522-IT-2
-                                                Matriz Evaluación de Riesgos de Entornos</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top"><a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-2%20Matriz%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Entornos.xlsx" class="text-green-600 hover:text-green-700 dark:text-green-400"><i class="fas fa-file-excel text-green-400 mr-2"></i>M522-IT-2 Matriz Evaluación de Riesgos de Entornos</a></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Evaluación de riesgos y decisión de separación</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Segmentación</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">
-                                                <i class="fas fa-book text-blue-400 mr-2"></i> MC522-IT-1
-                                                Política de Gestión de Entornos de Desarrollo</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top"><a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-1%20Matriz%20de%20Accesos%20por%20Entorno.xlsx" class="text-green-600 hover:text-green-700 dark:text-green-400"><i class="fas fa-file-excel text-green-400 mr-2"></i>M522-IT-1 Matriz de Accesos por Entorno</a></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Accesos de personas y proveedores a cada entorno</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Gestión de cambios</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <a href="../gestion-cambios/proc-gestion-cambios.html"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">
-                                                <i class="fas fa-gears text-blue-400 mr-2"></i> P521-IT-1
-                                                Procedimiento de Gestión de Cambios</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top"><a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html" class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i class="fas fa-book text-blue-400 mr-2"></i>MC522-IT-1 Política de Gestión de Entornos de Desarrollo</a></td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Requisitos de los entornos</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top"><a href="../gestion-cambios/proc-gestion-cambios.html" class="text-primary-600 hover:text-primary-700 dark:text-primary-400"><i class="fas fa-gears text-blue-400 mr-2"></i>P521-IT-1 Procedimiento de Gestión de Cambios</a> · F521-IT-2 Registro de Cambios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Pases a producción y despliegues de proveedores</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F412-IT-1 Solicitud de Acceso a Sistemas · F421-IT-2 Revisión de cuentas privilegiadas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Alta, baja y revisión de accesos</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">26/2/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            26/2/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">18/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Evaluación de riesgos por sistema; entornos reales de SIP4.0 (tres máquinas virtuales y bases PostgreSQL en Azure; se quita la separación por puertos); verificación de la separación; accesos con F412-IT-1 y M522-IT-1; proveedores (baja de Enter-Geminus, despliegues de Cubits en Donweb, sesiones supervisadas; se quitan las sesiones grabadas); pase a producción con GitHub y aprobación del RSI; App de Viajes; automatizaciones menores; datos de prueba; se quita la aplicación interna (fuera del alcance) y se corrige la fecha de la Rev. 1 (26/2/2026).</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -427,15 +429,27 @@
                                 EVALUACIÓN DE RIESGOS</a>
                             <a href="#segmentacion-entornos"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                SEGMENTACIÓN DE ENTORNOS</a>
-                            <a href="#gestion-cambios"
+                                ENTORNOS DE SIP4.0</a>
+                            <a href="#gestion-accesos"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                GESTIÓN DE CAMBIOS</a>
-                            <a href="#resumen-documentacion"
+                                ACCESOS</a>
+                            <a href="#gestion-cambios"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                RESUMEN DOCUMENTACIÓN</a>
-                            <a href="#revisiones-documento"
+                                PASE A PRODUCCIÓN</a>
+                            <a href="#app-viajes"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                APP DE VIAJES</a>
+                            <a href="#automatizaciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                AUTOMATIZACIONES MENORES</a>
+                            <a href="#datos-prueba"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DATOS DE PRUEBA</a>
+                            <a href="#resumen-documentacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REGISTROS Y DOCUMENTOS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -477,6 +491,16 @@
                                 </div>
                                 <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
                             </a>
+                            <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M522-IT-1%20Matriz%20de%20Accesos%20por%20Entorno.xlsx"
+                                title="M522-IT-1 Matriz de Accesos por Entorno"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">M522-IT-1
+                                        Matriz de Accesos por Entorno</span>
+                                </div>
+                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                            </a>
                             <a href="../../documentacion/gestion-entornos-desarrollo/gestion-entornos-desarrollo.html"
                                 title="MC522-IT-1 Política de Gestión de Entornos de Desarrollo"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
@@ -504,7 +528,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -520,11 +544,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">26/2/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">18/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">26/2/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">18/11/2027</span>
                             </div>
                         </div>
                     </div>

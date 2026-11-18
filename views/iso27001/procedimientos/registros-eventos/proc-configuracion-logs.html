@@ -61,8 +61,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Configuración
-                            de Logs</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Configuración de Logs</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -71,509 +70,66 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 5/3/2026</span>
+                                <span>Última revisión: 18/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2 – Reemplazado</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.4), ISO 27001:2022 (A.8.15)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
-                    <section id="objetivo" class="mb-12 scroll-mt-20">
+                    <section id="reemplazado" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
-                            OBJETIVO
+                            DOCUMENTO REEMPLAZADO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer el proceso sistemático para la implementación, configuración y mantenimiento de
-                            la generación de registros (logs) en todos los sistemas de información, asegurando el
-                            cumplimiento de los requisitos definidos en la <strong><i
-                                    class="fas fa-book text-primary-600 dark:text-primary-400 mr-1"></i> <a
-                                    href="../../documentacion/retencion-eliminacion-logs/retencion-eliminacion-logs.html"
-                                    title="MC524-IT-2 Política de Retención de Logs"
-                                    class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC524-IT-2
-                                    Política de Retención de Logs</a></strong> y la norma <strong>ISO/IEC
-                                27001:2022</strong>, así como con los requisitos de evidencia del marco
-                            <strong>TISAX</strong> y clientes automotrices.
-                        </p>
-                    </section>
-
-                    <section id="alcance" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            ALCANCE
-                        </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Este procedimiento aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Todos los sistemas nuevos que se incorporen a la infraestructura de IT</li>
-                            <li>Sistemas existentes que requieran actualización de configuración de logs</li>
-                            <li>Plataformas: Servidores Windows/Linux, ERP SIP 4.0, aplicaciones internas, dispositivos
-                                de red, servicios en la nube</li>
-                            <li>Personal: Administradores de sistemas, desarrolladores, equipo de seguridad</li>
-                        </ul>
-                    </section>
-
-                    <section id="definiciones" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
-                            DEFINICIONES
-                        </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>Syslog:</strong> Protocolo estándar para el envío de mensajes de log</li>
-                            <li><strong>WEF (Windows Event Forwarding):</strong> Tecnología para centralizar logs de
-                                Windows</li>
-                            <li><strong>Agente de Log:</strong> Software instalado en sistemas para enviar logs al SIEM
-                            </li>
-                            <li><strong>Nivel de Log:</strong> Grado de detalle de la información registrada (DEBUG,
-                                INFO, WARN, ERROR)</li>
-                        </ul>
-                    </section>
-
-                    <section id="requisitos-minimos" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            REQUISITOS MÍNIMOS DE CONFIGURACIÓN
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.1. Configuración
-                                General para Todos los Sistemas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Formato de timestamp: <b>YYYY-MM-DD HH:MM:SS TIMEZONE</b></li>
-                                <li>Codificación de caracteres: <b>UTF-8</b></li>
-                                <li>Rotación de logs: Implementar para evitar llenado de discos. Sobreescribir eventos si es necesario (Los anteriores primero)</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">4.2. Niveles de Log
-                                Requeridos</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Tipo de Sistema</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Nivel Mínimo</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Eventos Críticos a Registrar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Servidores Críticos</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-blue-700 dark:text-blue-300 text-center">
-                                                INFO</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Autenticación, cambios de configuración, errores del sistema</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                ERP SIP 4.0</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-blue-700 dark:text-blue-300 text-center">
-                                                INFO</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Transacciones
-                                                financieras, acceso a datos sensibles, cambios de permisos</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Aplicaciones Internas</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-red-700 dark:text-red-300 text-center">
-                                                WARN</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Excepciones
-                                                de seguridad, accesos no autorizados, errores de negocio</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Dispositivos de Red</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-blue-700 dark:text-blue-300 text-center">
-                                                INFO</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cambios de
-                                                configuración, intentos de acceso, eventos de seguridad</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="procedimiento-configuracion" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            PROCEDIMIENTO DE CONFIGURACIÓN
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.1. Fase 1:
-                                Planificación y Diseño</h3>
-                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-3">Actividades:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Identificar sistemas sujetos a configuración de logging</li>
-                                <li>Definir eventos específicos a registrar según criticidad del sistema</li>
-                                <li>Establecer formatos de log estándar</li>
-                                <li>Arquitectura por defecto <strong>WAZUH</strong></li>
-                            </ol>
-                            <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Entregables:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Matriz de eventos a registrar por sistema</li>
-                                <li>Diagrama de arquitectura de logging</li>
-                                <li>Plan de implementación</li>
-                            </ul>
-                        </div>
-<!-- 148.227.121.179/32 -->
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.2. Fase 2:
-                                Implementación Técnica</h3>
-
-                            <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.1. Servidores Windows y Dispositivos de Red (imagen 1)
-                                </h4>
-                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                    <img src="../../../../images/monitorizacion-red/wazuh_logs_0.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.2. Servidores Windows y Dispositivos de Red (imagen 2)
-                                </h4>
-                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                    <img src="../../../../images/monitorizacion-red/wazuh_logs_1.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <h4 class="font-semibold text-gray-900 dark:text-white mb-2">5.2.3. Visor de Eventos de Windows (para endpoints fuera de Prodismo)
-                                </h4>
-                                <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                    <img src="../../../../images/monitorizacion-red/Visor_de_eventos_1.png.jpg" alt="Configuración de logs en Visor de Eventos en Windows" class="w-full h-auto rounded-lg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">5.3. Fase 3:
-                                Verificación y Validación</h3>
-                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-3">Actividades:</p>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Generar eventos de prueba para verificar registro</li>
-                                <li>Validar recepción en <strong>WAZUH</strong></li>
-                                <li>Verificar formato y contenido de logs</li>
-                                <li>Documentar configuración implementada</li>
-                            </ol>
-                            <p class="text-gray-700 dark:text-gray-300 font-medium mt-3 mb-3">Criterios de Aceptación:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Logs recibidos en <strong>WAZUH</strong> dentro de los 3 minutos del evento</li>
-                                <li>Formato de timestamp correcto</li>
-                                <li>Información mínima requerida presente</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="plantillas-configuracion" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PLANTILLAS DE CONFIGURACIÓN ESTÁNDAR
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.1. Configuración estándar de <strong>WAZUH</strong></h3>
-                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto">
-                                <img src="../../../../images/monitorizacion-red/wazuh_logs_2.png" alt="Configuración de logs en Wazuh" class="w-full h-auto rounded-lg">
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">6.2. Plantilla para
-                                Aplicaciones Web</h3>
-                            <div class="p-3 bg-gray-50 rounded-lg dark:bg-gray-800 my-3 text-center overflow-x-auto">
-                                <img src="../../../../images/monitorizacion-red/Session_plantilla_1.png.jpg" alt="MS Authenticator"
-                                    title="Configuración de logs en App Interna" class="inline w-86 h-auto m-2 rounded-lg">
-
-                                <img src="../../../../images/monitorizacion-red/Session_plantilla_2.png.jpg" alt="Configuración de logs en App Interna"
-                                    title="Configuración de logs en App Interna" class="inline w-86 h-auto m-2 rounded-lg">
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="monitoreo-mantenimiento" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            MONITOREO Y MANTENIMIENTO
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.1. Verificaciones
-                                Periódicas</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Actividad</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Frecuencia</th>
-                                            <th
-                                                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Responsable</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Verificación de logs activos</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Diaria</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Revisión de configuración</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Trimestral</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                Administradores de sistemas</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                                Actualización de plantillas</td>
-                                            <td
-                                                class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                                Anual</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">RSI</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">7.2. Indicadores de
-                                Performance</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Tasa de generación de logs: Volumen normal por sistema</li>
-                                <li>Tiempo de entrega: Máximo 3 minutos desde evento a <strong>WAZUH</strong></li>
-                                <li>Cobertura de sistemas: Porcentaje de sistemas con logging configurado</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="gestion-incidentes" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            GESTIÓN DE INCIDENTES DE LOGGING
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.1. Detección de
-                                Problemas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Falta de logs: Alertar cuando un sistema deje de enviar logs</li>
-                                <li>Formato incorrecto: Detectar logs que no cumplan estándares</li>
-                                <li>Volumen anómalo: Alertar por picos o caídas significativas</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">8.2. Procedimiento de
-                                Corrección</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Detectar anomalía en generación/recepción de logs</li>
-                                <li>Investigar causa raíz (configuración, red, sistema)</li>
-                                <li>Aplicar corrección según procedimientos establecidos</li>
-                                <li>Verificar restauración del servicio de logging</li>
-                                <li>Documentar incidente y solución aplicada</li>
-                            </ol>
-                        </div>
-                    </section>
-
-                    <section id="registros-evidencias" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            REGISTROS Y EVIDENCIAS 
-                            <span
-                                    class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full ml-2"><i class="fas fa-circle-pause text-red-400"></i> TO BE DONE</span>
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.1. Documentación
-                                Requerida</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Formulario de Configuración de Logs
-                                    <a href="#" target="_blank" title="F524-IT-1 Formulario de Configuración de Logs"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F524-IT-1
-                                        </span>
-                                        Formulario de Configuración de Logs
-                                    </a>
-                                </li>
-                                <li>Registro de Verificación
-                                    <a href="#" target="_blank" title="F524-IT-2 Registro de Verificación"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F524-IT-2
-                                        </span>
-                                        Registro de Verificación
-                                    </a>
-                                </li>
-                                <li>Informe de Incidencias
-                                    <a href="https://forms.office.com/r/eryzXy34gc" target="_blank" title="F161-IT-1 Formulario de Reporte de Eventos por Departamento"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F161-IT-1
-                                        </span>
-                                        Formulario de Reporte de Eventos por Departamento
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">9.2. Retención de
-                                Evidencias</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Configuraciones de logging: 36 meses</li>
-                                <li>Registros de verificación: 24 meses</li>
-                                <li>Informes de incidencias: 12 meses después del cierre</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="revision-auditoria" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            REVISIÓN Y AUDITORÍA
-                        </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.1. Revisiones
-                                Periódicas</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Este procedimiento será revisado anualmente por el RSI</li>
-                                <li>Se actualizarán las plantillas según cambios tecnológicos</li>
-                                <li>Se incorporarán lecciones aprendidas de incidentes</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.2. Auditorías de
-                                Cumplimiento</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Verificación técnica mensual de configuraciones activas</li>
-                                <li>Auditoría interna semestral del proceso completo</li>
-                                <li>Inclusión en evaluaciones <strong>TISAX</strong> y auditorías <strong>ISO
-                                        27001</strong></li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">10.3. Métricas de
-                                Control</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Porcentaje de sistemas con logging configurado correctamente</li>
-                                <li>Tiempo promedio de detección de fallos en logging</li>
-                                <li>Número de incidentes relacionados con falta de logs</li>
-                            </ul>
+                        <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-4 border border-red-200 dark:border-red-800 mb-6">
+                            <p class="text-red-800 dark:text-red-300 text-sm">Desde el 18/11/2026 este documento queda <strong>reemplazado</strong> por <a href="proc-registros-eventos.html" class="underline"><strong>P524-IT-1 Procedimiento de Gestión de Registros de Eventos</strong> (Rev. 2)</a>. Se conserva solo como referencia histórica.</p>
                         </div>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">5/3/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            5/3/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">18/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Reemplazado por el P524-IT-1 Rev. 2, que unifica la configuración y la gestión de registros de eventos.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
@@ -601,38 +157,11 @@
                             Tabla de Contenidos
                         </h3>
                         <nav class="space-y-2">
-                            <a href="#objetivo"
+                            <a href="#reemplazado"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
-                                OBJETIVO</a>
-                            <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                ALCANCE</a>
-                            <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
-                                DEFINICIONES</a>
-                            <a href="#requisitos-minimos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                REQUISITOS MÍNIMOS DE CONFIGURACIÓN</a>
-                            <a href="#procedimiento-configuracion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                PROCEDIMIENTO DE CONFIGURACIÓN</a>
-                            <a href="#plantillas-configuracion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PLANTILLAS DE CONFIGURACIÓN ESTÁNDAR</a>
-                            <a href="#monitoreo-mantenimiento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                MONITOREO Y MANTENIMIENTO</a>
-                            <a href="#gestion-incidentes"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                GESTIÓN DE INCIDENTES DE LOGGING</a>
-                            <a href="#registros-evidencias"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
-                                REGISTROS Y EVIDENCIAS</a>
-                            <a href="#revision-auditoria"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
-                                REVISIÓN Y AUDITORÍA</a>
+                                DOCUMENTO REEMPLAZADO</a>
                             <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -664,41 +193,21 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="../../documentacion/gestion-logs/gestion-logs.html"
+                            <a href="proc-registros-eventos.html" title="P524-IT-1 Procedimiento de Gestión de Registros de Eventos"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC524-IT-2:
-                                        Política de Retención de Logs</span>
+                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P524-IT-1 Procedimiento de Gestión de Registros de Eventos</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
-                            <a href="#"
+                            <a href="../../documentacion/gestion-logs/gestion-logs.html" title="MC524-IT-1 Política de Gestión, Retención y Protección de Registros de Eventos"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F524-IT-1:
-                                        Formulario de Configuración de Logs</span>
+                                    <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC524-IT-1 Política de Gestión, Retención y Protección de Registros de Eventos</span>
                                 </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F524-IT-2:
-                                        Registro de Verificación</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="#"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F524-IT-3:
-                                        Informe de Incidencias</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
                         </div>
                     </div>
@@ -713,15 +222,15 @@
                         <div class="space-y-3 text-sm">
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Código:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">P524-2</span>
+                                <span class="font-medium text-gray-900 dark:text-white">P524-IT-2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2 (reemplazado)</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
-                                <span class="font-medium text-green-600 dark:text-green-400">Vigente</span>
+                                <span class="font-medium text-red-600 dark:text-red-400">Reemplazado</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
@@ -733,11 +242,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">5/3/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">18/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">5/3/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">—</span>
                             </div>
                         </div>
                     </div>
