@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Procedimiento de Gestión de Vulnerabilidades">
+<html lang="es" data-page-subtitle="Procedimiento de Gestión de Vulnerabilidades y Parches">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="Prodismo - Procedimiento de Gestión de Vulnerabilidades">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Gestión de Vulnerabilidades - Prodismo SRL</title>
+    <title>Gestión de Vulnerabilidades y Parches - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,14 +46,14 @@
             <main class="flex-1 max-w-4xl mx-auto">
                 <!-- Navigation Arrows -->
                 <div class="flex justify-between items-center mb-8">
-                    <a href="../registros-eventos/proc-configuracion-logs.html"
+                    <a href="../registros-eventos/proc-registros-eventos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Configuración de Logs</span>
+                        <span>Anterior: Gestión de Registros de Eventos</span>
                     </a>
-                    <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html"
+                    <a href="../gestion-auditoria/proc-gestion-auditoria.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Aplicación de Parches</span>
+                        <span>Siguiente: Auditoría de Sistemas IT</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -61,8 +61,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de
-                            Vulnerabilidades</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Procedimiento de Gestión de Vulnerabilidades y Parches</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -71,424 +70,245 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 6/3/2026</span>
+                                <span>Última revisión: 19/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.5), ISO 27001:2022 (A.8.8)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer un proceso sistemático para identificar, evaluar y corregir vulnerabilidades en
-                            sistemas IT (ERP SIP 4.0, aplicaciones internas, redes), minimizando riesgos de
-                            ciberseguridad, en cumplimiento con <strong>ISO/IEC 27001:2022</strong>,
-                            <strong>TISAX</strong> y clientes automotrices.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Describir los pasos para identificar, priorizar y tratar vulnerabilidades, aplicar y verificar parches y registrar excepciones según la <strong>MC525-IT-1</strong> y el control <strong>5.2.5</strong> de <strong>TISAX</strong>. Unifica el P525-IT-2 Procedimiento de Aplicación de Parches.</p>
+                    </section>
+
+                    <section id="inventario" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
+                            INVENTARIO DE SISTEMAS
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Mantener el <strong>F525-IT-1</strong> con cada sistema, su responsable de actualización, la fuente de avisos de seguridad, el método de actualización y cómo se detectan sus vulnerabilidades.</li><li>Los programas de las PC se controlan en el <strong>F134-IT-1</strong>; al aprobar uno nuevo, definir quién lo actualiza.</li><li>Al incorporar un sistema o un proveedor, agregarlo al F525-IT-1 antes de ponerlo en uso.</li></ul>
                     </section>
 
                     <section id="identificacion-vulnerabilidades" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
-                            IDENTIFICACIÓN DE VULNERABILIDADES
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                            IDENTIFICACIÓN
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">Sistemas críticos:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>ERP SIP 4.0 (versiones).</li>
-                                <li>Aplicaciones internas (dependencias de código).</li>
-                                <li>Infraestructura (servidores, firewalls).</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Fuentes de información:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Bases de datos públicas (NVD, CVE).</li>
-                                        <li>Alertas de proveedores (ej.: notificaciones de parches para SIP 4.0).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Herramientas:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Escaneos automáticos mensuales con OpenVAS o Nessus.</li>
-                                        <li>Revisión manual de dependencias en código (ej.: npm audit para app interna).
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Listado de activos a escanear
-                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v" target="_blank" title="F525-IT-1 Inventario de Sistemas"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-list text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F525-IT-1
-                                        </span>
-                                        Inventario de Sistemas
-                                    </a>
-                                </li>
-                                <li>Resultados de vulnerabilidades detectadas
-                                    <a href="#" target="_blank" title="F525-IT-2 Reporte Escaneo de Vulnerabilidades"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            F525-IT-2
-                                        </span>
-                                        Reporte Escaneo de Vulnerabilidades
-                                    </a>
-                                </li>
-                            </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Actividad</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Atender las alertas de vulnerabilidades críticas de Wazuh</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al recibirlas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Revisar el tablero de vulnerabilidades de Wazuh (críticas y altas, por equipo y por programa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semanal</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Leer el boletín de seguridad de Microsoft (segundo martes de cada mes) y los avisos de proveedores</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Mensual / al recibirlos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari / Germán Montalbetti</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cargar los hallazgos del pentest externo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Al recibir el informe</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
                     <section id="evaluacion-priorizacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             EVALUACIÓN Y PRIORIZACIÓN
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Clasificar vulnerabilidades según impacto y urgencia.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Criticidad:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Usar CVSS v3.1 (ej.: puntaje ≥7.0 = Crítico).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Contexto empresarial:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>¿Afecta a datos financieros (SIP 4.0)?</li>
-                                        <li>¿Es explotable remotamente?</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Matriz de decisión:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Críticas: Parchear en ≤72 horas.</li>
-                                        <li>Medias: Planificar en ≤2 semanas.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Matriz CVSS vs. sistemas afectados
-                                    <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi" target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-book text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            M525-IT-1
-                                        </span>
-                                        Matriz de Priorización CVSS
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Tomar el CVSS que informa Wazuh o el NVD y ajustar la prioridad con la <strong>M525-IT-1</strong>: exposición a Internet, información confidencial, explotación activa (lista KEV de CISA), importancia del sistema.</li><li>Definir el plazo según la MC525-IT-1 §7 (72 h, 7, 30 o 90 días, o próximo ciclo).</li><li>Registrar en el <strong>F525-IT-2</strong> las vulnerabilidades urgentes, críticas y altas una por una; las medias y bajas se agrupan por programa.</li></ol>                        <p class="text-gray-700 dark:text-gray-300 mb-4">Calculadora y ejemplo de puntuación:</p><div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 my-3"><a href="https://www.first.org/cvss/calculator/4.0" target="_blank" class="text-primary-600 dark:text-primary-400 font-semibold"><img src="../../../../images/iso27001/Calculator_CVSS4-0.png" class="inline h-8 mr-2 rounded" alt="CVSS 4.0">Calculadora CVSS 4.0</a></div><div class="bg-blue-50 rounded-lg dark:bg-blue-900/20 p-4 border-l-4 border-blue-400"><img src="../../../../images/iso27001/Img_Calculator_CVSS4-0.png" alt="Ejemplo de puntuación CVSS" class="w-full h-auto"></div>
                     </section>
 
                     <section id="mitigacion-correccion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
-                            MITIGACIÓN/CORRECCIÓN
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
+                            APLICACIÓN DE PARCHES
                         </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Paso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsable</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1. Planificar: si afecta a servidores, SIP4.0 o firewall, registrar el cambio según P521-IT-1; avisar a los usuarios si hay reinicios o cortes</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F521-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2. Probar: grupo piloto de IT (2 días hábiles) para Windows y programas; snapshot o backup antes de servidores; staging para SIP4.0</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari / Nicolás Donato</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F525-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3. Instalar en el resto de los equipos dentro del plazo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F525-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4. Verificar: la vulnerabilidad deja de figurar en Wazuh o la versión instalada es la corregida; revisar que los servicios funcionen</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F525-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">5. Si el parche falla: volver atrás (desinstalar la actualización, restaurar el snapshot o la versión anterior) y registrar el problema</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F525-IT-2 · F162-IT-1 si hay incidente</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">6. Cerrar la vulnerabilidad en el F525-IT-2 con fecha y evidencia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F525-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Ciclo mensual de Windows</h3>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Windows Update está en automático. Después del segundo martes, IT verifica que los equipos del grupo piloto instalaron el parche acumulativo y no tienen problemas.</li><li>A los 7 días, IT revisa en Wazuh los equipos sin el parche del mes y pide al usuario que reinicie; si no lo hace en 2 días hábiles, IT reinicia el equipo.</li><li>La gestión centralizada con Intune para los equipos de usuarios Business Premium está en evaluación (I525-IT-1, OBS-2026-12).</li></ul>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Vulnerabilidades urgentes (72 horas)</h3>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Avisar al RSI; si no hay parche, aplicar una mitigación el mismo día (bloquear en el firewall, aislar el equipo, desinstalar el programa).</li><li>Instalar el parche en todos los equipos afectados, aunque no haya terminado la prueba piloto completa, y verificar.</li></ul>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Resolución de vulnerabilidades priorizadas.</li>
-                            </ul>
-                        </div>
+                    <section id="proveedores" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
+                            SISTEMAS ADMINISTRADOS POR PROVEEDORES
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cada 6 meses, pedir por correo a Armanet (firmware del MikroTik y switches), Donweb (servidor de la App de Viajes) y Cubits SRL (aplicación) la versión instalada y las actualizaciones aplicadas; guardar la respuesta en el F525-IT-2.</li><li>Ante una vulnerabilidad urgente publicada para esos sistemas, pedir la confirmación de la corrección dentro del plazo.</li><li>Máquinas virtuales Linux de SIP4.0: verificar el modo de parcheo en Azure (parcheo automático de Azure o Azure Update Manager) y revisar cada mes las actualizaciones pendientes [Confirmar].</li></ul>
+                    </section>
 
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Parches:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Aplicar updates de proveedores.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Workarounds:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Si no hay parche: Aislar sistema o deshabilitar funciones vulnerables.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Validación:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Re-escanear tras correcciones.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Flujo de actualizaciones
-                                    <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html" target="_blank"
-                                        title="P525-IT-4 Matriz de Priorización CVSS"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-gears text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            P525-IT-4
-                                        </span>
-                                        Procedimiento de Aplicación de Parches
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <section id="excepciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                            EXCEPCIONES Y RIESGO ACEPTADO
+                        </h2>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Si una vulnerabilidad no se puede corregir en el plazo, registrar en el F525-IT-2: motivo, medidas de mitigación, nueva fecha y aprobación del RSI.</li><li>Un riesgo aceptado se revisa como máximo cada 6 meses; los de sistemas sin soporte se informan a la Alta Dirección.</li></ul>
                     </section>
 
                     <section id="monitorizacion-continua" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            MONITORIZACIÓN CONTINUA
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
+                            VERIFICACIÓN MENSUAL
                         </h2>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">A. Alcance:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Detección proactiva de nuevas vulnerabilidades.</li>
-                            </ul>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">B. Proceso:</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Suscripciones:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Alertas RSS de CVE para tecnologías usadas (ej.: Windows Server).</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Auditorías trimestrales:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Revisión manual de configuraciones (ej.: puertos abiertos en firewall).</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">C. Documentos de
-                                Referencia:</h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Frecuencia y responsables
-                                    <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
-                                        target="_blank" title="MC525-IT-1 Monitorización de Vulnerabilidades"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2 my-1">
-                                        <i class="fas fa-book text-blue-400 mr-2"></i>
-                                        <span
-                                            class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                            MC525-IT-1
-                                        </span>
-                                        Monitorización de Vulnerabilidades
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Exportar de Wazuh la cantidad de vulnerabilidades críticas y altas abiertas por sistema.</li><li>Registrar en la hoja "Resumen mensual" del F525-IT-2: abiertas, corregidas en el mes, vencidas, excepciones vigentes y equipos sin el parche de Windows del mes.</li><li>El RSI revisa y firma el resumen (V-03).</li></ol>
                     </section>
 
                     <section id="resumen-documentacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            RESUMEN DE DOCUMENTACIÓN REQUERIDA
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
+                            REGISTROS
                         </h2>
-
-                        <div class="mb-6 overflow-x-auto">
+<div class="overflow-x-auto mb-6">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Procedimiento</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Documentos Asociados</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Retención</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Identificación</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <i class="fas fa-list text-blue-400 mr-2"></i>
-                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v"
-                                                target="_blank" title="F525-IT-1 Inventario de Sistemas"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F525-IT-1
-                                                Inventario de Sistemas</a><br>
-                                            <i class="fas fa-file-alt text-blue-400 mr-2"></i>
-                                            <a href="#" target="_blank" title="F525-IT-2 Reporte Escaneo de Vulnerabilidades"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">F525-IT-2
-                                                Reporte Escaneo de Vulnerabilidades</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F525-IT-1 Inventario de Sistemas</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Vigente y revisiones anteriores</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Evaluación</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <i class="fas fa-file-excel text-green-400 mr-2"></i>
-                                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi"
-                                                target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
-                                                class="text-green-600 hover:text-green-700 dark:text-green-400">M525-IT-1
-                                                Matriz de Priorización CVSS</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">F525-IT-2 Registro de Vulnerabilidades y Parches</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">3 años</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Mitigación</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <i class="fas fa-gears text-blue-400 mr-2"></i>
-                                            <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html"
-                                                title="P525-IT-4 Procedimiento de Aplicación de Parches"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">P525-IT-4
-                                                Procedimiento de Aplicación de Parches</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            Monitorización</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                            <i class="fas fa-book text-blue-400 mr-2"></i>
-                                            <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html"
-                                                title="MC525-IT-1 Monitorización de Vulnerabilidades"
-                                                class="text-primary-600 hover:text-primary-700 dark:text-primary-400">MC525-IT-1
-                                                Monitorización de Vulnerabilidades</a>
-                                        </td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Respuestas de proveedores y exportaciones de Wazuh</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">3 años</td>
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
-
-                        <div class="mb-6">
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Recomendaciones para
-                                Implementación Eficiente</h3>
-                            <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-4">
-                                <li><strong>Herramientas de bajo costo:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>OpenVAS (gratuito) para escaneos automatizados.</li>
-                                        <li>GitHub Dependabot para alertas en código de la app interna.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Proveedores:</strong>
-                                    <ul class="list-disc pl-6 mt-2 space-y-3">
-                                        <li>Exigir SLA de parches para SIP 4.0 en contratos.</li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
+                        </div>                        <p class="text-gray-700 dark:text-gray-300 mb-4">El formulario F525-IT-3 Plantilla de Aceptación de Riesgo queda obsoleto (nunca se usó): las excepciones se registran en el F525-IT-2.</p>
                     </section>
 
                     <section id="revisiones-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
                                     <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-300 dark:text-gray-100">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm text-gray-300 dark:text-gray-100">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">6/3/2026</td>
+                                        <td class="px-4 py-4 text-sm">Revisión completa del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            6/3/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Revisión completa
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">19/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título; unifica el P525-IT-2 (aplicación de parches). Inventario F525-IT-1; identificación con Wazuh, boletín de Microsoft, proveedores y pentest; priorización con plazos únicos; aplicación de parches con prueba, verificación y vuelta atrás; ciclo mensual de Windows; urgencias de 72 h; proveedores; excepciones en el F525-IT-2; verificación mensual. Se quitan OpenVAS/Nessus, npm audit de la aplicación interna, auditorías trimestrales, réplica de pruebas, ventanas de mantenimiento no aplicadas, WSUS, Configuration Manager, Ansible, Satellite, ManageEngine, Ivanti, Azure Update Management, integración con STI, informes trimestrales y el F525-IT-3.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows Bottom -->
                 <div class="flex justify-between items-center mt-8">
-                    <a href="../registros-eventos/proc-configuracion-logs.html"
+                    <a href="../registros-eventos/proc-registros-eventos.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Configuración de Logs</span>
+                        <span>Anterior: Gestión de Registros de Eventos</span>
                     </a>
-                    <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html"
+                    <a href="../gestion-auditoria/proc-gestion-auditoria.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Aplicación de Parches</span>
+                        <span>Siguiente: Auditoría de Sistemas IT</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -507,23 +327,32 @@
                             <a href="#objetivo"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
-                            <a href="#identificacion-vulnerabilidades"
+                            <a href="#inventario"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
-                                IDENTIFICACIÓN DE VULNERABILIDADES</a>
-                            <a href="#evaluacion-priorizacion"
+                                INVENTARIO</a>
+                            <a href="#identificacion-vulnerabilidades"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                IDENTIFICACIÓN</a>
+                            <a href="#evaluacion-priorizacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 EVALUACIÓN Y PRIORIZACIÓN</a>
                             <a href="#mitigacion-correccion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
-                                MITIGACIÓN/CORRECCIÓN</a>
-                            <a href="#monitorizacion-continua"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                MONITORIZACIÓN CONTINUA</a>
-                            <a href="#resumen-documentacion"
+                                APLICACIÓN DE PARCHES</a>
+                            <a href="#proveedores"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                RESUMEN DOCUMENTACIÓN</a>
-                            <a href="#revisiones-documento"
+                                PROVEEDORES</a>
+                            <a href="#excepciones"
                                 class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                EXCEPCIONES</a>
+                            <a href="#monitorizacion-continua"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                VERIFICACIÓN MENSUAL</a>
+                            <a href="#resumen-documentacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                REGISTROS</a>
+                            <a href="#revisiones-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -555,49 +384,43 @@
                             Recursos Relacionados
                         </h3>
                         <div class="space-y-3">
-                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx?d=w4a8d998b74454be99d4d16b93c2e3542&csf=1&web=1&e=GVVm7v"
-                                target="_blank" title="F525-IT-1 Inventario de Sistemas"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-list text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F525-IT-1
-                                        Inventario de Sistemas</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="#" target="_blank" title="F525-IT-2 Reporte Escaneo de Vulnerabilidades"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F525-IT-2 Reporte
-                                        Escaneo de Vulnerabilidades</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx?d=wd8218ff2a718431fa6d1e772c3b1a6b5&csf=1&web=1&e=WbHPyi" target="_blank" title="M525-IT-1 Matriz de Priorización CVSS"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">M525-IT-1 Matriz
-                                        de Priorización CVSS</span>
-                                </div>
-                                <i class="fas fa-external-link-alt text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="../gestion-vulnerabilidades/proc-aplicacion-parches.html" title="P525-IT-2 Procedimiento de Aplicación de Parches"
-                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-gears text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">P525-IT-2
-                                        Procedimiento de Aplicación de Parches</span>
-                                </div>
-                                <i class="fas fa-link text-gray-400 text-xs"></i>
-                            </a>
-                            <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html" title="MC525-IT-1 Monitorización de Vulnerabilidades"
+                            <a href="../../documentacion/gestion-vulnerabilidades/gestion-vulnerabilidades.html" title="MC525-IT-1 Política de Gestión de Vulnerabilidades y Parches"
                                 class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
                                 <div class="flex items-center space-x-3">
                                     <i class="fas fa-book text-primary-600 dark:text-primary-400"></i>
-                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC525-IT-1
-                                        Monitorización de Vulnerabilidades</span>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">MC525-IT-1 Política de Gestión de Vulnerabilidades y Parches</span>
+                                </div>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-1%20Inventario%20de%20Sistemas.xlsx" title="F525-IT-1 Inventario de Sistemas" target="_blank"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F525-IT-1 Inventario de Sistemas</span>
+                                </div>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M525-IT-1%20Matriz%20de%20Priorizacion%20CVSS.xlsx" title="M525-IT-1 Matriz de Priorización CVSS" target="_blank"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">M525-IT-1 Matriz de Priorización CVSS</span>
+                                </div>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F525-IT-2%20Registro%20de%20Vulnerabilidades%20y%20Parches.xlsx" title="F525-IT-2 Registro de Vulnerabilidades y Parches" target="_blank"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-excel text-green-600 dark:text-green-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">F525-IT-2 Registro de Vulnerabilidades y Parches</span>
+                                </div>
+                                <i class="fas fa-link text-gray-400 text-xs"></i>
+                            </a>
+                            <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/I525-IT-1%20Instructivo%20de%20Actualizaciones%20de%20Windows%20con%20Intune.docx" title="I525-IT-1 Instructivo de Actualizaciones de Windows con Intune" target="_blank"
+                                class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors dark:bg-gray-700/50 dark:hover:bg-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-file-word text-blue-600 dark:text-blue-400"></i>
+                                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300">I525-IT-1 Instructivo de Actualizaciones de Windows con Intune</span>
                                 </div>
                                 <i class="fas fa-link text-gray-400 text-xs"></i>
                             </a>
@@ -618,7 +441,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -626,19 +449,19 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Emitido por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Emiliano Ferrari</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Aprobado por:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">Damián Pedrosa</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Germán Montalbetti</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">6/3/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">19/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">6/3/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">19/11/2027</span>
                             </div>
                         </div>
                     </div>

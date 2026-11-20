@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Gestión de Auditorías">
+<html lang="es" data-page-subtitle="Política de Auditoría Técnica de Sistemas y Servicios IT">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="Prodismo - Plan Anual de Auditorías del SGSI">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Gestión de Auditorías del SGSI - Prodismo SRL</title>
+    <title>Auditoría Técnica de Sistemas IT - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,8 +60,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Gestión de Auditorías del SGSI
-                        </h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Auditoría Técnica de Sistemas y Servicios IT</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -70,36 +69,28 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 7/1/2026</span>
+                                <span>Última revisión: 19/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.6), ISO 27001:2022 (A.8.8, A.8.34)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer el programa de auditorías internas y externas para el <strong>Sistema de Gestión
-                                de Seguridad de la Información (SGSI)</strong> de <strong>PRODISMO SRL</strong> para el
-                            año 2026, con el fin de verificar la conformidad, eficacia y mejora continua del SGSI,
-                            cumpliendo con los requisitos de A.5.36 (Cumplimiento de las políticas, normas y estándares
-                            de seguridad de la información), A.8.8 (Gestión de vulnerabilidades técnicas) y A.8.34
-                            (Protección de los sistemas de información durante las pruebas de auditoría) del Anexo A de
-                            la norma <strong>ISO/IEC 27001:2022</strong> y los criterios de evaluación del marco
-                            <strong>TISAX</strong>.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Definir cómo <strong>PRODISMO SRL</strong> verifica técnicamente sus sistemas y servicios IT (escaneos, pruebas de penetración y revisiones de configuración) para detectar situaciones que pongan en riesgo su disponibilidad, confidencialidad o integridad, cómo se planifican sin afectar la operación y cómo se informan y tratan sus resultados. Cumple el control <strong>5.2.6</strong> de <strong>TISAX</strong> (VDA ISA 6) y los controles A.8.8 y A.8.34 de <strong>ISO/IEC 27001:2022</strong>.</p>                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800 mb-6">
+                            <p class="text-blue-800 dark:text-blue-300 text-sm">Las auditorías del SGSI (cumplimiento de políticas en toda la organización) se rigen por la <a href="../../documentacion/evaluaciones/auditorias-internas.html" class="underline">MC151-IT-1</a> (internas) y la <a href="../../documentacion/evaluaciones/auditoria-externa.html" class="underline">MC152-IT-1</a> (externas e independientes). Esta política cubre solo las auditorías técnicas de sistemas y servicios.</p>
+                        </div>
                     </section>
 
                     <section id="alcance" class="mb-12 scroll-mt-20">
@@ -108,13 +99,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Este plan aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Todos los procesos del SGSI incluidos en el alcance de certificación</li>
-                            <li>Todos los controles del Anexo A de <strong>ISO/IEC 27001:2022</strong> implementados</li>
-                            <li>Todos los dominios <strong>TISAX</strong> evaluados según el alcance definido</li>
-                            <li>Todas las áreas y personal involucrado en el <strong>SGSI</strong></li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Red y perímetro: firewall MikroTik (Armanet), IP públicas de Airsat y Batcom, VPN, VLAN y Wi-Fi.</li><li>Servidores Windows (DC1, DC2), PC y notebooks, servidores de Wazuh y Zabbix.</li><li>ERP SIP4.0 (Azure) y App de Viajes (Donweb, Cubits SRL).</li><li>Microsoft 365, Entra ID y la configuración de Azure.</li><li>Los sistemas se listan en el F525-IT-1 Inventario de Sistemas.</li></ul>
                     </section>
 
                     <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -123,841 +108,332 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.36, A.8.8, A.8.34</li>
-                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li>Alcance del <strong>SGSI</strong>: <strong>MC111-IT-1</strong> Política de Seguridad de la Información</li>
-                            <li><strong>P121-IT-1</strong> Gestión de la Seguridad de la Información <strong>SGSI</strong></li>
-                            <li><strong>F121-IT-1</strong> Declaración de Aplicabilidad (DoA)</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>ISO/IEC 27001:2022</strong> – A.8.8, A.8.34 · Marco <strong>TISAX</strong> – VDA ISA 6, control 5.2.6</li><li><strong>P526-IT-1</strong> Procedimiento de Auditoría Técnica · <strong>F526-IT-3</strong> Informe de Auditoría Técnica · <strong>I526-IT-1</strong> Instructivo de Escaneo Técnico Interno</li><li><strong>F151-IT-5</strong> Programa de Verificación de Cumplimiento · <strong>F152-IT-1</strong> Revisiones Independientes · <strong>F151-IT-4</strong> No Conformidades · <strong>F525-IT-2</strong> Vulnerabilidades y Parches</li><li><strong>MC151-IT-1</strong> / <strong>P151-IT-1</strong> Auditorías internas y mejora continua · <strong>MC152-IT-1</strong> Auditoría externa · <strong>MC525-IT-1</strong> Vulnerabilidades · <strong>MC521-IT-1</strong> Cambios</li></ul>
+                    </section>
+
+                    <section id="definiciones" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                            <span
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                            DEFINICIONES
+                        </h2>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Término</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Definición</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Auditoría técnica</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Verificación técnica de un sistema o servicio (escaneo, prueba de penetración o revisión de configuración) para detectar debilidades.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Escaneo de vulnerabilidades</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Prueba automática que identifica equipos, puertos, servicios y vulnerabilidades conocidas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Prueba de penetración (pentest)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Prueba en la que un especialista intenta aprovechar las debilidades como lo haría un atacante. En "caja negra" el auditor no recibe información interna.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Carta de autorización</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Documento firmado que fija el alcance, el horario, las pruebas excluidas y los contactos de una prueba técnica.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </section>
 
                     <section id="responsables" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             RESPONSABLES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Alta Dirección:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Aprobar el plan anual de auditorías. Asignar
-                                    los recursos necesarios. Recibir y revisar los informes de auditoría.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Representante de la
-                                    Dirección:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Supervisar la ejecución del plan. Asegurar
-                                    la independencia y objetividad de las auditorías. Revisar y aprobar los informes
-                                    finales.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable de Seguridad de
-                                    la Información (RSI):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Elaborar y mantener el plan anual. Coordinar
-                                    la ejecución de las auditorías. Seguimiento del plan de acciones correctivas.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Auditores Internos:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Ejecutar las auditorías según lo
-                                    planificado. Documentar hallazgos y evidencias. Elaborar informes de auditoría.</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsabilidades</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alta Dirección (Damián Pedrosa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprobar esta política y la contratación de auditorías externas; recibir los resultados.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">IT Manager / RSI (Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Planificar el programa; definir el alcance; autorizar por escrito cada auditoría; firmar las cartas de autorización; revisar los informes; informar a la Dirección.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administrador de IT (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Ejecutar las auditorías internas; monitorear los sistemas durante las pruebas; coordinar con los operadores; elaborar el informe F526-IT-3.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Auditores externos (Telecom – Personal Tech)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Ejecutar las pruebas autorizadas según la carta de autorización y entregar su informe.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Operadores de sistemas (Armanet, Donweb, Cubits SRL, Microsoft)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Ser informados y coordinar cuando se prueban sus sistemas, salvo en pruebas de caja negra (ver §8).</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="criterios-auditoria" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
-                            CRITERIOS DE AUDITORÍA
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.1. Criterios Generales
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Requisitos de <strong>ISO/IEC 27001:2022</strong></li>
-                                    <li>Controles del Anexo A implementados según DoA</li>
-                                    <li>Requisitos específicos <strong>TISAX</strong> según alcance</li>
-                                    <li>Políticas y procedimientos internos del <strong>SGSI</strong></li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">5.2. Enfoque Basado en
-                                    Riesgos</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong class="text-red-600">Alta frecuencia</strong>: Procesos/controles de alto riesgo</li>
-                                    <li><strong class="text-orange-600">Media frecuencia</strong>: Procesos/controles de riesgo medio</li>
-                                    <li><strong class="text-blue-600">Baja frecuencia</strong>: Procesos/controles de bajo riesgo</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="programa-auditorias" class="mb-12 scroll-mt-20">
+                    <section id="requisitos-programa" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PROGRAMA DE AUDITORÍAS
+                            REQUISITOS Y PROGRAMA DE AUDITORÍAS TÉCNICAS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-2">6.1. Auditorías Internas
-                                </h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Sistema/Proceso Auditado</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Tipo Auditoría</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Frecuencia</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Responsable</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Fechas Planificadas</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Herramientas</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión
-                                                    de Riesgos</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Completa
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RSI</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO
-                                                    27005, Matriz de Riesgos</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Controles
-                                                    de Acceso</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Muestreo
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Semestral
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Auditor Interno</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
-                                                    A.5.1-A.8.3</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión
-                                                    de Incidentes</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Completa
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RSI</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Procedimiento Incidentes</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Protección de Activos Críticos</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Muestreo
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Trimestral</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Auditor
-                                                    Interno</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
-                                                    <strong>TISAX</strong> Prototipos
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Cumplimiento Legal</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Completa
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Externo
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
-                                                    RGPD/LOPD</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-orange-50 rounded-lg dark:bg-orange-900/20">
-                                <h3 class="font-bold text-orange-900 dark:text-orange-300 mb-2">6.2. Auditorías a
-                                    Procesos Específicos</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Proceso</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Tipo</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Frecuencia</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Responsable</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Fechas</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Herramientas</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ERP SIP
-                                                    4.0</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Seguridad
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Semestral
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Auditor
-                                                    Interno</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Checklist
-                                                    A.8.1-A.8.3</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Desarrollo Seguro</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Proceso
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RSI</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">OWASP
-                                                    ASVS</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Continuidad del Negocio</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Completa
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Externo
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ISO 22301
-                                                    Checklist</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Proveedores Críticos</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Muestreo
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Anual
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RSI</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Cuestionario <strong>TISAX</strong></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20">
-                                <h3 class="font-bold text-purple-900 dark:text-purple-300 mb-2">6.3. Auditorías Externas
-                                </h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Auditoría</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Tipo</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Organismo</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Fechas Planificadas</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Alcance</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Surveillance 1</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Certificación</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    [Entidad
-                                                    Certificadora]</td>
-                                                <td
-                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra
-                                                    controles ISO 27001</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    <strong>TISAX</strong> Assessment
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Evaluación / Certificación</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    [Proveedor <strong>TISAX</strong>]</td>
-                                                <td
-                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Nivel
-                                                    Alto</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Surveillance 2</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Certificación</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    [Entidad
-                                                    Certificadora]</td>
-                                                <td
-                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Muestra
-                                                    controles ISO 27001</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Recertificación</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Certificación</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    [Entidad
-                                                    Certificadora]</td>
-                                                <td
-                                                    class="px-6 py-4 text-center text-sm text-purple-700 dark:text-purple-300">
-                                                    <a href="#"><i class="fa-solid fa-calendar-days fa-lg"
-                                                            title="Ver fechas"></i></a>
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Completo
-                                                    ISO 27001</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Las auditorías técnicas se planifican en el programa <strong>F151-IT-5</strong> y cubren tanto el acceso desde Internet como desde la red interna:</p><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Auditoría técnica</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Realiza</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Desde</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Verificación (F151-IT-5)</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Prueba de penetración externa (caja negra)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Telecom – Personal Tech</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Internet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-10</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">En ejecución (11/2026): sip4.prodismo.com y 4 IP públicas; informe preliminar ~30/11/2026</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Prueba de penetración interna</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Telecom – Personal Tech</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red interna</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual [Propuesta]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-10</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">A contratar para 2027</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Escaneo técnico interno: equipos, puertos, recursos compartidos, segmentación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari (nmap; Greenbone/OpenVAS [Propuesta])</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red interna</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-42</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Primera antes del 11/12/2026 [Confirmar]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Detección continua de vulnerabilidades</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Wazuh (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red interna (agentes)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Continua; resumen mensual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-03</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Revisión de firewall, puertos publicados y Wi-Fi</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari con Armanet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Configuración</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-43</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Primera antes del 11/12/2026 [Confirmar]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Revisión de configuración de Microsoft 365 (Secure Score) y Azure</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari / Germán Montalbetti</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Configuración</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Semestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-44</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Primera antes del 11/12/2026 [Confirmar]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Configuración de AnyDesk</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Emiliano Ferrari</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Configuración</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según F151-IT-5</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">V-09</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>Personal calificado</strong>: las pruebas externas las hacen proveedores especializados, con evidencia de su experiencia o certificaciones; las internas, el personal de IT con las herramientas autorizadas en el F134-IT-1.</li><li><strong>Herramientas adecuadas</strong>: Wazuh, nmap y, cuando se implemente, Greenbone/OpenVAS para el interno; las del proveedor para el externo.</li><li><strong>Alcance en tiempo</strong>: se define por escrito antes de cada auditoría (carta de autorización o sección de planificación del F526-IT-3).</li></ul>
                     </section>
 
-                    <section id="metodologia-auditoria" class="mb-12 scroll-mt-20">
+                    <section id="riesgos-pruebas" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            METODOLOGÍA DE AUDITORÍA
+                            PLANIFICACIÓN SEGÚN LOS RIESGOS DE LA PRUEBA
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:textgray-300 mb-2">7.1. Enfoque de Auditoría
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>⚙️ Basado en procesos: Evaluación de entradas, actividades, salidas</li>
-                                    <li>🔍 Basado en evidencias: Verificación objetiva de la implementación</li>
-                                    <li>📉 Basado en riesgos: Enfoque en controles de mayor impacto</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.2. Técnicas de Auditoría
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>🧑‍💻 Entrevistas con personal clave</li>
-                                    <li>📚 Revisión documental de políticas y procedimientos</li>
-                                    <li>🏬 Observación de actividades in situ</li>
-                                    <li>📑 Muestreo representativo de evidencias</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Antes de cada prueba se evalúa qué puede afectar: interrupción o lentitud de servicios (SIP4.0, VPN, servidores), bloqueos de cuentas, impresiones no deseadas, alertas.</li><li>No se hacen pruebas de denegación de servicio ni de ingeniería social salvo autorización expresa de la Dirección.</li><li>Las pruebas se hacen en horario laboral, con IT disponible para monitorear (Wazuh, Zabbix) y detenerlas si algo falla; se definen los contactos de emergencia de ambas partes.</li><li>Las cuentas, herramientas o reglas temporales que se habiliten para la prueba se quitan al terminar; los resultados se guardan como información confidencial con acceso restringido.</li></ul>
                     </section>
 
-                    <section id="herramientas-recursos" class="mb-12 scroll-mt-20">
+                    <section id="coordinacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            HERRAMIENTAS Y RECURSOS
+                            COORDINACIÓN CON OPERADORES Y USUARIOS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. Herramientas de
-                                    Auditoría</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>📋 Checklists personalizados por dominio de control</li>
-                                    <li>📃 Planilla de gestión de no conformidades</li>
-                                    <li>📊 Plantillas de informes estandarizadas</li>
-                                    <li>🗂️ Sistema de seguimiento de acciones correctivas</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-grayn-900 dark:text-gray-300 mb-2">8.2. Recursos Necesarios
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>💵 Presupuesto asignado: Presupuesto acorde para auditorías externas</li>
-                                    <li>💪 Días/hombre: 30 días para auditorías internas</li>
-                                    <li>🖥️ Equipos: Laptops, software especializado, accesos a sistemas</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Pruebas internas: aviso previo a todos@prodismo.com con fecha, horario y contacto de IT.</li><li>Pruebas sobre sistemas operados por terceros (Armanet, Donweb, Cubits SRL): se coordinan con el operador antes de la prueba.</li><li>Pruebas de caja negra externas: solo las conocen el RSI y el Administrador de IT; los correos a Armanet y a los proveedores de Internet quedan preparados para enviarse si la prueba causa impacto. Las autorizaciones que el contrato del auditor ponga a cargo de PRODISMO (proveedores de Internet, hosting) se gestionan y registran antes de la prueba [Confirmar].</li></ul>
                     </section>
 
-                    <section id="criterios-calificacion" class="mb-12 scroll-mt-20">
+                    <section id="informe" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            CRITERIOS DE CALIFICACIÓN
+                            INFORME Y COMUNICACIÓN A LA DIRECCIÓN
                         </h2>
-
-                        <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20 border-l-4 border-blue-400">
-                            <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-2">9.1. Niveles de Conformidad</h3>
-                            <div class="overflow-x-auto">
-                                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                    <thead class="bg-gray-50 dark:bg-gray-800">
-                                        <tr>
-                                            <th
-                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Calificación</th>
-                                            <th
-                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Descripción</th>
-                                            <th
-                                                class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                Criterios</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody
-                                        class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-green-700 dark:text-green-400">
-                                                <strong>Conforme</strong></td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cumple
-                                                totalmente con los requisitos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">100%
-                                                evidencia positiva</td>
-                                        </tr>
-                                        <tr>
-                                            <td
-                                                class="px-6 py-4 text-sm font-medium text-yellow-700 dark:text-yellow-400">
-                                                <strong>Conforme con Observaciones</strong></td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Cumple, pero
-                                                con oportunidades de mejora</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300"> &gt;90%
-                                                evidencia positiva</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="px-6 py-4 text-sm font-medium text-red-700 dark:text-red-400"><strong>No
-                                                Conforme</strong></td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">No cumple con
-                                                los requisitos</td>
-                                            <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                &lt;90% evidencia positiva</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Toda auditoría termina en un informe: el del proveedor para las externas y el <strong>F526-IT-3</strong> para las internas, dentro de los 10 días hábiles.</li><li>Los informes se guardan en SharePoint IT con acceso restringido y se referencian en el F151-IT-5 o el F152-IT-1.</li><li>El RSI informa los resultados a la Alta Dirección por correo a Damián Pedrosa o en la reunión de gerentes, y se incluyen en la revisión por la dirección.</li></ul>
                     </section>
 
-                    <section id="seguimiento-reporte" class="mb-12 scroll-mt-20">
+                    <section id="acciones" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            SEGUIMIENTO Y REPORTE
+                            ACCIONES DERIVADAS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.1. Reportes de Auditoría
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Informe preliminar: Dentro de 72 horas después de la auditoría</li>
-                                    <li>Informe final: Dentro de 7 días hábiles</li>
-                                    <li>Presentación a dirección: Reunión semestral de revisión</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.2. Indicadores de
-                                    Desempeño</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Porcentaje de cumplimiento: Objetivo ≥90%</li>
-                                    <li>Tiempo de cierre de NC: Objetivo ≤45 días</li>
-                                    <li>Satisfacción del auditado: Encuesta post-auditoría</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="gestion-no-conformidades" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
-                            GESTIÓN DE NO CONFORMIDADES
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.1. Proceso de NC</h3>
-                                <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Identificación y registro durante la auditoría</li>
-                                    <li>Análisis de causa raíz por área responsable</li>
-                                    <li>Definición de acciones correctivas</li>
-                                    <li>Implementación y verificación de efectividad</li>
-                                </ol>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.2. Escalación</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>NC críticas: Reporte inmediato a dirección</li>
-                                    <li>NC recurrentes: Revisión Equipo de Seguridad</li>
-                                    <li>NC no resueltas: Escalación a alta dirección</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="revision-actualizacion" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
-                            REVISIÓN Y ACTUALIZACIÓN DEL PLAN
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.1. Revisiones Periódicas
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Revisión cuatrimestral: Ajustes basados en cambios organizativos</li>
-                                    <li>Revisión anual: Elaboración del plan para el próximo año</li>
-                                    <li>Revisión post-auditoría: Incorporación de lecciones aprendidas</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.2. Triggers de
-                                    Actualización</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Cambios significativos en la organización</li>
-                                    <li>Resultados de auditorías externas</li>
-                                    <li>Cambios en requisitos legales o regulatorios</li>
-                                    <li>Incidentes de seguridad relevantes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="confidencialidad" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
-                            CONFIDENCIALIDAD
-                        </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Los resultados de las auditorías son información confidencial</li>
-                            <li>Acceso restringido a personal autorizado</li>
-                            <li>Destrucción segura de borradores y notas</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Las vulnerabilidades técnicas se registran en el <strong>F525-IT-2</strong> con los plazos de la MC525-IT-1.</li><li>Las fallas de controles o procesos se registran en el <strong>F151-IT-4</strong> y se siguen según el <a href="../../procedimientos/evaluaciones/proc-verificacion-mejora-continua.html" class="underline">P151-IT-1</a>.</li><li>Las correcciones se verifican con una nueva prueba del punto afectado.</li></ul>
                     </section>
 
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
-                            ANEXOS
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
+                            ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
-
-                        <div class="space-y-4">
-                            <!-- Anexo A -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F526-IT-1%20Registro%20de%20Hallazgos.xlsx?d=wb997a7ac681f4812b47d92931047f56a&csf=1&web=1&e=1JAWKC" target="_blank"
-                                    title="F526-IT-1 Registro de Hallazgos de Auditoría"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list-check"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F526-IT-1
-                                    </span>
-                                    Registro de Hallazgos de Auditoría
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro de Hallazgos de auditoría del SGSI]</p>
-                            </div>
-
-                            <!-- Anexo B -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F526-IT-2%20Registro%20Plan%20Anual%20de%20Auditor%C3%ADas.xlsx?d=wa719dcf487ea440f9013b48c0275353f&csf=1&web=1&e=WFc2wL" target="_blank"
-                                    title="F526-IT-2 Registro Plan Anual de Auditorías del SGSI"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list-check"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F526-IT-2
-                                    </span>
-                                    Registro Plan Anual de Auditorías del SGSI
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro Plan Anual de Auditorías del SGSI]</p>
-                            </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="#" target="_blank"
-                                    title="F526-IT-3 Reporte Auditoría del SGSI"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-file-alt text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F526-IT-3
-                                    </span>
-                                    Reporte Auditoría del SGSI
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Informe detallado de auditoría del SGSI]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="#" target="_blank"
-                                    title="F526-IT-5 Plan de Acciones Correctivas"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-word text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F526-IT-5
-                                    </span>
-                                    Plan de Acciones Correctivas
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Seguimiento de acciones derivadas de auditorías]</p>
-                            </div>
-
-                            <!-- Anexo E -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo E: <a
-                                    href="../../procedimientos/gestion-auditoria/proc-gestion-auditoria.html"
-                                    title="P121-IT-1 Procedimiento de Gestión de la Seguridad de la Información SGSI"
+<div class="space-y-4">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="../../procedimientos/gestion-auditoria/proc-gestion-auditoria.html"
+                                    title="P526-IT-1 Procedimiento de Auditoría Técnica de Sistemas y Servicios IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
                                         border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
                                         group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P121-IT-1
+                                        P526-IT-1
                                     </span>
-                                    Procedimiento de Gestión de Auditoría de la Seguridad de la Información SGSI
+                                    Procedimiento de Auditoría Técnica de Sistemas y Servicios IT
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas de la gestión de auditoría 
-                                    de seguridad de la información]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Planificación, autorización, ejecución, informe y acciones]</p>
                             </div>
-
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F526-IT-3%20Informe%20de%20Auditor%C3%ADa%20T%C3%A9cnica.docx"
+                                    title="F526-IT-3 Informe de Auditoría Técnica - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F526-IT-3
+                                    </span>
+                                    Informe de Auditoría Técnica
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Modelo de informe de auditorías internas]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/I526-IT-1%20Instructivo%20de%20Escaneo%20T%C3%A9cnico%20Interno.docx"
+                                    title="I526-IT-1 Instructivo de Escaneo Técnico Interno - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        I526-IT-1
+                                    </span>
+                                    Instructivo de Escaneo Técnico Interno
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Pasos del escaneo interno y las revisiones de configuración]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F151-IT-5%20Programa%20de%20Verificaci%C3%B3n%20de%20Cumplimiento.xlsx"
+                                    title="F151-IT-5 Programa de Verificación de Cumplimiento - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F151-IT-5
+                                    </span>
+                                    Programa de Verificación de Cumplimiento
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Programa de auditorías técnicas (V-03, V-09, V-10, V-42 a V-44)]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo E: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F152-IT-1%20Programa%20y%20Registro%20de%20Revisiones%20Independientes.xlsx"
+                                    title="F152-IT-1 Programa y Registro de Revisiones Independientes - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F152-IT-1
+                                    </span>
+                                    Programa y Registro de Revisiones Independientes
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Prueba de penetración externa]</p>
+                            </div>
                         </div>
-
                     </section>
 
-                    <section id="revisiones-documento" class="mb-12 scroll-mt-20">
+                    <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr class="text-gray-300 dark:text-white">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            0</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">7/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Actualización general del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            7/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
-                                            general del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">19/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título y nuevo enfoque: auditorías técnicas de sistemas y servicios (control 5.2.6). La auditoría del SGSI queda en MC151-IT-1 y MC152-IT-1. Programa de auditorías técnicas en el F151-IT-5 (desde Internet y desde la red interna); planificación según el riesgo de la prueba; coordinación; informe F526-IT-3; comunicación a la Dirección; acciones en F525-IT-2 y F151-IT-4. Se quitan el programa de auditorías del SGSI, checklists RGPD/LOPD, ISO 22301, OWASP ASVS, entidad certificadora ISO 27001, representante de la Dirección, Equipo de Seguridad, 30 días/hombre y los registros F526-IT-1, F526-IT-2 y F526-IT-5, que no existían.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows -->
@@ -986,49 +462,40 @@
                         </h3>
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
+                            <a href="#definiciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                DEFINICIONES</a>
                             <a href="#responsables"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RESPONSABLES</a>
-                            <a href="#criterios-auditoria"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
-                                CRITERIOS DE AUDITORÍA</a>
-                            <a href="#programa-auditorias"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PROGRAMA DE AUDITORÍAS 2026</a>
-                            <a href="#metodologia-auditoria"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                METODOLOGÍA DE AUDITORÍA</a>
-                            <a href="#herramientas-recursos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                HERRAMIENTAS Y RECURSOS</a>
-                            <a href="#criterios-calificacion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
-                                CRITERIOS DE CALIFICACIÓN</a>
-                            <a href="#seguimiento-reporte"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
-                                SEGUIMIENTO Y REPORTE</a>
-                            <a href="#gestion-no-conformidades"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
-                                GESTIÓN DE NO CONFORMIDADES</a>
-                            <a href="#revision-actualizacion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
-                                REVISIÓN Y ACTUALIZACIÓN DEL PLAN</a>
-                            <a href="#confidencialidad"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
-                                CONFIDENCIALIDAD</a>
+                            <a href="#requisitos-programa"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                REQUISITOS Y PROGRAMA</a>
+                            <a href="#riesgos-pruebas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                RIESGOS DE LAS PRUEBAS</a>
+                            <a href="#coordinacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                COORDINACIÓN</a>
+                            <a href="#informe"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                INFORME Y DIRECCIÓN</a>
+                            <a href="#acciones"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                ACCIONES DERIVADAS</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 ANEXOS</a>
-                            <a href="#revisiones-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                            <a href="#revision-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -1068,7 +535,7 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Versión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1.0</span>
+                                <span class="font-medium text-gray-900 dark:text-white">Rev. 2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1084,11 +551,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">19/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">19/11/2027</span>
                             </div>
                         </div>
                     </div>
