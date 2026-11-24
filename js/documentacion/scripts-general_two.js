@@ -520,12 +520,28 @@ function initializeQuickActions() {
   }
 
   /* =======================  CONVERSIÓN INLINE (texto)  ===================== */
+
+  /**
+   * pdfmake no corta una "palabra" (texto sin espacios) aunque no entre en la
+   * columna: ensancha la columna y la tabla se sale del margen. Pasa con mails
+   * (gmontalbetti@prodismo.com), URLs y rutas largas dentro de celdas.
+   * Se agrega un espacio de ancho cero (U+200B, invisible) después de @ . / _ -
+   * en las palabras largas, para que pdfmake pueda partirlas en esos puntos.
+   */
+  const ZWSP = '​';
+  const LONG_WORD = 14; // caracteres; por debajo de esto no se toca la palabra
+  function breakLongWords(t) {
+    return t.replace(/\S+/g, (w) =>
+      w.length < LONG_WORD ? w : w.replace(/([@./_\-])(?=\S)/g, '$1' + ZWSP));
+  }
+
   function inlineRuns(node, ctx, out) {
     if (node.nodeType === 3) {
       let t = node.nodeValue.replace(/\s+/g, ' ');
       if (!t) return;
-      const { upper, ...style } = ctx;
+      const { upper, inCell, ...style } = ctx;
       if (upper) t = t.toLocaleUpperCase(CONFIG.locale);
+      if (inCell) t = breakLongWords(t);
       out.push({ ...style, text: t });
       return;
     }
@@ -671,7 +687,7 @@ function initializeQuickActions() {
       const row = [];
       [...tr.cells].forEach((td) => {
         const isHead = ri < headCount || td.tagName === 'TH';
-        const cc = elementCtx(td, isHead ? { ...rc, bold: true } : rc);
+        const cc = elementCtx(td, isHead ? { ...rc, bold: true, inCell: true } : { ...rc, inCell: true });
         const b = blocks(td, cc, { tight: true, nested: true });
         let cell;
         if (!b.length) cell = { text: '' };

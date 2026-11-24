@@ -226,7 +226,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
                             SISTEMAS SIN SOFTWARE ANTIMALWARE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Los servidores Linux y el servidor de Donweb no tienen antivirus. Se compensan con estas medidas, que se verifican cada 6 meses:</p>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Sin usuarios interactivos: solo acceden los administradores (MC522-IT-1, M522-IT-1).</li><li>Solo los servicios necesarios: HTTPS para los usuarios y administración restringida; sin herramientas de desarrollo en producción.</li><li>Acceso filtrado por firewall: reglas de Azure para SIP4.0; firewall de Donweb con bloqueo por defecto y la IP del proveedor habilitada solo durante los despliegues [Confirmar].</li><li>Actualizaciones del sistema operativo y de los componentes web aplicadas por los responsables del sistema.</li><li>Copias de seguridad o snapshots para restaurar el sistema limpio.</li><li>Agente Wazuh en las máquinas virtuales Linux [Confirmar]; pedir a Donweb confirmación escrita de las protecciones del servidor [Confirmar].</li></ul>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Los servidores Linux y el servidor de Donweb no tienen antivirus. Se compensan con estas medidas, que se verifican cada 6 meses:</p>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Sin usuarios interactivos: solo acceden los administradores (MC522-IT-1, M522-IT-1).</li><li>Solo los servicios necesarios: HTTPS para los usuarios y administración restringida; sin herramientas de desarrollo en producción.</li><li>Acceso filtrado por firewall: reglas de Azure para SIP4.0; firewall de Donweb con bloqueo por defecto y la IP del proveedor habilitada solo durante los despliegues.</li><li>Actualizaciones del sistema operativo y de los componentes web aplicadas por los responsables del sistema.</li><li>Copias de seguridad o snapshots para restaurar el sistema limpio.</li><li>Agente Wazuh en las máquinas virtuales Linux; pedir a Donweb confirmación escrita de las protecciones del servidor.</li></ul>
                     </section>
 
                     <section id="configuracion-segura" class="mb-12 scroll-mt-20">
@@ -263,7 +263,7 @@
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicios de red</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">En los servidores solo los roles y servicios necesarios. Desde Internet solo se accede a la VPN (SSTP/L2TP); no se publica RDP ni otros servicios</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado; se confirmará con el pentest de Personal Tech [Confirmar]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado; se confirmará con el pentest de Personal Tech</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Segmentación</td>

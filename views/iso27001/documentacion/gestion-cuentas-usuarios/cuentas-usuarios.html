@@ -50,9 +50,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Autenticación y Control de Acceso</span>
                     </a>
-                    <a href="../gestion-contrasenas/gestion-contrasenas.html"
+                    <a href="../minimos-privilegios/minimos-privilegios.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Contraseñas Seguras</span>
+                        <span>Siguiente: Mínimos Provilegios</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -360,7 +360,19 @@
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">SIP4.0</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">12</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Complejidad e historial [Confirmar configuración]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">
+                                            Complejidad:
+                                            <ul class="list-disc pl-4 space-y-1">
+                                                <li>Al menos una Mayúscula</li>
+                                                <li>Al menos una minúscula</li>
+                                                <li>Al menos un número</li>
+                                                <li>Al menos un carácter especial</li>
+                                            </ul>
+                                            Historial: 
+                                            <ul class="list-disc pl-4 space-y-1">
+                                                <li>Debe ser diferente a la actual y hasta 5 anteriores</li>
+                                            </ul>
+                                        </td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cada 180 días</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 intentos</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">No (NC-2026-16)</td>
@@ -368,10 +380,22 @@
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">App de Viajes</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">12</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Complejidad e historial [Confirmar configuración]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">
+                                            Complejidad:
+                                            <ul class="list-disc pl-4 space-y-1">
+                                                <li>Al menos una Mayúscula</li>
+                                                <li>Al menos una minúscula</li>
+                                                <li>Al menos un número</li>
+                                                <li>Al menos un carácter especial</li>
+                                            </ul>
+                                            Historial: 
+                                            <ul class="list-disc pl-4 space-y-1">
+                                                <li>Debe ser diferente a la actual y hasta 5 anteriores</li>
+                                            </ul>
+                                        </td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cada 180 días</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">5 intentos</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA (Auth0)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cuentas locales de Windows</td>
@@ -659,7 +683,11 @@
                                     <tr>
                                         <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
                                         <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">17/11/2026</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Se unifica con la Política de Contraseñas Seguras (MC413-IT-2, que queda obsoleta). Nuevo título; ciclo de vida real (F413-IT-4, credencial inicial al responsable, baja el mismo día y a los 15 días); tipos de cuenta (colectivas, buzones, servicio, proveedores, sistemas de clientes, cuentas de fábrica); requisitos de contraseñas por sistema; reglas de manejo de la información de inicio de sesión; revisión semestral; F413-IT-6. Se quitan Active Directory, 16 caracteres para administradores, credenciales de 24 horas y ejemplos de contraseñas.</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Se unifica con la Política de Contraseñas Seguras (MC413-IT-2, que queda obsoleta). Nuevo título; ciclo de vida real
+                                        (F413-IT-4, credencial inicial al responsable, baja el mismo día y a los 15 días); tipos de cuenta (colectivas, buzones,
+                                        servicio, proveedores, sistemas de clientes, cuentas de fábrica); requisitos de contraseñas por sistema; reglas de
+                                        manejo de la información de inicio de sesión; revisión semestral; F413-IT-6. Se quitan Active Directory, 16 caracteres
+                                        para administradores, credenciales de 24 horas y ejemplos de contraseñas.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -675,9 +703,9 @@
                         <i class="fas fa-arrow-left mr-2"></i>
                         <span>Anterior: Autenticación y Control de Acceso</span>
                     </a>
-                    <a href="../gestion-contrasenas/gestion-contrasenas.html"
+                    <a href="../minimos-privilegios/minimos-privilegios.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
-                        <span>Siguiente: Contraseñas Seguras</span>
+                        <span>Siguiente: Mínimos Privilegios</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>

@@ -98,7 +98,13 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Todos los servicios, sistemas y aplicaciones de la M411-IT-1: Microsoft 365, VPN, SIP y SIP4.0, equipos Windows, AnyDesk, Snipe-IT, App de Viajes, App de seguimiento de fabricación (Railway y MongoDB), tulegajo.com, Donweb, GitHub, servidores, firewall, switches y app Tuya.</li><li>Todos los usuarios, incluidas las cuentas privilegiadas, los buzones compartidos y las cuentas de invitados de Microsoft 365.</li></ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6">
+                            <li>Todos los servicios, sistemas y aplicaciones de la M411-IT-1: Microsoft 365, VPN, SIP y SIP4.0, equipos Windows,
+                                AnyDesk, Snipe-IT, App de Viajes, tulegajo.com, Donweb,
+                                GitHub, servidores, firewall, switches.</li>
+                            <li>Todos los usuarios, incluidas las cuentas privilegiadas, los buzones compartidos y las cuentas de invitados de
+                                Microsoft 365.</li>
+                        </ul>
                     </section>
 
                     <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -266,19 +272,12 @@
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">App de Viajes</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Internet</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Contraseña (12 caracteres, cambio cada 180 días) + MFA (Auth0)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Contraseña (12 caracteres, cambio cada 180 días) + MFA</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
                                     </tr>
                                     <tr>
-                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Railway, MongoDB, Donweb, GitHub</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Internet</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según la M411-IT-1</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA en todas las cuentas de administración</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servidores, firewall, switches, app Tuya</td>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servidores, firewall, switches</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red interna / Internet</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cuentas personales sin MFA (NC-2026-16)</td>
@@ -322,7 +321,7 @@
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">App de Viajes</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">12 caracteres</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cada 180 días</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA (Auth0)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cuentas locales de Windows</td>
@@ -332,7 +331,7 @@
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cuentas privilegiadas</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">[Propuesta: 12 caracteres]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">12 caracteres</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según el sistema</td>
                                         <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MFA obligatorio</td>
                                     </tr>
@@ -348,7 +347,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
                             CUENTAS PRIVILEGIADAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Toda cuenta de administración es personal y usa MFA. Las cuentas de servidores, firewall, switches y app Tuya que no lo permiten se compensan con acceso solo desde la red interna y contraseña robusta, hasta habilitar MFA.</li><li>Administradores globales de Microsoft 365: Emiliano Ferrari y Germán Montalbetti. Deben usar una cuenta de administración separada de la cuenta diaria (NC-2026-17). Mejora pendiente: acceso condicional con Entra ID P1 (incluido en las licencias Business Premium) para administradores y usuarios Premium, planificado para el 01/04/2027 [Confirmar fecha] (OM-2026-07).</li><li>Los usuarios no deben ser administradores locales de sus equipos; las instalaciones las hace IT (NC-2026-17).</li></ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Toda cuenta de administración es personal y usa MFA. Las cuentas de servidores, firewall y switches que no lo permiten se compensan con acceso solo desde la red interna y contraseña robusta, hasta habilitar MFA.</li><li>Administradores globales de Microsoft 365: Emiliano Ferrari y Germán Montalbetti. Deben usar una cuenta de administración separada de la cuenta diaria (NC-2026-17). Mejora pendiente: acceso condicional con Entra ID P1 (incluido en las licencias Business Premium) para administradores y usuarios Premium, planificado para abril del 2027 (OM-2026-07).</li><li>Los usuarios no deben ser administradores locales de sus equipos; las instalaciones las hace IT (NC-2026-17).</li></ul>
                     </section>
 
                     <section id="control-accesos" class="mb-12 scroll-mt-20">

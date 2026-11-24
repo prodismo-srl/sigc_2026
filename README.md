@@ -1,1 +1,1 @@
-Portal de normas ISO27001 de Prodismo SRL
+Portal de normas ISO27001:2022 y TISAX de Prodismo SRL
