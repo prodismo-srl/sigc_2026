@@ -7,7 +7,7 @@
     <meta name="description" content="Prodismo - Política de Desarrollo Seguro">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Política de Requisitos de Seguridad de Sistemas IT - Prodismo SRL</title>
+    <title>Requisitos de Seguridad de Sistemas IT Nuevos o Modificados - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,7 @@
                     <a href="../copia-seguridad/copia-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Copia de Seguridad</span>
+                        <span>Anterior: Copia de Seguridad de la Información</span>
                     </a>
                     <a href="../requisitos-red/requisitos-red.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -60,8 +60,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Requisitos de
-                            Seguridad de Sistemas IT Nuevos o en Desarrollo</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Requisitos de Seguridad de Sistemas IT Nuevos o Modificados</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -70,35 +69,26 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 7/1/2026</span>
+                                <span>Última revisión: 24/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.3.1), ISO 27001:2022 (A.5.8, A.8.25, A.8.26, A.8.29, A.8.33)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos de seguridad que deben ser considerados e implementados en todos
-                            los sistemas de información nuevos o en desarrollo de <strong>PRODISMO SRL</strong>, con el
-                            fin de garantizar que la seguridad sea incorporada desde las fases iniciales del ciclo de
-                            vida, prevenir vulnerabilidades, proteger los activos de información y cumplir con los
-                            requisitos del marco <strong>TISAX</strong> y los controles A.5.8 (Seguridad de la
-                            información en el proyecto) y A.8.25 (Ciclo de vida de desarrollo seguro) del Anexo A de
-                            <strong>ISO/IEC 27001:2022</strong>.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Asegurar que <strong>PRODISMO SRL</strong> considera la seguridad de la información en todo el ciclo de vida de sus sistemas IT: al desarrollarlos, adquirirlos, ampliarlos o modificarlos, y antes de usarlos en producción. Cumple el control <strong>5.3.1</strong> de <strong>TISAX</strong> (VDA ISA 6) y los controles A.5.8, A.8.25, A.8.26, A.8.29 y A.8.33 de <strong>ISO/IEC 27001:2022</strong>. La seguridad en proyectos de clientes se rige por la MC123-IT-1; la evaluación de proveedores y servicios externos, por la MC133-IT-1 y la MC124-IT-1.</p>
                     </section>
 
                     <section id="alcance" class="mb-12 scroll-mt-20">
@@ -107,18 +97,44 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Todos los nuevos sistemas de información desarrollados internamente para
-                                <strong>PRODISMO SRL</strong>.
-                            </li>
-                            <li>Modificaciones significativas a sistemas existentes que alteren su funcionalidad o
-                                arquitectura.</li>
-                            <li>Adquisición o implementación de sistemas de terceros.</li>
-                            <li>Todo el personal interno involucrado en el desarrollo, adquisición o implementación de
-                                sistemas.</li>
-                            <li>Proveedores externos que desarrollen o suministren sistemas para la organización.</li>
-                        </ul>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Tipo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Sistemas actuales</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Quién desarrolla o implementa</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Guía</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Software a medida</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">ERP SIP4.0 (ASP.NET Core 10, Flutter Web, Firebird, Docker en Azure)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Enter-Geminus hasta el 30/11/2026; desde el traspaso, Nicolás Donato (desarrollo desde 01–02/2027)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I531-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Automatizaciones</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">4–5 flujos de Power Automate</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT (Emiliano Ferrari, Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I531-IT-1 Parte A</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Macros</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Macros de Excel (VBA) y de CATIA V5, firmadas y guardadas en DC2</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Germán Montalbetti</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">I531-IT-1 Partes B y C</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Adquisición o ampliación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Software comercial, servicios en la nube, equipos de red y servidores (ej.: Wazuh, Zabbix, Snipe-IT, Veeam, App de Viajes)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">IT con el proveedor</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">P134-IT-1 / P133-IT-1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <p class="text-gray-700 dark:text-gray-300 mb-4">Quedan fuera del alcance de la evaluación TISAX el ERP SIP de Ingemecánica (Donweb) y la App de Seguimiento de Fabricación.</p>
                     </section>
 
                     <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -127,14 +143,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.8, A.8.25</li>
-                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li><strong>P531-IT-1</strong> Procedimiento de Evaluación de Seguridad en Sistemas</li>
-                            <li><strong>F531-IT-1</strong> Checklist de Requisitos de Seguridad</li>
-                            <li><strong>M531-IT-1</strong> Matriz de Evaluación de Riesgos de Sistemas</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>ISO/IEC 27001:2022</strong> – A.5.8, A.8.25, A.8.26, A.8.29, A.8.33 · Marco <strong>TISAX</strong> – VDA ISA 6, control 5.3.1</li><li><strong>P531-IT-1</strong> Procedimiento de Seguridad en el Ciclo de Vida de Sistemas IT · <strong>F531-IT-1</strong> Requisitos y Aprobación de Seguridad de Sistemas · <strong>I531-IT-1</strong> Guía de Automatizaciones y Macros · <strong>I531-IT-2</strong> Guía de SIP4.0</li><li><strong>MC521-IT-1</strong> Cambios · <strong>MC522-IT-1</strong> Entornos · <strong>MC525-IT-1</strong> Vulnerabilidades · <strong>MC526-IT-1</strong> Auditoría técnica · <strong>MC133-IT-1</strong> / <strong>MC134-IT-1</strong> Servicios y software</li></ul>
                     </section>
 
                     <section id="definiciones" class="mb-12 scroll-mt-20">
@@ -143,33 +152,33 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             DEFINICIONES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Security by Design:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Enfoque que incorpora la seguridad desde las
-                                    fases iniciales del desarrollo.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">SDL (Security Development
-                                    Lifecycle):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Ciclo de vida de desarrollo seguro.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Desarrollador:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Recurso responsable de todas las fases del
-                                    desarrollo de aplicaciones internas.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Hardening:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Proceso de asegurar un sistema reduciendo su
-                                    superficie de ataque.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Criptografía:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Técnicas de encriptación para proteger la
-                                    confidencialidad e integridad de la información.</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Término</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Definición</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Especificación de requisitos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Lista de requisitos funcionales y de seguridad que el sistema debe cumplir, con su forma de verificación.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Prueba de aceptación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Verificación, antes del uso productivo, de que el sistema cumple la especificación, incluidos los requisitos de seguridad.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Falla segura (fail safe)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Diseño por el cual, ante una falla, el sistema queda en un estado seguro.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Datos de prueba</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Datos usados en desarrollo y pruebas; en PRODISMO son ficticios, salvo la excepción del §8.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -179,381 +188,248 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             RESPONSABLES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Alta Dirección:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Aprobar esta política y asignar los recursos
-                                    necesarios para su implementación.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable de Seguridad de
-                                    la Información (RSI):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Definir y supervisar la implementación de
-                                    los requisitos de seguridad. Validar el cumplimiento de los requisitos antes de la
-                                    puesta en producción. Realizar revisiones de seguridad periódicas.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Desarrollador Único:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Implementar los requisitos de seguridad en
-                                    todos los desarrollos. Realizar pruebas de seguridad durante el desarrollo.
-                                    Documentar las medidas de seguridad implementadas.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de IT:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Proveer infraestructura segura para el
-                                    desarrollo y despliegue. Implementar controles de red y acceso según la segmentación
-                                    definida. Realizar hardening de sistemas operativos y servicios.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Usuarios Finales:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Reportar posibles vulnerabilidades o
-                                    comportamientos anómalos en los sistemas. Participar en pruebas de aceptación de
-                                    seguridad.</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsabilidades</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alta Dirección (Damián Pedrosa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprobar esta política y la guía de desarrollo de SIP4.0 (I531-IT-2).</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">IT Manager / RSI (Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprobar especificaciones y el uso productivo; elaborar la guía de SIP4.0; desarrollar macros.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administrador de IT (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Especificar y configurar adquisiciones y flujos; mantener el F531-IT-1; emitir la guía I531-IT-1.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Desarrollador de SIP4.0 (Nicolás Donato)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Desarrollar según la I531-IT-2; preparar las especificaciones y pruebas de SIP4.0.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Usuarios clave</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Probar en staging y dejar constancia por correo o ticket.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Proveedores (Enter-Geminus hasta el 30/11/2026, Cubits, otros)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Cumplir los requisitos de seguridad acordados (F612-IT-2).</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="requisitos-seguridad-fase" class="mb-12 scroll-mt-20">
+                    <section id="niveles" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            REQUISITOS DE SEGURIDAD POR FASE
+                            NIVELES SEGÚN EL RIESGO
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.1. Fase de Planificación y
-                                    Diseño</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Análisis de Riesgos:</strong> Identificar y documentar riesgos de
-                                        seguridad mediante <strong>M531-IT-1</strong>.</li>
-                                    <li><strong>Privacidad por Diseño:</strong> Incorporar protección de datos
-                                        personales desde el diseño.</li>
-                                    <li><strong>Requisitos de Cifrado:</strong> Definir algoritmos y protocolos
-                                        criptográficos a utilizar.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.2. Fase de Desarrollo</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Validación de Entradas:</strong> Implementar sanitización de todas las
-                                        entradas de usuario.</li>
-                                    <li><strong>Autenticación Segura:</strong> Implementar MFA para sistemas que accedan
-                                        a información crítica.</li>
-                                    <li><strong>Gestión de Sesiones:</strong> Implementar timeout automático y rotación
-                                        de tokens.</li>
-                                    <li><strong>Registro y Monitoreo:</strong> Implementar logging de eventos de
-                                        seguridad relevantes.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.3. Fase de Pruebas</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Pruebas de Seguridad:</strong> Realizar pruebas de penetración básicas y
-                                        análisis estático de código.</li>
-                                    <li><strong>Pruebas de Configuración:</strong> Verificar que la configuración cumple
-                                        con los estándares de hardening.</li>
-                                    <li><strong>Validación de Requisitos:</strong> Completar <strong>F531-IT-1</strong> antes de pasar a
-                                        producción.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.4. Fase de Despliegue</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>Hardening:</strong> Aplicar configuración segura a servidores y
-                                        servicios.</li>
-                                    <li><strong>Backup:</strong> Establecer procedimientos de backup y recuperación.
-                                    </li>
-                                    <li><strong>Documentación:</strong> Documentar arquitectura y medidas de seguridad
-                                        implementadas.</li>
-                                </ul>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cuándo</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Qué se exige</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">A</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Sistema nuevo o adquirido que trata información Confidencial o se expone a Internet; en SIP4.0: módulo nuevo, cambios en autenticación, permisos o integraciones (AFIP, Power BI, correo, almacenamiento), cambio de base de datos o de infraestructura</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Especificación completa en el F531-IT-1 (hoja por sistema), revisión del RSI, pruebas de aceptación y de seguridad registradas, aprobación del RSI antes del uso productivo; prueba de seguridad externa en la puesta en marcha o ante cambios significativos</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">B</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Flujos de Power Automate, macros, cambios menores de SIP4.0 (correcciones, reportes, pantallas sin cambios de permisos), componentes de infraestructura sin información Confidencial</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Fila en el registro del F531-IT-1 con el checklist abreviado, prueba registrada y aprobación del RSI; cambio en el F521-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="requisitos-tecnicos-especificos" class="mb-12 scroll-mt-20">
+                    <section id="requisitos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            REQUISITOS TÉCNICOS ESPECÍFICOS
+                            REQUISITOS DE SEGURIDAD A CONSIDERAR
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.1. Autenticación y
-                                    Autorización</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>MFA obligatorio para sistemas con acceso a información crítica.</li>
-                                    <li>Contraseñas con longitud mínima de 12 caracteres y complejidad.</li>
-                                    <li>Timeout de sesión máximo de 30 minutos de inactividad.</li>
-                                    <li>Principio de menor privilegio en asignación de permisos.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.2. Protección de Datos
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Cifrado en tránsito (TLS 1.2+) para todas las comunicaciones.</li>
-                                    <li>Cifrado en reposo para datos sensibles.</li>
-                                    <li>No almacenamiento de contraseñas en texto claro.</li>
-                                    <li>Anonimización de datos para entornos de prueba.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.3. Seguridad de
-                                    Aplicaciones</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Protección contra OWASP Top 10 (inyección, XSS, etc.).</li>
-                                    <li>Validación de datos en frontend y backend.</li>
-                                    <li>Headers de seguridad HTTP (CSP, HSTS, X-Frame-Options).</li>
-                                    <li>Actualizaciones de seguridad aplicadas oportunamente.</li>
-                                </ul>
-                            </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Toda especificación considera, como mínimo, los siguientes requisitos, las recomendaciones del fabricante y las buenas prácticas aplicables. El catálogo completo está en el F531-IT-1 (hoja "Catálogo").</p><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ámbito</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisitos mínimos</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Información y legales</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Clasificación de la información (MC132-IT-1); requisitos legales y de clientes (F133-IT-2, F611-IT-3); datos personales (MC712-IT-1).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Acceso</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Autenticación nominal, MFA cuando el sistema lo permita (Microsoft 365 / Entra ID); roles con mínimo privilegio (MC421-IT-1); cuentas técnicas propias con permisos mínimos (nunca la cuenta administradora de la base, como SYSDBA, para la aplicación).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Secretos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Sin contraseñas, claves ni tokens en el código, en planillas ni en imágenes Docker; configuración sensible fuera del repositorio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Criptografía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">TLS 1.2 o superior y certificado válido; cifrado en reposo según MC511-IT-1.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Seguridad de aplicaciones</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Validación de entradas, consultas parametrizadas, protección frente a OWASP Top 10, cabeceras de seguridad HTTP, límites de carga de archivos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Configuración segura</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Recomendaciones del fabricante y buenas prácticas (Microsoft, guías de Power Platform y Office, imágenes oficiales de Docker); solo puertos y servicios necesarios (MC523-IT-1, MC527-IT-1).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Falla segura (fail safe)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ante un error el sistema debe volver a un estado seguro: denegar el acceso si falla la autenticación, no dejar datos a medio grabar (transacciones, trabajo sobre copias), mensajes de error sin datos internos, aviso a IT si falla un flujo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Registro y monitoreo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Eventos de seguridad registrados según MC524-IT-1 (inicios de sesión, cambios de permisos, errores).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Continuidad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Copia de seguridad y RTO/RPO definidos antes del uso productivo (MC528-IT-1, MC529-IT-1).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Mantenimiento</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Componentes con soporte y plan de actualización (MC525-IT-1, MC134-IT-1); licencias a nombre de Prodismo.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="gestion-vulnerabilidades" class="mb-12 scroll-mt-20">
+                    <section id="datos-prueba" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            GESTIÓN DE VULNERABILIDADES
+                            DATOS DE PRUEBA
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. Identificación y
-                                    Evaluación</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Escaneo de vulnerabilidades antes de pasar a producción.</li>
-                                    <li>Evaluación de riesgo de vulnerabilidades identificadas.</li>
-                                    <li>Priorización según criticidad e impacto.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.2. Remediación</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Corrección de vulnerabilidades críticas y altas antes de puesta en producción.
-                                    </li>
-                                    <li>Plan de remediación para vulnerabilidades medias y bajas.</li>
-                                    <li>Verificación de la efectividad de las correcciones.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Desarrollo, test y staging usan solo datos ficticios, definidos para cada caso (ej.: archivos de datos simulados de los proyectos de prueba de SIP4.0, planillas de ejemplo para macros, carpetas de prueba para flujos).</li><li>Excepción: las pruebas de restauración o de migración que necesitan una copia de producción (ej.: migración de Firebird 2.5 a 5.0, V-45) se hacen en un entorno temporal aislado con los mismos controles que producción (acceso solo IT y desarrollador, sin exposición a Internet), con aprobación del RSI, y se borra en un máximo de 7 días. Se registra en el F531-IT-1.</li></ul>
                     </section>
 
-                    <section id="registros-evidencias" class="mb-12 scroll-mt-20">
+                    <section id="adquisicion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            REGISTROS Y EVIDENCIAS
+                            ADQUISICIÓN Y CAMBIOS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">9.1. Registros Obligatorios
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li><strong>F531-IT-1:</strong> Checklist de Requisitos de Seguridad.</li>
-                                    <li><strong>M531-IT-1:</strong> Matriz de Evaluación de Riesgos de Sistemas.</li>
-                                    <li>Informes de pruebas de seguridad.</li>
-                                    <li>Documentación de arquitectura y configuración.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">9.2. Retención de Registros
-                                </h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Tipo de Registro</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Período de Retención</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Checklists de seguridad</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 años
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Informes
-                                                    de pruebas</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">3 años
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Documentación técnica</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Mientras
-                                                    el sistema esté en operación</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Antes de comprar o contratar se definen los requisitos de seguridad (F531-IT-1) y se evalúa el software o servicio según P134-IT-1 o P133-IT-1; los requisitos se incluyen en el contrato o en las cláusulas F612-IT-2.</li><li>Los cambios en sistemas existentes siguen la MC521-IT-1: el impacto en seguridad se evalúa en el F521-IT-2 y, si el cambio es de Nivel A, se actualiza la especificación y se repiten las pruebas afectadas (roles, permisos, integraciones).</li></ul>
                     </section>
 
-                    <section id="monitoreo-cumplimiento" class="mb-12 scroll-mt-20">
+                    <section id="pruebas-seguridad" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            MONITOREO Y CUMPLIMIENTO
+                            PRUEBAS DE SEGURIDAD DEL SOFTWARE A MEDIDA
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Revisión semestral del cumplimiento de requisitos de seguridad.</li>
-                                    <li>Auditorías anuales de los sistemas en producción.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">Indicadores de desempeño:
-                                </h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Indicador</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Objetivo</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Porcentaje de sistemas que cumplen requisitos de seguridad</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">100%</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Tiempo
-                                                    promedio de remediación de vulnerabilidades críticas</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">&lt; 15
-                                                    días</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>SIP4.0 se somete a una prueba de penetración externa anual (V-10; primera: Personal Tech, 11/2026) y ante cambios significativos (Nivel A), además de las pruebas de seguridad del F531-IT-1 en cada pase de Nivel A.</li><li>Las dependencias de SIP4.0 se revisan contra vulnerabilidades conocidas en cada versión (I531-IT-2).</li></ul>
                     </section>
 
-                    <section id="sanciones-incumplimiento" class="mb-12 scroll-mt-20">
+                    <section id="verificacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
-                            SANCIONES POR INCUMPLIMIENTO
+                            VERIFICACIÓN Y REVISIÓN
                         </h2>
-
-                        <div class="p-4">
-                            <p class="text-gray-700 dark:text-gray-300 mb-4">El incumplimiento de esta política dará
-                                lugar a:</p>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li><strong>Despliegue de sistemas sin aprobación de seguridad:</strong> Retiro
-                                    inmediato del entorno productivo.</li>
-                                <li><strong>No remediación de vulnerabilidades críticas:</strong> Suspensión del sistema
-                                    hasta su corrección.</li>
-                                <li><strong>Incumplimiento reiterado:</strong> Acciones disciplinarias según reglamento
-                                    interno.</li>
-                            </ul>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Revisión anual del F531-IT-1, de los flujos de Power Automate y de las macros (V-46).</li><li>Esta política se revisa una vez al año o ante cambios importantes en el desarrollo (ej.: traspaso de SIP4.0).</li></ul>
                     </section>
 
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                             ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
-                        <div class="space-y-4">
-
-                            <!-- Anexo A -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo A: <a href="https://forms.office.com/r/stELxve2T8"
-                                    title="F531-IT-1 Checklist de Requisitos de Seguridad/Pruebas (Básico)"
+<div class="space-y-4">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo A: <a href="../../procedimientos/sistemas-requisitos-desarrollo/proc-ciclo-vida-sistemas.html"
+                                    title="P531-IT-1 Procedimiento de Seguridad en el Ciclo de Vida de Sistemas IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fa-solid fa-list-check text-green-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F531-IT-1
-                                    </span>
-                                    Checklist de Requisitos de Seguridad/Pruebas (Básico)
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Checklist de Requisitos de Seguridad]
-                                </p>
-                            </div>
-
-                            <!-- Anexo B -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a
-                                    href="../../procedimientos/sistemas-requisitos-desarrollo/proc-ciclo-vida-sistemas.html"
-                                    title="P531-IT-1 Procedimiento de Evaluación de Seguridad en Sistemas" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         P531-IT-1
                                     </span>
-                                    Procedimiento de Seguridad en Ciclo de Vida de Sistemas IT
+                                    Procedimiento de Seguridad en el Ciclo de Vida de Sistemas IT
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    evaluación de seguridad en sistemas IT]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Especificación, revisión, pruebas y aprobación]</p>
                             </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a
-                                    href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/ISO27001.2022%20-TISAX/3-%20Matriz%20de%20Riesgos/M531-IT-1%20Matriz%20de%20Evaluaci%C3%B3n%20de%20Riesgos%20de%20Sistemas.xlsx?d=w148ba5f56dbb466b9418b402d49339cc&csf=1&web=1&e=2MEpHj"
-                                    target="_blank" title="M531-IT-1 Matriz de Evaluación de Riesgos de Sistemas IT" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F531-IT-1%20Requisitos%20y%20Aprobaci%C3%B3n%20de%20Seguridad%20de%20Sistemas.xlsx"
+                                    title="F531-IT-1 Requisitos y Aprobación de Seguridad de Sistemas - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        M531-IT-1
+                                        F531-IT-1
                                     </span>
-                                    Matriz de Evaluación de Riesgos de Sistemas IT
+                                    Requisitos y Aprobación de Seguridad de Sistemas
                                     <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Matriz de evaluación de riesgos de
-                                    sistemas IT, tipo de amenazas, niveles de riesgo, acciones requeridas]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Registro, catálogo, plantillas y especificación de SIP4.0]</p>
                             </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/I531-IT-1%20Gu%C3%ADa%20de%20Desarrollo%20Seguro%20de%20Automatizaciones%20y%20Macros.docx"
+                                    title="I531-IT-1 Guía de Desarrollo Seguro de Automatizaciones y Macros - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        I531-IT-1
+                                    </span>
+                                    Guía de Desarrollo Seguro de Automatizaciones y Macros
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Power Automate, macros de Excel y CATIA]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/I531-IT-2%20Gu%C3%ADa%20de%20Desarrollo%20Seguro%20de%20SIP4.0.docx"
+                                    title="I531-IT-2 Guía de Desarrollo Seguro de SIP4.0 - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-word text-blue-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        I531-IT-2
+                                    </span>
+                                    Guía de Desarrollo Seguro de SIP4.0
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[ASP.NET Core, Firebird, Docker, pase a producción]</p>
+                            </div>
+                        </div>
                     </section>
-
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
@@ -561,45 +437,36 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política será revisada anualmente o en
-                            respuesta a cambios significativos en el entorno tecnológico o regulatorio.</p>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr class="text-gray-300 dark:text-white">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            0</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">7/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Actualización general del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            7/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
-                                            general del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">24/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Alcance real (SIP4.0, Power Automate, macros, adquisiciones); niveles según el riesgo; catálogo de requisitos con recomendaciones del fabricante y falla segura; datos de prueba; pruebas de seguridad de SIP4.0. Se dan de baja la M531-IT-1 y la M531-IT-2 (la evaluación de servicios y proveedores está en el F133-IT-1 y el F124-IT-2) y el formulario F531-IT-1 de Microsoft Forms, que no se usó; se quitan el análisis estático, los escaneos previos al pase y las sanciones genéricas, que no correspondían.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows -->
@@ -607,7 +474,7 @@
                     <a href="../copia-seguridad/copia-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Copia de Seguridad</span>
+                        <span>Anterior: Copia de Seguridad de la Información</span>
                     </a>
                     <a href="../requisitos-red/requisitos-red.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -629,43 +496,43 @@
                         </h3>
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 DEFINICIONES</a>
                             <a href="#responsables"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>5.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RESPONSABLES</a>
-                            <a href="#requisitos-seguridad-fase"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>6.
-                                REQUISITOS POR FASE</a>
-                            <a href="#requisitos-tecnicos-especificos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>7.
-                                REQUISITOS TÉCNICOS ESPECIFICOS</a>
-                            <a href="#gestion-vulnerabilidades"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>8.
-                                GESTIÓN DE VULNERABILIDADES</a>
-                            <a href="#registros-evidencias"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>9.
-                                REGISTROS Y EVIDENCIAS</a>
-                            <a href="#monitoreo-cumplimiento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>10.
-                                MONITOREO Y CUMPLIMIENTO</a>
-                            <a href="#sanciones-incumplimiento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>11.
-                                SANCIONES</a>
+                            <a href="#niveles"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                NIVELES SEGÚN EL RIESGO</a>
+                            <a href="#requisitos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                REQUISITOS DE SEGURIDAD</a>
+                            <a href="#datos-prueba"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                DATOS DE PRUEBA</a>
+                            <a href="#adquisicion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                ADQUISICIÓN Y CAMBIOS</a>
+                            <a href="#pruebas-seguridad"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                PRUEBAS DE SEGURIDAD</a>
+                            <a href="#verificacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
+                                VERIFICACIÓN Y REVISIÓN</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>12.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 ANEXOS</a>
                             <a href="#revision-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link"></i>13.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
 
@@ -704,7 +571,7 @@
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-400">Rev. N°:</span>
-                                    <span class="font-medium text-gray-900 dark:text-white">1</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">2</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -720,16 +587,17 @@
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                    <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">24/11/2026</span>
                                 </div>
                                 <div class="flex justify-between">
                                     <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                    <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
+                                    <span class="font-medium text-gray-900 dark:text-white">24/11/2027</span>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+            </div>
             </aside>
         </div>
     </div>

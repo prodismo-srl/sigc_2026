@@ -159,9 +159,9 @@
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Base de datos</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PostgreSQL propia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Firebird propia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Firebird propia</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Firebird propia</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Datos</td>
@@ -189,7 +189,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Verificación de la separación</h3>                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Las tres máquinas virtuales y las tres bases de datos PostgreSQL son distintas (IP, URL y credenciales).</li><li>En el servidor de producción solo está instalado el software necesario para funcionar; se revisa la lista de programas instalados.</li><li>Las bases de desarrollo y staging contienen solo datos de prueba.</li><li>Los usuarios clave tienen usuarios de prueba en staging.</li><li>El resultado se registra en el F151-IT-5 (V-39) y, si algo no se cumple, en el F151-IT-4.</li></ol>
+                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Verificación de la separación</h3>                        <ol class="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Las tres máquinas virtuales y las tres bases de datos Firebird son distintas (IP, URL y credenciales).</li><li>En el servidor de producción solo está instalado el software necesario para funcionar; se revisa la lista de programas instalados.</li><li>Las bases de desarrollo y staging contienen solo datos de prueba.</li><li>Los usuarios clave tienen usuarios de prueba en staging.</li><li>El resultado se registra en el F151-IT-5 (V-39) y, si algo no se cumple, en el F151-IT-4.</li></ol>
                     </section>
 
                     <section id="gestion-accesos" class="mb-12 scroll-mt-20">
@@ -387,7 +387,7 @@
                                     <tr>
                                         <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
                                         <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">18/11/2026</td>
-                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Evaluación de riesgos por sistema; entornos reales de SIP4.0 (tres máquinas virtuales y bases PostgreSQL en Azure; se quita la separación por puertos); verificación de la separación; accesos con F412-IT-1 y M522-IT-1; proveedores (baja de Enter-Geminus, despliegues de Cubits en Donweb, sesiones supervisadas; se quitan las sesiones grabadas); pase a producción con GitHub y aprobación del RSI; App de Viajes; automatizaciones menores; datos de prueba; se quita la aplicación interna (fuera del alcance) y se corrige la fecha de la Rev. 1 (26/2/2026).</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Evaluación de riesgos por sistema; entornos reales de SIP4.0 (tres máquinas virtuales y bases Firebird en Azure; se quita la separación por puertos); verificación de la separación; accesos con F412-IT-1 y M522-IT-1; proveedores (baja de Enter-Geminus, despliegues de Cubits en Donweb, sesiones supervisadas; se quitan las sesiones grabadas); pase a producción con GitHub y aprobación del RSI; App de Viajes; automatizaciones menores; datos de prueba; se quita la aplicación interna (fuera del alcance) y se corrige la fecha de la Rev. 1 (26/2/2026).</td>
                                     </tr>
                                 </tbody>
                             </table>

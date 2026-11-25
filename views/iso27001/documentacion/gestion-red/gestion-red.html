@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-page-subtitle="Política de Gestión de Red">
+<html lang="es" data-page-subtitle="Política de Gestión y Segmentación de Red">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="Prodismo - Política de Gestión de Red">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../../../../images/Logo_Prodismo_fb.ico">
-    <title>Política de Gestión de Red - Prodismo SRL</title>
+    <title>Gestión y Segmentación de Red - Prodismo SRL</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,8 +60,7 @@
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
                     <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión de Red de
-                            la Organización</h1>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Gestión y Segmentación de Red</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -70,35 +69,26 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 7/1/2026</span>
+                                <span>Última revisión: 24/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 1</span>
+                                <span>Rev. N°: 2</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.7), ISO 27001:2022 (A.8.20, A.8.21, A.8.22)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos y esquema de segmentación de red para aislar y proteger los
-                            diferentes tipos de tráfico y sistemas de información de <strong>PRODISMO SRL</strong>,
-                            minimizando el riesgo de propagación de incidentes de seguridad y garantizando la
-                            confidencialidad, integridad y disponibilidad de los activos críticos, en cumplimiento de
-                            los controles A.8.20 (Seguridad de las redes) y A.8.22 (Segregación de redes) del Anexo A de
-                            <strong>ISO/IEC 27001:2022</strong> y los requisitos de protección de información del
-                            marco <strong>TISAX</strong>.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Definir cómo <strong>PRODISMO SRL</strong> gestiona y controla su red y la divide en segmentos según el riesgo, para evitar accesos o intercambios de datos no deseados entre sistemas y detectar ataques. Cumple el control <strong>5.2.7</strong> de <strong>TISAX</strong> (VDA ISA 6) y los controles A.8.20, A.8.21 y A.8.22 de <strong>ISO/IEC 27001:2022</strong>.</p>
                     </section>
 
                     <section id="alcance" class="mb-12 scroll-mt-20">
@@ -107,14 +97,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Toda la infraestructura de red corporativa (LAN, WLAN, WAN)</li>
-                            <li>Dispositivos de red: switches, routers, firewalls, puntos de acceso wireless</li>
-                            <li>Sistemas críticos: servidores de diseño 3D, redes industriales</li>
-                            <li>Usuarios y dispositivos que se conectan a la red corporativa</li>
-                            <li>Conexiones remotas (VPN) y enlaces con terceros</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Red local: switches HP 1910, Aruba 1920/1930 y Allied Telesis GS950; switches Ruijie dedicados a las cámaras; puntos de acceso Wi-Fi Ubiquiti, firewall/router MikroTik administrado por Armanet.</li><li>Enlaces de Internet: Airsat (principal) y Batcom (respaldo); VPN de acceso remoto (P512-IT-2).</li><li>Servicios externos: SIP4.0 en Azure, App de Viajes en Donweb, Microsoft 365.</li><li>No hay redes de producción industrial, ni conexiones a redes de clientes, ni equipos de clientes o proveedores en la red.</li></ul>
                     </section>
 
                     <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -123,16 +106,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.8.20, A.8.22</li>
-                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación <strong>TISAX</strong></li>
-                            <li><strong>MC532-IT-1</strong> Política de Requisitos de Red</li>
-                            <li><strong>P527-IT-1</strong> Procedimiento de Gestión y Segmentación de Red</li>
-                            <li><strong>P527-IT-2</strong> Procedimiento de Configuración de Accesos de Red</li>
-                            <li><strong>P527-IT-3</strong> Procedimiento de Respuesta a Incidentes de Seguridad de Red</li>
-                            <li><strong>P512-IT-2</strong> Procedimiento de Configuración de VPN</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>ISO/IEC 27001:2022</strong> – A.8.20, A.8.21, A.8.22 · Marco <strong>TISAX</strong> – VDA ISA 6, control 5.2.7</li><li><strong>P527-IT-1</strong> Procedimiento de Gestión y Segmentación de Red · <strong>F527-IT-1</strong> Inventario de Red y Segmentación</li><li><strong>MC412-IT-1</strong> / <strong>P412-IT-1</strong> Acceso a servicios de red y sistemas · <strong>MC512-IT-1</strong> / <strong>P512-IT-2</strong> Transferencia y VPN · <strong>MC521-IT-1</strong> Cambios · <strong>MC522-IT-1</strong> Entornos · <strong>MC524-IT-1</strong> Registros · <strong>MC526-IT-1</strong> Auditoría técnica · <strong>P162-IT-1</strong> Incidentes</li></ul>
                     </section>
 
                     <section id="definiciones" class="mb-12 scroll-mt-20">
@@ -141,35 +115,29 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             DEFINICIONES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">VLAN (Virtual LAN):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Red lógica independiente dentro de una
-                                    infraestructura física</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">DMZ (Zona Desmilitarizada):
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300">Segmento aislado para servicios públicos</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">ACL (Access Control List):
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300">Lista de control de acceso para filtrado de
-                                    tráfico</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">NAC (Network Access
-                                    Control):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Control de acceso a la red basado en
-                                    identidad</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Microsegmentación:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Segmentación a nivel de carga de
-                                    trabajo/aplicación</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Término</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Definición</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">VLAN (segmento)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red lógica separada dentro de la misma infraestructura física; el tráfico entre VLAN pasa por el firewall.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Reserva DHCP</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Asignación fija de una dirección IP a un equipo conocido.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicio publicado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Servicio de la red interna accesible desde Internet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -179,622 +147,274 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             RESPONSABLES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Alta Dirección:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Aprobar la política y asignar recursos para
-                                    su implementación. Autorizar excepciones a la segmentación definida.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Responsable de Seguridad de
-                                    la Información (RSI):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Definir los requisitos de segmentación
-                                    basados en riesgo. Aprobar el esquema de VLANs y reglas de filtrado. Supervisar el
-                                    cumplimiento de la política.</p>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Departamento de IT/Redes:
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300">Implementar y mantener la segmentación de
-                                    red. Configurar dispositivos según esquema definido. Monitorizar el cumplimiento de
-                                    las políticas de segmentación.</p>
-                                <p class="text-gray-700 dark:text-gray-300">Identificar requisitos de conectividad para
-                                    los sistemas. Validar que la segmentación no impacte operaciones legítimas.</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsabilidades</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alta Dirección (Damián Pedrosa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprobar esta política y los recursos para la segmentación.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">IT Manager / RSI (Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Definir los requisitos de segmentación según el riesgo; aprobar cambios de red y servicios publicados; revisar la segmentación cada 6 meses.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administrador de IT (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Mantener el F527-IT-1 y el diagrama de red; reservas DHCP y niveles de Internet; Wi-Fi; monitoreo con Zabbix y Wazuh; pedidos a Armanet.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Armanet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Administrar el MikroTik y los switches según el acuerdo de servicio; aplicar los cambios pedidos por IT; guardar copias de la configuración.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Usuarios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Conectar a la red corporativa solo equipos de la empresa; usar la red de invitados para dispositivos personales.</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="principios-segmentacion" class="mb-12 scroll-mt-20">
+                    <section id="requisitos-gestion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            PRINCIPIOS DE SEGMENTACIÓN
+                            GESTIÓN Y CONTROL DE LA RED
                         </h2>
-
-                        <div class="space-y-4">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.1. Principio de Mínimo
-                                    Privilegio</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Los sistemas solo tendrán acceso a los recursos estrictamente necesarios</li>
-                                    <li>Denegar por defecto, permitir por excepción</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.2. Defensa en Profundidad
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Múltiples capas de segmentación (física, lógica, microsegmentación)</li>
-                                    <li>Controles complementarios en diferentes niveles</li>
-                                </ul>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Requisito</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Medida</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administración de los equipos de red</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">MikroTik y switches administrados por Armanet con acuerdo de servicio; contraseñas generadas (no de fábrica); copias de configuración guardadas por Armanet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado; pedir evidencia de las copias cada 6 meses</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Inventario y diagrama</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F527-IT-1 (VLAN, reglas, equipos de red, servicios publicados, niveles de Internet, Wi-Fi) y diagrama de red</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Diagrama existente; actualización automática en curso</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Cambios</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según MC521-IT-1, registrados en el F521-IT-2 (reemplaza al formulario F532-IT-1, que no se usaba)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Monitoreo y detección</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Zabbix (disponibilidad, tráfico y registros del MikroTik); Wazuh (eventos de equipos y alerta de equipos nuevos); filtro DNS</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicios publicados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo la VPN; cualquier otro requiere evaluación de riesgo y aprobación del RSI</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Implementado (24/11/2026)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="esquema-vlans" class="mb-12 scroll-mt-20">
+                    <section id="segmentacion" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            ESQUEMA DE VLANs
+                            SEGMENTACIÓN SEGÚN EL RIESGO
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-2">7.1. VLANs Corporativa</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    VLAN ID</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Equipo</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Nombre/Sector</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Propósito</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Subnet</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Acceso</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">10</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Administración</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Gestión
-                                                    de dispositivos de red</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.221</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Solo
-                                                    administradores</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">20</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Matrices CadCam
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Gestión de dispositivos de red</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.222</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Administradores, sistemas autorizados</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">30</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Matrices Rack Externo
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Estaciones de trabajo usuarios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.223</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Usuarios
-                                                    autenticados</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">40</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Matrices Proyecto
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Estaciones de trabajo usuarios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.224</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Usuarios
-                                                    autenticados</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">50</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Matrices Rack 4
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Estaciones de trabajo usuarios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.225</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Usuarios
-                                                    autenticados</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">60</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Dispositivos
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Estaciones de trabajo usuarios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.226</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Usuarios
-                                                    autenticados</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">70</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Dispositivos 2
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Estaciones de trabajo usuarios</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    192.168.1.227</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Usuarios
-                                                    autenticados</td>
-                                            </tr>
-
-
-
-
-
-
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">40</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">????</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">WIFI-CORP
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">WiFi
-                                                    corporativo</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.10.40.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Empleados
-                                                    con credenciales</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">50</td>
-                                                 <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">HP 1910</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    WIFI-INVITADOS</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">WiFi
-                                                    invitados</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.10.50.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso
-                                                    limitado a Internet</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-red-50 rounded-lg dark:bg-red-900/20">
-                                <h3 class="font-bold text-red-900 dark:text-red-300 mb-2">7.2. VLANs de Sistemas
-                                    Críticos</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    VLAN ID</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Nombre</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Propósito</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Subnet</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Restricciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">100</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ERP-SIP4
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">ERP SIP
-                                                    4.0 (Finanzas)</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.100.100.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso
-                                                    solo desde VLAN USUARIOS vía proxy</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">110</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">DISEÑO-3D
-                                                </td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Servidores diseño 3D</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.100.110.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Solo
-                                                    estaciones de ingeniería</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">120</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    INDUSTRIAL</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Redes
-                                                    OT/Producción</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.100.120.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Aislada,
-                                                    acceso restringido via jump host</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-purple-50 rounded-lg dark:bg-purple-900/20">
-                                <h3 class="font-bold text-purple-900 dark:text-purple-300 mb-2">7.3. VLANs de
-                                    Infraestructura</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    VLAN ID</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Nombre</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Propósito</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Subnet</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Comentarios</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">200</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VOIP</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Telefonía
-                                                    IP</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.200.200.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Calidad
-                                                    de servicio (QoS) priorizada</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">210</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">CCTV</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Sistemas
-                                                    de videovigilancia</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    10.200.210.0/24</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Aislada,
-                                                    solo acceso desde sala de seguridad</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Segmentos actuales (el MikroTik filtra el tráfico entre VLAN):</p><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">VLAN</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nombre</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Uso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Reglas en el MikroTik</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Red general</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PC, notebooks, impresoras y servidores DC1/DC2</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Acceso a Internet según el nivel del equipo (§9); los servidores comparten el segmento con los usuarios (OBS-2026-17)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">50</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Externos Internet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Enlace de Internet de Airsat</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo el router; sin equipos de usuarios</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">69</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cámaras (192.168.69.0/24)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Cámaras de vigilancia conectadas a switches Ruijie dedicados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">VLAN separada de la red general: tagged entre switches y untagged solo en los puertos hacia la red de cámaras; tráfico ruteado por el MikroTik. Reglas de acceso al grabador desde la red general e Internet</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">100</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Invitados</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Wi-Fi para visitantes y celulares personales</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo salida a Internet; sin acceso a otras VLAN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">150</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">UVEG</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Sin Datos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo salida a Internet; sin acceso a otras VLAN</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">200</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Quincho</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Wi-Fi del quincho</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Solo salida a Internet</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Aspectos considerados</h3><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Aspecto que pide el control</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Cómo se cumple en PRODISMO</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Limitar la conexión de equipos a la red</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Reservas de IP por DHCP para equipos registrados en Snipe-IT; alerta de equipos nuevos en Wazuh y Zabbix; celulares personales solo en la red de invitados (excepción de gerencias a eliminar, NC-2026-41); bocas de switch sin uso habilitadas (NC-2026-41)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Tecnologías de seguridad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Firewall MikroTik con filtrado entre VLAN y filtro DNS; VPN SSTP/L2TP; Microsoft Defender y Wazuh en los equipos; Zabbix</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Rendimiento y disponibilidad</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Enlace principal Airsat y de respaldo Batcom (V-19); niveles de ancho de banda por equipo; Zabbix monitorea disponibilidad, CPU y tráfico</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Limitar el impacto de un equipo comprometido y el movimiento lateral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Invitados, quincho y cámaras aislados; los servidores comparten la red con los usuarios: separación en evaluación (OBS-2026-17); detección con Wazuh</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Separar redes con distinto propósito</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Oficina (VLAN 1), cámaras, invitados y quincho separados; desarrollo y pruebas de SIP4.0 en máquinas virtuales separadas en Azure (MC522-IT-1); no hay redes de producción industrial: las PC de planta están en la red general con acceso a un solo sitio de Internet (nivel 0)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicios accesibles desde Internet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Desde la red interna solo se publica la VPN; SIP4.0 (Azure) y la App de Viajes (Donweb) son servicios web en la nube con HTTPS; SIP4.0 está abierto a Internet con usuario y contraseña (OBS-2026-17); verificación con el pentest (V-10) y la revisión semestral (V-43)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicios IT externos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Azure: máquinas virtuales y reglas de red propias de SIP4.0 (V-44); Microsoft 365: inquilino propio; Donweb: firewall del servidor con IP habilitada solo en despliegues</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Separación de redes de clientes</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">No hay conexiones a redes de clientes ni equipos de clientes en la red; se usan solo sus portales web por HTTPS; ningún cliente exige separación de red (F611-IT-3)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Detección y prevención de fuga de datos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Regla de transporte que bloquea archivos CAD por correo y aviso de destinatario externo (MC512-IT-1); WeTransfer bloqueado; filtro DNS y niveles de Internet; auditoría de descargas de SharePoint en Wazuh (MC524-IT-1)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="reglas-filtrado" class="mb-12 scroll-mt-20">
+                    <section id="wifi" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            REGLAS DE FILTRADO Y COMUNICACIÓN
+                            REDES WI-FI
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. Reglas Generales entre
-                                    VLANs</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>VLAN INVITADOS → Cualquier VLAN: DENEGAR (solo salida a Internet)</li>
-                                    <li>VLAN USUARIOS → VLAN SERVERS: PERMITIR puertos específicos</li>
-                                    <li>Cualquier VLAN → VLAN MGMT: DENEGAR (solo desde estaciones admin)</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.2. Reglas Específicas para
-                                    Sistemas Críticos</h3>
-                                <div class="space-y-4">
-                                    <div>
-                                        <h4 class="font-medium text-gray-900 dark:text-white mb-2">VLAN DISEÑO-3D (110)
-                                        </h4>
-                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                            <li>PERMITIR: 10.100.110.0/24 → 10.100.130.0/24 (puerto 445 - Backup)</li>
-                                            <li>DENEGAR: 10.100.110.0/24 → Cualquier (por defecto)</li>
-                                            <li>PERMITIR: 10.10.30.50-60 → 10.100.110.0/24 (puerto 3389 - Estaciones
-                                                ingeniería)</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900 dark:text-white mb-2">VLAN INDUSTRIAL (120)
-                                        </h4>
-                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                            <li>PERMITIR: 10.100.120.0/24 → 10.10.10.10 (puerto 161 - SNMP monitoring)
-                                            </li>
-                                            <li>DENEGAR: Cualquier → 10.100.120.0/24 (excepto jump host 10.10.10.100)
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.3. Reglas de Comunicación
-                                    con Internet</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>NAT obligatorio para todas las VLANs internas</li>
-                                    <li>Filtrado de contenido para VLAN USUARIOS e INVITADOS</li>
-                                    <li>Acceso directo a Internet solo para VLAN DMZ (puertos específicos)</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Red corporativa (Ubiquiti, WPA/WPA2-Personal): la contraseña la conoce solo IT, que la configura en los equipos de la empresa. Se cambia de inmediato (NC-2026-41), una vez al año y cuando deja la empresa alguien que la conocía.</li><li>Redes de invitados y quincho: solo salida a Internet, aisladas de la red general; su contraseña se cambia cada 6 meses.</li><li>Pasar a WPA3 o a autenticación por usuario cuando los equipos lo permitan.</li></ul>
                     </section>
 
-                    <section id="diagramas-vlans" class="mb-12 scroll-mt-20">
+                    <section id="niveles-internet" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            DIAGRAMAS DE VLANs
+                            NIVELES DE ACCESO A INTERNET
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-4">9.1. Diagrama de
-                                    Arquitectura General</h3>
-                                <div
-                                    class="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-                                    <img src="../../../../images/monitorizacion-red/monitor_red_5.png"
-                                        alt="Diagrama de Arquitectura General de Red"
-                                        class="mx-auto h-80 w-full object-cover md:h-full md:w-80 cursor-pointer">
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center">
-                                        Diagrama de Arquitectura General de la Red Corporativa
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-blue-50 rounded-lg dark:bg-blue-900/20">
-                                <h3 class="font-bold text-blue-900 dark:text-blue-300 mb-4">9.2. Diagrama de VLANs
-                                    Críticas</h3>
-                                <div
-                                    class="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-                                    <img src="../../../../images/monitorizacion-red/monitor_red_4.png"
-                                        alt="Diagrama de VLANs Críticas"
-                                        class="mx-auto h-80 w-full object-cover md:h-full md:w-80 cursor-pointer">
-                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2 text-center">
-                                        Diagrama de Segmentación de VLANs Críticas
-                                    </p>
-                                </div>
-                            </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Aplicados en el MikroTik por equipo; la lista de equipos por nivel se mantiene en el F527-IT-1.</p><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Nivel</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Acceso a Internet</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Ancho de banda</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Puestos</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">0</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Un solo sitio autorizado; actualizaciones de Windows y antivirus</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">—</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">PC de planta (mecanizado, dispositivos)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">1</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Bloqueados YouTube, Skype, videos, redes sociales, Netflix</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">10 Mb</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">CAD-CAM y puestos que no tratan con proveedores o clientes</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">2</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Bloqueados redes sociales y Netflix</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">10 Mb</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Supervisores, Compras, Administración, Pañol</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">3</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Bloqueados redes sociales y Netflix</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">30 Mb</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Ventas, Project Managers</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">4</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Sin bloqueos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">30 Mb</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Gerentes y casos aprobados por IT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="control-acceso-red" class="mb-12 scroll-mt-20">
+                    <section id="auditoria-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            CONTROL DE ACCESO A LA RED (NAC)
+                            VERIFICACIÓN Y REVISIÓN
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.1. Autenticación de
-                                    Dispositivos</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>802.1X para conexiones cableadas y wireless corporativas</li>
-                                    <li>MAC Authentication Bypass (MAB) para dispositivos no compatibles</li>
-                                    <li>Guest Portal para acceso de invitados</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.2. Perfiles de Acceso
-                                </h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Tipo de Dispositivo</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    VLAN Asignada</th>
-                                                <th
-                                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Restricciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Equipos
-                                                    corporativos</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VLAN
-                                                    USUARIOS</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Acceso
-                                                    completo según políticas</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Dispositivos personales</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VLAN
-                                                    INVITADOS</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Solo
-                                                    Internet, filtrado de contenido</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Servidores</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">VLAN
-                                                    SERVERS</td>
-                                                <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                                                    Comunicación controlada por ACLs</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="monitoreo-deteccion" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
-                            MONITOREO Y DETECCIÓN DE ANOMALÍAS
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.1. Monitorización de
-                                    Tráfico</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>NetFlow/IPFIX para análisis de tráfico entre VLANs</li>
-                                    <li>Alertas por comunicación no autorizada entre segmentos</li>
-                                    <li>Monitorización de ACLs para detectar cambios no autorizados</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">11.2. Detección de
-                                    Violaciones</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Comunicación desde VLAN INVITADOS a VLANs internas</li>
-                                    <li>Tráfico no autorizado hacia VLANs críticas</li>
-                                    <li>Scans de red desde segmentos no administrativos</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="gestion-cambios" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
-                            GESTIÓN DE CAMBIOS EN LA SEGMENTACIÓN
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.1. Solicitud de Cambio
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Formulario con justificación técnica/operativa</li>
-                                    <li>Evaluación de impacto en seguridad y Aprobación por el RSI</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">12.2. Implementación de
-                                    Cambios</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Ventana de mantenimiento autorizada</li>
-                                    <li>Rollback plan definido</li>
-                                    <li>Comunicación a usuarios afectados</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="excepciones-gestion-riesgos" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">13</span>
-                            EXCEPCIONES Y GESTIÓN DE RIESGOS
-                        </h2>
-
-                        <div class="p-4">
-                            <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">13.1. Solicitud de Excepción
-                            </h3>
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Justificación técnica/negocio detallada</li>
-                                <li>Evaluación de riesgo y medidas compensatorias</li>
-                                <li>Aprobación del RSI y área legal si aplica</li>
-                                <li>Revisión máxima cada 6 meses</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section id="revision-auditoria" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">14</span>
-                            REVISIÓN Y AUDITORÍA
-                        </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">14.1. Revisiones Periódicas
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Revisión cuatrimestral: Verificación de reglas de filtrado</li>
-                                    <li>Revisión anual: Evaluación completa de la segmentación</li>
-                                    <li>Revisión post-incidente: Ajustes basados en lecciones aprendidas</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">14.2. Auditorías de
-                                    Cumplimiento</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Verificación de segregación de redes críticas</li>
-                                    <li>Pruebas de penetración entre segmentos</li>
-                                    <li>Revisión de configuraciones de dispositivos de red</li>
-                                    <li>Inclusión en evaluaciones <strong>TISAX</strong> y auditorías <strong>ISO/IEC
-                                            27001:2022</strong></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Cada 6 meses (V-43): reglas del firewall y servicios publicados, redes Wi-Fi, copias de configuración de Armanet y actualización del F527-IT-1.</li><li>Escaneo interno con prueba de separación desde la red de invitados (V-42) y pentest externo anual (V-10), según MC526-IT-1.</li><li>Esta política se revisa una vez al año y la aprueba la Alta Dirección.</li></ul>
                     </section>
 
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">15</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
                             ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
-                        <div class="space-y-4">
-
-                            <!-- Anexo A -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+<div class="space-y-4">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo A: <a href="../../procedimientos/gestion-red/proc-gestion-red.html"
-                                    title="Procedimiento de Gestión y Segmentación de Red" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    title="P527-IT-1 Procedimiento de Gestión y Segmentación de Red"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
@@ -802,115 +422,83 @@
                                     </span>
                                     Procedimiento de Gestión y Segmentación de Red
                                     <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    gestión y segmentación de red]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Inventario, conexión de equipos, Wi-Fi, niveles de Internet, cambios y monitoreo]</p>
                             </div>
-
-                            <!-- Anexo B -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="../../procedimientos/gestion-red/proc-configuracion-accesos.html"
-                                    target="_blank" title="Procedimiento de Configuración de Accesos de Red" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-gears text-gray-500"></i>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F527-IT-1%20Inventario%20de%20Red%20y%20Segmentaci%C3%B3n.xlsx"
+                                    title="F527-IT-1 Inventario de Red y Segmentación - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P527-IT-2
+                                        F527-IT-1
                                     </span>
-                                    Procedimiento de Configuración de Accesos de Red
+                                    Inventario de Red y Segmentación
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    gestión de configuración para switches, firewalls, routers]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[VLAN, equipos de red, servicios publicados, niveles de Internet y Wi-Fi]</p>
                             </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a
-                                    href="../../procedimientos/gestion-red/proc-respuesta-incidentes-seguridad.html"
-                                    title="Procedimiento de Respuesta a Incidentes de Seguridad de Red" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-gears text-gray-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        P527-IT-3
-                                    </span>
-                                    Procedimiento de Respuesta a Incidentes de Seguridad de Red
-                                    <i
-                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    gestión de respuestas a incidentes de seguridad de red]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="../../procedimientos/ciberseguridad/proc-configuracion-vpn.html"
-                                    title="Procedimiento de Configuración de VPN" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="../../procedimientos/ciberseguridad/proc-configuracion-vpn.html"
+                                    title="P512-IT-2 Procedimiento de Configuración y Gestión de Accesos VPN"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         P512-IT-2
                                     </span>
-                                    Procedimiento de Configuración de VPN
+                                    Configuración y Gestión de Accesos VPN
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    configuración de VPN]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Acceso remoto]</p>
                             </div>
-
+                        </div>
                     </section>
 
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                    <tr class="text-gray-300 dark:text-white">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            0</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                            25/8/2025</td>
-                                        <td class="px-6 py-4 text-sm">Primera Emisión del documento</td>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">25/8/2025</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">7/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Actualización general del documento</td>
                                     </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            1</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            7/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Actualización
-                                            general del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">2</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">24/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Nuevo título. Gestión y control de la red real (MikroTik, switches HP 1910, Aruba, Allied Telesis y Ruijie, Wi-Fi Ubiquiti, Armanet); segmentación real (VLAN 1, 50, 69, 100, 150 y 200) con los aspectos del control 5.2.7; Wi-Fi; niveles de Internet; verificación semestral. Se corrige la tabla de VLAN (eran las IP de los switches) y se quitan las VLAN de ERP, diseño 3D, industrial, VoIP y CCTV, DMZ, proxy, jump host, 802.1X/NAC, portal de invitados, NetFlow, microsegmentación y el área legal, que no existían.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows -->
@@ -939,52 +527,40 @@
                         </h3>
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 DEFINICIONES</a>
                             <a href="#responsables"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RESPONSABLES</a>
-                            <a href="#principios-segmentacion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                PRINCIPIOS DE SEGMENTACIÓN</a>
-                            <a href="#esquema-vlans"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                ESQUEMA DE VLANs</a>
-                            <a href="#reglas-filtrado"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                REGLAS DE FILTRADO</a>
-                            <a href="#diagramas-vlans"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
-                                DIAGRAMAS DE VLANs</a>
-                            <a href="#control-acceso-red"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
-                                CONTROL DE ACCESO A LA RED</a>
-                            <a href="#monitoreo-deteccion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
-                                MONITOREO Y DETECCIÓN</a>
-                            <a href="#gestion-cambios"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
-                                GESTIÓN DE CAMBIOS</a>
-                            <a href="#excepciones-gestion-riesgos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
-                                EXCEPCIONES Y GESTIÓN DE RIESGOS</a>
-                            <a href="#revision-auditoria"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">14.
-                                REVISIÓN Y AUDITORÍA</a>
+                            <a href="#requisitos-gestion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                GESTIÓN Y CONTROL</a>
+                            <a href="#segmentacion"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                SEGMENTACIÓN</a>
+                            <a href="#wifi"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                REDES WI-FI</a>
+                            <a href="#niveles-internet"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                NIVELES DE INTERNET</a>
+                            <a href="#auditoria-documento"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                VERIFICACIÓN Y REVISIÓN</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">15.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 ANEXOS</a>
                             <a href="#revision-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">16.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -1023,8 +599,8 @@
                                 <span class="font-medium text-gray-900 dark:text-white">MC527-IT-1</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600 dark:text-gray-400">Rev. N°:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">1</span>
+                                <span class="text-gray-600 dark:text-gray-400">Rev. N° :</span>
+                                <span class="font-medium text-gray-900 dark:text-white">2</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Estado:</span>
@@ -1040,11 +616,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">24/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">7/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">24/11/2027</span>
                             </div>
                         </div>
                     </div>

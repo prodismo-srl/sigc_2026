@@ -48,7 +48,7 @@
                     <a href="../gestion-red/gestion-red.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Red</span>
+                        <span>Anterior: Gestión y Segmentación de Red</span>
                     </a>
                     <a href="../copia-seguridad/copia-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -59,11 +59,8 @@
 
                 <article class="prose prose-lg max-w-none dark:prose-invert">
                     <!-- Document Header -->
-                    <div class="relative mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
-                        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Política de TIC para la
-                            Continuidad del Negocio <span
-                                class="absolute -top-4 right-0 bg-green-100 text-green-800 text-sm font-medium px-3 py-2 mb-12 rounded-full"><i
-                                    class="fas fa-check"></i> NUEVA</span></h1>
+                    <div class="mb-12 text-center border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Política de Preparación de las TIC para la Continuidad del Negocio</h1>
                         <div id="metadata"
                             class="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                             <div class="flex items-center space-x-1">
@@ -72,35 +69,26 @@
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-calendar"></i>
-                                <span>Última revisión: 8/1/2026</span>
+                                <span>Última revisión: 24/11/2026</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-file-alt"></i>
-                                <span>Rev. N°: 0</span>
+                                <span>Rev. N°: 1</span>
                             </div>
                             <div class="flex items-center space-x-1">
                                 <i class="fas fa-shield-alt"></i>
-                                <span>Cumple: TISAX, ISO 27001:2022</span>
+                                <span>Cumple: TISAX (VDA ISA 5.2.8), ISO 27001:2022 (A.5.30)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Content Sections -->
                     <section id="objetivo" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">1</span>
                             OBJETIVO
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                            Establecer los requisitos y controles para garantizar la seguridad de la información y la
-                            continuidad de los servicios críticos de Tecnologías de la Información y Comunicación (<strong>TIC</strong>)
-                            en la cadena de suministro de <strong>PRODISMO SRL</strong>, asegurando la disponibilidad,
-                            integridad y confidencialidad de los sistemas y datos críticos ante interrupciones, en
-                            cumplimiento del control A.5.30 (Preparación de las <strong>TIC</strong> para la continuidad del negocio) de
-                            la norma <strong>ISO/IEC 27001:2022</strong> y los requisitos de protección de información
-                            del marco <strong>TISAX</strong>.
-                        </p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Asegurar que <strong>PRODISMO SRL</strong> identifica sus servicios IT críticos, define tiempos de recuperación y cuenta con planes probados para mantenerlos o recuperarlos ante una interrupción. Cumple el control <strong>5.2.8</strong> de <strong>TISAX</strong> (VDA ISA 6) y el control A.5.30 de <strong>ISO/IEC 27001:2022</strong>. La activación y la comunicación de una crisis se rigen por la <a href="../gestion-incidentes/gestion-crisis.html" class="underline">MC163-IT-1 Gestión de Crisis</a>; los incidentes, por la MC162-IT-1.</p>
                     </section>
 
                     <section id="alcance" class="mb-12 scroll-mt-20">
@@ -109,19 +97,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">2</span>
                             ALCANCE
                         </h2>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">Esta política aplica a:</p>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li>Todos los servicios críticos de <strong>TIC</strong> identificados en el Análisis de Impacto al Negocio
-                                (BIA).</li>
-                            <li>Proveedores externos de servicios de <strong>TIC</strong>, incluyendo servicios en la nube (MS Azure),
-                                comunicaciones (MS Teams, correo electrónico) y colaboración (SharePoint).</li>
-                            <li>Sistemas críticos de IT: servidores de diseño 3D, redes industriales, sistemas ERP,
-                                infraestructura de comunicaciones.</li>
-                            <li>Personal interno y externo involucrado en la gestión, operación y soporte de servicios
-                                de <strong>TIC</strong> críticos.</li>
-                            <li>Planes de continuidad, estrategias de recuperación y acuerdos de nivel de servicio (SLA)
-                                asociados.</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Servicios IT de la sede: Internet, red interna y firewall, Active Directory, servidores de archivos DC1/DC2, energía y UPS, telefonía.</li><li>Servicios en la nube: SIP4.0 (Azure), Microsoft 365, App de Viajes (Donweb), portal del SGSI (GitHub Pages).</li><li>Proveedores: Microsoft, Airsat, Batcom, Armanet, Donweb, Cubits, Telecom Argentina.</li></ul>
                     </section>
 
                     <section id="referencias-normativas" class="mb-12 scroll-mt-20">
@@ -130,14 +106,7 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">3</span>
                             REFERENCIAS NORMATIVAS
                         </h2>
-                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                            <li><strong>ISO/IEC 27001:2022</strong> - Anexo A.5.30</li>
-                            <li><strong>ISO/IEC 27002:2022</strong> - Guía para los controles de seguridad</li>
-                            <li>Marco de evaluación <strong>TISAX</strong> - Requisitos de protección de información y
-                                continuidad</li>
-                            <li><strong>P528-IT-1</strong> Procedimiento de Gestión de Continuidad de <strong>TIC</strong></li>
-                            <li>Procedimiento de Gestión de Proveedores y SLA</li>
-                        </ul>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li><strong>ISO/IEC 27001:2022</strong> – A.5.30 · Marco <strong>TISAX</strong> – VDA ISA 6, control 5.2.8</li><li><strong>P528-IT-1</strong> Plan de Continuidad de los Servicios IT · <strong>M528-IT-1</strong> Matriz de Servicios Críticos y RTO/RPO</li><li><strong>MC163-IT-1</strong> / <strong>P163-IT-1</strong> Gestión de Crisis (F163-IT-1, F163-IT-2) · <strong>MC162-IT-1</strong> / <strong>P162-IT-1</strong> Incidentes · <strong>MC611-IT-1</strong> Contratistas y socios · <strong>MC527-IT-1</strong> Red</li></ul>
                     </section>
 
                     <section id="definiciones" class="mb-12 scroll-mt-20">
@@ -146,48 +115,33 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">4</span>
                             DEFINICIONES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2"><strong>TIC</strong>:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Tecnologías de la Información y Comunicación.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">BIA (Business Impact
-                                    Analysis):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Proceso para identificar y evaluar el
-                                    impacto de una interrupción en las operaciones.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">RTO (Recovery Time
-                                    Objective):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Tiempo máximo aceptable para restaurar un
-                                    servicio tras una interrupción.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">RPO (Recovery Point
-                                    Objective):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Pérdida máxima de datos aceptable medida en
-                                    tiempo.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">SLA (Service Level
-                                    Agreement):</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Acuerdo formal entre proveedor y cliente que
-                                    define niveles de servicio.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Servicios Críticos de <strong>TIC</strong>:
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300">Servicios cuya interrupción afecta
-                                    significativamente las operaciones del negocio.</p>
-                            </div>
-                            <div class="p-4 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Cadena de Suministro de
-                                    <strong>TIC</strong>:</h3>
-                                <p class="text-gray-700 dark:text-gray-300">Conjunto de proveedores, tecnologías y
-                                    procesos que soportan los servicios de <strong>TIC</strong>.</p>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Término</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Definición</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">RTO (tiempo objetivo de recuperación)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Tiempo máximo aceptable para volver a tener el servicio.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">RPO (punto objetivo de recuperación)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Pérdida máxima de datos aceptable, medida en tiempo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servicio IT crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Servicio cuya interrupción afecta un proceso esencial del F163-IT-1.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Acuerdo de servicio (SLA)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Compromiso escrito del proveedor sobre tiempos de respuesta o disponibilidad.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
@@ -197,408 +151,343 @@
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">5</span>
                             RESPONSABLES
                         </h2>
-
-                        <div class="space-y-4">
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.1. Alta Dirección</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Aprobar la política y asignar recursos.</li>
-                                    <li>Validar los planes de continuidad y SLA críticos.</li>
-                                </ul>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.2. Responsable de
-                                    Seguridad de la Información (RSI):</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Supervisar la implementación de la política.</li>
-                                    <li>Asegurar el cumplimiento de <strong>TISAX</strong> e <strong>ISO
-                                            27001:2022</strong>.</li>
-                                    <li>Revisar y actualizar el BIA y los planes de continuidad.</li>
-                                </ul>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.3. Departamento de IT:
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Implementar y mantener los planes de continuidad.</li>
-                                    <li>Gestionar relaciones con proveedores de <strong>TIC</strong>.</li>
-                                    <li>Realizar pruebas de recuperación y actualizar documentación.</li>
-                                </ul>
-                            </div>
-                            <div
-                                class="p-4 border-l-4 border-primary-500 bg-white dark:bg-gray-800 shadow-sm rounded-lg">
-                                <h3 class="font-semibold text-gray-900 dark:text-white mb-2">5.4. Proveedores Externos:
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Cumplir con los SLA establecidos.</li>
-                                    <li>Notificar incidentes que afecten la continuidad.</li>
-                                    <li>Participar en pruebas de recuperación coordinadas.</li>
-                                </ul>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rol</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Responsabilidades</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Alta Dirección (Damián Pedrosa)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Aprobar esta política, los RTO y los riesgos aceptados; asignar recursos.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">IT Manager / RSI (Germán Montalbetti)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Mantener la M528-IT-1 y el plan; revisar los acuerdos de servicio; coordinar con P163-IT-1; planificar las pruebas.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Administrador de IT (Emiliano Ferrari)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Ejecutar las recuperaciones y las pruebas; mantener los repuestos y las copias de respaldo.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Desarrollador SIP4.0 (Nicolás Donato)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Recuperar SIP4.0 desde Azure Backup, los copias gbak de Firebird y GitHub.</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Proveedores</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top"><ul class="list-disc pl-4 space-y-1"><li>Cumplir los acuerdos de servicio, avisar las interrupciones y colaborar en la recuperación.</li></ul></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="identificacion-clasificacion" class="mb-12 scroll-mt-20">
+                    <section id="servicios-criticos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">6</span>
-                            IDENTIFICACIÓN Y CLASIFICACIÓN DE SERVICIOS CRÍTICOS
+                            SERVICIOS IT CRÍTICOS Y TIEMPOS DE RECUPERACIÓN
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.1. Identificación de
-                                    Servicios Críticos</h3>
-                                <p class="text-gray-700 dark:text-gray-300 mb-3">Se identificarán mediante el BIA los
-                                    servicios de <strong>TIC</strong> críticos, considerando:</p>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Impacto en la continuidad del negocio.</li>
-                                    <li>Dependencias tecnológicas y de proveedores.</li>
-                                    <li>Servicios principales: MS Teams, correo electrónico, MS Azure, SharePoint, redes
-                                        industriales, ERP.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">6.2. Clasificación según
-                                    Necesidades de Protección</h3>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                                        <thead class="bg-gray-50 dark:bg-gray-800">
-                                            <tr>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Categoría</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    Descripción</th>
-                                                <th
-                                                    class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                                    RTO</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody
-                                            class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
-                                            <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-center text-red-600 font-bold dark:text-white dark:bg-red-400">
-                                                    Crítico</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Interrupción inaceptable</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RTO &lt;
-                                                    4 horas</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-center text-orange-500 font-bold dark:text-white dark:bg-orange-400">
-                                                    Alto</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Impacto
-                                                    significativo</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RTO 4-24
-                                                    horas</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-center text-yellow-500 font-bold dark:text-white dark:bg-yellow-400">
-                                                    Medio</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Impacto
-                                                    moderado</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RTO 1-3
-                                                    días</td>
-                                            </tr>
-                                            <tr>
-                                                <td
-                                                    class="px-6 py-4 text-sm font-medium text-center text-blue-700 font-bold dark:text-white dark:bg-blue-500">
-                                                    Bajo</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    Impacto
-                                                    limitado</td>
-                                                <td
-                                                    class="px-6 py-4 text-sm text-center text-gray-700 dark:text-gray-300">
-                                                    RTO &gt;
-                                                    3 días</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">Los servicios se identifican a partir de los procesos esenciales del Plan de Crisis F163-IT-1 (comunicación con clientes y proveedores 24 h; gestión con SIP4.0 24 h; ingeniería y diseño 48 h) y se registran en la <strong>M528-IT-1</strong> con sus dependencias, copias de respaldo y alternativas. Su necesidad de protección y las medidas de seguridad surgen de la clasificación de activos (MC131-IT-1) y de la matriz de riesgos (M141-IT-1). Ningún cliente exige tiempos menores.</p><div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Servicio</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Clasificación</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">RTO</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">RPO</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Proveedor / acuerdo de servicio</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Internet (Airsat principal, Batcom respaldo)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">< 1 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">N/A</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Airsat y Batcom: respuesta < 12 h</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">ERP SIP4.0 (Azure)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según frecuencia de Azure Backup y de los copias gbak de Firebird [Confirmar]</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Azure: 99,9 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Correo, Teams, SharePoint y OneDrive (Microsoft 365)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">N/A (servicio en la nube de Microsoft)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft 365: 99,9 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Red interna y firewall (MikroTik, switches)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Última copia de configuración de Armanet</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Armanet: respuesta < 24 h; sin garantía de reemplazo del MikroTik</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Active Directory, DNS y DHCP (DC1/DC2)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Interno (IT)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Energía eléctrica (EPEC) y UPS</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">UPS 10–15 min para apagado ordenado</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">N/A</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">EPEC; sin grupo generador</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Servidores de archivos DC1/DC2 (CadCam, Dispositivos, Matrices, Comercial)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Alto</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">48 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h (Comercial: 7 días)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Interno (IT); Veeam</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">App de Viajes (Donweb)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Medio</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">48 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">24 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Donweb: respuesta 24–48 h; Cubits guarda código y último volcado</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Portal del SGSI (GitHub Pages)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Medio</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">48 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">N/A (código en GitHub)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">GitHub</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Telefonía (Telecom Argentina)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Bajo</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">72 h</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">N/A</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Telecom Argentina [Confirmar]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="planificacion-continuidad" class="mb-12 scroll-mt-20">
+                    <section id="escenarios" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">7</span>
-                            PLANIFICACIÓN DE CONTINUIDAD DE TIC
+                            ESCENARIOS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.1. Escenarios Considerados
-                                </h3>
-                                <p class="text-gray-700 dark:text-gray-300 mb-3">La planificación incluirá al menos:</p>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Ataques de denegación de servicio (DDoS).</li>
-                                    <li>Ataques de ransomware y sabotaje.</li>
-                                    <li>Fallos de sistema o infraestructura.</li>
-                                    <li>Desastres naturales.</li>
-                                    <li>Interrupciones en la cadena de suministro de <strong>TIC</strong>.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.2. Estrategias
-                                    Alternativas</h3>
-                                <div class="space-y-4">
-                                    <div>
-                                        <h4 class="font-medium text-gray-900 dark:text-white mb-2">Comunicación:</h4>
-                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                            <li>Alternativas a MS Teams/correo principal (teléfono, SMS, plataformas
-                                                alternativas).</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900 dark:text-white mb-2">Almacenamiento:</h4>
-                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                            <li>Respaldos fuera del sitio principal (backup en frío/caliente).</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-medium text-gray-900 dark:text-white mb-2">Energía y Red:</h4>
-                                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                            <li>Generadores, UPS, conexiones de red redundantes.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">7.3. Plazos Predefinidos
-                                    (RTO/RPO)</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Cada servicio crítico tendrá definido RTO y RPO según su clasificación.</li>
-                                    <li>Se documentarán en el Plan de Continuidad de <strong>TIC</strong>.</li>
-                                </ul>
-                            </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Escenario</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Medidas preventivas</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Respuesta y continuidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Denegación de servicio (DDoS)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Protección DDoS de Airsat; protección básica de Azure para SIP4.0; Microsoft 365 protegido por Microsoft</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Conmutar a Batcom; SIP4.0 y Microsoft 365 siguen accesibles por datos móviles y desde fuera de la planta; ticket a Airsat</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Ransomware y sabotaje</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Microsoft Defender y Wazuh (MC523-IT-1); parches (MC525-IT-1); MFA; copias de SIP4.0 fuera de la planta (Azure, GitHub, Microsoft 365)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Contención según P162-IT-1 (desconectar equipos y servidores); restauración desde Veeam o desde las copias en la nube; las copias de Veeam están en los mismos servidores y usan credenciales del dominio (OBS-2026-18; copia fuera de línea en OM-2026-01)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Falla de sistemas o equipos</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Monitoreo con Zabbix y Wazuh; 2–3 discos y 2–3 PC de repuesto; acuerdos de servicio con proveedores</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Reemplazar disco o PC y restaurar desde Veeam; Armanet para red y firewall; Microsoft, Donweb y Cubits para servicios en la nube. DC1 y DC2 no se reemplazan entre sí y no hay MikroTik ni switch de repuesto (OBS-2026-19)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Desastre natural, incendio o corte prolongado de energía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">UPS de 10–15 min; SIP4.0, Microsoft 365 y App de Viajes alojados fuera de la planta</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Apagado ordenado de servidores; trabajo remoto con notebooks sobre los servicios en la nube; los archivos de DC1/DC2 y sus copias están en la misma sala (OBS-2026-18 / OM-2026-01)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Falla de un proveedor crítico</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Acuerdos de servicio; segundo enlace de Internet (Batcom)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Según P163-IT-1; sin proveedor alternativo de red (OM-2026-04)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </section>
 
-                    <section id="acuerdos-proveedores" class="mb-12 scroll-mt-20">
+                    <section id="estrategias" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">8</span>
-                            ACUERDOS CON PROVEEDORES EXTERNOS
+                            ESTRATEGIAS ALTERNATIVAS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.1. SLA Ajustados a la
-                                    Continuidad</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Los SLA con proveedores (ej: Microsoft Azure, telecomunicaciones) deben
-                                        alinearse con los RTO/RPO definidos.</li>
-                                    <li>Deben incluir cláusulas de continuidad, respuesta ante incidentes y
-                                        responsabilidades.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">8.2. Coordinación con Socios
-                                    Comerciales</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Los planes de continuidad incluirán protocolos de comunicación con socios y
-                                        clientes.</li>
-                                    <li>Se definirán canales alternativos y contactos clave.</li>
-                                </ul>
-                            </div>
-                        </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Caso</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Estrategia alternativa</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Comunicación</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Si falla el correo o Teams: el otro de los dos, Outlook web, teléfonos celulares y WhatsApp empresarial; árbol de llamadas del F163-IT-1. Si falla la telefonía: celulares.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Almacenamiento</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Si falla un servidor de archivos: restaurar desde Veeam en un disco de repuesto; archivos urgentes por SharePoint/OneDrive. SIP4.0: restauración desde Azure Backup o desde la última copia gbak de la base Firebird; código en GitHub.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Energía</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">UPS de 10–15 min para apagar los servidores sin daño; los servicios en la nube siguen disponibles desde notebooks y celulares; no hay generador.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Red</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Internet: conmutación a Batcom y datos móviles. Red interna: Armanet restaura la configuración; trabajo remoto sobre los servicios en la nube mientras tanto.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Modo manual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Operación sin ERP con planillas y carga posterior en SIP4.0 (planillas pendientes, OM-2026-03).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <p class="text-gray-700 dark:text-gray-300 mb-4">Ante un incidente de seguridad se aplica la contención del P162-IT-1 (desconexión de equipos o servicios) antes de recuperar.</p>
                     </section>
 
-                    <section id="estrategia-respaldo" class="mb-12 scroll-mt-20">
+                    <section id="proveedores" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">9</span>
-                            ESTRATEGIA DE RESPALDO Y RECUPERACIÓN
+                            PROVEEDORES Y COMUNICACIÓN CON SOCIOS
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">9.1. Protección de Copias de
-                                    Seguridad</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Las copias de seguridad estarán protegidas contra modificaciones o eliminaciones
-                                        no autorizadas.</li>
-                                    <li>Se implementarán controles de acceso y cifrado.</li>
-                                    <li>Se almacenarán en ubicaciones seguras y alternativas.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">9.2. Pruebas de Recuperación
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Se probarán periódicamente los procesos de recuperación.</li>
-                                    <li>Se incluirá la recuperación completa del sistema a un estado conocido.</li>
-                                    <li>Se documentarán los resultados y las mejoras.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Los acuerdos de servicio de los proveedores figuran en la M528-IT-1; se revisan una vez al año junto con la verificación de terceros (MC611-IT-1, V-34) y se pide a los proveedores críticos información sobre su propia continuidad.</li><li>Ningún contrato de cliente exige avisos de continuidad. Si una interrupción afecta a clientes, se avisa en menos de 24 h según P162-IT-1 y P163-IT-1, por el vocero que define la Dirección.</li></ul>
                     </section>
 
-                    <section id="revision-auditoria" class="mb-12 scroll-mt-20">
+                    <section id="pruebas" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
                                 class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">10</span>
-                            REVISIÓN Y AUDITORÍA
+                            PRUEBAS Y REVISIÓN
                         </h2>
-
-                        <div class="space-y-6">
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.1. Revisiones Periódicas
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Revisión semestral del BIA y planes de continuidad.</li>
-                                    <li>Revisión anual de SLA con proveedores críticos.</li>
-                                    <li>Actualización post-incidente o cambio significativo.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.2. Pruebas y Ejercicios
-                                </h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Pruebas de continuidad al menos una vez al año.</li>
-                                    <li>Simulacros de recuperación ante escenarios definidos.</li>
-                                    <li>Documentación de lecciones aprendidas y mejoras.</li>
-                                </ul>
-                            </div>
-
-                            <div class="p-4">
-                                <h3 class="font-bold text-gray-900 dark:text-gray-300 mb-2">10.3. Auditorías de
-                                    Cumplimiento</h3>
-                                <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                    <li>Inclusión en auditorías internas y externas (<strong>TISAX</strong>, <strong>ISO
-                                            27001:2022</strong>).</li>
-                                    <li>Verificación de controles de continuidad en la cadena de suministro.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="excepciones-gestion-riesgos" class="mb-12 scroll-mt-20">
-                        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
-                            <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
-                            EXCEPCIONES Y GESTIÓN DE RIESGOS
-                        </h2>
-
-                        <div class="p-4">
-                            <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3">
-                                <li>Las excepciones a esta política deben ser justificadas y aprobadas por el RSI y Alta
-                                    Dirección.</li>
-                                <li>Se evaluarán riesgos residuales y se implementarán controles compensatorios.</li>
-                                <li>Las excepciones se revisarán cada 6 meses.</li>
-                            </ul>
-                        </div>
+<div class="overflow-x-auto mb-6">
+                            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                <thead class="bg-gray-50 dark:bg-gray-800">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Prueba</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Frecuencia</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Registro</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Restauración de una muestra de archivos o de una máquina virtual (V-07)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Trimestral</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F163-IT-1 (Ejercicios y pruebas)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Conmutación a Internet de respaldo (V-19)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F163-IT-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Recuperación completa: SIP4.0 en un entorno temporal aislado desde Azure Backup y un servidor de archivos desde Veeam, midiendo el tiempo contra el RTO (V-45)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual; la primera en 2027</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F163-IT-1 · lecciones en F163-IT-2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-4 text-sm font-medium text-gray-900 dark:text-white align-top">Ejercicio de escritorio de crisis con escenario de ransomware (V-17)</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">Anual</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300 align-top">F162-IT-3 · F163-IT-2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-3 mb-6"><li>Las lecciones aprendidas y los desvíos se registran en el F163-IT-2 y en el F151-IT-4.</li><li>Esta política, la M528-IT-1 y el P528-IT-1 se revisan una vez al año y después de cada incidente mayor o cambio importante en los servicios.</li></ul>
                     </section>
 
                     <section id="anexos" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">11</span>
                             ANEXOS <i class="fa-solid fa-paperclip ml-2"></i>
                         </h2>
-                        <div class="space-y-4">
-
-                            <!-- Anexo A -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+<div class="space-y-4">
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
                                 Anexo A: <a href="../../procedimientos/tic-continuidad/proc-tic-continuidad.html"
-                                    title="P528-IT-1 Procedimiento de Gestión de Continuidad de TIC" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    title="P528-IT-1 Plan de Continuidad de los Servicios IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
                                     <i class="fas fa-gears text-gray-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         P528-IT-1
                                     </span>
-                                    Procedimiento de Gestión de Continuidad de <strong>TIC</strong>
+                                    Plan de Continuidad de los Servicios IT
                                     <i
                                         class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Instrucciones detalladas para la
-                                    gestión de continuidad de <strong>TIC</strong>]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Recuperación por servicio y por escenario]</p>
                             </div>
-
-                            <!-- Anexo B -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo B: <a href="../../procedimientos/contratistas-socios/generador-acuerdo-confidencialidad/generador-acuerdo-confidencialidad.html" target="_blank"
-                                    title="F612-IT-2 Plantilla de SLA para proveedores críticos"
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo B: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/M528-IT-1%20Matriz%20de%20Servicios%20Cr%C3%ADticos%20y%20RTO-RPO.xlsx"
+                                    title="M528-IT-1 Matriz de Servicios Críticos y RTO/RPO - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
                                     class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-contract text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F612-IT-2
-                                    </span>
-                                    Generador Acuerdos Confidencialidad (SLA) para proveedores críticos
-                                    <i
-                                        class="fas fa-download text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Plantilla estandarizada para acuerdos
-                                    de nivel de servicio]</p>
-                            </div>
-
-                            <!-- Anexo C -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo C: <a href="https://forms.office.com/r/hEae10Xf8t" target="_blank" title="F528-IT-1 Registro de pruebas de recuperación (TIC)" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-alt text-blue-500"></i>
-                                    <span
-                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
-                                        F528-IT-1
-                                    </span>
-                                    Registro de pruebas de recuperación (TIC)
-                                    <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
-                                </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Formulario para documentar resultados
-                                    de pruebas de recuperación]</p>
-                            </div>
-
-                            <!-- Anexo D -->
-                            <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
-                                Anexo D: <a href="https://prodismotemp.sharepoint.com/:x:/r/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/3-%20Matriz%20de%20Riesgos/M528-IT-1%20Matriz%20de%20servicios%20cr%C3%ADticos%20y%20RTO-RPO.xlsx?d=wd5f5bfe8be8143b6841a940057fa2a5c&csf=1&web=1&e=GNRLXd" target="_blank" title="M521-IT-1 Matriz de servicios críticos y RTO/RPO"
-                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
-                                    border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
-                                    group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
-                                    <i class="fas fa-file-excel text-green-500 mr-1"></i>
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
                                     <span
                                         class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
                                         M528-IT-1
                                     </span>
-                                    Matriz de servicios críticos y RTO/RPO
+                                    Matriz de Servicios Críticos y RTO/RPO
                                     <i
-                                        class="fas fa-external-link-alt text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
                                 </a>
-                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Inventario de servicios críticos con
-                                    tiempos de recuperación definidos]</p>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Servicios, RTO, RPO, dependencias, copias, alternativas y acuerdos de servicio]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo C: <a href="https://prodismotemp.sharepoint.com/sites/IT/Documentos%20compartidos/TISAX%20-%20ISO27001_2022/F163-IT-1%20Plan%20de%20Crisis.xlsx"
+                                    title="F163-IT-1 Plan de Crisis - Para tener acceso a este archivo, debe solicitar acceso al administrador de IT"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-file-excel text-green-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        F163-IT-1
+                                    </span>
+                                    Plan de Crisis
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Procesos esenciales, árbol de llamadas y registro de ejercicios y pruebas]</p>
+                            </div>
+<div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800 mt-3">
+                                Anexo D: <a href="../../procedimientos/gestion-incidentes/proc-gestion-crisis.html"
+                                    title="P163-IT-1 Procedimiento de Gestión de Crisis"
+                                    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700
+                                        border border-blue-200 dark:border-gray-600 rounded-lg shadow hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer
+                                        group no-underline text-blue-700 dark:text-blue-300 text-sm font-semibold ml-2">
+                                    <i class="fas fa-gears text-gray-500"></i>
+                                    <span
+                                        class="bg-white dark:bg-gray-600 text-blue-800 dark:text-white px-2 py-0.5 rounded border border-blue-300 dark:border-gray-500">
+                                        P163-IT-1
+                                    </span>
+                                    Procedimiento de Gestión de Crisis
+                                    <i
+                                        class="fas fa-link text-blue-400 group-hover:text-blue-600 text-xs transition-colors duration-300 ml-1"></i>
+                                </a>
+                                <p class="text-gray-700 dark:text-gray-300 mt-2">[Activación, comunicación y bitácora]</p>
                             </div>
                         </div>
                     </section>
@@ -606,39 +495,34 @@
                     <section id="revision-documento" class="mb-12 scroll-mt-20">
                         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
                             <span
-                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">16</span>
+                                class="bg-primary-100 text-white-800 rounded-full w-8 h-8 flex items-center justify-center text-sm mr-3 dark:bg-primary-900 dark:text-white-200">12</span>
                             REVISIONES DEL DOCUMENTO
                         </h2>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                                 <thead class="bg-gray-50 dark:bg-gray-800">
                                     <tr>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Rev. N°</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Fecha</th>
-                                        <th
-                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">
-                                            Descripción</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Rev. N°</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Fecha</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider dark:text-gray-400">Descripción</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-900 dark:divide-gray-800">
+                                    <tr class="text-gray-400 dark:text-white dark:bg-gray-800">
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium">0</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm">8/1/2026</td>
+                                        <td class="px-4 py-4 text-sm">Primera emisión del documento</td>
+                                    </tr>
                                     <tr>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">
-                                            0</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                            8/1/2026</td>
-                                        <td class="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">Primera Emisión
-                                            del documento</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">1</td>
+                                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">24/11/2026</td>
+                                        <td class="px-4 py-4 text-sm text-gray-700 dark:text-gray-300">Servicios reales con RTO alineados al Plan de Crisis F163-IT-1; escenarios del control 5.2.8 (DDoS, ransomware, falla de sistemas, desastre); estrategias alternativas de comunicación, almacenamiento, energía y red; acuerdos de servicio reales; pruebas programadas. Se quitan el BIA, los generadores, los respaldos inmutables y fuera del sitio, las redes industriales y los servidores de diseño 3D, que no existían.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
+
                 </article>
 
                 <!-- Navigation Arrows -->
@@ -646,7 +530,7 @@
                     <a href="../gestion-red/gestion-red.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
                         <i class="fas fa-arrow-left mr-2"></i>
-                        <span>Anterior: Gestión de Red</span>
+                        <span>Anterior: Gestión y Segmentación de Red</span>
                     </a>
                     <a href="../copia-seguridad/copia-seguridad.html"
                         class="flex items-center px-4 py-2 bg-primary-50 text-primary-700 rounded-lg hover:bg-primary-100 transition-colors dark:bg-primary-900/20 dark:text-primary-300 dark:hover:bg-primary-900/30">
@@ -667,43 +551,40 @@
                         </h3>
                         <nav class="space-y-2">
                             <a href="#objetivo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">1.
                                 OBJETIVO</a>
                             <a href="#alcance"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">2.
                                 ALCANCE</a>
                             <a href="#referencias-normativas"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">3.
                                 REFERENCIAS NORMATIVAS</a>
                             <a href="#definiciones"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">4.
                                 DEFINICIONES</a>
                             <a href="#responsables"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">5.
                                 RESPONSABLES</a>
-                            <a href="#identificacion-clasificacion"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
-                                IDENTIFICACIÓN Y CLASIFICACIÓN DE SERVICIOS CRÍTICOS</a>
-                            <a href="#planificacion-continuidad"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
-                                PLANIFICACIÓN DE CONTINUIDAD DE TIC</a>
-                            <a href="#acuerdos-proveedores"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
-                                ACUERDOS CON PROVEEDORES EXTERNOS</a>
-                            <a href="#estrategia-respaldo"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
-                                ESTRATEGIA DE RESPALDO Y RECUPERACIÓN</a>
-                            <a href="#revision-auditoria"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
-                                REVISIÓN Y AUDITORÍA</a>
-                            <a href="#excepciones-gestion-riesgos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
-                                EXCEPCIONES Y GESTIÓN DE RIESGOS</a>
+                            <a href="#servicios-criticos"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">6.
+                                SERVICIOS CRÍTICOS Y RTO</a>
+                            <a href="#escenarios"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">7.
+                                ESCENARIOS</a>
+                            <a href="#estrategias"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">8.
+                                ESTRATEGIAS ALTERNATIVAS</a>
+                            <a href="#proveedores"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">9.
+                                PROVEEDORES Y SOCIOS</a>
+                            <a href="#pruebas"
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">10.
+                                PRUEBAS Y REVISIÓN</a>
                             <a href="#anexos"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">11.
                                 ANEXOS</a>
                             <a href="#revision-documento"
-                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">13.
+                                class="block py-2 px-3 text-sm text-gray-700 hover:bg-gray-300 rounded-lg transition-colors dark:text-gray-300 dark:hover:bg-gray-700 toc-link">12.
                                 REVISIONES DEL DOCUMENTO</a>
                         </nav>
                     </div>
@@ -758,11 +639,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Última revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">8/1/2026</span>
+                                <span class="font-medium text-gray-900 dark:text-white">24/11/2026</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600 dark:text-gray-400">Próxima revisión:</span>
-                                <span class="font-medium text-gray-900 dark:text-white">8/1/2027</span>
+                                <span class="font-medium text-gray-900 dark:text-white">24/11/2027</span>
                             </div>
                         </div>
                     </div>
